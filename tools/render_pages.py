@@ -17,6 +17,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
 SITE_BASE_URL = "https://emulebb.github.io"
+DOCS_SITE_URL = "https://emulebb.github.io/eMule-tooling"
 PICO_CDN = "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
 GA_MEASUREMENT_ID = "G-8G02C2WFEB"
 
@@ -100,16 +101,16 @@ PAGES = (
 LANGUAGE_PAGE = PageSpec("languages", "en", "en", "languages", "0.7", "Languages")
 
 DOCS = [
-    ("https://github.com/eMulebb/eMule-tooling/blob/main/docs/reference/GUIDE-EMULEBB.md", "emulebb"),
-    ("https://github.com/eMulebb/eMule-tooling/blob/main/docs/reference/GUIDE-SETUP.md", "setup"),
-    ("https://github.com/eMulebb/eMule-tooling/blob/main/docs/reference/GUIDE-NETWORK.md", "network"),
-    ("https://github.com/eMulebb/eMule-tooling/blob/main/docs/reference/GUIDE-SHARING.md", "sharing"),
-    ("https://github.com/eMulebb/eMule-tooling/blob/main/docs/reference/GUIDE-DOWNLOADS-SEARCH.md", "downloads"),
-    ("https://github.com/eMulebb/eMule-tooling/blob/main/docs/reference/GUIDE-CONTROLLERS-REST.md", "controllers"),
-    ("https://github.com/eMulebb/eMule-tooling/blob/main/docs/rest/REST-API-CONTRACT.md", "rest_contract"),
-    ("https://github.com/eMulebb/eMule-tooling/blob/main/docs/rest/REST-API-ADAPTERS.md", "rest_adapters"),
-    ("https://github.com/eMulebb/eMule-tooling/blob/main/docs/reference/GUIDE-TROUBLESHOOTING.md", "troubleshooting"),
-    ("https://github.com/eMulebb/eMule-tooling/blob/main/docs/active/RELEASE-0.7.3.md", "release"),
+    (f"{DOCS_SITE_URL}/reference/GUIDE-EMULEBB/", "emulebb"),
+    (f"{DOCS_SITE_URL}/reference/GUIDE-SETUP/", "setup"),
+    (f"{DOCS_SITE_URL}/reference/GUIDE-NETWORK/", "network"),
+    (f"{DOCS_SITE_URL}/reference/GUIDE-SHARING/", "sharing"),
+    (f"{DOCS_SITE_URL}/reference/GUIDE-DOWNLOADS-SEARCH/", "downloads"),
+    (f"{DOCS_SITE_URL}/reference/GUIDE-CONTROLLERS-REST/", "controllers"),
+    (f"{DOCS_SITE_URL}/rest/REST-API-CONTRACT/", "rest_contract"),
+    (f"{DOCS_SITE_URL}/rest/REST-API-ADAPTERS/", "rest_adapters"),
+    (f"{DOCS_SITE_URL}/reference/GUIDE-TROUBLESHOOTING/", "troubleshooting"),
+    (f"{DOCS_SITE_URL}/active/RELEASE-0.7.3/", "release"),
 ]
 
 REPOS = [
@@ -460,6 +461,9 @@ def with_generated_links(root: Path) -> None:
     ensure_stock_locale_content(root)
     for page in PAGES:
         content = CONTENT[page.key]
+        for nav_item in content["nav"]:
+            if nav_item.get("id") == "docs":
+                nav_item["href"] = DOCS_SITE_URL + "/"
         content["menu"] = MENU_COPY[page.key]
         content["languages_link_label"] = LANGUAGE_LINK_COPY[page.key]
         content["docs"]["eyebrow"], content["docs"]["h2"] = DOC_SECTION_COPY[page.key]

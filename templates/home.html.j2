@@ -90,7 +90,11 @@
 </button>
 <nav aria-label="{{ content.nav_label }}" id="primary-nav">
 {%- for item in content.nav %}
+{%- if item.href %}
+<a href="{{ item.href }}">{{ item.label }}</a>
+{%- else %}
 <a href="#{{ item.id }}">{{ item.label }}</a>
+{%- endif %}
 {%- endfor %}
 </nav>
 </header>

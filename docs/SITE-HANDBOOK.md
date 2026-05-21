@@ -14,7 +14,9 @@ backlog. Those live in the public `eMule-tooling` docs.
 - If the website conflicts with `eMule-tooling`, update the website or the
   linked source doc before publishing.
 - The homepage summarizes and directs readers. Long-form setup, tuning, release,
-  and API details belong in Markdown docs.
+  and API details belong in the rendered documentation site at
+  `https://emulebb.github.io/eMule-tooling/`, backed by Markdown in
+  `eMule-tooling`.
 - Release status must be derived from the `0.7.3` active release docs:
   `RELEASE-0.7.3.md`, `RELEASE-0.7.3-CHECKLIST.md`,
   `RELEASE-0.7.3-RUNBOOK.md`, and `RELEASE-0.7.3-GATE-HISTORY.md`.
@@ -83,6 +85,9 @@ Rules:
   material, but the homepage must not rephrase those items as product features.
 - The Docs section should link to durable source documents rather than copying
   long explanations into the homepage.
+- Public navigation and Docs-section links should target rendered pages under
+  `https://emulebb.github.io/eMule-tooling/`; link to GitHub blob Markdown only
+  when a rendered page does not exist.
 - The Why section may explain the learning and modernization exercise behind
   the project, but it must not blur planned release status or imply a rewrite.
 - The Implementation method section may summarize engineering practice,
@@ -236,7 +241,7 @@ foreach ($anchor in $anchors) {
 }
 ```
 
-Curated tooling-doc link check:
+Curated rendered-doc link check:
 
 ```powershell
 $files = Get-ChildItem -Recurse -Filter index.html |
@@ -244,13 +249,17 @@ $files = Get-ChildItem -Recurse -Filter index.html |
   ForEach-Object { $_.FullName }
 foreach ($file in $files) {
   $html = Get-Content -Raw $file
-  $urls = [regex]::Matches($html, 'https://github.com/eMulebb/eMule-tooling/blob/main/([^\"]+)') |
+  $urls = [regex]::Matches($html, 'https://emulebb.github.io/eMule-tooling/([^\"#?]+)') |
     ForEach-Object { $_.Groups[1].Value } |
     Sort-Object -Unique
-  foreach ($path in $urls) {
-    $local = Join-Path '..\eMule-tooling' ($path -replace '/', '\')
+  foreach ($urlPath in $urls) {
+    if ($urlPath -eq '' -or $urlPath -eq 'INDEX/') {
+      continue
+    }
+    $path = 'docs/' + ($urlPath.TrimEnd('/') -replace '/', '\') + '.md'
+    $local = Join-Path '..\eMule-tooling' $path
     if (-not (Test-Path -LiteralPath $local)) {
-      throw "Missing linked doc: ${file}: $path"
+      throw "Missing rendered-doc source: ${file}: $urlPath -> $path"
     }
   }
 }
