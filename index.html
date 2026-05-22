@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Modern eMule for 2026: eMule BB adds broadband upload control, automated testing, performance defaults, large libraries, REST automation, eD2K, and Kad." name="description"/>
+<meta content="Modern eMule for 2026: eMule BB adds broadband upload control, extensive automated testing, SBOM-backed packages, performance defaults, large libraries, REST automation, eD2K, and Kad." name="description"/>
 <meta content="index,follow" name="robots"/>
 <meta content="eMulebb" name="author"/>
 <meta content="Modern eMule 2026 | eMule broadband edition" property="og:title"/>
-<meta content="eMule BB is a modern eMule line for 2026 power users: broadband upload control, automated testing, performance-minded defaults, large libraries, REST automation, and eD2K/Kad compatibility." property="og:description"/>
+<meta content="eMule BB is a modern eMule line for 2026 power users: broadband upload control, extensive automated testing, SBOM-backed packages, performance-minded defaults, large libraries, REST automation, and eD2K/Kad compatibility." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://emulebb.github.io/" property="og:url"/>
 <meta content="eMule broadband edition" property="og:site_name"/>
@@ -35,7 +35,7 @@
               "operatingSystem": "Windows",
               "url": "https://emulebb.github.io/",
               "codeRepository": "https://github.com/eMulebb/eMule",
-              "description": "Modern eMule for 2026 with broadband upload control, automated testing, performance-minded defaults, large shared libraries, REST automation, eD2K/Kad compatibility, and power-user workflows. The first public release is planned as 0.7.3 and is not yet released."
+              "description": "Modern eMule for 2026 with broadband upload control, extensive automated testing, SBOM-backed packages, performance-minded defaults, large shared libraries, REST automation, eD2K/Kad compatibility, and power-user workflows. The first public release is planned as 0.7.3 and is not yet released."
       }
     </script>
 <script type="application/ld+json">
@@ -74,7 +74,7 @@
 <div class="hero-copy">
 <p class="eyebrow">Modern eMule for 2026, tuned for broadband</p>
 <h1>eMule BB keeps eD2K and Kad useful for modern power users.</h1>
-<p class="lead">A 2026-ready eMule for fast upload links, large shared libraries, always-on Windows sessions, tested release evidence, and local controller workflows without abandoning the familiar desktop app.</p>
+<p class="lead">A 2026-ready eMule for fast upload links, large shared libraries, always-on Windows sessions, unusually deep release evidence, SBOM-backed package proof, and local controller workflows without abandoning the familiar desktop app.</p>
 <div aria-label="Project links" class="actions">
 <a class="button primary" href="https://github.com/eMulebb/eMule">Source</a>
 <a class="button secondary" href="#guide">Product guide</a>
@@ -83,15 +83,16 @@
 <aside aria-label="eMule BB product summary" class="hero-panel">
 <p class="panel-kicker">Product posture</p>
 <h2>Conservative where compatibility matters. Modern where testing and control matter.</h2>
-<p>eMule BB keeps the native eMule workflow at the center and adds broadband-aware queue behavior, local API control, performance-minded defaults, and release-grade validation around it.</p>
+<p>eMule BB keeps the native eMule workflow at the center and adds broadband-aware queue behavior, local API control, performance-minded defaults, extensive release validation, and SBOM-backed package evidence around it.</p>
 <div class="signal-list">
 <span>Stock eD2K/Kad compatibility</span>
 <span>Broadband upload slot control</span>
-<span>Automated test coverage</span>
+<span>Extensive automated testing</span>
 <span>Modern performance limits</span>
 <span>Authenticated JSON REST API</span>
 <span>Public 0.7.3 planned</span>
 <span>x64/ARM64 package proof</span>
+<span>SPDX SBOM evidence</span>
 </div>
 </aside>
 </section>
@@ -118,7 +119,7 @@
 <article>
 <span>Release reason</span>
 <h3>Practice modern proof on legacy code</h3>
-<p>The workspace treats release as an engineering artifact: source policy, OpenAPI contracts, performance-sensitive behavior, reproducible builds, package hashes, live checks, and operator gates all have to line up.</p>
+<p>The workspace treats release as an engineering artifact: source policy, OpenAPI contracts, performance-sensitive behavior, reproducible builds, package hashes, SBOMs, live checks, and operator gates all have to line up.</p>
 </article>
 </div>
 </section>
@@ -157,7 +158,7 @@
 <article>
 <span>Testing and release discipline</span>
 <h3>Evidence before public packages</h3>
-<p>The planned <code>0.7.3</code> beta depends on hosted fast harness CI, native tests, REST contracts, UI/resource checks, live controller lanes, network adversity, packaging, and x64/ARM64 rehearsals.</p>
+<p>The planned <code>0.7.3</code> beta depends on hosted fast harness CI, native tests, REST contracts, UI/resource checks, live controller lanes, network adversity, packaging, SBOMs, and x64/ARM64 rehearsals.</p>
 </article>
 </div>
 </section>
@@ -271,7 +272,7 @@
 <section class="section release" id="release">
 <div class="section-heading">
 <p class="eyebrow">Testing and performance proof</p>
-<h2>Public release 0.7.3 is planned, heavily tested, and not yet released</h2>
+<h2>Public release 0.7.3 is planned, extensively tested, SBOM-backed, and not yet released</h2>
 </div>
 <div aria-label="eMule BB release proof" class="release-grid">
 <article>
@@ -287,12 +288,17 @@
 <article>
 <span></span>
 <strong>Build and package proof</strong>
-<p>Required proof covers workspace validation, Debug and Release x64 app builds, Release ARM64 app builds, test binaries, package generation, clean-worktree checks, and recorded SHA-256 hashes.</p>
+<p>Required proof covers workspace validation, Debug and Release x64 app builds, Release ARM64 app builds, test binaries, package generation, SBOM generation, clean-worktree checks, and recorded SHA-256 hashes.</p>
+</article>
+<article>
+<span></span>
+<strong>SPDX SBOM</strong>
+<p>Release packages carry package-local <code>SBOM.spdx.json</code> plus sidecar <code>*.sbom.spdx.json</code> files, with manifest hashes that tie software contents to the exact package evidence.</p>
 </article>
 <article>
 <span></span>
 <strong>Behavior proof</strong>
-<p>Test gates cover native suites, REST contract and OpenAPI drift, malformed requests, UI automation, live controller-surface E2E, full Release x64 live E2E, and network-adversity scenarios.</p>
+<p>Extensive test gates cover native suites, REST contract and OpenAPI drift, malformed requests, UI automation, live controller-surface E2E, full Release x64 live E2E, and network-adversity scenarios.</p>
 </article>
 <article>
 <span></span>

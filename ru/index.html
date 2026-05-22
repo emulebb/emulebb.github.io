@@ -83,6 +83,7 @@
 <span>Аутентифицированная JSON REST API</span>
 <span>Публичная 0.7.3 запланирована</span>
 <span>Workspace для release-валидации</span>
+<span>SPDX SBOM package evidence</span>
 </div>
 </aside>
 </section>
@@ -279,6 +280,11 @@
 <span></span>
 <strong>Доказательство поведения</strong>
 <p>Gates покрывают native suites, REST contract, OpenAPI drift, malformed requests, UI automation, live controller-surface E2E, полный Release x64 live E2E и network adversity.</p>
+</article>
+<article>
+<span></span>
+<strong>SPDX SBOM</strong>
+<p>Release packages carry package-local <code>SBOM.spdx.json</code> plus sidecar <code>*.sbom.spdx.json</code> files, with manifest hashes that tie software contents to the exact package evidence.</p>
 </article>
 <article>
 <span></span>

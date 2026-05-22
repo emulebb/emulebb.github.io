@@ -183,10 +183,10 @@ def s(eyebrow: str, h2: str, p: str = "") -> dict[str, Any]:
 CONTENT: dict[str, dict[str, Any]] = {
     "en": {
         "title": "Modern eMule 2026 | eMule broadband edition",
-        "meta_description": "Modern eMule for 2026: eMule BB adds broadband upload control, automated testing, performance defaults, large libraries, REST automation, eD2K, and Kad.",
+        "meta_description": "Modern eMule for 2026: eMule BB adds broadband upload control, extensive automated testing, SBOM-backed packages, performance defaults, large libraries, REST automation, eD2K, and Kad.",
         "og_title": "Modern eMule 2026 | eMule broadband edition",
-        "og_description": "eMule BB is a modern eMule line for 2026 power users: broadband upload control, automated testing, performance-minded defaults, large libraries, REST automation, and eD2K/Kad compatibility.",
-        "structured_description": "Modern eMule for 2026 with broadband upload control, automated testing, performance-minded defaults, large shared libraries, REST automation, eD2K/Kad compatibility, and power-user workflows. The first public release is planned as 0.7.3 and is not yet released.",
+        "og_description": "eMule BB is a modern eMule line for 2026 power users: broadband upload control, extensive automated testing, SBOM-backed packages, performance-minded defaults, large libraries, REST automation, and eD2K/Kad compatibility.",
+        "structured_description": "Modern eMule for 2026 with broadband upload control, extensive automated testing, SBOM-backed packages, performance-minded defaults, large shared libraries, REST automation, eD2K/Kad compatibility, and power-user workflows. The first public release is planned as 0.7.3 and is not yet released.",
         "nav_label": "Primary navigation",
         "project_links_label": "Project links",
         "product_summary_label": "eMule BB product summary",
@@ -203,13 +203,13 @@ CONTENT: dict[str, dict[str, Any]] = {
         "hero": {
             "eyebrow": "Modern eMule for 2026, tuned for broadband",
             "h1": "eMule BB keeps eD2K and Kad useful for modern power users.",
-            "lead": "A 2026-ready eMule for fast upload links, large shared libraries, always-on Windows sessions, tested release evidence, and local controller workflows without abandoning the familiar desktop app.",
+            "lead": "A 2026-ready eMule for fast upload links, large shared libraries, always-on Windows sessions, unusually deep release evidence, SBOM-backed package proof, and local controller workflows without abandoning the familiar desktop app.",
             "source": "Source",
             "guide": "Product guide",
             "panel_kicker": "Product posture",
             "panel_h2": "Conservative where compatibility matters. Modern where testing and control matter.",
-            "panel_p": "eMule BB keeps the native eMule workflow at the center and adds broadband-aware queue behavior, local API control, performance-minded defaults, and release-grade validation around it.",
-            "signals": ["Stock eD2K/Kad compatibility", "Broadband upload slot control", "Automated test coverage", "Modern performance limits", "Authenticated JSON REST API", "Public 0.7.3 planned", "x64/ARM64 package proof"],
+            "panel_p": "eMule BB keeps the native eMule workflow at the center and adds broadband-aware queue behavior, local API control, performance-minded defaults, extensive release validation, and SBOM-backed package evidence around it.",
+            "signals": ["Stock eD2K/Kad compatibility", "Broadband upload slot control", "Extensive automated testing", "Modern performance limits", "Authenticated JSON REST API", "Public 0.7.3 planned", "x64/ARM64 package proof", "SPDX SBOM evidence"],
         },
         "intro": "eMule broadband edition, compactly <strong>eMule BB</strong>, is an independent product line for people who still value eMule's distributed sharing model. It preserves the classic desktop workflows while making the client easier to run, observe, automate, and validate on current Windows systems.",
         "why": {
@@ -217,7 +217,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             "cards": [
                 c("Product reason", "Keep eD2K and Kad practical", "The goal is not nostalgia or a rewrite. It is to keep the classic sharing model usable for long sessions, rare files, deliberate seeding, and users who still want a native desktop client."),
                 c("Engineering reason", "Move old assumptions into daylight", "Defaults around upload slots, timeouts, buffers, large libraries, and WebServer exposure are made explicit so each change can be reviewed, tested, documented, and adjusted."),
-                c("Release reason", "Practice modern proof on legacy code", "The workspace treats release as an engineering artifact: source policy, OpenAPI contracts, performance-sensitive behavior, reproducible builds, package hashes, live checks, and operator gates all have to line up."),
+                c("Release reason", "Practice modern proof on legacy code", "The workspace treats release as an engineering artifact: source policy, OpenAPI contracts, performance-sensitive behavior, reproducible builds, package hashes, SBOMs, live checks, and operator gates all have to line up."),
             ],
         },
         "features": {
@@ -228,7 +228,7 @@ CONTENT: dict[str, dict[str, Any]] = {
                 c("Performance and scale", "Modern defaults for large sessions", "Higher socket buffers, queue/source limits, file buffering, timeout defaults, recursive share sync, startup cache work, and long-path guidance target current Windows systems and large libraries."),
                 c("Classic network", "eD2K and Kad stay first", "Server, global, and Kad search remain the native foundation, with Kad identity tracking, bad-node handling, cleanup, and timing work kept inside compatibility boundaries."),
                 c("Automation", "REST and controller workflows", "Authenticated JSON endpoints cover transfers, searches, shared files, servers, Kad, logs, categories, uploads, statistics, preferences, and controlled shutdown from trusted local tools."),
-                c("Testing and release discipline", "Evidence before public packages", "The planned <code>0.7.3</code> beta depends on hosted fast harness CI, native tests, REST contracts, UI/resource checks, live controller lanes, network adversity, packaging, and x64/ARM64 rehearsals."),
+                c("Testing and release discipline", "Evidence before public packages", "The planned <code>0.7.3</code> beta depends on hosted fast harness CI, native tests, REST contracts, UI/resource checks, live controller lanes, network adversity, packaging, SBOMs, and x64/ARM64 rehearsals."),
             ],
         },
         "guide": {
@@ -254,12 +254,12 @@ CONTENT: dict[str, dict[str, Any]] = {
             "pills": ["Transfers", "Searches", "Servers", "Kad", "Shared files", "Uploads", "Categories", "Logs", "Statistics", "Preferences"],
         },
         "release": {
-            **s("Testing and performance proof", "Public release 0.7.3 is planned, heavily tested, and not yet released"),
+            **s("Testing and performance proof", "Public release 0.7.3 is planned, extensively tested, SBOM-backed, and not yet released"),
             "cards": [
                 c("", "Current status", "The first public release target is <code>0.7.3</code>. It is not yet released. Final proof is in progress, and public status stays tied to the active release docs."),
                 c("", "Hosted fast CI", "The <a href=\"https://github.com/eMulebb/eMule-build-tests/actions/workflows/fast-harness-ci.yml\">Fast Harness CI</a> lane installs the shared Python harness and runs the default non-live, non-native pytest suite on pushes and pull requests."),
-                c("", "Build and package proof", "Required proof covers workspace validation, Debug and Release x64 app builds, Release ARM64 app builds, test binaries, package generation, clean-worktree checks, and recorded SHA-256 hashes."),
-                c("", "Behavior proof", "Test gates cover native suites, REST contract and OpenAPI drift, malformed requests, UI automation, live controller-surface E2E, full Release x64 live E2E, and network-adversity scenarios."),
+                c("", "Build and package proof", "Required proof covers workspace validation, Debug and Release x64 app builds, Release ARM64 app builds, test binaries, package generation, SBOM generation, clean-worktree checks, and recorded SHA-256 hashes."),
+                c("", "Behavior proof", "Extensive test gates cover native suites, REST contract and OpenAPI drift, malformed requests, UI automation, live controller-surface E2E, full Release x64 live E2E, and network-adversity scenarios."),
                 c("", "Performance proof", "Large-session performance work is described through concrete surfaces: upload-slot policy, queue/source limits, socket and file buffers, startup caches, long paths, and controller responsiveness."),
                 c("", "Controller proof", "aMuTorrent, Prowlarr, Radarr, Sonarr, and qBittorrent-compatible adapter lanes prove that automation works without weakening the native <code>/api/v1</code> contract."),
                 c("", "Compatibility proof", "Stock eD2K/Kad behavior remains the default. Broadband, REST, and controller features are added around that compatibility goal and compared against the community baseline where useful."),
@@ -455,12 +455,32 @@ def ensure_stock_locale_content(root: Path) -> None:
         LANGUAGE_LINK_COPY[key] = text["lang"]
 
 
+def add_release_evidence_copy(content: dict[str, Any]) -> None:
+    """Add current release-evidence signals shared by all homepage locales."""
+
+    signals = content["hero"]["signals"]
+    if not any("SBOM" in signal for signal in signals):
+        signals.append("SPDX SBOM package evidence")
+
+    release_cards = content["release"]["cards"]
+    if not any("SBOM" in card["h3"] for card in release_cards):
+        release_cards.insert(
+            3,
+            c(
+                "",
+                "SPDX SBOM",
+                "Release packages carry package-local <code>SBOM.spdx.json</code> plus sidecar <code>*.sbom.spdx.json</code> files, with manifest hashes that tie software contents to the exact package evidence.",
+            ),
+        )
+
+
 def with_generated_links(root: Path) -> None:
     """Populate repeated docs and repo link sections for every locale."""
 
     ensure_stock_locale_content(root)
     for page in PAGES:
         content = CONTENT[page.key]
+        add_release_evidence_copy(content)
         for nav_item in content["nav"]:
             if nav_item.get("id") == "docs":
                 nav_item["href"] = DOCS_SITE_URL + "/"
