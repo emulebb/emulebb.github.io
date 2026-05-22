@@ -216,6 +216,30 @@ Commit messages should name the slice, for example:
 
 Push after each coherent commit when the user has requested publishing.
 
+## Source Markdown To Public HTML
+
+The long-form documentation site is generated from Markdown in
+`eMule-tooling`, not from this repository. Use this sequence when public
+homepage copy depends on product-guide, release, REST, or evidence claims:
+
+1. Update the owning Markdown source under `..\eMule-tooling\docs`.
+2. Validate the Markdown-to-HTML publish gate:
+
+   ```powershell
+   cd ..\eMule-tooling
+   python scripts\docs-publish-check.py
+   ```
+
+3. Commit and push the tooling-docs slice so GitHub Actions can publish
+   `https://emulebb.github.io/eMule-tooling/`.
+4. Return to `eMulebb-pages`, update the structured homepage source, then
+   regenerate committed HTML with `tools\render_pages.py`.
+
+Homepage copy should say less than the product guide and link to the rendered
+HTML docs for the details. Testing, SBOM, package, release, REST, and
+performance claims must be true in `eMule-tooling` before they are repeated on
+the static pages.
+
 ## Required Validation
 
 Run these checks before committing and pushing:

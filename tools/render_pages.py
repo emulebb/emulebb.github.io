@@ -203,13 +203,13 @@ CONTENT: dict[str, dict[str, Any]] = {
         "hero": {
             "eyebrow": "Modern eMule for 2026, tuned for broadband",
             "h1": "eMule BB keeps eD2K and Kad useful for modern power users.",
-            "lead": "A 2026-ready eMule for fast upload links, large shared libraries, always-on Windows sessions, unusually deep release evidence, SBOM-backed package proof, and local controller workflows without abandoning the familiar desktop app.",
+            "lead": "A 2026-ready eMule for fast upload links, large shared libraries, always-on Windows sessions, public HTML product docs, unusually deep release evidence, SBOM-backed package proof, and local controller workflows without abandoning the familiar desktop app.",
             "source": "Source",
             "guide": "Product guide",
             "panel_kicker": "Product posture",
             "panel_h2": "Conservative where compatibility matters. Modern where testing and control matter.",
             "panel_p": "eMule BB keeps the native eMule workflow at the center and adds broadband-aware queue behavior, local API control, performance-minded defaults, extensive release validation, and SBOM-backed package evidence around it.",
-            "signals": ["Stock eD2K/Kad compatibility", "Broadband upload slot control", "Extensive automated testing", "Modern performance limits", "Authenticated JSON REST API", "Public 0.7.3 planned", "x64/ARM64 package proof", "SPDX SBOM evidence"],
+            "signals": ["Stock eD2K/Kad compatibility", "Broadband upload slot control", "Extensive automated testing", "Rendered HTML docs", "Modern performance limits", "Authenticated JSON REST API", "Public 0.7.3 planned", "x64/ARM64 package proof", "SPDX SBOM evidence"],
         },
         "intro": "eMule broadband edition, compactly <strong>eMule BB</strong>, is an independent product line for people who still value eMule's distributed sharing model. It preserves the classic desktop workflows while making the client easier to run, observe, automate, and validate on current Windows systems.",
         "why": {
@@ -237,13 +237,13 @@ CONTENT: dict[str, dict[str, Any]] = {
                 c("", "Start from known-good eMule habits", "Use trusted server lists, bootstrap Kad deliberately, keep incoming and shared directories predictable, and preserve the classic search/add/share workflow before layering automation on top."),
                 c("", "Tune upload for your real link", "Set a finite upload limit, choose a realistic upload client target, and let the broadband policy favor fewer stronger slots instead of many low-rate sessions."),
                 c("", "Curate large libraries", "Use long-path capable Windows setups, keep share roots clean, watch ratios, and treat rare files as deliberate publishing decisions."),
-                c("", "Read claims through evidence", "Testing and performance claims point back to release strategy, campaign, CI, package, and product-guide evidence instead of standalone benchmark promises."),
+                c("", "Read claims through rendered docs", "The product guide is maintained as Markdown, rendered to public HTML, and tied to release strategy, test campaigns, CI, package, and SBOM evidence."),
                 c("", "Automate only on trusted networks", "Enable WebServer/REST with an API key, bind and firewall it carefully, and use controllers that respect native eMule transfer and delete semantics."),
                 c("", "Track release readiness", "Treat the public branch as active pre-release work until the planned <code>0.7.3</code> gates, operator checks, and live E2E evidence say otherwise."),
             ],
         },
         "docs": {
-            **s("Read more", "Detailed guides and source documents"),
+            **s("Read more", "Rendered HTML guides from source Markdown", "The public documentation site is built from the maintained Markdown in <code>eMule-tooling</code>, so homepage claims stay connected to product guides, REST contracts, release gates, and package evidence."),
             "links": [],
         },
         "automation": {
@@ -290,7 +290,7 @@ CONTENT: dict[str, dict[str, Any]] = {
 LOCALIZED_COPY_FILE = Path("content") / "locales.json"
 
 DOC_COPY = {'en': {'emulebb': ('eMule BB product guide',
-                    'Product overview for setup, tuning, automation, and release-aware use.'),
+                    'Rendered HTML product guide from the maintained Markdown source, covering setup, tuning, automation, release-aware use, testing, and SBOM evidence.'),
         'setup': ('Setup guide', 'Install model, first-run profile behavior, and practical startup notes.'),
         'network': ('Network guide', 'eD2K, Kad, binding, UPnP, firewall, and connection diagnosis reference.'),
         'sharing': ('Sharing guide',
@@ -306,7 +306,7 @@ DOC_COPY = {'en': {'emulebb': ('eMule BB product guide',
         'troubleshooting': ('Troubleshooting guide',
                             'Symptom-led checks for Low ID, network issues, sharing, and automation.'),
         'release': ('0.7.3 release dashboard',
-                    'Current planned beta gates, evidence pointers, and readiness rules.')}}
+                    'Current planned beta gates, automated test evidence, SBOM/package proof, and readiness rules.')}}
 
 
 REPO_COPY = {'en': {'emule': 'desktop app and product source',
@@ -316,7 +316,7 @@ REPO_COPY = {'en': {'emule': 'desktop app and product source',
         'tooling': 'roadmap, backlog, policy, audits, and reference docs'}}
 
 
-DOC_SECTION_COPY = {'en': ('Read more', 'Detailed guides and source documents')}
+DOC_SECTION_COPY = {'en': ('Read more', 'Rendered HTML guides from source Markdown')}
 
 
 REPO_SECTION_COPY = {'en': ('Public workspace', 'Primary repositories')}
@@ -459,6 +459,8 @@ def add_release_evidence_copy(content: dict[str, Any]) -> None:
     """Add current release-evidence signals shared by all homepage locales."""
 
     signals = content["hero"]["signals"]
+    if not any("HTML" in signal for signal in signals):
+        signals.append("Rendered HTML product docs")
     if not any("SBOM" in signal for signal in signals):
         signals.append("SPDX SBOM package evidence")
 

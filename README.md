@@ -23,3 +23,20 @@ Run the validation helper before publishing:
 ```powershell
 python ..\eMule-tooling\helpers\pages-site-tools.py --pages-root . validate
 ```
+
+## Markdown Documentation Publishing
+
+Long-form product docs are maintained as Markdown in `eMule-tooling` and
+published as rendered HTML at:
+
+<https://emulebb.github.io/eMule-tooling/>
+
+Before changing homepage claims, update and validate the source docs:
+
+```powershell
+cd ..\eMule-tooling
+python scripts\docs-publish-check.py
+```
+
+Then return here, update the structured homepage source, regenerate the static
+HTML, and run the Pages validation commands above.
