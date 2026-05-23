@@ -119,6 +119,12 @@ REPOS = [
     ("https://github.com/emulebb/emulebb-build", "build"),
     ("https://github.com/emulebb/emulebb-build-tests", "tests"),
     ("https://github.com/emulebb/emulebb-tooling", "tooling"),
+    ("https://github.com/emulebb/amutorrent", "amutorrent"),
+    ("https://github.com/emulebb/goed2k-server", "goed2k_server"),
+    ("https://github.com/emulebb/p2p-overlord-agents", "p2p_overlord_agents"),
+    ("https://github.com/emulebb/p2p-overlord-be", "p2p_overlord_be"),
+    ("https://github.com/emulebb/amule", "amule"),
+    ("https://github.com/emulebb/emulebb-miniupnp", "miniupnpc"),
 ]
 
 STOCK_LOCALE_TEXT_FILE = Path("content") / "stock-locales.json"
@@ -182,11 +188,11 @@ def s(eyebrow: str, h2: str, p: str = "") -> dict[str, Any]:
 
 CONTENT: dict[str, dict[str, Any]] = {
     "en": {
-        "title": "Modern eMule for broadband | eMule broadband edition",
-        "meta_description": "Modern eMule for broadband: eMuleBB adds upload control, testing, SBOM-backed packages, performance defaults, large libraries, REST automation, eD2K, and Kad.",
-        "og_title": "Modern eMule for broadband | eMule broadband edition",
-        "og_description": "eMuleBB is a modern eMule line for broadband power users: upload control, extensive testing, SBOM-backed packages, performance-minded defaults, large libraries, REST automation, and eD2K/Kad compatibility.",
-        "structured_description": "Modern eMule for broadband with upload control, extensive automated testing, SBOM-backed packages, performance-minded defaults, large shared libraries, REST automation, eD2K/Kad compatibility, and power-user workflows. The first public release is planned as 0.7.3 and is not yet released.",
+        "title": "eMuleBB home | eMule broadband edition",
+        "meta_description": "eMuleBB is the home of eMule broadband edition: a modern eMule product, Windows P2P builds, controller tooling, and exploratory eD2K/Kad lab work.",
+        "og_title": "eMuleBB home | eMule broadband edition",
+        "og_description": "eMuleBB is its own broadband-focused eMule product and the home for Windows P2P builds, controller tooling, release proof, and exploratory eD2K/Kad engineering.",
+        "structured_description": "eMuleBB is the home of eMule broadband edition, an independent broadband-focused eMule product with upload control, extensive automated testing, SBOM-backed packages, REST automation, eD2K/Kad compatibility, Windows builds for adjacent P2P tools, and exploratory P2P engineering. The first public release candidate is planned as 0.7.3-rc.1 and is not yet released.",
         "nav_label": "Primary navigation",
         "project_links_label": "Project links",
         "product_summary_label": "eMuleBB product summary",
@@ -201,23 +207,23 @@ CONTENT: dict[str, dict[str, Any]] = {
             {"id": "repos", "label": "Repos"},
         ],
         "hero": {
-            "eyebrow": "Modern eMule for broadband power users",
-            "h1": "eMuleBB keeps eD2K and Kad useful for modern power users.",
-            "lead": "A broadband-ready eMule for fast upload links, large shared libraries, always-on Windows sessions, public HTML product docs, unusually deep release evidence, SBOM-backed package proof, and local controller workflows without abandoning the familiar desktop app.",
+            "eyebrow": "The eMuleBB home for broadband P2P",
+            "h1": "eMuleBB is the broadband eMule product built by P2P people.",
+            "lead": "A serious Windows eMule line for fast upload links, large shared libraries, always-on sessions, REST controller workflows, public product docs, SBOM-backed packages, and release proof deep enough for people who actually run P2P clients.",
             "source": "Source",
             "guide": "Product guide",
             "panel_kicker": "Product posture",
-            "panel_h2": "Conservative where compatibility matters. Modern where testing and control matter.",
-            "panel_p": "eMuleBB keeps the native eMule workflow at the center and adds broadband-aware queue behavior, local API control, performance-minded defaults, extensive release validation, and SBOM-backed package evidence around it.",
-            "signals": ["Stock eD2K/Kad compatibility", "Broadband upload slot control", "Extensive automated testing", "Rendered HTML docs", "Modern performance limits", "Authenticated JSON REST API", "Public 0.7.3 planned", "x64/ARM64 package proof", "SPDX SBOM evidence"],
+            "panel_h2": "eMuleBB is the product. The ecosystem is the proof lab.",
+            "panel_p": "The desktop app stays stock-compatible where the network matters, while the wider eMuleBB organization builds Windows packages, controller workflows, deterministic test services, and exploratory eD2K/Kad tooling around it.",
+            "signals": ["Stock eD2K/Kad compatibility", "Broadband upload slot control", "Extensive automated testing", "Rendered HTML docs", "Modern performance limits", "Authenticated JSON REST API", "0.7.3-rc.1 planned", "aMule Windows builds", "MiniUPnP Windows builds", "aMuTorrent manager fork", "goed2k lab work", "p2p-overlord Rust client"],
         },
-        "intro": "eMule broadband edition, compactly <strong>eMuleBB</strong>, is an independent product line for people who still value eMule's distributed sharing model. It preserves the classic desktop workflows while making the client easier to run, observe, automate, and validate on current Windows systems. Around it, the eMuleBB ecosystem provides build, test, documentation, server, controller, adjacent headless P2P tooling, and planned aMule build publication without turning the desktop app into a generic platform or claiming upstream aMule ownership.",
+        "intro": "This is the home of <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, an independent product for people who still value eMule's distributed sharing model and want it operated like modern software. Around the flagship desktop app, the eMuleBB organization provides Windows builds for aMule and MiniUPnP, an aMuTorrent fork for managing eMuleBB, deterministic eD2K server work through goed2k, and exploratory headless eD2K/Kad work in the p2p-overlord suite. More is coming.",
         "why": {
-            **s("Why", "A legacy client is useful only if it can still be operated with confidence", "eMuleBB is partly a product effort and partly a disciplined learning exercise: preserve a complex native Windows application with real network behavior, then surround it with modern build, test, documentation, automation, and release practice."),
+            **s("Why", "P2P software earns trust by surviving real sessions", "eMuleBB is a product effort and an engineering practice: preserve a complex native Windows client with real network behavior, then surround it with modern builds, tests, documentation, automation, and release proof."),
             "cards": [
-                c("Product reason", "Keep eD2K and Kad practical", "The goal is not nostalgia, a rewrite, or a generic P2P lab. It is to keep the classic sharing model usable for long sessions, rare files, deliberate seeding, and users who still want a native desktop client."),
-                c("Engineering reason", "Move old assumptions into daylight", "Defaults around upload slots, timeouts, buffers, large libraries, and WebServer exposure are made explicit so each change can be reviewed, tested, documented, and adjusted."),
-                c("Release reason", "Practice modern proof on legacy code", "The workspace treats release as an engineering artifact: source policy, OpenAPI contracts, performance-sensitive behavior, reproducible builds, package hashes, SBOMs, live checks, and operator gates all have to line up."),
+                c("Product reason", "eMuleBB is its own product", "The goal is not a cosmetic mod, a protocol fork, or a generic downloader shell. It is a broadband-focused eMule line for long sessions, rare files, deliberate seeding, and power users who still want the native desktop workflow."),
+                c("Engineering reason", "Make P2P behavior inspectable", "Upload slots, timeouts, buffers, large libraries, WebServer exposure, REST control, and package evidence are made explicit so each change can be reviewed, tested, documented, and adjusted."),
+                c("Ecosystem reason", "Build the tools around the client", "The same workspace discipline covers the app, controller tooling, Windows builds, deterministic eD2K services, and exploratory headless eD2K/Kad work without pretending every lab project is a stable end-user product."),
             ],
         },
         "features": {
@@ -228,7 +234,7 @@ CONTENT: dict[str, dict[str, Any]] = {
                 c("Performance and scale", "Modern defaults for large sessions", "Higher socket buffers, queue/source limits, file buffering, timeout defaults, recursive share sync, startup cache work, and long-path guidance target current Windows systems and large libraries."),
                 c("Classic network", "eD2K and Kad stay first", "Server, global, and Kad search remain the native foundation, with Kad identity tracking, bad-node handling, cleanup, and timing work kept inside compatibility boundaries."),
                 c("Automation", "REST and controller workflows", "Authenticated JSON endpoints cover transfers, searches, shared files, servers, Kad, logs, categories, uploads, statistics, preferences, and controlled shutdown from trusted local tools."),
-                c("Testing and release discipline", "Evidence before public packages", "The planned <code>0.7.3</code> beta depends on hosted fast harness CI, native tests, REST contracts, UI/resource checks, live controller lanes, network adversity, packaging, SBOMs, and x64/ARM64 rehearsals."),
+                c("Testing and release discipline", "Evidence before public packages", "The planned <code>0.7.3-rc.1</code> candidate depends on hosted fast harness CI, native tests, REST contracts, UI/resource checks, live controller lanes, network adversity, packaging, SBOMs, and x64/ARM64 rehearsals."),
             ],
         },
         "guide": {
@@ -239,7 +245,7 @@ CONTENT: dict[str, dict[str, Any]] = {
                 c("", "Curate large libraries", "Use long-path capable Windows setups, keep share roots clean, watch ratios, and treat rare files as deliberate publishing decisions."),
                 c("", "Read claims through rendered docs", "The product guide is maintained as Markdown, rendered to public HTML, and tied to release strategy, test campaigns, CI, package, and SBOM evidence."),
                 c("", "Automate only on trusted networks", "Enable WebServer/REST with an API key, bind and firewall it carefully, and use controllers that respect native eMule transfer and delete semantics."),
-                c("", "Track release readiness", "Treat the public branch as active pre-release work until the planned <code>0.7.3</code> gates, operator checks, and live E2E evidence say otherwise."),
+                c("", "Track release readiness", "Treat the public branch as active pre-release work until the planned <code>0.7.3-rc.1</code> gates, operator checks, and live E2E evidence say otherwise."),
             ],
         },
         "docs": {
@@ -254,19 +260,19 @@ CONTENT: dict[str, dict[str, Any]] = {
             "pills": ["Transfers", "Searches", "Servers", "Kad", "Shared files", "Uploads", "Categories", "Logs", "Statistics", "Preferences"],
         },
         "release": {
-            **s("Testing and performance proof", "Public release 0.7.3 is planned, extensively tested, SBOM-backed, and not yet released"),
+            **s("Testing and performance proof", "Public release candidate 0.7.3-rc.1 is planned, extensively tested, SBOM-backed, and not yet released"),
             "cards": [
-                c("", "Current status", "The first public release target is <code>0.7.3</code>. It is not yet released. Final proof is in progress, and public status stays tied to the active release docs."),
+                c("", "Current status", "The first public release candidate target is <code>0.7.3-rc.1</code>. It is not yet released. Final proof is in progress, and public status stays tied to the active release docs."),
                 c("", "Hosted fast CI", "The <a href=\"https://github.com/emulebb/emulebb-build-tests/actions/workflows/fast-harness-ci.yml\">Fast Harness CI</a> lane installs the shared Python harness and runs the default non-live, non-native pytest suite on pushes and pull requests."),
                 c("", "Build and package proof", "Required proof covers workspace validation, Debug and Release x64 app builds, Release ARM64 app builds, test binaries, package generation, SBOM generation, clean-worktree checks, and recorded SHA-256 hashes."),
                 c("", "Behavior proof", "Extensive test gates cover native suites, REST contract and OpenAPI drift, malformed requests, UI automation, live controller-surface E2E, full Release x64 live E2E, and network-adversity scenarios."),
                 c("", "Performance proof", "Large-session performance work is described through concrete surfaces: upload-slot policy, queue/source limits, socket and file buffers, startup caches, long paths, and controller responsiveness."),
-                c("", "Controller proof", "aMuTorrent, Prowlarr, Radarr, Sonarr, and qBittorrent-compatible adapter lanes prove that automation works without weakening the native <code>/api/v1</code> contract."),
+                c("", "Controller proof", "The aMuTorrent fork, Prowlarr, Radarr, Sonarr, and qBittorrent-compatible adapter lanes prove that automation works without weakening the native <code>/api/v1</code> contract."),
                 c("", "Compatibility proof", "Stock eD2K/Kad behavior remains the default. Broadband, REST, and controller features are added around that compatibility goal and compared against the community baseline where useful."),
             ],
         },
         "method": {
-            **s("Implementation method", "Modernize around the legacy core, then prove the result", "The implementation style is intentionally conservative. eMuleBB changes local policy, limits, diagnostics, API boundaries, and release discipline while keeping stock eD2K/Kad compatibility as the default."),
+            **s("Implementation method", "Modernize around the legacy core, then prove the result", "The implementation style is intentionally conservative. eMuleBB changes local policy, limits, diagnostics, API boundaries, and release discipline while keeping stock eD2K/Kad compatibility as the default. The wider organization uses the same discipline for Windows builds, managers, servers, and lab clients."),
             "cards": [
                 c("Compatibility", "No casual protocol drift", "Kad and eD2K changes stay inside local routing, timing, validation, and control paths. Wire formats, opcodes, and native desktop workflows remain compatibility boundaries."),
                 c("Limits", "Fixed, reviewable defaults", "Modern bandwidth, memory, socket, queue, startup, and timeout assumptions are expressed as explicit defaults or advanced preferences instead of hidden adaptive behavior."),
@@ -274,13 +280,13 @@ CONTENT: dict[str, dict[str, Any]] = {
                 c("Release", "Evidence before labels", "The release process records commands, commits, logs, package paths, hashes, live evidence, performance-sensitive checks, and operator decisions so a release tag is a checked outcome."),
             ],
         },
-        "repos": {**s("eMuleBB ecosystem", "Primary repositories"), "links": []},
+        "repos": {**s("eMuleBB ecosystem", "Products, builds, managers, and P2P lab work"), "links": []},
         "team": {
-            **s("Project lore", "The people keeping the queue from becoming performance art"),
+            **s("What comes next", "A focused P2P workshop with more on the way"),
             "cards": [
-                c("", "Upload Slot Therapist", "Helps underperforming slots process their feelings for exactly long enough before escorting them back to the queue with a clipboard and a cooldown."),
-                c("", "Kad Bootstrap Archivist", "Maintains the sacred list of nodes that worked once in 2007 and therefore deserve a respectful, heavily validated second chance."),
-                c("", "Release Gate Bouncer", "Lets builds into the room only after they bring tests, live evidence, and a convincing explanation for what happened to the last socket."),
+                c("", "Flagship product", "eMuleBB is where the public identity lands: the app name, the packages, the docs, the release proof, and the compatibility story."),
+                c("", "Windows P2P builds", "aMule and MiniUPnP builds are part of the practical Windows distribution work around the ecosystem, with clear boundaries around upstream ownership."),
+                c("", "P2P lab", "goed2k and p2p-overlord keep the deeper eD2K/Kad experiments moving. More tools, more validation, and more integration work are coming. Stay tuned."),
             ],
         },
     },
@@ -309,11 +315,17 @@ DOC_COPY = {'en': {'emulebb': ('eMuleBB product guide',
                     'Current planned beta gates, automated test evidence, SBOM/package proof, and readiness rules.')}}
 
 
-REPO_COPY = {'en': {'emule': 'desktop app and product source',
+REPO_COPY = {'en': {'emule': 'flagship desktop app and product source',
         'setup': 'reproducible workspace setup',
         'build': 'build, validation, and release orchestration',
         'tests': 'native, Python, UI, REST, and live E2E tests',
-        'tooling': 'roadmap, backlog, policy, audits, and reference docs'}}
+        'tooling': 'roadmap, backlog, policy, audits, and reference docs',
+        'amutorrent': 'fork used for eMuleBB management and controller workflows',
+        'goed2k_server': 'eD2K server work for deterministic testing and ecosystem services',
+        'p2p_overlord_agents': 'exploratory agents for the p2p-overlord P2P suite',
+        'p2p_overlord_be': 'exploratory headless Rust eD2K/Kad client backend work',
+        'amule': 'Windows build and validation track for aMule users',
+        'miniupnpc': 'Windows build and validation track for MiniUPnP/miniupnpc'}}
 
 
 DOC_SECTION_COPY = {'en': ('Read more', 'Rendered HTML guides from source Markdown')}
@@ -381,6 +393,12 @@ def stock_repo_copy(t: dict[str, Any]) -> dict[str, str]:
         "build": t["proof"],
         "tests": t["proof"],
         "tooling": t["docs"],
+        "amutorrent": "aMuTorrent fork for managing eMuleBB.",
+        "goed2k_server": "goed2k eD2K server work for deterministic tests and ecosystem services.",
+        "p2p_overlord_agents": "Exploratory p2p-overlord agents for headless P2P workflows.",
+        "p2p_overlord_be": "Exploratory Rust eD2K/Kad backend work in the p2p-overlord suite.",
+        "amule": "Windows build and validation track for aMule users.",
+        "miniupnpc": "Windows build and validation track for MiniUPnP/miniupnpc.",
     }
 
 
@@ -495,7 +513,7 @@ def with_generated_links(root: Path) -> None:
         ]
         content["repos"]["eyebrow"], content["repos"]["h2"] = REPO_SECTION_COPY[page.key]
         content["repos"]["links"] = [
-            {"href": href, "title": title_for_repo(key), "text": REPO_COPY[page.key][key]}
+            {"href": href, "title": title_for_repo(key), "text": REPO_COPY[page.key].get(key, REPO_COPY["en"][key])}
             for href, key in REPOS
         ]
 
@@ -509,6 +527,12 @@ def title_for_repo(key: str) -> str:
         "build": "emulebb-build",
         "tests": "emulebb-build-tests",
         "tooling": "emulebb-tooling",
+        "amutorrent": "amutorrent",
+        "goed2k_server": "goed2k-server",
+        "p2p_overlord_agents": "p2p-overlord-agents",
+        "p2p_overlord_be": "p2p-overlord-be",
+        "amule": "aMule Windows builds",
+        "miniupnpc": "emulebb-miniupnp",
     }[key]
 
 
