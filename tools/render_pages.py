@@ -285,7 +285,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             **s("What comes next", "A focused P2P workshop with more on the way"),
             "cards": [
                 c("", "Flagship product", "eMuleBB is where the public identity lands: the app name, the packages, the docs, the release proof, and the compatibility story."),
-                c("", "Windows P2P builds", "aMule and MiniUPnP builds are part of the practical Windows distribution work around the ecosystem, with clear boundaries around upstream ownership."),
+                c("", "Windows P2P builds", "We publish Windows builds for aMule and MiniUPnP/miniupnpc as part of the practical distribution work around the eMuleBB ecosystem."),
                 c("", "P2P lab", "goed2k and p2p-overlord keep the deeper eD2K/Kad experiments moving. More tools, more validation, and more integration work are coming. Stay tuned."),
             ],
         },
