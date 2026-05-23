@@ -182,11 +182,11 @@ def s(eyebrow: str, h2: str, p: str = "") -> dict[str, Any]:
 
 CONTENT: dict[str, dict[str, Any]] = {
     "en": {
-        "title": "Modern eMule 2026 | eMule broadband edition",
-        "meta_description": "Modern eMule for 2026: eMuleBB adds broadband upload control, extensive automated testing, SBOM-backed packages, performance defaults, large libraries, REST automation, eD2K, and Kad.",
-        "og_title": "Modern eMule 2026 | eMule broadband edition",
-        "og_description": "eMuleBB is a modern eMule line for 2026 power users: broadband upload control, extensive automated testing, SBOM-backed packages, performance-minded defaults, large libraries, REST automation, and eD2K/Kad compatibility.",
-        "structured_description": "Modern eMule for 2026 with broadband upload control, extensive automated testing, SBOM-backed packages, performance-minded defaults, large shared libraries, REST automation, eD2K/Kad compatibility, and power-user workflows. The first public release is planned as 0.7.3 and is not yet released.",
+        "title": "Modern eMule for broadband | eMule broadband edition",
+        "meta_description": "Modern eMule for broadband: eMuleBB adds upload control, testing, SBOM-backed packages, performance defaults, large libraries, REST automation, eD2K, and Kad.",
+        "og_title": "Modern eMule for broadband | eMule broadband edition",
+        "og_description": "eMuleBB is a modern eMule line for broadband power users: upload control, extensive testing, SBOM-backed packages, performance-minded defaults, large libraries, REST automation, and eD2K/Kad compatibility.",
+        "structured_description": "Modern eMule for broadband with upload control, extensive automated testing, SBOM-backed packages, performance-minded defaults, large shared libraries, REST automation, eD2K/Kad compatibility, and power-user workflows. The first public release is planned as 0.7.3 and is not yet released.",
         "nav_label": "Primary navigation",
         "project_links_label": "Project links",
         "product_summary_label": "eMuleBB product summary",
@@ -201,9 +201,9 @@ CONTENT: dict[str, dict[str, Any]] = {
             {"id": "repos", "label": "Repos"},
         ],
         "hero": {
-            "eyebrow": "Modern eMule for 2026, tuned for broadband",
+            "eyebrow": "Modern eMule for broadband power users",
             "h1": "eMuleBB keeps eD2K and Kad useful for modern power users.",
-            "lead": "A 2026-ready eMule for fast upload links, large shared libraries, always-on Windows sessions, public HTML product docs, unusually deep release evidence, SBOM-backed package proof, and local controller workflows without abandoning the familiar desktop app.",
+            "lead": "A broadband-ready eMule for fast upload links, large shared libraries, always-on Windows sessions, public HTML product docs, unusually deep release evidence, SBOM-backed package proof, and local controller workflows without abandoning the familiar desktop app.",
             "source": "Source",
             "guide": "Product guide",
             "panel_kicker": "Product posture",
@@ -211,11 +211,11 @@ CONTENT: dict[str, dict[str, Any]] = {
             "panel_p": "eMuleBB keeps the native eMule workflow at the center and adds broadband-aware queue behavior, local API control, performance-minded defaults, extensive release validation, and SBOM-backed package evidence around it.",
             "signals": ["Stock eD2K/Kad compatibility", "Broadband upload slot control", "Extensive automated testing", "Rendered HTML docs", "Modern performance limits", "Authenticated JSON REST API", "Public 0.7.3 planned", "x64/ARM64 package proof", "SPDX SBOM evidence"],
         },
-        "intro": "eMule broadband edition, compactly <strong>eMuleBB</strong>, is an independent product line for people who still value eMule's distributed sharing model. It preserves the classic desktop workflows while making the client easier to run, observe, automate, and validate on current Windows systems.",
+        "intro": "eMule broadband edition, compactly <strong>eMuleBB</strong>, is an independent product line for people who still value eMule's distributed sharing model. It preserves the classic desktop workflows while making the client easier to run, observe, automate, and validate on current Windows systems. Around it, the eMuleBB ecosystem provides build, test, documentation, server, controller, and adjacent headless P2P tooling without turning the desktop app into a generic platform.",
         "why": {
             **s("Why", "A legacy client is useful only if it can still be operated with confidence", "eMuleBB is partly a product effort and partly a disciplined learning exercise: preserve a complex native Windows application with real network behavior, then surround it with modern build, test, documentation, automation, and release practice."),
             "cards": [
-                c("Product reason", "Keep eD2K and Kad practical", "The goal is not nostalgia or a rewrite. It is to keep the classic sharing model usable for long sessions, rare files, deliberate seeding, and users who still want a native desktop client."),
+                c("Product reason", "Keep eD2K and Kad practical", "The goal is not nostalgia, a rewrite, or a generic P2P lab. It is to keep the classic sharing model usable for long sessions, rare files, deliberate seeding, and users who still want a native desktop client."),
                 c("Engineering reason", "Move old assumptions into daylight", "Defaults around upload slots, timeouts, buffers, large libraries, and WebServer exposure are made explicit so each change can be reviewed, tested, documented, and adjusted."),
                 c("Release reason", "Practice modern proof on legacy code", "The workspace treats release as an engineering artifact: source policy, OpenAPI contracts, performance-sensitive behavior, reproducible builds, package hashes, SBOMs, live checks, and operator gates all have to line up."),
             ],
@@ -274,7 +274,7 @@ CONTENT: dict[str, dict[str, Any]] = {
                 c("Release", "Evidence before labels", "The release process records commands, commits, logs, package paths, hashes, live evidence, performance-sensitive checks, and operator decisions so a release tag is a checked outcome."),
             ],
         },
-        "repos": {**s("Public workspace", "Primary repositories"), "links": []},
+        "repos": {**s("eMuleBB ecosystem", "Primary repositories"), "links": []},
         "team": {
             **s("Project lore", "The people keeping the queue from becoming performance art"),
             "cards": [
@@ -319,7 +319,7 @@ REPO_COPY = {'en': {'emule': 'desktop app and product source',
 DOC_SECTION_COPY = {'en': ('Read more', 'Rendered HTML guides from source Markdown')}
 
 
-REPO_SECTION_COPY = {'en': ('Public workspace', 'Primary repositories')}
+REPO_SECTION_COPY = {'en': ('eMuleBB ecosystem', 'Primary repositories')}
 
 
 MENU_COPY = {'en': {'label': 'Menu', 'open_label': 'Open primary navigation', 'close_label': 'Close primary navigation'}}
@@ -504,7 +504,7 @@ def title_for_repo(key: str) -> str:
     """Return the public repository display name for a repo key."""
 
     return {
-        "emule": "eMule",
+        "emule": "emulebb",
         "setup": "emulebb-setup",
         "build": "emulebb-build",
         "tests": "emulebb-build-tests",
