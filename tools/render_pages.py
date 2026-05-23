@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the static eMule BB pages from Jinja2 templates and structured copy."""
+"""Render the static eMuleBB pages from Jinja2 templates and structured copy."""
 
 from __future__ import annotations
 
@@ -115,7 +115,7 @@ DOCS = [
 
 REPOS = [
     ("https://github.com/eMulebb/eMule", "emule"),
-    ("https://github.com/eMulebb/eMulebb-setup", "setup"),
+    ("https://github.com/eMulebb/emulebb-setup", "setup"),
     ("https://github.com/eMulebb/eMule-build", "build"),
     ("https://github.com/eMulebb/eMule-build-tests", "tests"),
     ("https://github.com/eMulebb/eMule-tooling", "tooling"),
@@ -183,13 +183,13 @@ def s(eyebrow: str, h2: str, p: str = "") -> dict[str, Any]:
 CONTENT: dict[str, dict[str, Any]] = {
     "en": {
         "title": "Modern eMule 2026 | eMule broadband edition",
-        "meta_description": "Modern eMule for 2026: eMule BB adds broadband upload control, extensive automated testing, SBOM-backed packages, performance defaults, large libraries, REST automation, eD2K, and Kad.",
+        "meta_description": "Modern eMule for 2026: eMuleBB adds broadband upload control, extensive automated testing, SBOM-backed packages, performance defaults, large libraries, REST automation, eD2K, and Kad.",
         "og_title": "Modern eMule 2026 | eMule broadband edition",
-        "og_description": "eMule BB is a modern eMule line for 2026 power users: broadband upload control, extensive automated testing, SBOM-backed packages, performance-minded defaults, large libraries, REST automation, and eD2K/Kad compatibility.",
+        "og_description": "eMuleBB is a modern eMule line for 2026 power users: broadband upload control, extensive automated testing, SBOM-backed packages, performance-minded defaults, large libraries, REST automation, and eD2K/Kad compatibility.",
         "structured_description": "Modern eMule for 2026 with broadband upload control, extensive automated testing, SBOM-backed packages, performance-minded defaults, large shared libraries, REST automation, eD2K/Kad compatibility, and power-user workflows. The first public release is planned as 0.7.3 and is not yet released.",
         "nav_label": "Primary navigation",
         "project_links_label": "Project links",
-        "product_summary_label": "eMule BB product summary",
+        "product_summary_label": "eMuleBB product summary",
         "footer_links_label": "Footer links",
         "nav": [
             {"id": "why", "label": "Why"},
@@ -202,18 +202,18 @@ CONTENT: dict[str, dict[str, Any]] = {
         ],
         "hero": {
             "eyebrow": "Modern eMule for 2026, tuned for broadband",
-            "h1": "eMule BB keeps eD2K and Kad useful for modern power users.",
+            "h1": "eMuleBB keeps eD2K and Kad useful for modern power users.",
             "lead": "A 2026-ready eMule for fast upload links, large shared libraries, always-on Windows sessions, public HTML product docs, unusually deep release evidence, SBOM-backed package proof, and local controller workflows without abandoning the familiar desktop app.",
             "source": "Source",
             "guide": "Product guide",
             "panel_kicker": "Product posture",
             "panel_h2": "Conservative where compatibility matters. Modern where testing and control matter.",
-            "panel_p": "eMule BB keeps the native eMule workflow at the center and adds broadband-aware queue behavior, local API control, performance-minded defaults, extensive release validation, and SBOM-backed package evidence around it.",
+            "panel_p": "eMuleBB keeps the native eMule workflow at the center and adds broadband-aware queue behavior, local API control, performance-minded defaults, extensive release validation, and SBOM-backed package evidence around it.",
             "signals": ["Stock eD2K/Kad compatibility", "Broadband upload slot control", "Extensive automated testing", "Rendered HTML docs", "Modern performance limits", "Authenticated JSON REST API", "Public 0.7.3 planned", "x64/ARM64 package proof", "SPDX SBOM evidence"],
         },
-        "intro": "eMule broadband edition, compactly <strong>eMule BB</strong>, is an independent product line for people who still value eMule's distributed sharing model. It preserves the classic desktop workflows while making the client easier to run, observe, automate, and validate on current Windows systems.",
+        "intro": "eMule broadband edition, compactly <strong>eMuleBB</strong>, is an independent product line for people who still value eMule's distributed sharing model. It preserves the classic desktop workflows while making the client easier to run, observe, automate, and validate on current Windows systems.",
         "why": {
-            **s("Why", "A legacy client is useful only if it can still be operated with confidence", "eMule BB is partly a product effort and partly a disciplined learning exercise: preserve a complex native Windows application with real network behavior, then surround it with modern build, test, documentation, automation, and release practice."),
+            **s("Why", "A legacy client is useful only if it can still be operated with confidence", "eMuleBB is partly a product effort and partly a disciplined learning exercise: preserve a complex native Windows application with real network behavior, then surround it with modern build, test, documentation, automation, and release practice."),
             "cards": [
                 c("Product reason", "Keep eD2K and Kad practical", "The goal is not nostalgia or a rewrite. It is to keep the classic sharing model usable for long sessions, rare files, deliberate seeding, and users who still want a native desktop client."),
                 c("Engineering reason", "Move old assumptions into daylight", "Defaults around upload slots, timeouts, buffers, large libraries, and WebServer exposure are made explicit so each change can be reviewed, tested, documented, and adjusted."),
@@ -221,7 +221,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             ],
         },
         "features": {
-            **s("Features", "What eMule BB adds around the classic client", "The work is focused on operator-visible behavior: predictable upload policy, safer binding, fixed performance limits, large-library operation, local automation, and test evidence for the planned <code>0.7.3</code> release."),
+            **s("Features", "What eMuleBB adds around the classic client", "The work is focused on operator-visible behavior: predictable upload policy, safer binding, fixed performance limits, large-library operation, local automation, and test evidence for the planned <code>0.7.3</code> release."),
             "cards": [
                 c("Sharing and upload", "Broadband upload control", "Bounded slot targets, weak-slot recycling, ratio readouts, and seeding controls keep fast upload links useful without changing the eD2K upload protocol."),
                 c("Network control", "Binding, NAT, and exposure policy", "Interface-aware binding, UPnP/NAT mapping validation, HTTPS, allowed-IP rules, and WebServer inheritance keep remote surfaces explicit and testable."),
@@ -266,7 +266,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             ],
         },
         "method": {
-            **s("Implementation method", "Modernize around the legacy core, then prove the result", "The implementation style is intentionally conservative. eMule BB changes local policy, limits, diagnostics, API boundaries, and release discipline while keeping stock eD2K/Kad compatibility as the default."),
+            **s("Implementation method", "Modernize around the legacy core, then prove the result", "The implementation style is intentionally conservative. eMuleBB changes local policy, limits, diagnostics, API boundaries, and release discipline while keeping stock eD2K/Kad compatibility as the default."),
             "cards": [
                 c("Compatibility", "No casual protocol drift", "Kad and eD2K changes stay inside local routing, timing, validation, and control paths. Wire formats, opcodes, and native desktop workflows remain compatibility boundaries."),
                 c("Limits", "Fixed, reviewable defaults", "Modern bandwidth, memory, socket, queue, startup, and timeout assumptions are expressed as explicit defaults or advanced preferences instead of hidden adaptive behavior."),
@@ -289,7 +289,7 @@ CONTENT: dict[str, dict[str, Any]] = {
 
 LOCALIZED_COPY_FILE = Path("content") / "locales.json"
 
-DOC_COPY = {'en': {'emulebb': ('eMule BB product guide',
+DOC_COPY = {'en': {'emulebb': ('eMuleBB product guide',
                     'Rendered HTML product guide from the maintained Markdown source, covering setup, tuning, automation, release-aware use, testing, and SBOM evidence.'),
         'setup': ('Setup guide', 'Install model, first-run profile behavior, and practical startup notes.'),
         'network': ('Network guide', 'eD2K, Kad, binding, UPnP, firewall, and connection diagnosis reference.'),
@@ -396,7 +396,7 @@ def make_stock_locale_content(t: dict[str, Any]) -> dict[str, Any]:
         "structured_description": t["meta"],
         "nav_label": t["open"],
         "project_links_label": t["repos"],
-        "product_summary_label": "eMule BB",
+        "product_summary_label": "eMuleBB",
         "footer_links_label": t["lang"],
         "languages_link_label": t["lang"],
         "nav": [{"id": item_id, "label": label} for item_id, label in zip(nav_ids, t["nav"])],
@@ -406,7 +406,7 @@ def make_stock_locale_content(t: dict[str, Any]) -> dict[str, Any]:
             "lead": t["lead"],
             "source": t["source"],
             "guide": t["product_guide"],
-            "panel_kicker": "eMule BB",
+            "panel_kicker": "eMuleBB",
             "panel_h2": t["method"],
             "panel_p": t["intro"],
             "signals": ["eD2K/Kad", "Upload", "Testing", "Performance", "REST API", "0.7.3"],
@@ -505,7 +505,7 @@ def title_for_repo(key: str) -> str:
 
     return {
         "emule": "eMule",
-        "setup": "eMulebb-setup",
+        "setup": "emulebb-setup",
         "build": "eMule-build",
         "tests": "eMule-build-tests",
         "tooling": "eMule-tooling",
@@ -654,7 +654,7 @@ def write_outputs(root: Path, outputs: dict[Path, str], check: bool) -> int:
 def parse_args() -> argparse.Namespace:
     """Parse render command arguments."""
 
-    parser = argparse.ArgumentParser(description="Render the eMule BB static pages.")
+    parser = argparse.ArgumentParser(description="Render the eMuleBB static pages.")
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--lastmod", default=dt.date.today().isoformat())
     parser.add_argument("--check", action="store_true", help="Fail if generated files differ.")

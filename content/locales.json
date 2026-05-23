@@ -59,7 +59,7 @@
           }
         ],
         "eyebrow": "Funktionen",
-        "h2": "Was eMule BB um den klassischen Client ergänzt",
+        "h2": "Was eMuleBB um den klassischen Client ergänzt",
         "p": "Die Arbeit zielt auf sichtbares Betreiberverhalten: vorhersehbare Upload-Policy, sichereres binding, feste Leistungsgrenzen, große Freigaben, lokale Automatisierung und Nachweise für das geplante Release <code>0.7.3</code>."
       },
       "footer_links_label": "Footer-Links",
@@ -103,11 +103,11 @@
       "hero": {
         "eyebrow": "Klassischer eMule, abgestimmt auf heutige Breitbandanschlüsse",
         "guide": "Produktguide",
-        "h1": "eMule BB hält eD2K und Kad für ernsthafte Nutzer brauchbar.",
+        "h1": "eMuleBB hält eD2K und Kad für ernsthafte Nutzer brauchbar.",
         "lead": "Ein eMule für Power User mit schnellen Uploads, großen Freigaben, dauerhaft laufenden Windows-Sitzungen und lokalen Controller-Workflows, ohne die vertraute Desktop-App aufzugeben.",
         "panel_h2": "Konservativ, wo Kompatibilität zählt. Modern, wo Kontrolle zählt.",
         "panel_kicker": "Produktlinie",
-        "panel_p": "eMule BB stellt den nativen eMule-Workflow in den Mittelpunkt und ergänzt ihn um breitbandtaugliche Queue-Logik, lokale API-Steuerung und Release-Validierung.",
+        "panel_p": "eMuleBB stellt den nativen eMule-Workflow in den Mittelpunkt und ergänzt ihn um breitbandtaugliche Queue-Logik, lokale API-Steuerung und Release-Validierung.",
         "signals": [
           "Originale eD2K/Kad-Kompatibilität",
           "Kontrolle der Upload-Slots",
@@ -119,8 +119,8 @@
         ],
         "source": "Quellcode"
       },
-      "intro": "eMule broadband edition, kurz <strong>eMule BB</strong>, ist eine eigenständige Produktlinie für Menschen, die das verteilte Modell von eMule weiterhin schätzen. Sie bewahrt die klassischen Desktop-Workflows und macht den Client auf heutigen Windows-Systemen leichter betreibbar, beobachtbar, automatisierbar und validierbar.",
-      "meta_description": "eMule BB ist eine moderne eMule-Ausgabe für Breitband-Upload-Kontrolle, VPN/interface binding, aktuelle Leistungsgrenzen, große Freigaben, REST automation, eD2K, Kad und Power-User-Workflows.",
+      "intro": "eMule broadband edition, kurz <strong>eMuleBB</strong>, ist eine eigenständige Produktlinie für Menschen, die das verteilte Modell von eMule weiterhin schätzen. Sie bewahrt die klassischen Desktop-Workflows und macht den Client auf heutigen Windows-Systemen leichter betreibbar, beobachtbar, automatisierbar und validierbar.",
+      "meta_description": "eMuleBB ist eine moderne eMule-Ausgabe für Breitband-Upload-Kontrolle, VPN/interface binding, aktuelle Leistungsgrenzen, große Freigaben, REST automation, eD2K, Kad und Power-User-Workflows.",
       "method": {
         "cards": [
           {
@@ -146,7 +146,7 @@
         ],
         "eyebrow": "Implementierungsmethode",
         "h2": "Um den Legacy-Kern modernisieren, dann das Ergebnis beweisen",
-        "p": "Der Stil ist bewusst konservativ. eMule BB ändert lokale Policy, Limits, Diagnostik, API-Grenzen und Release-Disziplin, während eD2K/Kad-Kompatibilität Default bleibt."
+        "p": "Der Stil ist bewusst konservativ. eMuleBB ändert lokale Policy, Limits, Diagnostik, API-Grenzen und Release-Disziplin, während eD2K/Kad-Kompatibilität Default bleibt."
       },
       "nav": [
         {
@@ -180,8 +180,8 @@
       ],
       "nav_label": "Hauptnavigation",
       "og_description": "Moderner eMule für Breitband-Upload-Kontrolle, VPN/interface binding, aktuelle Leistungsgrenzen, große Bibliotheken, REST automation, eD2K/Kad-Kompatibilität und Release-Validierung. Die erste öffentliche Version 0.7.3 ist geplant und noch nicht veröffentlicht.",
-      "og_title": "eMule broadband edition | eMule BB auf Deutsch",
-      "product_summary_label": "eMule BB Kurzfassung",
+      "og_title": "eMule broadband edition | eMuleBB auf Deutsch",
+      "product_summary_label": "eMuleBB Kurzfassung",
       "project_links_label": "Projektlinks",
       "release": {
         "cards": [
@@ -244,7 +244,7 @@
         "h2": "Die Leute, die verhindern, dass die Queue zur Performance-Kunst wird",
         "p": ""
       },
-      "title": "eMule broadband edition | eMule BB auf Deutsch",
+      "title": "eMule broadband edition | eMuleBB auf Deutsch",
       "why": {
         "cards": [
           {
@@ -265,7 +265,7 @@
         ],
         "eyebrow": "Warum",
         "h2": "Ein Legacy-Client ist nur nützlich, wenn man ihn noch verlässlich betreiben kann",
-        "p": "eMule BB ist Produktarbeit und disziplinierte Technik zugleich: eine native Windows-Anwendung mit echtem Netzwerkverhalten erhalten und mit modernem Build-, Test-, Dokumentations-, Automatisierungs- und Release-Prozess umgeben."
+        "p": "eMuleBB ist Produktarbeit und disziplinierte Technik zugleich: eine native Windows-Anwendung mit echtem Netzwerkverhalten erhalten und mit modernem Build-, Test-, Dokumentations-, Automatisierungs- und Release-Prozess umgeben."
       }
     },
     "doc_section": [
@@ -282,7 +282,7 @@
         "Suchmodi, Vertrauen in Ergebnisse, Kategorien und Power-User-Workflows."
       ],
       "emulebb": [
-        "eMule BB Produktguide",
+        "eMuleBB Produktguide",
         "Überblick für Setup, Tuning, Automatisierung und release-bewusste Nutzung."
       ],
       "network": [
@@ -392,7 +392,7 @@
           }
         ],
         "eyebrow": "Funciones",
-        "h2": "Lo que eMule BB añade alrededor del cliente clásico",
+        "h2": "Lo que eMuleBB añade alrededor del cliente clásico",
         "p": "El trabajo se centra en comportamiento visible para el operador: política de upload predecible, binding más seguro, límites fijos de rendimiento, bibliotecas grandes, automatización local y evidencia para el release planificado <code>0.7.3</code>."
       },
       "footer_links_label": "Enlaces del pie",
@@ -436,11 +436,11 @@
       "hero": {
         "eyebrow": "El eMule clásico, ajustado para la banda ancha actual",
         "guide": "Guía del producto",
-        "h1": "eMule BB mantiene eD2K y Kad útiles para usuarios exigentes.",
+        "h1": "eMuleBB mantiene eD2K y Kad útiles para usuarios exigentes.",
         "lead": "Un eMule para usuarios avanzados con enlaces de upload rápidos, bibliotecas compartidas grandes, sesiones de Windows siempre activas y workflows locales de control sin abandonar la aplicación de escritorio conocida.",
         "panel_h2": "Conservador donde importa la compatibilidad. Moderno donde importa el control.",
         "panel_kicker": "Enfoque del producto",
-        "panel_p": "eMule BB mantiene el workflow nativo de eMule en el centro y añade colas pensadas para banda ancha, control local por API y validación de release a su alrededor.",
+        "panel_p": "eMuleBB mantiene el workflow nativo de eMule en el centro y añade colas pensadas para banda ancha, control local por API y validación de release a su alrededor.",
         "signals": [
           "Compatibilidad eD2K/Kad de serie",
           "Control de slots de upload en banda ancha",
@@ -452,8 +452,8 @@
         ],
         "source": "Código fuente"
       },
-      "intro": "eMule broadband edition, en corto <strong>eMule BB</strong>, es una línea de producto independiente para quienes todavía valoran el modelo distribuido de eMule. Conserva los workflows clásicos de escritorio y hace que el cliente sea más fácil de ejecutar, observar, automatizar y validar en sistemas Windows actuales.",
-      "meta_description": "eMule BB es una edición moderna de eMule para controlar uploads en banda ancha, VPN/interface binding, mejores límites de rendimiento, bibliotecas compartidas grandes, REST automation, eD2K, Kad y workflows avanzados.",
+      "intro": "eMule broadband edition, en corto <strong>eMuleBB</strong>, es una línea de producto independiente para quienes todavía valoran el modelo distribuido de eMule. Conserva los workflows clásicos de escritorio y hace que el cliente sea más fácil de ejecutar, observar, automatizar y validar en sistemas Windows actuales.",
+      "meta_description": "eMuleBB es una edición moderna de eMule para controlar uploads en banda ancha, VPN/interface binding, mejores límites de rendimiento, bibliotecas compartidas grandes, REST automation, eD2K, Kad y workflows avanzados.",
       "method": {
         "cards": [
           {
@@ -479,7 +479,7 @@
         ],
         "eyebrow": "Método de implementación",
         "h2": "Modernizar alrededor del núcleo legado y después probar el resultado",
-        "p": "El estilo es deliberadamente conservador. eMule BB cambia política local, límites, diagnósticos, límites de API y disciplina de release, manteniendo la compatibilidad eD2K/Kad como valor por defecto."
+        "p": "El estilo es deliberadamente conservador. eMuleBB cambia política local, límites, diagnósticos, límites de API y disciplina de release, manteniendo la compatibilidad eD2K/Kad como valor por defecto."
       },
       "nav": [
         {
@@ -513,8 +513,8 @@
       ],
       "nav_label": "Navegación principal",
       "og_description": "eMule moderno para controlar uploads en banda ancha, VPN/interface binding, límites de rendimiento actuales, bibliotecas grandes, REST automation, compatibilidad eD2K/Kad y validación de release. La primera versión pública 0.7.3 está planificada y aún no se ha publicado.",
-      "og_title": "eMule broadband edition | eMule BB en español",
-      "product_summary_label": "Resumen de eMule BB",
+      "og_title": "eMule broadband edition | eMuleBB en español",
+      "product_summary_label": "Resumen de eMuleBB",
       "project_links_label": "Enlaces del proyecto",
       "release": {
         "cards": [
@@ -577,7 +577,7 @@
         "h2": "La gente que evita que la queue se vuelva teatro de rendimiento",
         "p": ""
       },
-      "title": "eMule broadband edition | eMule BB en español",
+      "title": "eMule broadband edition | eMuleBB en español",
       "why": {
         "cards": [
           {
@@ -598,7 +598,7 @@
         ],
         "eyebrow": "Por qué",
         "h2": "Un cliente legado solo sirve si todavía puede operarse con confianza",
-        "p": "eMule BB es a la vez producto y ejercicio de ingeniería disciplinada: conservar una aplicación nativa de Windows con comportamiento real de red y rodearla de build, pruebas, documentación, automatización y proceso de release modernos."
+        "p": "eMuleBB es a la vez producto y ejercicio de ingeniería disciplinada: conservar una aplicación nativa de Windows con comportamiento real de red y rodearla de build, pruebas, documentación, automatización y proceso de release modernos."
       }
     },
     "doc_section": [
@@ -615,7 +615,7 @@
         "Modos de búsqueda, confianza en resultados, categorías y workflows avanzados."
       ],
       "emulebb": [
-        "Guía de producto eMule BB",
+        "Guía de producto eMuleBB",
         "Visión de conjunto para instalación, ajuste, automatización y uso atento al release."
       ],
       "network": [
@@ -725,7 +725,7 @@
           }
         ],
         "eyebrow": "Fonctions",
-        "h2": "Ce qu'eMule BB ajoute autour du client classique",
+        "h2": "Ce qu'eMuleBB ajoute autour du client classique",
         "p": "Le travail vise le comportement visible par l'opérateur : upload prévisible, binding plus sûr, limites fixes de performance, grandes bibliothèques, automatisation locale et preuves pour la release prévue <code>0.7.3</code>."
       },
       "footer_links_label": "Liens de pied de page",
@@ -769,11 +769,11 @@
       "hero": {
         "eyebrow": "L'eMule classique, réglé pour le haut débit actuel",
         "guide": "Guide produit",
-        "h1": "eMule BB garde eD2K et Kad utiles pour les utilisateurs exigeants.",
+        "h1": "eMuleBB garde eD2K et Kad utiles pour les utilisateurs exigeants.",
         "lead": "Un eMule pour utilisateurs avancés, avec uploads rapides, grandes bibliothèques partagées, sessions Windows permanentes et workflows locaux de contrôle sans abandonner l'application desktop familière.",
         "panel_h2": "Conservateur quand la compatibilité compte. Moderne quand le contrôle compte.",
         "panel_kicker": "Positionnement",
-        "panel_p": "eMule BB garde le workflow natif d'eMule au centre et ajoute une gestion de queue adaptée au haut débit, un contrôle local par API et une validation de release.",
+        "panel_p": "eMuleBB garde le workflow natif d'eMule au centre et ajoute une gestion de queue adaptée au haut débit, un contrôle local par API et une validation de release.",
         "signals": [
           "Compatibilité eD2K/Kad d'origine",
           "Contrôle des upload slots",
@@ -785,8 +785,8 @@
         ],
         "source": "Code source"
       },
-      "intro": "eMule broadband edition, ou simplement <strong>eMule BB</strong>, est une ligne de produit indépendante pour celles et ceux qui accordent encore de la valeur au modèle distribué d'eMule. Elle conserve les workflows desktop classiques et rend le client plus simple à exécuter, observer, automatiser et valider sur les systèmes Windows actuels.",
-      "meta_description": "eMule BB est une édition moderne d'eMule pour le contrôle d'upload haut débit, VPN/interface binding, des limites de performance actuelles, de grandes bibliothèques partagées, REST automation, eD2K, Kad et des workflows avancés.",
+      "intro": "eMule broadband edition, ou simplement <strong>eMuleBB</strong>, est une ligne de produit indépendante pour celles et ceux qui accordent encore de la valeur au modèle distribué d'eMule. Elle conserve les workflows desktop classiques et rend le client plus simple à exécuter, observer, automatiser et valider sur les systèmes Windows actuels.",
+      "meta_description": "eMuleBB est une édition moderne d'eMule pour le contrôle d'upload haut débit, VPN/interface binding, des limites de performance actuelles, de grandes bibliothèques partagées, REST automation, eD2K, Kad et des workflows avancés.",
       "method": {
         "cards": [
           {
@@ -812,7 +812,7 @@
         ],
         "eyebrow": "Méthode d'implémentation",
         "h2": "Moderniser autour du noyau legacy, puis prouver le résultat",
-        "p": "Le style est volontairement conservateur. eMule BB modifie politique locale, limites, diagnostics, frontières API et discipline de release tout en gardant la compatibilité eD2K/Kad par défaut."
+        "p": "Le style est volontairement conservateur. eMuleBB modifie politique locale, limites, diagnostics, frontières API et discipline de release tout en gardant la compatibilité eD2K/Kad par défaut."
       },
       "nav": [
         {
@@ -846,8 +846,8 @@
       ],
       "nav_label": "Navigation principale",
       "og_description": "eMule moderne pour le contrôle d'upload haut débit, VPN/interface binding, de grandes bibliothèques, REST automation, la compatibilité eD2K/Kad et la validation de release. La première version publique 0.7.3 est prévue et n'est pas encore publiée.",
-      "og_title": "eMule broadband edition | eMule BB en français",
-      "product_summary_label": "Résumé eMule BB",
+      "og_title": "eMule broadband edition | eMuleBB en français",
+      "product_summary_label": "Résumé eMuleBB",
       "project_links_label": "Liens du projet",
       "release": {
         "cards": [
@@ -910,7 +910,7 @@
         "h2": "L'équipe qui empêche la queue de devenir du théâtre de performance",
         "p": ""
       },
-      "title": "eMule broadband edition | eMule BB en français",
+      "title": "eMule broadband edition | eMuleBB en français",
       "why": {
         "cards": [
           {
@@ -931,7 +931,7 @@
         ],
         "eyebrow": "Pourquoi",
         "h2": "Un client legacy n'est utile que s'il reste exploitable avec confiance",
-        "p": "eMule BB est à la fois un produit et une discipline d'ingénierie : préserver une application Windows native avec un vrai comportement réseau, puis l'entourer de build, tests, documentation, automatisation et processus de release modernes."
+        "p": "eMuleBB est à la fois un produit et une discipline d'ingénierie : préserver une application Windows native avec un vrai comportement réseau, puis l'entourer de build, tests, documentation, automatisation et processus de release modernes."
       }
     },
     "doc_section": [
@@ -948,7 +948,7 @@
         "Modes de recherche, confiance dans les résultats, catégories et workflows avancés."
       ],
       "emulebb": [
-        "Guide produit eMule BB",
+        "Guide produit eMuleBB",
         "Vue d'ensemble pour setup, réglage, automatisation et usage attentif à la release."
       ],
       "network": [
@@ -1058,7 +1058,7 @@
           }
         ],
         "eyebrow": "Funzioni",
-        "h2": "Cosa aggiunge eMule BB intorno al client classico",
+        "h2": "Cosa aggiunge eMuleBB intorno al client classico",
         "p": "Il lavoro punta a comportamento visibile all'operatore: upload prevedibile, binding più sicuro, limiti fissi di prestazione, grandi librerie, automazione locale ed evidenza per la release pianificata <code>0.7.3</code>."
       },
       "footer_links_label": "Link di fondo pagina",
@@ -1102,11 +1102,11 @@
       "hero": {
         "eyebrow": "Il classico eMule, tarato per la banda larga attuale",
         "guide": "Guida prodotto",
-        "h1": "eMule BB mantiene eD2K e Kad utili per utenti esigenti.",
+        "h1": "eMuleBB mantiene eD2K e Kad utili per utenti esigenti.",
         "lead": "Un eMule per power user con upload veloci, grandi librerie condivise, sessioni Windows sempre attive e workflow locali di controllo senza abbandonare la familiare app desktop.",
         "panel_h2": "Conservativo dove conta la compatibilità. Moderno dove conta il controllo.",
         "panel_kicker": "Posizionamento",
-        "panel_p": "eMule BB mantiene al centro il workflow nativo di eMule e vi aggiunge code adatte alla banda larga, controllo locale via API e validazione di release.",
+        "panel_p": "eMuleBB mantiene al centro il workflow nativo di eMule e vi aggiunge code adatte alla banda larga, controllo locale via API e validazione di release.",
         "signals": [
           "Compatibilità eD2K/Kad originale",
           "Controllo degli upload slot",
@@ -1118,8 +1118,8 @@
         ],
         "source": "Codice sorgente"
       },
-      "intro": "eMule broadband edition, in breve <strong>eMule BB</strong>, è una linea di prodotto indipendente per chi dà ancora valore al modello distribuito di eMule. Conserva i workflow desktop classici e rende il client più semplice da eseguire, osservare, automatizzare e validare sui sistemi Windows attuali.",
-      "meta_description": "eMule BB è una edizione moderna di eMule per controllo upload su banda larga, VPN/interface binding, limiti di prestazione attuali, grandi librerie condivise, REST automation, eD2K, Kad e workflow avanzati.",
+      "intro": "eMule broadband edition, in breve <strong>eMuleBB</strong>, è una linea di prodotto indipendente per chi dà ancora valore al modello distribuito di eMule. Conserva i workflow desktop classici e rende il client più semplice da eseguire, osservare, automatizzare e validare sui sistemi Windows attuali.",
+      "meta_description": "eMuleBB è una edizione moderna di eMule per controllo upload su banda larga, VPN/interface binding, limiti di prestazione attuali, grandi librerie condivise, REST automation, eD2K, Kad e workflow avanzati.",
       "method": {
         "cards": [
           {
@@ -1145,7 +1145,7 @@
         ],
         "eyebrow": "Metodo di implementazione",
         "h2": "Modernizzare intorno al nucleo legacy, poi provare il risultato",
-        "p": "Lo stile è intenzionalmente conservativo. eMule BB cambia policy locali, limiti, diagnostica, confini API e disciplina di release mantenendo default la compatibilità eD2K/Kad."
+        "p": "Lo stile è intenzionalmente conservativo. eMuleBB cambia policy locali, limiti, diagnostica, confini API e disciplina di release mantenendo default la compatibilità eD2K/Kad."
       },
       "nav": [
         {
@@ -1179,8 +1179,8 @@
       ],
       "nav_label": "Navigazione principale",
       "og_description": "eMule moderno per controllo upload su banda larga, VPN/interface binding, limiti di prestazione attuali, grandi librerie, REST automation, compatibilità eD2K/Kad e validazione di release. La prima versione pubblica 0.7.3 è pianificata e non è ancora uscita.",
-      "og_title": "eMule broadband edition | eMule BB in italiano",
-      "product_summary_label": "Sintesi di eMule BB",
+      "og_title": "eMule broadband edition | eMuleBB in italiano",
+      "product_summary_label": "Sintesi di eMuleBB",
       "project_links_label": "Link del progetto",
       "release": {
         "cards": [
@@ -1243,7 +1243,7 @@
         "h2": "Le persone che impediscono alla queue di diventare teatro prestazionale",
         "p": ""
       },
-      "title": "eMule broadband edition | eMule BB in italiano",
+      "title": "eMule broadband edition | eMuleBB in italiano",
       "why": {
         "cards": [
           {
@@ -1264,7 +1264,7 @@
         ],
         "eyebrow": "Perché",
         "h2": "Un client legacy è utile solo se può ancora essere gestito con fiducia",
-        "p": "eMule BB è insieme prodotto e disciplina tecnica: preservare una applicazione nativa Windows con vero comportamento di rete e circondarla di build, test, documentazione, automazione e processo di release moderni."
+        "p": "eMuleBB è insieme prodotto e disciplina tecnica: preservare una applicazione nativa Windows con vero comportamento di rete e circondarla di build, test, documentazione, automazione e processo di release moderni."
       }
     },
     "doc_section": [
@@ -1281,7 +1281,7 @@
         "Modalità di ricerca, fiducia nei risultati, categorie e workflow avanzati."
       ],
       "emulebb": [
-        "Guida prodotto eMule BB",
+        "Guida prodotto eMuleBB",
         "Panoramica per setup, tuning, automazione e uso consapevole della release."
       ],
       "network": [
@@ -1391,7 +1391,7 @@
           }
         ],
         "eyebrow": "Functies",
-        "h2": "Wat eMule BB rond de klassieke client toevoegt",
+        "h2": "Wat eMuleBB rond de klassieke client toevoegt",
         "p": "Het werk richt zich op gedrag dat de operator ziet: voorspelbare upload policy, veiliger binding, vaste prestatielimieten, grote bibliotheken, lokale automatisering en bewijs voor de geplande release <code>0.7.3</code>."
       },
       "footer_links_label": "Footerlinks",
@@ -1435,11 +1435,11 @@
       "hero": {
         "eyebrow": "Klassieke eMule, afgestemd op moderne breedband",
         "guide": "Productgids",
-        "h1": "eMule BB houdt eD2K en Kad bruikbaar voor serieuze gebruikers.",
+        "h1": "eMuleBB houdt eD2K en Kad bruikbaar voor serieuze gebruikers.",
         "lead": "Een eMule voor power users met snelle uploads, grote gedeelde bibliotheken, altijd actieve Windows-sessies en lokale controller workflows zonder de vertrouwde desktop-app op te geven.",
         "panel_h2": "Behoudend waar compatibiliteit telt. Modern waar controle telt.",
         "panel_kicker": "Producthouding",
-        "panel_p": "eMule BB houdt de native eMule-workflow centraal en voegt breedbandgerichte queue-logica, lokale API-besturing en release-validatie toe.",
+        "panel_p": "eMuleBB houdt de native eMule-workflow centraal en voegt breedbandgerichte queue-logica, lokale API-besturing en release-validatie toe.",
         "signals": [
           "Originele eD2K/Kad-compatibiliteit",
           "Controle over upload slots",
@@ -1451,8 +1451,8 @@
         ],
         "source": "Broncode"
       },
-      "intro": "eMule broadband edition, kortweg <strong>eMule BB</strong>, is een zelfstandige productlijn voor mensen die het gedistribueerde model van eMule nog steeds waardevol vinden. Het behoudt de klassieke desktop workflows en maakt de client beter uitvoerbaar, observeerbaar, automatiseerbaar en valideerbaar op moderne Windows-systemen.",
-      "meta_description": "eMule BB is een moderne eMule-editie voor breedband-uploadcontrole, VPN/interface binding, actuele prestatielimieten, grote gedeelde bibliotheken, REST automation, eD2K, Kad en geavanceerde workflows.",
+      "intro": "eMule broadband edition, kortweg <strong>eMuleBB</strong>, is een zelfstandige productlijn voor mensen die het gedistribueerde model van eMule nog steeds waardevol vinden. Het behoudt de klassieke desktop workflows en maakt de client beter uitvoerbaar, observeerbaar, automatiseerbaar en valideerbaar op moderne Windows-systemen.",
+      "meta_description": "eMuleBB is een moderne eMule-editie voor breedband-uploadcontrole, VPN/interface binding, actuele prestatielimieten, grote gedeelde bibliotheken, REST automation, eD2K, Kad en geavanceerde workflows.",
       "method": {
         "cards": [
           {
@@ -1478,7 +1478,7 @@
         ],
         "eyebrow": "Implementatiemethode",
         "h2": "Moderniseren rond de legacy-kern, daarna het resultaat bewijzen",
-        "p": "De stijl is bewust behoudend. eMule BB wijzigt lokale policy, limits, diagnostics, API boundaries en release discipline terwijl eD2K/Kad-compatibiliteit default blijft."
+        "p": "De stijl is bewust behoudend. eMuleBB wijzigt lokale policy, limits, diagnostics, API boundaries en release discipline terwijl eD2K/Kad-compatibiliteit default blijft."
       },
       "nav": [
         {
@@ -1512,8 +1512,8 @@
       ],
       "nav_label": "Hoofdnavigatie",
       "og_description": "Moderne eMule voor uploadcontrole, VPN/interface binding, grote bibliotheken, REST automation, eD2K/Kad-compatibiliteit en release-validatie. De eerste publieke versie 0.7.3 is gepland en nog niet uitgebracht.",
-      "og_title": "eMule broadband edition | eMule BB in het Nederlands",
-      "product_summary_label": "Samenvatting van eMule BB",
+      "og_title": "eMule broadband edition | eMuleBB in het Nederlands",
+      "product_summary_label": "Samenvatting van eMuleBB",
       "project_links_label": "Projectlinks",
       "release": {
         "cards": [
@@ -1576,7 +1576,7 @@
         "h2": "De mensen die voorkomen dat de queue performancekunst wordt",
         "p": ""
       },
-      "title": "eMule broadband edition | eMule BB in het Nederlands",
+      "title": "eMule broadband edition | eMuleBB in het Nederlands",
       "why": {
         "cards": [
           {
@@ -1597,7 +1597,7 @@
         ],
         "eyebrow": "Waarom",
         "h2": "Een legacy-client is alleen nuttig als je hem nog met vertrouwen kunt beheren",
-        "p": "eMule BB is tegelijk productwerk en technische discipline: een native Windows-app met echt netwerkgedrag behouden en er moderne build, tests, documentatie, automatisering en release-proces omheen zetten."
+        "p": "eMuleBB is tegelijk productwerk en technische discipline: een native Windows-app met echt netwerkgedrag behouden en er moderne build, tests, documentatie, automatisering en release-proces omheen zetten."
       }
     },
     "doc_section": [
@@ -1614,7 +1614,7 @@
         "Zoekmodi, vertrouwen in resultaten, categorieën en power-user workflows."
       ],
       "emulebb": [
-        "eMule BB productgids",
+        "eMuleBB productgids",
         "Overzicht voor setup, tuning, automatisering en release-bewust gebruik."
       ],
       "network": [
@@ -1724,7 +1724,7 @@
           }
         ],
         "eyebrow": "Funkcje",
-        "h2": "Co eMule BB dodaje wokół klasycznego klienta",
+        "h2": "Co eMuleBB dodaje wokół klasycznego klienta",
         "p": "Praca skupia się na zachowaniu widocznym dla operatora: przewidywalny upload, bezpieczniejszy binding, stałe limity wydajności, duże biblioteki, lokalna automatyzacja i dowody dla planowanego release <code>0.7.3</code>."
       },
       "footer_links_label": "Linki w stopce",
@@ -1768,11 +1768,11 @@
       "hero": {
         "eyebrow": "Klasyczny eMule, dostrojony do współczesnych łączy",
         "guide": "Przewodnik produktu",
-        "h1": "eMule BB utrzymuje eD2K i Kad jako użyteczne narzędzia dla wymagających użytkowników.",
+        "h1": "eMuleBB utrzymuje eD2K i Kad jako użyteczne narzędzia dla wymagających użytkowników.",
         "lead": "eMule dla power userów: szybki upload, duże biblioteki współdzielone, stale działające sesje Windows i lokalne controller workflows bez porzucania znanej aplikacji desktop.",
         "panel_h2": "Konserwatywnie tam, gdzie liczy się zgodność. Nowocześnie tam, gdzie liczy się kontrola.",
         "panel_kicker": "Podejście produktu",
-        "panel_p": "eMule BB zostawia natywny workflow eMule w centrum i dodaje obsługę queue dla szybkich łączy, lokalne sterowanie przez API oraz walidację release.",
+        "panel_p": "eMuleBB zostawia natywny workflow eMule w centrum i dodaje obsługę queue dla szybkich łączy, lokalne sterowanie przez API oraz walidację release.",
         "signals": [
           "Oryginalna zgodność eD2K/Kad",
           "Kontrola upload slots",
@@ -1784,8 +1784,8 @@
         ],
         "source": "Kod źródłowy"
       },
-      "intro": "eMule broadband edition, krótko <strong>eMule BB</strong>, to niezależna linia produktu dla osób, które nadal cenią rozproszony model eMule. Zachowuje klasyczne desktop workflows, a jednocześnie ułatwia uruchamianie, obserwowanie, automatyzowanie i walidowanie klienta na aktualnych systemach Windows.",
-      "meta_description": "eMule BB to nowoczesna edycja eMule do kontroli uploadu na szybkich łączach, VPN/interface binding, aktualnych limitów wydajności, dużych bibliotek współdzielonych, REST automation, eD2K, Kad i zaawansowanych workflows.",
+      "intro": "eMule broadband edition, krótko <strong>eMuleBB</strong>, to niezależna linia produktu dla osób, które nadal cenią rozproszony model eMule. Zachowuje klasyczne desktop workflows, a jednocześnie ułatwia uruchamianie, obserwowanie, automatyzowanie i walidowanie klienta na aktualnych systemach Windows.",
+      "meta_description": "eMuleBB to nowoczesna edycja eMule do kontroli uploadu na szybkich łączach, VPN/interface binding, aktualnych limitów wydajności, dużych bibliotek współdzielonych, REST automation, eD2K, Kad i zaawansowanych workflows.",
       "method": {
         "cards": [
           {
@@ -1811,7 +1811,7 @@
         ],
         "eyebrow": "Metoda implementacji",
         "h2": "Modernizować wokół legacy-core, a potem dowieść wyniku",
-        "p": "Styl jest celowo konserwatywny. eMule BB zmienia lokalną policy, limits, diagnostics, API boundaries i release discipline, zachowując domyślną zgodność eD2K/Kad."
+        "p": "Styl jest celowo konserwatywny. eMuleBB zmienia lokalną policy, limits, diagnostics, API boundaries i release discipline, zachowując domyślną zgodność eD2K/Kad."
       },
       "nav": [
         {
@@ -1845,8 +1845,8 @@
       ],
       "nav_label": "Główna nawigacja",
       "og_description": "Nowoczesny eMule do kontroli uploadu, VPN/interface binding, dużych bibliotek, REST automation, zgodności eD2K/Kad i walidacji release. Pierwsza publiczna wersja 0.7.3 jest planowana i nie została jeszcze wydana.",
-      "og_title": "eMule broadband edition | eMule BB po polsku",
-      "product_summary_label": "Podsumowanie eMule BB",
+      "og_title": "eMule broadband edition | eMuleBB po polsku",
+      "product_summary_label": "Podsumowanie eMuleBB",
       "project_links_label": "Linki projektu",
       "release": {
         "cards": [
@@ -1909,7 +1909,7 @@
         "h2": "Ludzie, którzy nie pozwalają queue stać się performancem",
         "p": ""
       },
-      "title": "eMule broadband edition | eMule BB po polsku",
+      "title": "eMule broadband edition | eMuleBB po polsku",
       "why": {
         "cards": [
           {
@@ -1930,7 +1930,7 @@
         ],
         "eyebrow": "Dlaczego",
         "h2": "Klient legacy ma sens tylko wtedy, gdy można nim nadal pewnie zarządzać",
-        "p": "eMule BB to produkt i dyscyplina inżynierska: zachować natywną aplikację Windows z prawdziwym zachowaniem sieciowym oraz otoczyć ją nowoczesnym build, testami, dokumentacją, automatyzacją i procesem release."
+        "p": "eMuleBB to produkt i dyscyplina inżynierska: zachować natywną aplikację Windows z prawdziwym zachowaniem sieciowym oraz otoczyć ją nowoczesnym build, testami, dokumentacją, automatyzacją i procesem release."
       }
     },
     "doc_section": [
@@ -1947,7 +1947,7 @@
         "Tryby search, zaufanie do wyników, kategorie i power-user workflows."
       ],
       "emulebb": [
-        "Przewodnik produktu eMule BB",
+        "Przewodnik produktu eMuleBB",
         "Omówienie setup, strojenia, automatyzacji i użycia świadomego release."
       ],
       "network": [
@@ -2057,7 +2057,7 @@
           }
         ],
         "eyebrow": "Recursos",
-        "h2": "O que eMule BB adiciona ao redor do cliente clássico",
+        "h2": "O que eMuleBB adiciona ao redor do cliente clássico",
         "p": "O foco está no comportamento visível para o operador: política de upload previsível, binding mais seguro, limites fixos de desempenho, bibliotecas grandes, automação local e evidência para o release planejado <code>0.7.3</code>."
       },
       "footer_links_label": "Links do rodapé",
@@ -2101,11 +2101,11 @@
       "hero": {
         "eyebrow": "O eMule clássico, ajustado para a banda larga atual",
         "guide": "Guia do produto",
-        "h1": "eMule BB mantém eD2K e Kad úteis para usuários exigentes.",
+        "h1": "eMuleBB mantém eD2K e Kad úteis para usuários exigentes.",
         "lead": "Um eMule para usuários avançados, com links de upload rápidos, grandes bibliotecas compartilhadas, sessões Windows sempre ativas e workflows locais de controle sem abandonar o aplicativo desktop conhecido.",
         "panel_h2": "Conservador onde a compatibilidade importa. Moderno onde o controle importa.",
         "panel_kicker": "Postura do produto",
-        "panel_p": "eMule BB mantém o workflow nativo do eMule no centro e adiciona filas preparadas para banda larga, controle local por API e validação de release ao redor dele.",
+        "panel_p": "eMuleBB mantém o workflow nativo do eMule no centro e adiciona filas preparadas para banda larga, controle local por API e validação de release ao redor dele.",
         "signals": [
           "Compatibilidade eD2K/Kad original",
           "Controle de slots de upload em banda larga",
@@ -2117,8 +2117,8 @@
         ],
         "source": "Código-fonte"
       },
-      "intro": "eMule broadband edition, ou simplesmente <strong>eMule BB</strong>, é uma linha de produto independente para quem ainda valoriza o modelo distribuído do eMule. Ele preserva os workflows clássicos do desktop e torna o cliente mais fácil de executar, observar, automatizar e validar em sistemas Windows atuais.",
-      "meta_description": "eMule BB é uma edição moderna do eMule para controle de upload em banda larga, VPN/interface binding, limites de desempenho atuais, grandes bibliotecas compartilhadas, REST automation, eD2K, Kad e workflows avançados.",
+      "intro": "eMule broadband edition, ou simplesmente <strong>eMuleBB</strong>, é uma linha de produto independente para quem ainda valoriza o modelo distribuído do eMule. Ele preserva os workflows clássicos do desktop e torna o cliente mais fácil de executar, observar, automatizar e validar em sistemas Windows atuais.",
+      "meta_description": "eMuleBB é uma edição moderna do eMule para controle de upload em banda larga, VPN/interface binding, limites de desempenho atuais, grandes bibliotecas compartilhadas, REST automation, eD2K, Kad e workflows avançados.",
       "method": {
         "cards": [
           {
@@ -2144,7 +2144,7 @@
         ],
         "eyebrow": "Método de implementação",
         "h2": "Modernizar ao redor do núcleo legado e então provar o resultado",
-        "p": "O estilo é deliberadamente conservador. eMule BB muda política local, limites, diagnósticos, limites de API e disciplina de release mantendo compatibilidade eD2K/Kad como default."
+        "p": "O estilo é deliberadamente conservador. eMuleBB muda política local, limites, diagnósticos, limites de API e disciplina de release mantendo compatibilidade eD2K/Kad como default."
       },
       "nav": [
         {
@@ -2178,8 +2178,8 @@
       ],
       "nav_label": "Navegação principal",
       "og_description": "eMule moderno para controle de upload em banda larga, VPN/interface binding, limites de desempenho atuais, bibliotecas grandes, REST automation, compatibilidade eD2K/Kad e validação de release. A primeira versão pública 0.7.3 está planejada e ainda não foi lançada.",
-      "og_title": "eMule broadband edition | eMule BB em português do Brasil",
-      "product_summary_label": "Resumo do eMule BB",
+      "og_title": "eMule broadband edition | eMuleBB em português do Brasil",
+      "product_summary_label": "Resumo do eMuleBB",
       "project_links_label": "Links do projeto",
       "release": {
         "cards": [
@@ -2242,7 +2242,7 @@
         "h2": "A equipe que impede a queue de virar arte performática",
         "p": ""
       },
-      "title": "eMule broadband edition | eMule BB em português do Brasil",
+      "title": "eMule broadband edition | eMuleBB em português do Brasil",
       "why": {
         "cards": [
           {
@@ -2263,7 +2263,7 @@
         ],
         "eyebrow": "Por quê",
         "h2": "Um cliente legado só é útil se ainda puder ser operado com confiança",
-        "p": "eMule BB é produto e também disciplina de engenharia: preservar uma aplicação nativa Windows com comportamento real de rede e cercá-la de build, testes, documentação, automação e processo de release modernos."
+        "p": "eMuleBB é produto e também disciplina de engenharia: preservar uma aplicação nativa Windows com comportamento real de rede e cercá-la de build, testes, documentação, automação e processo de release modernos."
       }
     },
     "doc_section": [
@@ -2280,7 +2280,7 @@
         "Modos de busca, confiança nos resultados, categorias e workflows avançados."
       ],
       "emulebb": [
-        "Guia do produto eMule BB",
+        "Guia do produto eMuleBB",
         "Visão geral para setup, ajuste, automação e uso atento ao release."
       ],
       "network": [
@@ -2390,7 +2390,7 @@
           }
         ],
         "eyebrow": "Funcionalidades",
-        "h2": "O que eMule BB acrescenta ao cliente clássico",
+        "h2": "O que eMuleBB acrescenta ao cliente clássico",
         "p": "O foco está no comportamento visível para o operador: política de upload previsível, binding mais seguro, limites fixos de desempenho, bibliotecas grandes, automação local e evidência para o release planeado <code>0.7.3</code>."
       },
       "footer_links_label": "Ligações do rodapé",
@@ -2434,11 +2434,11 @@
       "hero": {
         "eyebrow": "O eMule clássico, afinado para a banda larga actual",
         "guide": "Guia do produto",
-        "h1": "eMule BB mantém eD2K e Kad úteis para utilizadores exigentes.",
+        "h1": "eMuleBB mantém eD2K e Kad úteis para utilizadores exigentes.",
         "lead": "Um eMule para utilizadores avançados, com uploads rápidos, grandes bibliotecas partilhadas, sessões Windows sempre activas e workflows locais de controlo sem abandonar a aplicação desktop conhecida.",
         "panel_h2": "Conservador onde a compatibilidade importa. Moderno onde o controlo importa.",
         "panel_kicker": "Postura do produto",
-        "panel_p": "eMule BB mantém o workflow nativo do eMule no centro e acrescenta filas preparadas para banda larga, controlo local por API e validação de release à sua volta.",
+        "panel_p": "eMuleBB mantém o workflow nativo do eMule no centro e acrescenta filas preparadas para banda larga, controlo local por API e validação de release à sua volta.",
         "signals": [
           "Compatibilidade eD2K/Kad original",
           "Controlo de slots de upload em banda larga",
@@ -2450,8 +2450,8 @@
         ],
         "source": "Código-fonte"
       },
-      "intro": "eMule broadband edition, ou simplesmente <strong>eMule BB</strong>, é uma linha de produto independente para quem ainda valoriza o modelo distribuído do eMule. Preserva os workflows clássicos de desktop e torna o cliente mais fácil de executar, observar, automatizar e validar em sistemas Windows actuais.",
-      "meta_description": "eMule BB é uma edição moderna do eMule para controlo de upload em banda larga, VPN/interface binding, limites de desempenho actuais, grandes bibliotecas partilhadas, REST automation, eD2K, Kad e workflows avançados.",
+      "intro": "eMule broadband edition, ou simplesmente <strong>eMuleBB</strong>, é uma linha de produto independente para quem ainda valoriza o modelo distribuído do eMule. Preserva os workflows clássicos de desktop e torna o cliente mais fácil de executar, observar, automatizar e validar em sistemas Windows actuais.",
+      "meta_description": "eMuleBB é uma edição moderna do eMule para controlo de upload em banda larga, VPN/interface binding, limites de desempenho actuais, grandes bibliotecas partilhadas, REST automation, eD2K, Kad e workflows avançados.",
       "method": {
         "cards": [
           {
@@ -2477,7 +2477,7 @@
         ],
         "eyebrow": "Método de implementação",
         "h2": "Modernizar à volta do núcleo legado e depois provar o resultado",
-        "p": "O estilo é deliberadamente conservador. eMule BB muda política local, limites, diagnósticos, limites de API e disciplina de release mantendo compatibilidade eD2K/Kad como default."
+        "p": "O estilo é deliberadamente conservador. eMuleBB muda política local, limites, diagnósticos, limites de API e disciplina de release mantendo compatibilidade eD2K/Kad como default."
       },
       "nav": [
         {
@@ -2511,8 +2511,8 @@
       ],
       "nav_label": "Navegação principal",
       "og_description": "eMule moderno para controlo de upload em banda larga, VPN/interface binding, limites de desempenho actuais, bibliotecas grandes, REST automation, compatibilidade eD2K/Kad e validação de release. A primeira versão pública 0.7.3 está planeada e ainda não foi lançada.",
-      "og_title": "eMule broadband edition | eMule BB em português europeu",
-      "product_summary_label": "Resumo do eMule BB",
+      "og_title": "eMule broadband edition | eMuleBB em português europeu",
+      "product_summary_label": "Resumo do eMuleBB",
       "project_links_label": "Ligações do projecto",
       "release": {
         "cards": [
@@ -2575,7 +2575,7 @@
         "h2": "A equipa que impede a queue de virar teatro de desempenho",
         "p": ""
       },
-      "title": "eMule broadband edition | eMule BB em português europeu",
+      "title": "eMule broadband edition | eMuleBB em português europeu",
       "why": {
         "cards": [
           {
@@ -2596,7 +2596,7 @@
         ],
         "eyebrow": "Porquê",
         "h2": "Um cliente legado só é útil se ainda puder ser operado com confiança",
-        "p": "eMule BB é produto e também disciplina de engenharia: preservar uma aplicação nativa Windows com comportamento real de rede e rodeá-la de build, testes, documentação, automação e processo de release modernos."
+        "p": "eMuleBB é produto e também disciplina de engenharia: preservar uma aplicação nativa Windows com comportamento real de rede e rodeá-la de build, testes, documentação, automação e processo de release modernos."
       }
     },
     "doc_section": [
@@ -2613,7 +2613,7 @@
         "Modos de pesquisa, confiança nos resultados, categorias e workflows avançados."
       ],
       "emulebb": [
-        "Guia do produto eMule BB",
+        "Guia do produto eMuleBB",
         "Visão geral para setup, afinação, automação e uso atento ao release."
       ],
       "network": [
@@ -2723,7 +2723,7 @@
           }
         ],
         "eyebrow": "Возможности",
-        "h2": "Что eMule BB добавляет вокруг классического клиента",
+        "h2": "Что eMuleBB добавляет вокруг классического клиента",
         "p": "Работа сосредоточена на поведении, видимом оператору: предсказуемый upload, более безопасный binding, фиксированные лимиты, большие библиотеки, локальная автоматизация и доказательства для запланированного release <code>0.7.3</code>."
       },
       "footer_links_label": "Ссылки внизу страницы",
@@ -2767,11 +2767,11 @@
       "hero": {
         "eyebrow": "Классический eMule, настроенный для современного широкополосного доступа",
         "guide": "Гайд по продукту",
-        "h1": "eMule BB сохраняет eD2K и Kad полезными для требовательных пользователей.",
+        "h1": "eMuleBB сохраняет eD2K и Kad полезными для требовательных пользователей.",
         "lead": "eMule для опытных пользователей: быстрый upload, большие shared libraries, постоянные сессии Windows и локальные controller workflows без отказа от привычного desktop-приложения.",
         "panel_h2": "Консервативен там, где важна совместимость. Современен там, где важен контроль.",
         "panel_kicker": "Позиция продукта",
-        "panel_p": "eMule BB оставляет нативный workflow eMule в центре и добавляет очереди для широкополосного upload, локальное управление через API и release-валидацию.",
+        "panel_p": "eMuleBB оставляет нативный workflow eMule в центре и добавляет очереди для широкополосного upload, локальное управление через API и release-валидацию.",
         "signals": [
           "Оригинальная совместимость eD2K/Kad",
           "Контроль upload slots",
@@ -2783,8 +2783,8 @@
         ],
         "source": "Исходный код"
       },
-      "intro": "eMule broadband edition, коротко <strong>eMule BB</strong>, — независимая продуктовая линия для тех, кому по-прежнему важна распределенная модель eMule. Она сохраняет классические desktop workflows и делает клиент проще в запуске, наблюдении, автоматизации и проверке на современных Windows-системах.",
-      "meta_description": "eMule BB — современная редакция eMule для контроля upload на широкополосных линиях, VPN/interface binding, актуальных лимитов производительности, больших shared libraries, REST automation, eD2K, Kad и продвинутых workflows.",
+      "intro": "eMule broadband edition, коротко <strong>eMuleBB</strong>, — независимая продуктовая линия для тех, кому по-прежнему важна распределенная модель eMule. Она сохраняет классические desktop workflows и делает клиент проще в запуске, наблюдении, автоматизации и проверке на современных Windows-системах.",
+      "meta_description": "eMuleBB — современная редакция eMule для контроля upload на широкополосных линиях, VPN/interface binding, актуальных лимитов производительности, больших shared libraries, REST automation, eD2K, Kad и продвинутых workflows.",
       "method": {
         "cards": [
           {
@@ -2810,7 +2810,7 @@
         ],
         "eyebrow": "Метод реализации",
         "h2": "Модернизировать вокруг legacy-ядра, затем доказать результат",
-        "p": "Стиль намеренно консервативен. eMule BB меняет локальную policy, limits, diagnostics, API boundaries и release discipline, сохраняя совместимость eD2K/Kad по умолчанию."
+        "p": "Стиль намеренно консервативен. eMuleBB меняет локальную policy, limits, diagnostics, API boundaries и release discipline, сохраняя совместимость eD2K/Kad по умолчанию."
       },
       "nav": [
         {
@@ -2844,8 +2844,8 @@
       ],
       "nav_label": "Основная навигация",
       "og_description": "Современный eMule для контроля upload, VPN/interface binding, больших библиотек, REST automation, совместимости eD2K/Kad и release-валидации. Первая публичная версия 0.7.3 запланирована и еще не выпущена.",
-      "og_title": "eMule broadband edition | eMule BB на русском",
-      "product_summary_label": "Кратко об eMule BB",
+      "og_title": "eMule broadband edition | eMuleBB на русском",
+      "product_summary_label": "Кратко об eMuleBB",
       "project_links_label": "Ссылки проекта",
       "release": {
         "cards": [
@@ -2908,7 +2908,7 @@
         "h2": "Люди, которые не дают queue стать перформансом",
         "p": ""
       },
-      "title": "eMule broadband edition | eMule BB на русском",
+      "title": "eMule broadband edition | eMuleBB на русском",
       "why": {
         "cards": [
           {
@@ -2929,7 +2929,7 @@
         ],
         "eyebrow": "Зачем",
         "h2": "Legacy-клиент полезен только тогда, когда им все еще можно уверенно управлять",
-        "p": "eMule BB — это продуктовая работа и инженерная дисциплина: сохранить нативное Windows-приложение с реальным сетевым поведением и окружить его современными build, тестами, документацией, автоматизацией и release-процессом."
+        "p": "eMuleBB — это продуктовая работа и инженерная дисциплина: сохранить нативное Windows-приложение с реальным сетевым поведением и окружить его современными build, тестами, документацией, автоматизацией и release-процессом."
       }
     },
     "doc_section": [
@@ -2946,7 +2946,7 @@
         "Режимы search, доверие к результатам, categories и advanced workflows."
       ],
       "emulebb": [
-        "Гайд по eMule BB",
+        "Гайд по eMuleBB",
         "Обзор setup, tuning, automation и использования с учетом release."
       ],
       "network": [
@@ -3056,7 +3056,7 @@
           }
         ],
         "eyebrow": "Özellikler",
-        "h2": "eMule BB'nin klasik client etrafına ekledikleri",
+        "h2": "eMuleBB'nin klasik client etrafına ekledikleri",
         "p": "Çalışma operatörün görebildiği davranışa odaklanır: öngörülebilir upload policy, daha güvenli binding, sabit performans sınırları, büyük kütüphaneler, yerel otomasyon ve planlanan <code>0.7.3</code> release için kanıt."
       },
       "footer_links_label": "Alt bağlantılar",
@@ -3100,11 +3100,11 @@
       "hero": {
         "eyebrow": "Klasik eMule, modern geniş bant için ayarlandı",
         "guide": "Ürün kılavuzu",
-        "h1": "eMule BB, eD2K ve Kad'i ciddi kullanıcılar için kullanışlı tutar.",
+        "h1": "eMuleBB, eD2K ve Kad'i ciddi kullanıcılar için kullanışlı tutar.",
         "lead": "Hızlı upload bağlantıları, büyük paylaşılan kütüphaneler, sürekli açık Windows oturumları ve tanıdık desktop uygulamasından vazgeçmeden yerel controller workflows isteyen power user'lar için eMule.",
         "panel_h2": "Uyumluluğun önemli olduğu yerde tutucu. Kontrolün önemli olduğu yerde modern.",
         "panel_kicker": "Ürün duruşu",
-        "panel_p": "eMule BB, native eMule workflow'u merkezde tutar; çevresine geniş bant queue davranışı, yerel API kontrolü ve release doğrulaması ekler.",
+        "panel_p": "eMuleBB, native eMule workflow'u merkezde tutar; çevresine geniş bant queue davranışı, yerel API kontrolü ve release doğrulaması ekler.",
         "signals": [
           "Orijinal eD2K/Kad uyumluluğu",
           "Upload slot kontrolü",
@@ -3116,8 +3116,8 @@
         ],
         "source": "Kaynak kod"
       },
-      "intro": "eMule broadband edition, kısaca <strong>eMule BB</strong>, eMule'un dağıtık paylaşım modeline hâlâ değer verenler için bağımsız bir ürün çizgisidir. Klasik desktop workflows korunur; istemci modern Windows sistemlerinde daha kolay çalıştırılır, gözlenir, otomatikleştirilir ve doğrulanır.",
-      "meta_description": "eMule BB; geniş bant upload kontrolü, VPN/interface binding, güncel performans sınırları, büyük paylaşılan kütüphaneler, REST automation, eD2K, Kad ve ileri workflows için modern bir eMule sürümüdür.",
+      "intro": "eMule broadband edition, kısaca <strong>eMuleBB</strong>, eMule'un dağıtık paylaşım modeline hâlâ değer verenler için bağımsız bir ürün çizgisidir. Klasik desktop workflows korunur; istemci modern Windows sistemlerinde daha kolay çalıştırılır, gözlenir, otomatikleştirilir ve doğrulanır.",
+      "meta_description": "eMuleBB; geniş bant upload kontrolü, VPN/interface binding, güncel performans sınırları, büyük paylaşılan kütüphaneler, REST automation, eD2K, Kad ve ileri workflows için modern bir eMule sürümüdür.",
       "method": {
         "cards": [
           {
@@ -3143,7 +3143,7 @@
         ],
         "eyebrow": "Uygulama yöntemi",
         "h2": "Legacy çekirdeğin etrafında modernleştir, sonra sonucu kanıtla",
-        "p": "Stil bilinçli olarak tutucudur. eMule BB yerel policy, limits, diagnostics, API boundaries ve release discipline alanlarını değiştirirken eD2K/Kad uyumluluğunu default tutar."
+        "p": "Stil bilinçli olarak tutucudur. eMuleBB yerel policy, limits, diagnostics, API boundaries ve release discipline alanlarını değiştirirken eD2K/Kad uyumluluğunu default tutar."
       },
       "nav": [
         {
@@ -3177,8 +3177,8 @@
       ],
       "nav_label": "Ana gezinme",
       "og_description": "Geniş bant upload kontrolü, VPN/interface binding, büyük kütüphaneler, REST automation, eD2K/Kad uyumluluğu ve release doğrulaması için modern eMule. İlk public sürüm 0.7.3 planlandı ve henüz yayınlanmadı.",
-      "og_title": "eMule broadband edition | Türkçe eMule BB",
-      "product_summary_label": "eMule BB özeti",
+      "og_title": "eMule broadband edition | Türkçe eMuleBB",
+      "product_summary_label": "eMuleBB özeti",
       "project_links_label": "Proje bağlantıları",
       "release": {
         "cards": [
@@ -3241,7 +3241,7 @@
         "h2": "Queue'nun performans sanatına dönüşmesini engelleyen ekip",
         "p": ""
       },
-      "title": "eMule broadband edition | Türkçe eMule BB",
+      "title": "eMule broadband edition | Türkçe eMuleBB",
       "why": {
         "cards": [
           {
@@ -3262,7 +3262,7 @@
         ],
         "eyebrow": "Neden",
         "h2": "Legacy bir client ancak güvenle işletilebiliyorsa işe yarar",
-        "p": "eMule BB hem ürün çalışması hem de mühendislik disiplinidir: gerçek ağ davranışı olan native Windows uygulamasını korumak ve etrafına modern build, test, dokümantasyon, otomasyon ve release süreci koymak."
+        "p": "eMuleBB hem ürün çalışması hem de mühendislik disiplinidir: gerçek ağ davranışı olan native Windows uygulamasını korumak ve etrafına modern build, test, dokümantasyon, otomasyon ve release süreci koymak."
       }
     },
     "doc_section": [
@@ -3279,7 +3279,7 @@
         "Search modları, sonuç güveni, categories ve power-user workflows."
       ],
       "emulebb": [
-        "eMule BB ürün kılavuzu",
+        "eMuleBB ürün kılavuzu",
         "Setup, tuning, automation ve release-bilinçli kullanım için genel bakış."
       ],
       "network": [

@@ -1,4 +1,4 @@
-# eMulebb Pages Agent Policy
+# eMuleBB Pages Agent Policy
 
 This repository publishes the public GitHub Pages site for eMule broadband
 edition.

@@ -1,10 +1,10 @@
-# eMulebb Pages Site Handbook
+# eMuleBB Pages Site Handbook
 
 This handbook is the maintainer contract for the public eMule broadband edition
 site at `https://emulebb.github.io/`.
 
 The site is a curated product presentation for eMule broadband edition, compactly
-eMule BB. It is not the canonical engineering ledger, release ledger, or feature
+eMuleBB. It is not the canonical engineering ledger, release ledger, or feature
 backlog. Those live in the public `eMule-tooling` docs.
 
 ## Authority And Content Model
@@ -124,7 +124,7 @@ Before adding or changing a feature entry:
   homepage feature copy.
 - Interface/VPN binding may be described as bind-target support and live-test
   policy. Do not describe the external VPN kill-switch design as built into
-  eMule BB.
+  eMuleBB.
 - If a feature has changed status, update the source documentation first or link
   to the updated source.
 
@@ -232,7 +232,7 @@ homepage copy depends on product-guide, release, REST, or evidence claims:
 
 3. Commit and push the tooling-docs slice so GitHub Actions can publish
    `https://emulebb.github.io/eMule-tooling/`.
-4. Return to `eMulebb-pages`, update the structured homepage source, then
+4. Return to `emulebb-pages`, update the structured homepage source, then
    regenerate committed HTML with `tools\render_pages.py`.
 
 Homepage copy should say less than the product guide and link to the rendered
