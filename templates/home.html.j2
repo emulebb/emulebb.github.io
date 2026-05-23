@@ -123,6 +123,19 @@
 </ul>
 </aside>
 </section>
+{%- if content.testing_callout %}
+<section class="testing-callout" id="testing">
+<div>
+<p class="eyebrow">{{ content.testing_callout.eyebrow }}</p>
+<h2>{{ content.testing_callout.h2 }}</h2>
+<p>{{ content.testing_callout.p | safe }}</p>
+</div>
+<div class="testing-actions">
+<a href="{{ content.testing_callout.primary_href }}">{{ content.testing_callout.primary }}</a>
+<a href="{{ content.testing_callout.secondary_href }}">{{ content.testing_callout.secondary }}</a>
+</div>
+</section>
+{%- endif %}
 <section class="intro">
 <p>{{ content.intro | safe }}</p>
 </section>

@@ -129,10 +129,22 @@ REPOS = [
 
 RELEASE_DOWNLOADS = [
     ("https://github.com/emulebb/emulebb/releases", "eMuleBB"),
+    ("https://github.com/emulebb/emulebb/releases?q=nightly&expanded=true", "eMuleBB nightlies"),
     ("https://github.com/emulebb/amule/releases", "aMule"),
+    ("https://github.com/emulebb/amule/releases?q=nightly&expanded=true", "aMule nightlies"),
     ("https://github.com/emulebb/amutorrent/releases", "aMuTorrent"),
     ("https://github.com/emulebb/emulebb-miniupnp/releases", "MiniUPnP/miniupnpc"),
 ]
+
+TESTING_CALLOUT = {
+    "eyebrow": "Testing started",
+    "h2": "Nightly builds are open for testers",
+    "p": "Public testing has started through nightly builds. Try the current packages, keep a disposable or backed-up profile, and report crashes, freezes, package issues, controller/API problems, and real-network regressions before <code>0.7.3-rc.1</code> is tagged.",
+    "primary": "eMuleBB nightlies",
+    "primary_href": "https://github.com/emulebb/emulebb/releases?q=nightly&expanded=true",
+    "secondary": "Report issues",
+    "secondary_href": "https://github.com/emulebb/emulebb/issues",
+}
 
 TEAM_IMAGES = [
     {
@@ -215,7 +227,7 @@ CONTENT: dict[str, dict[str, Any]] = {
         "meta_description": "eMuleBB is the home of eMule broadband edition: a modern eMule product, Windows P2P builds, controller tooling, and exploratory eD2K/Kad lab work.",
         "og_title": "eMuleBB home | eMule broadband edition",
         "og_description": "eMuleBB is its own broadband-focused eMule product and the home for Windows P2P builds, controller tooling, release proof, and exploratory eD2K/Kad engineering.",
-        "structured_description": "eMuleBB is the home of eMule broadband edition, an independent broadband-focused eMule product with upload control, extensive automated testing, SBOM-backed packages, REST automation, eD2K/Kad compatibility, Windows builds for adjacent P2P tools, and exploratory P2P engineering. The first public release candidate is planned as 0.7.3-rc.1 and is not yet released.",
+        "structured_description": "eMuleBB is the home of eMule broadband edition, an independent broadband-focused eMule product with upload control, extensive automated testing, SBOM-backed packages, REST automation, eD2K/Kad compatibility, Windows builds for adjacent P2P tools, and exploratory P2P engineering. Nightly builds are available for public testing while the first public release candidate 0.7.3-rc.1 is still being prepared.",
         "nav_label": "Primary navigation",
         "project_links_label": "Project links",
         "release_downloads_label": "Download releases",
@@ -239,9 +251,9 @@ CONTENT: dict[str, dict[str, Any]] = {
             "panel_kicker": "Product posture",
             "panel_h2": "eMuleBB is the product. The ecosystem is the proof lab.",
             "panel_p": "The desktop app stays stock-compatible where the network matters, while the wider eMuleBB organization builds Windows packages, controller workflows, deterministic test services, and exploratory eD2K/Kad tooling around it.",
-            "signals": ["Stock eD2K/Kad compatibility", "Broadband upload slot control", "Extensive automated testing", "Rendered HTML docs", "Modern performance limits", "Authenticated JSON REST API", "0.7.3-rc.1 planned", "aMule Windows builds", "MiniUPnP Windows builds", "aMuTorrent manager fork", "goed2k lab work", "p2p-overlord Rust client"],
+            "signals": ["Stock eD2K/Kad compatibility", "Broadband upload slot control", "Extensive automated testing", "Rendered HTML docs", "Modern performance limits", "Authenticated JSON REST API", "Nightlies open for testing", "0.7.3-rc.1 planned", "aMule Windows builds", "MiniUPnP Windows builds", "aMuTorrent manager fork", "goed2k lab work", "p2p-overlord Rust client"],
         },
-        "intro": "This is the home of <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, an independent product for people who still value eMule's distributed sharing model and want it operated like modern software. Around the flagship desktop app, the eMuleBB organization provides Windows builds for aMule and MiniUPnP, an aMuTorrent fork for managing eMuleBB, deterministic eD2K server work through goed2k, and exploratory headless eD2K/Kad work in the p2p-overlord suite. More is coming.",
+        "intro": "This is the home of <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, an independent product for people who still value eMule's distributed sharing model and want it operated like modern software. Around the flagship desktop app, the eMuleBB organization provides Windows builds for aMule and MiniUPnP, an aMuTorrent fork for managing eMuleBB, deterministic eD2K server work through goed2k, and exploratory headless eD2K/Kad work in the p2p-overlord suite. Public testing has started with nightlies, and more is coming.",
         "why": {
             **s("Why", "P2P software earns trust by surviving real sessions", "eMuleBB is a product effort and an engineering practice: preserve a complex native Windows client with real network behavior, then surround it with modern builds, tests, documentation, automation, and release proof."),
             "cards": [
@@ -269,7 +281,7 @@ CONTENT: dict[str, dict[str, Any]] = {
                 c("", "Curate large libraries", "Use long-path capable Windows setups, keep share roots clean, watch ratios, and treat rare files as deliberate publishing decisions."),
                 c("", "Read claims through rendered docs", "The product guide is maintained as Markdown, rendered to public HTML, and tied to release strategy, test campaigns, CI, package, and SBOM evidence."),
                 c("", "Automate only on trusted networks", "Enable WebServer/REST with an API key, bind and firewall it carefully, and use controllers that respect native eMule transfer and delete semantics."),
-                c("", "Track release readiness", "Treat the public branch as active pre-release work until the planned <code>0.7.3-rc.1</code> gates, operator checks, and live E2E evidence say otherwise."),
+                c("", "Join the testing window", "Nightly builds are available for public testing before the planned <code>0.7.3-rc.1</code>. Use backed-up or disposable profiles, then report crashes, freezes, controller/API problems, and package issues."),
             ],
         },
         "docs": {
@@ -284,9 +296,9 @@ CONTENT: dict[str, dict[str, Any]] = {
             "pills": ["Transfers", "Searches", "Servers", "Kad", "Shared files", "Uploads", "Categories", "Logs", "Statistics", "Preferences"],
         },
         "release": {
-            **s("Testing and performance proof", "Public release candidate 0.7.3-rc.1 is planned, extensively tested, SBOM-backed, and not yet released"),
+            **s("Testing and performance proof", "Nightly testing is open while public release candidate 0.7.3-rc.1 is prepared"),
             "cards": [
-                c("", "Current status", "The first public release candidate target is <code>0.7.3-rc.1</code>. It is not yet released. Final proof is in progress, and public status stays tied to the active release docs."),
+                c("", "Current status", "Public testing has started through nightly builds. The first public release candidate target is still <code>0.7.3-rc.1</code>; final proof is in progress, and public status stays tied to the active release docs."),
                 c("", "Hosted fast CI", "The <a href=\"https://github.com/emulebb/emulebb-build-tests/actions/workflows/fast-harness-ci.yml\">Fast Harness CI</a> lane installs the shared Python harness and runs the default non-live, non-native pytest suite on pushes and pull requests."),
                 c("", "Build and package proof", "Required proof covers workspace validation, Debug and Release x64 app builds, Release ARM64 app builds, test binaries, package generation, SBOM generation, clean-worktree checks, and recorded SHA-256 hashes."),
                 c("", "Behavior proof", "Extensive test gates cover native suites, REST contract and OpenAPI drift, malformed requests, UI automation, live controller-surface E2E, full Release x64 live E2E, and network-adversity scenarios."),
@@ -305,6 +317,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             ],
         },
         "repos": {**s("eMuleBB ecosystem", "Products, builds, managers, and P2P lab work"), "links": []},
+        "testing_callout": TESTING_CALLOUT,
         "team": {
             **s("Project lore", "The mule team behind the P2P workshop"),
             "cards": [
@@ -452,7 +465,7 @@ def make_stock_locale_content(t: dict[str, Any]) -> dict[str, Any]:
             "panel_kicker": "eMuleBB",
             "panel_h2": t["method"],
             "panel_p": t["intro"],
-            "signals": ["eD2K/Kad", "Upload", "Testing", "Performance", "REST API", "0.7.3"],
+            "signals": ["eD2K/Kad", "Upload", "Testing", "Nightlies", "Performance", "REST API", "0.7.3"],
         },
         "intro": t["intro"],
         "why": {**s(t["nav"][0], t["why"], t["intro"]), "cards": [c("eD2K/Kad", t["keep"], t["intro"]), c("Upload", t["control"], t["lead"]), c("Release", t["proof"], t["release"])]},
@@ -467,12 +480,13 @@ def make_stock_locale_content(t: dict[str, Any]) -> dict[str, Any]:
                 c("Testing", t["proof"], t["proof"]),
             ],
         },
-        "guide": {**s(t["nav"][2], t["guide"]), "cards": [c("", t["keep"], t["intro"]), c("", t["control"], t["lead"]), c("", "Testing", t["proof"]), c("", "Performance", t["lead"]), c("", "0.7.3", t["release"]), c("", t["product_guide"], t["docs"])]},
+        "guide": {**s(t["nav"][2], t["guide"]), "cards": [c("", t["keep"], t["intro"]), c("", t["control"], t["lead"]), c("", "Testing", t["proof"]), c("", "Nightly builds", t["release"]), c("", "0.7.3", t["release"]), c("", t["product_guide"], t["docs"])]},
         "docs": {**s(t["nav"][3], t["docs"]), "links": []},
         "automation": {"eyebrow": t["nav"][4], "h2": t["automation"], "p": f"{t['automation']} <code>/api/v1</code>, JSON, <code>X-API-Key</code>.", "pills_label": "REST API", "pills": ["Transfers", "Searches", "Servers", "Kad", "Shared files", "Uploads", "Logs", "Preferences"]},
         "release": {**s(t["nav"][5], t["release"]), "cards": [c("", "0.7.3", t["release"]), c("", "Fast CI", t["proof"]), c("", t["proof"], t["proof"]), c("", "Performance", t["lead"]), c("", "eD2K/Kad", t["keep"]), c("", "Status", t["release"])]},
         "method": {**s(t["method"], t["method"], t["intro"]), "cards": [c("eD2K/Kad", t["keep"], t["keep"]), c("Upload", t["control"], t["control"]), c("REST", "REST API", t["automation"]), c("Testing", t["proof"], t["release"])]},
         "repos": {**s(t["nav"][6], t["repos"]), "links": []},
+        "testing_callout": TESTING_CALLOUT,
         "team": {**s(t["team"], t["team"]), "cards": [c("", t["control"], t["control"]), c("", "Kad", t["keep"]), c("", t["proof"], t["proof"])]},
     }
 
@@ -547,6 +561,7 @@ def with_generated_links(root: Path) -> None:
     ensure_stock_locale_content(root)
     for page in PAGES:
         content = CONTENT[page.key]
+        content.setdefault("testing_callout", TESTING_CALLOUT)
         add_release_evidence_copy(content)
         add_brand_logo(page, content)
         add_team_images(page, content)
