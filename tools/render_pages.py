@@ -148,6 +148,7 @@ TEAM_IMAGES = [
         "alt": "Cartoon mule hauling release packages and checks.",
     },
 ]
+BRAND_LOGO_FILE = "emulebb-broadband-edition-logo.png"
 
 STOCK_LOCALE_TEXT_FILE = Path("content") / "stock-locales.json"
 LANGUAGE_GROUPS = (
@@ -530,6 +531,16 @@ def add_team_images(page: PageSpec, content: dict[str, Any]) -> None:
         }
 
 
+def add_brand_logo(page: PageSpec, content: dict[str, Any]) -> None:
+    """Attach the header-only product logo path for the generated page."""
+
+    prefix = "" if page.directory == "" else "../"
+    content["brand_logo"] = {
+        "src": f"{prefix}assets/brand/{BRAND_LOGO_FILE}",
+        "alt": "eMuleBB broadband edition",
+    }
+
+
 def with_generated_links(root: Path) -> None:
     """Populate repeated docs and repo link sections for every locale."""
 
@@ -537,6 +548,7 @@ def with_generated_links(root: Path) -> None:
     for page in PAGES:
         content = CONTENT[page.key]
         add_release_evidence_copy(content)
+        add_brand_logo(page, content)
         add_team_images(page, content)
         content.setdefault("release_downloads_label", CONTENT["en"]["release_downloads_label"])
         for nav_item in content["nav"]:

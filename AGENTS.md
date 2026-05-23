@@ -8,11 +8,14 @@ publishing-policy changes.
 
 ## Hard Rules
 
-- Do not publish logo, mascot, favicon, screenshot, or other brand image assets
-  from this repository. Team/lore raster images under `assets/team/` are the
-  only current image exception and must stay section-local.
-- Keep the site text-first. If a page needs a product signal, use typography,
-  layout, color, and structured content instead of image branding.
+- Do not publish mascot, favicon, screenshot, copied application artwork, or
+  other brand image assets from this repository. The only current image
+  exceptions are the header logo at
+  `assets/brand/emulebb-broadband-edition-logo.png` and Team/lore raster images
+  under `assets/team/`.
+- Keep the site text-first outside the header logo and bounded Team/lore
+  imagery. Do not add image fields to metadata or structured data unless this
+  policy changes again.
 - Treat `emulebb-tooling` active/reference docs as the source of truth. Pages
   summarizes and links; it does not invent feature or release facts.
 - Only shipped, landed, passed, or release-proven features belong in the public

@@ -114,22 +114,18 @@ code {
 
 .brand {
   display: inline-flex;
-  min-height: 44px;
   align-items: center;
   text-decoration: none;
   min-width: 0;
 }
 
-.brand span {
-  display: grid;
-  line-height: 1.15;
+.brand-logo {
+  display: block;
+  width: clamp(136px, 30vw, 190px);
+  max-height: 82px;
+  object-fit: contain;
 }
 
-.brand strong {
-  color: var(--ink);
-}
-
-.brand small,
 .eyebrow,
 .panel-kicker {
   color: var(--muted);
@@ -676,7 +672,7 @@ footer {
   }
 
   .site-header {
-    grid-template-columns: minmax(230px, auto) minmax(0, 1fr);
+    grid-template-columns: minmax(160px, auto) minmax(0, 1fr);
     align-items: center;
   }
 
