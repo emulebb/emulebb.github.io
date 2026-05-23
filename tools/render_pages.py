@@ -17,7 +17,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
 SITE_BASE_URL = "https://emulebb.github.io"
-DOCS_SITE_URL = "https://emulebb.github.io/eMule-tooling"
+DOCS_SITE_URL = "https://emulebb.github.io/emulebb-tooling"
 PICO_CDN = "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
 GA_MEASUREMENT_ID = "G-8G02C2WFEB"
 
@@ -114,11 +114,11 @@ DOCS = [
 ]
 
 REPOS = [
-    ("https://github.com/eMulebb/eMule", "emule"),
-    ("https://github.com/eMulebb/emulebb-setup", "setup"),
-    ("https://github.com/eMulebb/eMule-build", "build"),
-    ("https://github.com/eMulebb/eMule-build-tests", "tests"),
-    ("https://github.com/eMulebb/eMule-tooling", "tooling"),
+    ("https://github.com/emulebb/emulebb", "emule"),
+    ("https://github.com/emulebb/emulebb-setup", "setup"),
+    ("https://github.com/emulebb/emulebb-build", "build"),
+    ("https://github.com/emulebb/emulebb-build-tests", "tests"),
+    ("https://github.com/emulebb/emulebb-tooling", "tooling"),
 ]
 
 STOCK_LOCALE_TEXT_FILE = Path("content") / "stock-locales.json"
@@ -243,7 +243,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             ],
         },
         "docs": {
-            **s("Read more", "Rendered HTML guides from source Markdown", "The public documentation site is built from the maintained Markdown in <code>eMule-tooling</code>, so homepage claims stay connected to product guides, REST contracts, release gates, and package evidence."),
+            **s("Read more", "Rendered HTML guides from source Markdown", "The public documentation site is built from the maintained Markdown in <code>emulebb-tooling</code>, so homepage claims stay connected to product guides, REST contracts, release gates, and package evidence."),
             "links": [],
         },
         "automation": {
@@ -257,7 +257,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             **s("Testing and performance proof", "Public release 0.7.3 is planned, extensively tested, SBOM-backed, and not yet released"),
             "cards": [
                 c("", "Current status", "The first public release target is <code>0.7.3</code>. It is not yet released. Final proof is in progress, and public status stays tied to the active release docs."),
-                c("", "Hosted fast CI", "The <a href=\"https://github.com/eMulebb/eMule-build-tests/actions/workflows/fast-harness-ci.yml\">Fast Harness CI</a> lane installs the shared Python harness and runs the default non-live, non-native pytest suite on pushes and pull requests."),
+                c("", "Hosted fast CI", "The <a href=\"https://github.com/emulebb/emulebb-build-tests/actions/workflows/fast-harness-ci.yml\">Fast Harness CI</a> lane installs the shared Python harness and runs the default non-live, non-native pytest suite on pushes and pull requests."),
                 c("", "Build and package proof", "Required proof covers workspace validation, Debug and Release x64 app builds, Release ARM64 app builds, test binaries, package generation, SBOM generation, clean-worktree checks, and recorded SHA-256 hashes."),
                 c("", "Behavior proof", "Extensive test gates cover native suites, REST contract and OpenAPI drift, malformed requests, UI automation, live controller-surface E2E, full Release x64 live E2E, and network-adversity scenarios."),
                 c("", "Performance proof", "Large-session performance work is described through concrete surfaces: upload-slot policy, queue/source limits, socket and file buffers, startup caches, long paths, and controller responsiveness."),
@@ -506,9 +506,9 @@ def title_for_repo(key: str) -> str:
     return {
         "emule": "eMule",
         "setup": "emulebb-setup",
-        "build": "eMule-build",
-        "tests": "eMule-build-tests",
-        "tooling": "eMule-tooling",
+        "build": "emulebb-build",
+        "tests": "emulebb-build-tests",
+        "tooling": "emulebb-tooling",
     }[key]
 
 

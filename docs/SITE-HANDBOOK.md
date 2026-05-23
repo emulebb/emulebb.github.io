@@ -5,18 +5,18 @@ site at `https://emulebb.github.io/`.
 
 The site is a curated product presentation for eMule broadband edition, compactly
 eMuleBB. It is not the canonical engineering ledger, release ledger, or feature
-backlog. Those live in the public `eMule-tooling` docs.
+backlog. Those live in the public `emulebb-tooling` docs.
 
 ## Authority And Content Model
 
-- `eMule-tooling` active/reference docs are authoritative for product, feature,
+- `emulebb-tooling` active/reference docs are authoritative for product, feature,
   release, REST, and validation facts.
-- If the website conflicts with `eMule-tooling`, update the website or the
+- If the website conflicts with `emulebb-tooling`, update the website or the
   linked source doc before publishing.
 - The homepage summarizes and directs readers. Long-form setup, tuning, release,
   and API details belong in the rendered documentation site at
-  `https://emulebb.github.io/eMule-tooling/`, backed by Markdown in
-  `eMule-tooling`.
+  `https://emulebb.github.io/emulebb-tooling/`, backed by Markdown in
+  `emulebb-tooling`.
 - Release status must be derived from the `0.7.3` active release docs:
   `RELEASE-0.7.3.md`, `RELEASE-0.7.3-CHECKLIST.md`,
   `RELEASE-0.7.3-RUNBOOK.md`, and `RELEASE-0.7.3-GATE-HISTORY.md`.
@@ -86,7 +86,7 @@ Rules:
 - The Docs section should link to durable source documents rather than copying
   long explanations into the homepage.
 - Public navigation and Docs-section links should target rendered pages under
-  `https://emulebb.github.io/eMule-tooling/`; link to GitHub blob Markdown only
+  `https://emulebb.github.io/emulebb-tooling/`; link to GitHub blob Markdown only
   when a rendered page does not exist.
 - The Why section may explain the learning and modernization exercise behind
   the project, but it must not blur planned release status or imply a rewrite.
@@ -114,7 +114,7 @@ model:
 
 Before adding or changing a feature entry:
 
-- Confirm the claim against `eMule-tooling` docs or the relevant source repo.
+- Confirm the claim against `emulebb-tooling` docs or the relevant source repo.
 - Refresh `docs/reference/GUIDE-EMULEBB.md` and focused guide chapters first
   when the homepage is summarizing newly landed behavior.
 - Use `docs/reference/DEVELOPMENT-GUIDE.md` for the recurring product-guide and
@@ -219,25 +219,25 @@ Push after each coherent commit when the user has requested publishing.
 ## Source Markdown To Public HTML
 
 The long-form documentation site is generated from Markdown in
-`eMule-tooling`, not from this repository. Use this sequence when public
+`emulebb-tooling`, not from this repository. Use this sequence when public
 homepage copy depends on product-guide, release, REST, or evidence claims:
 
-1. Update the owning Markdown source under `..\eMule-tooling\docs`.
+1. Update the owning Markdown source under `..\emulebb-tooling\docs`.
 2. Validate the Markdown-to-HTML publish gate:
 
    ```powershell
-   cd ..\eMule-tooling
+   cd ..\emulebb-tooling
    python scripts\docs-publish-check.py
    ```
 
 3. Commit and push the tooling-docs slice so GitHub Actions can publish
-   `https://emulebb.github.io/eMule-tooling/`.
+   `https://emulebb.github.io/emulebb-tooling/`.
 4. Return to `emulebb-pages`, update the structured homepage source, then
    regenerate committed HTML with `tools\render_pages.py`.
 
 Homepage copy should say less than the product guide and link to the rendered
 HTML docs for the details. Testing, SBOM, package, release, REST, and
-performance claims must be true in `eMule-tooling` before they are repeated on
+performance claims must be true in `emulebb-tooling` before they are repeated on
 the static pages.
 
 ## Required Validation
@@ -247,7 +247,7 @@ Run these checks before committing and pushing:
 ```powershell
 python -m pip install -r requirements.txt
 python tools\render_pages.py --lastmod 2026-05-16 --check
-python ..\eMule-tooling\helpers\pages-site-tools.py --pages-root . validate
+python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root . validate
 git diff --check
 rg -n "emule-logo|Logo\.jpg|<img|\.jpg|\.png|\.gif|favicon" index.html styles.css ar-ae eu bg ca cs da el es ast et fa fi br pt-br pt-pt gl he hu it ja ko lt lv mt nb ru de fr pl nl nn ro sl sq sv tr uk ug-cn ca-valencia ca-valencia-racv vi zh-cn zh-tw languages
 ```
@@ -273,7 +273,7 @@ $files = Get-ChildItem -Recurse -Filter index.html |
   ForEach-Object { $_.FullName }
 foreach ($file in $files) {
   $html = Get-Content -Raw $file
-  $urls = [regex]::Matches($html, 'https://emulebb.github.io/eMule-tooling/([^\"#?]+)') |
+  $urls = [regex]::Matches($html, 'https://emulebb.github.io/emulebb-tooling/([^\"#?]+)') |
     ForEach-Object { $_.Groups[1].Value } |
     Sort-Object -Unique
   foreach ($urlPath in $urls) {
@@ -281,7 +281,7 @@ foreach ($file in $files) {
       continue
     }
     $path = 'docs/' + ($urlPath.TrimEnd('/') -replace '/', '\') + '.md'
-    $local = Join-Path '..\eMule-tooling' $path
+    $local = Join-Path '..\emulebb-tooling' $path
     if (-not (Test-Path -LiteralPath $local)) {
       throw "Missing rendered-doc source: ${file}: $urlPath -> $path"
     }

@@ -12,7 +12,7 @@ publishing-policy changes.
   from this repository.
 - Keep the site text-first. If a page needs a product signal, use typography,
   layout, color, and structured content instead of image branding.
-- Treat `eMule-tooling` active/reference docs as the source of truth. Pages
+- Treat `emulebb-tooling` active/reference docs as the source of truth. Pages
   summarizes and links; it does not invent feature or release facts.
 - Only shipped, landed, passed, or release-proven features belong in the public
   homepage feature/catalog copy.
@@ -36,13 +36,13 @@ publishing-policy changes.
 ## Supporting Tooling
 
 - Page production and validation helpers are tracked in
-  `..\eMule-tooling\helpers\pages-site-tools.py`.
+  `..\emulebb-tooling\helpers\pages-site-tools.py`.
 - Use `python -m pip install -r requirements.txt` when the local Python
   environment does not already have the renderer dependencies.
 - Use `python tools\render_pages.py --lastmod YYYY-MM-DD` to regenerate static
   pages and `python tools\render_pages.py --lastmod YYYY-MM-DD --check` to
   confirm committed HTML is up to date with the templates.
-- Use `python ..\eMule-tooling\helpers\pages-site-tools.py --pages-root . validate`
+- Use `python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root . validate`
   before publishing locale, metadata, sitemap, asset-policy, or navigation
   changes.
 - Use the renderer to regenerate `sitemap.xml` from the canonical locale table.

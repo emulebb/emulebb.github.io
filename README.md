@@ -21,20 +21,20 @@ python tools\render_pages.py --lastmod 2026-05-16 --check
 Run the validation helper before publishing:
 
 ```powershell
-python ..\eMule-tooling\helpers\pages-site-tools.py --pages-root . validate
+python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root . validate
 ```
 
 ## Markdown Documentation Publishing
 
-Long-form product docs are maintained as Markdown in `eMule-tooling` and
+Long-form product docs are maintained as Markdown in `emulebb-tooling` and
 published as rendered HTML at:
 
-<https://emulebb.github.io/eMule-tooling/>
+<https://emulebb.github.io/emulebb-tooling/>
 
 Before changing homepage claims, update and validate the source docs:
 
 ```powershell
-cd ..\eMule-tooling
+cd ..\emulebb-tooling
 python scripts\docs-publish-check.py
 ```
 
