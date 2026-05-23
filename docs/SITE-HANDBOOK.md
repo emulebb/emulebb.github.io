@@ -49,6 +49,9 @@ backlog. Those live in the public `emulebb-tooling` docs.
   from this repository.
 - Do not add copied application resource images such as `Logo.jpg`.
 - Do not add generated logo replacements.
+- The Team/lore section may use small inline SVG illustrations when explicitly
+  requested. They must stay decorative, section-local, and separate from the
+  logo, favicon, or product identity.
 - Structured data must not include logo or image fields unless this policy is
   explicitly changed first.
 

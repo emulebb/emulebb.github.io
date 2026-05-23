@@ -261,7 +261,6 @@ h3 {
 }
 
 .actions,
-.signal-list,
 .pill-list {
   display: flex;
   flex-wrap: wrap;
@@ -270,6 +269,26 @@ h3 {
 
 .actions {
   margin-top: 28px;
+}
+
+.release-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: baseline;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.release-links span {
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.release-links a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .button.primary {
@@ -307,7 +326,6 @@ h3 {
   color: var(--muted);
 }
 
-.signal-list span,
 .pill-list span {
   min-height: 38px;
   display: inline-flex;
@@ -317,10 +335,22 @@ h3 {
   font-weight: 800;
 }
 
-.signal-list span {
-  border: 1px solid var(--line);
-  background: var(--panel-soft);
+.signal-list {
+  display: grid;
+  gap: 7px;
+  margin: 16px 0 0;
+  padding-left: 1.15rem;
   color: var(--muted);
+}
+
+.signal-list li {
+  padding-left: 2px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.signal-list li::marker {
+  color: var(--teal);
 }
 
 .intro {
@@ -452,6 +482,61 @@ h3 {
 .doc-list strong,
 .repo-list strong {
   font-size: 1.05rem;
+}
+
+.team-icon {
+  width: 78px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.team-icon svg {
+  width: 68px;
+  height: 68px;
+  overflow: visible;
+}
+
+.team-icon-fill {
+  fill: #f7efe4;
+  stroke: currentColor;
+  stroke-width: 3.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.team-icon-stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.team-icon-accent {
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.team-icon-accent-fill {
+  fill: #fff3bf;
+  stroke: var(--gold);
+  stroke-width: 3.2;
+  stroke-linejoin: round;
+}
+
+.team-icon-dot {
+  fill: #e7f3f1;
+  stroke: var(--teal);
+  stroke-width: 3;
 }
 
 .automation {

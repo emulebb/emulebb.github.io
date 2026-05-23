@@ -70,22 +70,29 @@
 <a class="button primary" href="https://github.com/emulebb/emulebb">Kod źródłowy</a>
 <a class="button secondary" href="#guide">Przewodnik produktu</a>
 </div>
+<div aria-label="Download releases" class="release-links">
+<span>Download releases</span>
+<a href="https://github.com/emulebb/emulebb/releases">eMuleBB</a>
+<a href="https://github.com/emulebb/amule/releases">aMule</a>
+<a href="https://github.com/emulebb/amutorrent/releases">aMuTorrent</a>
+<a href="https://github.com/emulebb/emulebb-miniupnp/releases">MiniUPnP/miniupnpc</a>
+</div>
 </div>
 <aside aria-label="Podsumowanie eMuleBB" class="hero-panel">
 <p class="panel-kicker">Podejście produktu</p>
 <h2>Konserwatywnie tam, gdzie liczy się zgodność. Nowocześnie tam, gdzie liczy się kontrola.</h2>
 <p>eMuleBB zostawia natywny workflow eMule w centrum i dodaje obsługę queue dla szybkich łączy, lokalne sterowanie przez API oraz walidację release.</p>
-<div class="signal-list">
-<span>Oryginalna zgodność eD2K/Kad</span>
-<span>Kontrola upload slots</span>
-<span>VPN/interface binding</span>
-<span>Aktualne limity wydajności</span>
-<span>Uwierzytelniona JSON REST API</span>
-<span>Publiczna 0.7.3 planowana</span>
-<span>Workspace walidacji release</span>
-<span>Rendered HTML product docs</span>
-<span>SPDX SBOM package evidence</span>
-</div>
+<ul class="signal-list">
+<li>Oryginalna zgodność eD2K/Kad</li>
+<li>Kontrola upload slots</li>
+<li>VPN/interface binding</li>
+<li>Aktualne limity wydajności</li>
+<li>Uwierzytelniona JSON REST API</li>
+<li>Publiczna 0.7.3 planowana</li>
+<li>Workspace walidacji release</li>
+<li>Rendered HTML product docs</li>
+<li>SPDX SBOM package evidence</li>
+</ul>
 </aside>
 </section>
 <section class="intro">
@@ -387,16 +394,38 @@
 </div>
 <div class="team-grid">
 <article>
+<div class="team-icon" aria-hidden="true"><svg viewBox="0 0 96 96" role="img" focusable="false">
+<path d="M28 15 39 39M68 15 57 39" class="team-icon-stroke"/>
+<path d="M28 15c7 4 11 13 11 24M68 15c-7 4-11 13-11 24" class="team-icon-fill"/>
+<path d="M24 48c0-18 11-29 24-29s24 11 24 29c0 20-11 33-24 33S24 68 24 48Z" class="team-icon-fill"/>
+<path d="M35 54c8 5 18 5 26 0M39 43h.1M57 43h.1" class="team-icon-stroke"/>
+<path d="M48 67V38M38 48l10-10 10 10" class="team-icon-accent"/>
+</svg></div>
 <span>01</span>
 <h3>Terapeuta upload slots</h3>
 <p>Daje słabym slots dokładnie tyle czasu na emocje, ile trzeba, po czym odsyła je do queue z formularzem i cooldown.</p>
 </article>
 <article>
+<div class="team-icon" aria-hidden="true"><svg viewBox="0 0 96 96" role="img" focusable="false">
+<path d="M30 16 40 39M66 16 56 39" class="team-icon-stroke"/>
+<path d="M25 49c0-18 10-29 23-29s23 11 23 29c0 19-10 31-23 31S25 68 25 49Z" class="team-icon-fill"/>
+<path d="M38 47h.1M58 47h.1M40 61c5 3 11 3 16 0" class="team-icon-stroke"/>
+<circle cx="18" cy="28" r="5" class="team-icon-dot"/>
+<circle cx="78" cy="31" r="5" class="team-icon-dot"/>
+<circle cx="74" cy="75" r="5" class="team-icon-dot"/>
+<path d="M22 31 36 41M73 34 60 42M69 72 58 65" class="team-icon-accent"/>
+</svg></div>
 <span>02</span>
 <h3>Archiwista bootstrap Kad</h3>
 <p>Pilnuje świętej listy nodes, która zadziałała raz w 2007 roku i zasługuje na dobrze zweryfikowaną drugą szansę.</p>
 </article>
 <article>
+<div class="team-icon" aria-hidden="true"><svg viewBox="0 0 96 96" role="img" focusable="false">
+<path d="M23 37c3-9 10-15 20-15h18c9 0 15 6 15 15v19c0 12-10 22-24 22S28 68 28 56V42" class="team-icon-fill"/>
+<path d="M31 17 41 37M65 17 55 37M38 52h.1M58 52h.1M41 64c5 3 10 3 15 0" class="team-icon-stroke"/>
+<path d="M60 26h18v20H60zM64 26v20M60 33h18" class="team-icon-accent-fill"/>
+<path d="M24 38h16v15H24z" class="team-icon-accent-fill"/>
+</svg></div>
 <span>03</span>
 <h3>Bramkarz release gates</h3>
 <p>Wpuszcza builds tylko wtedy, gdy przynoszą testy, live evidence i sensowne wyjaśnienie ostatniego socket.</p>

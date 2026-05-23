@@ -127,6 +127,15 @@ REPOS = [
     ("https://github.com/emulebb/emulebb-miniupnp", "miniupnpc"),
 ]
 
+RELEASE_DOWNLOADS = [
+    ("https://github.com/emulebb/emulebb/releases", "eMuleBB"),
+    ("https://github.com/emulebb/amule/releases", "aMule"),
+    ("https://github.com/emulebb/amutorrent/releases", "aMuTorrent"),
+    ("https://github.com/emulebb/emulebb-miniupnp/releases", "MiniUPnP/miniupnpc"),
+]
+
+TEAM_ICONS = ["mule_upload", "kad_mule", "pack_mule"]
+
 STOCK_LOCALE_TEXT_FILE = Path("content") / "stock-locales.json"
 LANGUAGE_GROUPS = (
     ("English", ("en",)),
@@ -195,6 +204,7 @@ CONTENT: dict[str, dict[str, Any]] = {
         "structured_description": "eMuleBB is the home of eMule broadband edition, an independent broadband-focused eMule product with upload control, extensive automated testing, SBOM-backed packages, REST automation, eD2K/Kad compatibility, Windows builds for adjacent P2P tools, and exploratory P2P engineering. The first public release candidate is planned as 0.7.3-rc.1 and is not yet released.",
         "nav_label": "Primary navigation",
         "project_links_label": "Project links",
+        "release_downloads_label": "Download releases",
         "product_summary_label": "eMuleBB product summary",
         "footer_links_label": "Footer links",
         "nav": [
@@ -249,7 +259,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             ],
         },
         "docs": {
-            **s("Read more", "Rendered HTML guides from source Markdown", "The public documentation site is built from the maintained Markdown in <code>emulebb-tooling</code>, so homepage claims stay connected to product guides, REST contracts, release gates, and package evidence."),
+            **s("Documentation", "Guides, API, and release notes", "The public documentation ties product use, REST automation, release gates, troubleshooting, and package evidence together in one place."),
             "links": [],
         },
         "automation": {
@@ -282,11 +292,11 @@ CONTENT: dict[str, dict[str, Any]] = {
         },
         "repos": {**s("eMuleBB ecosystem", "Products, builds, managers, and P2P lab work"), "links": []},
         "team": {
-            **s("What comes next", "A focused P2P workshop with more on the way"),
+            **s("Project lore", "The mule team behind the P2P workshop"),
             "cards": [
-                c("", "Flagship product", "eMuleBB is where the public identity lands: the app name, the packages, the docs, the release proof, and the compatibility story."),
-                c("", "Windows P2P builds", "We publish Windows builds for aMule and MiniUPnP/miniupnpc as part of the practical distribution work around the eMuleBB ecosystem."),
-                c("", "P2P lab", "goed2k and p2p-overlord keep the deeper eD2K/Kad experiments moving. More tools, more validation, and more integration work are coming. Stay tuned."),
+                c("", "Upload Mule Wrangler", "Keeps broadband upload slots from kicking the stable door down, then nudges the slow ones back into line with a very official clipboard."),
+                c("", "Kad Trail Mule", "Carries bootstrap nodes, routing tables, and stubborn eD2K/Kad folklore across rough network terrain without dropping the protocol map."),
+                c("", "Release Pack Mule", "Hauls packages, hashes, SBOMs, logs, live checks, and just enough attitude through the gate before anything gets called ready."),
             ],
         },
     },
@@ -296,7 +306,7 @@ CONTENT: dict[str, dict[str, Any]] = {
 LOCALIZED_COPY_FILE = Path("content") / "locales.json"
 
 DOC_COPY = {'en': {'emulebb': ('eMuleBB product guide',
-                    'Rendered HTML product guide from the maintained Markdown source, covering setup, tuning, automation, release-aware use, testing, and SBOM evidence.'),
+                    'Setup, tuning, automation, release-aware use, testing, and SBOM evidence.'),
         'setup': ('Setup guide', 'Install model, first-run profile behavior, and practical startup notes.'),
         'network': ('Network guide', 'eD2K, Kad, binding, UPnP, firewall, and connection diagnosis reference.'),
         'sharing': ('Sharing guide',
@@ -328,7 +338,7 @@ REPO_COPY = {'en': {'emule': 'flagship desktop app and product source',
         'miniupnpc': 'Windows build and validation track for MiniUPnP/miniupnpc'}}
 
 
-DOC_SECTION_COPY = {'en': ('Read more', 'Rendered HTML guides from source Markdown')}
+DOC_SECTION_COPY = {'en': ('Documentation', 'Guides, API, and release notes')}
 
 
 REPO_SECTION_COPY = {'en': ('eMuleBB ecosystem', 'Primary repositories')}
@@ -414,6 +424,7 @@ def make_stock_locale_content(t: dict[str, Any]) -> dict[str, Any]:
         "structured_description": t["meta"],
         "nav_label": t["open"],
         "project_links_label": t["repos"],
+        "release_downloads_label": "Download releases",
         "product_summary_label": "eMuleBB",
         "footer_links_label": t["lang"],
         "languages_link_label": t["lang"],
@@ -494,6 +505,13 @@ def add_release_evidence_copy(content: dict[str, Any]) -> None:
         )
 
 
+def add_team_icons(content: dict[str, Any]) -> None:
+    """Attach compact inline lore icons to the team cards."""
+
+    for index, card in enumerate(content["team"]["cards"]):
+        card.setdefault("icon", TEAM_ICONS[index % len(TEAM_ICONS)])
+
+
 def with_generated_links(root: Path) -> None:
     """Populate repeated docs and repo link sections for every locale."""
 
@@ -501,11 +519,17 @@ def with_generated_links(root: Path) -> None:
     for page in PAGES:
         content = CONTENT[page.key]
         add_release_evidence_copy(content)
+        add_team_icons(content)
+        content.setdefault("release_downloads_label", CONTENT["en"]["release_downloads_label"])
         for nav_item in content["nav"]:
             if nav_item.get("id") == "docs":
                 nav_item["href"] = DOCS_SITE_URL + "/"
         content["menu"] = MENU_COPY[page.key]
         content["languages_link_label"] = LANGUAGE_LINK_COPY[page.key]
+        content["release_downloads"] = [
+            {"href": href, "title": title}
+            for href, title in RELEASE_DOWNLOADS
+        ]
         content["docs"]["eyebrow"], content["docs"]["h2"] = DOC_SECTION_COPY[page.key]
         content["docs"]["links"] = [
             {"href": href, "title": DOC_COPY[page.key][key][0], "text": DOC_COPY[page.key][key][1]}
