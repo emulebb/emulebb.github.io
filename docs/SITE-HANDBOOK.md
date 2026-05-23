@@ -45,13 +45,13 @@ backlog. Those live in the public `emulebb-tooling` docs.
 - Avoid marketing fog. Prefer concrete behavior: upload slots, Kad, REST,
   shared libraries, validation, release gates.
 - Keep the site text-first.
-- Do not publish logo, mascot, favicon, screenshot, or other brand image assets
-  from this repository.
+- Do not publish logo, favicon, screenshot, or brand image assets from this
+  repository.
 - Do not add copied application resource images such as `Logo.jpg`.
 - Do not add generated logo replacements.
-- The Team/lore section may use small inline SVG illustrations when explicitly
-  requested. They must stay decorative, section-local, and separate from the
-  logo, favicon, or product identity.
+- The Team/lore section may use small generated raster illustrations under
+  `assets/team/` when explicitly requested. They must stay decorative,
+  section-local, and separate from the logo, favicon, or product identity.
 - Structured data must not include logo or image fields unless this policy is
   explicitly changed first.
 
@@ -252,7 +252,7 @@ python -m pip install -r requirements.txt
 python tools\render_pages.py --lastmod 2026-05-16 --check
 python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root . validate
 git diff --check
-rg -n "emule-logo|Logo\.jpg|<img|\.jpg|\.png|\.gif|favicon" index.html styles.css ar-ae eu bg ca cs da el es ast et fa fi br pt-br pt-pt gl he hu it ja ko lt lv mt nb ru de fr pl nl nn ro sl sq sv tr uk ug-cn ca-valencia ca-valencia-racv vi zh-cn zh-tw languages
+rg -n "emule-logo|Logo\.jpg|logo\.(jpg|png|gif)|favicon|screenshot" index.html styles.css ar-ae eu bg ca cs da el es ast et fa fi br pt-br pt-pt gl he hu it ja ko lt lv mt nb ru de fr pl nl nn ro sl sq sv tr uk ug-cn ca-valencia ca-valencia-racv vi zh-cn zh-tw languages
 ```
 
 Anchor check:

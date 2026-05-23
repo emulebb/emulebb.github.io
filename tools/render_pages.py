@@ -134,7 +134,20 @@ RELEASE_DOWNLOADS = [
     ("https://github.com/emulebb/emulebb-miniupnp/releases", "MiniUPnP/miniupnpc"),
 ]
 
-TEAM_ICONS = ["mule_upload", "kad_mule", "pack_mule"]
+TEAM_IMAGES = [
+    {
+        "file": "upload-mule.png",
+        "alt": "Cartoon mule carrying an upload arrow and a clipboard.",
+    },
+    {
+        "file": "kad-trail-mule.png",
+        "alt": "Cartoon mule carrying connected Kad nodes across a trail.",
+    },
+    {
+        "file": "release-pack-mule.png",
+        "alt": "Cartoon mule hauling release packages and checks.",
+    },
+]
 
 STOCK_LOCALE_TEXT_FILE = Path("content") / "stock-locales.json"
 LANGUAGE_GROUPS = (
@@ -505,11 +518,16 @@ def add_release_evidence_copy(content: dict[str, Any]) -> None:
         )
 
 
-def add_team_icons(content: dict[str, Any]) -> None:
-    """Attach compact inline lore icons to the team cards."""
+def add_team_images(page: PageSpec, content: dict[str, Any]) -> None:
+    """Attach section-local raster lore images to the team cards."""
 
+    prefix = "" if page.directory == "" else "../"
     for index, card in enumerate(content["team"]["cards"]):
-        card.setdefault("icon", TEAM_ICONS[index % len(TEAM_ICONS)])
+        image = TEAM_IMAGES[index % len(TEAM_IMAGES)]
+        card["image"] = {
+            "src": f"{prefix}assets/team/{image['file']}",
+            "alt": image["alt"],
+        }
 
 
 def with_generated_links(root: Path) -> None:
@@ -519,7 +537,7 @@ def with_generated_links(root: Path) -> None:
     for page in PAGES:
         content = CONTENT[page.key]
         add_release_evidence_copy(content)
-        add_team_icons(content)
+        add_team_images(page, content)
         content.setdefault("release_downloads_label", CONTENT["en"]["release_downloads_label"])
         for nav_item in content["nav"]:
             if nav_item.get("id") == "docs":

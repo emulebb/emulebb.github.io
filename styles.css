@@ -260,8 +260,7 @@ h3 {
   font-size: 1.12rem;
 }
 
-.actions,
-.pill-list {
+.actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -326,13 +325,40 @@ h3 {
   color: var(--muted);
 }
 
-.pill-list span {
-  min-height: 38px;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 8px;
-  padding: 8px 10px;
+.api-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  font-size: 0.98rem;
   font-weight: 800;
+  line-height: 1.6;
+  list-style: none;
+}
+
+.api-list li {
+  display: inline;
+}
+
+.api-list li:not(:last-child)::after {
+  content: "/";
+  margin: 0 10px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.api-list li:nth-child(3n + 1) {
+  color: var(--teal);
+}
+
+.api-list li:nth-child(3n + 2) {
+  color: var(--blue);
+}
+
+.api-list li:nth-child(3n) {
+  color: var(--green);
 }
 
 .signal-list {
@@ -484,59 +510,13 @@ h3 {
   font-size: 1.05rem;
 }
 
-.team-icon {
-  width: 78px;
-  height: 78px;
-  display: grid;
-  place-items: center;
+.team-image {
+  width: 96px;
+  height: 96px;
+  display: block;
+  object-fit: contain;
   margin-bottom: 16px;
-  border: 1px solid var(--line);
   border-radius: 8px;
-  background: #fff;
-  color: var(--ink);
-}
-
-.team-icon svg {
-  width: 68px;
-  height: 68px;
-  overflow: visible;
-}
-
-.team-icon-fill {
-  fill: #f7efe4;
-  stroke: currentColor;
-  stroke-width: 3.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.team-icon-stroke {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 3.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.team-icon-accent {
-  fill: none;
-  stroke: var(--blue);
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.team-icon-accent-fill {
-  fill: #fff3bf;
-  stroke: var(--gold);
-  stroke-width: 3.2;
-  stroke-linejoin: round;
-}
-
-.team-icon-dot {
-  fill: #e7f3f1;
-  stroke: var(--teal);
-  stroke-width: 3;
 }
 
 .automation {
@@ -556,12 +536,6 @@ h3 {
 .automation-copy p {
   margin-bottom: 22px;
   font-size: 1.08rem;
-}
-
-.pill-list span {
-  border: 1px solid var(--line);
-  background: var(--panel);
-  color: var(--ink);
 }
 
 .language-page {
