@@ -82,7 +82,7 @@
 <a href="https://github.com/emulebb/emulebb/releases?q=nightly&amp;expanded=true">eMuleBB nightlies</a>
 <a href="https://github.com/emulebb/amule/releases">aMule</a>
 <a href="https://github.com/emulebb/amule/releases?q=nightly&amp;expanded=true">aMule nightlies</a>
-<a href="https://github.com/emulebb/amutorrent/releases">aMuTorrent</a>
+<a href="https://github.com/emulebb/amutorrent/releases">aMuTorrent release page</a>
 <a href="https://github.com/emulebb/emulebb-miniupnp/releases">MiniUPnP/miniupnpc</a>
 </div>
 </div>
@@ -150,7 +150,7 @@
 <div class="section-heading">
 <p class="eyebrow">Features</p>
 <h2>What eMuleBB adds around the classic client</h2>
-<p>The work is focused on operator-visible behavior: predictable upload policy, safer binding, fixed performance limits, large-library operation, local automation, and test evidence for the planned <code>0.7.3</code> release.</p>
+<p>The work is focused on operator-visible behavior: predictable upload policy, safer binding, fixed performance limits, large-library operation, local automation, and test evidence for the planned <code>0.7.3-rc.1</code> candidate.</p>
 </div>
 <div aria-label="eMule broadband feature groups" class="feature-table">
 <article>
@@ -219,7 +219,7 @@
 <article>
 <span>06</span>
 <h3>Join the testing window</h3>
-<p>Nightly builds are available for public testing before the planned <code>0.7.3-rc.1</code>. Use backed-up or disposable profiles, then report crashes, freezes, controller/API problems, and package issues.</p>
+<p>Nightly builds are available for public testing before the planned <code>0.7.3-rc.1</code>. Use backed-up or disposable profiles, then report crashes, freezes, controller/API problems, and package issues with logs or dumps when useful.</p>
 </article>
 </div>
 </section>
@@ -268,7 +268,7 @@
 </a>
 <a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
 <strong>0.7.3 release dashboard</strong>
-<span>Current planned beta gates, automated test evidence, SBOM/package proof, and readiness rules.</span>
+<span>Current RC gates, automated test evidence, SBOM/package proof, and readiness rules.</span>
 </a>
 </div>
 </section>
@@ -306,18 +306,23 @@
 </article>
 <article>
 <span></span>
+<strong>Download status</strong>
+<p>eMuleBB and aMule nightlies are available from GitHub Releases. MiniUPnP has a Windows package release. aMuTorrent has release automation and a release page, but no public package should be assumed unless an asset is published there.</p>
+</article>
+<article>
+<span></span>
 <strong>Hosted fast CI</strong>
 <p>The <a href="https://github.com/emulebb/emulebb-build-tests/actions/workflows/fast-harness-ci.yml">Fast Harness CI</a> lane installs the shared Python harness and runs the default non-live, non-native pytest suite on pushes and pull requests.</p>
 </article>
 <article>
 <span></span>
-<strong>Build and package proof</strong>
-<p>Required proof covers workspace validation, Debug and Release x64 app builds, Release ARM64 app builds, test binaries, package generation, SBOM generation, clean-worktree checks, and recorded SHA-256 hashes.</p>
+<strong>SPDX SBOM</strong>
+<p>Release packages carry package-local <code>SBOM.spdx.json</code> plus sidecar <code>*.sbom.spdx.json</code> files, with manifest hashes that tie software contents to the exact package evidence.</p>
 </article>
 <article>
 <span></span>
-<strong>SPDX SBOM</strong>
-<p>Release packages carry package-local <code>SBOM.spdx.json</code> plus sidecar <code>*.sbom.spdx.json</code> files, with manifest hashes that tie software contents to the exact package evidence.</p>
+<strong>Build and package proof</strong>
+<p>Required proof covers workspace validation, Debug and Release x64 app builds, Release ARM64 app builds, test binaries, package generation, SBOM generation, clean-worktree checks, and recorded SHA-256 hashes.</p>
 </article>
 <article>
 <span></span>

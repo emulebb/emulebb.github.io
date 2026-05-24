@@ -54,13 +54,13 @@
           },
           {
             "h3": "Nachweise vor öffentlichen Paketen",
-            "p": "Die geplante Beta <code>0.7.3</code> hängt von nativen Tests, REST-Verträgen, Live-Controller-Lanes, Netzwerk-Adversity, Packaging und x64/ARM64-Proben ab.",
+            "p": "Die geplante RC <code>0.7.3-rc.1</code> hängt von nativen Tests, REST-Verträgen, Live-Controller-Lanes, Netzwerk-Adversity, Packaging und x64/ARM64-Proben ab.",
             "span": "Release-Disziplin"
           }
         ],
         "eyebrow": "Funktionen",
         "h2": "Was eMuleBB um den klassischen Client ergänzt",
-        "p": "Die Arbeit zielt auf sichtbares Betreiberverhalten: vorhersehbare Upload-Policy, sichereres binding, feste Leistungsgrenzen, große Freigaben, lokale Automatisierung und Nachweise für das geplante Release <code>0.7.3</code>."
+        "p": "Die Arbeit zielt auf sichtbares Betreiberverhalten: vorhersehbare Upload-Policy, sichereres binding, feste Leistungsgrenzen, große Freigaben, lokale Automatisierung und Nachweise für das geplante Release <code>0.7.3-rc.1</code>."
       },
       "footer_links_label": "Footer-Links",
       "guide": {
@@ -87,7 +87,7 @@
           },
           {
             "h3": "Release-Reife verfolgen",
-            "p": "Betrachte die öffentliche Branch als aktives Pre-Release, bis <code>0.7.3</code>-Gates, Operator-Checks und Live-E2E-Nachweise etwas anderes sagen.",
+            "p": "Betrachte die öffentliche Branch als aktives Pre-Release, bis <code>0.7.3-rc.1</code>-Gates, Operator-Checks und Live-E2E-Nachweise etwas anderes sagen.",
             "span": ""
           },
           {
@@ -114,7 +114,7 @@
           "VPN/interface binding",
           "Aktuelle Leistungsgrenzen",
           "Authentifizierte JSON REST API",
-          "Öffentliche 0.7.3 geplant",
+          "Öffentliche 0.7.3-rc.1 geplant",
           "Workspace für Release-Validierung"
         ],
         "source": "Quellcode"
@@ -179,7 +179,7 @@
         }
       ],
       "nav_label": "Hauptnavigation",
-      "og_description": "Moderner eMule für Breitband-Upload-Kontrolle, VPN/interface binding, aktuelle Leistungsgrenzen, große Bibliotheken, REST automation, eD2K/Kad-Kompatibilität und Release-Validierung. Die erste öffentliche Version 0.7.3 ist geplant und noch nicht veröffentlicht.",
+      "og_description": "Moderner eMule für Breitband-Upload-Kontrolle, VPN/interface binding, aktuelle Leistungsgrenzen, große Bibliotheken, REST automation, eD2K/Kad-Kompatibilität und Release-Validierung. Die erste öffentliche Version 0.7.3-rc.1 ist geplant und noch nicht veröffentlicht.",
       "og_title": "eMule broadband edition | eMuleBB auf Deutsch",
       "product_summary_label": "eMuleBB Kurzfassung",
       "project_links_label": "Projektlinks",
@@ -187,7 +187,7 @@
         "cards": [
           {
             "h3": "Aktueller Stand",
-            "p": "Das erste öffentliche Ziel ist <code>0.7.3</code>. Es ist noch nicht veröffentlicht. Der finale Nachweis läuft, der öffentliche Stand bleibt an aktive Release-Dokumente gebunden.",
+            "p": "Das erste öffentliche Ziel ist <code>0.7.3-rc.1</code>. Es ist noch nicht veröffentlicht. Der finale Nachweis läuft, der öffentliche Stand bleibt an aktive Release-Dokumente gebunden.",
             "span": ""
           },
           {
@@ -212,7 +212,7 @@
           }
         ],
         "eyebrow": "Release-Status",
-        "h2": "Die öffentliche Version 0.7.3 ist geplant, gegated und noch nicht veröffentlicht",
+        "h2": "Die öffentliche Version 0.7.3-rc.1 ist geplant, gegated und noch nicht veröffentlicht",
         "p": ""
       },
       "repos": {
@@ -221,7 +221,7 @@
         "links": [],
         "p": ""
       },
-      "structured_description": "Moderner eMule für Breitband-Upload-Kontrolle, VPN/interface binding, aktuelle Leistungsgrenzen, große Freigaben, REST automation, eD2K/Kad-Kompatibilität und Power-User-Workflows. Die erste öffentliche Version ist als 0.7.3 geplant und noch nicht veröffentlicht.",
+      "structured_description": "Moderner eMule für Breitband-Upload-Kontrolle, VPN/interface binding, aktuelle Leistungsgrenzen, große Freigaben, REST automation, eD2K/Kad-Kompatibilität und Power-User-Workflows. Die erste öffentliche Version ist als 0.7.3-rc.1 geplant und noch nicht veröffentlicht.",
       "team": {
         "cards": [
           {
@@ -290,8 +290,8 @@
         "Referenz zu eD2K, Kad, binding, UPnP, Firewall und Verbindungsdiagnose."
       ],
       "release": [
-        "0.7.3 Release-Dashboard",
-        "Geplante Beta-Gates, Evidenzverweise und Readiness-Regeln."
+        "0.7.3-rc.1 Release-Dashboard",
+        "Geplante RC-Gates, Evidenzverweise und Readiness-Regeln."
       ],
       "rest_adapters": [
         "REST Adapter Verträge",
@@ -387,13 +387,13 @@
           },
           {
             "h3": "Evidencia antes de paquetes públicos",
-            "p": "La beta <code>0.7.3</code> depende de pruebas nativas, contratos REST, carriles live de controladores, adversidad de red, packaging y ensayos x64/ARM64.",
+            "p": "La RC <code>0.7.3-rc.1</code> depende de pruebas nativas, contratos REST, carriles live de controladores, adversidad de red, packaging y ensayos x64/ARM64.",
             "span": "Disciplina de release"
           }
         ],
         "eyebrow": "Funciones",
         "h2": "Lo que eMuleBB añade alrededor del cliente clásico",
-        "p": "El trabajo se centra en comportamiento visible para el operador: política de upload predecible, binding más seguro, límites fijos de rendimiento, bibliotecas grandes, automatización local y evidencia para el release planificado <code>0.7.3</code>."
+        "p": "El trabajo se centra en comportamiento visible para el operador: política de upload predecible, binding más seguro, límites fijos de rendimiento, bibliotecas grandes, automatización local y evidencia para el release planificado <code>0.7.3-rc.1</code>."
       },
       "footer_links_label": "Enlaces del pie",
       "guide": {
@@ -420,7 +420,7 @@
           },
           {
             "h3": "Seguir la preparación del release",
-            "p": "Trata la rama pública como pre-release activo hasta que los gates <code>0.7.3</code>, las comprobaciones de operador y la evidencia live E2E indiquen lo contrario.",
+            "p": "Trata la rama pública como pre-release activo hasta que los gates <code>0.7.3-rc.1</code>, las comprobaciones de operador y la evidencia live E2E indiquen lo contrario.",
             "span": ""
           },
           {
@@ -447,7 +447,7 @@
           "VPN/interface binding",
           "Límites de rendimiento actuales",
           "JSON REST API autenticada",
-          "0.7.3 pública planificada",
+          "0.7.3-rc.1 pública planificada",
           "Workspace de validación de release"
         ],
         "source": "Código fuente"
@@ -512,7 +512,7 @@
         }
       ],
       "nav_label": "Navegación principal",
-      "og_description": "eMule moderno para controlar uploads en banda ancha, VPN/interface binding, límites de rendimiento actuales, bibliotecas grandes, REST automation, compatibilidad eD2K/Kad y validación de release. La primera versión pública 0.7.3 está planificada y aún no se ha publicado.",
+      "og_description": "eMule moderno para controlar uploads en banda ancha, VPN/interface binding, límites de rendimiento actuales, bibliotecas grandes, REST automation, compatibilidad eD2K/Kad y validación de release. La primera versión pública 0.7.3-rc.1 está planificada y aún no se ha publicado.",
       "og_title": "eMule broadband edition | eMuleBB en español",
       "product_summary_label": "Resumen de eMuleBB",
       "project_links_label": "Enlaces del proyecto",
@@ -520,7 +520,7 @@
         "cards": [
           {
             "h3": "Estado actual",
-            "p": "El primer objetivo público es <code>0.7.3</code>. Aún no se ha publicado. La prueba final está en curso y el estado público sigue ligado a los documentos activos.",
+            "p": "El primer objetivo público es <code>0.7.3-rc.1</code>. Aún no se ha publicado. La prueba final está en curso y el estado público sigue ligado a los documentos activos.",
             "span": ""
           },
           {
@@ -545,7 +545,7 @@
           }
         ],
         "eyebrow": "Estado del release",
-        "h2": "La versión pública 0.7.3 está planificada, tiene gates y aún no se ha publicado",
+        "h2": "La versión pública 0.7.3-rc.1 está planificada, tiene gates y aún no se ha publicado",
         "p": ""
       },
       "repos": {
@@ -554,7 +554,7 @@
         "links": [],
         "p": ""
       },
-      "structured_description": "eMule moderno para controlar uploads en banda ancha, VPN/interface binding, límites de rendimiento actuales, bibliotecas compartidas grandes, REST automation, compatibilidad eD2K/Kad y workflows avanzados. La primera versión pública está planificada como 0.7.3 y aún no se ha publicado.",
+      "structured_description": "eMule moderno para controlar uploads en banda ancha, VPN/interface binding, límites de rendimiento actuales, bibliotecas compartidas grandes, REST automation, compatibilidad eD2K/Kad y workflows avanzados. La primera versión pública está planificada como 0.7.3-rc.1 y aún no se ha publicado.",
       "team": {
         "cards": [
           {
@@ -623,8 +623,8 @@
         "Referencia de eD2K, Kad, binding, UPnP, firewall y diagnóstico de conexión."
       ],
       "release": [
-        "Panel de release 0.7.3",
-        "Gates de beta planificados, evidencias y reglas de preparación."
+        "Panel de release 0.7.3-rc.1",
+        "Gates de RC planificados, evidencias y reglas de preparación."
       ],
       "rest_adapters": [
         "Contratos de adaptadores REST",
@@ -720,13 +720,13 @@
           },
           {
             "h3": "Des preuves avant les paquets publics",
-            "p": "La beta <code>0.7.3</code> dépend de tests natifs, contrats REST, lanes live de contrôleurs, adversité réseau, packaging et répétitions x64/ARM64.",
+            "p": "La RC <code>0.7.3-rc.1</code> dépend de tests natifs, contrats REST, lanes live de contrôleurs, adversité réseau, packaging et répétitions x64/ARM64.",
             "span": "Discipline de release"
           }
         ],
         "eyebrow": "Fonctions",
         "h2": "Ce qu'eMuleBB ajoute autour du client classique",
-        "p": "Le travail vise le comportement visible par l'opérateur : upload prévisible, binding plus sûr, limites fixes de performance, grandes bibliothèques, automatisation locale et preuves pour la release prévue <code>0.7.3</code>."
+        "p": "Le travail vise le comportement visible par l'opérateur : upload prévisible, binding plus sûr, limites fixes de performance, grandes bibliothèques, automatisation locale et preuves pour la release prévue <code>0.7.3-rc.1</code>."
       },
       "footer_links_label": "Liens de pied de page",
       "guide": {
@@ -753,7 +753,7 @@
           },
           {
             "h3": "Suivre la préparation de la release",
-            "p": "Considérez la branche publique comme pre-release actif jusqu'à ce que les gates <code>0.7.3</code>, contrôles opérateur et preuves live E2E disent le contraire.",
+            "p": "Considérez la branche publique comme pre-release actif jusqu'à ce que les gates <code>0.7.3-rc.1</code>, contrôles opérateur et preuves live E2E disent le contraire.",
             "span": ""
           },
           {
@@ -780,7 +780,7 @@
           "VPN/interface binding",
           "Limites de performance actuelles",
           "JSON REST API authentifiée",
-          "0.7.3 publique prévue",
+          "0.7.3-rc.1 publique prévue",
           "Workspace de validation release"
         ],
         "source": "Code source"
@@ -845,7 +845,7 @@
         }
       ],
       "nav_label": "Navigation principale",
-      "og_description": "eMule moderne pour le contrôle d'upload haut débit, VPN/interface binding, de grandes bibliothèques, REST automation, la compatibilité eD2K/Kad et la validation de release. La première version publique 0.7.3 est prévue et n'est pas encore publiée.",
+      "og_description": "eMule moderne pour le contrôle d'upload haut débit, VPN/interface binding, de grandes bibliothèques, REST automation, la compatibilité eD2K/Kad et la validation de release. La première version publique 0.7.3-rc.1 est prévue et n'est pas encore publiée.",
       "og_title": "eMule broadband edition | eMuleBB en français",
       "product_summary_label": "Résumé eMuleBB",
       "project_links_label": "Liens du projet",
@@ -853,7 +853,7 @@
         "cards": [
           {
             "h3": "État actuel",
-            "p": "La première cible publique est <code>0.7.3</code>. Elle n'est pas encore publiée. La preuve finale est en cours et l'état public reste lié aux documents actifs.",
+            "p": "La première cible publique est <code>0.7.3-rc.1</code>. Elle n'est pas encore publiée. La preuve finale est en cours et l'état public reste lié aux documents actifs.",
             "span": ""
           },
           {
@@ -878,7 +878,7 @@
           }
         ],
         "eyebrow": "État de release",
-        "h2": "La version publique 0.7.3 est prévue, soumise à gates et pas encore publiée",
+        "h2": "La version publique 0.7.3-rc.1 est prévue, soumise à gates et pas encore publiée",
         "p": ""
       },
       "repos": {
@@ -887,7 +887,7 @@
         "links": [],
         "p": ""
       },
-      "structured_description": "eMule moderne pour le contrôle d'upload haut débit, VPN/interface binding, de grandes bibliothèques partagées, REST automation, la compatibilité eD2K/Kad et des workflows avancés. La première version publique est prévue comme 0.7.3 et n'est pas encore publiée.",
+      "structured_description": "eMule moderne pour le contrôle d'upload haut débit, VPN/interface binding, de grandes bibliothèques partagées, REST automation, la compatibilité eD2K/Kad et des workflows avancés. La première version publique est prévue comme 0.7.3-rc.1 et n'est pas encore publiée.",
       "team": {
         "cards": [
           {
@@ -956,8 +956,8 @@
         "Référence eD2K, Kad, binding, UPnP, firewall et diagnostic de connexion."
       ],
       "release": [
-        "Tableau release 0.7.3",
-        "Gates beta prévus, pointeurs de preuve et règles de préparation."
+        "Tableau release 0.7.3-rc.1",
+        "Gates RC prévus, pointeurs de preuve et règles de préparation."
       ],
       "rest_adapters": [
         "Contrats adaptateurs REST",
@@ -1053,13 +1053,13 @@
           },
           {
             "h3": "Evidenza prima dei pacchetti pubblici",
-            "p": "La beta <code>0.7.3</code> dipende da test nativi, contratti REST, lane live dei controller, avversità di rete, packaging e prove x64/ARM64.",
+            "p": "La RC <code>0.7.3-rc.1</code> dipende da test nativi, contratti REST, lane live dei controller, avversità di rete, packaging e prove x64/ARM64.",
             "span": "Disciplina di release"
           }
         ],
         "eyebrow": "Funzioni",
         "h2": "Cosa aggiunge eMuleBB intorno al client classico",
-        "p": "Il lavoro punta a comportamento visibile all'operatore: upload prevedibile, binding più sicuro, limiti fissi di prestazione, grandi librerie, automazione locale ed evidenza per la release pianificata <code>0.7.3</code>."
+        "p": "Il lavoro punta a comportamento visibile all'operatore: upload prevedibile, binding più sicuro, limiti fissi di prestazione, grandi librerie, automazione locale ed evidenza per la release pianificata <code>0.7.3-rc.1</code>."
       },
       "footer_links_label": "Link di fondo pagina",
       "guide": {
@@ -1086,7 +1086,7 @@
           },
           {
             "h3": "Segui la prontezza della release",
-            "p": "Considera la branch pubblica come pre-release attivo finché i gate <code>0.7.3</code>, i check operatore e l'evidenza live E2E non dicono altro.",
+            "p": "Considera la branch pubblica come pre-release attivo finché i gate <code>0.7.3-rc.1</code>, i check operatore e l'evidenza live E2E non dicono altro.",
             "span": ""
           },
           {
@@ -1113,7 +1113,7 @@
           "VPN/interface binding",
           "Limiti di prestazione attuali",
           "JSON REST API autenticata",
-          "0.7.3 pubblica pianificata",
+          "0.7.3-rc.1 pubblica pianificata",
           "Workspace di validazione release"
         ],
         "source": "Codice sorgente"
@@ -1178,7 +1178,7 @@
         }
       ],
       "nav_label": "Navigazione principale",
-      "og_description": "eMule moderno per controllo upload su banda larga, VPN/interface binding, limiti di prestazione attuali, grandi librerie, REST automation, compatibilità eD2K/Kad e validazione di release. La prima versione pubblica 0.7.3 è pianificata e non è ancora uscita.",
+      "og_description": "eMule moderno per controllo upload su banda larga, VPN/interface binding, limiti di prestazione attuali, grandi librerie, REST automation, compatibilità eD2K/Kad e validazione di release. La prima versione pubblica 0.7.3-rc.1 è pianificata e non è ancora uscita.",
       "og_title": "eMule broadband edition | eMuleBB in italiano",
       "product_summary_label": "Sintesi di eMuleBB",
       "project_links_label": "Link del progetto",
@@ -1186,7 +1186,7 @@
         "cards": [
           {
             "h3": "Stato attuale",
-            "p": "Il primo target pubblico è <code>0.7.3</code>. Non è ancora uscito. La prova finale è in corso e lo stato pubblico resta legato ai documenti attivi.",
+            "p": "Il primo target pubblico è <code>0.7.3-rc.1</code>. Non è ancora uscito. La prova finale è in corso e lo stato pubblico resta legato ai documenti attivi.",
             "span": ""
           },
           {
@@ -1211,7 +1211,7 @@
           }
         ],
         "eyebrow": "Stato della release",
-        "h2": "La release pubblica 0.7.3 è pianificata, ha gate e non è ancora uscita",
+        "h2": "La release pubblica 0.7.3-rc.1 è pianificata, ha gate e non è ancora uscita",
         "p": ""
       },
       "repos": {
@@ -1220,7 +1220,7 @@
         "links": [],
         "p": ""
       },
-      "structured_description": "eMule moderno per controllo upload su banda larga, VPN/interface binding, limiti di prestazione attuali, grandi librerie condivise, REST automation, compatibilità eD2K/Kad e workflow avanzati. La prima versione pubblica è pianificata come 0.7.3 e non è ancora uscita.",
+      "structured_description": "eMule moderno per controllo upload su banda larga, VPN/interface binding, limiti di prestazione attuali, grandi librerie condivise, REST automation, compatibilità eD2K/Kad e workflow avanzati. La prima versione pubblica è pianificata come 0.7.3-rc.1 e non è ancora uscita.",
       "team": {
         "cards": [
           {
@@ -1289,8 +1289,8 @@
         "Riferimento per eD2K, Kad, binding, UPnP, firewall e diagnosi connessione."
       ],
       "release": [
-        "Dashboard release 0.7.3",
-        "Gate beta pianificati, riferimenti di prova e regole di prontezza."
+        "Dashboard release 0.7.3-rc.1",
+        "Gate RC pianificati, riferimenti di prova e regole di prontezza."
       ],
       "rest_adapters": [
         "Contratti adapter REST",
@@ -1386,13 +1386,13 @@
           },
           {
             "h3": "Bewijs vóór publieke pakketten",
-            "p": "De beta <code>0.7.3</code> hangt af van native tests, REST contracts, live controller lanes, network adversity, packaging en x64/ARM64-repetities.",
+            "p": "De RC <code>0.7.3-rc.1</code> hangt af van native tests, REST contracts, live controller lanes, network adversity, packaging en x64/ARM64-repetities.",
             "span": "Release-discipline"
           }
         ],
         "eyebrow": "Functies",
         "h2": "Wat eMuleBB rond de klassieke client toevoegt",
-        "p": "Het werk richt zich op gedrag dat de operator ziet: voorspelbare upload policy, veiliger binding, vaste prestatielimieten, grote bibliotheken, lokale automatisering en bewijs voor de geplande release <code>0.7.3</code>."
+        "p": "Het werk richt zich op gedrag dat de operator ziet: voorspelbare upload policy, veiliger binding, vaste prestatielimieten, grote bibliotheken, lokale automatisering en bewijs voor de geplande release <code>0.7.3-rc.1</code>."
       },
       "footer_links_label": "Footerlinks",
       "guide": {
@@ -1419,7 +1419,7 @@
           },
           {
             "h3": "Volg release-gereedheid",
-            "p": "Behandel de publieke branch als actieve pre-release totdat <code>0.7.3</code>-gates, operator checks en live E2E evidence anders aangeven.",
+            "p": "Behandel de publieke branch als actieve pre-release totdat <code>0.7.3-rc.1</code>-gates, operator checks en live E2E evidence anders aangeven.",
             "span": ""
           },
           {
@@ -1446,7 +1446,7 @@
           "VPN/interface binding",
           "Actuele prestatielimieten",
           "Geauthenticeerde JSON REST API",
-          "Publieke 0.7.3 gepland",
+          "Publieke 0.7.3-rc.1 gepland",
           "Workspace voor release-validatie"
         ],
         "source": "Broncode"
@@ -1511,7 +1511,7 @@
         }
       ],
       "nav_label": "Hoofdnavigatie",
-      "og_description": "Moderne eMule voor uploadcontrole, VPN/interface binding, grote bibliotheken, REST automation, eD2K/Kad-compatibiliteit en release-validatie. De eerste publieke versie 0.7.3 is gepland en nog niet uitgebracht.",
+      "og_description": "Moderne eMule voor uploadcontrole, VPN/interface binding, grote bibliotheken, REST automation, eD2K/Kad-compatibiliteit en release-validatie. De eerste publieke versie 0.7.3-rc.1 is gepland en nog niet uitgebracht.",
       "og_title": "eMule broadband edition | eMuleBB in het Nederlands",
       "product_summary_label": "Samenvatting van eMuleBB",
       "project_links_label": "Projectlinks",
@@ -1519,7 +1519,7 @@
         "cards": [
           {
             "h3": "Huidige status",
-            "p": "Het eerste publieke doel is <code>0.7.3</code>. Het is nog niet uitgebracht. Het finale bewijs loopt en de publieke status blijft gekoppeld aan actieve release docs.",
+            "p": "Het eerste publieke doel is <code>0.7.3-rc.1</code>. Het is nog niet uitgebracht. Het finale bewijs loopt en de publieke status blijft gekoppeld aan actieve release docs.",
             "span": ""
           },
           {
@@ -1544,7 +1544,7 @@
           }
         ],
         "eyebrow": "Release-status",
-        "h2": "Publieke versie 0.7.3 is gepland, heeft gates en is nog niet uitgebracht",
+        "h2": "Publieke versie 0.7.3-rc.1 is gepland, heeft gates en is nog niet uitgebracht",
         "p": ""
       },
       "repos": {
@@ -1553,7 +1553,7 @@
         "links": [],
         "p": ""
       },
-      "structured_description": "Moderne eMule voor breedband-uploadcontrole, VPN/interface binding, grote gedeelde bibliotheken, REST automation, eD2K/Kad-compatibiliteit en geavanceerde workflows. De eerste publieke versie is gepland als 0.7.3 en nog niet uitgebracht.",
+      "structured_description": "Moderne eMule voor breedband-uploadcontrole, VPN/interface binding, grote gedeelde bibliotheken, REST automation, eD2K/Kad-compatibiliteit en geavanceerde workflows. De eerste publieke versie is gepland als 0.7.3-rc.1 en nog niet uitgebracht.",
       "team": {
         "cards": [
           {
@@ -1622,8 +1622,8 @@
         "Referentie voor eD2K, Kad, binding, UPnP, firewall en verbindingsdiagnose."
       ],
       "release": [
-        "0.7.3 release-dashboard",
-        "Geplande beta gates, evidence pointers en gereedheidsregels."
+        "0.7.3-rc.1 release-dashboard",
+        "Geplande RC gates, evidence pointers en gereedheidsregels."
       ],
       "rest_adapters": [
         "REST adapter-contracten",
@@ -1719,13 +1719,13 @@
           },
           {
             "h3": "Dowody przed publicznymi pakietami",
-            "p": "Beta <code>0.7.3</code> zależy od native tests, REST contracts, live controller lanes, network adversity, packaging i prób x64/ARM64.",
+            "p": "RC <code>0.7.3-rc.1</code> zależy od native tests, REST contracts, live controller lanes, network adversity, packaging i prób x64/ARM64.",
             "span": "Dyscyplina release"
           }
         ],
         "eyebrow": "Funkcje",
         "h2": "Co eMuleBB dodaje wokół klasycznego klienta",
-        "p": "Praca skupia się na zachowaniu widocznym dla operatora: przewidywalny upload, bezpieczniejszy binding, stałe limity wydajności, duże biblioteki, lokalna automatyzacja i dowody dla planowanego release <code>0.7.3</code>."
+        "p": "Praca skupia się na zachowaniu widocznym dla operatora: przewidywalny upload, bezpieczniejszy binding, stałe limity wydajności, duże biblioteki, lokalna automatyzacja i dowody dla planowanego release <code>0.7.3-rc.1</code>."
       },
       "footer_links_label": "Linki w stopce",
       "guide": {
@@ -1752,7 +1752,7 @@
           },
           {
             "h3": "Śledź gotowość release",
-            "p": "Traktuj publiczną branch jak aktywny pre-release, dopóki gates <code>0.7.3</code>, operator checks i live E2E evidence nie powiedzą inaczej.",
+            "p": "Traktuj publiczną branch jak aktywny pre-release, dopóki gates <code>0.7.3-rc.1</code>, operator checks i live E2E evidence nie powiedzą inaczej.",
             "span": ""
           },
           {
@@ -1779,7 +1779,7 @@
           "VPN/interface binding",
           "Aktualne limity wydajności",
           "Uwierzytelniona JSON REST API",
-          "Publiczna 0.7.3 planowana",
+          "Publiczna 0.7.3-rc.1 planowana",
           "Workspace walidacji release"
         ],
         "source": "Kod źródłowy"
@@ -1844,7 +1844,7 @@
         }
       ],
       "nav_label": "Główna nawigacja",
-      "og_description": "Nowoczesny eMule do kontroli uploadu, VPN/interface binding, dużych bibliotek, REST automation, zgodności eD2K/Kad i walidacji release. Pierwsza publiczna wersja 0.7.3 jest planowana i nie została jeszcze wydana.",
+      "og_description": "Nowoczesny eMule do kontroli uploadu, VPN/interface binding, dużych bibliotek, REST automation, zgodności eD2K/Kad i walidacji release. Pierwsza publiczna wersja 0.7.3-rc.1 jest planowana i nie została jeszcze wydana.",
       "og_title": "eMule broadband edition | eMuleBB po polsku",
       "product_summary_label": "Podsumowanie eMuleBB",
       "project_links_label": "Linki projektu",
@@ -1852,7 +1852,7 @@
         "cards": [
           {
             "h3": "Aktualny status",
-            "p": "Pierwszy publiczny target to <code>0.7.3</code>. Nie został jeszcze wydany. Końcowy dowód jest w toku, a publiczny status pozostaje związany z aktywnymi dokumentami.",
+            "p": "Pierwszy publiczny target to <code>0.7.3-rc.1</code>. Nie został jeszcze wydany. Końcowy dowód jest w toku, a publiczny status pozostaje związany z aktywnymi dokumentami.",
             "span": ""
           },
           {
@@ -1877,7 +1877,7 @@
           }
         ],
         "eyebrow": "Status wydania",
-        "h2": "Publiczna wersja 0.7.3 jest planowana, ma gates i nie została jeszcze wydana",
+        "h2": "Publiczna wersja 0.7.3-rc.1 jest planowana, ma gates i nie została jeszcze wydana",
         "p": ""
       },
       "repos": {
@@ -1886,7 +1886,7 @@
         "links": [],
         "p": ""
       },
-      "structured_description": "Nowoczesny eMule do kontroli uploadu na szybkich łączach, VPN/interface binding, dużych bibliotek współdzielonych, REST automation, zgodności eD2K/Kad i zaawansowanych workflows. Pierwsza publiczna wersja jest planowana jako 0.7.3 i nie została jeszcze wydana.",
+      "structured_description": "Nowoczesny eMule do kontroli uploadu na szybkich łączach, VPN/interface binding, dużych bibliotek współdzielonych, REST automation, zgodności eD2K/Kad i zaawansowanych workflows. Pierwsza publiczna wersja jest planowana jako 0.7.3-rc.1 i nie została jeszcze wydana.",
       "team": {
         "cards": [
           {
@@ -1955,8 +1955,8 @@
         "Referencja eD2K, Kad, binding, UPnP, firewall i diagnostyka połączeń."
       ],
       "release": [
-        "Panel release 0.7.3",
-        "Planowane beta gates, wskaźniki evidence i reguły gotowości."
+        "Panel release 0.7.3-rc.1",
+        "Planowane RC gates, wskaźniki evidence i reguły gotowości."
       ],
       "rest_adapters": [
         "Kontrakty REST adapters",
@@ -2052,13 +2052,13 @@
           },
           {
             "h3": "Evidência antes de pacotes públicos",
-            "p": "A beta <code>0.7.3</code> depende de testes nativos, contratos REST, lanes live de controladores, adversidade de rede, packaging e ensaios x64/ARM64.",
+            "p": "A RC <code>0.7.3-rc.1</code> depende de testes nativos, contratos REST, lanes live de controladores, adversidade de rede, packaging e ensaios x64/ARM64.",
             "span": "Disciplina de release"
           }
         ],
         "eyebrow": "Recursos",
         "h2": "O que eMuleBB adiciona ao redor do cliente clássico",
-        "p": "O foco está no comportamento visível para o operador: política de upload previsível, binding mais seguro, limites fixos de desempenho, bibliotecas grandes, automação local e evidência para o release planejado <code>0.7.3</code>."
+        "p": "O foco está no comportamento visível para o operador: política de upload previsível, binding mais seguro, limites fixos de desempenho, bibliotecas grandes, automação local e evidência para o release planejado <code>0.7.3-rc.1</code>."
       },
       "footer_links_label": "Links do rodapé",
       "guide": {
@@ -2085,7 +2085,7 @@
           },
           {
             "h3": "Acompanhe a prontidão do release",
-            "p": "Trate a branch pública como pre-release ativo até que os gates <code>0.7.3</code>, checks do operador e evidência live E2E digam o contrário.",
+            "p": "Trate a branch pública como pre-release ativo até que os gates <code>0.7.3-rc.1</code>, checks do operador e evidência live E2E digam o contrário.",
             "span": ""
           },
           {
@@ -2112,7 +2112,7 @@
           "VPN/interface binding",
           "Limites de desempenho atuais",
           "JSON REST API autenticada",
-          "0.7.3 pública planejada",
+          "0.7.3-rc.1 pública planejada",
           "Workspace de validação de release"
         ],
         "source": "Código-fonte"
@@ -2177,7 +2177,7 @@
         }
       ],
       "nav_label": "Navegação principal",
-      "og_description": "eMule moderno para controle de upload em banda larga, VPN/interface binding, limites de desempenho atuais, bibliotecas grandes, REST automation, compatibilidade eD2K/Kad e validação de release. A primeira versão pública 0.7.3 está planejada e ainda não foi lançada.",
+      "og_description": "eMule moderno para controle de upload em banda larga, VPN/interface binding, limites de desempenho atuais, bibliotecas grandes, REST automation, compatibilidade eD2K/Kad e validação de release. A primeira versão pública 0.7.3-rc.1 está planejada e ainda não foi lançada.",
       "og_title": "eMule broadband edition | eMuleBB em português do Brasil",
       "product_summary_label": "Resumo do eMuleBB",
       "project_links_label": "Links do projeto",
@@ -2185,7 +2185,7 @@
         "cards": [
           {
             "h3": "Estado atual",
-            "p": "O primeiro alvo público é <code>0.7.3</code>. Ele ainda não foi lançado. A prova final está em andamento e o status público segue os documentos ativos.",
+            "p": "O primeiro alvo público é <code>0.7.3-rc.1</code>. Ele ainda não foi lançado. A prova final está em andamento e o status público segue os documentos ativos.",
             "span": ""
           },
           {
@@ -2210,7 +2210,7 @@
           }
         ],
         "eyebrow": "Estado do release",
-        "h2": "A versão pública 0.7.3 está planejada, tem gates e ainda não foi lançada",
+        "h2": "A versão pública 0.7.3-rc.1 está planejada, tem gates e ainda não foi lançada",
         "p": ""
       },
       "repos": {
@@ -2219,7 +2219,7 @@
         "links": [],
         "p": ""
       },
-      "structured_description": "eMule moderno para controle de upload em banda larga, VPN/interface binding, limites de desempenho atuais, grandes bibliotecas compartilhadas, REST automation, compatibilidade eD2K/Kad e workflows avançados. A primeira versão pública está planejada como 0.7.3 e ainda não foi lançada.",
+      "structured_description": "eMule moderno para controle de upload em banda larga, VPN/interface binding, limites de desempenho atuais, grandes bibliotecas compartilhadas, REST automation, compatibilidade eD2K/Kad e workflows avançados. A primeira versão pública está planejada como 0.7.3-rc.1 e ainda não foi lançada.",
       "team": {
         "cards": [
           {
@@ -2288,8 +2288,8 @@
         "Referência de eD2K, Kad, binding, UPnP, firewall e diagnóstico de conexão."
       ],
       "release": [
-        "Painel do release 0.7.3",
-        "Gates planejados da beta, evidências e regras de prontidão."
+        "Painel do release 0.7.3-rc.1",
+        "Gates planejados da RC, evidências e regras de prontidão."
       ],
       "rest_adapters": [
         "Contratos de adaptadores REST",
@@ -2385,13 +2385,13 @@
           },
           {
             "h3": "Evidência antes de pacotes públicos",
-            "p": "A beta <code>0.7.3</code> depende de testes nativos, contratos REST, lanes live de controladores, adversidade de rede, packaging e ensaios x64/ARM64.",
+            "p": "A RC <code>0.7.3-rc.1</code> depende de testes nativos, contratos REST, lanes live de controladores, adversidade de rede, packaging e ensaios x64/ARM64.",
             "span": "Disciplina de release"
           }
         ],
         "eyebrow": "Funcionalidades",
         "h2": "O que eMuleBB acrescenta ao cliente clássico",
-        "p": "O foco está no comportamento visível para o operador: política de upload previsível, binding mais seguro, limites fixos de desempenho, bibliotecas grandes, automação local e evidência para o release planeado <code>0.7.3</code>."
+        "p": "O foco está no comportamento visível para o operador: política de upload previsível, binding mais seguro, limites fixos de desempenho, bibliotecas grandes, automação local e evidência para o release planeado <code>0.7.3-rc.1</code>."
       },
       "footer_links_label": "Ligações do rodapé",
       "guide": {
@@ -2418,7 +2418,7 @@
           },
           {
             "h3": "Acompanhar a prontidão do release",
-            "p": "Trata a branch pública como pre-release activo até que os gates <code>0.7.3</code>, checks do operador e evidência live E2E indiquem o contrário.",
+            "p": "Trata a branch pública como pre-release activo até que os gates <code>0.7.3-rc.1</code>, checks do operador e evidência live E2E indiquem o contrário.",
             "span": ""
           },
           {
@@ -2445,7 +2445,7 @@
           "VPN/interface binding",
           "Limites de desempenho actuais",
           "JSON REST API autenticada",
-          "0.7.3 pública planeada",
+          "0.7.3-rc.1 pública planeada",
           "Workspace de validação de release"
         ],
         "source": "Código-fonte"
@@ -2510,7 +2510,7 @@
         }
       ],
       "nav_label": "Navegação principal",
-      "og_description": "eMule moderno para controlo de upload em banda larga, VPN/interface binding, limites de desempenho actuais, bibliotecas grandes, REST automation, compatibilidade eD2K/Kad e validação de release. A primeira versão pública 0.7.3 está planeada e ainda não foi lançada.",
+      "og_description": "eMule moderno para controlo de upload em banda larga, VPN/interface binding, limites de desempenho actuais, bibliotecas grandes, REST automation, compatibilidade eD2K/Kad e validação de release. A primeira versão pública 0.7.3-rc.1 está planeada e ainda não foi lançada.",
       "og_title": "eMule broadband edition | eMuleBB em português europeu",
       "product_summary_label": "Resumo do eMuleBB",
       "project_links_label": "Ligações do projecto",
@@ -2518,7 +2518,7 @@
         "cards": [
           {
             "h3": "Estado actual",
-            "p": "O primeiro alvo público é <code>0.7.3</code>. Ainda não foi lançado. A prova final está em curso e o estado público segue os documentos activos.",
+            "p": "O primeiro alvo público é <code>0.7.3-rc.1</code>. Ainda não foi lançado. A prova final está em curso e o estado público segue os documentos activos.",
             "span": ""
           },
           {
@@ -2543,7 +2543,7 @@
           }
         ],
         "eyebrow": "Estado do release",
-        "h2": "A versão pública 0.7.3 está planeada, tem gates e ainda não foi lançada",
+        "h2": "A versão pública 0.7.3-rc.1 está planeada, tem gates e ainda não foi lançada",
         "p": ""
       },
       "repos": {
@@ -2552,7 +2552,7 @@
         "links": [],
         "p": ""
       },
-      "structured_description": "eMule moderno para controlo de upload em banda larga, VPN/interface binding, limites de desempenho actuais, grandes bibliotecas partilhadas, REST automation, compatibilidade eD2K/Kad e workflows avançados. A primeira versão pública está planeada como 0.7.3 e ainda não foi lançada.",
+      "structured_description": "eMule moderno para controlo de upload em banda larga, VPN/interface binding, limites de desempenho actuais, grandes bibliotecas partilhadas, REST automation, compatibilidade eD2K/Kad e workflows avançados. A primeira versão pública está planeada como 0.7.3-rc.1 e ainda não foi lançada.",
       "team": {
         "cards": [
           {
@@ -2621,8 +2621,8 @@
         "Referência de eD2K, Kad, binding, UPnP, firewall e diagnóstico de ligação."
       ],
       "release": [
-        "Painel do release 0.7.3",
-        "Gates planeados da beta, evidências e regras de prontidão."
+        "Painel do release 0.7.3-rc.1",
+        "Gates planeados da RC, evidências e regras de prontidão."
       ],
       "rest_adapters": [
         "Contratos de adaptadores REST",
@@ -2718,13 +2718,13 @@
           },
           {
             "h3": "Доказательства до публичных пакетов",
-            "p": "Бета <code>0.7.3</code> зависит от native tests, REST contracts, live controller lanes, network adversity, packaging и репетиций x64/ARM64.",
+            "p": "RC <code>0.7.3-rc.1</code> зависит от native tests, REST contracts, live controller lanes, network adversity, packaging и репетиций x64/ARM64.",
             "span": "Дисциплина release"
           }
         ],
         "eyebrow": "Возможности",
         "h2": "Что eMuleBB добавляет вокруг классического клиента",
-        "p": "Работа сосредоточена на поведении, видимом оператору: предсказуемый upload, более безопасный binding, фиксированные лимиты, большие библиотеки, локальная автоматизация и доказательства для запланированного release <code>0.7.3</code>."
+        "p": "Работа сосредоточена на поведении, видимом оператору: предсказуемый upload, более безопасный binding, фиксированные лимиты, большие библиотеки, локальная автоматизация и доказательства для запланированного release <code>0.7.3-rc.1</code>."
       },
       "footer_links_label": "Ссылки внизу страницы",
       "guide": {
@@ -2751,7 +2751,7 @@
           },
           {
             "h3": "Следите за готовностью release",
-            "p": "Считайте публичную branch активным pre-release, пока gates <code>0.7.3</code>, operator checks и live E2E evidence не покажут обратное.",
+            "p": "Считайте публичную branch активным pre-release, пока gates <code>0.7.3-rc.1</code>, operator checks и live E2E evidence не покажут обратное.",
             "span": ""
           },
           {
@@ -2778,7 +2778,7 @@
           "VPN/interface binding",
           "Актуальные лимиты производительности",
           "Аутентифицированная JSON REST API",
-          "Публичная 0.7.3 запланирована",
+          "Публичная 0.7.3-rc.1 запланирована",
           "Workspace для release-валидации"
         ],
         "source": "Исходный код"
@@ -2843,7 +2843,7 @@
         }
       ],
       "nav_label": "Основная навигация",
-      "og_description": "Современный eMule для контроля upload, VPN/interface binding, больших библиотек, REST automation, совместимости eD2K/Kad и release-валидации. Первая публичная версия 0.7.3 запланирована и еще не выпущена.",
+      "og_description": "Современный eMule для контроля upload, VPN/interface binding, больших библиотек, REST automation, совместимости eD2K/Kad и release-валидации. Первая публичная версия 0.7.3-rc.1 запланирована и еще не выпущена.",
       "og_title": "eMule broadband edition | eMuleBB на русском",
       "product_summary_label": "Кратко об eMuleBB",
       "project_links_label": "Ссылки проекта",
@@ -2851,7 +2851,7 @@
         "cards": [
           {
             "h3": "Текущий статус",
-            "p": "Первый публичный target — <code>0.7.3</code>. Он еще не выпущен. Финальное доказательство выполняется, а публичный статус связан с активными release docs.",
+            "p": "Первый публичный target — <code>0.7.3-rc.1</code>. Он еще не выпущен. Финальное доказательство выполняется, а публичный статус связан с активными release docs.",
             "span": ""
           },
           {
@@ -2876,7 +2876,7 @@
           }
         ],
         "eyebrow": "Состояние release",
-        "h2": "Публичная версия 0.7.3 запланирована, проходит gates и еще не выпущена",
+        "h2": "Публичная версия 0.7.3-rc.1 запланирована, проходит gates и еще не выпущена",
         "p": ""
       },
       "repos": {
@@ -2885,7 +2885,7 @@
         "links": [],
         "p": ""
       },
-      "structured_description": "Современный eMule для контроля upload на широкополосных линиях, VPN/interface binding, больших shared libraries, REST automation, совместимости eD2K/Kad и продвинутых workflows. Первая публичная версия запланирована как 0.7.3 и еще не выпущена.",
+      "structured_description": "Современный eMule для контроля upload на широкополосных линиях, VPN/interface binding, больших shared libraries, REST automation, совместимости eD2K/Kad и продвинутых workflows. Первая публичная версия запланирована как 0.7.3-rc.1 и еще не выпущена.",
       "team": {
         "cards": [
           {
@@ -2954,8 +2954,8 @@
         "Справка по eD2K, Kad, binding, UPnP, firewall и диагностике соединений."
       ],
       "release": [
-        "Панель release 0.7.3",
-        "Запланированные beta gates, ссылки на evidence и правила готовности."
+        "Панель release 0.7.3-rc.1",
+        "Запланированные RC gates, ссылки на evidence и правила готовности."
       ],
       "rest_adapters": [
         "Контракты REST adapters",
@@ -3051,13 +3051,13 @@
           },
           {
             "h3": "Public paketlerden önce kanıt",
-            "p": "<code>0.7.3</code> beta; native tests, REST contracts, live controller lanes, network adversity, packaging ve x64/ARM64 provalarına bağlıdır.",
+            "p": "<code>0.7.3-rc.1</code> RC; native tests, REST contracts, live controller lanes, network adversity, packaging ve x64/ARM64 provalarına bağlıdır.",
             "span": "Release disiplini"
           }
         ],
         "eyebrow": "Özellikler",
         "h2": "eMuleBB'nin klasik client etrafına ekledikleri",
-        "p": "Çalışma operatörün görebildiği davranışa odaklanır: öngörülebilir upload policy, daha güvenli binding, sabit performans sınırları, büyük kütüphaneler, yerel otomasyon ve planlanan <code>0.7.3</code> release için kanıt."
+        "p": "Çalışma operatörün görebildiği davranışa odaklanır: öngörülebilir upload policy, daha güvenli binding, sabit performans sınırları, büyük kütüphaneler, yerel otomasyon ve planlanan <code>0.7.3-rc.1</code> release için kanıt."
       },
       "footer_links_label": "Alt bağlantılar",
       "guide": {
@@ -3084,7 +3084,7 @@
           },
           {
             "h3": "Release hazırlığını izle",
-            "p": "Public branch'i, <code>0.7.3</code> gates, operator checks ve live E2E evidence aksini söyleyene kadar aktif pre-release kabul et.",
+            "p": "Public branch'i, <code>0.7.3-rc.1</code> gates, operator checks ve live E2E evidence aksini söyleyene kadar aktif pre-release kabul et.",
             "span": ""
           },
           {
@@ -3111,7 +3111,7 @@
           "VPN/interface binding",
           "Güncel performans sınırları",
           "Kimlik doğrulamalı JSON REST API",
-          "Public 0.7.3 planlandı",
+          "Public 0.7.3-rc.1 planlandı",
           "Release doğrulama workspace'i"
         ],
         "source": "Kaynak kod"
@@ -3176,7 +3176,7 @@
         }
       ],
       "nav_label": "Ana gezinme",
-      "og_description": "Geniş bant upload kontrolü, VPN/interface binding, büyük kütüphaneler, REST automation, eD2K/Kad uyumluluğu ve release doğrulaması için modern eMule. İlk public sürüm 0.7.3 planlandı ve henüz yayınlanmadı.",
+      "og_description": "Geniş bant upload kontrolü, VPN/interface binding, büyük kütüphaneler, REST automation, eD2K/Kad uyumluluğu ve release doğrulaması için modern eMule. İlk public sürüm 0.7.3-rc.1 planlandı ve henüz yayınlanmadı.",
       "og_title": "eMule broadband edition | Türkçe eMuleBB",
       "product_summary_label": "eMuleBB özeti",
       "project_links_label": "Proje bağlantıları",
@@ -3184,7 +3184,7 @@
         "cards": [
           {
             "h3": "Güncel durum",
-            "p": "İlk public hedef <code>0.7.3</code>. Henüz yayınlanmadı. Final kanıt devam ediyor ve public durum aktif release docs'a bağlı kalır.",
+            "p": "İlk public hedef <code>0.7.3-rc.1</code>. Henüz yayınlanmadı. Final kanıt devam ediyor ve public durum aktif release docs'a bağlı kalır.",
             "span": ""
           },
           {
@@ -3209,7 +3209,7 @@
           }
         ],
         "eyebrow": "Release durumu",
-        "h2": "Public 0.7.3 planlandı, gates altında ve henüz yayınlanmadı",
+        "h2": "Public 0.7.3-rc.1 planlandı, gates altında ve henüz yayınlanmadı",
         "p": ""
       },
       "repos": {
@@ -3218,7 +3218,7 @@
         "links": [],
         "p": ""
       },
-      "structured_description": "Geniş bant upload kontrolü, VPN/interface binding, büyük paylaşılan kütüphaneler, REST automation, eD2K/Kad uyumluluğu ve ileri workflows için modern eMule. İlk public sürüm 0.7.3 olarak planlandı ve henüz yayınlanmadı.",
+      "structured_description": "Geniş bant upload kontrolü, VPN/interface binding, büyük paylaşılan kütüphaneler, REST automation, eD2K/Kad uyumluluğu ve ileri workflows için modern eMule. İlk public sürüm 0.7.3-rc.1 olarak planlandı ve henüz yayınlanmadı.",
       "team": {
         "cards": [
           {
@@ -3287,8 +3287,8 @@
         "eD2K, Kad, binding, UPnP, firewall ve bağlantı tanısı referansı."
       ],
       "release": [
-        "0.7.3 release paneli",
-        "Planlanan beta gates, evidence bağlantıları ve readiness kuralları."
+        "0.7.3-rc.1 release paneli",
+        "Planlanan RC gates, evidence bağlantıları ve readiness kuralları."
       ],
       "rest_adapters": [
         "REST adapter contracts",

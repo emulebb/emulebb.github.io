@@ -132,7 +132,7 @@ RELEASE_DOWNLOADS = [
     ("https://github.com/emulebb/emulebb/releases?q=nightly&expanded=true", "eMuleBB nightlies"),
     ("https://github.com/emulebb/amule/releases", "aMule"),
     ("https://github.com/emulebb/amule/releases?q=nightly&expanded=true", "aMule nightlies"),
-    ("https://github.com/emulebb/amutorrent/releases", "aMuTorrent"),
+    ("https://github.com/emulebb/amutorrent/releases", "aMuTorrent release page"),
     ("https://github.com/emulebb/emulebb-miniupnp/releases", "MiniUPnP/miniupnpc"),
 ]
 
@@ -263,7 +263,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             ],
         },
         "features": {
-            **s("Features", "What eMuleBB adds around the classic client", "The work is focused on operator-visible behavior: predictable upload policy, safer binding, fixed performance limits, large-library operation, local automation, and test evidence for the planned <code>0.7.3</code> release."),
+            **s("Features", "What eMuleBB adds around the classic client", "The work is focused on operator-visible behavior: predictable upload policy, safer binding, fixed performance limits, large-library operation, local automation, and test evidence for the planned <code>0.7.3-rc.1</code> candidate."),
             "cards": [
                 c("Sharing and upload", "Broadband upload control", "Bounded slot targets, weak-slot recycling, ratio readouts, and seeding controls keep fast upload links useful without changing the eD2K upload protocol."),
                 c("Network control", "Binding, NAT, and exposure policy", "Interface-aware binding, UPnP/NAT mapping validation, HTTPS, allowed-IP rules, and WebServer inheritance keep remote surfaces explicit and testable."),
@@ -281,7 +281,7 @@ CONTENT: dict[str, dict[str, Any]] = {
                 c("", "Curate large libraries", "Use long-path capable Windows setups, keep share roots clean, watch ratios, and treat rare files as deliberate publishing decisions."),
                 c("", "Read claims through rendered docs", "The product guide is maintained as Markdown, rendered to public HTML, and tied to release strategy, test campaigns, CI, package, and SBOM evidence."),
                 c("", "Automate only on trusted networks", "Enable WebServer/REST with an API key, bind and firewall it carefully, and use controllers that respect native eMule transfer and delete semantics."),
-                c("", "Join the testing window", "Nightly builds are available for public testing before the planned <code>0.7.3-rc.1</code>. Use backed-up or disposable profiles, then report crashes, freezes, controller/API problems, and package issues."),
+                c("", "Join the testing window", "Nightly builds are available for public testing before the planned <code>0.7.3-rc.1</code>. Use backed-up or disposable profiles, then report crashes, freezes, controller/API problems, and package issues with logs or dumps when useful."),
             ],
         },
         "docs": {
@@ -299,6 +299,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             **s("Testing and performance proof", "Nightly testing is open while public release candidate 0.7.3-rc.1 is prepared"),
             "cards": [
                 c("", "Current status", "Public testing has started through nightly builds. The first public release candidate target is still <code>0.7.3-rc.1</code>; final proof is in progress, and public status stays tied to the active release docs."),
+                c("", "Download status", "eMuleBB and aMule nightlies are available from GitHub Releases. MiniUPnP has a Windows package release. aMuTorrent has release automation and a release page, but no public package should be assumed unless an asset is published there."),
                 c("", "Hosted fast CI", "The <a href=\"https://github.com/emulebb/emulebb-build-tests/actions/workflows/fast-harness-ci.yml\">Fast Harness CI</a> lane installs the shared Python harness and runs the default non-live, non-native pytest suite on pushes and pull requests."),
                 c("", "Build and package proof", "Required proof covers workspace validation, Debug and Release x64 app builds, Release ARM64 app builds, test binaries, package generation, SBOM generation, clean-worktree checks, and recorded SHA-256 hashes."),
                 c("", "Behavior proof", "Extensive test gates cover native suites, REST contract and OpenAPI drift, malformed requests, UI automation, live controller-surface E2E, full Release x64 live E2E, and network-adversity scenarios."),
@@ -349,7 +350,7 @@ DOC_COPY = {'en': {'emulebb': ('eMuleBB product guide',
         'troubleshooting': ('Troubleshooting guide',
                             'Symptom-led checks for Low ID, network issues, sharing, and automation.'),
         'release': ('0.7.3 release dashboard',
-                    'Current planned beta gates, automated test evidence, SBOM/package proof, and readiness rules.')}}
+                    'Current RC gates, automated test evidence, SBOM/package proof, and readiness rules.')}}
 
 
 REPO_COPY = {'en': {'emule': 'flagship desktop app and product source',
@@ -417,7 +418,7 @@ def stock_doc_copy(t: dict[str, Any]) -> dict[str, tuple[str, str]]:
         "rest_contract": ("REST API", t["automation"]),
         "rest_adapters": ("REST adapters", t["automation"]),
         "troubleshooting": (t["docs"], t["docs"]),
-        "release": ("0.7.3", t["release"]),
+        "release": ("0.7.3-rc.1", t["release"]),
     }
 
 
@@ -465,7 +466,7 @@ def make_stock_locale_content(t: dict[str, Any]) -> dict[str, Any]:
             "panel_kicker": "eMuleBB",
             "panel_h2": t["method"],
             "panel_p": t["intro"],
-            "signals": ["eD2K/Kad", "Upload", "Testing", "Nightlies", "Performance", "REST API", "0.7.3"],
+            "signals": ["eD2K/Kad", "Upload", "Testing", "Nightlies", "Performance", "REST API", "0.7.3-rc.1"],
         },
         "intro": t["intro"],
         "why": {**s(t["nav"][0], t["why"], t["intro"]), "cards": [c("eD2K/Kad", t["keep"], t["intro"]), c("Upload", t["control"], t["lead"]), c("Release", t["proof"], t["release"])]},
@@ -480,10 +481,10 @@ def make_stock_locale_content(t: dict[str, Any]) -> dict[str, Any]:
                 c("Testing", t["proof"], t["proof"]),
             ],
         },
-        "guide": {**s(t["nav"][2], t["guide"]), "cards": [c("", t["keep"], t["intro"]), c("", t["control"], t["lead"]), c("", "Testing", t["proof"]), c("", "Nightly builds", t["release"]), c("", "0.7.3", t["release"]), c("", t["product_guide"], t["docs"])]},
+        "guide": {**s(t["nav"][2], t["guide"]), "cards": [c("", t["keep"], t["intro"]), c("", t["control"], t["lead"]), c("", "Testing", t["proof"]), c("", "Nightly builds", t["release"]), c("", "0.7.3-rc.1", t["release"]), c("", t["product_guide"], t["docs"])]},
         "docs": {**s(t["nav"][3], t["docs"]), "links": []},
         "automation": {"eyebrow": t["nav"][4], "h2": t["automation"], "p": f"{t['automation']} <code>/api/v1</code>, JSON, <code>X-API-Key</code>.", "pills_label": "REST API", "pills": ["Transfers", "Searches", "Servers", "Kad", "Shared files", "Uploads", "Logs", "Preferences"]},
-        "release": {**s(t["nav"][5], t["release"]), "cards": [c("", "0.7.3", t["release"]), c("", "Fast CI", t["proof"]), c("", t["proof"], t["proof"]), c("", "Performance", t["lead"]), c("", "eD2K/Kad", t["keep"]), c("", "Status", t["release"])]},
+        "release": {**s(t["nav"][5], t["release"]), "cards": [c("", "0.7.3-rc.1", t["release"]), c("", "Fast CI", t["proof"]), c("", t["proof"], t["proof"]), c("", "Performance", t["lead"]), c("", "eD2K/Kad", t["keep"]), c("", "Status", t["release"])]},
         "method": {**s(t["method"], t["method"], t["intro"]), "cards": [c("eD2K/Kad", t["keep"], t["keep"]), c("Upload", t["control"], t["control"]), c("REST", "REST API", t["automation"]), c("Testing", t["proof"], t["release"])]},
         "repos": {**s(t["nav"][6], t["repos"]), "links": []},
         "testing_callout": TESTING_CALLOUT,
