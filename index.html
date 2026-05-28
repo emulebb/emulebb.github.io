@@ -161,7 +161,7 @@
 <article>
 <span>Network control</span>
 <h3>Binding, NAT, and exposure policy</h3>
-<p>Interface-aware binding, UPnP/NAT mapping validation, HTTPS, allowed-IP rules, and WebServer inheritance keep remote surfaces explicit and testable.</p>
+<p>Interface-aware binding, UPnP/NAT mapping validation, HTTPS, allowed-IP rules, and separate WebServer bind settings keep remote surfaces explicit and testable. Binding is not a VPN kill switch.</p>
 </article>
 <article>
 <span>Performance and scale</span>
@@ -214,7 +214,7 @@
 <article>
 <span>05</span>
 <h3>Automate only on trusted networks</h3>
-<p>Enable WebServer/REST with an API key, bind and firewall it carefully, and use controllers that respect native eMule transfer and delete semantics.</p>
+<p>Enable WebServer/REST with an API key, bind and firewall it carefully, keep unsafe diagnostic REST disabled outside controlled support runs, and use controllers that respect native eMule transfer and delete semantics.</p>
 </article>
 <article>
 <span>06</span>
@@ -250,6 +250,10 @@
 <strong>Downloads and search guide</strong>
 <span>Search modes, result trust, categories, and power-user file workflows.</span>
 </a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TOOLS-MENU/">
+<strong>Tools menu guide</strong>
+<span>Power-user actions for logs, dumps, folders, reloads, and controller setup helpers.</span>
+</a>
 <a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
 <strong>Controllers and REST guide</strong>
 <span>Trusted local controller usage and automation boundaries.</span>
@@ -268,7 +272,7 @@
 </a>
 <a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DIAGNOSTICS/">
 <strong>Collect diagnostics for reports</strong>
-<span>Redacted snapshots, dumps, unsafe diagnostic REST, and metadata diagnostics.</span>
+<span>Redacted snapshots, dumps, startup traces, unsafe diagnostic REST, and metadata diagnostics.</span>
 </a>
 <a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TROUBLESHOOTING/">
 <strong>Troubleshooting guide</strong>
