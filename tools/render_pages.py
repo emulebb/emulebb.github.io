@@ -107,8 +107,10 @@ DOCS = [
     (f"{DOCS_SITE_URL}/reference/GUIDE-SHARING/", "sharing"),
     (f"{DOCS_SITE_URL}/reference/GUIDE-DOWNLOADS-SEARCH/", "downloads"),
     (f"{DOCS_SITE_URL}/reference/GUIDE-CONTROLLERS-REST/", "controllers"),
+    (f"{DOCS_SITE_URL}/reference/GUIDE-STACK-INTEGRATIONS/", "stack_integrations"),
     (f"{DOCS_SITE_URL}/rest/REST-API-CONTRACT/", "rest_contract"),
     (f"{DOCS_SITE_URL}/rest/REST-API-ADAPTERS/", "rest_adapters"),
+    (f"{DOCS_SITE_URL}/reference/GUIDE-DIAGNOSTICS/", "diagnostics"),
     (f"{DOCS_SITE_URL}/reference/GUIDE-TROUBLESHOOTING/", "troubleshooting"),
     (f"{DOCS_SITE_URL}/active/RELEASE-0.7.3/", "release"),
 ]
@@ -343,10 +345,14 @@ DOC_COPY = {'en': {'emulebb': ('eMuleBB product guide',
                       'Search modes, result trust, categories, and power-user file workflows.'),
         'controllers': ('Controllers and REST guide',
                         'Trusted local controller usage and automation boundaries.'),
+        'stack_integrations': ('Use aMuTorrent with eMuleBB',
+                               'Task-first setup for eMuleBB, aMuTorrent, Prowlarr, Radarr, and Sonarr.'),
         'rest_contract': ('REST API contract',
                           'Human-readable contract for the authenticated JSON control surface.'),
         'rest_adapters': ('REST adapter contracts',
                           'qBittorrent-compatible and Torznab adapter surface for controller authors.'),
+        'diagnostics': ('Collect diagnostics for reports',
+                        'Redacted snapshots, dumps, unsafe diagnostic REST, and metadata diagnostics.'),
         'troubleshooting': ('Troubleshooting guide',
                             'Symptom-led checks for Low ID, network issues, sharing, and automation.'),
         'release': ('0.7.3 release dashboard',
@@ -415,8 +421,10 @@ def stock_doc_copy(t: dict[str, Any]) -> dict[str, tuple[str, str]]:
         "sharing": (t["keep"], t["intro"]),
         "downloads": (t["features"], t["lead"]),
         "controllers": (t["automation"], t["automation"]),
+        "stack_integrations": ("aMuTorrent + eMuleBB", t["automation"]),
         "rest_contract": ("REST API", t["automation"]),
         "rest_adapters": ("REST adapters", t["automation"]),
+        "diagnostics": (t["docs"], t["docs"]),
         "troubleshooting": (t["docs"], t["docs"]),
         "release": ("0.7.3-rc.1", t["release"]),
     }
@@ -577,8 +585,13 @@ def with_generated_links(root: Path) -> None:
             for href, title in RELEASE_DOWNLOADS
         ]
         content["docs"]["eyebrow"], content["docs"]["h2"] = DOC_SECTION_COPY[page.key]
+        doc_copy = DOC_COPY[page.key]
         content["docs"]["links"] = [
-            {"href": href, "title": DOC_COPY[page.key][key][0], "text": DOC_COPY[page.key][key][1]}
+            {
+                "href": href,
+                "title": doc_copy.get(key, DOC_COPY["en"][key])[0],
+                "text": doc_copy.get(key, DOC_COPY["en"][key])[1],
+            }
             for href, key in DOCS
         ]
         content["repos"]["eyebrow"], content["repos"]["h2"] = REPO_SECTION_COPY[page.key]
