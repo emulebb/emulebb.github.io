@@ -7,6 +7,7 @@ import argparse
 import datetime as dt
 import difflib
 import json
+import posixpath
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -47,9 +48,15 @@ class PageSpec:
 
     @property
     def stylesheet_href(self) -> str:
-        if self.directory:
-            return "../styles.css"
-        return "styles.css"
+        return f"{relative_prefix(self)}styles.css"
+
+
+def relative_prefix(page: PageSpec) -> str:
+    """Return the relative URL prefix from a generated page to the site root."""
+
+    if not page.directory:
+        return ""
+    return f"{posixpath.relpath('.', page.directory)}/"
 
 
 PAGES = (
@@ -99,6 +106,21 @@ PAGES = (
     PageSpec("zh_tw", "zh-TW", "zh-TW", "zh-tw", "0.8", "繁體中文"),
 )
 LANGUAGE_PAGE = PageSpec("languages", "en", "en", "languages", "0.7", "Languages")
+FAQ_LOCALE_KEYS = ("en", "it", "es", "pt_br", "fr", "de", "pl", "nl", "ru", "uk", "zh_cn", "ja")
+FAQ_PAGE_BY_KEY = {
+    page.key: PageSpec(
+        page.key,
+        page.hreflang,
+        page.html_lang,
+        "faq" if page.key == "en" else f"{page.directory}/faq",
+        "0.8",
+        page.language_label,
+    )
+    for page in PAGES
+    if page.key in FAQ_LOCALE_KEYS
+}
+FAQ_PAGES = tuple(FAQ_PAGE_BY_KEY[key] for key in FAQ_LOCALE_KEYS)
+ENGLISH_FAQ_PAGE = FAQ_PAGE_BY_KEY["en"]
 
 DOCS = [
     (f"{DOCS_SITE_URL}/reference/GUIDE-EMULEBB/", "emulebb"),
@@ -549,7 +571,7 @@ def add_release_evidence_copy(content: dict[str, Any]) -> None:
 def add_team_images(page: PageSpec, content: dict[str, Any]) -> None:
     """Attach section-local raster lore images to the team cards."""
 
-    prefix = "" if page.directory == "" else "../"
+    prefix = relative_prefix(page)
     for index, card in enumerate(content["team"]["cards"]):
         image = TEAM_IMAGES[index % len(TEAM_IMAGES)]
         card["image"] = {
@@ -561,7 +583,7 @@ def add_team_images(page: PageSpec, content: dict[str, Any]) -> None:
 def add_brand_logo(page: PageSpec, content: dict[str, Any]) -> None:
     """Attach the header-only product logo path for the generated page."""
 
-    prefix = "" if page.directory == "" else "../"
+    prefix = relative_prefix(page)
     content["brand_logo"] = {
         "src": f"{prefix}assets/brand/{BRAND_LOGO_FILE}",
         "alt": "eMuleBB broadband edition",
@@ -644,10 +666,10 @@ def alternates() -> list[dict[str, str]]:
 def relative_page_href(source: PageSpec, target: PageSpec) -> str:
     """Return a relative URL from one generated page to another page."""
 
-    prefix = "" if source.directory == "" else "../"
-    if target.directory:
-        return f"{prefix}{target.directory}/"
-    return prefix or "./"
+    source_directory = source.directory or "."
+    target_directory = target.directory or "."
+    relative = posixpath.relpath(target_directory, source_directory)
+    return "./" if relative == "." else f"{relative}/"
 
 
 def language_groups() -> list[dict[str, Any]]:
