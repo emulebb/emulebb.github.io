@@ -47,11 +47,12 @@ backlog. Those live in the public `emulebb-tooling` docs.
   shared libraries, validation, release gates.
 - Keep the site text-first outside the header logo and bounded Team/lore
   imagery.
-- Do not publish favicon, screenshot, copied application artwork, or arbitrary
-  brand image assets from this repository.
+- Do not publish screenshot, copied application artwork, or arbitrary brand
+  image assets from this repository.
 - Do not add copied application resource images such as `Logo.jpg`.
-- The only current logo asset is
-  `assets/brand/emulebb-broadband-edition-logo.png`, used in the site header.
+- The current brand assets are
+  `assets/brand/emulebb-broadband-edition-logo.png`, used in the site header,
+  and `assets/brand/emulebb-favicon.ico`, used as the browser favicon.
 - The Team/lore section may use small generated raster illustrations under
   `assets/team/` when explicitly requested. They must stay decorative,
   section-local, and separate from favicon or external product screenshots.
@@ -259,7 +260,7 @@ python -m pip install -r requirements.txt
 python tools\render_pages.py --lastmod 2026-05-23 --check
 python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root . validate
 git diff --check
-rg -n "emule-logo|Logo\.jpg|favicon|screenshot" index.html styles.css ar-ae eu bg ca cs da el es ast et fa fi br pt-br pt-pt gl he hu it ja ko lt lv mt nb ru de fr pl nl nn ro sl sq sv tr uk ug-cn ca-valencia ca-valencia-racv vi zh-cn zh-tw languages
+rg -n "emule-logo|Logo\.jpg|screenshot" index.html styles.css ar-ae eu bg ca cs da el es ast et fa fi br pt-br pt-pt gl he hu it ja ko lt lv mt nb ru de fr pl nl nn ro sl sq sv tr uk ug-cn ca-valencia ca-valencia-racv vi zh-cn zh-tw languages
 ```
 
 Anchor check:
@@ -341,6 +342,7 @@ Current public files:
   `/fr/faq/`, `/de/faq/`, `/pl/faq/`, `/nl/faq/`, `/ru/faq/`, `/uk/faq/`,
   `/zh-cn/faq/`, and `/ja/faq/`
 - `styles.css`: shared styles
+- `assets/brand/emulebb-favicon.ico`: browser favicon
 - `robots.txt`: crawler policy
 - `sitemap.xml`: indexable URL list
 - `AGENTS.md`: short agent policy

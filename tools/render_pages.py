@@ -50,6 +50,10 @@ class PageSpec:
     def stylesheet_href(self) -> str:
         return f"{relative_prefix(self)}styles.css"
 
+    @property
+    def favicon_href(self) -> str:
+        return f"{relative_prefix(self)}assets/brand/emulebb-favicon.ico"
+
 
 def relative_prefix(page: PageSpec) -> str:
     """Return the relative URL prefix from a generated page to the site root."""
