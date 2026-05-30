@@ -3,7 +3,10 @@
 This repository publishes the public GitHub Pages site for eMule broadband
 edition.
 
-Read `docs/SITE-HANDBOOK.md` before making content, layout, SEO, locale, or
+Read and follow
+`EMULEBB_WORKSPACE_ROOT\repos\emulebb-tooling\docs\WORKSPACE-POLICY.md` first
+when this repo is checked out under the canonical eMuleBB workspace. Then read
+`docs/SITE-HANDBOOK.md` before making content, layout, SEO, locale, or
 publishing-policy changes.
 
 ## Hard Rules
