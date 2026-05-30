@@ -409,6 +409,350 @@ MENU_COPY = {'en': {'label': 'Menu', 'open_label': 'Open primary navigation', 'c
 LANGUAGE_LINK_COPY = {'en': 'Languages'}
 
 
+FAQ_LINKS = {
+    "network": f"{DOCS_SITE_URL}/reference/GUIDE-NETWORK/",
+    "sharing": f"{DOCS_SITE_URL}/reference/GUIDE-SHARING/",
+    "downloads": f"{DOCS_SITE_URL}/reference/GUIDE-DOWNLOADS-SEARCH/",
+    "controllers": f"{DOCS_SITE_URL}/reference/GUIDE-CONTROLLERS-REST/",
+    "release": f"{DOCS_SITE_URL}/active/RELEASE-0.7.3/",
+    "product": f"{DOCS_SITE_URL}/reference/GUIDE-EMULEBB/",
+}
+
+
+def faq_item(question: str, answer: str, doc_title: str, doc_href: str) -> dict[str, str]:
+    """Make a FAQ entry."""
+
+    return {"question": question, "answer": answer, "doc_title": doc_title, "doc_href": doc_href}
+
+
+FAQ_CONTENT: dict[str, dict[str, Any]] = {
+    "en": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "Short answers for eMule users who want to try eMuleBB for binding, sharing, upload slots, Kad, REST, and 0.7.3-rc.1 testing.",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "Quick eMuleBB answers for eMule users moving to the broadband edition.",
+        "nav_label": "FAQ navigation",
+        "eyebrow": "FAQ",
+        "h1": "Common eMule questions, answered for eMuleBB",
+        "lead": "Short answers for users who want the classic eMule workflow with better broadband control, safer networking, and clearer release proof.",
+        "home_label": "Home",
+        "docs_label": "Docs",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "Languages",
+        "read_more": "Read more",
+        "items": [
+            faq_item("How do I bind eMule to an interface or VPN?", "eMuleBB can bind P2P traffic to a named interface or local address, and it can block startup when the target is missing. Keep your VPN kill switch, firewall, and WebServer/REST bind policy separate.", "Network guide", FAQ_LINKS["network"]),
+            faq_item("How do I share my library in eMule?", "eMuleBB keeps the familiar Shared Files model: add curated roots, keep Temp out of shares, use stable paths, and let hashing finish before scaling up.", "Sharing guide", FAQ_LINKS["sharing"]),
+            faq_item("How do I limit upload slots in eMule?", "eMuleBB adds a finite broadband upload-slot target, weak-slot recycling, and practical diagnostics so fast lines stay useful without flooding the queue.", "Downloads and search guide", FAQ_LINKS["downloads"]),
+            faq_item("Is eMuleBB a protocol fork of eMule?", "No. eMuleBB keeps stock-compatible eD2K and Kad behavior as the default, then improves local limits, automation, diagnostics, and release discipline around it.", "Product guide", FAQ_LINKS["product"]),
+            faq_item("Which eMule release should I use for testing?", "Use eMuleBB nightlies for public testing now. The first public release candidate is planned as 0.7.3-rc.1, with 0.7.3 as the stable target after the gates pass.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
+            faq_item("How do I keep eMule WebServer or REST safe?", "eMuleBB treats WebServer and REST as trusted-controller surfaces. Enable them only when needed, bind deliberately, use an API key, and avoid broad exposure.", "Controllers and REST guide", FAQ_LINKS["controllers"]),
+            faq_item("How do I use eMule with Kad and servers?", "eMuleBB keeps classic server, global, and Kad search workflows. Start with trusted server lists, bootstrap Kad deliberately, and diagnose Low ID or firewalled Kad before changing many settings.", "Network guide", FAQ_LINKS["network"]),
+            faq_item("How do I handle large shared libraries in eMule?", "eMuleBB is built for large libraries: add roots gradually, use long-path capable Windows setups, review share-ignore rules, and let startup cache work settle.", "Sharing guide", FAQ_LINKS["sharing"]),
+            faq_item("Can I automate eMule with external tools?", "Yes. eMuleBB exposes an authenticated JSON REST API for trusted local controllers while keeping native transfer and sharing semantics in the desktop app.", "Controllers and REST guide", FAQ_LINKS["controllers"]),
+        ],
+    },
+    "it": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "Risposte brevi per utenti eMule che vogliono provare eMuleBB per binding, condivisione, slot di upload, Kad, REST e test 0.7.3-rc.1.",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "Risposte rapide eMuleBB per utenti eMule.",
+        "nav_label": "Navigazione FAQ",
+        "eyebrow": "FAQ",
+        "h1": "Domande comuni su eMule, risposte per eMuleBB",
+        "lead": "Risposte brevi per chi vuole il flusso classico di eMule con migliore controllo broadband, rete piu sicura e prove di rilascio chiare.",
+        "home_label": "Home",
+        "docs_label": "Documentazione",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "Lingue",
+        "read_more": "Approfondisci",
+        "items": [
+            faq_item("Come collego eMule a un'interfaccia o a una VPN?", "eMuleBB puo vincolare il traffico P2P a un'interfaccia o indirizzo locale e bloccare l'avvio se il target manca. Tieni separati kill switch VPN, firewall e binding WebServer/REST.", "Guida rete", FAQ_LINKS["network"]),
+            faq_item("Come condivido la mia libreria in eMule?", "eMuleBB conserva il modello Shared Files: aggiungi radici curate, tieni Temp fuori dalle condivisioni, usa percorsi stabili e lascia finire l'hashing.", "Guida condivisione", FAQ_LINKS["sharing"]),
+            faq_item("Come limito gli slot di upload in eMule?", "eMuleBB aggiunge un target finito di slot upload, riciclo degli slot deboli e diagnostica utile per sfruttare linee veloci senza saturare la coda.", "Guida download e ricerca", FAQ_LINKS["downloads"]),
+            faq_item("eMuleBB e un fork di protocollo di eMule?", "No. eMuleBB mantiene compatibili eD2K e Kad stock, migliorando limiti locali, automazione, diagnostica e disciplina di rilascio.", "Guida prodotto", FAQ_LINKS["product"]),
+            faq_item("Quale release di eMule dovrei usare per i test?", "Usa le nightly eMuleBB per i test pubblici. La prima release candidate pubblica e prevista come 0.7.3-rc.1, con 0.7.3 come target stabile.", "Dashboard release 0.7.3", FAQ_LINKS["release"]),
+            faq_item("Come tengo sicuri WebServer o REST di eMule?", "eMuleBB tratta WebServer e REST come superfici per controller fidati. Abilitali solo quando servono, configura il bind, usa una API key ed evita esposizione ampia.", "Guida controller e REST", FAQ_LINKS["controllers"]),
+            faq_item("Come uso eMule con Kad e server?", "eMuleBB conserva server, ricerca globale e Kad. Parti da liste server fidate, avvia Kad con cura e diagnostica Low ID o Kad firewalled prima di cambiare troppe opzioni.", "Guida rete", FAQ_LINKS["network"]),
+            faq_item("Come gestisco grandi librerie condivise in eMule?", "eMuleBB e pensato per grandi librerie: aggiungi radici gradualmente, usa Windows con long paths, rivedi share-ignore e lascia stabilizzare la cache di avvio.", "Guida condivisione", FAQ_LINKS["sharing"]),
+            faq_item("Posso automatizzare eMule con strumenti esterni?", "Si. eMuleBB espone una REST API JSON autenticata per controller locali fidati, mantenendo semantica nativa di trasferimenti e condivisioni nell'app desktop.", "Guida controller e REST", FAQ_LINKS["controllers"]),
+        ],
+    },
+    "es": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "Respuestas breves para usuarios de eMule que quieren probar eMuleBB con binding, biblioteca compartida, slots de subida, Kad, REST y 0.7.3-rc.1.",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "Respuestas rapidas de eMuleBB para usuarios de eMule.",
+        "nav_label": "Navegacion FAQ",
+        "eyebrow": "FAQ",
+        "h1": "Preguntas comunes de eMule, respondidas para eMuleBB",
+        "lead": "Respuestas breves para usar el flujo clasico de eMule con mejor control de banda ancha, red mas segura y pruebas de release claras.",
+        "home_label": "Inicio",
+        "docs_label": "Documentacion",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "Idiomas",
+        "read_more": "Leer mas",
+        "items": [
+            faq_item("Como vinculo eMule a una interfaz o VPN?", "eMuleBB puede vincular el trafico P2P a una interfaz o direccion local y bloquear el arranque si falta el destino. Mantén aparte el kill switch VPN, firewall y bind de WebServer/REST.", "Guia de red", FAQ_LINKS["network"]),
+            faq_item("Como comparto mi biblioteca en eMule?", "eMuleBB conserva el modelo Shared Files: agrega raices cuidadas, deja Temp fuera de las compartidas, usa rutas estables y espera a que termine el hashing.", "Guia de comparticion", FAQ_LINKS["sharing"]),
+            faq_item("Como limito los slots de subida en eMule?", "eMuleBB agrega un objetivo finito de slots de subida, reciclaje de slots debiles y diagnostico practico para aprovechar lineas rapidas sin inundar la cola.", "Guia de descargas y busqueda", FAQ_LINKS["downloads"]),
+            faq_item("eMuleBB es un fork de protocolo de eMule?", "No. eMuleBB mantiene eD2K y Kad compatibles con el comportamiento stock, y mejora limites locales, automatizacion, diagnostico y disciplina de release.", "Guia del producto", FAQ_LINKS["product"]),
+            faq_item("Que release de eMule debo usar para pruebas?", "Usa las nightlies de eMuleBB para pruebas publicas. La primera release candidate publica esta planificada como 0.7.3-rc.1, con 0.7.3 como objetivo estable.", "Panel de release 0.7.3", FAQ_LINKS["release"]),
+            faq_item("Como mantengo seguro WebServer o REST de eMule?", "eMuleBB trata WebServer y REST como superficies para controladores confiables. Activalos solo cuando haga falta, configura el bind, usa API key y evita exponerlos ampliamente.", "Guia de controladores y REST", FAQ_LINKS["controllers"]),
+            faq_item("Como uso eMule con Kad y servidores?", "eMuleBB conserva servidores, busqueda global y Kad. Empieza con listas confiables, arranca Kad con cuidado y diagnostica Low ID o Kad firewalled antes de tocar muchas opciones.", "Guia de red", FAQ_LINKS["network"]),
+            faq_item("Como manejo bibliotecas compartidas grandes en eMule?", "eMuleBB esta preparado para bibliotecas grandes: agrega raices gradualmente, usa Windows con long paths, revisa share-ignore y deja asentarse la cache de inicio.", "Guia de comparticion", FAQ_LINKS["sharing"]),
+            faq_item("Puedo automatizar eMule con herramientas externas?", "Si. eMuleBB ofrece una REST API JSON autenticada para controladores locales confiables, manteniendo la semantica nativa de transferencias y comparticion en la app desktop.", "Guia de controladores y REST", FAQ_LINKS["controllers"]),
+        ],
+    },
+    "pt_br": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "Respostas curtas para usuarios do eMule que querem testar o eMuleBB com binding, compartilhamento, slots de upload, Kad, REST e 0.7.3-rc.1.",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "Respostas rapidas do eMuleBB para usuarios do eMule.",
+        "nav_label": "Navegacao FAQ",
+        "eyebrow": "FAQ",
+        "h1": "Perguntas comuns sobre eMule, respondidas para eMuleBB",
+        "lead": "Respostas curtas para usar o fluxo classico do eMule com melhor controle de banda larga, rede mais segura e provas de release claras.",
+        "home_label": "Inicio",
+        "docs_label": "Docs",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "Idiomas",
+        "read_more": "Leia mais",
+        "items": [
+            faq_item("Como vinculo o eMule a uma interface ou VPN?", "O eMuleBB pode vincular o trafego P2P a uma interface ou endereco local e bloquear a inicializacao quando o alvo falta. Mantenha kill switch VPN, firewall e bind WebServer/REST separados.", "Guia de rede", FAQ_LINKS["network"]),
+            faq_item("Como compartilho minha biblioteca no eMule?", "O eMuleBB mantem o modelo Shared Files: adicione raizes selecionadas, deixe Temp fora do compartilhamento, use caminhos estaveis e espere o hashing terminar.", "Guia de compartilhamento", FAQ_LINKS["sharing"]),
+            faq_item("Como limito os slots de upload no eMule?", "O eMuleBB adiciona alvo finito de slots de upload, reciclagem de slots fracos e diagnosticos praticos para aproveitar links rapidos sem lotar a fila.", "Guia de downloads e busca", FAQ_LINKS["downloads"]),
+            faq_item("O eMuleBB e um fork de protocolo do eMule?", "Nao. O eMuleBB mantem eD2K e Kad compativeis com o comportamento stock e melhora limites locais, automacao, diagnosticos e disciplina de release.", "Guia do produto", FAQ_LINKS["product"]),
+            faq_item("Qual release do eMule devo usar para testes?", "Use as nightlies do eMuleBB para teste publico. A primeira release candidate publica esta planejada como 0.7.3-rc.1, com 0.7.3 como alvo estavel.", "Painel da release 0.7.3", FAQ_LINKS["release"]),
+            faq_item("Como mantenho seguros WebServer ou REST do eMule?", "O eMuleBB trata WebServer e REST como superficies para controladores confiaveis. Ative apenas quando precisar, configure bind, use API key e evite exposicao ampla.", "Guia de controladores e REST", FAQ_LINKS["controllers"]),
+            faq_item("Como uso eMule com Kad e servidores?", "O eMuleBB mantem servidores, busca global e Kad. Comece com listas confiaveis, inicialize Kad com cuidado e diagnostique Low ID ou Kad firewalled antes de mudar muita coisa.", "Guia de rede", FAQ_LINKS["network"]),
+            faq_item("Como lidar com grandes bibliotecas compartilhadas no eMule?", "O eMuleBB foi feito para bibliotecas grandes: adicione raizes aos poucos, use Windows com long paths, revise share-ignore e deixe a cache de inicio estabilizar.", "Guia de compartilhamento", FAQ_LINKS["sharing"]),
+            faq_item("Posso automatizar o eMule com ferramentas externas?", "Sim. O eMuleBB expoe uma REST API JSON autenticada para controladores locais confiaveis, mantendo a semantica nativa de transferencias e compartilhamento no app desktop.", "Guia de controladores e REST", FAQ_LINKS["controllers"]),
+        ],
+    },
+    "fr": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "Reponses courtes pour les utilisateurs eMule qui veulent essayer eMuleBB: binding, partage, slots d'upload, Kad, REST et 0.7.3-rc.1.",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "Reponses rapides eMuleBB pour utilisateurs eMule.",
+        "nav_label": "Navigation FAQ",
+        "eyebrow": "FAQ",
+        "h1": "Questions courantes eMule, reponses pour eMuleBB",
+        "lead": "Des reponses courtes pour garder le flux eMule classique avec un meilleur controle broadband, une exposition reseau plus claire et des preuves de release.",
+        "home_label": "Accueil",
+        "docs_label": "Docs",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "Langues",
+        "read_more": "Lire la suite",
+        "items": [
+            faq_item("Comment lier eMule a une interface ou a un VPN?", "eMuleBB peut lier le trafic P2P a une interface ou adresse locale et bloquer le demarrage si la cible manque. Gardez kill switch VPN, pare-feu et bind WebServer/REST separes.", "Guide reseau", FAQ_LINKS["network"]),
+            faq_item("Comment partager ma bibliotheque dans eMule?", "eMuleBB garde le modele Shared Files: ajoutez des racines choisies, gardez Temp hors des partages, utilisez des chemins stables et laissez le hachage finir.", "Guide partage", FAQ_LINKS["sharing"]),
+            faq_item("Comment limiter les slots d'upload dans eMule?", "eMuleBB ajoute une cible finie de slots d'upload, le recyclage des slots faibles et des diagnostics utiles pour exploiter les lignes rapides sans noyer la file.", "Guide telechargements et recherche", FAQ_LINKS["downloads"]),
+            faq_item("eMuleBB est-il un fork de protocole d'eMule?", "Non. eMuleBB garde eD2K et Kad compatibles avec le comportement stock, puis ameliore limites locales, automatisation, diagnostics et discipline de release.", "Guide produit", FAQ_LINKS["product"]),
+            faq_item("Quelle release eMule utiliser pour tester?", "Utilisez les nightlies eMuleBB pour les tests publics. La premiere release candidate publique est prevue en 0.7.3-rc.1, avec 0.7.3 comme cible stable.", "Tableau release 0.7.3", FAQ_LINKS["release"]),
+            faq_item("Comment securiser WebServer ou REST d'eMule?", "eMuleBB traite WebServer et REST comme des surfaces pour controleurs de confiance. Activez-les seulement si besoin, liez-les explicitement, utilisez une API key et evitez l'exposition large.", "Guide controleurs et REST", FAQ_LINKS["controllers"]),
+            faq_item("Comment utiliser eMule avec Kad et les serveurs?", "eMuleBB conserve serveurs, recherche globale et Kad. Commencez avec des listes fiables, amorcez Kad proprement et diagnostiquez Low ID ou Kad firewalled avant de trop changer.", "Guide reseau", FAQ_LINKS["network"]),
+            faq_item("Comment gerer de grandes bibliotheques partagees dans eMule?", "eMuleBB vise les grandes bibliotheques: ajoutez les racines graduellement, utilisez Windows avec long paths, revoyez share-ignore et laissez la cache de demarrage se stabiliser.", "Guide partage", FAQ_LINKS["sharing"]),
+            faq_item("Puis-je automatiser eMule avec des outils externes?", "Oui. eMuleBB expose une REST API JSON authentifiee pour des controleurs locaux de confiance, tout en gardant la semantique native dans l'app desktop.", "Guide controleurs et REST", FAQ_LINKS["controllers"]),
+        ],
+    },
+    "de": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "Kurze Antworten fuer eMule-Nutzer, die eMuleBB fuer Binding, Shares, Upload-Slots, Kad, REST und 0.7.3-rc.1 testen wollen.",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "Schnelle eMuleBB-Antworten fuer eMule-Nutzer.",
+        "nav_label": "FAQ-Navigation",
+        "eyebrow": "FAQ",
+        "h1": "Haeufige eMule-Fragen, beantwortet fuer eMuleBB",
+        "lead": "Kurze Antworten fuer den klassischen eMule-Workflow mit besserer Breitbandkontrolle, klarer Netzwerkexposition und nachvollziehbarer Release-Pruefung.",
+        "home_label": "Start",
+        "docs_label": "Doku",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "Sprachen",
+        "read_more": "Mehr lesen",
+        "items": [
+            faq_item("Wie binde ich eMule an ein Interface oder VPN?", "eMuleBB kann P2P-Verkehr an ein Interface oder eine lokale Adresse binden und den Start blockieren, wenn das Ziel fehlt. VPN-Kill-Switch, Firewall und WebServer/REST-Bind bleiben getrennt.", "Network Guide", FAQ_LINKS["network"]),
+            faq_item("Wie teile ich meine Bibliothek in eMule?", "eMuleBB behaelt das bekannte Shared-Files-Modell: kuratierte Wurzeln hinzufuegen, Temp nicht teilen, stabile Pfade nutzen und Hashing auslaufen lassen.", "Sharing Guide", FAQ_LINKS["sharing"]),
+            faq_item("Wie begrenze ich Upload-Slots in eMule?", "eMuleBB fuegt ein endliches Upload-Slot-Ziel, Recycling schwacher Slots und praktische Diagnose hinzu, damit schnelle Leitungen nutzbar bleiben ohne die Queue zu fluten.", "Downloads and Search Guide", FAQ_LINKS["downloads"]),
+            faq_item("Ist eMuleBB ein Protokoll-Fork von eMule?", "Nein. eMuleBB haelt eD2K und Kad stock-kompatibel und verbessert darum herum lokale Limits, Automatisierung, Diagnose und Release-Disziplin.", "Product Guide", FAQ_LINKS["product"]),
+            faq_item("Welche eMule-Release soll ich testen?", "Nutze eMuleBB-Nightlies fuer oeffentliche Tests. Die erste oeffentliche Release Candidate ist als 0.7.3-rc.1 geplant, 0.7.3 bleibt das stabile Ziel.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
+            faq_item("Wie halte ich eMule WebServer oder REST sicher?", "eMuleBB behandelt WebServer und REST als Oberflaechen fuer vertrauenswuerdige Controller. Nur bei Bedarf aktivieren, bewusst binden, API key nutzen und breite Exposition vermeiden.", "Controllers and REST Guide", FAQ_LINKS["controllers"]),
+            faq_item("Wie nutze ich eMule mit Kad und Servern?", "eMuleBB behaelt Server, globale Suche und Kad. Starte mit vertrauenswuerdigen Serverlisten, bootstrappe Kad bewusst und diagnostiziere Low ID oder Kad firewalled vor grossen Aenderungen.", "Network Guide", FAQ_LINKS["network"]),
+            faq_item("Wie betreibe ich grosse Freigabe-Bibliotheken in eMule?", "eMuleBB ist fuer grosse Bibliotheken gedacht: Wurzeln schrittweise hinzufuegen, Windows mit long paths nutzen, share-ignore pruefen und Startup-Cache stabilisieren lassen.", "Sharing Guide", FAQ_LINKS["sharing"]),
+            faq_item("Kann ich eMule mit externen Tools automatisieren?", "Ja. eMuleBB bietet eine authentifizierte JSON REST API fuer vertrauenswuerdige lokale Controller und behaelt native Transfer- und Share-Semantik in der Desktop-App.", "Controllers and REST Guide", FAQ_LINKS["controllers"]),
+        ],
+    },
+    "pl": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "Krotkie odpowiedzi dla uzytkownikow eMule, ktorzy chca wyprobowac eMuleBB: binding, udostepnianie, sloty uploadu, Kad, REST i 0.7.3-rc.1.",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "Szybkie odpowiedzi eMuleBB dla uzytkownikow eMule.",
+        "nav_label": "Nawigacja FAQ",
+        "eyebrow": "FAQ",
+        "h1": "Popularne pytania o eMule, odpowiedzi dla eMuleBB",
+        "lead": "Krotkie odpowiedzi dla osob, ktore chca klasycznego eMule z lepsza kontrola lacza, bezpieczniejsza siecia i jasnym procesem wydania.",
+        "home_label": "Start",
+        "docs_label": "Dokumentacja",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "Jezyki",
+        "read_more": "Czytaj wiecej",
+        "items": [
+            faq_item("Jak przypiac eMule do interfejsu albo VPN?", "eMuleBB moze przypiac ruch P2P do interfejsu lub lokalnego adresu i zablokowac start, gdy cel znika. Kill switch VPN, firewall i bind WebServer/REST trzymaj osobno.", "Przewodnik sieciowy", FAQ_LINKS["network"]),
+            faq_item("Jak udostepnic biblioteke w eMule?", "eMuleBB zachowuje model Shared Files: dodawaj wybrane katalogi, trzymaj Temp poza udostepnianiem, uzywaj stalych sciezek i poczekaj na zakonczenie hashowania.", "Przewodnik udostepniania", FAQ_LINKS["sharing"]),
+            faq_item("Jak ograniczyc sloty uploadu w eMule?", "eMuleBB dodaje skonczony cel slotow uploadu, odzyskiwanie slabych slotow i praktyczna diagnostyke, aby szybkie lacza pomagaly bez zalewania kolejki.", "Przewodnik pobierania i wyszukiwania", FAQ_LINKS["downloads"]),
+            faq_item("Czy eMuleBB jest forkiem protokolu eMule?", "Nie. eMuleBB zachowuje zgodne eD2K i Kad, a dookola nich poprawia lokalne limity, automatyzacje, diagnostyke i dyscypline wydan.", "Przewodnik produktu", FAQ_LINKS["product"]),
+            faq_item("Ktore wydanie eMule wybrac do testow?", "Do publicznych testow uzywaj nightly eMuleBB. Pierwszy publiczny release candidate jest planowany jako 0.7.3-rc.1, a stabilnym celem jest 0.7.3.", "Panel wydania 0.7.3", FAQ_LINKS["release"]),
+            faq_item("Jak zabezpieczyc WebServer albo REST w eMule?", "eMuleBB traktuje WebServer i REST jako powierzchnie dla zaufanych kontrolerow. Wlaczaj je tylko w razie potrzeby, ustaw bind, uzyj API key i unikaj szerokiej ekspozycji.", "Przewodnik kontrolerow i REST", FAQ_LINKS["controllers"]),
+            faq_item("Jak uzywac eMule z Kad i serwerami?", "eMuleBB zachowuje serwery, wyszukiwanie globalne i Kad. Zacznij od zaufanych list, ostroznie bootstrapuj Kad i diagnozuj Low ID lub Kad firewalled przed duzymi zmianami.", "Przewodnik sieciowy", FAQ_LINKS["network"]),
+            faq_item("Jak obslugiwac duze biblioteki udostepniane w eMule?", "eMuleBB jest przygotowany na duze biblioteki: dodawaj katalogi stopniowo, uzywaj Windows z long paths, sprawdz share-ignore i pozwol ustabilizowac cache startowy.", "Przewodnik udostepniania", FAQ_LINKS["sharing"]),
+            faq_item("Czy moge automatyzowac eMule zewnetrznymi narzedziami?", "Tak. eMuleBB udostepnia uwierzytelniona JSON REST API dla zaufanych lokalnych kontrolerow, zachowujac natywna semantyke transferow i udostepniania w aplikacji desktop.", "Przewodnik kontrolerow i REST", FAQ_LINKS["controllers"]),
+        ],
+    },
+    "nl": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "Korte antwoorden voor eMule-gebruikers die eMuleBB willen proberen voor binding, delen, uploadslots, Kad, REST en 0.7.3-rc.1.",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "Snelle eMuleBB-antwoorden voor eMule-gebruikers.",
+        "nav_label": "FAQ-navigatie",
+        "eyebrow": "FAQ",
+        "h1": "Veelgestelde eMule-vragen, beantwoord voor eMuleBB",
+        "lead": "Korte antwoorden voor de klassieke eMule-werkwijze met betere breedbandcontrole, duidelijkere netwerkgrenzen en releasebewijs.",
+        "home_label": "Home",
+        "docs_label": "Docs",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "Talen",
+        "read_more": "Lees meer",
+        "items": [
+            faq_item("Hoe bind ik eMule aan een interface of VPN?", "eMuleBB kan P2P-verkeer aan een interface of lokaal adres binden en starten blokkeren als het doel ontbreekt. Houd VPN kill switch, firewall en WebServer/REST-bind apart.", "Netwerkgids", FAQ_LINKS["network"]),
+            faq_item("Hoe deel ik mijn bibliotheek in eMule?", "eMuleBB houdt het bekende Shared Files-model: voeg gekozen roots toe, houd Temp buiten shares, gebruik stabiele paden en laat hashing afronden.", "Deelgids", FAQ_LINKS["sharing"]),
+            faq_item("Hoe beperk ik uploadslots in eMule?", "eMuleBB voegt een eindig uploadslotdoel, recycling van zwakke slots en praktische diagnostiek toe zodat snelle lijnen nuttig blijven zonder de wachtrij te overspoelen.", "Downloads en zoekgids", FAQ_LINKS["downloads"]),
+            faq_item("Is eMuleBB een protocolfork van eMule?", "Nee. eMuleBB houdt eD2K en Kad stock-compatibel en verbetert daaromheen lokale limieten, automatisering, diagnostiek en release-discipline.", "Productgids", FAQ_LINKS["product"]),
+            faq_item("Welke eMule-release moet ik testen?", "Gebruik eMuleBB nightlies voor publieke tests. De eerste publieke release candidate is gepland als 0.7.3-rc.1, met 0.7.3 als stabiel doel.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
+            faq_item("Hoe houd ik eMule WebServer of REST veilig?", "eMuleBB behandelt WebServer en REST als oppervlakken voor vertrouwde controllers. Zet ze alleen aan wanneer nodig, bind bewust, gebruik een API key en voorkom brede blootstelling.", "Controllers en REST-gids", FAQ_LINKS["controllers"]),
+            faq_item("Hoe gebruik ik eMule met Kad en servers?", "eMuleBB houdt servers, globale zoekactie en Kad. Begin met vertrouwde serverlijsten, bootstrap Kad bewust en diagnoseer Low ID of Kad firewalled voordat je veel wijzigt.", "Netwerkgids", FAQ_LINKS["network"]),
+            faq_item("Hoe beheer ik grote gedeelde bibliotheken in eMule?", "eMuleBB is gemaakt voor grote bibliotheken: voeg roots geleidelijk toe, gebruik Windows met long paths, controleer share-ignore en laat de startcache stabiliseren.", "Deelgids", FAQ_LINKS["sharing"]),
+            faq_item("Kan ik eMule automatiseren met externe tools?", "Ja. eMuleBB biedt een geauthenticeerde JSON REST API voor vertrouwde lokale controllers en houdt native transfer- en deelgedrag in de desktop-app.", "Controllers en REST-gids", FAQ_LINKS["controllers"]),
+        ],
+    },
+    "ru": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "Короткие ответы для пользователей eMule, которые хотят попробовать eMuleBB: binding, общие папки, upload slots, Kad, REST и 0.7.3-rc.1.",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "Быстрые ответы eMuleBB для пользователей eMule.",
+        "nav_label": "Навигация FAQ",
+        "eyebrow": "FAQ",
+        "h1": "Частые вопросы по eMule, ответы для eMuleBB",
+        "lead": "Короткие ответы для тех, кто хочет классический рабочий процесс eMule с лучшим broadband-контролем, понятной сетью и проверяемыми релизами.",
+        "home_label": "Главная",
+        "docs_label": "Документация",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "Языки",
+        "read_more": "Подробнее",
+        "items": [
+            faq_item("Как привязать eMule к интерфейсу или VPN?", "eMuleBB может привязать P2P-трафик к интерфейсу или локальному адресу и заблокировать старт, если цель недоступна. VPN kill switch, firewall и WebServer/REST bind держите отдельно.", "Network guide", FAQ_LINKS["network"]),
+            faq_item("Как расшарить библиотеку в eMule?", "eMuleBB сохраняет модель Shared Files: добавляйте выбранные корни, не шарьте Temp, используйте стабильные пути и дождитесь окончания hashing.", "Sharing guide", FAQ_LINKS["sharing"]),
+            faq_item("Как ограничить upload slots в eMule?", "eMuleBB добавляет конечную цель upload slots, переработку слабых слотов и полезную диагностику, чтобы быстрый канал не превращался в хаос очереди.", "Downloads and search guide", FAQ_LINKS["downloads"]),
+            faq_item("eMuleBB является protocol fork eMule?", "Нет. eMuleBB сохраняет совместимое поведение eD2K и Kad, а вокруг него улучшает локальные лимиты, automation, диагностику и дисциплину релизов.", "Product guide", FAQ_LINKS["product"]),
+            faq_item("Какой релиз eMule использовать для тестов?", "Для публичного тестирования используйте eMuleBB nightlies. Первый публичный release candidate планируется как 0.7.3-rc.1, стабильная цель — 0.7.3.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
+            faq_item("Как безопасно включить eMule WebServer или REST?", "eMuleBB считает WebServer и REST поверхностями для доверенных контроллеров. Включайте их только при необходимости, задавайте bind, используйте API key и не открывайте широко.", "Controllers and REST guide", FAQ_LINKS["controllers"]),
+            faq_item("Как использовать eMule с Kad и серверами?", "eMuleBB сохраняет серверы, global search и Kad. Начните с доверенных списков серверов, аккуратно bootstrap Kad и диагностируйте Low ID или Kad firewalled до массовых изменений.", "Network guide", FAQ_LINKS["network"]),
+            faq_item("Как работать с большой общей библиотекой в eMule?", "eMuleBB рассчитан на большие библиотеки: добавляйте корни постепенно, используйте Windows с long paths, проверяйте share-ignore и дайте startup cache стабилизироваться.", "Sharing guide", FAQ_LINKS["sharing"]),
+            faq_item("Можно ли автоматизировать eMule внешними инструментами?", "Да. eMuleBB предоставляет authenticated JSON REST API для доверенных локальных контроллеров, сохраняя native transfer и sharing semantics в desktop app.", "Controllers and REST guide", FAQ_LINKS["controllers"]),
+        ],
+    },
+    "uk": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "Короткі відповіді для користувачів eMule, які хочуть спробувати eMuleBB: binding, спільні бібліотеки, upload slots, Kad, REST і 0.7.3-rc.1.",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "Швидкі відповіді eMuleBB для користувачів eMule.",
+        "nav_label": "Навігація FAQ",
+        "eyebrow": "FAQ",
+        "h1": "Поширені питання про eMule, відповіді для eMuleBB",
+        "lead": "Короткі відповіді для тих, хто хоче класичний процес eMule з кращим broadband-контролем, чіткішою мережею та перевіреними релізами.",
+        "home_label": "Головна",
+        "docs_label": "Документація",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "Мови",
+        "read_more": "Докладніше",
+        "items": [
+            faq_item("Як прив'язати eMule до інтерфейсу або VPN?", "eMuleBB може прив'язати P2P-трафік до інтерфейсу або локальної адреси й заблокувати старт, якщо ціль недоступна. VPN kill switch, firewall і WebServer/REST bind тримайте окремо.", "Network guide", FAQ_LINKS["network"]),
+            faq_item("Як поділитися бібліотекою в eMule?", "eMuleBB зберігає модель Shared Files: додавайте вибрані корені, не діліться Temp, використовуйте стабільні шляхи й дочекайтеся завершення hashing.", "Sharing guide", FAQ_LINKS["sharing"]),
+            faq_item("Як обмежити upload slots в eMule?", "eMuleBB додає скінченну ціль upload slots, переробку слабких слотів і корисну діагностику, щоб швидкий канал не перевантажував чергу.", "Downloads and search guide", FAQ_LINKS["downloads"]),
+            faq_item("Чи є eMuleBB protocol fork від eMule?", "Ні. eMuleBB зберігає сумісну поведінку eD2K і Kad, а навколо неї покращує локальні ліміти, automation, діагностику та дисципліну релізів.", "Product guide", FAQ_LINKS["product"]),
+            faq_item("Який реліз eMule використовувати для тестів?", "Для публічного тестування використовуйте eMuleBB nightlies. Перший публічний release candidate заплановано як 0.7.3-rc.1, стабільна ціль — 0.7.3.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
+            faq_item("Як безпечно використовувати eMule WebServer або REST?", "eMuleBB розглядає WebServer і REST як поверхні для довірених контролерів. Увімкніть лише за потреби, задайте bind, використовуйте API key і не відкривайте широко.", "Controllers and REST guide", FAQ_LINKS["controllers"]),
+            faq_item("Як використовувати eMule з Kad і серверами?", "eMuleBB зберігає сервери, global search і Kad. Почніть із довірених списків серверів, обережно bootstrap Kad і діагностуйте Low ID або Kad firewalled перед масовими змінами.", "Network guide", FAQ_LINKS["network"]),
+            faq_item("Як працювати з великою спільною бібліотекою в eMule?", "eMuleBB розрахований на великі бібліотеки: додавайте корені поступово, використовуйте Windows з long paths, перевіряйте share-ignore і дайте startup cache стабілізуватися.", "Sharing guide", FAQ_LINKS["sharing"]),
+            faq_item("Чи можна автоматизувати eMule зовнішніми інструментами?", "Так. eMuleBB надає authenticated JSON REST API для довірених локальних контролерів, зберігаючи native transfer і sharing semantics у desktop app.", "Controllers and REST guide", FAQ_LINKS["controllers"]),
+        ],
+    },
+    "zh_cn": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "面向 eMule 用户的简短问答：用 eMuleBB 处理绑定、共享库、上传槽、Kad、REST 和 0.7.3-rc.1 测试。",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "面向 eMule 用户的 eMuleBB 快速问答。",
+        "nav_label": "FAQ 导航",
+        "eyebrow": "FAQ",
+        "h1": "常见 eMule 问题，按 eMuleBB 来回答",
+        "lead": "给想保留经典 eMule 工作流、同时获得更好宽带控制、更清晰网络边界和发布证据的用户。",
+        "home_label": "首页",
+        "docs_label": "文档",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "语言",
+        "read_more": "阅读更多",
+        "items": [
+            faq_item("如何把 eMule 绑定到接口或 VPN?", "eMuleBB 可以把 P2P 流量绑定到指定接口或本地地址，也可以在目标缺失时阻止启动。VPN kill switch、防火墙和 WebServer/REST bind 应单独配置。", "网络指南", FAQ_LINKS["network"]),
+            faq_item("如何在 eMule 中共享我的资料库?", "eMuleBB 保留 Shared Files 模型：添加经过整理的根目录，不共享 Temp，使用稳定路径，并等待 hashing 完成。", "共享指南", FAQ_LINKS["sharing"]),
+            faq_item("如何限制 eMule 的上传槽?", "eMuleBB 增加有限的上传槽目标、弱槽回收和实用诊断，让高速线路更有用，同时避免队列失控。", "下载和搜索指南", FAQ_LINKS["downloads"]),
+            faq_item("eMuleBB 是 eMule 的协议分叉吗?", "不是。eMuleBB 默认保持 eD2K 和 Kad 的 stock 兼容行为，只在本地限制、自动化、诊断和发布纪律上改进。", "产品指南", FAQ_LINKS["product"]),
+            faq_item("测试时应该使用哪个 eMule 版本?", "现在请使用 eMuleBB nightlies 进行公开测试。第一个公开 release candidate 计划为 0.7.3-rc.1，稳定目标是 0.7.3。", "0.7.3 发布面板", FAQ_LINKS["release"]),
+            faq_item("如何保证 eMule WebServer 或 REST 安全?", "eMuleBB 把 WebServer 和 REST 视为可信控制器接口。只在需要时启用，明确 bind，使用 API key，并避免大范围暴露。", "控制器和 REST 指南", FAQ_LINKS["controllers"]),
+            faq_item("如何在 eMule 中使用 Kad 和服务器?", "eMuleBB 保留服务器、global search 和 Kad 工作流。先使用可信服务器列表，谨慎 bootstrap Kad，并在大量改设置前诊断 Low ID 或 Kad firewalled。", "网络指南", FAQ_LINKS["network"]),
+            faq_item("如何处理 eMule 的大型共享库?", "eMuleBB 面向大型资料库：逐步添加根目录，使用支持 long paths 的 Windows，检查 share-ignore，并让 startup cache 稳定下来。", "共享指南", FAQ_LINKS["sharing"]),
+            faq_item("可以用外部工具自动化 eMule 吗?", "可以。eMuleBB 提供经过认证的 JSON REST API 给可信本地控制器，同时把原生传输和共享语义保留在桌面应用中。", "控制器和 REST 指南", FAQ_LINKS["controllers"]),
+        ],
+    },
+    "ja": {
+        "title": "FAQ | eMule broadband edition",
+        "meta_description": "eMule ユーザー向けの短いFAQ。eMuleBB の binding、共有ライブラリ、upload slots、Kad、REST、0.7.3-rc.1 テストを扱います。",
+        "og_title": "FAQ | eMule broadband edition",
+        "og_description": "eMule ユーザー向け eMuleBB クイックFAQ。",
+        "nav_label": "FAQ ナビゲーション",
+        "eyebrow": "FAQ",
+        "h1": "よくある eMule の質問を eMuleBB 向けに回答",
+        "lead": "クラシックな eMule の操作感を保ちながら、よりよい broadband 制御、明確なネットワーク設定、検証されたリリースを使いたい人向けです。",
+        "home_label": "ホーム",
+        "docs_label": "ドキュメント",
+        "faq_label": "FAQ",
+        "github_label": "GitHub",
+        "languages_label": "言語",
+        "read_more": "詳しく読む",
+        "items": [
+            faq_item("eMule をインターフェイスや VPN に bind するには?", "eMuleBB は P2P トラフィックを指定インターフェイスまたはローカルアドレスに bind でき、対象がない場合は起動を止められます。VPN kill switch、firewall、WebServer/REST bind は別管理です。", "ネットワークガイド", FAQ_LINKS["network"]),
+            faq_item("eMule でライブラリを共有するには?", "eMuleBB は Shared Files モデルを保ちます。整理した root を追加し、Temp は共有せず、安定したパスを使い、hashing 完了を待ちます。", "共有ガイド", FAQ_LINKS["sharing"]),
+            faq_item("eMule の upload slots を制限するには?", "eMuleBB は有限の upload slot 目標、弱い slot の再利用、実用的な診断を追加し、高速回線をキュー崩壊なしに活かします。", "ダウンロードと検索ガイド", FAQ_LINKS["downloads"]),
+            faq_item("eMuleBB は eMule のプロトコル fork ですか?", "いいえ。eMuleBB は eD2K と Kad の stock 互換動作を保ち、その周囲でローカル制限、自動化、診断、リリース規律を改善します。", "製品ガイド", FAQ_LINKS["product"]),
+            faq_item("テストにはどの eMule release を使えばよいですか?", "公開テストには eMuleBB nightlies を使ってください。最初の公開 release candidate は 0.7.3-rc.1、安定版の目標は 0.7.3 です。", "0.7.3 リリースダッシュボード", FAQ_LINKS["release"]),
+            faq_item("eMule WebServer や REST を安全に保つには?", "eMuleBB は WebServer と REST を信頼済み controller 向けの surface として扱います。必要な時だけ有効化し、明示的に bind し、API key を使い、広い公開は避けます。", "Controllers and REST guide", FAQ_LINKS["controllers"]),
+            faq_item("eMule で Kad とサーバーを使うには?", "eMuleBB は server、global search、Kad の流れを保ちます。信頼できる server list から始め、Kad を慎重に bootstrap し、Low ID や Kad firewalled を先に診断します。", "ネットワークガイド", FAQ_LINKS["network"]),
+            faq_item("eMule の大きな共有ライブラリを扱うには?", "eMuleBB は大きなライブラリ向けです。root を段階的に追加し、long paths 対応 Windows を使い、share-ignore を確認し、startup cache が落ち着くのを待ちます。", "共有ガイド", FAQ_LINKS["sharing"]),
+            faq_item("外部ツールで eMule を自動化できますか?", "はい。eMuleBB は信頼済みローカル controller 向けに認証付き JSON REST API を提供し、転送と共有の native semantics は desktop app に残します。", "Controllers and REST guide", FAQ_LINKS["controllers"]),
+        ],
+    },
+}
+
+
 def load_localized_copy(root: Path) -> dict[str, dict[str, Any]]:
     """Load fully curated localized page copy from structured JSON."""
 
@@ -604,6 +948,17 @@ def with_generated_links(root: Path) -> None:
         for nav_item in content["nav"]:
             if nav_item.get("id") == "docs":
                 nav_item["href"] = DOCS_SITE_URL + "/"
+            if nav_item.get("id") == "faq":
+                nav_item["href"] = FAQ_PAGE_BY_KEY.get(page.key, ENGLISH_FAQ_PAGE).url
+        if not any(nav_item.get("id") == "faq" for nav_item in content["nav"]):
+            content["nav"].insert(
+                3,
+                {
+                    "id": "faq",
+                    "label": "FAQ",
+                    "href": FAQ_PAGE_BY_KEY.get(page.key, ENGLISH_FAQ_PAGE).url,
+                },
+            )
         content["menu"] = MENU_COPY[page.key]
         content["languages_link_label"] = LANGUAGE_LINK_COPY[page.key]
         content["release_downloads"] = [
@@ -663,6 +1018,22 @@ def alternates() -> list[dict[str, str]]:
     return result
 
 
+def faq_alternates() -> list[dict[str, str]]:
+    """Return reciprocal hreflang alternates for FAQ pages."""
+
+    result = [{"hreflang": page.hreflang, "url": page.url} for page in FAQ_PAGES]
+    result.append({"hreflang": "x-default", "url": ENGLISH_FAQ_PAGE.url})
+    return result
+
+
+def relative_prefix(page: PageSpec) -> str:
+    """Return the relative prefix from a generated page to the site root."""
+
+    if not page.directory:
+        return ""
+    return "../" * len(page.directory.split("/"))
+
+
 def relative_page_href(source: PageSpec, target: PageSpec) -> str:
     """Return a relative URL from one generated page to another page."""
 
@@ -710,7 +1081,7 @@ def render_sitemap(lastmod: str) -> str:
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
-    for page in (*PAGES, LANGUAGE_PAGE):
+    for page in (*PAGES, LANGUAGE_PAGE, *FAQ_PAGES):
         lines.extend(
             [
                 "  <url>",
@@ -732,7 +1103,10 @@ def render_outputs(root: Path, lastmod: str) -> dict[Path, str]:
     env = environment(root)
     home = env.get_template("home.html.j2")
     languages = env.get_template("languages.html.j2")
+    faq = env.get_template("faq.html.j2")
     alt = alternates()
+    faq_alt = faq_alternates()
+    home_pages = {page.key: page for page in PAGES}
     outputs: dict[Path, str] = {}
     for page in PAGES:
         outputs[page.output_path] = home.render(
@@ -743,6 +1117,27 @@ def render_outputs(root: Path, lastmod: str) -> dict[Path, str]:
             content=to_namespace(CONTENT[page.key]),
             alternates=alt,
             language_href=relative_page_href(page, LANGUAGE_PAGE),
+        )
+    for page in FAQ_PAGES:
+        content = dict(FAQ_CONTENT[page.key])
+        add_brand_logo(page, content)
+        content["menu"] = MENU_COPY.get(page.key, MENU_COPY["en"])
+        home_page = home_pages[page.key]
+        nav = [
+            {"href": home_page.url, "label": content["home_label"]},
+            {"href": page.url, "label": content["faq_label"]},
+            {"href": DOCS_SITE_URL + "/", "label": content["docs_label"]},
+            {"href": f"{SITE_BASE_URL}/languages/", "label": content["languages_label"]},
+            {"href": "https://github.com/emulebb", "label": content["github_label"]},
+        ]
+        outputs[page.output_path] = faq.render(
+            site_base_url=SITE_BASE_URL,
+            pico_cdn=PICO_CDN,
+            ga_measurement_id=GA_MEASUREMENT_ID,
+            page=page,
+            content=to_namespace(content),
+            alternates=faq_alt,
+            nav=to_namespace(nav),
         )
     outputs[LANGUAGE_PAGE.output_path] = languages.render(
         site_base_url=SITE_BASE_URL,

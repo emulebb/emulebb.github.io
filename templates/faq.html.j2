@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="{{ page.html_lang }}">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="{{ content.meta_description }}" name="description"/>
+<meta content="index,follow" name="robots"/>
+<meta content="eMuleBB" name="author"/>
+<meta content="{{ content.og_title }}" property="og:title"/>
+<meta content="{{ content.og_description }}" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="{{ page.url }}" property="og:url"/>
+<meta content="eMule broadband edition" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<link href="{{ page.url }}" rel="canonical"/>
+<link href="{{ site_base_url }}/sitemap.xml" rel="sitemap" type="application/xml"/>
+{%- for alternate in alternates -%}
+<link href="{{ alternate.url }}" hreflang="{{ alternate.hreflang }}" rel="alternate"/>
+{%- endfor %}
+<title>{{ content.title }}</title>
+<link href="{{ pico_cdn }}" rel="stylesheet"/>
+<link href="{{ page.stylesheet_href }}" rel="stylesheet"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_measurement_id }}"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ ga_measurement_id }}');
+    </script>
+<script type="application/ld+json">
+      {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+              {%- for item in content.items %}
+                {
+                        "@type": "Question",
+                        "name": {{ item.question | tojson }},
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": {{ item.answer | tojson }}
+                        }
+                }{{ "," if not loop.last else "" }}
+              {%- endfor %}
+              ]
+      }
+    </script>
+</head>
+<body>
+<header class="site-header">
+<a aria-label="eMule broadband edition home" class="brand" href="{{ nav[0].href }}">
+<img alt="{{ content.brand_logo.alt }}" class="brand-logo" decoding="async" height="160" src="{{ content.brand_logo.src }}" width="151"/>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="{{ content.menu.open_label }}" class="menu-toggle" type="button">
+<span class="menu-toggle-label">{{ content.menu.label }}</span>
+</button>
+<nav aria-label="{{ content.nav_label }}" id="primary-nav">
+{%- for item in nav %}
+<a href="{{ item.href }}">{{ item.label }}</a>
+{%- endfor %}
+</nav>
+</header>
+<main class="faq-page" id="top">
+<section class="section faq-hero">
+<p class="eyebrow">{{ content.eyebrow }}</p>
+<h1>{{ content.h1 }}</h1>
+<p class="lead">{{ content.lead }}</p>
+</section>
+<section class="section faq-section" id="questions">
+<div class="faq-list">
+{%- for item in content.items %}
+<article>
+<h2>{{ item.question }}</h2>
+<p>{{ item.answer }}</p>
+<a href="{{ item.doc_href }}">{{ content.read_more }}: {{ item.doc_title }}</a>
+</article>
+{%- endfor %}
+</div>
+</section>
+</main>
+<footer>
+<span>eMule broadband edition</span>
+<div aria-label="{{ content.nav_label }}" class="footer-links">
+        <a href="{{ nav[0].href }}">{{ content.home_label }}</a>
+        <a href="{{ site_base_url }}/languages/">{{ content.languages_label }}</a>
+        <a href="https://github.com/emulebb">GitHub</a>
+        <a href="https://discord.gg/uWQa9g37">Discord</a>
+      </div>
+</footer>
+<script>
+      (function () {
+        var button = document.querySelector(".menu-toggle");
+        var nav = document.getElementById("primary-nav");
+        if (!button || !nav) {
+          return;
+        }
+        function setOpen(open) {
+          nav.classList.toggle("is-open", open);
+          button.setAttribute("aria-expanded", String(open));
+          button.setAttribute("aria-label", open ? {{ content.menu.close_label | tojson }} : {{ content.menu.open_label | tojson }});
+        }
+        setOpen(false);
+        button.addEventListener("click", function () {
+          setOpen(button.getAttribute("aria-expanded") !== "true");
+        });
+        nav.addEventListener("click", function (event) {
+          if (event.target && event.target.closest("a")) {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
+</body>
+</html>

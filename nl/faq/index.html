@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Korte antwoorden voor eMule-gebruikers die eMuleBB willen proberen voor binding, delen, uploadslots, Kad, REST en 0.7.3-rc.1." name="description"/>
+<meta content="index,follow" name="robots"/>
+<meta content="eMuleBB" name="author"/>
+<meta content="FAQ | eMule broadband edition" property="og:title"/>
+<meta content="Snelle eMuleBB-antwoorden voor eMule-gebruikers." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://emulebb.github.io/nl/faq/" property="og:url"/>
+<meta content="eMule broadband edition" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<link href="https://emulebb.github.io/nl/faq/" rel="canonical"/>
+<link href="https://emulebb.github.io/sitemap.xml" rel="sitemap" type="application/xml"/><link href="https://emulebb.github.io/faq/" hreflang="en" rel="alternate"/><link href="https://emulebb.github.io/it/faq/" hreflang="it" rel="alternate"/><link href="https://emulebb.github.io/es/faq/" hreflang="es" rel="alternate"/><link href="https://emulebb.github.io/pt-br/faq/" hreflang="pt-BR" rel="alternate"/><link href="https://emulebb.github.io/fr/faq/" hreflang="fr" rel="alternate"/><link href="https://emulebb.github.io/de/faq/" hreflang="de" rel="alternate"/><link href="https://emulebb.github.io/pl/faq/" hreflang="pl" rel="alternate"/><link href="https://emulebb.github.io/nl/faq/" hreflang="nl" rel="alternate"/><link href="https://emulebb.github.io/ru/faq/" hreflang="ru" rel="alternate"/><link href="https://emulebb.github.io/uk/faq/" hreflang="uk" rel="alternate"/><link href="https://emulebb.github.io/zh-cn/faq/" hreflang="zh-CN" rel="alternate"/><link href="https://emulebb.github.io/ja/faq/" hreflang="ja" rel="alternate"/><link href="https://emulebb.github.io/faq/" hreflang="x-default" rel="alternate"/>
+<title>FAQ | eMule broadband edition</title>
+<link href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8G02C2WFEB"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8G02C2WFEB');
+    </script>
+<script type="application/ld+json">
+      {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                        "@type": "Question",
+                        "name": "Hoe bind ik eMule aan een interface of VPN?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB kan P2P-verkeer aan een interface of lokaal adres binden en starten blokkeren als het doel ontbreekt. Houd VPN kill switch, firewall en WebServer/REST-bind apart."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Hoe deel ik mijn bibliotheek in eMule?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB houdt het bekende Shared Files-model: voeg gekozen roots toe, houd Temp buiten shares, gebruik stabiele paden en laat hashing afronden."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Hoe beperk ik uploadslots in eMule?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB voegt een eindig uploadslotdoel, recycling van zwakke slots en praktische diagnostiek toe zodat snelle lijnen nuttig blijven zonder de wachtrij te overspoelen."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Is eMuleBB een protocolfork van eMule?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Nee. eMuleBB houdt eD2K en Kad stock-compatibel en verbetert daaromheen lokale limieten, automatisering, diagnostiek en release-discipline."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Welke eMule-release moet ik testen?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Gebruik eMuleBB nightlies voor publieke tests. De eerste publieke release candidate is gepland als 0.7.3-rc.1, met 0.7.3 als stabiel doel."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Hoe houd ik eMule WebServer of REST veilig?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB behandelt WebServer en REST als oppervlakken voor vertrouwde controllers. Zet ze alleen aan wanneer nodig, bind bewust, gebruik een API key en voorkom brede blootstelling."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Hoe gebruik ik eMule met Kad en servers?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB houdt servers, globale zoekactie en Kad. Begin met vertrouwde serverlijsten, bootstrap Kad bewust en diagnoseer Low ID of Kad firewalled voordat je veel wijzigt."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Hoe beheer ik grote gedeelde bibliotheken in eMule?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB is gemaakt voor grote bibliotheken: voeg roots geleidelijk toe, gebruik Windows met long paths, controleer share-ignore en laat de startcache stabiliseren."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Kan ik eMule automatiseren met externe tools?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Ja. eMuleBB biedt een geauthenticeerde JSON REST API voor vertrouwde lokale controllers en houdt native transfer- en deelgedrag in de desktop-app."
+                        }
+                }
+              ]
+      }
+    </script>
+</head>
+<body>
+<header class="site-header">
+<a aria-label="eMule broadband edition home" class="brand" href="https://emulebb.github.io/nl/">
+<img alt="eMuleBB broadband edition" class="brand-logo" decoding="async" height="160" src="../../assets/brand/emulebb-broadband-edition-logo.png" width="151"/>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Hoofdnavigatie openen" class="menu-toggle" type="button">
+<span class="menu-toggle-label">Menu</span>
+</button>
+<nav aria-label="FAQ-navigatie" id="primary-nav">
+<a href="https://emulebb.github.io/nl/">Home</a>
+<a href="https://emulebb.github.io/nl/faq/">FAQ</a>
+<a href="https://emulebb.github.io/emulebb-tooling/">Docs</a>
+<a href="https://emulebb.github.io/languages/">Talen</a>
+<a href="https://github.com/emulebb">GitHub</a>
+</nav>
+</header>
+<main class="faq-page" id="top">
+<section class="section faq-hero">
+<p class="eyebrow">FAQ</p>
+<h1>Veelgestelde eMule-vragen, beantwoord voor eMuleBB</h1>
+<p class="lead">Korte antwoorden voor de klassieke eMule-werkwijze met betere breedbandcontrole, duidelijkere netwerkgrenzen en releasebewijs.</p>
+</section>
+<section class="section faq-section" id="questions">
+<div class="faq-list">
+<article>
+<h2>Hoe bind ik eMule aan een interface of VPN?</h2>
+<p>eMuleBB kan P2P-verkeer aan een interface of lokaal adres binden en starten blokkeren als het doel ontbreekt. Houd VPN kill switch, firewall en WebServer/REST-bind apart.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">Lees meer: Netwerkgids</a>
+</article>
+<article>
+<h2>Hoe deel ik mijn bibliotheek in eMule?</h2>
+<p>eMuleBB houdt het bekende Shared Files-model: voeg gekozen roots toe, houd Temp buiten shares, gebruik stabiele paden en laat hashing afronden.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">Lees meer: Deelgids</a>
+</article>
+<article>
+<h2>Hoe beperk ik uploadslots in eMule?</h2>
+<p>eMuleBB voegt een eindig uploadslotdoel, recycling van zwakke slots en praktische diagnostiek toe zodat snelle lijnen nuttig blijven zonder de wachtrij te overspoelen.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">Lees meer: Downloads en zoekgids</a>
+</article>
+<article>
+<h2>Is eMuleBB een protocolfork van eMule?</h2>
+<p>Nee. eMuleBB houdt eD2K en Kad stock-compatibel en verbetert daaromheen lokale limieten, automatisering, diagnostiek en release-discipline.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">Lees meer: Productgids</a>
+</article>
+<article>
+<h2>Welke eMule-release moet ik testen?</h2>
+<p>Gebruik eMuleBB nightlies voor publieke tests. De eerste publieke release candidate is gepland als 0.7.3-rc.1, met 0.7.3 als stabiel doel.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">Lees meer: 0.7.3 release dashboard</a>
+</article>
+<article>
+<h2>Hoe houd ik eMule WebServer of REST veilig?</h2>
+<p>eMuleBB behandelt WebServer en REST als oppervlakken voor vertrouwde controllers. Zet ze alleen aan wanneer nodig, bind bewust, gebruik een API key en voorkom brede blootstelling.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">Lees meer: Controllers en REST-gids</a>
+</article>
+<article>
+<h2>Hoe gebruik ik eMule met Kad en servers?</h2>
+<p>eMuleBB houdt servers, globale zoekactie en Kad. Begin met vertrouwde serverlijsten, bootstrap Kad bewust en diagnoseer Low ID of Kad firewalled voordat je veel wijzigt.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">Lees meer: Netwerkgids</a>
+</article>
+<article>
+<h2>Hoe beheer ik grote gedeelde bibliotheken in eMule?</h2>
+<p>eMuleBB is gemaakt voor grote bibliotheken: voeg roots geleidelijk toe, gebruik Windows met long paths, controleer share-ignore en laat de startcache stabiliseren.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">Lees meer: Deelgids</a>
+</article>
+<article>
+<h2>Kan ik eMule automatiseren met externe tools?</h2>
+<p>Ja. eMuleBB biedt een geauthenticeerde JSON REST API voor vertrouwde lokale controllers en houdt native transfer- en deelgedrag in de desktop-app.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">Lees meer: Controllers en REST-gids</a>
+</article>
+</div>
+</section>
+</main>
+<footer>
+<span>eMule broadband edition</span>
+<div aria-label="FAQ-navigatie" class="footer-links">
+        <a href="https://emulebb.github.io/nl/">Home</a>
+        <a href="https://emulebb.github.io/languages/">Talen</a>
+        <a href="https://github.com/emulebb">GitHub</a>
+        <a href="https://discord.gg/uWQa9g37">Discord</a>
+      </div>
+</footer>
+<script>
+      (function () {
+        var button = document.querySelector(".menu-toggle");
+        var nav = document.getElementById("primary-nav");
+        if (!button || !nav) {
+          return;
+        }
+        function setOpen(open) {
+          nav.classList.toggle("is-open", open);
+          button.setAttribute("aria-expanded", String(open));
+          button.setAttribute("aria-label", open ? "Hoofdnavigatie sluiten" : "Hoofdnavigatie openen");
+        }
+        setOpen(false);
+        button.addEventListener("click", function () {
+          setOpen(button.getAttribute("aria-expanded") !== "true");
+        });
+        nav.addEventListener("click", function (event) {
+          if (event.target && event.target.closest("a")) {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
+</body>
+</html>

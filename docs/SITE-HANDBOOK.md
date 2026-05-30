@@ -152,6 +152,10 @@ Before adding or changing a feature entry:
 - Completed locale pages use `index,follow`.
 - `/languages/` is the indexable language selector and is included in
   `sitemap.xml`.
+- `/faq/` is the canonical English FAQ. Completed FAQ translations are
+  published under selected locale directories: `/it/faq/`, `/es/faq/`,
+  `/pt-br/faq/`, `/fr/faq/`, `/de/faq/`, `/pl/faq/`, `/nl/faq/`, `/ru/faq/`,
+  `/uk/faq/`, `/zh-cn/faq/`, and `/ja/faq/`.
 - Do not add generic compatibility chooser URLs such as `/pt/`; Portuguese is
   represented by the real regional pages `/pt-br/` and `/pt-pt/`.
 - Complete localized pages must:
@@ -332,6 +336,10 @@ Current public files:
 - locale `index.html` files under the stock eMule language directories listed
   in the Localization Policy
 - `languages/index.html`: indexable language selector
+- `faq/index.html`: canonical English FAQ
+- selected locale FAQ pages under `/it/faq/`, `/es/faq/`, `/pt-br/faq/`,
+  `/fr/faq/`, `/de/faq/`, `/pl/faq/`, `/nl/faq/`, `/ru/faq/`, `/uk/faq/`,
+  `/zh-cn/faq/`, and `/ja/faq/`
 - `styles.css`: shared styles
 - `robots.txt`: crawler policy
 - `sitemap.xml`: indexable URL list

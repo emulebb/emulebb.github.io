@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="eMule ユーザー向けの短いFAQ。eMuleBB の binding、共有ライブラリ、upload slots、Kad、REST、0.7.3-rc.1 テストを扱います。" name="description"/>
+<meta content="index,follow" name="robots"/>
+<meta content="eMuleBB" name="author"/>
+<meta content="FAQ | eMule broadband edition" property="og:title"/>
+<meta content="eMule ユーザー向け eMuleBB クイックFAQ。" property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://emulebb.github.io/ja/faq/" property="og:url"/>
+<meta content="eMule broadband edition" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<link href="https://emulebb.github.io/ja/faq/" rel="canonical"/>
+<link href="https://emulebb.github.io/sitemap.xml" rel="sitemap" type="application/xml"/><link href="https://emulebb.github.io/faq/" hreflang="en" rel="alternate"/><link href="https://emulebb.github.io/it/faq/" hreflang="it" rel="alternate"/><link href="https://emulebb.github.io/es/faq/" hreflang="es" rel="alternate"/><link href="https://emulebb.github.io/pt-br/faq/" hreflang="pt-BR" rel="alternate"/><link href="https://emulebb.github.io/fr/faq/" hreflang="fr" rel="alternate"/><link href="https://emulebb.github.io/de/faq/" hreflang="de" rel="alternate"/><link href="https://emulebb.github.io/pl/faq/" hreflang="pl" rel="alternate"/><link href="https://emulebb.github.io/nl/faq/" hreflang="nl" rel="alternate"/><link href="https://emulebb.github.io/ru/faq/" hreflang="ru" rel="alternate"/><link href="https://emulebb.github.io/uk/faq/" hreflang="uk" rel="alternate"/><link href="https://emulebb.github.io/zh-cn/faq/" hreflang="zh-CN" rel="alternate"/><link href="https://emulebb.github.io/ja/faq/" hreflang="ja" rel="alternate"/><link href="https://emulebb.github.io/faq/" hreflang="x-default" rel="alternate"/>
+<title>FAQ | eMule broadband edition</title>
+<link href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8G02C2WFEB"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8G02C2WFEB');
+    </script>
+<script type="application/ld+json">
+      {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                        "@type": "Question",
+                        "name": "eMule \u3092\u30a4\u30f3\u30bf\u30fc\u30d5\u30a7\u30a4\u30b9\u3084 VPN \u306b bind \u3059\u308b\u306b\u306f?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB \u306f P2P \u30c8\u30e9\u30d5\u30a3\u30c3\u30af\u3092\u6307\u5b9a\u30a4\u30f3\u30bf\u30fc\u30d5\u30a7\u30a4\u30b9\u307e\u305f\u306f\u30ed\u30fc\u30ab\u30eb\u30a2\u30c9\u30ec\u30b9\u306b bind \u3067\u304d\u3001\u5bfe\u8c61\u304c\u306a\u3044\u5834\u5408\u306f\u8d77\u52d5\u3092\u6b62\u3081\u3089\u308c\u307e\u3059\u3002VPN kill switch\u3001firewall\u3001WebServer/REST bind \u306f\u5225\u7ba1\u7406\u3067\u3059\u3002"
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMule \u3067\u30e9\u30a4\u30d6\u30e9\u30ea\u3092\u5171\u6709\u3059\u308b\u306b\u306f?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB \u306f Shared Files \u30e2\u30c7\u30eb\u3092\u4fdd\u3061\u307e\u3059\u3002\u6574\u7406\u3057\u305f root \u3092\u8ffd\u52a0\u3057\u3001Temp \u306f\u5171\u6709\u305b\u305a\u3001\u5b89\u5b9a\u3057\u305f\u30d1\u30b9\u3092\u4f7f\u3044\u3001hashing \u5b8c\u4e86\u3092\u5f85\u3061\u307e\u3059\u3002"
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMule \u306e upload slots \u3092\u5236\u9650\u3059\u308b\u306b\u306f?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB \u306f\u6709\u9650\u306e upload slot \u76ee\u6a19\u3001\u5f31\u3044 slot \u306e\u518d\u5229\u7528\u3001\u5b9f\u7528\u7684\u306a\u8a3a\u65ad\u3092\u8ffd\u52a0\u3057\u3001\u9ad8\u901f\u56de\u7dda\u3092\u30ad\u30e5\u30fc\u5d29\u58ca\u306a\u3057\u306b\u6d3b\u304b\u3057\u307e\u3059\u3002"
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMuleBB \u306f eMule \u306e\u30d7\u30ed\u30c8\u30b3\u30eb fork \u3067\u3059\u304b?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "\u3044\u3044\u3048\u3002eMuleBB \u306f eD2K \u3068 Kad \u306e stock \u4e92\u63db\u52d5\u4f5c\u3092\u4fdd\u3061\u3001\u305d\u306e\u5468\u56f2\u3067\u30ed\u30fc\u30ab\u30eb\u5236\u9650\u3001\u81ea\u52d5\u5316\u3001\u8a3a\u65ad\u3001\u30ea\u30ea\u30fc\u30b9\u898f\u5f8b\u3092\u6539\u5584\u3057\u307e\u3059\u3002"
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "\u30c6\u30b9\u30c8\u306b\u306f\u3069\u306e eMule release \u3092\u4f7f\u3048\u3070\u3088\u3044\u3067\u3059\u304b?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "\u516c\u958b\u30c6\u30b9\u30c8\u306b\u306f eMuleBB nightlies \u3092\u4f7f\u3063\u3066\u304f\u3060\u3055\u3044\u3002\u6700\u521d\u306e\u516c\u958b release candidate \u306f 0.7.3-rc.1\u3001\u5b89\u5b9a\u7248\u306e\u76ee\u6a19\u306f 0.7.3 \u3067\u3059\u3002"
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMule WebServer \u3084 REST \u3092\u5b89\u5168\u306b\u4fdd\u3064\u306b\u306f?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB \u306f WebServer \u3068 REST \u3092\u4fe1\u983c\u6e08\u307f controller \u5411\u3051\u306e surface \u3068\u3057\u3066\u6271\u3044\u307e\u3059\u3002\u5fc5\u8981\u306a\u6642\u3060\u3051\u6709\u52b9\u5316\u3057\u3001\u660e\u793a\u7684\u306b bind \u3057\u3001API key \u3092\u4f7f\u3044\u3001\u5e83\u3044\u516c\u958b\u306f\u907f\u3051\u307e\u3059\u3002"
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMule \u3067 Kad \u3068\u30b5\u30fc\u30d0\u30fc\u3092\u4f7f\u3046\u306b\u306f?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB \u306f server\u3001global search\u3001Kad \u306e\u6d41\u308c\u3092\u4fdd\u3061\u307e\u3059\u3002\u4fe1\u983c\u3067\u304d\u308b server list \u304b\u3089\u59cb\u3081\u3001Kad \u3092\u614e\u91cd\u306b bootstrap \u3057\u3001Low ID \u3084 Kad firewalled \u3092\u5148\u306b\u8a3a\u65ad\u3057\u307e\u3059\u3002"
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMule \u306e\u5927\u304d\u306a\u5171\u6709\u30e9\u30a4\u30d6\u30e9\u30ea\u3092\u6271\u3046\u306b\u306f?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB \u306f\u5927\u304d\u306a\u30e9\u30a4\u30d6\u30e9\u30ea\u5411\u3051\u3067\u3059\u3002root \u3092\u6bb5\u968e\u7684\u306b\u8ffd\u52a0\u3057\u3001long paths \u5bfe\u5fdc Windows \u3092\u4f7f\u3044\u3001share-ignore \u3092\u78ba\u8a8d\u3057\u3001startup cache \u304c\u843d\u3061\u7740\u304f\u306e\u3092\u5f85\u3061\u307e\u3059\u3002"
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "\u5916\u90e8\u30c4\u30fc\u30eb\u3067 eMule \u3092\u81ea\u52d5\u5316\u3067\u304d\u307e\u3059\u304b?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "\u306f\u3044\u3002eMuleBB \u306f\u4fe1\u983c\u6e08\u307f\u30ed\u30fc\u30ab\u30eb controller \u5411\u3051\u306b\u8a8d\u8a3c\u4ed8\u304d JSON REST API \u3092\u63d0\u4f9b\u3057\u3001\u8ee2\u9001\u3068\u5171\u6709\u306e native semantics \u306f desktop app \u306b\u6b8b\u3057\u307e\u3059\u3002"
+                        }
+                }
+              ]
+      }
+    </script>
+</head>
+<body>
+<header class="site-header">
+<a aria-label="eMule broadband edition home" class="brand" href="https://emulebb.github.io/ja/">
+<img alt="eMuleBB broadband edition" class="brand-logo" decoding="async" height="160" src="../../assets/brand/emulebb-broadband-edition-logo.png" width="151"/>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="メインナビゲーションを開く" class="menu-toggle" type="button">
+<span class="menu-toggle-label">メニュー</span>
+</button>
+<nav aria-label="FAQ ナビゲーション" id="primary-nav">
+<a href="https://emulebb.github.io/ja/">ホーム</a>
+<a href="https://emulebb.github.io/ja/faq/">FAQ</a>
+<a href="https://emulebb.github.io/emulebb-tooling/">ドキュメント</a>
+<a href="https://emulebb.github.io/languages/">言語</a>
+<a href="https://github.com/emulebb">GitHub</a>
+</nav>
+</header>
+<main class="faq-page" id="top">
+<section class="section faq-hero">
+<p class="eyebrow">FAQ</p>
+<h1>よくある eMule の質問を eMuleBB 向けに回答</h1>
+<p class="lead">クラシックな eMule の操作感を保ちながら、よりよい broadband 制御、明確なネットワーク設定、検証されたリリースを使いたい人向けです。</p>
+</section>
+<section class="section faq-section" id="questions">
+<div class="faq-list">
+<article>
+<h2>eMule をインターフェイスや VPN に bind するには?</h2>
+<p>eMuleBB は P2P トラフィックを指定インターフェイスまたはローカルアドレスに bind でき、対象がない場合は起動を止められます。VPN kill switch、firewall、WebServer/REST bind は別管理です。</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">詳しく読む: ネットワークガイド</a>
+</article>
+<article>
+<h2>eMule でライブラリを共有するには?</h2>
+<p>eMuleBB は Shared Files モデルを保ちます。整理した root を追加し、Temp は共有せず、安定したパスを使い、hashing 完了を待ちます。</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">詳しく読む: 共有ガイド</a>
+</article>
+<article>
+<h2>eMule の upload slots を制限するには?</h2>
+<p>eMuleBB は有限の upload slot 目標、弱い slot の再利用、実用的な診断を追加し、高速回線をキュー崩壊なしに活かします。</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">詳しく読む: ダウンロードと検索ガイド</a>
+</article>
+<article>
+<h2>eMuleBB は eMule のプロトコル fork ですか?</h2>
+<p>いいえ。eMuleBB は eD2K と Kad の stock 互換動作を保ち、その周囲でローカル制限、自動化、診断、リリース規律を改善します。</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">詳しく読む: 製品ガイド</a>
+</article>
+<article>
+<h2>テストにはどの eMule release を使えばよいですか?</h2>
+<p>公開テストには eMuleBB nightlies を使ってください。最初の公開 release candidate は 0.7.3-rc.1、安定版の目標は 0.7.3 です。</p>
+<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">詳しく読む: 0.7.3 リリースダッシュボード</a>
+</article>
+<article>
+<h2>eMule WebServer や REST を安全に保つには?</h2>
+<p>eMuleBB は WebServer と REST を信頼済み controller 向けの surface として扱います。必要な時だけ有効化し、明示的に bind し、API key を使い、広い公開は避けます。</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">詳しく読む: Controllers and REST guide</a>
+</article>
+<article>
+<h2>eMule で Kad とサーバーを使うには?</h2>
+<p>eMuleBB は server、global search、Kad の流れを保ちます。信頼できる server list から始め、Kad を慎重に bootstrap し、Low ID や Kad firewalled を先に診断します。</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">詳しく読む: ネットワークガイド</a>
+</article>
+<article>
+<h2>eMule の大きな共有ライブラリを扱うには?</h2>
+<p>eMuleBB は大きなライブラリ向けです。root を段階的に追加し、long paths 対応 Windows を使い、share-ignore を確認し、startup cache が落ち着くのを待ちます。</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">詳しく読む: 共有ガイド</a>
+</article>
+<article>
+<h2>外部ツールで eMule を自動化できますか?</h2>
+<p>はい。eMuleBB は信頼済みローカル controller 向けに認証付き JSON REST API を提供し、転送と共有の native semantics は desktop app に残します。</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">詳しく読む: Controllers and REST guide</a>
+</article>
+</div>
+</section>
+</main>
+<footer>
+<span>eMule broadband edition</span>
+<div aria-label="FAQ ナビゲーション" class="footer-links">
+        <a href="https://emulebb.github.io/ja/">ホーム</a>
+        <a href="https://emulebb.github.io/languages/">言語</a>
+        <a href="https://github.com/emulebb">GitHub</a>
+        <a href="https://discord.gg/uWQa9g37">Discord</a>
+      </div>
+</footer>
+<script>
+      (function () {
+        var button = document.querySelector(".menu-toggle");
+        var nav = document.getElementById("primary-nav");
+        if (!button || !nav) {
+          return;
+        }
+        function setOpen(open) {
+          nav.classList.toggle("is-open", open);
+          button.setAttribute("aria-expanded", String(open));
+          button.setAttribute("aria-label", open ? "\u30e1\u30a4\u30f3\u30ca\u30d3\u30b2\u30fc\u30b7\u30e7\u30f3\u3092\u9589\u3058\u308b" : "\u30e1\u30a4\u30f3\u30ca\u30d3\u30b2\u30fc\u30b7\u30e7\u30f3\u3092\u958b\u304f");
+        }
+        setOpen(false);
+        button.addEventListener("click", function () {
+          setOpen(button.getAttribute("aria-expanded") !== "true");
+        });
+        nav.addEventListener("click", function (event) {
+          if (event.target && event.target.closest("a")) {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
+</body>
+</html>

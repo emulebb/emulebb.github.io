@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Kurze Antworten fuer eMule-Nutzer, die eMuleBB fuer Binding, Shares, Upload-Slots, Kad, REST und 0.7.3-rc.1 testen wollen." name="description"/>
+<meta content="index,follow" name="robots"/>
+<meta content="eMuleBB" name="author"/>
+<meta content="FAQ | eMule broadband edition" property="og:title"/>
+<meta content="Schnelle eMuleBB-Antworten fuer eMule-Nutzer." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://emulebb.github.io/de/faq/" property="og:url"/>
+<meta content="eMule broadband edition" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<link href="https://emulebb.github.io/de/faq/" rel="canonical"/>
+<link href="https://emulebb.github.io/sitemap.xml" rel="sitemap" type="application/xml"/><link href="https://emulebb.github.io/faq/" hreflang="en" rel="alternate"/><link href="https://emulebb.github.io/it/faq/" hreflang="it" rel="alternate"/><link href="https://emulebb.github.io/es/faq/" hreflang="es" rel="alternate"/><link href="https://emulebb.github.io/pt-br/faq/" hreflang="pt-BR" rel="alternate"/><link href="https://emulebb.github.io/fr/faq/" hreflang="fr" rel="alternate"/><link href="https://emulebb.github.io/de/faq/" hreflang="de" rel="alternate"/><link href="https://emulebb.github.io/pl/faq/" hreflang="pl" rel="alternate"/><link href="https://emulebb.github.io/nl/faq/" hreflang="nl" rel="alternate"/><link href="https://emulebb.github.io/ru/faq/" hreflang="ru" rel="alternate"/><link href="https://emulebb.github.io/uk/faq/" hreflang="uk" rel="alternate"/><link href="https://emulebb.github.io/zh-cn/faq/" hreflang="zh-CN" rel="alternate"/><link href="https://emulebb.github.io/ja/faq/" hreflang="ja" rel="alternate"/><link href="https://emulebb.github.io/faq/" hreflang="x-default" rel="alternate"/>
+<title>FAQ | eMule broadband edition</title>
+<link href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8G02C2WFEB"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8G02C2WFEB');
+    </script>
+<script type="application/ld+json">
+      {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                        "@type": "Question",
+                        "name": "Wie binde ich eMule an ein Interface oder VPN?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB kann P2P-Verkehr an ein Interface oder eine lokale Adresse binden und den Start blockieren, wenn das Ziel fehlt. VPN-Kill-Switch, Firewall und WebServer/REST-Bind bleiben getrennt."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Wie teile ich meine Bibliothek in eMule?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB behaelt das bekannte Shared-Files-Modell: kuratierte Wurzeln hinzufuegen, Temp nicht teilen, stabile Pfade nutzen und Hashing auslaufen lassen."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Wie begrenze ich Upload-Slots in eMule?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB fuegt ein endliches Upload-Slot-Ziel, Recycling schwacher Slots und praktische Diagnose hinzu, damit schnelle Leitungen nutzbar bleiben ohne die Queue zu fluten."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Ist eMuleBB ein Protokoll-Fork von eMule?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Nein. eMuleBB haelt eD2K und Kad stock-kompatibel und verbessert darum herum lokale Limits, Automatisierung, Diagnose und Release-Disziplin."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Welche eMule-Release soll ich testen?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Nutze eMuleBB-Nightlies fuer oeffentliche Tests. Die erste oeffentliche Release Candidate ist als 0.7.3-rc.1 geplant, 0.7.3 bleibt das stabile Ziel."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Wie halte ich eMule WebServer oder REST sicher?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB behandelt WebServer und REST als Oberflaechen fuer vertrauenswuerdige Controller. Nur bei Bedarf aktivieren, bewusst binden, API key nutzen und breite Exposition vermeiden."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Wie nutze ich eMule mit Kad und Servern?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB behaelt Server, globale Suche und Kad. Starte mit vertrauenswuerdigen Serverlisten, bootstrappe Kad bewusst und diagnostiziere Low ID oder Kad firewalled vor grossen Aenderungen."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Wie betreibe ich grosse Freigabe-Bibliotheken in eMule?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB ist fuer grosse Bibliotheken gedacht: Wurzeln schrittweise hinzufuegen, Windows mit long paths nutzen, share-ignore pruefen und Startup-Cache stabilisieren lassen."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Kann ich eMule mit externen Tools automatisieren?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Ja. eMuleBB bietet eine authentifizierte JSON REST API fuer vertrauenswuerdige lokale Controller und behaelt native Transfer- und Share-Semantik in der Desktop-App."
+                        }
+                }
+              ]
+      }
+    </script>
+</head>
+<body>
+<header class="site-header">
+<a aria-label="eMule broadband edition home" class="brand" href="https://emulebb.github.io/de/">
+<img alt="eMuleBB broadband edition" class="brand-logo" decoding="async" height="160" src="../../assets/brand/emulebb-broadband-edition-logo.png" width="151"/>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Hauptnavigation öffnen" class="menu-toggle" type="button">
+<span class="menu-toggle-label">Menü</span>
+</button>
+<nav aria-label="FAQ-Navigation" id="primary-nav">
+<a href="https://emulebb.github.io/de/">Start</a>
+<a href="https://emulebb.github.io/de/faq/">FAQ</a>
+<a href="https://emulebb.github.io/emulebb-tooling/">Doku</a>
+<a href="https://emulebb.github.io/languages/">Sprachen</a>
+<a href="https://github.com/emulebb">GitHub</a>
+</nav>
+</header>
+<main class="faq-page" id="top">
+<section class="section faq-hero">
+<p class="eyebrow">FAQ</p>
+<h1>Haeufige eMule-Fragen, beantwortet fuer eMuleBB</h1>
+<p class="lead">Kurze Antworten fuer den klassischen eMule-Workflow mit besserer Breitbandkontrolle, klarer Netzwerkexposition und nachvollziehbarer Release-Pruefung.</p>
+</section>
+<section class="section faq-section" id="questions">
+<div class="faq-list">
+<article>
+<h2>Wie binde ich eMule an ein Interface oder VPN?</h2>
+<p>eMuleBB kann P2P-Verkehr an ein Interface oder eine lokale Adresse binden und den Start blockieren, wenn das Ziel fehlt. VPN-Kill-Switch, Firewall und WebServer/REST-Bind bleiben getrennt.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">Mehr lesen: Network Guide</a>
+</article>
+<article>
+<h2>Wie teile ich meine Bibliothek in eMule?</h2>
+<p>eMuleBB behaelt das bekannte Shared-Files-Modell: kuratierte Wurzeln hinzufuegen, Temp nicht teilen, stabile Pfade nutzen und Hashing auslaufen lassen.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">Mehr lesen: Sharing Guide</a>
+</article>
+<article>
+<h2>Wie begrenze ich Upload-Slots in eMule?</h2>
+<p>eMuleBB fuegt ein endliches Upload-Slot-Ziel, Recycling schwacher Slots und praktische Diagnose hinzu, damit schnelle Leitungen nutzbar bleiben ohne die Queue zu fluten.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">Mehr lesen: Downloads and Search Guide</a>
+</article>
+<article>
+<h2>Ist eMuleBB ein Protokoll-Fork von eMule?</h2>
+<p>Nein. eMuleBB haelt eD2K und Kad stock-kompatibel und verbessert darum herum lokale Limits, Automatisierung, Diagnose und Release-Disziplin.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">Mehr lesen: Product Guide</a>
+</article>
+<article>
+<h2>Welche eMule-Release soll ich testen?</h2>
+<p>Nutze eMuleBB-Nightlies fuer oeffentliche Tests. Die erste oeffentliche Release Candidate ist als 0.7.3-rc.1 geplant, 0.7.3 bleibt das stabile Ziel.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">Mehr lesen: 0.7.3 release dashboard</a>
+</article>
+<article>
+<h2>Wie halte ich eMule WebServer oder REST sicher?</h2>
+<p>eMuleBB behandelt WebServer und REST als Oberflaechen fuer vertrauenswuerdige Controller. Nur bei Bedarf aktivieren, bewusst binden, API key nutzen und breite Exposition vermeiden.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">Mehr lesen: Controllers and REST Guide</a>
+</article>
+<article>
+<h2>Wie nutze ich eMule mit Kad und Servern?</h2>
+<p>eMuleBB behaelt Server, globale Suche und Kad. Starte mit vertrauenswuerdigen Serverlisten, bootstrappe Kad bewusst und diagnostiziere Low ID oder Kad firewalled vor grossen Aenderungen.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">Mehr lesen: Network Guide</a>
+</article>
+<article>
+<h2>Wie betreibe ich grosse Freigabe-Bibliotheken in eMule?</h2>
+<p>eMuleBB ist fuer grosse Bibliotheken gedacht: Wurzeln schrittweise hinzufuegen, Windows mit long paths nutzen, share-ignore pruefen und Startup-Cache stabilisieren lassen.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">Mehr lesen: Sharing Guide</a>
+</article>
+<article>
+<h2>Kann ich eMule mit externen Tools automatisieren?</h2>
+<p>Ja. eMuleBB bietet eine authentifizierte JSON REST API fuer vertrauenswuerdige lokale Controller und behaelt native Transfer- und Share-Semantik in der Desktop-App.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">Mehr lesen: Controllers and REST Guide</a>
+</article>
+</div>
+</section>
+</main>
+<footer>
+<span>eMule broadband edition</span>
+<div aria-label="FAQ-Navigation" class="footer-links">
+        <a href="https://emulebb.github.io/de/">Start</a>
+        <a href="https://emulebb.github.io/languages/">Sprachen</a>
+        <a href="https://github.com/emulebb">GitHub</a>
+        <a href="https://discord.gg/uWQa9g37">Discord</a>
+      </div>
+</footer>
+<script>
+      (function () {
+        var button = document.querySelector(".menu-toggle");
+        var nav = document.getElementById("primary-nav");
+        if (!button || !nav) {
+          return;
+        }
+        function setOpen(open) {
+          nav.classList.toggle("is-open", open);
+          button.setAttribute("aria-expanded", String(open));
+          button.setAttribute("aria-label", open ? "Hauptnavigation schlie\u00dfen" : "Hauptnavigation \u00f6ffnen");
+        }
+        setOpen(false);
+        button.addEventListener("click", function () {
+          setOpen(button.getAttribute("aria-expanded") !== "true");
+        });
+        nav.addEventListener("click", function (event) {
+          if (event.target && event.target.closest("a")) {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
+</body>
+</html>

@@ -577,6 +577,65 @@ h3 {
   background: #fff;
 }
 
+.faq-hero {
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.faq-section {
+  background: var(--panel-soft);
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+}
+
+.faq-list article {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.faq-list article:nth-child(5n + 1) {
+  border-top: 5px solid var(--teal);
+}
+
+.faq-list article:nth-child(5n + 2) {
+  border-top: 5px solid var(--gold);
+}
+
+.faq-list article:nth-child(5n + 3) {
+  border-top: 5px solid var(--blue);
+}
+
+.faq-list article:nth-child(5n + 4) {
+  border-top: 5px solid var(--red);
+}
+
+.faq-list article:nth-child(5n) {
+  border-top: 5px solid var(--green);
+}
+
+.faq-list h2 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.faq-list p {
+  color: var(--muted);
+}
+
+.faq-list a {
+  color: var(--blue);
+  font-weight: 850;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .language-groups {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -688,6 +747,7 @@ footer {
   .motivation-grid,
   .guide-grid,
   .doc-list,
+  .faq-list,
   .release-grid,
   .method-grid,
   .repo-list,
@@ -780,6 +840,7 @@ footer {
   .motivation-grid,
   .guide-grid,
   .doc-list,
+  .faq-list,
   .release-grid,
   .method-grid,
   .team-grid {
