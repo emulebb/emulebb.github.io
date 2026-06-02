@@ -107,6 +107,7 @@
 <li>goed2k lab work</li>
 <li>p2p-overlord Rust client</li>
 <li>SPDX SBOM package evidence</li>
+<li>GitHub attested nightlies</li>
 </ul>
 </aside>
 </section>
@@ -332,6 +333,11 @@
 <span></span>
 <strong>SPDX SBOM</strong>
 <p>Release packages carry package-local <code>SBOM.spdx.json</code> plus sidecar <code>*.sbom.spdx.json</code> files, with manifest hashes that tie software contents to the exact package evidence.</p>
+</article>
+<article>
+<span></span>
+<strong>Attested nightlies</strong>
+<p>eMuleBB nightly ZIP, manifest, and SBOM assets include GitHub artifact attestations so testers can verify downloaded assets with <code>gh attestation verify PATH_TO_ASSET -R emulebb/emulebb</code>.</p>
 </article>
 <article>
 <span></span>

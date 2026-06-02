@@ -903,6 +903,8 @@ def add_release_evidence_copy(content: dict[str, Any]) -> None:
         signals.append("Rendered HTML product docs")
     if not any("SBOM" in signal for signal in signals):
         signals.append("SPDX SBOM package evidence")
+    if not any("attested" in signal.lower() for signal in signals):
+        signals.append("GitHub attested nightlies")
 
     release_cards = content["release"]["cards"]
     if not any("SBOM" in card["h3"] for card in release_cards):
@@ -912,6 +914,15 @@ def add_release_evidence_copy(content: dict[str, Any]) -> None:
                 "",
                 "SPDX SBOM",
                 "Release packages carry package-local <code>SBOM.spdx.json</code> plus sidecar <code>*.sbom.spdx.json</code> files, with manifest hashes that tie software contents to the exact package evidence.",
+            ),
+        )
+    if not any("Attested" in card["h3"] for card in release_cards):
+        release_cards.insert(
+            4,
+            c(
+                "",
+                "Attested nightlies",
+                "eMuleBB nightly ZIP, manifest, and SBOM assets include GitHub artifact attestations so testers can verify downloaded assets with <code>gh attestation verify PATH_TO_ASSET -R emulebb/emulebb</code>.",
             ),
         )
 
