@@ -165,6 +165,23 @@ RELEASE_DOWNLOADS = [
     ("https://github.com/emulebb/emulebb-miniupnp/releases", "MiniUPnP/miniupnpc"),
 ]
 
+NIGHTLY_CTA = {
+    "href": "https://github.com/emulebb/emulebb/releases?q=nightly&expanded=true",
+    "label": "Nightlies",
+    "aria_label": "Download eMuleBB nightlies",
+}
+
+INSTALL_CALLOUT = {
+    "id": "install",
+    "eyebrow": "Install",
+    "h2": "Choose the simple ZIP install or the full suite PowerShell bootstrapper",
+    "p": "Most users should download an eMuleBB ZIP, extract it into a new version-specific folder, and run <code>emulebb.exe</code>. Use the full suite PowerShell bootstrapper only when you want the bundled suite installer flow and the matching release assets already exist.",
+    "primary": "ZIP packages",
+    "primary_href": "https://github.com/emulebb/emulebb/releases",
+    "secondary": "Full suite PS1",
+    "secondary_href": f"{DOCS_SITE_URL}/reference/GUIDE-SETUP/#full-suite-install-powershell-bootstrap",
+}
+
 TESTING_CALLOUT = {
     "eyebrow": "Testing started",
     "h2": "Nightly builds are open for testers",
@@ -275,6 +292,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             "eyebrow": "The eMuleBB home for broadband P2P",
             "h1": "eMuleBB is the broadband eMule product built by P2P people.",
             "lead": "A serious Windows eMule line for fast upload links, large shared libraries, always-on sessions, REST controller workflows, public product docs, SBOM-backed packages, and release proof deep enough for people who actually run P2P clients.",
+            "install": "Install",
             "source": "Source",
             "guide": "Product guide",
             "panel_kicker": "Product posture",
@@ -347,6 +365,7 @@ CONTENT: dict[str, dict[str, Any]] = {
             ],
         },
         "repos": {**s("eMuleBB ecosystem", "Products, builds, managers, and P2P lab work"), "links": []},
+        "install_callout": INSTALL_CALLOUT,
         "testing_callout": TESTING_CALLOUT,
         "team": {
             **s("Project lore", "The mule team behind the P2P workshop"),
@@ -843,6 +862,7 @@ def make_stock_locale_content(t: dict[str, Any]) -> dict[str, Any]:
             "eyebrow": t["features"],
             "h1": t["h1"],
             "lead": t["lead"],
+            "install": "Install",
             "source": t["source"],
             "guide": t["product_guide"],
             "panel_kicker": "eMuleBB",
@@ -869,6 +889,7 @@ def make_stock_locale_content(t: dict[str, Any]) -> dict[str, Any]:
         "release": {**s(t["nav"][5], t["release"]), "cards": [c("", "0.7.3-rc.1", t["release"]), c("", "Fast CI", t["proof"]), c("", t["proof"], t["proof"]), c("", "Performance", t["lead"]), c("", "eD2K/Kad", t["keep"]), c("", "Status", t["release"])]},
         "method": {**s(t["method"], t["method"], t["intro"]), "cards": [c("eD2K/Kad", t["keep"], t["keep"]), c("Upload", t["control"], t["control"]), c("REST", "REST API", t["automation"]), c("Testing", t["proof"], t["release"])]},
         "repos": {**s(t["nav"][6], t["repos"]), "links": []},
+        "install_callout": INSTALL_CALLOUT,
         "testing_callout": TESTING_CALLOUT,
         "team": {**s(t["team"], t["team"]), "cards": [c("", t["control"], t["control"]), c("", "Kad", t["keep"]), c("", t["proof"], t["proof"])]},
     }
@@ -955,7 +976,9 @@ def with_generated_links(root: Path) -> None:
     ensure_stock_locale_content(root)
     for page in PAGES:
         content = CONTENT[page.key]
+        content.setdefault("install_callout", INSTALL_CALLOUT)
         content.setdefault("testing_callout", TESTING_CALLOUT)
+        content["hero"].setdefault("install", "Install")
         add_release_evidence_copy(content)
         add_brand_logo(page, content)
         add_team_images(page, content)
@@ -974,8 +997,17 @@ def with_generated_links(root: Path) -> None:
                     "href": FAQ_PAGE_BY_KEY.get(page.key, ENGLISH_FAQ_PAGE).url,
                 },
             )
+        if not any(nav_item.get("id") == "install" for nav_item in content["nav"]):
+            content["nav"].insert(
+                3,
+                {
+                    "id": "install",
+                    "label": "Install",
+                },
+            )
         content["menu"] = MENU_COPY[page.key]
         content["languages_link_label"] = LANGUAGE_LINK_COPY[page.key]
+        content["nightly_cta"] = NIGHTLY_CTA
         content["release_downloads"] = [
             {"href": href, "title": title}
             for href, title in RELEASE_DOWNLOADS

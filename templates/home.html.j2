@@ -83,6 +83,7 @@
 <a aria-label="eMule broadband edition home" class="brand" href="#top">
 <img alt="{{ content.brand_logo.alt }}" class="brand-logo" decoding="async" height="160" src="{{ content.brand_logo.src }}" width="151"/>
 </a>
+<a aria-label="{{ content.nightly_cta.aria_label }}" class="header-nightly-link" href="{{ content.nightly_cta.href }}">{{ content.nightly_cta.label }}</a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="{{ content.menu.open_label }}" class="menu-toggle" type="button">
 <span class="menu-toggle-label">{{ content.menu.label }}</span>
 </button>
@@ -103,8 +104,8 @@
 <h1>{{ content.hero.h1 }}</h1>
 <p class="lead">{{ content.hero.lead }}</p>
 <div aria-label="{{ content.project_links_label }}" class="actions">
-<a class="button primary" href="https://github.com/emulebb/emulebb">{{ content.hero.source }}</a>
-<a class="button secondary" href="#guide">{{ content.hero.guide }}</a>
+<a class="button primary" href="#install">{{ content.hero.install }}</a>
+<a class="button secondary" href="https://github.com/emulebb/emulebb">{{ content.hero.source }}</a>
 </div>
 <div aria-label="{{ content.release_downloads_label }}" class="release-links">
 <span>{{ content.release_downloads_label }}</span>
@@ -124,16 +125,16 @@
 </ul>
 </aside>
 </section>
-{%- if content.testing_callout %}
-<section class="testing-callout" id="testing">
+{%- if content.install_callout %}
+<section class="testing-callout install-callout" id="{{ content.install_callout.id }}">
 <div>
-<p class="eyebrow">{{ content.testing_callout.eyebrow }}</p>
-<h2>{{ content.testing_callout.h2 }}</h2>
-<p>{{ content.testing_callout.p | safe }}</p>
+<p class="eyebrow">{{ content.install_callout.eyebrow }}</p>
+<h2>{{ content.install_callout.h2 }}</h2>
+<p>{{ content.install_callout.p | safe }}</p>
 </div>
 <div class="testing-actions">
-<a href="{{ content.testing_callout.primary_href }}">{{ content.testing_callout.primary }}</a>
-<a href="{{ content.testing_callout.secondary_href }}">{{ content.testing_callout.secondary }}</a>
+<a href="{{ content.install_callout.primary_href }}">{{ content.install_callout.primary }}</a>
+<a href="{{ content.install_callout.secondary_href }}">{{ content.install_callout.secondary }}</a>
 </div>
 </section>
 {%- endif %}
