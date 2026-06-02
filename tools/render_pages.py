@@ -174,11 +174,11 @@ NIGHTLY_CTA = {
 INSTALL_CALLOUT = {
     "id": "install",
     "eyebrow": "Install",
-    "h2": "Choose the simple ZIP install or the full suite PowerShell bootstrapper",
-    "p": "Most users should download an eMuleBB ZIP, extract it into a new version-specific folder, and run <code>emulebb.exe</code>. Use the full suite PowerShell bootstrapper only when you want the bundled suite installer flow and the matching release assets already exist.",
-    "primary": "ZIP packages",
+    "h2": "Start with the ZIP package. Use the suite bootstrapper only when you need it.",
+    "p": "For normal testing, download the eMuleBB ZIP, extract it into a new folder, and run <code>emulebb.exe</code>. The PowerShell bootstrapper is for the bundled suite installer flow.",
+    "primary": "Download ZIP",
     "primary_href": "https://github.com/emulebb/emulebb/releases",
-    "secondary": "Full suite PS1",
+    "secondary": "Setup guide",
     "secondary_href": f"{DOCS_SITE_URL}/reference/GUIDE-SETUP/#full-suite-install-powershell-bootstrap",
 }
 
