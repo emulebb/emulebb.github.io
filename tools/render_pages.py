@@ -943,7 +943,7 @@ def add_release_evidence_copy(content: dict[str, Any]) -> None:
             c(
                 "",
                 "Attested nightlies",
-                "eMuleBB nightly ZIP, manifest, and SBOM assets include GitHub artifact attestations so testers can verify downloaded assets with <code>gh attestation verify PATH_TO_ASSET -R emulebb/emulebb</code>.",
+                "eMuleBB nightly ZIP, manifest, SBOM, and suite bootstrapper assets include GitHub artifact attestations so testers can verify downloaded assets with <code>gh attestation verify PATH_TO_ASSET -R emulebb/emulebb</code>.",
             ),
         )
 
