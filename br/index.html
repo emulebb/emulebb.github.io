@@ -45,20 +45,16 @@
 <a aria-label="eMule broadband edition home" class="brand" href="#top">
 <img alt="eMuleBB broadband edition" class="brand-logo" decoding="async" height="160" src="../assets/brand/emulebb-broadband-edition-logo.png" width="151"/>
 </a>
-<a aria-label="Download eMuleBB nightlies" class="header-nightly-link" href="https://github.com/emulebb/emulebb/releases?q=nightly&amp;expanded=true">Nightlies</a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Digeriñ ar merdeiñ pennañ" class="menu-toggle" type="button">
 <span class="menu-toggle-label">Lañser</span>
 </button>
 <nav aria-label="Digeriñ ar merdeiñ pennañ" id="primary-nav">
 <a href="#why">Perak</a>
 <a href="#features">Perzhioù</a>
-<a href="#guide">Sturlevr</a>
-<a href="#install">Install</a>
-<a href="https://emulebb.github.io/faq/">FAQ</a>
-<a href="https://emulebb.github.io/emulebb-tooling/">Teuliadoù</a>
-<a href="#automation">Emgefre</a>
-<a href="#release">Embann</a>
+<a href="#docs">Sturlevr</a>
+<a class="nav-download" href="#install">Download</a>
 <a href="#repos">Repoioù</a>
+<a href="https://emulebb.github.io/faq/">FAQ</a>
 </nav>
 </header>
 <main id="top">
@@ -73,12 +69,9 @@
 </div>
 <div aria-label="Download releases" class="release-links">
 <span>Download releases</span>
-<a href="https://github.com/emulebb/emulebb/releases">eMuleBB</a>
-<a href="https://github.com/emulebb/emulebb/releases?q=nightly&amp;expanded=true">eMuleBB nightlies</a>
-<a href="https://github.com/emulebb/amule/releases">aMule</a>
-<a href="https://github.com/emulebb/amule/releases?q=nightly&amp;expanded=true">aMule nightlies</a>
-<a href="https://github.com/emulebb/amutorrent/releases">aMuTorrent release page</a>
-<a href="https://github.com/emulebb/emulebb-miniupnp/releases">MiniUPnP/miniupnpc</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">eMuleBB RC1</a>
+<a href="https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/emulebb-0.7.3-rc.1-x64.zip">x64 ZIP</a>
+<a href="https://github.com/emulebb/amutorrent/releases/tag/amutorrent-v3.8.5-emulebb-v0.7.3-rc.1">aMuTorrent RC1</a>
 </div>
 </div>
 <aside aria-label="eMuleBB" class="hero-panel">
@@ -89,25 +82,24 @@
 <li>eD2K/Kad</li>
 <li>Upload</li>
 <li>Testing</li>
-<li>Nightlies</li>
+<li>RC1</li>
 <li>Performance</li>
 <li>REST API</li>
 <li>0.7.3-rc.1</li>
 <li>Rendered HTML product docs</li>
 <li>SPDX SBOM package evidence</li>
-<li>GitHub attested nightlies</li>
 </ul>
 </aside>
 </section>
 <section class="testing-callout install-callout" id="install">
 <div>
-<p class="eyebrow">Install</p>
-<h2>Start with the ZIP package. Use the suite bootstrapper only when you need it.</h2>
-<p>For normal testing, download the eMuleBB ZIP, extract it into a new folder, and run <code>emulebb.exe</code>. The PowerShell bootstrapper is for the bundled suite installer flow.</p>
+<p class="eyebrow">Download</p>
+<h2>Install RC1 with one PowerShell line, or download the ZIP manually.</h2>
+<p>Full x64 suite: <code>irm https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/Bootstrap-eMuleBBSuite.ps1 | iex</code>. Standalone app: download the RC1 ZIP, extract it, and run <code>emulebb.exe</code>.</p>
 </div>
 <div class="testing-actions">
-<a href="https://github.com/emulebb/emulebb/releases">Download ZIP</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/#full-suite-install-powershell-bootstrap">Setup guide</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">Open RC1 release</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">Setup details</a>
 </div>
 </section>
 <section class="intro">
@@ -176,12 +168,12 @@
 </article>
 </div>
 </section>
-<section class="section guide" id="guide">
+<section class="section docs" id="docs">
 <div class="section-heading">
-<p class="eyebrow">Sturlevr</p>
-<h2>Ur model implij berr.</h2>
+<p class="eyebrow">Teuliadoù</p>
+<h2>Sturlevrioù ha teuliadoù mammenn.</h2>
 </div>
-<div class="guide-grid">
+<div class="guide-grid guide-compact">
 <article>
 <span>01</span>
 <h3>Mirout eD2K ha Kad pleustrek</h3>
@@ -199,7 +191,7 @@
 </article>
 <article>
 <span>04</span>
-<h3>Nightly builds</h3>
+<h3>RC1 published</h3>
 <p>An embannadur foran 0.7.3-rc.1 zo raktreset ha n'eo ket embannet c'hoazh.</p>
 </article>
 <article>
@@ -213,73 +205,7 @@
 <p>Sturlevrioù ha teuliadoù mammenn.</p>
 </article>
 </div>
-</section>
-<section class="section docs" id="docs">
-<div class="section-heading">
-<p class="eyebrow">Teuliadoù</p>
-<h2>Sturlevrioù ha teuliadoù mammenn.</h2>
-</div>
-<div class="doc-list">
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
-<strong>Sturlevr ar produ</strong>
-<span>eMuleBB a vir doare klasel eMule hag a ouzhpenn harzoù sklaer, diagnostik ha REST API gwiriet.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
-<strong>Ur model implij berr.</strong>
-<span>Un eMule evit uploadoù prim, levraouegoù rannet bras, dalc&#39;hoù Windows hir ha kontrolloù lec&#39;hel.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">
-<strong>Upload ha rouedad reoliet sklaeroc&#39;h</strong>
-<span>Un eMule evit uploadoù prim, levraouegoù rannet bras, dalc&#39;hoù Windows hir ha kontrolloù lec&#39;hel.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">
-<strong>Mirout eD2K ha Kad pleustrek</strong>
-<span>eMuleBB a vir doare klasel eMule hag a ouzhpenn harzoù sklaer, diagnostik ha REST API gwiriet.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
-<strong>Ar pezh a ouzhpenn eMuleBB tro-dro d&#39;ar client klasel.</strong>
-<span>Un eMule evit uploadoù prim, levraouegoù rannet bras, dalc&#39;hoù Windows hir ha kontrolloù lec&#39;hel.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TOOLS-MENU/">
-<strong>Sturlevrioù ha teuliadoù mammenn.</strong>
-<span>Sturlevrioù ha teuliadoù mammenn.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
-<strong>REST automation hep erlec&#39;hiañ an arload desktop.</strong>
-<span>REST automation hep erlec&#39;hiañ an arload desktop.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
-<strong>aMuTorrent + eMuleBB</strong>
-<span>REST automation hep erlec&#39;hiañ an arload desktop.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/rest/REST-API-CONTRACT/">
-<strong>REST API</strong>
-<span>REST automation hep erlec&#39;hiañ an arload desktop.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/rest/REST-API-ADAPTERS/">
-<strong>REST adapters</strong>
-<span>REST automation hep erlec&#39;hiañ an arload desktop.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DIAGNOSTICS/">
-<strong>Sturlevrioù ha teuliadoù mammenn.</strong>
-<span>Sturlevrioù ha teuliadoù mammenn.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TROUBLESHOOTING/">
-<strong>Sturlevrioù ha teuliadoù mammenn.</strong>
-<span>Sturlevrioù ha teuliadoù mammenn.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
-<strong>0.7.3-rc.1</strong>
-<span>An embannadur foran 0.7.3-rc.1 zo raktreset ha n&#39;eo ket embannet c&#39;hoazh.</span>
-</a>
-</div>
-</section>
-<section class="section automation" id="automation">
-<div>
-<p class="eyebrow">Emgefre</p>
-<h2>REST automation hep erlec&#39;hiañ an arload desktop.</h2>
-</div>
-<div class="automation-copy">
+<div class="automation-copy docs-automation">
 <p>REST automation hep erlec'hiañ an arload desktop. <code>/api/v1</code>, JSON, <code>X-API-Key</code>.</p>
 <ul aria-label="REST API" class="api-list">
 <li>Transfers</li>
@@ -291,6 +217,32 @@
 <li>Logs</li>
 <li>Preferences</li>
 </ul>
+</div>
+<div class="doc-list">
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
+<strong>Ur model implij berr.</strong>
+<span>Un eMule evit uploadoù prim, levraouegoù rannet bras, dalc&#39;hoù Windows hir ha kontrolloù lec&#39;hel.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
+<strong>Sturlevr ar produ</strong>
+<span>eMuleBB a vir doare klasel eMule hag a ouzhpenn harzoù sklaer, diagnostik ha REST API gwiriet.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
+<strong>aMuTorrent + eMuleBB</strong>
+<span>REST automation hep erlec&#39;hiañ an arload desktop.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
+<strong>REST automation hep erlec&#39;hiañ an arload desktop.</strong>
+<span>REST automation hep erlec&#39;hiañ an arload desktop.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
+<strong>Ar pezh a ouzhpenn eMuleBB tro-dro d&#39;ar client klasel.</strong>
+<span>Un eMule evit uploadoù prim, levraouegoù rannet bras, dalc&#39;hoù Windows hir ha kontrolloù lec&#39;hel.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
+<strong>0.7.3-rc.1</strong>
+<span>An embannadur foran 0.7.3-rc.1 zo raktreset ha n&#39;eo ket embannet c&#39;hoazh.</span>
+</a>
 </div>
 </section>
 <section class="section release" id="release">
@@ -321,8 +273,8 @@
 </article>
 <article>
 <span></span>
-<strong>Attested nightlies</strong>
-<p>eMuleBB nightly ZIP, manifest, SBOM, and suite bootstrapper assets include GitHub artifact attestations so testers can verify downloaded assets with <code>gh attestation verify PATH_TO_ASSET -R emulebb/emulebb</code>.</p>
+<strong>GitHub provenance</strong>
+<p>RC1 assets are published from GitHub release automation with manifests, SHA-256 evidence, SBOMs, and a bootstrapper hash asset for verification.</p>
 </article>
 <article>
 <span></span>
@@ -341,35 +293,6 @@
 </article>
 </div>
 </section>
-<section class="section method" id="method">
-<div class="section-heading">
-<p class="eyebrow">Modernaat war-dro ar c&#39;halon kozh hep terriñ kenglotañ.</p>
-<h2>Modernaat war-dro ar c&#39;halon kozh hep terriñ kenglotañ.</h2>
-<p>eMuleBB a vir doare klasel eMule hag a ouzhpenn harzoù sklaer, diagnostik ha REST API gwiriet.</p>
-</div>
-<div aria-label="eMuleBB implementation methods" class="method-grid">
-<article>
-<span>eD2K/Kad</span>
-<h3>Mirout eD2K ha Kad pleustrek</h3>
-<p>Mirout eD2K ha Kad pleustrek</p>
-</article>
-<article>
-<span>Upload</span>
-<h3>Upload ha rouedad reoliet sklaeroc&#39;h</h3>
-<p>Upload ha rouedad reoliet sklaeroc'h</p>
-</article>
-<article>
-<span>REST</span>
-<h3>REST API</h3>
-<p>REST automation hep erlec'hiañ an arload desktop.</p>
-</article>
-<article>
-<span>Testing</span>
-<h3>Prouennoù a-raok pakadoù foran</h3>
-<p>An embannadur foran 0.7.3-rc.1 zo raktreset ha n'eo ket embannet c'hoazh.</p>
-</article>
-</div>
-</section>
 <section class="section repos" id="repos">
 <div class="section-heading">
 <p class="eyebrow">Repoioù</p>
@@ -380,9 +303,9 @@
 <strong>emulebb</strong>
 <span>eMuleBB a vir doare klasel eMule hag a ouzhpenn harzoù sklaer, diagnostik ha REST API gwiriet.</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-setup">
-<strong>emulebb-setup</strong>
-<span>Ur model implij berr.</span>
+<a href="https://github.com/emulebb/amutorrent">
+<strong>amutorrent</strong>
+<span>aMuTorrent fork for managing eMuleBB.</span>
 </a>
 <a href="https://github.com/emulebb/emulebb-build">
 <strong>emulebb-build</strong>
@@ -396,56 +319,10 @@
 <strong>emulebb-tooling</strong>
 <span>Sturlevrioù ha teuliadoù mammenn.</span>
 </a>
-<a href="https://github.com/emulebb/amutorrent">
-<strong>amutorrent</strong>
-<span>aMuTorrent fork for managing eMuleBB.</span>
-</a>
-<a href="https://github.com/emulebb/goed2k-server">
-<strong>goed2k-server</strong>
-<span>goed2k eD2K server work for deterministic tests and ecosystem services.</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-agents">
-<strong>p2p-overlord-agents</strong>
-<span>Exploratory p2p-overlord agents for headless P2P workflows.</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-be">
-<strong>p2p-overlord-be</strong>
-<span>Exploratory Rust eD2K/Kad backend work in the p2p-overlord suite.</span>
-</a>
 <a href="https://github.com/emulebb/amule">
 <strong>aMule Windows builds</strong>
 <span>Windows build and validation track for aMule users.</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-miniupnp">
-<strong>emulebb-miniupnp</strong>
-<span>Windows build and validation track for MiniUPnP/miniupnpc.</span>
-</a>
-</div>
-</section>
-<section class="section team" id="team">
-<div class="section-heading">
-<p class="eyebrow">Istorioù diabarzh ar raktres gant fent teknikel.</p>
-<h2>Istorioù diabarzh ar raktres gant fent teknikel.</h2>
-</div>
-<div class="team-grid">
-<article>
-<img alt="Cartoon mule carrying an upload arrow and a clipboard." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/upload-mule.png" width="160"/>
-<span>01</span>
-<h3>Upload ha rouedad reoliet sklaeroc&#39;h</h3>
-<p>Upload ha rouedad reoliet sklaeroc&#39;h</p>
-</article>
-<article>
-<img alt="Cartoon mule carrying connected Kad nodes across a trail." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/kad-trail-mule.png" width="160"/>
-<span>02</span>
-<h3>Kad</h3>
-<p>Mirout eD2K ha Kad pleustrek</p>
-</article>
-<article>
-<img alt="Cartoon mule hauling release packages and checks." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/release-pack-mule.png" width="160"/>
-<span>03</span>
-<h3>Prouennoù a-raok pakadoù foran</h3>
-<p>Prouennoù a-raok pakadoù foran</p>
-</article>
 </div>
 </section>
 </main>

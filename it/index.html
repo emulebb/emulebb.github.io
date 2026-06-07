@@ -45,20 +45,16 @@
 <a aria-label="eMule broadband edition home" class="brand" href="#top">
 <img alt="eMuleBB broadband edition" class="brand-logo" decoding="async" height="160" src="../assets/brand/emulebb-broadband-edition-logo.png" width="151"/>
 </a>
-<a aria-label="Download eMuleBB nightlies" class="header-nightly-link" href="https://github.com/emulebb/emulebb/releases?q=nightly&amp;expanded=true">Nightlies</a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Apri navigazione principale" class="menu-toggle" type="button">
 <span class="menu-toggle-label">Menu</span>
 </button>
 <nav aria-label="Navigazione principale" id="primary-nav">
 <a href="#why">Perché</a>
 <a href="#features">Funzioni</a>
-<a href="#guide">Guida</a>
-<a href="#install">Install</a>
-<a href="https://emulebb.github.io/it/faq/">FAQ</a>
-<a href="https://emulebb.github.io/emulebb-tooling/">Documentazione</a>
-<a href="#automation">Automazione</a>
-<a href="#release">Rilascio</a>
+<a href="#docs">Guida</a>
+<a class="nav-download" href="#install">Download</a>
 <a href="#repos">Repository</a>
+<a href="https://emulebb.github.io/it/faq/">FAQ</a>
 </nav>
 </header>
 <main id="top">
@@ -73,12 +69,9 @@
 </div>
 <div aria-label="Download releases" class="release-links">
 <span>Download releases</span>
-<a href="https://github.com/emulebb/emulebb/releases">eMuleBB</a>
-<a href="https://github.com/emulebb/emulebb/releases?q=nightly&amp;expanded=true">eMuleBB nightlies</a>
-<a href="https://github.com/emulebb/amule/releases">aMule</a>
-<a href="https://github.com/emulebb/amule/releases?q=nightly&amp;expanded=true">aMule nightlies</a>
-<a href="https://github.com/emulebb/amutorrent/releases">aMuTorrent release page</a>
-<a href="https://github.com/emulebb/emulebb-miniupnp/releases">MiniUPnP/miniupnpc</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">eMuleBB RC1</a>
+<a href="https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/emulebb-0.7.3-rc.1-x64.zip">x64 ZIP</a>
+<a href="https://github.com/emulebb/amutorrent/releases/tag/amutorrent-v3.8.5-emulebb-v0.7.3-rc.1">aMuTorrent RC1</a>
 </div>
 </div>
 <aside aria-label="Sintesi di eMuleBB" class="hero-panel">
@@ -95,19 +88,19 @@
 <li>Workspace di validazione release</li>
 <li>Rendered HTML product docs</li>
 <li>SPDX SBOM package evidence</li>
-<li>GitHub attested nightlies</li>
+<li>RC1 on GitHub Releases</li>
 </ul>
 </aside>
 </section>
 <section class="testing-callout install-callout" id="install">
 <div>
-<p class="eyebrow">Install</p>
-<h2>Start with the ZIP package. Use the suite bootstrapper only when you need it.</h2>
-<p>For normal testing, download the eMuleBB ZIP, extract it into a new folder, and run <code>emulebb.exe</code>. The PowerShell bootstrapper is for the bundled suite installer flow.</p>
+<p class="eyebrow">Download</p>
+<h2>Install RC1 with one PowerShell line, or download the ZIP manually.</h2>
+<p>Full x64 suite: <code>irm https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/Bootstrap-eMuleBBSuite.ps1 | iex</code>. Standalone app: download the RC1 ZIP, extract it, and run <code>emulebb.exe</code>.</p>
 </div>
 <div class="testing-actions">
-<a href="https://github.com/emulebb/emulebb/releases">Download ZIP</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/#full-suite-install-powershell-bootstrap">Setup guide</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">Open RC1 release</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">Setup details</a>
 </div>
 </section>
 <section class="intro">
@@ -176,12 +169,12 @@
 </article>
 </div>
 </section>
-<section class="section guide" id="guide">
+<section class="section docs" id="docs">
 <div class="section-heading">
-<p class="eyebrow">Guida prodotto</p>
-<h2>Un modello operativo breve</h2>
+<p class="eyebrow">Approfondisci</p>
+<h2>Guide dettagliate e documenti sorgente</h2>
 </div>
-<div class="guide-grid">
+<div class="guide-grid guide-compact">
 <article>
 <span>01</span>
 <h3>Parti dalle buone abitudini di eMule</h3>
@@ -213,73 +206,7 @@
 <p>La homepage resta compatta. Guida prodotto, contratto REST, note banda larga e documenti release sono Markdown nel repository di tooling.</p>
 </article>
 </div>
-</section>
-<section class="section docs" id="docs">
-<div class="section-heading">
-<p class="eyebrow">Approfondisci</p>
-<h2>Guide dettagliate e documenti sorgente</h2>
-</div>
-<div class="doc-list">
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
-<strong>Guida prodotto eMuleBB</strong>
-<span>Panoramica per setup, tuning, automazione e uso consapevole della release.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
-<strong>Guida di setup</strong>
-<span>Modello di installazione, profilo iniziale e note pratiche di avvio.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">
-<strong>Guida rete</strong>
-<span>Riferimento per eD2K, Kad, binding, UPnP, firewall e diagnosi connessione.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">
-<strong>Guida condivisione</strong>
-<span>Directory condivise, share monitorate, grandi librerie e file di policy.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
-<strong>Guida download e ricerca</strong>
-<span>Modalità di ricerca, fiducia nei risultati, categorie e workflow avanzati.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TOOLS-MENU/">
-<strong>Tools menu guide</strong>
-<span>Power-user actions for logs, dumps, folders, reloads, and controller setup helpers.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
-<strong>Guida controller e REST</strong>
-<span>Uso di controller locali fidati e confini dell&#39;automazione.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
-<strong>Use aMuTorrent with eMuleBB</strong>
-<span>Task-first setup for eMuleBB, aMuTorrent, Prowlarr, Radarr, and Sonarr.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/rest/REST-API-CONTRACT/">
-<strong>Contratto REST API</strong>
-<span>Contratto leggibile della superficie JSON autenticata.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/rest/REST-API-ADAPTERS/">
-<strong>Contratti adapter REST</strong>
-<span>Superficie qBittorrent-compatible e Torznab per autori di controller.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DIAGNOSTICS/">
-<strong>Collect diagnostics for reports</strong>
-<span>Redacted snapshots, dumps, startup traces, unsafe diagnostic REST, and metadata diagnostics.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TROUBLESHOOTING/">
-<strong>Guida troubleshooting</strong>
-<span>Controlli per sintomo su Low ID, rete, condivisione e automazione.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
-<strong>Dashboard release 0.7.3-rc.1</strong>
-<span>Gate RC pianificati, riferimenti di prova e regole di prontezza.</span>
-</a>
-</div>
-</section>
-<section class="section automation" id="automation">
-<div>
-<p class="eyebrow">Superficie di controllo</p>
-<h2>REST automation senza sostituire l&#39;app desktop</h2>
-</div>
-<div class="automation-copy">
+<div class="automation-copy docs-automation">
 <p>La linea di release banda larga espone una JSON API <code>/api/v1</code> orientata alle risorse dal listener WebServer esistente. Autentica con <code>X-API-Key</code>, serve envelope JSON e mantiene le modifiche allo stato eMule instradate tramite l'app.</p>
 <ul aria-label="Aree REST API" class="api-list">
 <li>Trasferimenti</li>
@@ -293,6 +220,32 @@
 <li>Statistiche</li>
 <li>Preferenze</li>
 </ul>
+</div>
+<div class="doc-list">
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
+<strong>Guida di setup</strong>
+<span>Modello di installazione, profilo iniziale e note pratiche di avvio.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
+<strong>Guida prodotto eMuleBB</strong>
+<span>Panoramica per setup, tuning, automazione e uso consapevole della release.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
+<strong>Use aMuTorrent with eMuleBB</strong>
+<span>Task-first setup for eMuleBB, aMuTorrent, Prowlarr, Radarr, and Sonarr.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
+<strong>Guida controller e REST</strong>
+<span>Uso di controller locali fidati e confini dell&#39;automazione.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
+<strong>Guida download e ricerca</strong>
+<span>Modalità di ricerca, fiducia nei risultati, categorie e workflow avanzati.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
+<strong>Dashboard release 0.7.3-rc.1</strong>
+<span>Gate RC pianificati, riferimenti di prova e regole di prontezza.</span>
+</a>
 </div>
 </section>
 <section class="section release" id="release">
@@ -323,8 +276,8 @@
 </article>
 <article>
 <span></span>
-<strong>Attested nightlies</strong>
-<p>eMuleBB nightly ZIP, manifest, SBOM, and suite bootstrapper assets include GitHub artifact attestations so testers can verify downloaded assets with <code>gh attestation verify PATH_TO_ASSET -R emulebb/emulebb</code>.</p>
+<strong>GitHub provenance</strong>
+<p>RC1 assets are published from GitHub release automation with manifests, SHA-256 evidence, SBOMs, and a bootstrapper hash asset for verification.</p>
 </article>
 <article>
 <span></span>
@@ -338,35 +291,6 @@
 </article>
 </div>
 </section>
-<section class="section method" id="method">
-<div class="section-heading">
-<p class="eyebrow">Metodo di implementazione</p>
-<h2>Modernizzare intorno al nucleo legacy, poi provare il risultato</h2>
-<p>Lo stile è intenzionalmente conservativo. eMuleBB cambia policy locali, limiti, diagnostica, confini API e disciplina di release mantenendo default la compatibilità eD2K/Kad.</p>
-</div>
-<div aria-label="eMuleBB implementation methods" class="method-grid">
-<article>
-<span>Compatibilità</span>
-<h3>Niente drift casuale del protocollo</h3>
-<p>Le modifiche Kad ed eD2K restano in routing locale, timing, validazione e controllo. Wire format, opcode e workflow desktop nativi sono confini di compatibilità.</p>
-</article>
-<article>
-<span>Limiti</span>
-<h3>Default fissi e revisionabili</h3>
-<p>Ipotesi moderne su bandwidth, memoria, socket, queue e timeout sono default espliciti o preferenze avanzate, non comportamento adattivo nascosto.</p>
-</article>
-<article>
-<span>REST</span>
-<h3>Contratti di controllo, non screen scraping</h3>
-<p>La JSON API autenticata segue un contratto OpenAPI, respinge input malformati e instrada le mutazioni native tramite l'app.</p>
-</article>
-<article>
-<span>Release</span>
-<h3>Evidenza prima delle etichette</h3>
-<p>Il processo registra comandi, commit, log, percorsi pacchetto, hash, evidenza live e decisioni operatore così il tag è un esito verificato.</p>
-</article>
-</div>
-</section>
 <section class="section repos" id="repos">
 <div class="section-heading">
 <p class="eyebrow">Workspace pubblico</p>
@@ -377,9 +301,9 @@
 <strong>emulebb</strong>
 <span>app desktop e sorgente prodotto</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-setup">
-<strong>emulebb-setup</strong>
-<span>setup riproducibile del workspace</span>
+<a href="https://github.com/emulebb/amutorrent">
+<strong>amutorrent</strong>
+<span>fork used for eMuleBB management and controller workflows</span>
 </a>
 <a href="https://github.com/emulebb/emulebb-build">
 <strong>emulebb-build</strong>
@@ -393,56 +317,10 @@
 <strong>emulebb-tooling</strong>
 <span>roadmap, backlog, policy, audit e documenti di riferimento</span>
 </a>
-<a href="https://github.com/emulebb/amutorrent">
-<strong>amutorrent</strong>
-<span>fork used for eMuleBB management and controller workflows</span>
-</a>
-<a href="https://github.com/emulebb/goed2k-server">
-<strong>goed2k-server</strong>
-<span>eD2K server work for deterministic testing and ecosystem services</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-agents">
-<strong>p2p-overlord-agents</strong>
-<span>exploratory agents for the p2p-overlord P2P suite</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-be">
-<strong>p2p-overlord-be</strong>
-<span>exploratory headless Rust eD2K/Kad client backend work</span>
-</a>
 <a href="https://github.com/emulebb/amule">
 <strong>aMule Windows builds</strong>
 <span>Windows build and validation track for aMule users</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-miniupnp">
-<strong>emulebb-miniupnp</strong>
-<span>Windows build and validation track for MiniUPnP/miniupnpc</span>
-</a>
-</div>
-</section>
-<section class="section team" id="team">
-<div class="section-heading">
-<p class="eyebrow">Cultura del progetto</p>
-<h2>Le persone che impediscono alla queue di diventare teatro prestazionale</h2>
-</div>
-<div class="team-grid">
-<article>
-<img alt="Cartoon mule carrying an upload arrow and a clipboard." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/upload-mule.png" width="160"/>
-<span>01</span>
-<h3>Terapeuta degli upload slot</h3>
-<p>Aiuta gli slot deboli a elaborare i propri sentimenti il tempo giusto prima di rimandarli in queue con appunti e cooldown.</p>
-</article>
-<article>
-<img alt="Cartoon mule carrying connected Kad nodes across a trail." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/kad-trail-mule.png" width="160"/>
-<span>02</span>
-<h3>Archivista del bootstrap Kad</h3>
-<p>Custodisce la lista sacra di nodi che funzionò una volta nel 2007 e merita una seconda occasione ben validata.</p>
-</article>
-<article>
-<img alt="Cartoon mule hauling release packages and checks." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/release-pack-mule.png" width="160"/>
-<span>03</span>
-<h3>Addetto ai gate di release</h3>
-<p>Fa entrare le build solo se portano test, evidenza live e una spiegazione plausibile sull&#39;ultimo socket.</p>
-</article>
 </div>
 </section>
 </main>

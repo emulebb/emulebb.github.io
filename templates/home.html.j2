@@ -83,16 +83,15 @@
 <a aria-label="eMule broadband edition home" class="brand" href="#top">
 <img alt="{{ content.brand_logo.alt }}" class="brand-logo" decoding="async" height="160" src="{{ content.brand_logo.src }}" width="151"/>
 </a>
-<a aria-label="{{ content.nightly_cta.aria_label }}" class="header-nightly-link" href="{{ content.nightly_cta.href }}">{{ content.nightly_cta.label }}</a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="{{ content.menu.open_label }}" class="menu-toggle" type="button">
 <span class="menu-toggle-label">{{ content.menu.label }}</span>
 </button>
 <nav aria-label="{{ content.nav_label }}" id="primary-nav">
 {%- for item in content.nav %}
 {%- if item.href %}
-<a href="{{ item.href }}">{{ item.label }}</a>
+<a{% if item.class is defined and item.class %} class="{{ item.class }}"{% endif %} href="{{ item.href }}">{{ item.label }}</a>
 {%- else %}
-<a href="#{{ item.id }}">{{ item.label }}</a>
+<a{% if item.class is defined and item.class %} class="{{ item.class }}"{% endif %} href="#{{ item.id }}">{{ item.label }}</a>
 {%- endif %}
 {%- endfor %}
 </nav>
@@ -149,9 +148,9 @@
 {{ section_heading(content.features) }}
 {{ card_grid("eMule broadband feature groups", "feature-table", content.features.cards) }}
 </section>
-<section class="section guide" id="guide">
-{{ section_heading(content.guide) }}
-<div class="guide-grid">
+<section class="section docs" id="docs">
+{{ section_heading(content.docs) }}
+<div class="guide-grid guide-compact">
 {%- for card in content.guide.cards %}
 <article>
 <span>{{ "%02d"|format(loop.index) }}</span>
@@ -160,9 +159,14 @@
 </article>
 {%- endfor %}
 </div>
-</section>
-<section class="section docs" id="docs">
-{{ section_heading(content.docs) }}
+<div class="automation-copy docs-automation">
+<p>{{ content.automation.p | safe }}</p>
+<ul aria-label="{{ content.automation.pills_label }}" class="api-list">
+{%- for pill in content.automation.pills %}
+<li>{{ pill }}</li>
+{%- endfor %}
+</ul>
+</div>
 <div class="doc-list">
 {%- for link in content.docs.links %}
 <a href="{{ link.href }}">
@@ -172,27 +176,9 @@
 {%- endfor %}
 </div>
 </section>
-<section class="section automation" id="automation">
-<div>
-<p class="eyebrow">{{ content.automation.eyebrow }}</p>
-<h2>{{ content.automation.h2 }}</h2>
-</div>
-<div class="automation-copy">
-<p>{{ content.automation.p | safe }}</p>
-<ul aria-label="{{ content.automation.pills_label }}" class="api-list">
-{%- for pill in content.automation.pills %}
-<li>{{ pill }}</li>
-{%- endfor %}
-</ul>
-</div>
-</section>
 <section class="section release" id="release">
 {{ section_heading(content.release) }}
 {{ card_grid("eMuleBB release proof", "release-grid", content.release.cards, "strong") }}
-</section>
-<section class="section method" id="method">
-{{ section_heading(content.method) }}
-{{ card_grid("eMuleBB implementation methods", "method-grid", content.method.cards) }}
 </section>
 <section class="section repos" id="repos">
 {{ section_heading(content.repos) }}
@@ -202,21 +188,6 @@
 <strong>{{ repo.title }}</strong>
 <span>{{ repo.text }}</span>
 </a>
-{%- endfor %}
-</div>
-</section>
-<section class="section team" id="team">
-{{ section_heading(content.team) }}
-<div class="team-grid">
-{%- for card in content.team.cards %}
-<article>
-{%- if card.image is defined and card.image %}
-<img alt="{{ card.image.alt }}" class="team-image" decoding="async" height="160" loading="lazy" src="{{ card.image.src }}" width="160"/>
-{%- endif %}
-<span>{{ "%02d"|format(loop.index) }}</span>
-<h3>{{ card.h3 }}</h3>
-<p>{{ card.p }}</p>
-</article>
 {%- endfor %}
 </div>
 </section>

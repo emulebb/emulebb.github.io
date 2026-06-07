@@ -45,20 +45,16 @@
 <a aria-label="eMule broadband edition home" class="brand" href="#top">
 <img alt="eMuleBB broadband edition" class="brand-logo" decoding="async" height="160" src="../assets/brand/emulebb-broadband-edition-logo.png" width="151"/>
 </a>
-<a aria-label="Download eMuleBB nightlies" class="header-nightly-link" href="https://github.com/emulebb/emulebb/releases?q=nightly&amp;expanded=true">Nightlies</a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Åpne hovednavigasjon" class="menu-toggle" type="button">
 <span class="menu-toggle-label">Meny</span>
 </button>
 <nav aria-label="Åpne hovednavigasjon" id="primary-nav">
 <a href="#why">Hvorfor</a>
 <a href="#features">Funksjoner</a>
-<a href="#guide">Guide</a>
-<a href="#install">Install</a>
-<a href="https://emulebb.github.io/faq/">FAQ</a>
-<a href="https://emulebb.github.io/emulebb-tooling/">Dokumenter</a>
-<a href="#automation">Automatisering</a>
-<a href="#release">Utgivelse</a>
+<a href="#docs">Guide</a>
+<a class="nav-download" href="#install">Download</a>
 <a href="#repos">Repoer</a>
+<a href="https://emulebb.github.io/faq/">FAQ</a>
 </nav>
 </header>
 <main id="top">
@@ -73,12 +69,9 @@
 </div>
 <div aria-label="Download releases" class="release-links">
 <span>Download releases</span>
-<a href="https://github.com/emulebb/emulebb/releases">eMuleBB</a>
-<a href="https://github.com/emulebb/emulebb/releases?q=nightly&amp;expanded=true">eMuleBB nightlies</a>
-<a href="https://github.com/emulebb/amule/releases">aMule</a>
-<a href="https://github.com/emulebb/amule/releases?q=nightly&amp;expanded=true">aMule nightlies</a>
-<a href="https://github.com/emulebb/amutorrent/releases">aMuTorrent release page</a>
-<a href="https://github.com/emulebb/emulebb-miniupnp/releases">MiniUPnP/miniupnpc</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">eMuleBB RC1</a>
+<a href="https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/emulebb-0.7.3-rc.1-x64.zip">x64 ZIP</a>
+<a href="https://github.com/emulebb/amutorrent/releases/tag/amutorrent-v3.8.5-emulebb-v0.7.3-rc.1">aMuTorrent RC1</a>
 </div>
 </div>
 <aside aria-label="eMuleBB" class="hero-panel">
@@ -89,25 +82,24 @@
 <li>eD2K/Kad</li>
 <li>Upload</li>
 <li>Testing</li>
-<li>Nightlies</li>
+<li>RC1</li>
 <li>Performance</li>
 <li>REST API</li>
 <li>0.7.3-rc.1</li>
 <li>Rendered HTML product docs</li>
 <li>SPDX SBOM package evidence</li>
-<li>GitHub attested nightlies</li>
 </ul>
 </aside>
 </section>
 <section class="testing-callout install-callout" id="install">
 <div>
-<p class="eyebrow">Install</p>
-<h2>Start with the ZIP package. Use the suite bootstrapper only when you need it.</h2>
-<p>For normal testing, download the eMuleBB ZIP, extract it into a new folder, and run <code>emulebb.exe</code>. The PowerShell bootstrapper is for the bundled suite installer flow.</p>
+<p class="eyebrow">Download</p>
+<h2>Install RC1 with one PowerShell line, or download the ZIP manually.</h2>
+<p>Full x64 suite: <code>irm https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/Bootstrap-eMuleBBSuite.ps1 | iex</code>. Standalone app: download the RC1 ZIP, extract it, and run <code>emulebb.exe</code>.</p>
 </div>
 <div class="testing-actions">
-<a href="https://github.com/emulebb/emulebb/releases">Download ZIP</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/#full-suite-install-powershell-bootstrap">Setup guide</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">Open RC1 release</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">Setup details</a>
 </div>
 </section>
 <section class="intro">
@@ -176,12 +168,12 @@
 </article>
 </div>
 </section>
-<section class="section guide" id="guide">
+<section class="section docs" id="docs">
 <div class="section-heading">
-<p class="eyebrow">Guide</p>
-<h2>En kort driftsmodell.</h2>
+<p class="eyebrow">Dokumenter</p>
+<h2>Detaljerte guider og kildedokumenter.</h2>
 </div>
-<div class="guide-grid">
+<div class="guide-grid guide-compact">
 <article>
 <span>01</span>
 <h3>Hold eD2K og Kad praktiske</h3>
@@ -199,7 +191,7 @@
 </article>
 <article>
 <span>04</span>
-<h3>Nightly builds</h3>
+<h3>RC1 published</h3>
 <p>Den offentlige 0.7.3-rc.1-utgivelsen er planlagt og ikke utgitt ennå.</p>
 </article>
 <article>
@@ -213,73 +205,7 @@
 <p>Detaljerte guider og kildedokumenter.</p>
 </article>
 </div>
-</section>
-<section class="section docs" id="docs">
-<div class="section-heading">
-<p class="eyebrow">Dokumenter</p>
-<h2>Detaljerte guider og kildedokumenter.</h2>
-</div>
-<div class="doc-list">
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
-<strong>Produktguide</strong>
-<span>eMuleBB bevarer den klassiske eMule-flyten og legger til tydelige grenser, diagnostikk, REST API og release-bevis.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
-<strong>En kort driftsmodell.</strong>
-<span>En eMule for raske uploadlinjer, store delte biblioteker, lange Windows-økter og lokal kontroll.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">
-<strong>Tydeligere upload- og nettverksstyring</strong>
-<span>En eMule for raske uploadlinjer, store delte biblioteker, lange Windows-økter og lokal kontroll.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">
-<strong>Hold eD2K og Kad praktiske</strong>
-<span>eMuleBB bevarer den klassiske eMule-flyten og legger til tydelige grenser, diagnostikk, REST API og release-bevis.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
-<strong>Hva eMuleBB legger til rundt den klassiske clienten.</strong>
-<span>En eMule for raske uploadlinjer, store delte biblioteker, lange Windows-økter og lokal kontroll.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TOOLS-MENU/">
-<strong>Detaljerte guider og kildedokumenter.</strong>
-<span>Detaljerte guider og kildedokumenter.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
-<strong>REST-automatisering uten å erstatte desktopappen.</strong>
-<span>REST-automatisering uten å erstatte desktopappen.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
-<strong>aMuTorrent + eMuleBB</strong>
-<span>REST-automatisering uten å erstatte desktopappen.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/rest/REST-API-CONTRACT/">
-<strong>REST API</strong>
-<span>REST-automatisering uten å erstatte desktopappen.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/rest/REST-API-ADAPTERS/">
-<strong>REST adapters</strong>
-<span>REST-automatisering uten å erstatte desktopappen.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DIAGNOSTICS/">
-<strong>Detaljerte guider og kildedokumenter.</strong>
-<span>Detaljerte guider og kildedokumenter.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TROUBLESHOOTING/">
-<strong>Detaljerte guider og kildedokumenter.</strong>
-<span>Detaljerte guider og kildedokumenter.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
-<strong>0.7.3-rc.1</strong>
-<span>Den offentlige 0.7.3-rc.1-utgivelsen er planlagt og ikke utgitt ennå.</span>
-</a>
-</div>
-</section>
-<section class="section automation" id="automation">
-<div>
-<p class="eyebrow">Automatisering</p>
-<h2>REST-automatisering uten å erstatte desktopappen.</h2>
-</div>
-<div class="automation-copy">
+<div class="automation-copy docs-automation">
 <p>REST-automatisering uten å erstatte desktopappen. <code>/api/v1</code>, JSON, <code>X-API-Key</code>.</p>
 <ul aria-label="REST API" class="api-list">
 <li>Transfers</li>
@@ -291,6 +217,32 @@
 <li>Logs</li>
 <li>Preferences</li>
 </ul>
+</div>
+<div class="doc-list">
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
+<strong>En kort driftsmodell.</strong>
+<span>En eMule for raske uploadlinjer, store delte biblioteker, lange Windows-økter og lokal kontroll.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
+<strong>Produktguide</strong>
+<span>eMuleBB bevarer den klassiske eMule-flyten og legger til tydelige grenser, diagnostikk, REST API og release-bevis.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
+<strong>aMuTorrent + eMuleBB</strong>
+<span>REST-automatisering uten å erstatte desktopappen.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
+<strong>REST-automatisering uten å erstatte desktopappen.</strong>
+<span>REST-automatisering uten å erstatte desktopappen.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
+<strong>Hva eMuleBB legger til rundt den klassiske clienten.</strong>
+<span>En eMule for raske uploadlinjer, store delte biblioteker, lange Windows-økter og lokal kontroll.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
+<strong>0.7.3-rc.1</strong>
+<span>Den offentlige 0.7.3-rc.1-utgivelsen er planlagt og ikke utgitt ennå.</span>
+</a>
 </div>
 </section>
 <section class="section release" id="release">
@@ -321,8 +273,8 @@
 </article>
 <article>
 <span></span>
-<strong>Attested nightlies</strong>
-<p>eMuleBB nightly ZIP, manifest, SBOM, and suite bootstrapper assets include GitHub artifact attestations so testers can verify downloaded assets with <code>gh attestation verify PATH_TO_ASSET -R emulebb/emulebb</code>.</p>
+<strong>GitHub provenance</strong>
+<p>RC1 assets are published from GitHub release automation with manifests, SHA-256 evidence, SBOMs, and a bootstrapper hash asset for verification.</p>
 </article>
 <article>
 <span></span>
@@ -341,35 +293,6 @@
 </article>
 </div>
 </section>
-<section class="section method" id="method">
-<div class="section-heading">
-<p class="eyebrow">Forsiktig modernisering rundt den gamle kjernen.</p>
-<h2>Forsiktig modernisering rundt den gamle kjernen.</h2>
-<p>eMuleBB bevarer den klassiske eMule-flyten og legger til tydelige grenser, diagnostikk, REST API og release-bevis.</p>
-</div>
-<div aria-label="eMuleBB implementation methods" class="method-grid">
-<article>
-<span>eD2K/Kad</span>
-<h3>Hold eD2K og Kad praktiske</h3>
-<p>Hold eD2K og Kad praktiske</p>
-</article>
-<article>
-<span>Upload</span>
-<h3>Tydeligere upload- og nettverksstyring</h3>
-<p>Tydeligere upload- og nettverksstyring</p>
-</article>
-<article>
-<span>REST</span>
-<h3>REST API</h3>
-<p>REST-automatisering uten å erstatte desktopappen.</p>
-</article>
-<article>
-<span>Testing</span>
-<h3>Bevis før offentlige pakker</h3>
-<p>Den offentlige 0.7.3-rc.1-utgivelsen er planlagt og ikke utgitt ennå.</p>
-</article>
-</div>
-</section>
 <section class="section repos" id="repos">
 <div class="section-heading">
 <p class="eyebrow">Repoer</p>
@@ -380,9 +303,9 @@
 <strong>emulebb</strong>
 <span>eMuleBB bevarer den klassiske eMule-flyten og legger til tydelige grenser, diagnostikk, REST API og release-bevis.</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-setup">
-<strong>emulebb-setup</strong>
-<span>En kort driftsmodell.</span>
+<a href="https://github.com/emulebb/amutorrent">
+<strong>amutorrent</strong>
+<span>aMuTorrent fork for managing eMuleBB.</span>
 </a>
 <a href="https://github.com/emulebb/emulebb-build">
 <strong>emulebb-build</strong>
@@ -396,56 +319,10 @@
 <strong>emulebb-tooling</strong>
 <span>Detaljerte guider og kildedokumenter.</span>
 </a>
-<a href="https://github.com/emulebb/amutorrent">
-<strong>amutorrent</strong>
-<span>aMuTorrent fork for managing eMuleBB.</span>
-</a>
-<a href="https://github.com/emulebb/goed2k-server">
-<strong>goed2k-server</strong>
-<span>goed2k eD2K server work for deterministic tests and ecosystem services.</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-agents">
-<strong>p2p-overlord-agents</strong>
-<span>Exploratory p2p-overlord agents for headless P2P workflows.</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-be">
-<strong>p2p-overlord-be</strong>
-<span>Exploratory Rust eD2K/Kad backend work in the p2p-overlord suite.</span>
-</a>
 <a href="https://github.com/emulebb/amule">
 <strong>aMule Windows builds</strong>
 <span>Windows build and validation track for aMule users.</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-miniupnp">
-<strong>emulebb-miniupnp</strong>
-<span>Windows build and validation track for MiniUPnP/miniupnpc.</span>
-</a>
-</div>
-</section>
-<section class="section team" id="team">
-<div class="section-heading">
-<p class="eyebrow">Prosjektlore med tørr teknisk humor.</p>
-<h2>Prosjektlore med tørr teknisk humor.</h2>
-</div>
-<div class="team-grid">
-<article>
-<img alt="Cartoon mule carrying an upload arrow and a clipboard." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/upload-mule.png" width="160"/>
-<span>01</span>
-<h3>Tydeligere upload- og nettverksstyring</h3>
-<p>Tydeligere upload- og nettverksstyring</p>
-</article>
-<article>
-<img alt="Cartoon mule carrying connected Kad nodes across a trail." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/kad-trail-mule.png" width="160"/>
-<span>02</span>
-<h3>Kad</h3>
-<p>Hold eD2K og Kad praktiske</p>
-</article>
-<article>
-<img alt="Cartoon mule hauling release packages and checks." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/release-pack-mule.png" width="160"/>
-<span>03</span>
-<h3>Bevis før offentlige pakker</h3>
-<p>Bevis før offentlige pakker</p>
-</article>
 </div>
 </section>
 </main>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="eMuleBB is the home of eMule broadband edition: a modern eMule product, Windows P2P builds, controller tooling, and exploratory eD2K/Kad lab work." name="description"/>
+<meta content="eMuleBB RC1 is published: install eMule broadband edition with a PowerShell suite bootstrapper or standalone ZIP, with GitHub-built package provenance." name="description"/>
 <meta content="index,follow" name="robots"/>
 <meta content="eMuleBB" name="author"/>
 <meta content="eMuleBB home | eMule broadband edition" property="og:title"/>
@@ -36,7 +36,7 @@
               "operatingSystem": "Windows",
               "url": "https://emulebb.github.io/",
               "codeRepository": "https://github.com/emulebb/emulebb",
-              "description": "eMuleBB is the home of eMule broadband edition, an independent broadband-focused eMule product with upload control, extensive automated testing, SBOM-backed packages, REST automation, eD2K/Kad compatibility, Windows builds for adjacent P2P tools, and exploratory P2P engineering. Nightly builds are available for public testing while the first public release candidate 0.7.3-rc.1 is still being prepared."
+              "description": "eMuleBB is the home of eMule broadband edition, an independent broadband-focused eMule product with upload control, automated testing, SBOM-backed packages, REST automation, eD2K/Kad compatibility, and out-of-the-box aMuTorrent, Prowlarr, Radarr, and Sonarr integration paths. The first public release candidate 0.7.3-rc.1 is published on GitHub Releases."
       }
     </script>
 <script type="application/ld+json">
@@ -54,20 +54,16 @@
 <a aria-label="eMule broadband edition home" class="brand" href="#top">
 <img alt="eMuleBB broadband edition" class="brand-logo" decoding="async" height="160" src="assets/brand/emulebb-broadband-edition-logo.png" width="151"/>
 </a>
-<a aria-label="Download eMuleBB nightlies" class="header-nightly-link" href="https://github.com/emulebb/emulebb/releases?q=nightly&amp;expanded=true">Nightlies</a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Open primary navigation" class="menu-toggle" type="button">
 <span class="menu-toggle-label">Menu</span>
 </button>
 <nav aria-label="Primary navigation" id="primary-nav">
 <a href="#why">Why</a>
 <a href="#features">Features</a>
-<a href="#guide">Guide</a>
-<a href="#install">Install</a>
-<a href="https://emulebb.github.io/faq/">FAQ</a>
-<a href="https://emulebb.github.io/emulebb-tooling/">Docs</a>
-<a href="#automation">Automation</a>
-<a href="#release">Release</a>
+<a class="nav-download" href="#install">Download</a>
+<a href="#docs">Guide</a>
 <a href="#repos">Repos</a>
+<a href="https://emulebb.github.io/faq/">FAQ</a>
 </nav>
 </header>
 <main id="top">
@@ -75,57 +71,51 @@
 <div class="hero-copy">
 <p class="eyebrow">The eMuleBB home for broadband P2P</p>
 <h1>eMuleBB is the broadband eMule product built by P2P people.</h1>
-<p class="lead">A serious Windows eMule line for fast upload links, large shared libraries, always-on sessions, REST controller workflows, public product docs, SBOM-backed packages, and release proof deep enough for people who actually run P2P clients.</p>
+<p class="lead">RC1 is published: a serious Windows eMule line for fast upload links, large shared libraries, always-on sessions, REST controller workflows, Arr integration, and GitHub-built package evidence.</p>
 <div aria-label="Project links" class="actions">
-<a class="button primary" href="#install">Install</a>
+<a class="button primary" href="#install">Download RC1</a>
 <a class="button secondary" href="https://github.com/emulebb/emulebb">Source</a>
 </div>
 <div aria-label="Download releases" class="release-links">
 <span>Download releases</span>
-<a href="https://github.com/emulebb/emulebb/releases">eMuleBB</a>
-<a href="https://github.com/emulebb/emulebb/releases?q=nightly&amp;expanded=true">eMuleBB nightlies</a>
-<a href="https://github.com/emulebb/amule/releases">aMule</a>
-<a href="https://github.com/emulebb/amule/releases?q=nightly&amp;expanded=true">aMule nightlies</a>
-<a href="https://github.com/emulebb/amutorrent/releases">aMuTorrent release page</a>
-<a href="https://github.com/emulebb/emulebb-miniupnp/releases">MiniUPnP/miniupnpc</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">eMuleBB RC1</a>
+<a href="https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/emulebb-0.7.3-rc.1-x64.zip">x64 ZIP</a>
+<a href="https://github.com/emulebb/amutorrent/releases/tag/amutorrent-v3.8.5-emulebb-v0.7.3-rc.1">aMuTorrent RC1</a>
 </div>
 </div>
 <aside aria-label="eMuleBB product summary" class="hero-panel">
 <p class="panel-kicker">Product posture</p>
 <h2>eMuleBB is the product. The ecosystem is the proof lab.</h2>
-<p>The desktop app stays stock-compatible where the network matters, while the wider eMuleBB organization builds Windows packages, controller workflows, deterministic test services, and exploratory eD2K/Kad tooling around it.</p>
+<p>The desktop app stays stock-compatible where the network matters. The RC1 suite adds local controller workflows around it without turning eMuleBB into a generic torrent shell.</p>
 <ul class="signal-list">
+<li>0.7.3-rc.1 published</li>
+<li>One-line suite bootstrap</li>
+<li>Manual standalone ZIP</li>
+<li>GitHub Actions builds</li>
+<li>Manifest hash verification</li>
+<li>SPDX SBOMs</li>
+<li>aMuTorrent controller</li>
+<li>Prowlarr Torznab</li>
+<li>Radarr/Sonarr qBit adapter</li>
 <li>Stock eD2K/Kad compatibility</li>
-<li>Broadband upload slot control</li>
-<li>Extensive automated testing</li>
-<li>Rendered HTML docs</li>
-<li>Modern performance limits</li>
-<li>Authenticated JSON REST API</li>
-<li>Nightlies open for testing</li>
-<li>0.7.3-rc.1 planned</li>
-<li>aMule Windows builds</li>
-<li>MiniUPnP Windows builds</li>
-<li>aMuTorrent manager fork</li>
-<li>goed2k lab work</li>
-<li>p2p-overlord Rust client</li>
-<li>SPDX SBOM package evidence</li>
-<li>GitHub attested nightlies</li>
+<li>Rendered HTML product docs</li>
+<li>RC1 on GitHub Releases</li>
 </ul>
 </aside>
 </section>
 <section class="testing-callout install-callout" id="install">
 <div>
-<p class="eyebrow">Install</p>
-<h2>Start with the ZIP package. Use the suite bootstrapper only when you need it.</h2>
-<p>For normal testing, download the eMuleBB ZIP, extract it into a new folder, and run <code>emulebb.exe</code>. The PowerShell bootstrapper is for the bundled suite installer flow.</p>
+<p class="eyebrow">Download</p>
+<h2>Install RC1 with one PowerShell line, or download the ZIP manually.</h2>
+<p>Full x64 suite: <code>irm https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/Bootstrap-eMuleBBSuite.ps1 | iex</code>. Standalone app: download the RC1 ZIP, extract it, and run <code>emulebb.exe</code>.</p>
 </div>
 <div class="testing-actions">
-<a href="https://github.com/emulebb/emulebb/releases">Download ZIP</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/#full-suite-install-powershell-bootstrap">Setup guide</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">Open RC1 release</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">Setup details</a>
 </div>
 </section>
 <section class="intro">
-<p>This is the home of <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, an independent product for people who still value eMule's distributed sharing model and want it operated like modern software. Around the flagship desktop app, the eMuleBB organization provides Windows builds for aMule and MiniUPnP, an aMuTorrent fork for managing eMuleBB, deterministic eD2K server work through goed2k, and exploratory headless eD2K/Kad work in the p2p-overlord suite. Public testing has started with nightlies, and more is coming.</p>
+<p>This is the home of <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, an independent product for people who still value eMule's distributed sharing model and want it operated like modern software. RC1 packages are published on GitHub Releases with a full-suite bootstrapper, standalone ZIPs, manifests, hashes, SBOMs, and matching aMuTorrent controller assets.</p>
 </section>
 <section class="section motivation" id="why">
 <div class="section-heading">
@@ -155,7 +145,7 @@
 <div class="section-heading">
 <p class="eyebrow">Features</p>
 <h2>What eMuleBB adds around the classic client</h2>
-<p>The work is focused on operator-visible behavior: predictable upload policy, safer binding, fixed performance limits, large-library operation, local automation, and test evidence for the planned <code>0.7.3-rc.1</code> candidate.</p>
+<p>The RC1 work is focused on operator-visible behavior: predictable upload policy, safer binding, fixed performance limits, large-library operation, local automation, and package evidence.</p>
 </div>
 <div aria-label="eMule broadband feature groups" class="feature-table">
 <article>
@@ -185,46 +175,8 @@
 </article>
 <article>
 <span>Testing and release discipline</span>
-<h3>Evidence before public packages</h3>
-<p>The planned <code>0.7.3-rc.1</code> candidate depends on hosted fast harness CI, native tests, REST contracts, UI/resource checks, live controller lanes, network adversity, packaging, SBOMs, and x64/ARM64 rehearsals.</p>
-</article>
-</div>
-</section>
-<section class="section guide" id="guide">
-<div class="section-heading">
-<p class="eyebrow">Product guide</p>
-<h2>A short operating model</h2>
-</div>
-<div class="guide-grid">
-<article>
-<span>01</span>
-<h3>Start from known-good eMule habits</h3>
-<p>Use trusted server lists, bootstrap Kad deliberately, keep incoming and shared directories predictable, and preserve the classic search/add/share workflow before layering automation on top.</p>
-</article>
-<article>
-<span>02</span>
-<h3>Tune upload for your real link</h3>
-<p>Set a finite upload limit, choose a realistic upload client target, and let the broadband policy favor fewer stronger slots instead of many low-rate sessions.</p>
-</article>
-<article>
-<span>03</span>
-<h3>Curate large libraries</h3>
-<p>Use long-path capable Windows setups, keep share roots clean, watch ratios, and treat rare files as deliberate publishing decisions.</p>
-</article>
-<article>
-<span>04</span>
-<h3>Read claims through rendered docs</h3>
-<p>The product guide is maintained as Markdown, rendered to public HTML, and tied to release strategy, test campaigns, CI, package, and SBOM evidence.</p>
-</article>
-<article>
-<span>05</span>
-<h3>Automate only on trusted networks</h3>
-<p>Enable WebServer/REST with an API key, bind and firewall it carefully, keep unsafe diagnostic REST disabled outside controlled support runs, and use controllers that respect native eMule transfer and delete semantics.</p>
-</article>
-<article>
-<span>06</span>
-<h3>Join the testing window</h3>
-<p>Nightly builds are available for public testing before the planned <code>0.7.3-rc.1</code>. Use backed-up or disposable profiles, then report crashes, freezes, controller/API problems, and package issues with logs or dumps when useful.</p>
+<h3>Evidence before labels</h3>
+<p><code>0.7.3-rc.1</code> is published with GitHub Actions packaging, manifests, SHA-256 evidence, SPDX SBOMs, diagnostics assets, and bootstrapper hash evidence.</p>
 </article>
 </div>
 </section>
@@ -232,69 +184,26 @@
 <div class="section-heading">
 <p class="eyebrow">Documentation</p>
 <h2>Guides, API, and release notes</h2>
-<p>The public documentation ties product use, REST automation, release gates, troubleshooting, and package evidence together in one place.</p>
+<p>Start with setup, then use the product and integration guides for the operating model, controller workflows, and release evidence.</p>
 </div>
-<div class="doc-list">
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
-<strong>eMuleBB product guide</strong>
-<span>Setup, tuning, automation, release-aware use, testing, and SBOM evidence.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
-<strong>Setup guide</strong>
-<span>Install model, first-run profile behavior, and practical startup notes.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">
-<strong>Network guide</strong>
-<span>eD2K, Kad, binding, UPnP, firewall, and connection diagnosis reference.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">
-<strong>Sharing guide</strong>
-<span>Shared directories, monitored shares, large libraries, and share policy files.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
-<strong>Downloads and search guide</strong>
-<span>Search modes, result trust, categories, and power-user file workflows.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TOOLS-MENU/">
-<strong>Tools menu guide</strong>
-<span>Power-user actions for logs, dumps, folders, reloads, and controller setup helpers.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
-<strong>Controllers and REST guide</strong>
-<span>Trusted local controller usage and automation boundaries.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
-<strong>Use aMuTorrent with eMuleBB</strong>
-<span>Task-first setup for eMuleBB, aMuTorrent, Prowlarr, Radarr, and Sonarr.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/rest/REST-API-CONTRACT/">
-<strong>REST API contract</strong>
-<span>Human-readable contract for the authenticated JSON control surface.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/rest/REST-API-ADAPTERS/">
-<strong>REST adapter contracts</strong>
-<span>qBittorrent-compatible and Torznab adapter surface for controller authors.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DIAGNOSTICS/">
-<strong>Collect diagnostics for reports</strong>
-<span>Redacted snapshots, dumps, startup traces, unsafe diagnostic REST, and metadata diagnostics.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TROUBLESHOOTING/">
-<strong>Troubleshooting guide</strong>
-<span>Symptom-led checks for Low ID, network issues, sharing, and automation.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
-<strong>0.7.3 release dashboard</strong>
-<span>Current RC gates, automated test evidence, SBOM/package proof, and readiness rules.</span>
-</a>
+<div class="guide-grid guide-compact">
+<article>
+<span>01</span>
+<h3>Start with the product guide</h3>
+<p>Run eMuleBB as eMule first: trusted servers, deliberate Kad bootstrap, predictable incoming/temp paths, and visible shared folders.</p>
+</article>
+<article>
+<span>02</span>
+<h3>Use local automation</h3>
+<p>Enable REST only for trusted controllers, then use aMuTorrent, Prowlarr, Radarr, and Sonarr through the documented adapter paths.</p>
+</article>
+<article>
+<span>03</span>
+<h3>Read the evidence</h3>
+<p>Setup, API, release, SBOM, and package details live in the rendered docs so public claims stay tied to source-controlled evidence.</p>
+</article>
 </div>
-</section>
-<section class="section automation" id="automation">
-<div>
-<p class="eyebrow">Controller surface</p>
-<h2>REST automation without replacing the desktop app</h2>
-</div>
-<div class="automation-copy">
+<div class="automation-copy docs-automation">
 <p>The broadband release track exposes a resource-oriented <code>/api/v1</code> JSON API from the existing WebServer listener. It authenticates with <code>X-API-Key</code>, serves JSON envelopes, and keeps native eMule state changes marshaled through the app.</p>
 <ul aria-label="REST API areas" class="api-list">
 <li>Transfers</li>
@@ -309,27 +218,53 @@
 <li>Preferences</li>
 </ul>
 </div>
+<div class="doc-list">
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
+<strong>Setup guide</strong>
+<span>Install model, first-run profile behavior, and practical startup notes.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
+<strong>eMuleBB product guide</strong>
+<span>Setup, tuning, automation, release-aware use, testing, and SBOM evidence.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
+<strong>Use aMuTorrent with eMuleBB</strong>
+<span>Task-first setup for eMuleBB, aMuTorrent, Prowlarr, Radarr, and Sonarr.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
+<strong>Controllers and REST guide</strong>
+<span>Trusted local controller usage and automation boundaries.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
+<strong>Downloads and search guide</strong>
+<span>Search modes, result trust, categories, and power-user file workflows.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
+<strong>0.7.3 release dashboard</strong>
+<span>Current RC gates, automated test evidence, SBOM/package proof, and readiness rules.</span>
+</a>
+</div>
 </section>
 <section class="section release" id="release">
 <div class="section-heading">
-<p class="eyebrow">Testing and performance proof</p>
-<h2>Nightly testing is open while public release candidate 0.7.3-rc.1 is prepared</h2>
+<p class="eyebrow">Security and provenance</p>
+<h2>RC1 is built and packaged on GitHub</h2>
 </div>
 <div aria-label="eMuleBB release proof" class="release-grid">
 <article>
 <span></span>
-<strong>Current status</strong>
-<p>Public testing has started through nightly builds. The first public release candidate target is still <code>0.7.3-rc.1</code>; final proof is in progress, and public status stays tied to the active release docs.</p>
+<strong>Published RC1</strong>
+<p><code>emulebb-v0.7.3-rc.1</code> is a GitHub prerelease with x64 and ARM64 ZIPs, diagnostics packages, manifests, SBOMs, and the suite bootstrapper.</p>
 </article>
 <article>
 <span></span>
-<strong>Download status</strong>
-<p>eMuleBB and aMule nightlies are available from GitHub Releases. MiniUPnP has a Windows package release. aMuTorrent has release automation and a release page, but no public package should be assumed unless an asset is published there.</p>
+<strong>Hash-checked setup</strong>
+<p>The bootstrapper downloads release assets and verifies package hashes from the published manifests before installing.</p>
 </article>
 <article>
 <span></span>
-<strong>Hosted fast CI</strong>
-<p>The <a href="https://github.com/emulebb/emulebb-build-tests/actions/workflows/fast-harness-ci.yml">Fast Harness CI</a> lane installs the shared Python harness and runs the default non-live, non-native pytest suite on pushes and pull requests.</p>
+<strong>Suite assets</strong>
+<p>The matching aMuTorrent RC1 package is published separately, and the full x64 bootstrap flow resolves it automatically for controller setup.</p>
 </article>
 <article>
 <span></span>
@@ -338,62 +273,13 @@
 </article>
 <article>
 <span></span>
-<strong>Attested nightlies</strong>
-<p>eMuleBB nightly ZIP, manifest, SBOM, and suite bootstrapper assets include GitHub artifact attestations so testers can verify downloaded assets with <code>gh attestation verify PATH_TO_ASSET -R emulebb/emulebb</code>.</p>
-</article>
-<article>
-<span></span>
-<strong>Build and package proof</strong>
-<p>Required proof covers workspace validation, Debug and Release x64 app builds, Release ARM64 app builds, test binaries, package generation, SBOM generation, clean-worktree checks, and recorded SHA-256 hashes.</p>
-</article>
-<article>
-<span></span>
-<strong>Behavior proof</strong>
-<p>Extensive test gates cover native suites, REST contract and OpenAPI drift, malformed requests, UI automation, live controller-surface E2E, full Release x64 live E2E, and network-adversity scenarios.</p>
-</article>
-<article>
-<span></span>
-<strong>Performance proof</strong>
-<p>Large-session performance work is described through concrete surfaces: upload-slot policy, queue/source limits, socket and file buffers, startup caches, long paths, and controller responsiveness.</p>
+<strong>GitHub provenance</strong>
+<p>RC1 assets are published from GitHub release automation with manifests, SHA-256 evidence, SBOMs, and a bootstrapper hash asset for verification.</p>
 </article>
 <article>
 <span></span>
 <strong>Controller proof</strong>
-<p>The aMuTorrent fork, Prowlarr, Radarr, Sonarr, and qBittorrent-compatible adapter lanes prove that automation works without weakening the native <code>/api/v1</code> contract.</p>
-</article>
-<article>
-<span></span>
-<strong>Compatibility proof</strong>
-<p>Stock eD2K/Kad behavior remains the default. Broadband, REST, and controller features are added around that compatibility goal and compared against the community baseline where useful.</p>
-</article>
-</div>
-</section>
-<section class="section method" id="method">
-<div class="section-heading">
-<p class="eyebrow">Implementation method</p>
-<h2>Modernize around the legacy core, then prove the result</h2>
-<p>The implementation style is intentionally conservative. eMuleBB changes local policy, limits, diagnostics, API boundaries, and release discipline while keeping stock eD2K/Kad compatibility as the default. The wider organization uses the same discipline for Windows builds, managers, servers, and lab clients.</p>
-</div>
-<div aria-label="eMuleBB implementation methods" class="method-grid">
-<article>
-<span>Compatibility</span>
-<h3>No casual protocol drift</h3>
-<p>Kad and eD2K changes stay inside local routing, timing, validation, and control paths. Wire formats, opcodes, and native desktop workflows remain compatibility boundaries.</p>
-</article>
-<article>
-<span>Limits</span>
-<h3>Fixed, reviewable defaults</h3>
-<p>Modern bandwidth, memory, socket, queue, startup, and timeout assumptions are expressed as explicit defaults or advanced preferences instead of hidden adaptive behavior.</p>
-</article>
-<article>
-<span>REST</span>
-<h3>Controller contracts, not screen scraping</h3>
-<p>The authenticated JSON API follows an OpenAPI-backed contract, rejects malformed inputs, and marshals native state mutations through the app where the desktop client owns that state.</p>
-</article>
-<article>
-<span>Release</span>
-<h3>Evidence before labels</h3>
-<p>The release process records commands, commits, logs, package paths, hashes, live evidence, performance-sensitive checks, and operator decisions so a release tag is a checked outcome.</p>
+<p>aMuTorrent, Prowlarr, Radarr, Sonarr, Torznab, and qBittorrent-compatible lanes are documented as local integration paths around the native <code>/api/v1</code> contract.</p>
 </article>
 </div>
 </section>
@@ -407,9 +293,9 @@
 <strong>emulebb</strong>
 <span>flagship desktop app and product source</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-setup">
-<strong>emulebb-setup</strong>
-<span>reproducible workspace setup</span>
+<a href="https://github.com/emulebb/amutorrent">
+<strong>amutorrent</strong>
+<span>fork used for eMuleBB management and controller workflows</span>
 </a>
 <a href="https://github.com/emulebb/emulebb-build">
 <strong>emulebb-build</strong>
@@ -423,56 +309,10 @@
 <strong>emulebb-tooling</strong>
 <span>roadmap, backlog, policy, audits, and reference docs</span>
 </a>
-<a href="https://github.com/emulebb/amutorrent">
-<strong>amutorrent</strong>
-<span>fork used for eMuleBB management and controller workflows</span>
-</a>
-<a href="https://github.com/emulebb/goed2k-server">
-<strong>goed2k-server</strong>
-<span>eD2K server work for deterministic testing and ecosystem services</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-agents">
-<strong>p2p-overlord-agents</strong>
-<span>exploratory agents for the p2p-overlord P2P suite</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-be">
-<strong>p2p-overlord-be</strong>
-<span>exploratory headless Rust eD2K/Kad client backend work</span>
-</a>
 <a href="https://github.com/emulebb/amule">
 <strong>aMule Windows builds</strong>
 <span>Windows build and validation track for aMule users</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-miniupnp">
-<strong>emulebb-miniupnp</strong>
-<span>Windows build and validation track for MiniUPnP/miniupnpc</span>
-</a>
-</div>
-</section>
-<section class="section team" id="team">
-<div class="section-heading">
-<p class="eyebrow">Project lore</p>
-<h2>The mule team behind the P2P workshop</h2>
-</div>
-<div class="team-grid">
-<article>
-<img alt="Cartoon mule carrying an upload arrow and a clipboard." class="team-image" decoding="async" height="160" loading="lazy" src="assets/team/upload-mule.png" width="160"/>
-<span>01</span>
-<h3>Upload Mule Wrangler</h3>
-<p>Keeps broadband upload slots from kicking the stable door down, then nudges the slow ones back into line with a very official clipboard.</p>
-</article>
-<article>
-<img alt="Cartoon mule carrying connected Kad nodes across a trail." class="team-image" decoding="async" height="160" loading="lazy" src="assets/team/kad-trail-mule.png" width="160"/>
-<span>02</span>
-<h3>Kad Trail Mule</h3>
-<p>Carries bootstrap nodes, routing tables, and stubborn eD2K/Kad folklore across rough network terrain without dropping the protocol map.</p>
-</article>
-<article>
-<img alt="Cartoon mule hauling release packages and checks." class="team-image" decoding="async" height="160" loading="lazy" src="assets/team/release-pack-mule.png" width="160"/>
-<span>03</span>
-<h3>Release Pack Mule</h3>
-<p>Hauls packages, hashes, SBOMs, logs, live checks, and just enough attitude through the gate before anything gets called ready.</p>
-</article>
 </div>
 </section>
 </main>

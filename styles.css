@@ -120,27 +120,6 @@ code {
   min-width: 0;
 }
 
-.header-nightly-link {
-  min-height: 42px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #0b5960;
-  border-radius: 8px;
-  padding: 8px 12px;
-  background: var(--teal);
-  color: #ffffff;
-  font-weight: 900;
-  line-height: 1;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.header-nightly-link:hover {
-  background: #0b5960;
-  color: #ffffff;
-}
-
 .brand-logo {
   display: block;
   width: clamp(136px, 30vw, 190px);
@@ -215,6 +194,17 @@ nav a {
 nav a:hover {
   background: rgba(14, 111, 118, 0.08);
   color: var(--ink);
+}
+
+nav a.nav-download {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #ffffff;
+}
+
+nav a.nav-download:hover {
+  background: #0b5960;
+  color: #ffffff;
 }
 
 .button {
@@ -449,6 +439,11 @@ h3 {
 
 .section-heading {
   margin-bottom: 28px;
+}
+
+.guide-compact,
+.docs-automation {
+  margin-bottom: 18px;
 }
 
 .motivation,
@@ -794,7 +789,7 @@ footer {
   }
 
   .site-header {
-    grid-template-columns: minmax(150px, auto) minmax(0, 1fr) auto;
+    grid-template-columns: minmax(150px, auto) minmax(0, 1fr);
     align-items: center;
   }
 
@@ -813,15 +808,17 @@ footer {
     padding-top: 0;
   }
 
-  .header-nightly-link {
-    grid-column: 3;
-  }
-
   nav a {
     width: auto;
     border: 0;
     background: transparent;
     white-space: nowrap;
+  }
+
+  nav a.nav-download {
+    border: 1px solid var(--teal);
+    background: var(--teal);
+    color: #ffffff;
   }
 
   .hero {

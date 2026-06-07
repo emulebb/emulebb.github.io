@@ -45,20 +45,16 @@
 <a aria-label="eMule broadband edition home" class="brand" href="#top">
 <img alt="eMuleBB broadband edition" class="brand-logo" decoding="async" height="160" src="../assets/brand/emulebb-broadband-edition-logo.png" width="151"/>
 </a>
-<a aria-label="Download eMuleBB nightlies" class="header-nightly-link" href="https://github.com/emulebb/emulebb/releases?q=nightly&amp;expanded=true">Nightlies</a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Ana gezinmeyi aç" class="menu-toggle" type="button">
 <span class="menu-toggle-label">Menü</span>
 </button>
 <nav aria-label="Ana gezinme" id="primary-nav">
 <a href="#why">Neden</a>
 <a href="#features">Özellikler</a>
-<a href="#guide">Kılavuz</a>
-<a href="#install">Install</a>
-<a href="https://emulebb.github.io/faq/">FAQ</a>
-<a href="https://emulebb.github.io/emulebb-tooling/">Belgeler</a>
-<a href="#automation">Otomasyon</a>
-<a href="#release">Yayın</a>
+<a href="#docs">Kılavuz</a>
+<a class="nav-download" href="#install">Download</a>
 <a href="#repos">Depolar</a>
+<a href="https://emulebb.github.io/faq/">FAQ</a>
 </nav>
 </header>
 <main id="top">
@@ -73,12 +69,9 @@
 </div>
 <div aria-label="Download releases" class="release-links">
 <span>Download releases</span>
-<a href="https://github.com/emulebb/emulebb/releases">eMuleBB</a>
-<a href="https://github.com/emulebb/emulebb/releases?q=nightly&amp;expanded=true">eMuleBB nightlies</a>
-<a href="https://github.com/emulebb/amule/releases">aMule</a>
-<a href="https://github.com/emulebb/amule/releases?q=nightly&amp;expanded=true">aMule nightlies</a>
-<a href="https://github.com/emulebb/amutorrent/releases">aMuTorrent release page</a>
-<a href="https://github.com/emulebb/emulebb-miniupnp/releases">MiniUPnP/miniupnpc</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">eMuleBB RC1</a>
+<a href="https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/emulebb-0.7.3-rc.1-x64.zip">x64 ZIP</a>
+<a href="https://github.com/emulebb/amutorrent/releases/tag/amutorrent-v3.8.5-emulebb-v0.7.3-rc.1">aMuTorrent RC1</a>
 </div>
 </div>
 <aside aria-label="eMuleBB özeti" class="hero-panel">
@@ -95,19 +88,19 @@
 <li>Release doğrulama workspace&#39;i</li>
 <li>Rendered HTML product docs</li>
 <li>SPDX SBOM package evidence</li>
-<li>GitHub attested nightlies</li>
+<li>RC1 on GitHub Releases</li>
 </ul>
 </aside>
 </section>
 <section class="testing-callout install-callout" id="install">
 <div>
-<p class="eyebrow">Install</p>
-<h2>Start with the ZIP package. Use the suite bootstrapper only when you need it.</h2>
-<p>For normal testing, download the eMuleBB ZIP, extract it into a new folder, and run <code>emulebb.exe</code>. The PowerShell bootstrapper is for the bundled suite installer flow.</p>
+<p class="eyebrow">Download</p>
+<h2>Install RC1 with one PowerShell line, or download the ZIP manually.</h2>
+<p>Full x64 suite: <code>irm https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/Bootstrap-eMuleBBSuite.ps1 | iex</code>. Standalone app: download the RC1 ZIP, extract it, and run <code>emulebb.exe</code>.</p>
 </div>
 <div class="testing-actions">
-<a href="https://github.com/emulebb/emulebb/releases">Download ZIP</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/#full-suite-install-powershell-bootstrap">Setup guide</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">Open RC1 release</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">Setup details</a>
 </div>
 </section>
 <section class="intro">
@@ -176,12 +169,12 @@
 </article>
 </div>
 </section>
-<section class="section guide" id="guide">
+<section class="section docs" id="docs">
 <div class="section-heading">
-<p class="eyebrow">Ürün kılavuzu</p>
-<h2>Kısa işletim modeli</h2>
+<p class="eyebrow">Devamını oku</p>
+<h2>Ayrıntılı kılavuzlar ve kaynak belgeler</h2>
 </div>
-<div class="guide-grid">
+<div class="guide-grid guide-compact">
 <article>
 <span>01</span>
 <h3>Bilinen iyi eMule alışkanlıklarından başla</h3>
@@ -213,73 +206,7 @@
 <p>Homepage kısa kalır. Ürün kılavuzu, REST contract, broadband notları ve release docs tooling repository içinde Markdown olarak yaşar.</p>
 </article>
 </div>
-</section>
-<section class="section docs" id="docs">
-<div class="section-heading">
-<p class="eyebrow">Devamını oku</p>
-<h2>Ayrıntılı kılavuzlar ve kaynak belgeler</h2>
-</div>
-<div class="doc-list">
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
-<strong>eMuleBB ürün kılavuzu</strong>
-<span>Setup, tuning, automation ve release-bilinçli kullanım için genel bakış.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
-<strong>Setup kılavuzu</strong>
-<span>Kurulum modeli, ilk profil davranışı ve pratik başlangıç notları.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">
-<strong>Ağ kılavuzu</strong>
-<span>eD2K, Kad, binding, UPnP, firewall ve bağlantı tanısı referansı.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">
-<strong>Paylaşım kılavuzu</strong>
-<span>Shared directories, monitored shares, büyük kütüphaneler ve policy files.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
-<strong>Downloads ve search kılavuzu</strong>
-<span>Search modları, sonuç güveni, categories ve power-user workflows.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TOOLS-MENU/">
-<strong>Tools menu guide</strong>
-<span>Power-user actions for logs, dumps, folders, reloads, and controller setup helpers.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
-<strong>Controllers ve REST kılavuzu</strong>
-<span>Güvenilir yerel controllers kullanımı ve automation sınırları.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
-<strong>Use aMuTorrent with eMuleBB</strong>
-<span>Task-first setup for eMuleBB, aMuTorrent, Prowlarr, Radarr, and Sonarr.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/rest/REST-API-CONTRACT/">
-<strong>REST API contract</strong>
-<span>Kimlik doğrulamalı JSON kontrol yüzeyi için okunabilir contract.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/rest/REST-API-ADAPTERS/">
-<strong>REST adapter contracts</strong>
-<span>Controller yazarları için qBittorrent-compatible ve Torznab yüzeyi.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DIAGNOSTICS/">
-<strong>Collect diagnostics for reports</strong>
-<span>Redacted snapshots, dumps, startup traces, unsafe diagnostic REST, and metadata diagnostics.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-TROUBLESHOOTING/">
-<strong>Troubleshooting kılavuzu</strong>
-<span>Low ID, ağ, sharing ve automation için belirti odaklı checks.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
-<strong>0.7.3-rc.1 release paneli</strong>
-<span>Planlanan RC gates, evidence bağlantıları ve readiness kuralları.</span>
-</a>
-</div>
-</section>
-<section class="section automation" id="automation">
-<div>
-<p class="eyebrow">Controller yüzeyi</p>
-<h2>Desktop uygulamasını değiştirmeden REST automation</h2>
-</div>
-<div class="automation-copy">
+<div class="automation-copy docs-automation">
 <p>Broadband release track, mevcut WebServer listener üzerinden resource-oriented JSON API <code>/api/v1</code> sunar. <code>X-API-Key</code> ile kimlik doğrular, JSON envelopes döner ve native eMule state değişikliklerini uygulama üzerinden geçirir.</p>
 <ul aria-label="REST API alanları" class="api-list">
 <li>Transfers</li>
@@ -293,6 +220,32 @@
 <li>Statistics</li>
 <li>Preferences</li>
 </ul>
+</div>
+<div class="doc-list">
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
+<strong>Setup kılavuzu</strong>
+<span>Kurulum modeli, ilk profil davranışı ve pratik başlangıç notları.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
+<strong>eMuleBB ürün kılavuzu</strong>
+<span>Setup, tuning, automation ve release-bilinçli kullanım için genel bakış.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
+<strong>Use aMuTorrent with eMuleBB</strong>
+<span>Task-first setup for eMuleBB, aMuTorrent, Prowlarr, Radarr, and Sonarr.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
+<strong>Controllers ve REST kılavuzu</strong>
+<span>Güvenilir yerel controllers kullanımı ve automation sınırları.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
+<strong>Downloads ve search kılavuzu</strong>
+<span>Search modları, sonuç güveni, categories ve power-user workflows.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
+<strong>0.7.3-rc.1 release paneli</strong>
+<span>Planlanan RC gates, evidence bağlantıları ve readiness kuralları.</span>
+</a>
 </div>
 </section>
 <section class="section release" id="release">
@@ -323,8 +276,8 @@
 </article>
 <article>
 <span></span>
-<strong>Attested nightlies</strong>
-<p>eMuleBB nightly ZIP, manifest, SBOM, and suite bootstrapper assets include GitHub artifact attestations so testers can verify downloaded assets with <code>gh attestation verify PATH_TO_ASSET -R emulebb/emulebb</code>.</p>
+<strong>GitHub provenance</strong>
+<p>RC1 assets are published from GitHub release automation with manifests, SHA-256 evidence, SBOMs, and a bootstrapper hash asset for verification.</p>
 </article>
 <article>
 <span></span>
@@ -338,35 +291,6 @@
 </article>
 </div>
 </section>
-<section class="section method" id="method">
-<div class="section-heading">
-<p class="eyebrow">Uygulama yöntemi</p>
-<h2>Legacy çekirdeğin etrafında modernleştir, sonra sonucu kanıtla</h2>
-<p>Stil bilinçli olarak tutucudur. eMuleBB yerel policy, limits, diagnostics, API boundaries ve release discipline alanlarını değiştirirken eD2K/Kad uyumluluğunu default tutar.</p>
-</div>
-<div aria-label="eMuleBB implementation methods" class="method-grid">
-<article>
-<span>Uyumluluk</span>
-<h3>Gelişigüzel protocol drift yok</h3>
-<p>Kad ve eD2K değişiklikleri local routing, timing, validation ve control paths içinde kalır. Wire formats, opcodes ve native workflows uyumluluk sınırıdır.</p>
-</article>
-<article>
-<span>Sınırlar</span>
-<h3>Sabit ve review edilebilir defaults</h3>
-<p>Bandwidth, memory, socket, queue ve timeout varsayımları gizli adaptif davranış yerine açık defaults veya advanced preferences olur.</p>
-</article>
-<article>
-<span>REST</span>
-<h3>Controller contracts, screen scraping değil</h3>
-<p>Kimlik doğrulamalı JSON API OpenAPI-backed contract izler, malformed inputs reddeder ve native state mutations uygulama üzerinden yürütür.</p>
-</article>
-<article>
-<span>Release</span>
-<h3>Etiketlerden önce kanıt</h3>
-<p>Süreç commands, commits, logs, package paths, hashes, live evidence ve operator decisions kaydeder; tag doğrulanmış bir sonuç olur.</p>
-</article>
-</div>
-</section>
 <section class="section repos" id="repos">
 <div class="section-heading">
 <p class="eyebrow">Açık workspace</p>
@@ -377,9 +301,9 @@
 <strong>emulebb</strong>
 <span>desktop app ve ürün kaynağı</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-setup">
-<strong>emulebb-setup</strong>
-<span>tekrarlanabilir workspace setup</span>
+<a href="https://github.com/emulebb/amutorrent">
+<strong>amutorrent</strong>
+<span>fork used for eMuleBB management and controller workflows</span>
 </a>
 <a href="https://github.com/emulebb/emulebb-build">
 <strong>emulebb-build</strong>
@@ -393,56 +317,10 @@
 <strong>emulebb-tooling</strong>
 <span>roadmap, backlog, policy, audits ve reference docs</span>
 </a>
-<a href="https://github.com/emulebb/amutorrent">
-<strong>amutorrent</strong>
-<span>fork used for eMuleBB management and controller workflows</span>
-</a>
-<a href="https://github.com/emulebb/goed2k-server">
-<strong>goed2k-server</strong>
-<span>eD2K server work for deterministic testing and ecosystem services</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-agents">
-<strong>p2p-overlord-agents</strong>
-<span>exploratory agents for the p2p-overlord P2P suite</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-be">
-<strong>p2p-overlord-be</strong>
-<span>exploratory headless Rust eD2K/Kad client backend work</span>
-</a>
 <a href="https://github.com/emulebb/amule">
 <strong>aMule Windows builds</strong>
 <span>Windows build and validation track for aMule users</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-miniupnp">
-<strong>emulebb-miniupnp</strong>
-<span>Windows build and validation track for MiniUPnP/miniupnpc</span>
-</a>
-</div>
-</section>
-<section class="section team" id="team">
-<div class="section-heading">
-<p class="eyebrow">Proje kültürü</p>
-<h2>Queue&#39;nun performans sanatına dönüşmesini engelleyen ekip</h2>
-</div>
-<div class="team-grid">
-<article>
-<img alt="Cartoon mule carrying an upload arrow and a clipboard." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/upload-mule.png" width="160"/>
-<span>01</span>
-<h3>Upload slot terapisti</h3>
-<p>Zayıf slots duygularını tam gerektiği kadar işler, sonra form ve cooldown ile queue&#39;ya geri gönderilir.</p>
-</article>
-<article>
-<img alt="Cartoon mule carrying connected Kad nodes across a trail." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/kad-trail-mule.png" width="160"/>
-<span>02</span>
-<h3>Kad bootstrap arşivcisi</h3>
-<p>2007&#39;de bir kez çalışan ve bu yüzden dikkatle doğrulanmış ikinci şansı hak eden nodes listesini korur.</p>
-</article>
-<article>
-<img alt="Cartoon mule hauling release packages and checks." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/release-pack-mule.png" width="160"/>
-<span>03</span>
-<h3>Release gate görevlisi</h3>
-<p>Builds yalnızca test, live evidence ve son socket hakkında makul açıklama getirdiğinde içeri girer.</p>
-</article>
 </div>
 </section>
 </main>
