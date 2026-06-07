@@ -18,6 +18,42 @@
 <title>eMule broadband edition | eMuleBB на русском</title>
 <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" rel="stylesheet"/>
 <link href="../styles.css" rel="stylesheet"/>
+<style>
+      .install-command {
+        width: min(100%, 980px);
+        display: grid;
+        gap: 12px;
+        margin-top: 18px;
+        padding: 16px;
+        border: 1px solid rgba(21, 24, 29, 0.16);
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 10px 26px rgba(28, 32, 36, 0.08);
+      }
+      .install-command-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+        align-items: center;
+      }
+      .install-command-code {
+        min-width: 0;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: auto;
+        border: 1px solid rgba(14, 111, 118, 0.22);
+        border-radius: 8px;
+        background: #eef3f5;
+      }
+      .install-command-code code {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border: 0;
+        background: transparent;
+        white-space: nowrap;
+      }
+    </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8G02C2WFEB"></script>
 <script>
       window.dataLayer = window.dataLayer || [];
@@ -102,7 +138,7 @@
 <strong>Full x64 suite</strong>
 <button class="copy-command" data-copy-error="Select and copy" data-copy-label="Copy" data-copy-success="Copied" data-copy-text="irm https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/Bootstrap-eMuleBBSuite.ps1 | iex" type="button">Copy</button>
 </div>
-<code>irm https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/Bootstrap-eMuleBBSuite.ps1 | iex</code>
+<pre class="install-command-code"><code>irm https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/Bootstrap-eMuleBBSuite.ps1 | iex</code></pre>
 </div>
 <p class="install-standalone">Standalone app: download the RC1 ZIP, extract it, and run <code>emulebb.exe</code>.</p>
 </div>
@@ -364,23 +400,41 @@
       })();
       (function () {
         var buttons = document.querySelectorAll(".copy-command");
-        if (!buttons.length || !navigator.clipboard) {
-          buttons.forEach(function (button) {
-            button.hidden = true;
-          });
+        if (!buttons.length) {
           return;
+        }
+        function fallbackCopy(text) {
+          var textarea = document.createElement("textarea");
+          textarea.value = text;
+          textarea.setAttribute("readonly", "");
+          textarea.style.position = "fixed";
+          textarea.style.left = "-9999px";
+          document.body.appendChild(textarea);
+          textarea.select();
+          try {
+            return document.execCommand("copy");
+          } finally {
+            document.body.removeChild(textarea);
+          }
         }
         buttons.forEach(function (button) {
           var label = button.getAttribute("data-copy-label") || button.textContent;
           var success = button.getAttribute("data-copy-success") || label;
           var error = button.getAttribute("data-copy-error") || label;
           button.addEventListener("click", function () {
-            navigator.clipboard.writeText(button.getAttribute("data-copy-text") || "").then(function () {
+            var text = button.getAttribute("data-copy-text") || "";
+            var copied = navigator.clipboard && window.isSecureContext
+              ? navigator.clipboard.writeText(text).then(function () { return true; }, function () { return fallbackCopy(text); })
+              : Promise.resolve(fallbackCopy(text));
+            copied.then(function (ok) {
+              if (!ok) {
+                throw new Error("copy failed");
+              }
               button.textContent = success;
               window.setTimeout(function () {
                 button.textContent = label;
               }, 1600);
-            }, function () {
+            }).catch(function () {
               button.textContent = error;
               window.setTimeout(function () {
                 button.textContent = label;

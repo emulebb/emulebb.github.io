@@ -233,9 +233,13 @@ nav a.nav-download:hover {
 .testing-callout {
   display: grid;
   gap: 18px;
-  align-items: center;
+  align-items: stretch;
   border-bottom: 1px solid rgba(164, 119, 34, 0.36);
   background: #fff9e8;
+}
+
+.testing-callout > div {
+  min-width: 0;
 }
 
 .testing-callout h2 {
@@ -249,11 +253,11 @@ nav a.nav-download:hover {
 }
 
 .install-command {
-  max-width: 920px;
+  width: min(100%, 980px);
   display: grid;
-  gap: 10px;
+  gap: 12px;
   margin-top: 18px;
-  padding: 14px;
+  padding: 16px;
   border: 1px solid rgba(21, 24, 29, 0.16);
   border-radius: 8px;
   background: #ffffff;
@@ -261,24 +265,34 @@ nav a.nav-download:hover {
 }
 
 .install-command-header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
   align-items: center;
-  justify-content: space-between;
 }
 
 .install-command-header strong {
   font-size: 0.92rem;
 }
 
-.install-command code {
+.install-command-code {
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: auto;
+  border: 1px solid rgba(14, 111, 118, 0.22);
+  border-radius: 8px;
+  background: #eef3f5;
+}
+
+.install-command-code code {
   display: block;
   width: 100%;
-  overflow-x: auto;
   padding: 12px;
-  border-color: rgba(14, 111, 118, 0.22);
-  background: #eef3f5;
+  border: 0;
+  background: transparent;
+  font-size: 0.92rem;
+  line-height: 1.45;
   white-space: nowrap;
 }
 
@@ -304,7 +318,9 @@ nav a.nav-download:hover {
 }
 
 .install-standalone {
+  width: min(100%, 980px);
   margin-top: 12px;
+  line-height: 1.55;
 }
 
 .testing-actions {
@@ -889,6 +905,7 @@ footer {
 
   .testing-callout {
     grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
   }
