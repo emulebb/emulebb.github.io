@@ -248,6 +248,65 @@ nav a.nav-download:hover {
   color: var(--muted);
 }
 
+.install-command {
+  max-width: 920px;
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid rgba(21, 24, 29, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(28, 32, 36, 0.08);
+}
+
+.install-command-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.install-command-header strong {
+  font-size: 0.92rem;
+}
+
+.install-command code {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  padding: 12px;
+  border-color: rgba(14, 111, 118, 0.22);
+  background: #eef3f5;
+  white-space: nowrap;
+}
+
+.copy-command {
+  min-height: 36px;
+  width: auto;
+  margin: 0;
+  padding: 7px 12px;
+  border: 1px solid var(--teal);
+  border-radius: 8px;
+  background: var(--teal);
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 850;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.copy-command:hover {
+  background: #0b5960;
+  color: #ffffff;
+}
+
+.install-standalone {
+  margin-top: 12px;
+}
+
 .testing-actions {
   display: flex;
   flex-wrap: wrap;

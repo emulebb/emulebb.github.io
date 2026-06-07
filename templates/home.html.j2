@@ -130,6 +130,14 @@
 <p class="eyebrow">{{ content.install_callout.eyebrow }}</p>
 <h2>{{ content.install_callout.h2 }}</h2>
 <p>{{ content.install_callout.p | safe }}</p>
+<div aria-label="{{ content.install_callout.command_label }}" class="install-command">
+<div class="install-command-header">
+<strong>{{ content.install_callout.command_label }}</strong>
+<button class="copy-command" data-copy-error="{{ content.install_callout.copy_error }}" data-copy-label="{{ content.install_callout.copy }}" data-copy-success="{{ content.install_callout.copied }}" data-copy-text="{{ content.install_callout.command }}" type="button">{{ content.install_callout.copy }}</button>
+</div>
+<code>{{ content.install_callout.command }}</code>
+</div>
+<p class="install-standalone">{{ content.install_callout.standalone | safe }}</p>
 </div>
 <div class="testing-actions">
 <a href="{{ content.install_callout.primary_href }}">{{ content.install_callout.primary }}</a>
@@ -220,6 +228,33 @@
           if (event.target && event.target.closest("a")) {
             setOpen(false);
           }
+        });
+      })();
+      (function () {
+        var buttons = document.querySelectorAll(".copy-command");
+        if (!buttons.length || !navigator.clipboard) {
+          buttons.forEach(function (button) {
+            button.hidden = true;
+          });
+          return;
+        }
+        buttons.forEach(function (button) {
+          var label = button.getAttribute("data-copy-label") || button.textContent;
+          var success = button.getAttribute("data-copy-success") || label;
+          var error = button.getAttribute("data-copy-error") || label;
+          button.addEventListener("click", function () {
+            navigator.clipboard.writeText(button.getAttribute("data-copy-text") || "").then(function () {
+              button.textContent = success;
+              window.setTimeout(function () {
+                button.textContent = label;
+              }, 1600);
+            }, function () {
+              button.textContent = error;
+              window.setTimeout(function () {
+                button.textContent = label;
+              }, 2200);
+            });
+          });
         });
       })();
     </script>

@@ -107,7 +107,15 @@
 <div>
 <p class="eyebrow">Download</p>
 <h2>Install RC1 with one PowerShell line, or download the ZIP manually.</h2>
-<p>Full x64 suite: <code>irm https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/Bootstrap-eMuleBBSuite.ps1 | iex</code>. Standalone app: download the RC1 ZIP, extract it, and run <code>emulebb.exe</code>.</p>
+<p>Use the full-suite bootstrapper for eMuleBB plus controller integration, or use the standalone ZIP when you only want the desktop app.</p>
+<div aria-label="Full x64 suite" class="install-command">
+<div class="install-command-header">
+<strong>Full x64 suite</strong>
+<button class="copy-command" data-copy-error="Select and copy" data-copy-label="Copy" data-copy-success="Copied" data-copy-text="irm https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/Bootstrap-eMuleBBSuite.ps1 | iex" type="button">Copy</button>
+</div>
+<code>irm https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/Bootstrap-eMuleBBSuite.ps1 | iex</code>
+</div>
+<p class="install-standalone">Standalone app: download the RC1 ZIP, extract it, and run <code>emulebb.exe</code>.</p>
 </div>
 <div class="testing-actions">
 <a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">Open RC1 release</a>
@@ -344,6 +352,33 @@
           if (event.target && event.target.closest("a")) {
             setOpen(false);
           }
+        });
+      })();
+      (function () {
+        var buttons = document.querySelectorAll(".copy-command");
+        if (!buttons.length || !navigator.clipboard) {
+          buttons.forEach(function (button) {
+            button.hidden = true;
+          });
+          return;
+        }
+        buttons.forEach(function (button) {
+          var label = button.getAttribute("data-copy-label") || button.textContent;
+          var success = button.getAttribute("data-copy-success") || label;
+          var error = button.getAttribute("data-copy-error") || label;
+          button.addEventListener("click", function () {
+            navigator.clipboard.writeText(button.getAttribute("data-copy-text") || "").then(function () {
+              button.textContent = success;
+              window.setTimeout(function () {
+                button.textContent = label;
+              }, 1600);
+            }, function () {
+              button.textContent = error;
+              window.setTimeout(function () {
+                button.textContent = label;
+              }, 2200);
+            });
+          });
         });
       })();
     </script>
