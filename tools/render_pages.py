@@ -132,6 +132,7 @@ DOCS = [
     (f"{DOCS_SITE_URL}/reference/GUIDE-STACK-INTEGRATIONS/", "stack_integrations"),
     (f"{DOCS_SITE_URL}/reference/GUIDE-CONTROLLERS-REST/", "controllers"),
     (f"{DOCS_SITE_URL}/reference/GUIDE-DOWNLOADS-SEARCH/", "downloads"),
+    (f"{DOCS_SITE_URL}/reference/GUIDE-P2P-OVERLORD-EMULE-AGENT/", "p2p_overlord_agent"),
     (f"{DOCS_SITE_URL}/active/RELEASE-0.7.3/", "release"),
 ]
 
@@ -141,6 +142,9 @@ REPOS = [
     ("https://github.com/emulebb/emulebb-build", "build"),
     ("https://github.com/emulebb/emulebb-build-tests", "tests"),
     ("https://github.com/emulebb/emulebb-tooling", "tooling"),
+    ("https://github.com/emulebb/p2p-overlord-agents", "p2p_overlord_agents"),
+    ("https://github.com/emulebb/p2p-overlord-be", "p2p_overlord_be"),
+    ("https://github.com/emulebb/p2p-overlord-tooling", "p2p_overlord_tooling"),
     ("https://github.com/emulebb/amule", "amule"),
 ]
 
@@ -380,6 +384,8 @@ DOC_COPY = {'en': {'emulebb': ('eMuleBB product guide',
                         'Redacted snapshots, dumps, startup traces, unsafe diagnostic REST, and metadata diagnostics.'),
         'troubleshooting': ('Troubleshooting guide',
                             'Symptom-led checks for Low ID, network issues, sharing, and automation.'),
+        'p2p_overlord_agent': ('p2p-overlord eMule agent',
+                               'Headless Rust Kad/eD2K agent boundary, source docs, and eMuleBB contract notes.'),
         'release': ('0.7.3 release dashboard',
                     'Current RC gates, automated test evidence, SBOM/package proof, and readiness rules.')}}
 
@@ -393,6 +399,7 @@ REPO_COPY = {'en': {'emule': 'flagship desktop app and product source',
         'goed2k_server': 'eD2K server work for deterministic testing and ecosystem services',
         'p2p_overlord_agents': 'exploratory agents for the p2p-overlord P2P suite',
         'p2p_overlord_be': 'exploratory headless Rust eD2K/Kad client backend work',
+        'p2p_overlord_tooling': 'scenario manifests, parity runners, reports, and quality guards',
         'amule': 'Windows build and validation track for aMule users',
         'miniupnpc': 'Windows build and validation track for MiniUPnP/miniupnpc'}}
 
@@ -813,6 +820,7 @@ def stock_repo_copy(t: dict[str, Any]) -> dict[str, str]:
         "goed2k_server": "goed2k eD2K server work for deterministic tests and ecosystem services.",
         "p2p_overlord_agents": "Exploratory p2p-overlord agents for headless P2P workflows.",
         "p2p_overlord_be": "Exploratory Rust eD2K/Kad backend work in the p2p-overlord suite.",
+        "p2p_overlord_tooling": "Scenario manifests, parity runners, reports, and quality guards for p2p-overlord.",
         "amule": "Windows build and validation track for aMule users.",
         "miniupnpc": "Windows build and validation track for MiniUPnP/miniupnpc.",
     }
@@ -1031,6 +1039,7 @@ def title_for_repo(key: str) -> str:
         "goed2k_server": "goed2k-server",
         "p2p_overlord_agents": "p2p-overlord-agents",
         "p2p_overlord_be": "p2p-overlord-be",
+        "p2p_overlord_tooling": "p2p-overlord-tooling",
         "amule": "aMule Windows builds",
         "miniupnpc": "emulebb-miniupnp",
     }[key]
