@@ -31,10 +31,9 @@ backlog. Those live in the public `emulebb-tooling` docs.
   - `docs/reference/GUIDE-DOWNLOADS-SEARCH.md`
   - `docs/reference/GUIDE-SHARING.md`
   - `docs/reference/GUIDE-CONTROLLERS-REST.md`
-  - `docs/reference/FEATURE-BROADBAND.md`
-  - `docs/reference/FEATURE-MODERN-LIMITS.md`
-  - `docs/reference/FEATURE-KAD.md`
-  - `docs/reference/FEATURE-PEERS-BANS.md`
+  - `docs/reference/RELEASED-BEHAVIOR-SUMMARY.md`
+  - `docs/reference/GUIDE-PREFERENCES.md`
+  - `docs/reference/GUIDE-IP-FILTERS.md`
   - `docs/rest/REST-API-CONTRACT.md`
   - `docs/rest/REST-API-OPENAPI.yaml`
 
