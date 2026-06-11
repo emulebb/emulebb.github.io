@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="binding, paylaşım, yükleme yuvaları, Kad, REST ve 0.7.3-rc.1 testleri için eMuleBB&#39;yi denemek isteyen eMule kullanıcılarına kısa yanıtlar." name="description"/>
+<meta content="index,follow" name="robots"/>
+<meta content="eMuleBB" name="author"/>
+<meta content="FAQ | eMule broadband edition" property="og:title"/>
+<meta content="eMule kullanıcıları için hızlı eMuleBB yanıtları." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://emulebb.github.io/tr/faq/" property="og:url"/>
+<meta content="eMule broadband edition" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<link href="https://emulebb.github.io/tr/faq/" rel="canonical"/>
+<link href="https://emulebb.github.io/sitemap.xml" rel="sitemap" type="application/xml"/><link href="https://emulebb.github.io/faq/" hreflang="en" rel="alternate"/><link href="https://emulebb.github.io/it/faq/" hreflang="it" rel="alternate"/><link href="https://emulebb.github.io/es/faq/" hreflang="es" rel="alternate"/><link href="https://emulebb.github.io/pt-br/faq/" hreflang="pt-BR" rel="alternate"/><link href="https://emulebb.github.io/pt-pt/faq/" hreflang="pt-PT" rel="alternate"/><link href="https://emulebb.github.io/fr/faq/" hreflang="fr" rel="alternate"/><link href="https://emulebb.github.io/de/faq/" hreflang="de" rel="alternate"/><link href="https://emulebb.github.io/pl/faq/" hreflang="pl" rel="alternate"/><link href="https://emulebb.github.io/nl/faq/" hreflang="nl" rel="alternate"/><link href="https://emulebb.github.io/ru/faq/" hreflang="ru" rel="alternate"/><link href="https://emulebb.github.io/tr/faq/" hreflang="tr" rel="alternate"/><link href="https://emulebb.github.io/uk/faq/" hreflang="uk" rel="alternate"/><link href="https://emulebb.github.io/ko/faq/" hreflang="ko" rel="alternate"/><link href="https://emulebb.github.io/ar-ae/faq/" hreflang="ar-AE" rel="alternate"/><link href="https://emulebb.github.io/zh-cn/faq/" hreflang="zh-CN" rel="alternate"/><link href="https://emulebb.github.io/ja/faq/" hreflang="ja" rel="alternate"/><link href="https://emulebb.github.io/faq/" hreflang="x-default" rel="alternate"/>
+<link href="../../assets/brand/emulebb-favicon.ico" rel="icon" type="image/x-icon"/>
+<title>FAQ | eMule broadband edition</title>
+<link href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" rel="stylesheet"/>
+<link href="../../styles.css" rel="stylesheet"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8G02C2WFEB"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8G02C2WFEB');
+    </script>
+<script type="application/ld+json">
+      {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                        "@type": "Question",
+                        "name": "eMule\u0027yi bir arabirime veya VPN\u0027e nas\u0131l bind ederim?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB, P2P trafi\u011fini adland\u0131r\u0131lm\u0131\u015f bir arabirime veya yerel adrese bind edebilir ve hedef yoksa ba\u015flatmay\u0131 engelleyebilir. VPN kill switch\u0027inizi, g\u00fcvenlik duvar\u0131n\u0131z\u0131 ve WebServer/REST bind politikan\u0131z\u0131 ayr\u0131 tutun."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMule\u0027de k\u00fct\u00fcphanemi nas\u0131l payla\u015f\u0131r\u0131m?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB tan\u0131d\u0131k Shared Files modelini korur: \u00f6zenle se\u00e7ilmi\u015f k\u00f6kler ekleyin, Temp\u0027i payla\u015f\u0131mlar\u0131n d\u0131\u015f\u0131nda tutun, kararl\u0131 yollar kullan\u0131n ve b\u00fcy\u00fctmeden \u00f6nce hashing\u0027in bitmesini bekleyin."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMule\u0027de y\u00fckleme yuvalar\u0131n\u0131 nas\u0131l s\u0131n\u0131rland\u0131r\u0131r\u0131m?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB, s\u0131n\u0131rl\u0131 bir geni\u015f bant y\u00fckleme yuvas\u0131 hedefi, zay\u0131f yuva geri d\u00f6n\u00fc\u015f\u00fcm\u00fc ve pratik tan\u0131lama ekler; b\u00f6ylece h\u0131zl\u0131 hatlar kuyru\u011fu bo\u011fmadan yararl\u0131 kal\u0131r."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMuleBB, eMule\u0027nin bir protokol fork\u0027u mu?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Hay\u0131r. eMuleBB stok uyumlu eD2K ve Kad davran\u0131\u015f\u0131n\u0131 varsay\u0131lan olarak korur, ard\u0131ndan \u00e7evresindeki yerel s\u0131n\u0131rlar\u0131, otomasyonu, tan\u0131lamay\u0131 ve s\u00fcr\u00fcm disiplinini geli\u015ftirir."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Test i\u00e7in hangi eMule s\u00fcr\u00fcm\u00fcn\u00fc kullanmal\u0131y\u0131m?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "RC testi i\u00e7in yay\u0131nlanm\u0131\u015f eMuleBB 0.7.3-rc.1 GitHub Release\u0027ini kullan\u0131n. Kararl\u0131 hedef, ge\u00e7itler ge\u00e7ildikten sonra 0.7.3 olarak kal\u0131r."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMule WebServer veya REST\u0027i nas\u0131l g\u00fcvende tutar\u0131m?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB, WebServer ve REST\u0027i g\u00fcvenilir denetleyici y\u00fczeyleri olarak ele al\u0131r. Yaln\u0131zca gerekti\u011finde etkinle\u015ftirin, bilin\u00e7li bind yap\u0131n, bir API key kullan\u0131n ve geni\u015f eri\u015fimden ka\u00e7\u0131n\u0131n."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMule\u0027yi Kad ve sunucularla nas\u0131l kullan\u0131r\u0131m?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB klasik sunucu, k\u00fcresel ve Kad arama i\u015f ak\u0131\u015flar\u0131n\u0131 korur. G\u00fcvenilir sunucu listeleriyle ba\u015flay\u0131n, Kad\u0027\u0131 bilin\u00e7li olarak bootstrap edin ve \u00e7ok ayar de\u011fi\u015ftirmeden \u00f6nce Low ID veya g\u00fcvenlik duvar\u0131 arkas\u0131ndaki Kad\u0027\u0131 te\u015fhis edin."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMule\u0027de b\u00fcy\u00fck payla\u015f\u0131lan k\u00fct\u00fcphaneleri nas\u0131l y\u00f6netirim?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "eMuleBB b\u00fcy\u00fck k\u00fct\u00fcphaneler i\u00e7in yap\u0131lm\u0131\u015ft\u0131r: k\u00f6kleri kademeli ekleyin, uzun yol destekli Windows kurulumlar\u0131 kullan\u0131n, share-ignore kurallar\u0131n\u0131 g\u00f6zden ge\u00e7irin ve ba\u015flang\u0131\u00e7 \u00f6nbelle\u011finin yerle\u015fmesini bekleyin."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "eMule\u0027yi harici ara\u00e7larla otomatikle\u015ftirebilir miyim?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Evet. eMuleBB, g\u00fcvenilir yerel denetleyiciler i\u00e7in kimli\u011fi do\u011frulanm\u0131\u015f bir JSON REST API sunarken aktar\u0131m ve payla\u015f\u0131m\u0131n yerel semanti\u011fini masa\u00fcst\u00fc uygulamas\u0131nda tutar."
+                        }
+                }
+              ]
+      }
+    </script>
+</head>
+<body>
+<header class="site-header">
+<a aria-label="eMule broadband edition home" class="brand" href="https://emulebb.github.io/tr/">
+<img alt="eMuleBB broadband edition" class="brand-logo" decoding="async" height="160" src="../../assets/brand/emulebb-broadband-edition-logo.png" width="151"/>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Ana gezinmeyi aç" class="menu-toggle" type="button">
+<span class="menu-toggle-label">Menü</span>
+</button>
+<nav aria-label="SSS gezinmesi" id="primary-nav">
+<a href="https://emulebb.github.io/tr/">Ana sayfa</a>
+<a href="https://emulebb.github.io/tr/faq/">SSS</a>
+<a href="https://emulebb.github.io/emulebb-tooling/">Dokümanlar</a>
+<a href="https://emulebb.github.io/languages/">Diller</a>
+<a href="https://github.com/emulebb">GitHub</a>
+</nav>
+</header>
+<main class="faq-page" id="top">
+<section class="section faq-hero">
+<p class="eyebrow">SSS</p>
+<h1>eMuleBB için yanıtlanan yaygın eMule soruları</h1>
+<p class="lead">Klasik eMule iş akışını daha iyi geniş bant denetimi, daha güvenli ağ ve daha net sürüm kanıtıyla isteyen kullanıcılara kısa yanıtlar.</p>
+</section>
+<section class="section faq-section" id="questions">
+<div class="faq-list">
+<article>
+<h2>eMule&#39;yi bir arabirime veya VPN&#39;e nasıl bind ederim?</h2>
+<p>eMuleBB, P2P trafiğini adlandırılmış bir arabirime veya yerel adrese bind edebilir ve hedef yoksa başlatmayı engelleyebilir. VPN kill switch&#39;inizi, güvenlik duvarınızı ve WebServer/REST bind politikanızı ayrı tutun.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">Daha fazla oku: Ağ kılavuzu</a>
+</article>
+<article>
+<h2>eMule&#39;de kütüphanemi nasıl paylaşırım?</h2>
+<p>eMuleBB tanıdık Shared Files modelini korur: özenle seçilmiş kökler ekleyin, Temp&#39;i paylaşımların dışında tutun, kararlı yollar kullanın ve büyütmeden önce hashing&#39;in bitmesini bekleyin.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">Daha fazla oku: Paylaşım kılavuzu</a>
+</article>
+<article>
+<h2>eMule&#39;de yükleme yuvalarını nasıl sınırlandırırım?</h2>
+<p>eMuleBB, sınırlı bir geniş bant yükleme yuvası hedefi, zayıf yuva geri dönüşümü ve pratik tanılama ekler; böylece hızlı hatlar kuyruğu boğmadan yararlı kalır.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">Daha fazla oku: İndirme ve arama kılavuzu</a>
+</article>
+<article>
+<h2>eMuleBB, eMule&#39;nin bir protokol fork&#39;u mu?</h2>
+<p>Hayır. eMuleBB stok uyumlu eD2K ve Kad davranışını varsayılan olarak korur, ardından çevresindeki yerel sınırları, otomasyonu, tanılamayı ve sürüm disiplinini geliştirir.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">Daha fazla oku: Ürün kılavuzu</a>
+</article>
+<article>
+<h2>Test için hangi eMule sürümünü kullanmalıyım?</h2>
+<p>RC testi için yayınlanmış eMuleBB 0.7.3-rc.1 GitHub Release&#39;ini kullanın. Kararlı hedef, geçitler geçildikten sonra 0.7.3 olarak kalır.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">Daha fazla oku: 0.7.3 sürüm panosu</a>
+</article>
+<article>
+<h2>eMule WebServer veya REST&#39;i nasıl güvende tutarım?</h2>
+<p>eMuleBB, WebServer ve REST&#39;i güvenilir denetleyici yüzeyleri olarak ele alır. Yalnızca gerektiğinde etkinleştirin, bilinçli bind yapın, bir API key kullanın ve geniş erişimden kaçının.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">Daha fazla oku: Denetleyiciler ve REST kılavuzu</a>
+</article>
+<article>
+<h2>eMule&#39;yi Kad ve sunucularla nasıl kullanırım?</h2>
+<p>eMuleBB klasik sunucu, küresel ve Kad arama iş akışlarını korur. Güvenilir sunucu listeleriyle başlayın, Kad&#39;ı bilinçli olarak bootstrap edin ve çok ayar değiştirmeden önce Low ID veya güvenlik duvarı arkasındaki Kad&#39;ı teşhis edin.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">Daha fazla oku: Ağ kılavuzu</a>
+</article>
+<article>
+<h2>eMule&#39;de büyük paylaşılan kütüphaneleri nasıl yönetirim?</h2>
+<p>eMuleBB büyük kütüphaneler için yapılmıştır: kökleri kademeli ekleyin, uzun yol destekli Windows kurulumları kullanın, share-ignore kurallarını gözden geçirin ve başlangıç önbelleğinin yerleşmesini bekleyin.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">Daha fazla oku: Paylaşım kılavuzu</a>
+</article>
+<article>
+<h2>eMule&#39;yi harici araçlarla otomatikleştirebilir miyim?</h2>
+<p>Evet. eMuleBB, güvenilir yerel denetleyiciler için kimliği doğrulanmış bir JSON REST API sunarken aktarım ve paylaşımın yerel semantiğini masaüstü uygulamasında tutar.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">Daha fazla oku: Denetleyiciler ve REST kılavuzu</a>
+</article>
+</div>
+</section>
+</main>
+<footer>
+<span>eMule broadband edition</span>
+<div aria-label="SSS gezinmesi" class="footer-links">
+        <a href="https://emulebb.github.io/tr/">Ana sayfa</a>
+        <a href="https://emulebb.github.io/languages/">Diller</a>
+        <a href="https://github.com/emulebb">GitHub</a>
+        <a href="https://discord.gg/uWQa9g37">Discord</a>
+      </div>
+</footer>
+<script>
+      (function () {
+        var button = document.querySelector(".menu-toggle");
+        var nav = document.getElementById("primary-nav");
+        if (!button || !nav) {
+          return;
+        }
+        function setOpen(open) {
+          nav.classList.toggle("is-open", open);
+          button.setAttribute("aria-expanded", String(open));
+          button.setAttribute("aria-label", open ? "Ana gezinmeyi kapat" : "Ana gezinmeyi a\u00e7");
+        }
+        setOpen(false);
+        button.addEventListener("click", function () {
+          setOpen(button.getAttribute("aria-expanded") !== "true");
+        });
+        nav.addEventListener("click", function (event) {
+          if (event.target && event.target.closest("a")) {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
+</body>
+</html>
