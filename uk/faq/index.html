@@ -112,7 +112,7 @@
 <a aria-label="eMule broadband edition home" class="brand" href="https://emulebb.github.io/uk/">
 <img alt="eMuleBB broadband edition" class="brand-logo" decoding="async" height="160" src="../../assets/brand/emulebb-broadband-edition-logo.png" width="151"/>
 </a>
-<button aria-controls="primary-nav" aria-expanded="false" aria-label="Відкрити головну навігацію" class="menu-toggle" type="button">
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Відкрити основну навігацію" class="menu-toggle" type="button">
 <span class="menu-toggle-label">Меню</span>
 </button>
 <nav aria-label="Навігація FAQ" id="primary-nav">
@@ -198,7 +198,7 @@
         function setOpen(open) {
           nav.classList.toggle("is-open", open);
           button.setAttribute("aria-expanded", String(open));
-          button.setAttribute("aria-label", open ? "\u0417\u0430\u043a\u0440\u0438\u0442\u0438 \u0433\u043e\u043b\u043e\u0432\u043d\u0443 \u043d\u0430\u0432\u0456\u0433\u0430\u0446\u0456\u044e" : "\u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0438 \u0433\u043e\u043b\u043e\u0432\u043d\u0443 \u043d\u0430\u0432\u0456\u0433\u0430\u0446\u0456\u044e");
+          button.setAttribute("aria-label", open ? "\u0417\u0430\u043a\u0440\u0438\u0442\u0438 \u043e\u0441\u043d\u043e\u0432\u043d\u0443 \u043d\u0430\u0432\u0456\u0433\u0430\u0446\u0456\u044e" : "\u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0438 \u043e\u0441\u043d\u043e\u0432\u043d\u0443 \u043d\u0430\u0432\u0456\u0433\u0430\u0446\u0456\u044e");
         }
         setOpen(false);
         button.addEventListener("click", function () {
