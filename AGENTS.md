@@ -1,13 +1,15 @@
-# eMuleBB Pages Agent Policy
+# Rules
+
+- Read `EMULEBB_WORKSPACE_ROOT\repos\emulebb-tooling\docs\WORKSPACE-POLICY.md`
+  first; it is authoritative for workspace-wide rules.
+- Start from
+  `EMULEBB_WORKSPACE_ROOT\repos\emulebb-tooling\docs\reference\AGENT-CHECKLIST.md`
+  for the repeatable operating path.
+- Then read `docs/SITE-HANDBOOK.md` before making content, layout, SEO, locale,
+  or publishing-policy changes.
 
 This repository publishes the public GitHub Pages site for eMule broadband
-edition.
-
-Read and follow
-`EMULEBB_WORKSPACE_ROOT\repos\emulebb-tooling\docs\WORKSPACE-POLICY.md` first
-when this repo is checked out under the canonical eMuleBB workspace. Then read
-`docs/SITE-HANDBOOK.md` before making content, layout, SEO, locale, or
-publishing-policy changes.
+edition. Everything below is this repo's local deltas only.
 
 ## Hard Rules
 
