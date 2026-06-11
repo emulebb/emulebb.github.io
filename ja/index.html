@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="eMuleBB は upload 制御、VPN/interface binding、大規模ライブラリ、REST automation、eD2K、Kad 向けの現代的な eMule です。" name="description"/>
+<meta content="eMuleBB RC1 を公開しました。PowerShell スイートのブートストラッパー、またはスタンドアロン ZIP で eMule broadband edition をインストールできます。パッケージの来歴は GitHub でビルドされています。" name="description"/>
 <meta content="index,follow" name="robots"/>
 <meta content="eMuleBB" name="author"/>
-<meta content="eMule broadband edition | 日本語" property="og:title"/>
-<meta content="eMuleBB は upload 制御、VPN/interface binding、大規模ライブラリ、REST automation、eD2K、Kad 向けの現代的な eMule です。" property="og:description"/>
+<meta content="eMuleBB ホーム | eMule broadband edition" property="og:title"/>
+<meta content="eMuleBB はブロードバンドに焦点を当てた独立した eMule 製品であり、Windows 向け P2P ビルド、コントローラーツール、リリース証跡、そして実験的な eD2K/Kad エンジニアリングの拠点です。" property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://emulebb.github.io/ja/" property="og:url"/>
 <meta content="eMule broadband edition" property="og:site_name"/>
@@ -15,7 +15,7 @@
 <link href="https://emulebb.github.io/ja/" rel="canonical"/>
 <link href="https://emulebb.github.io/sitemap.xml" rel="sitemap" type="application/xml"/><link href="https://emulebb.github.io/" hreflang="en" rel="alternate"/><link href="https://emulebb.github.io/ar-ae/" hreflang="ar-AE" rel="alternate"/><link href="https://emulebb.github.io/eu/" hreflang="eu" rel="alternate"/><link href="https://emulebb.github.io/bg/" hreflang="bg" rel="alternate"/><link href="https://emulebb.github.io/ca/" hreflang="ca" rel="alternate"/><link href="https://emulebb.github.io/cs/" hreflang="cs" rel="alternate"/><link href="https://emulebb.github.io/da/" hreflang="da" rel="alternate"/><link href="https://emulebb.github.io/el/" hreflang="el" rel="alternate"/><link href="https://emulebb.github.io/es/" hreflang="es" rel="alternate"/><link href="https://emulebb.github.io/ast/" hreflang="ast" rel="alternate"/><link href="https://emulebb.github.io/et/" hreflang="et" rel="alternate"/><link href="https://emulebb.github.io/fa/" hreflang="fa" rel="alternate"/><link href="https://emulebb.github.io/fi/" hreflang="fi" rel="alternate"/><link href="https://emulebb.github.io/br/" hreflang="br" rel="alternate"/><link href="https://emulebb.github.io/pt-br/" hreflang="pt-BR" rel="alternate"/><link href="https://emulebb.github.io/pt-pt/" hreflang="pt-PT" rel="alternate"/><link href="https://emulebb.github.io/gl/" hreflang="gl" rel="alternate"/><link href="https://emulebb.github.io/he/" hreflang="he" rel="alternate"/><link href="https://emulebb.github.io/hu/" hreflang="hu" rel="alternate"/><link href="https://emulebb.github.io/it/" hreflang="it" rel="alternate"/><link href="https://emulebb.github.io/ja/" hreflang="ja" rel="alternate"/><link href="https://emulebb.github.io/ko/" hreflang="ko" rel="alternate"/><link href="https://emulebb.github.io/lt/" hreflang="lt" rel="alternate"/><link href="https://emulebb.github.io/lv/" hreflang="lv" rel="alternate"/><link href="https://emulebb.github.io/mt/" hreflang="mt" rel="alternate"/><link href="https://emulebb.github.io/nb/" hreflang="nb" rel="alternate"/><link href="https://emulebb.github.io/ru/" hreflang="ru" rel="alternate"/><link href="https://emulebb.github.io/de/" hreflang="de" rel="alternate"/><link href="https://emulebb.github.io/fr/" hreflang="fr" rel="alternate"/><link href="https://emulebb.github.io/pl/" hreflang="pl" rel="alternate"/><link href="https://emulebb.github.io/nl/" hreflang="nl" rel="alternate"/><link href="https://emulebb.github.io/nn/" hreflang="nn" rel="alternate"/><link href="https://emulebb.github.io/ro/" hreflang="ro" rel="alternate"/><link href="https://emulebb.github.io/sl/" hreflang="sl" rel="alternate"/><link href="https://emulebb.github.io/sq/" hreflang="sq" rel="alternate"/><link href="https://emulebb.github.io/sv/" hreflang="sv" rel="alternate"/><link href="https://emulebb.github.io/tr/" hreflang="tr" rel="alternate"/><link href="https://emulebb.github.io/uk/" hreflang="uk" rel="alternate"/><link href="https://emulebb.github.io/ug-cn/" hreflang="ug-CN" rel="alternate"/><link href="https://emulebb.github.io/ca-valencia/" hreflang="ca-ES-valencia" rel="alternate"/><link href="https://emulebb.github.io/ca-valencia-racv/" hreflang="ca-ES-valencia-x-racv" rel="alternate"/><link href="https://emulebb.github.io/vi/" hreflang="vi" rel="alternate"/><link href="https://emulebb.github.io/zh-cn/" hreflang="zh-CN" rel="alternate"/><link href="https://emulebb.github.io/zh-tw/" hreflang="zh-TW" rel="alternate"/><link href="https://emulebb.github.io/" hreflang="x-default" rel="alternate"/>
 <link href="../assets/brand/emulebb-favicon.ico" rel="icon" type="image/x-icon"/>
-<title>eMule broadband edition | 日本語</title>
+<title>eMuleBB ホーム | eMule broadband edition</title>
 <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" rel="stylesheet"/>
 <link href="../styles.css" rel="stylesheet"/>
 <style>
@@ -72,7 +72,7 @@
               "operatingSystem": "Windows",
               "url": "https://emulebb.github.io/ja/",
               "codeRepository": "https://github.com/emulebb/emulebb",
-              "description": "eMuleBB \u306f upload \u5236\u5fa1\u3001VPN/interface binding\u3001\u5927\u898f\u6a21\u30e9\u30a4\u30d6\u30e9\u30ea\u3001REST automation\u3001eD2K\u3001Kad \u5411\u3051\u306e\u73fe\u4ee3\u7684\u306a eMule \u3067\u3059\u3002"
+              "description": "eMuleBB \u306f eMule broadband edition \u306e\u62e0\u70b9\u3067\u3059\u3002\u30a2\u30c3\u30d7\u30ed\u30fc\u30c9\u5236\u5fa1\u3001\u81ea\u52d5\u30c6\u30b9\u30c8\u3001SBOM \u4ed8\u304d\u30d1\u30c3\u30b1\u30fc\u30b8\u3001REST automation\u3001eD2K/Kad \u4e92\u63db\u6027\u3001\u305d\u3057\u3066 aMuTorrent\u30fbProwlarr\u30fbRadarr\u30fbSonarr \u3068\u306e\u3059\u3050\u4f7f\u3048\u308b\u7d71\u5408\u7d4c\u8def\u3092\u5099\u3048\u305f\u3001\u30d6\u30ed\u30fc\u30c9\u30d0\u30f3\u30c9\u5fd7\u5411\u306e\u72ec\u7acb\u3057\u305f eMule \u88fd\u54c1\u3067\u3059\u3002\u6700\u521d\u306e\u516c\u958b\u30ea\u30ea\u30fc\u30b9\u5019\u88dc 0.7.3-rc.1 \u306f GitHub Releases \u3067\u516c\u958b\u3055\u308c\u3066\u3044\u307e\u3059\u3002"
       }
     </script>
 </head>
@@ -84,46 +84,49 @@
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="メインナビゲーションを開く" class="menu-toggle" type="button">
 <span class="menu-toggle-label">メニュー</span>
 </button>
-<nav aria-label="メインナビゲーションを開く" id="primary-nav">
-<a href="#why">理由</a>
+<nav aria-label="メインナビゲーション" id="primary-nav">
+<a href="#why">なぜ</a>
 <a href="#features">機能</a>
+<a class="nav-download" href="#install">ダウンロード</a>
 <a href="#docs">ガイド</a>
-<a class="nav-download" href="#install">Download</a>
-<a href="#repos">Repos</a>
+<a href="#repos">リポジトリ</a>
 <a href="https://emulebb.github.io/ja/faq/">FAQ</a>
 </nav>
 </header>
 <main id="top">
 <section class="hero">
 <div class="hero-copy">
-<p class="eyebrow">eMuleBB が従来 client の周囲に追加するもの。</p>
-<h1>eMuleBB は eD2K と Kad を本気のユーザーにとって使える形で保ちます。</h1>
-<p class="lead">高速 upload 回線、大きな共有ライブラリ、長時間の Windows セッション、ローカル controller ワークフロー向けの eMule です。</p>
-<div aria-label="公開リポジトリ。" class="actions">
-<a class="button primary" href="#install">Install</a>
+<p class="eyebrow">ブロードバンド P2P のための eMuleBB ホーム</p>
+<h1>eMuleBB は P2P の人々が作るブロードバンド eMule 製品です。</h1>
+<p class="lead">RC1 を公開しました。高速なアップロード回線、大規模な共有ライブラリ、常時稼働セッション、REST コントローラーのワークフロー、Arr 統合、そして GitHub でビルドされたパッケージ証跡のための本格的な Windows eMule ラインです。</p>
+<div aria-label="プロジェクトリンク" class="actions">
+<a class="button primary" href="#install">RC1 をダウンロード</a>
 <a class="button secondary" href="https://github.com/emulebb/emulebb">ソース</a>
 </div>
-<div aria-label="Download releases" class="release-links">
-<span>Download releases</span>
+<div aria-label="リリースをダウンロード" class="release-links">
+<span>リリースをダウンロード</span>
 <a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.1">eMuleBB RC1</a>
 <a href="https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.1/emulebb-0.7.3-rc.1-x64.zip">x64 ZIP</a>
 <a href="https://github.com/emulebb/amutorrent/releases/tag/amutorrent-v3.8.5-emulebb-v0.7.3-rc.1">aMuTorrent RC1</a>
 </div>
 </div>
-<aside aria-label="eMuleBB" class="hero-panel">
-<p class="panel-kicker">eMuleBB</p>
-<h2>互換性を守りながら古いコアの周囲を現代化します。</h2>
-<p>eMuleBB は従来の eMule 操作を保ちつつ、明示的な制限、診断、REST API、release 検証を追加します。</p>
+<aside aria-label="eMuleBB の概要" class="hero-panel">
+<p class="panel-kicker">製品の姿勢</p>
+<h2>eMuleBB が製品です。エコシステムは証跡のラボです。</h2>
+<p>ネットワークが重要な部分では、デスクトップアプリはストック互換を保ちます。RC1 スイートは、その周囲にローカルなコントローラーのワークフローを追加しますが、eMuleBB を汎用の torrent シェルに変えることはありません。</p>
 <ul class="signal-list">
-<li>eD2K/Kad</li>
-<li>Upload</li>
-<li>Testing</li>
-<li>RC1</li>
-<li>Performance</li>
-<li>REST API</li>
-<li>0.7.3-rc.1</li>
+<li>0.7.3-rc.1 公開済み</li>
+<li>1 行のスイートブートストラップ</li>
+<li>手動のスタンドアロン ZIP</li>
+<li>GitHub Actions ビルド</li>
+<li>マニフェストのハッシュ検証</li>
+<li>SPDX SBOM</li>
+<li>aMuTorrent コントローラー</li>
+<li>Prowlarr Torznab</li>
+<li>Radarr/Sonarr qBit アダプター</li>
+<li>ストック eD2K/Kad 互換性</li>
 <li>Rendered HTML product docs</li>
-<li>SPDX SBOM package evidence</li>
+<li>RC1 on GitHub Releases</li>
 </ul>
 </aside>
 </section>
@@ -147,172 +150,159 @@
 </div>
 </section>
 <section class="intro">
-<p>eMuleBB は従来の eMule 操作を保ちつつ、明示的な制限、診断、REST API、release 検証を追加します。</p>
+<p>ここは <strong>eMuleBB</strong> の拠点です。<strong>eMule broadband edition</strong> は、eMule の分散共有モデルを今も大切にし、それを現代的なソフトウェアのように運用したい人のための独立した製品です。RC1 パッケージは、フルスイートのブートストラッパー、スタンドアロン ZIP、マニフェスト、ハッシュ、SBOM、そして対応する aMuTorrent コントローラーのアセットとともに GitHub Releases で公開されています。</p>
 </section>
 <section class="section motivation" id="why">
 <div class="section-heading">
-<p class="eyebrow">理由</p>
-<h2>古い client は、安心して運用できるときだけ価値があります。</h2>
-<p>eMuleBB は従来の eMule 操作を保ちつつ、明示的な制限、診断、REST API、release 検証を追加します。</p>
+<p class="eyebrow">なぜ</p>
+<h2>P2P ソフトウェアは実際のセッションを生き延びることで信頼を得る</h2>
+<p>eMuleBB は製品としての取り組みであり、同時にエンジニアリングの実践でもあります。実際のネットワーク挙動を持つ複雑なネイティブ Windows クライアントを保ちつつ、現代的なビルド、テスト、ドキュメント、自動化、リリース証跡で取り囲みます。</p>
 </div>
 <div aria-label="eMuleBB motivation" class="motivation-grid">
 <article>
-<span>eD2K/Kad</span>
-<h3>eD2K と Kad を実用的に保つ</h3>
-<p>eMuleBB は従来の eMule 操作を保ちつつ、明示的な制限、診断、REST API、release 検証を追加します。</p>
+<span>製品上の理由</span>
+<h3>eMuleBB は独立した製品</h3>
+<p>目標は見た目だけの mod、プロトコルのフォーク、汎用ダウンローダーのシェルではありません。長時間のセッション、希少なファイル、意図的なシード、そして今もネイティブのデスクトップワークフローを望むパワーユーザーのための、ブロードバンド志向の eMule ラインです。</p>
 </article>
 <article>
-<span>Upload</span>
-<h3>upload とネットワークを明確に制御</h3>
-<p>高速 upload 回線、大きな共有ライブラリ、長時間の Windows セッション、ローカル controller ワークフロー向けの eMule です。</p>
+<span>技術上の理由</span>
+<h3>P2P の挙動を検査可能にする</h3>
+<p>アップロードスロット、タイムアウト、バッファ、大規模ライブラリ、WebServer の公開、REST 制御、パッケージ証跡を明示的にすることで、各変更をレビュー・テスト・文書化・調整できるようにします。</p>
 </article>
 <article>
-<span>Release</span>
-<h3>公開パッケージより前に証拠</h3>
-<p>公開版 0.7.3-rc.1 は計画中で、まだリリースされていません。</p>
+<span>エコシステム上の理由</span>
+<h3>クライアントの周りにツールを構築する</h3>
+<p>同じ workspace の規律が、アプリ、コントローラーツール、Windows ビルド、決定的な eD2K サービス、実験的なヘッドレス eD2K/Kad 作業をカバーします。すべてのラボプロジェクトが安定したエンドユーザー製品であるふりはしません。</p>
 </article>
 </div>
 </section>
 <section class="section" id="features">
 <div class="section-heading">
 <p class="eyebrow">機能</p>
-<h2>eMuleBB が従来 client の周囲に追加するもの。</h2>
-<p>高速 upload 回線、大きな共有ライブラリ、長時間の Windows セッション、ローカル controller ワークフロー向けの eMule です。</p>
+<h2>eMuleBB が従来のクライアントの周りに加えるもの</h2>
+<p>RC1 の作業は運用者に見える挙動に焦点を当てています。予測可能なアップロードポリシー、より安全な binding、固定された性能上限、大規模ライブラリの運用、ローカル自動化、そしてパッケージ証跡です。</p>
 </div>
 <div aria-label="eMule broadband feature groups" class="feature-table">
 <article>
-<span>eD2K/Kad</span>
-<h3>eD2K と Kad を実用的に保つ</h3>
-<p>eMuleBB は従来の eMule 操作を保ちつつ、明示的な制限、診断、REST API、release 検証を追加します。</p>
+<span>共有とアップロード</span>
+<h3>ブロードバンドのアップロード制御</h3>
+<p>上限付きのスロット目標、弱いスロットのリサイクル、レシオ表示、シード制御により、eD2K アップロードプロトコルを変えずに高速アップロード回線を有用に保ちます。</p>
 </article>
 <article>
-<span>Upload</span>
-<h3>upload とネットワークを明確に制御</h3>
-<p>高速 upload 回線、大きな共有ライブラリ、長時間の Windows セッション、ローカル controller ワークフロー向けの eMule です。</p>
+<span>ネットワーク制御</span>
+<h3>Binding、NAT、公開ポリシー</h3>
+<p>インターフェースを意識した binding、UPnP/NAT マッピング検証、HTTPS、許可 IP ルール、独立した WebServer のバインド設定により、リモート面を明示的かつテスト可能に保ちます。binding は VPN のキルスイッチではありません。</p>
 </article>
 <article>
-<span>REST</span>
-<h3>デスクトップアプリを置き換えない REST 自動化。</h3>
-<p>デスクトップアプリを置き換えない REST 自動化。 <code>/api/v1</code>, JSON, <code>X-API-Key</code>.</p>
+<span>性能とスケール</span>
+<h3>大規模セッション向けの現代的な既定値</h3>
+<p>より大きなソケットバッファ、queue/source の上限、ファイルバッファリング、タイムアウト既定値、再帰的な共有同期、起動時キャッシュ処理、長いパスの指針が、現在の Windows システムと大規模ライブラリを対象とします。</p>
 </article>
 <article>
-<span>VPN</span>
-<h3>VPN/interface binding</h3>
-<p>upload とネットワークを明確に制御</p>
+<span>従来のネットワーク</span>
+<h3>eD2K と Kad が最優先のまま</h3>
+<p>サーバー検索、グローバル検索、Kad 検索はネイティブの基盤であり続け、Kad のアイデンティティ追跡、不良ノード処理、クリーンアップ、タイミング作業は互換性の境界内に保たれます。</p>
 </article>
 <article>
-<span>Kad</span>
-<h3>Kad</h3>
-<p>eD2K と Kad を実用的に保つ</p>
+<span>自動化</span>
+<h3>REST とコントローラーのワークフロー</h3>
+<p>認証付き JSON エンドポイントは、信頼されたローカルツールからの転送、検索、共有ファイル、サーバー、Kad、ログ、カテゴリ、アップロード、統計、設定、制御されたシャットダウンをカバーします。</p>
 </article>
 <article>
-<span>Testing</span>
-<h3>公開パッケージより前に証拠</h3>
-<p>公開パッケージより前に証拠</p>
+<span>テストとリリースの規律</span>
+<h3>ラベルより先に証跡</h3>
+<p><code>0.7.3-rc.1</code> は、GitHub Actions によるパッケージング、マニフェスト、SHA-256 証跡、SPDX SBOM、診断アセット、ブートストラッパーのハッシュ証跡とともに公開されています。</p>
 </article>
 </div>
 </section>
 <section class="section docs" id="docs">
 <div class="section-heading">
-<p class="eyebrow">Docs</p>
-<h2>詳しいガイドとソース文書。</h2>
+<p class="eyebrow">ドキュメント</p>
+<h2>ガイド、API、リリースノート</h2>
 </div>
 <div class="guide-grid guide-compact">
 <article>
 <span>01</span>
-<h3>eD2K と Kad を実用的に保つ</h3>
-<p>eMuleBB は従来の eMule 操作を保ちつつ、明示的な制限、診断、REST API、release 検証を追加します。</p>
+<h3>製品ガイドから始める</h3>
+<p>まず eMuleBB を eMule として使います。信頼できるサーバー、意図的な Kad bootstrap、予測可能な incoming/temp のパス、見える共有フォルダーです。</p>
 </article>
 <article>
 <span>02</span>
-<h3>upload とネットワークを明確に制御</h3>
-<p>高速 upload 回線、大きな共有ライブラリ、長時間の Windows セッション、ローカル controller ワークフロー向けの eMule です。</p>
+<h3>ローカル自動化を使う</h3>
+<p>REST は信頼できるコントローラーに対してのみ有効にし、文書化されたアダプター経路を通じて aMuTorrent、Prowlarr、Radarr、Sonarr を使います。</p>
 </article>
 <article>
 <span>03</span>
-<h3>Testing</h3>
-<p>公開パッケージより前に証拠</p>
-</article>
-<article>
-<span>04</span>
-<h3>RC1 published</h3>
-<p>公開版 0.7.3-rc.1 は計画中で、まだリリースされていません。</p>
-</article>
-<article>
-<span>05</span>
-<h3>0.7.3-rc.1</h3>
-<p>公開版 0.7.3-rc.1 は計画中で、まだリリースされていません。</p>
-</article>
-<article>
-<span>06</span>
-<h3>製品ガイド</h3>
-<p>詳しいガイドとソース文書。</p>
+<h3>証跡を読む</h3>
+<p>セットアップ、API、リリース、SBOM、パッケージの詳細はレンダリング済みのドキュメントにあり、公開された主張はバージョン管理された証跡に結び付いたままになります。</p>
 </article>
 </div>
 <div class="automation-copy docs-automation">
-<p>デスクトップアプリを置き換えない REST 自動化。 <code>/api/v1</code>, JSON, <code>X-API-Key</code>.</p>
-<ul aria-label="REST API" class="api-list">
-<li>Transfers</li>
-<li>Searches</li>
-<li>Servers</li>
+<p>ブロードバンドのリリースラインは、既存の WebServer リスナーからリソース指向の <code>/api/v1</code> JSON API を公開します。<code>X-API-Key</code> で認証し、JSON エンベロープを返し、ネイティブの eMule 状態変更をアプリ経由で取り扱い続けます。</p>
+<ul aria-label="REST API の領域" class="api-list">
+<li>転送</li>
+<li>検索</li>
+<li>サーバー</li>
 <li>Kad</li>
-<li>Shared files</li>
-<li>Uploads</li>
-<li>Logs</li>
-<li>Preferences</li>
+<li>共有ファイル</li>
+<li>アップロード</li>
+<li>カテゴリ</li>
+<li>ログ</li>
+<li>統計</li>
+<li>設定</li>
 </ul>
 </div>
 <div class="doc-list">
 <a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
-<strong>短い運用モデル。</strong>
-<span>高速 upload 回線、大きな共有ライブラリ、長時間の Windows セッション、ローカル controller ワークフロー向けの eMule です。</span>
+<strong>セットアップガイド</strong>
+<span>インストールモデル、初回起動時のプロファイル挙動、実用的な起動メモ。</span>
 </a>
 <a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
-<strong>製品ガイド</strong>
-<span>eMuleBB は従来の eMule 操作を保ちつつ、明示的な制限、診断、REST API、release 検証を追加します。</span>
+<strong>eMuleBB 製品ガイド</strong>
+<span>セットアップ、チューニング、自動化、リリースを意識した利用、テスト、SBOM 証跡。</span>
 </a>
 <a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
-<strong>aMuTorrent + eMuleBB</strong>
-<span>デスクトップアプリを置き換えない REST 自動化。</span>
+<strong>aMuTorrent を eMuleBB と使う</strong>
+<span>eMuleBB、aMuTorrent、Prowlarr、Radarr、Sonarr のタスク優先のセットアップ。</span>
 </a>
 <a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
-<strong>デスクトップアプリを置き換えない REST 自動化。</strong>
-<span>デスクトップアプリを置き換えない REST 自動化。</span>
+<strong>コントローラーと REST のガイド</strong>
+<span>信頼できるローカルコントローラーの利用と自動化の境界。</span>
 </a>
 <a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
-<strong>eMuleBB が従来 client の周囲に追加するもの。</strong>
-<span>高速 upload 回線、大きな共有ライブラリ、長時間の Windows セッション、ローカル controller ワークフロー向けの eMule です。</span>
+<strong>ダウンロードと検索のガイド</strong>
+<span>検索モード、結果の信頼、カテゴリ、パワーユーザーのファイルワークフロー。</span>
 </a>
 <a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-P2P-OVERLORD-EMULE-AGENT/">
-<strong>p2p-overlord eMule agent</strong>
-<span>Headless Rust Kad/eD2K agent boundary, source docs, and eMuleBB contract notes.</span>
+<strong>p2p-overlord eMule エージェント</strong>
+<span>ヘッドレス Rust Kad/eD2K エージェントの境界、ソース文書、eMuleBB 契約メモ。</span>
 </a>
 <a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
-<strong>0.7.3-rc.1</strong>
-<span>公開版 0.7.3-rc.1 は計画中で、まだリリースされていません。</span>
+<strong>0.7.3 リリースダッシュボード</strong>
+<span>現在の RC ゲート、自動テスト証跡、SBOM/パッケージ証跡、準備完了ルール。</span>
 </a>
 </div>
 </section>
 <section class="section release" id="release">
 <div class="section-heading">
-<p class="eyebrow">リリース</p>
-<h2>公開版 0.7.3-rc.1 は計画中で、まだリリースされていません。</h2>
+<p class="eyebrow">セキュリティと来歴</p>
+<h2>RC1 は GitHub でビルド・パッケージ化される</h2>
 </div>
 <div aria-label="eMuleBB release proof" class="release-grid">
 <article>
 <span></span>
-<strong>0.7.3-rc.1</strong>
-<p>公開版 0.7.3-rc.1 は計画中で、まだリリースされていません。</p>
+<strong>公開された RC1</strong>
+<p><code>emulebb-v0.7.3-rc.1</code> は、x64 と ARM64 の ZIP、診断パッケージ、マニフェスト、SBOM、スイートブートストラッパーを含む GitHub プレリリースです。</p>
 </article>
 <article>
 <span></span>
-<strong>Fast CI</strong>
-<p>公開パッケージより前に証拠</p>
+<strong>ハッシュ検証付きセットアップ</strong>
+<p>ブートストラッパーはリリースアセットをダウンロードし、インストール前に公開されたマニフェストからパッケージのハッシュを検証します。</p>
 </article>
 <article>
 <span></span>
-<strong>公開パッケージより前に証拠</strong>
-<p>公開パッケージより前に証拠</p>
+<strong>スイートアセット</strong>
+<p>対応する aMuTorrent RC1 パッケージは別途公開され、完全な x64 ブートストラップフローがコントローラー設定のためにそれを自動的に解決します。</p>
 </article>
 <article>
 <span></span>
@@ -326,69 +316,59 @@
 </article>
 <article>
 <span></span>
-<strong>Performance</strong>
-<p>高速 upload 回線、大きな共有ライブラリ、長時間の Windows セッション、ローカル controller ワークフロー向けの eMule です。</p>
-</article>
-<article>
-<span></span>
-<strong>eD2K/Kad</strong>
-<p>eD2K と Kad を実用的に保つ</p>
-</article>
-<article>
-<span></span>
-<strong>Status</strong>
-<p>公開版 0.7.3-rc.1 は計画中で、まだリリースされていません。</p>
+<strong>コントローラーの証跡</strong>
+<p>aMuTorrent、Prowlarr、Radarr、Sonarr、Torznab、そして qBittorrent 互換のレーンは、ネイティブの <code>/api/v1</code> 契約を中心としたローカル統合経路として文書化されています。</p>
 </article>
 </div>
 </section>
 <section class="section repos" id="repos">
 <div class="section-heading">
-<p class="eyebrow">Repos</p>
-<h2>公開リポジトリ。</h2>
+<p class="eyebrow">eMuleBB エコシステム</p>
+<h2>主要リポジトリ</h2>
 </div>
 <div class="repo-list">
 <a href="https://github.com/emulebb/emulebb">
 <strong>emulebb</strong>
-<span>eMuleBB は従来の eMule 操作を保ちつつ、明示的な制限、診断、REST API、release 検証を追加します。</span>
+<span>主力のデスクトップアプリと製品ソース</span>
 </a>
 <a href="https://github.com/emulebb/amutorrent">
 <strong>amutorrent</strong>
-<span>aMuTorrent fork for managing eMuleBB.</span>
+<span>eMuleBB 管理とコントローラーワークフローに使う fork</span>
 </a>
 <a href="https://github.com/emulebb/emulebb-build">
 <strong>emulebb-build</strong>
-<span>公開パッケージより前に証拠</span>
+<span>ビルド、検証、リリースのオーケストレーション</span>
 </a>
 <a href="https://github.com/emulebb/emulebb-build-tests">
 <strong>emulebb-build-tests</strong>
-<span>公開パッケージより前に証拠</span>
+<span>ネイティブ、Python、UI、REST、ライブ E2E のテスト</span>
 </a>
 <a href="https://github.com/emulebb/emulebb-tooling">
 <strong>emulebb-tooling</strong>
-<span>詳しいガイドとソース文書。</span>
+<span>ロードマップ、バックログ、ポリシー、監査、参照ドキュメント</span>
 </a>
 <a href="https://github.com/emulebb/p2p-overlord-agents">
 <strong>p2p-overlord-agents</strong>
-<span>Exploratory p2p-overlord agents for headless P2P workflows.</span>
+<span>p2p-overlord P2P スイート向けの実験的エージェント</span>
 </a>
 <a href="https://github.com/emulebb/p2p-overlord-be">
 <strong>p2p-overlord-be</strong>
-<span>Exploratory Rust eD2K/Kad backend work in the p2p-overlord suite.</span>
+<span>実験的なヘッドレス Rust eD2K/Kad クライアントバックエンド作業</span>
 </a>
 <a href="https://github.com/emulebb/p2p-overlord-tooling">
 <strong>p2p-overlord-tooling</strong>
-<span>Scenario manifests, parity runners, reports, and quality guards for p2p-overlord.</span>
+<span>シナリオマニフェスト、パリティランナー、レポート、品質ガード</span>
 </a>
 <a href="https://github.com/emulebb/amule">
 <strong>aMule Windows builds</strong>
-<span>Windows build and validation track for aMule users.</span>
+<span>aMule ユーザー向けの Windows ビルド・検証ライン</span>
 </a>
 </div>
 </section>
 </main>
 <footer>
 <span>eMule broadband edition</span>
-<div aria-label="言語" class="footer-links">
+<div aria-label="フッターリンク" class="footer-links">
         <a href="../languages/">言語</a>
         <a href="https://github.com/emulebb">GitHub</a>
         <a href="https://discord.gg/uWQa9g37">Discord</a>
