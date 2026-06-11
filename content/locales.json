@@ -3008,5 +3008,306 @@
       "tests": "yerel, Python, UI, REST ve canlı E2E testleri",
       "tooling": "yol haritası, backlog, politika, denetimler ve referans dokümanlar"
     }
+  },
+  "zh_cn": {
+    "content": {
+      "automation": {
+        "eyebrow": "控制器接口面",
+        "h2": "无需替换桌面应用的 REST automation",
+        "p": "宽带发布线通过现有的 WebServer 监听器提供面向资源的 <code>/api/v1</code> JSON API。它使用 <code>X-API-Key</code> 进行认证，返回 JSON 信封，并让原生 eMule 状态更改始终经由应用进行编排。",
+        "pills": [
+          "传输",
+          "搜索",
+          "服务器",
+          "Kad",
+          "共享文件",
+          "上传",
+          "分类",
+          "日志",
+          "统计",
+          "首选项"
+        ],
+        "pills_label": "REST API 领域"
+      },
+      "docs": {
+        "p": ""
+      },
+      "features": {
+        "cards": [
+          {
+            "h3": "宽带上传控制",
+            "p": "有界的槽位目标、弱槽回收、分享率读数和做种控制，在不改变 eD2K 上传协议的前提下让高速上传链路保持有用。",
+            "span": "共享与上传"
+          },
+          {
+            "h3": "Binding、NAT 与暴露策略",
+            "p": "感知接口的 binding、UPnP/NAT 映射校验、HTTPS、允许 IP 规则以及独立的 WebServer 绑定设置，使远程入口保持显式且可测试。Binding 不是 VPN 终止开关。",
+            "span": "网络控制"
+          },
+          {
+            "h3": "面向大型会话的现代默认值",
+            "p": "更大的套接字缓冲区、队列/来源限制、文件缓冲、超时默认值、递归共享同步、启动缓存处理和长路径指引，针对当前的 Windows 系统和大型库。",
+            "span": "性能与规模"
+          },
+          {
+            "h3": "eD2K 和 Kad 仍居首位",
+            "p": "服务器、全局和 Kad 搜索仍是原生基础，Kad 身份跟踪、坏节点处理、清理和计时工作都保持在兼容边界之内。",
+            "span": "经典网络"
+          },
+          {
+            "h3": "REST 与控制器工作流",
+            "p": "经过认证的 JSON 端点涵盖传输、搜索、共享文件、服务器、Kad、日志、分类、上传、统计、首选项以及来自受信任本地工具的受控关闭。",
+            "span": "自动化"
+          },
+          {
+            "h3": "先有证据，后有标签",
+            "p": "<code>0.7.3-rc.1</code> 发布时附带 GitHub Actions 打包、清单、SHA-256 证据、SPDX SBOM、诊断资源以及引导程序哈希证据。",
+            "span": "测试与发布纪律"
+          }
+        ],
+        "eyebrow": "功能",
+        "h2": "eMuleBB 在经典客户端周围增加了什么",
+        "p": "RC1 的工作聚焦于运营者可见的行为：可预测的上传策略、更安全的 binding、固定的性能上限、大型库运行、本地自动化和软件包证据。"
+      },
+      "footer_links_label": "页脚链接",
+      "guide": {
+        "cards": [
+          {
+            "h3": "从产品指南开始",
+            "p": "先把 eMuleBB 当作 eMule 使用：受信任的服务器、有意的 Kad bootstrap、可预测的 incoming/temp 路径以及可见的共享文件夹。",
+            "span": ""
+          },
+          {
+            "h3": "使用本地自动化",
+            "p": "仅为受信任的控制器启用 REST，然后通过已记录的适配器路径使用 aMuTorrent、Prowlarr、Radarr 和 Sonarr。",
+            "span": ""
+          },
+          {
+            "h3": "阅读证据",
+            "p": "安装、API、发布、SBOM 和软件包细节都在渲染后的文档中，使公开声明始终与受版本控制的证据绑定。",
+            "span": ""
+          }
+        ],
+        "eyebrow": "指南",
+        "h2": "产品指南、自动化与文档",
+        "p": ""
+      },
+      "hero": {
+        "eyebrow": "面向宽带 P2P 的 eMuleBB 主页",
+        "guide": "产品指南",
+        "h1": "eMuleBB 是由 P2P 圈内人打造的宽带 eMule 产品。",
+        "install": "下载 RC1",
+        "lead": "RC1 已发布：一条严肃的 Windows eMule 产品线，面向高速上传链路、大型共享库、长时在线会话、REST 控制器工作流、Arr 集成以及在 GitHub 上构建的软件包证据。",
+        "panel_h2": "eMuleBB 是产品。生态系统是验证实验室。",
+        "panel_kicker": "产品定位",
+        "panel_p": "在网络关键之处，桌面应用保持与原版兼容。RC1 套件在其周围添加本地控制器工作流，而不会把 eMuleBB 变成一个通用的 torrent 外壳。",
+        "signals": [
+          "0.7.3-rc.1 已发布",
+          "一行命令套件引导",
+          "手动独立 ZIP",
+          "GitHub Actions 构建",
+          "清单哈希校验",
+          "SPDX SBOM",
+          "aMuTorrent 控制器",
+          "Prowlarr Torznab",
+          "Radarr/Sonarr qBit 适配器",
+          "原版 eD2K/Kad 兼容性"
+        ],
+        "source": "源代码"
+      },
+      "intro": "这里是 <strong>eMuleBB</strong> 的所在地：<strong>eMule broadband edition</strong>，一个面向仍然看重 eMule 分布式共享模型、并希望像现代软件那样运行它的人的独立产品。RC1 软件包已在 GitHub Releases 发布，附带完整套件引导程序、独立 ZIP、清单、哈希、SBOM 以及配套的 aMuTorrent 控制器资源。",
+      "meta_description": "eMuleBB RC1 已发布：通过 PowerShell 套件引导程序或独立 ZIP 安装 eMule broadband edition，并附带在 GitHub 上构建的软件包来源信息。",
+      "method": {
+        "cards": [
+          {
+            "h3": "不随意发生协议漂移",
+            "p": "Kad 和 eD2K 的更改保持在本地路由、计时、校验和控制路径之内。线格式、操作码和原生桌面工作流仍然是兼容边界。",
+            "span": "兼容性"
+          },
+          {
+            "h3": "固定且可审查的默认值",
+            "p": "关于带宽、内存、套接字、队列、启动和超时的现代假设，被表达为显式默认值或高级首选项，而非隐藏的自适应行为。",
+            "span": "限制"
+          },
+          {
+            "h3": "控制器契约，而非屏幕抓取",
+            "p": "经过认证的 JSON API 遵循以 OpenAPI 为后盾的契约，拒绝畸形输入，并将原生状态变更经由拥有该状态的桌面客户端所在的应用进行编排。",
+            "span": "REST"
+          },
+          {
+            "h3": "先有证据，后有标签",
+            "p": "发布流程记录命令、提交、日志、软件包路径、哈希、实时证据、对性能敏感的检查以及运营者决策，使发布标签成为一个经过核查的结果。",
+            "span": "Release"
+          }
+        ],
+        "eyebrow": "实现方法",
+        "h2": "围绕遗留内核进行现代化，然后验证结果",
+        "p": "实现风格刻意保守。eMuleBB 更改本地策略、限制、诊断、API 边界和发布纪律，同时默认保持原版 eD2K/Kad 兼容性。更广泛的组织对 Windows 构建、管理器、服务器和实验室客户端采用同样的纪律。"
+      },
+      "nav": [
+        {
+          "id": "why",
+          "label": "为什么"
+        },
+        {
+          "id": "features",
+          "label": "功能"
+        },
+        {
+          "class": "nav-download",
+          "id": "install",
+          "label": "下载"
+        },
+        {
+          "id": "docs",
+          "label": "指南"
+        },
+        {
+          "id": "release",
+          "label": "来源"
+        },
+        {
+          "id": "repos",
+          "label": "仓库"
+        }
+      ],
+      "nav_label": "主导航",
+      "og_description": "eMuleBB 是一个独立、面向宽带的 eMule 产品，也是 Windows P2P 构建、控制器工具、发布证据以及实验性 eD2K/Kad 工程的所在地。",
+      "og_title": "eMuleBB 主页 | eMule broadband edition",
+      "product_summary_label": "eMuleBB 概要",
+      "project_links_label": "项目链接",
+      "release": {
+        "cards": [
+          {
+            "h3": "已发布的 RC1",
+            "p": "<code>emulebb-v0.7.3-rc.1</code> 是一个 GitHub 预发布版本，包含 x64 和 ARM64 ZIP、诊断软件包、清单、SBOM 以及套件引导程序。",
+            "span": ""
+          },
+          {
+            "h3": "经哈希校验的安装",
+            "p": "引导程序在安装前下载发布资源，并依据已发布的清单校验软件包哈希。",
+            "span": ""
+          },
+          {
+            "h3": "套件资源",
+            "p": "配套的 aMuTorrent RC1 软件包单独发布，完整的 x64 引导流程会在控制器设置时自动解析它。",
+            "span": ""
+          },
+          {
+            "h3": "控制器证据",
+            "p": "aMuTorrent、Prowlarr、Radarr、Sonarr、Torznab 以及兼容 qBittorrent 的通道，都被记录为围绕原生 <code>/api/v1</code> 契约的本地集成路径。",
+            "span": ""
+          }
+        ],
+        "eyebrow": "安全与来源",
+        "h2": "RC1 在 GitHub 上构建与打包",
+        "p": ""
+      },
+      "release_downloads_label": "下载发布版",
+      "repos": {
+        "p": ""
+      },
+      "structured_description": "eMuleBB 是 eMule broadband edition 的所在地：一个独立、面向宽带的 eMule 产品，具备上传控制、自动化测试、带 SBOM 的软件包、REST automation、eD2K/Kad 兼容性，以及开箱即用的 aMuTorrent、Prowlarr、Radarr 和 Sonarr 集成路径。首个公开候选版本 0.7.3-rc.1 已在 GitHub Releases 发布。",
+      "team": {
+        "cards": [
+          {
+            "h3": "上传骡子驯导员",
+            "p": "阻止宽带上传槽踹开马厩门，然后用一块非常正式的写字板把慢吞吞的赶回队列。",
+            "span": ""
+          },
+          {
+            "h3": "Kad 山路骡子",
+            "p": "驮着 bootstrap 节点、路由表和顽固的 eD2K/Kad 传说穿越崎岖的网络地形，绝不弄丢协议地图。",
+            "span": ""
+          },
+          {
+            "h3": "发布驮运骡子",
+            "p": "在任何东西被宣布就绪之前，驮着软件包、哈希、SBOM、日志、实时检查和恰到好处的态度穿过关口。",
+            "span": ""
+          }
+        ],
+        "eyebrow": "项目趣闻",
+        "h2": "P2P 作坊背后的骡子团队",
+        "p": ""
+      },
+      "title": "eMuleBB 主页 | eMule broadband edition",
+      "why": {
+        "cards": [
+          {
+            "h3": "eMuleBB 是一个独立产品",
+            "p": "目标不是表面修改的 mod、协议分叉或通用下载器外壳。它是一条面向宽带的 eMule 产品线，服务于长时会话、稀有文件、有意做种以及仍然想要原生桌面工作流的高级用户。",
+            "span": "产品理由"
+          },
+          {
+            "h3": "让 P2P 行为可检视",
+            "p": "上传槽、超时、缓冲区、大型库、WebServer 暴露、REST 控制和软件包证据都被显式化，使每项更改都能被审查、测试、记录和调整。",
+            "span": "工程理由"
+          },
+          {
+            "h3": "围绕客户端构建工具",
+            "p": "同一套 workspace 规范涵盖应用、控制器工具、Windows 构建、确定性 eD2K 服务以及实验性的无界面 eD2K/Kad 工作，而不假装每个实验项目都是稳定的终端用户产品。",
+            "span": "生态系统理由"
+          }
+        ],
+        "eyebrow": "为什么",
+        "h2": "P2P 软件靠在真实会话中存活来赢得信任",
+        "p": "eMuleBB 既是一项产品努力，也是一种工程实践：保留一个具有真实网络行为的复杂原生 Windows 客户端，然后用现代化的构建、测试、文档、自动化和发布证据将其包围。"
+      }
+    },
+    "doc_section": [
+      "文档",
+      "指南、API 与发布说明"
+    ],
+    "docs": {
+      "controllers": [
+        "控制器与 REST 指南",
+        "受信任的本地控制器用法与自动化边界。"
+      ],
+      "downloads": [
+        "下载与搜索指南",
+        "搜索模式、结果可信度、分类以及高级用户文件工作流。"
+      ],
+      "emulebb": [
+        "eMuleBB 产品指南",
+        "安装、调优、自动化、面向发布的使用、测试以及 SBOM 证据。"
+      ],
+      "p2p_overlord_agent": [
+        "p2p-overlord eMule 代理",
+        "无界面 Rust Kad/eD2K 代理边界、源文档以及 eMuleBB 契约说明。"
+      ],
+      "release": [
+        "0.7.3 发布看板",
+        "当前 RC 关卡、自动化测试证据、SBOM/软件包证据以及就绪规则。"
+      ],
+      "setup": [
+        "安装指南",
+        "安装模型、首次运行的配置行为以及实用的启动说明。"
+      ],
+      "stack_integrations": [
+        "将 aMuTorrent 与 eMuleBB 配合使用",
+        "面向任务的 eMuleBB、aMuTorrent、Prowlarr、Radarr 和 Sonarr 设置。"
+      ]
+    },
+    "language_link": "语言",
+    "menu": {
+      "close_label": "关闭主导航",
+      "label": "菜单",
+      "open_label": "打开主导航"
+    },
+    "repo_section": [
+      "eMuleBB 生态系统",
+      "主要仓库"
+    ],
+    "repos": {
+      "amule": "面向 aMule 用户的 Windows 构建与验证线",
+      "amutorrent": "用于 eMuleBB 管理和控制器工作流的 fork",
+      "build": "构建、验证与发布编排",
+      "emule": "旗舰桌面应用与产品源代码",
+      "p2p_overlord_agents": "面向 p2p-overlord P2P 套件的实验性代理",
+      "p2p_overlord_be": "实验性的无界面 Rust eD2K/Kad 客户端后端工作",
+      "p2p_overlord_tooling": "场景清单、对等性运行器、报告与质量守卫",
+      "tests": "原生、Python、UI、REST 与实时 E2E 测试",
+      "tooling": "路线图、待办、策略、审计与参考文档"
+    }
   }
 }
