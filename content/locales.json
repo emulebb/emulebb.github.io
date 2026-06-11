@@ -1504,6 +1504,307 @@
       "tooling": "ロードマップ、バックログ、ポリシー、監査、参照ドキュメント"
     }
   },
+  "ko": {
+    "content": {
+      "automation": {
+        "eyebrow": "컨트롤러 표면",
+        "h2": "데스크톱 앱을 대체하지 않는 REST automation",
+        "p": "광대역 릴리스 라인은 기존 WebServer 리스너에서 리소스 지향 <code>/api/v1</code> JSON API를 제공합니다. <code>X-API-Key</code>로 인증하고, JSON 엔벨로프를 반환하며, 네이티브 eMule 상태 변경을 앱을 통해 처리하도록 유지합니다.",
+        "pills": [
+          "전송",
+          "검색",
+          "서버",
+          "Kad",
+          "공유 파일",
+          "업로드",
+          "카테고리",
+          "로그",
+          "통계",
+          "환경설정"
+        ],
+        "pills_label": "REST API 영역"
+      },
+      "docs": {
+        "p": ""
+      },
+      "features": {
+        "cards": [
+          {
+            "h3": "광대역 업로드 제어",
+            "p": "한정된 슬롯 목표, 약한 슬롯 재활용, 비율 표시, 시딩 제어가 eD2K 업로드 프로토콜을 바꾸지 않고도 빠른 업로드 회선을 유용하게 유지합니다.",
+            "span": "공유 및 업로드"
+          },
+          {
+            "h3": "Binding, NAT, 노출 정책",
+            "p": "인터페이스를 인식하는 binding, UPnP/NAT 매핑 검증, HTTPS, 허용 IP 규칙, 별도의 WebServer 바인드 설정이 원격 표면을 명시적이고 테스트 가능하게 유지합니다. binding은 VPN 킬 스위치가 아닙니다.",
+            "span": "네트워크 제어"
+          },
+          {
+            "h3": "대규모 세션을 위한 현대적 기본값",
+            "p": "더 큰 소켓 버퍼, queue/source 한계, 파일 버퍼링, 타임아웃 기본값, 재귀 공유 동기화, 시작 시 캐시 작업, 긴 경로 안내가 현재의 Windows 시스템과 대규모 라이브러리를 대상으로 합니다.",
+            "span": "성능과 규모"
+          },
+          {
+            "h3": "eD2K와 Kad가 우선",
+            "p": "서버, 글로벌, Kad 검색은 네이티브 기반으로 남아 있으며, Kad 신원 추적, 불량 노드 처리, 정리, 타이밍 작업은 호환성 경계 안에 유지됩니다.",
+            "span": "클래식 네트워크"
+          },
+          {
+            "h3": "REST 및 컨트롤러 워크플로",
+            "p": "인증된 JSON 엔드포인트는 신뢰된 로컬 도구로부터의 전송, 검색, 공유 파일, 서버, Kad, 로그, 카테고리, 업로드, 통계, 환경설정, 제어된 종료를 다룹니다.",
+            "span": "자동화"
+          },
+          {
+            "h3": "라벨보다 증거 먼저",
+            "p": "<code>0.7.3-rc.1</code>은 GitHub Actions 패키징, 매니페스트, SHA-256 증거, SPDX SBOM, 진단 자산, 부트스트래퍼 해시 증거와 함께 공개됩니다.",
+            "span": "테스트와 릴리스 규율"
+          }
+        ],
+        "eyebrow": "기능",
+        "h2": "eMuleBB가 기존 클라이언트 주위에 더하는 것",
+        "p": "RC1 작업은 운영자에게 보이는 동작에 초점을 둡니다. 예측 가능한 업로드 정책, 더 안전한 binding, 고정된 성능 한계, 대규모 라이브러리 운영, 로컬 자동화, 패키지 증거입니다."
+      },
+      "footer_links_label": "푸터 링크",
+      "guide": {
+        "cards": [
+          {
+            "h3": "제품 가이드부터 시작하기",
+            "p": "먼저 eMuleBB를 eMule처럼 사용하세요. 신뢰할 수 있는 서버, 의도적인 Kad bootstrap, 예측 가능한 incoming/temp 경로, 보이는 공유 폴더입니다.",
+            "span": ""
+          },
+          {
+            "h3": "로컬 자동화 사용",
+            "p": "REST는 신뢰할 수 있는 컨트롤러에만 활성화한 다음, 문서화된 어댑터 경로를 통해 aMuTorrent, Prowlarr, Radarr, Sonarr를 사용하세요.",
+            "span": ""
+          },
+          {
+            "h3": "증거 읽기",
+            "p": "설정, API, 릴리스, SBOM, 패키지 세부 정보는 렌더링된 문서에 있으므로 공개된 주장은 버전 관리되는 증거에 묶인 채 유지됩니다.",
+            "span": ""
+          }
+        ],
+        "eyebrow": "가이드",
+        "h2": "제품 가이드, 자동화, 문서",
+        "p": ""
+      },
+      "hero": {
+        "eyebrow": "광대역 P2P를 위한 eMuleBB 홈",
+        "guide": "제품 가이드",
+        "h1": "eMuleBB는 P2P 사람들이 만든 광대역 eMule 제품입니다.",
+        "install": "RC1 다운로드",
+        "lead": "RC1이 공개되었습니다. 빠른 업로드 회선, 대규모 공유 라이브러리, 상시 가동 세션, REST 컨트롤러 워크플로, Arr 통합, 그리고 GitHub에서 빌드된 패키지 증거를 위한 진지한 Windows eMule 라인입니다.",
+        "panel_h2": "eMuleBB가 제품입니다. 생태계는 증명 실험실입니다.",
+        "panel_kicker": "제품 포지션",
+        "panel_p": "네트워크가 중요한 부분에서 데스크톱 앱은 스톡 호환을 유지합니다. RC1 스위트는 그 주위에 로컬 컨트롤러 워크플로를 추가하지만 eMuleBB를 일반적인 torrent 셸로 바꾸지 않습니다.",
+        "signals": [
+          "0.7.3-rc.1 공개됨",
+          "한 줄 스위트 부트스트랩",
+          "수동 독립 ZIP",
+          "GitHub Actions 빌드",
+          "매니페스트 해시 검증",
+          "SPDX SBOM",
+          "aMuTorrent 컨트롤러",
+          "Prowlarr Torznab",
+          "Radarr/Sonarr qBit 어댑터",
+          "스톡 eD2K/Kad 호환성"
+        ],
+        "source": "소스"
+      },
+      "intro": "이곳은 <strong>eMuleBB</strong>의 본거지입니다. <strong>eMule broadband edition</strong>은 eMule의 분산 공유 모델을 여전히 소중히 여기고 그것을 현대적인 소프트웨어처럼 운영하고 싶은 사람들을 위한 독립 제품입니다. RC1 패키지는 풀 스위트 부트스트래퍼, 독립 ZIP, 매니페스트, 해시, SBOM, 그리고 대응하는 aMuTorrent 컨트롤러 자산과 함께 GitHub Releases에 공개되어 있습니다.",
+      "meta_description": "eMuleBB RC1이 공개되었습니다. PowerShell 스위트 부트스트래퍼나 독립 ZIP으로 eMule broadband edition을 설치하세요. 패키지 출처는 GitHub에서 빌드됩니다.",
+      "method": {
+        "cards": [
+          {
+            "h3": "무심한 프로토콜 드리프트 없음",
+            "p": "Kad와 eD2K 변경은 로컬 라우팅, 타이밍, 검증, 제어 경로 안에 머뭅니다. 와이어 형식, 옵코드, 네이티브 데스크톱 워크플로는 호환성 경계로 남습니다.",
+            "span": "호환성"
+          },
+          {
+            "h3": "고정되고 검토 가능한 기본값",
+            "p": "대역폭, 메모리, 소켓, 큐, 시작, 타임아웃에 대한 현대적 가정은 숨겨진 적응형 동작이 아니라 명시적 기본값 또는 고급 환경설정으로 표현됩니다.",
+            "span": "한계"
+          },
+          {
+            "h3": "화면 스크래핑이 아닌 컨트롤러 계약",
+            "p": "인증된 JSON API는 OpenAPI 기반 계약을 따르고, 잘못된 입력을 거부하며, 상태를 소유한 데스크톱 클라이언트가 있는 앱을 통해 네이티브 상태 변경을 처리합니다.",
+            "span": "REST"
+          },
+          {
+            "h3": "라벨보다 증거 먼저",
+            "p": "릴리스 과정은 명령, 커밋, 로그, 패키지 경로, 해시, 라이브 증거, 성능에 민감한 검사, 운영자 결정을 기록하여 릴리스 태그가 검증된 결과가 되도록 합니다.",
+            "span": "Release"
+          }
+        ],
+        "eyebrow": "구현 방법",
+        "h2": "레거시 코어 주위를 현대화한 뒤 결과를 증명",
+        "p": "구현 방식은 의도적으로 보수적입니다. eMuleBB는 로컬 정책, 한계, 진단, API 경계, 릴리스 규율을 바꾸면서도 스톡 eD2K/Kad 호환성을 기본으로 유지합니다. 더 넓은 조직은 Windows 빌드, 매니저, 서버, 랩 클라이언트에 동일한 규율을 사용합니다."
+      },
+      "nav": [
+        {
+          "id": "why",
+          "label": "왜"
+        },
+        {
+          "id": "features",
+          "label": "기능"
+        },
+        {
+          "class": "nav-download",
+          "id": "install",
+          "label": "다운로드"
+        },
+        {
+          "id": "docs",
+          "label": "가이드"
+        },
+        {
+          "id": "release",
+          "label": "출처"
+        },
+        {
+          "id": "repos",
+          "label": "저장소"
+        }
+      ],
+      "nav_label": "기본 내비게이션",
+      "og_description": "eMuleBB는 광대역에 초점을 둔 독립적인 eMule 제품이자 Windows P2P 빌드, 컨트롤러 도구, 릴리스 증거, 그리고 실험적인 eD2K/Kad 엔지니어링의 본거지입니다.",
+      "og_title": "eMuleBB 홈 | eMule broadband edition",
+      "product_summary_label": "eMuleBB 요약",
+      "project_links_label": "프로젝트 링크",
+      "release": {
+        "cards": [
+          {
+            "h3": "공개된 RC1",
+            "p": "<code>emulebb-v0.7.3-rc.1</code>은 x64 및 ARM64 ZIP, 진단 패키지, 매니페스트, SBOM, 스위트 부트스트래퍼를 포함한 GitHub 프리릴리스입니다.",
+            "span": ""
+          },
+          {
+            "h3": "해시 검증 설치",
+            "p": "부트스트래퍼는 릴리스 자산을 다운로드하고 설치 전에 공개된 매니페스트로부터 패키지 해시를 검증합니다.",
+            "span": ""
+          },
+          {
+            "h3": "스위트 자산",
+            "p": "대응하는 aMuTorrent RC1 패키지는 별도로 공개되며, 전체 x64 부트스트랩 흐름이 컨트롤러 설정을 위해 이를 자동으로 해결합니다.",
+            "span": ""
+          },
+          {
+            "h3": "컨트롤러 증거",
+            "p": "aMuTorrent, Prowlarr, Radarr, Sonarr, Torznab, 그리고 qBittorrent 호환 레인은 네이티브 <code>/api/v1</code> 계약을 중심으로 한 로컬 통합 경로로 문서화되어 있습니다.",
+            "span": ""
+          }
+        ],
+        "eyebrow": "보안과 출처",
+        "h2": "RC1은 GitHub에서 빌드되고 패키징됩니다",
+        "p": ""
+      },
+      "release_downloads_label": "릴리스 다운로드",
+      "repos": {
+        "p": ""
+      },
+      "structured_description": "eMuleBB는 eMule broadband edition의 본거지입니다. 업로드 제어, 자동화 테스트, SBOM 기반 패키지, REST automation, eD2K/Kad 호환성, 그리고 곧바로 쓸 수 있는 aMuTorrent·Prowlarr·Radarr·Sonarr 통합 경로를 갖춘 광대역 중심의 독립 eMule 제품입니다. 첫 공개 릴리스 후보 0.7.3-rc.1이 GitHub Releases에 공개되어 있습니다.",
+      "team": {
+        "cards": [
+          {
+            "h3": "업로드 노새 조련사",
+            "p": "광대역 업로드 슬롯이 마구간 문을 걷어차지 못하게 막고, 느린 녀석들을 매우 공식적인 클립보드로 다시 줄 세웁니다.",
+            "span": ""
+          },
+          {
+            "h3": "Kad 산길 노새",
+            "p": "bootstrap 노드, 라우팅 테이블, 고집스러운 eD2K/Kad 전승을 험한 네트워크 지형 너머로, 프로토콜 지도를 잃지 않고 운반합니다.",
+            "span": ""
+          },
+          {
+            "h3": "릴리스 짐 노새",
+            "p": "무언가가 준비됐다고 불리기 전에 패키지, 해시, SBOM, 로그, 라이브 검사, 그리고 딱 적당한 태도를 게이트 너머로 끌고 갑니다.",
+            "span": ""
+          }
+        ],
+        "eyebrow": "프로젝트 이야기",
+        "h2": "P2P 작업장 뒤의 노새 팀",
+        "p": ""
+      },
+      "title": "eMuleBB 홈 | eMule broadband edition",
+      "why": {
+        "cards": [
+          {
+            "h3": "eMuleBB는 독립적인 제품",
+            "p": "목표는 겉모습만 바꾼 mod, 프로토콜 포크, 일반적인 다운로더 셸이 아닙니다. 긴 세션, 희귀한 파일, 의도적인 시딩, 그리고 여전히 네이티브 데스크톱 워크플로를 원하는 파워 유저를 위한 광대역 중심의 eMule 라인입니다.",
+            "span": "제품적 이유"
+          },
+          {
+            "h3": "P2P 동작을 검사 가능하게 만들기",
+            "p": "업로드 슬롯, 타임아웃, 버퍼, 대규모 라이브러리, WebServer 노출, REST 제어, 패키지 증거를 명시적으로 만들어 각 변경을 검토·테스트·문서화·조정할 수 있게 합니다.",
+            "span": "엔지니어링 이유"
+          },
+          {
+            "h3": "클라이언트 주위에 도구를 구축하기",
+            "p": "동일한 workspace 규율이 앱, 컨트롤러 도구, Windows 빌드, 결정적 eD2K 서비스, 실험적 헤드리스 eD2K/Kad 작업을 아우르며, 모든 실험 프로젝트가 안정적인 최종 사용자 제품인 척하지 않습니다.",
+            "span": "생태계 이유"
+          }
+        ],
+        "eyebrow": "왜",
+        "h2": "P2P 소프트웨어는 실제 세션을 견뎌내며 신뢰를 얻습니다",
+        "p": "eMuleBB는 제품적 노력이자 엔지니어링 실천입니다. 실제 네트워크 동작을 지닌 복잡한 네이티브 Windows 클라이언트를 보존하고, 그것을 현대적인 빌드, 테스트, 문서, 자동화, 릴리스 증거로 둘러쌉니다."
+      }
+    },
+    "doc_section": [
+      "문서",
+      "가이드, API, 릴리스 노트"
+    ],
+    "docs": {
+      "controllers": [
+        "컨트롤러 및 REST 가이드",
+        "신뢰할 수 있는 로컬 컨트롤러 사용과 자동화 경계."
+      ],
+      "downloads": [
+        "다운로드 및 검색 가이드",
+        "검색 모드, 결과 신뢰, 카테고리, 파워 유저 파일 워크플로."
+      ],
+      "emulebb": [
+        "eMuleBB 제품 가이드",
+        "설정, 튜닝, 자동화, 릴리스를 의식한 사용, 테스트, SBOM 증거."
+      ],
+      "p2p_overlord_agent": [
+        "p2p-overlord eMule 에이전트",
+        "헤드리스 Rust Kad/eD2K 에이전트 경계, 소스 문서, eMuleBB 계약 메모."
+      ],
+      "release": [
+        "0.7.3 릴리스 대시보드",
+        "현재 RC 게이트, 자동 테스트 증거, SBOM/패키지 증거, 준비 규칙."
+      ],
+      "setup": [
+        "설정 가이드",
+        "설치 모델, 첫 실행 프로필 동작, 실용적인 시작 메모."
+      ],
+      "stack_integrations": [
+        "aMuTorrent를 eMuleBB와 함께 사용",
+        "eMuleBB, aMuTorrent, Prowlarr, Radarr, Sonarr를 위한 작업 중심 설정."
+      ]
+    },
+    "language_link": "언어",
+    "menu": {
+      "close_label": "기본 내비게이션 닫기",
+      "label": "메뉴",
+      "open_label": "기본 내비게이션 열기"
+    },
+    "repo_section": [
+      "eMuleBB 생태계",
+      "주요 저장소"
+    ],
+    "repos": {
+      "amule": "aMule 사용자를 위한 Windows 빌드 및 검증 라인",
+      "amutorrent": "eMuleBB 관리와 컨트롤러 워크플로에 사용되는 fork",
+      "build": "빌드, 검증, 릴리스 오케스트레이션",
+      "emule": "대표 데스크톱 앱과 제품 소스",
+      "p2p_overlord_agents": "p2p-overlord P2P 스위트를 위한 실험적 에이전트",
+      "p2p_overlord_be": "실험적 헤드리스 Rust eD2K/Kad 클라이언트 백엔드 작업",
+      "p2p_overlord_tooling": "시나리오 매니페스트, 패리티 러너, 리포트, 품질 가드",
+      "tests": "네이티브, Python, UI, REST, 라이브 E2E 테스트",
+      "tooling": "로드맵, 백로그, 정책, 감사, 참조 문서"
+    }
+  },
   "nl": {
     "content": {
       "automation": {
