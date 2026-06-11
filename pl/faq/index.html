@@ -112,7 +112,7 @@
 <a aria-label="eMule broadband edition home" class="brand" href="https://emulebb.github.io/pl/">
 <img alt="eMuleBB broadband edition" class="brand-logo" decoding="async" height="160" src="../../assets/brand/emulebb-broadband-edition-logo.png" width="151"/>
 </a>
-<button aria-controls="primary-nav" aria-expanded="false" aria-label="Otwórz główną nawigację" class="menu-toggle" type="button">
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Otwórz nawigację główną" class="menu-toggle" type="button">
 <span class="menu-toggle-label">Menu</span>
 </button>
 <nav aria-label="Nawigacja FAQ" id="primary-nav">
@@ -198,7 +198,7 @@
         function setOpen(open) {
           nav.classList.toggle("is-open", open);
           button.setAttribute("aria-expanded", String(open));
-          button.setAttribute("aria-label", open ? "Zamknij g\u0142\u00f3wn\u0105 nawigacj\u0119" : "Otw\u00f3rz g\u0142\u00f3wn\u0105 nawigacj\u0119");
+          button.setAttribute("aria-label", open ? "Zamknij nawigacj\u0119 g\u0142\u00f3wn\u0105" : "Otw\u00f3rz nawigacj\u0119 g\u0142\u00f3wn\u0105");
         }
         setOpen(false);
         button.addEventListener("click", function () {
