@@ -20,9 +20,6 @@
         "pills_label": "REST API Bereiche"
       },
       "docs": {
-        "eyebrow": "Read more",
-        "h2": "Detailed guides and source documents",
-        "links": [],
         "p": ""
       },
       "features": {
@@ -216,9 +213,6 @@
         "p": ""
       },
       "repos": {
-        "eyebrow": "Öffentlicher Workspace",
-        "h2": "Primäre Repositories",
-        "links": [],
         "p": ""
       },
       "structured_description": "Moderner eMule für Breitband-Upload-Kontrolle, VPN/interface binding, aktuelle Leistungsgrenzen, große Freigaben, REST automation, eD2K/Kad-Kompatibilität und Power-User-Workflows. Die erste öffentliche Version ist als 0.7.3-rc.1 geplant und noch nicht veröffentlicht.",
@@ -353,9 +347,6 @@
         "pills_label": "Áreas de REST API"
       },
       "docs": {
-        "eyebrow": "Read more",
-        "h2": "Detailed guides and source documents",
-        "links": [],
         "p": ""
       },
       "features": {
@@ -549,9 +540,6 @@
         "p": ""
       },
       "repos": {
-        "eyebrow": "Workspace público",
-        "h2": "Repositorios principales",
-        "links": [],
         "p": ""
       },
       "structured_description": "eMule moderno para controlar uploads en banda ancha, VPN/interface binding, límites de rendimiento actuales, bibliotecas compartidas grandes, REST automation, compatibilidad eD2K/Kad y workflows avanzados. La primera versión pública está planificada como 0.7.3-rc.1 y aún no se ha publicado.",
@@ -686,9 +674,6 @@
         "pills_label": "Domaines REST API"
       },
       "docs": {
-        "eyebrow": "Read more",
-        "h2": "Detailed guides and source documents",
-        "links": [],
         "p": ""
       },
       "features": {
@@ -882,9 +867,6 @@
         "p": ""
       },
       "repos": {
-        "eyebrow": "Workspace public",
-        "h2": "Dépôts principaux",
-        "links": [],
         "p": ""
       },
       "structured_description": "eMule moderne pour le contrôle d'upload haut débit, VPN/interface binding, de grandes bibliothèques partagées, REST automation, la compatibilité eD2K/Kad et des workflows avancés. La première version publique est prévue comme 0.7.3-rc.1 et n'est pas encore publiée.",
@@ -1019,9 +1001,6 @@
         "pills_label": "Aree REST API"
       },
       "docs": {
-        "eyebrow": "Read more",
-        "h2": "Detailed guides and source documents",
-        "links": [],
         "p": ""
       },
       "features": {
@@ -1215,9 +1194,6 @@
         "p": ""
       },
       "repos": {
-        "eyebrow": "Workspace pubblico",
-        "h2": "Repository principali",
-        "links": [],
         "p": ""
       },
       "structured_description": "eMule moderno per controllo upload su banda larga, VPN/interface binding, limiti di prestazione attuali, grandi librerie condivise, REST automation, compatibilità eD2K/Kad e workflow avanzati. La prima versione pubblica è pianificata come 0.7.3-rc.1 e non è ancora uscita.",
@@ -1352,9 +1328,6 @@
         "pills_label": "REST API-gebieden"
       },
       "docs": {
-        "eyebrow": "Read more",
-        "h2": "Detailed guides and source documents",
-        "links": [],
         "p": ""
       },
       "features": {
@@ -1548,9 +1521,6 @@
         "p": ""
       },
       "repos": {
-        "eyebrow": "Publieke workspace",
-        "h2": "Primaire repositories",
-        "links": [],
         "p": ""
       },
       "structured_description": "Moderne eMule voor breedband-uploadcontrole, VPN/interface binding, grote gedeelde bibliotheken, REST automation, eD2K/Kad-compatibiliteit en geavanceerde workflows. De eerste publieke versie is gepland als 0.7.3-rc.1 en nog niet uitgebracht.",
@@ -1685,9 +1655,6 @@
         "pills_label": "Obszary REST API"
       },
       "docs": {
-        "eyebrow": "Read more",
-        "h2": "Detailed guides and source documents",
-        "links": [],
         "p": ""
       },
       "features": {
@@ -1881,9 +1848,6 @@
         "p": ""
       },
       "repos": {
-        "eyebrow": "Publiczny workspace",
-        "h2": "Główne repozytoria",
-        "links": [],
         "p": ""
       },
       "structured_description": "Nowoczesny eMule do kontroli uploadu na szybkich łączach, VPN/interface binding, dużych bibliotek współdzielonych, REST automation, zgodności eD2K/Kad i zaawansowanych workflows. Pierwsza publiczna wersja jest planowana jako 0.7.3-rc.1 i nie została jeszcze wydana.",
@@ -2018,9 +1982,6 @@
         "pills_label": "Áreas da REST API"
       },
       "docs": {
-        "eyebrow": "Read more",
-        "h2": "Detailed guides and source documents",
-        "links": [],
         "p": ""
       },
       "features": {
@@ -2214,9 +2175,6 @@
         "p": ""
       },
       "repos": {
-        "eyebrow": "Workspace público",
-        "h2": "Repositórios principais",
-        "links": [],
         "p": ""
       },
       "structured_description": "eMule moderno para controle de upload em banda larga, VPN/interface binding, limites de desempenho atuais, grandes bibliotecas compartilhadas, REST automation, compatibilidade eD2K/Kad e workflows avançados. A primeira versão pública está planejada como 0.7.3-rc.1 e ainda não foi lançada.",
@@ -2351,9 +2309,6 @@
         "pills_label": "Áreas da REST API"
       },
       "docs": {
-        "eyebrow": "Read more",
-        "h2": "Detailed guides and source documents",
-        "links": [],
         "p": ""
       },
       "features": {
@@ -2547,9 +2502,6 @@
         "p": ""
       },
       "repos": {
-        "eyebrow": "Workspace público",
-        "h2": "Repositórios principais",
-        "links": [],
         "p": ""
       },
       "structured_description": "eMule moderno para controlo de upload em banda larga, VPN/interface binding, limites de desempenho actuais, grandes bibliotecas partilhadas, REST automation, compatibilidade eD2K/Kad e workflows avançados. A primeira versão pública está planeada como 0.7.3-rc.1 e ainda não foi lançada.",
@@ -2684,9 +2636,6 @@
         "pills_label": "Области REST API"
       },
       "docs": {
-        "eyebrow": "Read more",
-        "h2": "Detailed guides and source documents",
-        "links": [],
         "p": ""
       },
       "features": {
@@ -2880,9 +2829,6 @@
         "p": ""
       },
       "repos": {
-        "eyebrow": "Публичный workspace",
-        "h2": "Основные репозитории",
-        "links": [],
         "p": ""
       },
       "structured_description": "Современный eMule для контроля upload на широкополосных линиях, VPN/interface binding, больших shared libraries, REST automation, совместимости eD2K/Kad и продвинутых workflows. Первая публичная версия запланирована как 0.7.3-rc.1 и еще не выпущена.",
@@ -3017,9 +2963,6 @@
         "pills_label": "REST API alanları"
       },
       "docs": {
-        "eyebrow": "Read more",
-        "h2": "Detailed guides and source documents",
-        "links": [],
         "p": ""
       },
       "features": {
@@ -3213,9 +3156,6 @@
         "p": ""
       },
       "repos": {
-        "eyebrow": "Public workspace",
-        "h2": "Ana depolar",
-        "links": [],
         "p": ""
       },
       "structured_description": "Geniş bant upload kontrolü, VPN/interface binding, büyük paylaşılan kütüphaneler, REST automation, eD2K/Kad uyumluluğu ve ileri workflows için modern eMule. İlk public sürüm 0.7.3-rc.1 olarak planlandı ve henüz yayınlanmadı.",
