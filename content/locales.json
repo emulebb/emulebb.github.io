@@ -4,13 +4,13 @@
       "automation": {
         "eyebrow": "Controller-Oberfläche",
         "h2": "REST automation, ohne die Desktop-App zu ersetzen",
-        "p": "Die Breitband-Release-Linie stellt über den vorhandenen WebServer-Listener eine ressourcenorientierte JSON API <code>/api/v1</code> bereit. Sie authentifiziert mit <code>X-API-Key</code>, liefert JSON-Envelopes und führt native eMule-Statusänderungen über die App.",
+        "p": "Die Breitband-Release-Linie stellt über den vorhandenen WebServer-Listener eine ressourcenorientierte <code>/api/v1</code> JSON API bereit. Sie authentifiziert mit <code>X-API-Key</code>, liefert JSON-Envelopes und hält native eMule-Statusänderungen über die App geleitet.",
         "pills": [
-          "Transfers",
+          "Übertragungen",
           "Suchen",
           "Server",
           "Kad",
-          "Freigaben",
+          "Freigegebene Dateien",
           "Uploads",
           "Kategorien",
           "Logs",
@@ -26,124 +26,113 @@
         "cards": [
           {
             "h3": "Breitband-Upload-Kontrolle",
-            "p": "Begrenzte Slot-Ziele, Recycling schwacher Slots, Ratio-Anzeigen und Seeding-Kontrollen halten schnelle Uploads nützlich, ohne das eD2K-Upload-Protokoll zu ändern.",
+            "p": "Begrenzte Slot-Ziele, Recycling schwacher Slots, Ratio-Anzeigen und Seeding-Kontrollen halten schnelle Upload-Anschlüsse nützlich, ohne das eD2K-Upload-Protokoll zu ändern.",
             "span": "Freigabe und Upload"
           },
           {
             "h3": "Binding, NAT und Expositions-Policy",
-            "p": "Interface-aware binding, UPnP/NAT-Validierung, HTTPS, allowed-IP-Regeln und WebServer-Vererbung halten entfernte Oberflächen explizit und testbar.",
+            "p": "Interface-bewusstes Binding, UPnP/NAT-Mapping-Validierung, HTTPS, Allowed-IP-Regeln und separate WebServer-Bind-Einstellungen halten entfernte Oberflächen explizit und testbar. Binding ist kein VPN-Kill-Switch.",
             "span": "Netzwerkkontrolle"
           },
           {
             "h3": "Aktuelle Defaults für große Sitzungen",
-            "p": "Größere Socket-Buffer, Queue/Source-Limits, file buffering, Timeouts, rekursive Sync und long-path guidance zielen auf heutige Windows-Systeme und große Freigaben.",
+            "p": "Größere Socket-Buffer, Queue/Source-Limits, File-Buffering, Timeout-Defaults, rekursive Freigabe-Synchronisierung, Startup-Cache-Arbeit und Long-Path-Hinweise zielen auf aktuelle Windows-Systeme und große Bibliotheken.",
             "span": "Leistung und Skalierung"
           },
           {
             "h3": "eD2K und Kad bleiben zuerst",
-            "p": "Server-, globale und Kad-Suche bleiben die native Basis, mit Kad-Identität, Bad-Node-Behandlung, Cleanup und Timing innerhalb kompatibler Grenzen.",
+            "p": "Server-, globale und Kad-Suche bleiben die native Grundlage, mit Kad-Identitätsverfolgung, Bad-Node-Behandlung, Cleanup und Timing-Arbeit innerhalb der Kompatibilitätsgrenzen.",
             "span": "Klassisches Netzwerk"
           },
           {
-            "h3": "REST und Controller-Workflows",
-            "p": "Authentifizierte JSON-Endpunkte decken Transfers, Suchen, Freigaben, Server, Kad, Logs, Kategorien, Uploads, Statistiken, Preferences und kontrolliertes Shutdown ab.",
+            "h3": "REST- und Controller-Workflows",
+            "p": "Authentifizierte JSON-Endpunkte decken Übertragungen, Suchen, freigegebene Dateien, Server, Kad, Logs, Kategorien, Uploads, Statistiken, Preferences und kontrolliertes Herunterfahren von vertrauenswürdigen lokalen Tools ab.",
             "span": "Automatisierung"
           },
           {
-            "h3": "Nachweise vor öffentlichen Paketen",
-            "p": "Die geplante RC <code>0.7.3-rc.1</code> hängt von nativen Tests, REST-Verträgen, Live-Controller-Lanes, Netzwerk-Adversity, Packaging und x64/ARM64-Proben ab.",
-            "span": "Release-Disziplin"
+            "h3": "Nachweise vor Labels",
+            "p": "<code>0.7.3-rc.1</code> ist veröffentlicht – mit GitHub-Actions-Packaging, Manifesten, SHA-256-Nachweisen, SPDX-SBOMs, Diagnostics-Assets und Bootstrapper-Hash-Nachweisen.",
+            "span": "Test- und Release-Disziplin"
           }
         ],
         "eyebrow": "Funktionen",
-        "h2": "Was eMuleBB um den klassischen Client ergänzt",
-        "p": "Die Arbeit zielt auf sichtbares Betreiberverhalten: vorhersehbare Upload-Policy, sichereres binding, feste Leistungsgrenzen, große Freigaben, lokale Automatisierung und Nachweise für das geplante Release <code>0.7.3-rc.1</code>."
+        "h2": "Was eMuleBB rund um den klassischen Client ergänzt",
+        "p": "Die RC1-Arbeit konzentriert sich auf betreibersichtbares Verhalten: vorhersehbare Upload-Policy, sichereres Binding, feste Leistungsgrenzen, Betrieb großer Bibliotheken, lokale Automatisierung und Paketnachweise."
       },
       "footer_links_label": "Footer-Links",
       "guide": {
         "cards": [
           {
-            "h3": "Mit bewährten eMule-Gewohnheiten starten",
-            "p": "Nutze vertrauenswürdige Serverlisten, starte Kad bewusst, halte incoming und freigegebene Ordner berechenbar und bewahre den klassischen Workflow vor der Automatisierung.",
+            "h3": "Mit dem Produktguide beginnen",
+            "p": "Betreibe eMuleBB zuerst wie eMule: vertrauenswürdige Server, bewusster Kad-Bootstrap, vorhersehbare Incoming-/Temp-Pfade und sichtbare freigegebene Ordner.",
             "span": ""
           },
           {
-            "h3": "Upload auf den echten Anschluss abstimmen",
-            "p": "Setze ein endliches Upload-Limit, wähle ein realistisches Client-Ziel und lass die Breitband-Policy weniger, aber stärkere Slots bevorzugen.",
+            "h3": "Lokale Automatisierung nutzen",
+            "p": "Aktiviere REST nur für vertrauenswürdige Controller und nutze dann aMuTorrent, Prowlarr, Radarr und Sonarr über die dokumentierten Adapterwege.",
             "span": ""
           },
           {
-            "h3": "Große Freigaben pflegen",
-            "p": "Nutze Windows mit long paths, halte Freigabe-Wurzeln sauber, beobachte Ratios und behandle seltene Dateien als bewusste Veröffentlichungen.",
-            "span": ""
-          },
-          {
-            "h3": "Nur in vertrauenswürdigen Netzen automatisieren",
-            "p": "Aktiviere WebServer/REST mit API key, setze binding und Firewall sauber und nutze Controller, die native eMule-Semantik respektieren.",
-            "span": ""
-          },
-          {
-            "h3": "Release-Reife verfolgen",
-            "p": "Betrachte die öffentliche Branch als aktives Pre-Release, bis <code>0.7.3-rc.1</code>-Gates, Operator-Checks und Live-E2E-Nachweise etwas anderes sagen.",
-            "span": ""
-          },
-          {
-            "h3": "Für Tiefe die Dokumentation nutzen",
-            "p": "Die Homepage bleibt kompakt. Produktguide, REST-Vertrag, Breitbandnotizen und Release-Dokumente liegen als Markdown im Tooling-Repository.",
+            "h3": "Die Nachweise lesen",
+            "p": "Setup-, API-, Release-, SBOM- und Paketdetails stehen in den gerenderten Docs, damit öffentliche Aussagen an versionsverwaltete Nachweise gebunden bleiben.",
             "span": ""
           }
         ],
-        "eyebrow": "Produktguide",
-        "h2": "Ein kurzes Betriebsmodell",
+        "eyebrow": "Guide",
+        "h2": "Produktguide, Automatisierung und Docs",
         "p": ""
       },
       "hero": {
-        "eyebrow": "Klassischer eMule, abgestimmt auf heutige Breitbandanschlüsse",
+        "eyebrow": "Die eMuleBB-Heimat für Breitband-P2P",
         "guide": "Produktguide",
-        "h1": "eMuleBB hält eD2K und Kad für ernsthafte Nutzer brauchbar.",
-        "lead": "Ein eMule für Power User mit schnellen Uploads, großen Freigaben, dauerhaft laufenden Windows-Sitzungen und lokalen Controller-Workflows, ohne die vertraute Desktop-App aufzugeben.",
-        "panel_h2": "Konservativ, wo Kompatibilität zählt. Modern, wo Kontrolle zählt.",
-        "panel_kicker": "Produktlinie",
-        "panel_p": "eMuleBB stellt den nativen eMule-Workflow in den Mittelpunkt und ergänzt ihn um breitbandtaugliche Queue-Logik, lokale API-Steuerung und Release-Validierung.",
+        "h1": "eMuleBB ist das Breitband-eMule-Produkt, gebaut von P2P-Leuten.",
+        "install": "RC1 herunterladen",
+        "lead": "RC1 ist veröffentlicht: eine ernsthafte Windows-eMule-Linie für schnelle Upload-Anschlüsse, große freigegebene Bibliotheken, dauerhaft laufende Sitzungen, REST-Controller-Workflows, Arr-Integration und auf GitHub gebaute Paketnachweise.",
+        "panel_h2": "eMuleBB ist das Produkt. Das Ökosystem ist das Nachweislabor.",
+        "panel_kicker": "Produkthaltung",
+        "panel_p": "Die Desktop-App bleibt stock-kompatibel, wo das Netzwerk zählt. Die RC1-Suite ergänzt lokale Controller-Workflows darum herum, ohne eMuleBB in eine generische Torrent-Hülle zu verwandeln.",
         "signals": [
-          "Originale eD2K/Kad-Kompatibilität",
-          "Kontrolle der Upload-Slots",
-          "VPN/interface binding",
-          "Aktuelle Leistungsgrenzen",
-          "Authentifizierte JSON REST API",
-          "Öffentliche 0.7.3-rc.1 geplant",
-          "Workspace für Release-Validierung"
+          "0.7.3-rc.1 veröffentlicht",
+          "Suite-Bootstrap mit einer Zeile",
+          "Manuelles eigenständiges ZIP",
+          "GitHub-Actions-Builds",
+          "Manifest-Hash-Prüfung",
+          "SPDX-SBOMs",
+          "aMuTorrent-Controller",
+          "Prowlarr Torznab",
+          "Radarr/Sonarr-qBit-Adapter",
+          "Stock-eD2K/Kad-Kompatibilität"
         ],
         "source": "Quellcode"
       },
-      "intro": "eMule broadband edition, kurz <strong>eMuleBB</strong>, ist eine eigenständige Produktlinie für Menschen, die das verteilte Modell von eMule weiterhin schätzen. Sie bewahrt die klassischen Desktop-Workflows und macht den Client auf heutigen Windows-Systemen leichter betreibbar, beobachtbar, automatisierbar und validierbar.",
-      "meta_description": "eMuleBB ist eine moderne eMule-Ausgabe für Breitband-Upload-Kontrolle, VPN/interface binding, aktuelle Leistungsgrenzen, große Freigaben, REST automation, eD2K, Kad und Power-User-Workflows.",
+      "intro": "Dies ist die Heimat von <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, ein eigenständiges Produkt für Menschen, die das verteilte Sharing-Modell von eMule weiterhin schätzen und es wie moderne Software betreiben möchten. RC1-Pakete sind auf GitHub Releases veröffentlicht, mit einem Full-Suite-Bootstrapper, eigenständigen ZIPs, Manifesten, Hashes, SBOMs und passenden aMuTorrent-Controller-Assets.",
+      "meta_description": "eMuleBB RC1 ist veröffentlicht: Installiere eMule broadband edition mit dem PowerShell-Suite-Bootstrapper oder als eigenständiges ZIP, mit auf GitHub gebauter Paket-Provenienz.",
       "method": {
         "cards": [
           {
-            "h3": "Kein beiläufiger Protocol drift",
-            "p": "Kad- und eD2K-Änderungen bleiben in lokalem Routing, Timing, Validierung und Kontrolle. Wire formats, opcodes und native Workflows sind Kompatibilitätsgrenzen.",
+            "h3": "Kein beiläufiger Protocol Drift",
+            "p": "Kad- und eD2K-Änderungen bleiben in lokalem Routing, Timing, Validierung und Kontrollpfaden. Wire-Formate, Opcodes und native Desktop-Workflows bleiben Kompatibilitätsgrenzen.",
             "span": "Kompatibilität"
           },
           {
             "h3": "Feste, prüfbare Defaults",
-            "p": "Moderne Annahmen zu bandwidth, Speicher, socket, queue und timeout werden als explizite Defaults oder Advanced Preferences abgebildet.",
+            "p": "Moderne Annahmen zu Bandbreite, Speicher, Socket, Queue, Startup und Timeout werden als explizite Defaults oder Advanced Preferences abgebildet, statt als verstecktes adaptives Verhalten.",
             "span": "Limits"
           },
           {
-            "h3": "Controller-Verträge, kein screen scraping",
-            "p": "Die authentifizierte JSON API folgt einem OpenAPI-Vertrag, lehnt malformed inputs ab und führt native Mutationen über die App.",
+            "h3": "Controller-Verträge, kein Screen Scraping",
+            "p": "Die authentifizierte JSON API folgt einem OpenAPI-gestützten Vertrag, lehnt malformte Eingaben ab und leitet native Statusänderungen über die App, wo der Desktop-Client diesen Zustand besitzt.",
             "span": "REST"
           },
           {
             "h3": "Nachweise vor Labels",
-            "p": "Der Prozess zeichnet Befehle, Commits, Logs, Paketpfade, Hashes, Live-Nachweise und Operator-Entscheidungen auf, damit ein Tag ein geprüftes Ergebnis ist.",
+            "p": "Der Release-Prozess zeichnet Befehle, Commits, Logs, Paketpfade, Hashes, Live-Nachweise, leistungssensible Prüfungen und Operator-Entscheidungen auf, damit ein Release-Tag ein geprüftes Ergebnis ist.",
             "span": "Release"
           }
         ],
         "eyebrow": "Implementierungsmethode",
         "h2": "Um den Legacy-Kern modernisieren, dann das Ergebnis beweisen",
-        "p": "Der Stil ist bewusst konservativ. eMuleBB ändert lokale Policy, Limits, Diagnostik, API-Grenzen und Release-Disziplin, während eD2K/Kad-Kompatibilität Default bleibt."
+        "p": "Der Implementierungsstil ist bewusst konservativ. eMuleBB ändert lokale Policy, Limits, Diagnostik, API-Grenzen und Release-Disziplin, während die Stock-eD2K/Kad-Kompatibilität der Standard bleibt. Die größere Organisation nutzt dieselbe Disziplin für Windows-Builds, Manager, Server und Lab-Clients."
       },
       "nav": [
         {
@@ -155,20 +144,17 @@
           "label": "Funktionen"
         },
         {
-          "id": "guide",
-          "label": "Guide"
+          "class": "nav-download",
+          "id": "install",
+          "label": "Download"
         },
         {
           "id": "docs",
-          "label": "Dokumentation"
-        },
-        {
-          "id": "automation",
-          "label": "Automatisierung"
+          "label": "Guide"
         },
         {
           "id": "release",
-          "label": "Veröffentlichung"
+          "label": "Provenienz"
         },
         {
           "id": "repos",
@@ -176,95 +162,91 @@
         }
       ],
       "nav_label": "Hauptnavigation",
-      "og_description": "Moderner eMule für Breitband-Upload-Kontrolle, VPN/interface binding, aktuelle Leistungsgrenzen, große Bibliotheken, REST automation, eD2K/Kad-Kompatibilität und Release-Validierung. Die erste öffentliche Version 0.7.3-rc.1 ist geplant und noch nicht veröffentlicht.",
-      "og_title": "eMule broadband edition | eMuleBB auf Deutsch",
+      "og_description": "eMuleBB ist ein eigenständiges, breitbandorientiertes eMule-Produkt und die Heimat für Windows-P2P-Builds, Controller-Tooling, Release-Nachweise und experimentelle eD2K/Kad-Entwicklung.",
+      "og_title": "eMuleBB Startseite | eMule broadband edition",
       "product_summary_label": "eMuleBB Kurzfassung",
       "project_links_label": "Projektlinks",
       "release": {
         "cards": [
           {
-            "h3": "Aktueller Stand",
-            "p": "Das erste öffentliche Ziel ist <code>0.7.3-rc.1</code>. Es ist noch nicht veröffentlicht. Der finale Nachweis läuft, der öffentliche Stand bleibt an aktive Release-Dokumente gebunden.",
+            "h3": "Veröffentlichtes RC1",
+            "p": "<code>emulebb-v0.7.3-rc.1</code> ist ein GitHub-Prerelease mit x64- und ARM64-ZIPs, Diagnostics-Paketen, Manifesten, SBOMs und dem Suite-Bootstrapper.",
             "span": ""
           },
           {
-            "h3": "Build- und Paketnachweis",
-            "p": "Der Nachweis umfasst Workspace-Validierung, Debug- und Release-x64-Builds, Release-ARM64-Builds, Test-Binaries, Paketgenerierung, saubere Worktree und SHA-256-Hashes.",
+            "h3": "Hash-geprüftes Setup",
+            "p": "Der Bootstrapper lädt Release-Assets herunter und prüft Paket-Hashes anhand der veröffentlichten Manifeste vor der Installation.",
             "span": ""
           },
           {
-            "h3": "Verhaltensnachweis",
-            "p": "Die Gates umfassen native Suites, REST-Vertrag, OpenAPI drift, malformed requests, UI automation, live Controller-Surface E2E, vollständiges Release x64 live E2E und Netzwerk-Adversity.",
+            "h3": "Suite-Assets",
+            "p": "Das passende aMuTorrent-RC1-Paket wird separat veröffentlicht, und der vollständige x64-Bootstrap-Ablauf löst es automatisch für die Controller-Einrichtung auf.",
             "span": ""
           },
           {
             "h3": "Controller-Nachweis",
-            "p": "aMuTorrent, Prowlarr, Radarr, Sonarr und qBittorrent-kompatible Lanes zeigen Automatisierung, ohne den nativen Vertrag <code>/api/v1</code> zu schwächen.",
-            "span": ""
-          },
-          {
-            "h3": "Kompatibilitätsnachweis",
-            "p": "Das originale eD2K/Kad-Verhalten bleibt Default. Breitband, REST und Controller werden um dieses Kompatibilitätsziel herum ergänzt.",
+            "p": "aMuTorrent, Prowlarr, Radarr, Sonarr, Torznab und qBittorrent-kompatible Lanes sind als lokale Integrationswege rund um den nativen <code>/api/v1</code>-Vertrag dokumentiert.",
             "span": ""
           }
         ],
-        "eyebrow": "Release-Status",
-        "h2": "Die öffentliche Version 0.7.3-rc.1 ist geplant, gegated und noch nicht veröffentlicht",
+        "eyebrow": "Sicherheit und Provenienz",
+        "h2": "RC1 wird auf GitHub gebaut und paketiert",
         "p": ""
       },
+      "release_downloads_label": "Releases herunterladen",
       "repos": {
         "p": ""
       },
-      "structured_description": "Moderner eMule für Breitband-Upload-Kontrolle, VPN/interface binding, aktuelle Leistungsgrenzen, große Freigaben, REST automation, eD2K/Kad-Kompatibilität und Power-User-Workflows. Die erste öffentliche Version ist als 0.7.3-rc.1 geplant und noch nicht veröffentlicht.",
+      "structured_description": "eMuleBB ist die Heimat von eMule broadband edition, einem eigenständigen, breitbandorientierten eMule-Produkt mit Upload-Kontrolle, automatisierten Tests, SBOM-gestützten Paketen, REST automation, eD2K/Kad-Kompatibilität und sofort nutzbaren Integrationswegen für aMuTorrent, Prowlarr, Radarr und Sonarr. Der erste öffentliche Release Candidate 0.7.3-rc.1 ist auf GitHub Releases veröffentlicht.",
       "team": {
         "cards": [
           {
-            "h3": "Upload-Slot-Therapeut",
-            "p": "Gibt schwachen Slots genau lange genug Raum für ihre Gefühle, bevor sie mit Formular und cooldown zurück in die Queue gehen.",
+            "h3": "Upload-Maultier-Bändiger",
+            "p": "Hindert Breitband-Upload-Slots daran, die Stalltür einzutreten, und schiebt die langsamen mit einem sehr offiziellen Klemmbrett zurück in die Reihe.",
             "span": ""
           },
           {
-            "h3": "Kad-Bootstrap-Archivar",
-            "p": "Bewahrt die heilige Liste von Nodes, die 2007 einmal funktionierten und eine sorgfältig validierte zweite Chance verdienen.",
+            "h3": "Kad-Pfad-Maultier",
+            "p": "Trägt Bootstrap-Nodes, Routing-Tabellen und sture eD2K/Kad-Folklore über raues Netzwerkgelände, ohne die Protokollkarte zu verlieren.",
             "span": ""
           },
           {
-            "h3": "Release-Gate-Türsteher",
-            "p": "Lässt Builds nur herein, wenn sie Tests, Live-Nachweise und eine plausible Erklärung zum letzten Socket mitbringen.",
+            "h3": "Release-Lastmaultier",
+            "p": "Schleppt Pakete, Hashes, SBOMs, Logs, Live-Checks und gerade genug Attitüde durch das Gate, bevor irgendetwas als fertig gilt.",
             "span": ""
           }
         ],
-        "eyebrow": "Projektkultur",
-        "h2": "Die Leute, die verhindern, dass die Queue zur Performance-Kunst wird",
+        "eyebrow": "Projekt-Lore",
+        "h2": "Das Maultier-Team hinter der P2P-Werkstatt",
         "p": ""
       },
-      "title": "eMule broadband edition | eMuleBB auf Deutsch",
+      "title": "eMuleBB Startseite | eMule broadband edition",
       "why": {
         "cards": [
           {
-            "h3": "eD2K und Kad praktisch halten",
-            "p": "Es geht nicht um Nostalgie und nicht um einen Rewrite. Das klassische Modell soll für lange Sitzungen, seltene Dateien, bewusstes Seeding und native Desktop-Nutzung brauchbar bleiben.",
+            "h3": "eMuleBB ist ein eigenständiges Produkt",
+            "p": "Das Ziel ist kein kosmetischer Mod, kein Protokoll-Fork und keine generische Downloader-Hülle. Es ist eine breitbandorientierte eMule-Linie für lange Sitzungen, seltene Dateien, bewusstes Seeding und Power-User, die weiterhin den nativen Desktop-Workflow wollen.",
             "span": "Produktgrund"
           },
           {
-            "h3": "Alte Annahmen sichtbar machen",
-            "p": "Defaults für Upload-Slots, Timeouts, Buffer, große Freigaben und WebServer-Exposition werden explizit, damit sie geprüft, getestet und dokumentiert werden können.",
+            "h3": "P2P-Verhalten prüfbar machen",
+            "p": "Upload-Slots, Timeouts, Buffer, große Bibliotheken, WebServer-Exposition, REST-Kontrolle und Paketnachweise werden explizit gemacht, damit jede Änderung geprüft, getestet, dokumentiert und angepasst werden kann.",
             "span": "Technischer Grund"
           },
           {
-            "h3": "Moderne Nachweise auf Legacy-Code anwenden",
-            "p": "Der Workspace behandelt Release als technisches Artefakt: Source-Policy, OpenAPI-Verträge, reproduzierbare Builds, Hashes, Live-Prüfungen und Operator-Gates müssen zusammenpassen.",
-            "span": "Release-Grund"
+            "h3": "Die Werkzeuge rund um den Client bauen",
+            "p": "Dieselbe Workspace-Disziplin deckt die App, Controller-Tooling, Windows-Builds, deterministische eD2K-Dienste und experimentelle Headless-eD2K/Kad-Arbeit ab, ohne so zu tun, als wäre jedes Laborprojekt ein stabiles Endnutzerprodukt.",
+            "span": "Ökosystem-Grund"
           }
         ],
         "eyebrow": "Warum",
-        "h2": "Ein Legacy-Client ist nur nützlich, wenn man ihn noch verlässlich betreiben kann",
-        "p": "eMuleBB ist Produktarbeit und disziplinierte Technik zugleich: eine native Windows-Anwendung mit echtem Netzwerkverhalten erhalten und mit modernem Build-, Test-, Dokumentations-, Automatisierungs- und Release-Prozess umgeben."
+        "h2": "P2P-Software gewinnt Vertrauen, indem sie echte Sitzungen übersteht",
+        "p": "eMuleBB ist zugleich Produktarbeit und Ingenieurspraxis: einen komplexen nativen Windows-Client mit echtem Netzwerkverhalten bewahren und ihn dann mit modernen Builds, Tests, Dokumentation, Automatisierung und Release-Nachweisen umgeben."
       }
     },
     "doc_section": [
-      "Mehr lesen",
-      "Detaillierte Guides und Quelldokumente"
+      "Dokumentation",
+      "Guides, API und Release Notes"
     ],
     "docs": {
       "controllers": [
@@ -273,39 +255,27 @@
       ],
       "downloads": [
         "Download- und Such-Guide",
-        "Suchmodi, Vertrauen in Ergebnisse, Kategorien und Power-User-Workflows."
+        "Suchmodi, Vertrauen in Ergebnisse, Kategorien und Power-User-Datei-Workflows."
       ],
       "emulebb": [
         "eMuleBB Produktguide",
-        "Überblick für Setup, Tuning, Automatisierung und release-bewusste Nutzung."
+        "Setup, Tuning, Automatisierung, release-bewusste Nutzung, Tests und SBOM-Nachweise."
       ],
-      "network": [
-        "Netzwerk-Guide",
-        "Referenz zu eD2K, Kad, binding, UPnP, Firewall und Verbindungsdiagnose."
+      "p2p_overlord_agent": [
+        "p2p-overlord eMule-Agent",
+        "Headless-Rust-Kad/eD2K-Agentgrenze, Quelldokumente und eMuleBB-Vertragsnotizen."
       ],
       "release": [
-        "0.7.3-rc.1 Release-Dashboard",
-        "Geplante RC-Gates, Evidenzverweise und Readiness-Regeln."
-      ],
-      "rest_adapters": [
-        "REST Adapter Verträge",
-        "qBittorrent-compatible und Torznab Oberfläche für Controller-Autoren."
-      ],
-      "rest_contract": [
-        "REST API Vertrag",
-        "Lesbarer Vertrag für die authentifizierte JSON-Steuerfläche."
+        "0.7.3 Release-Dashboard",
+        "Aktuelle RC-Gates, automatisierte Testnachweise, SBOM-/Paketnachweise und Readiness-Regeln."
       ],
       "setup": [
         "Setup-Guide",
-        "Installationsmodell, First-run-Profil und praktische Startnotizen."
+        "Installationsmodell, First-Run-Profilverhalten und praktische Startnotizen."
       ],
-      "sharing": [
-        "Freigabe-Guide",
-        "Freigegebene Ordner, überwachte shares, große Bibliotheken und Policy-Dateien."
-      ],
-      "troubleshooting": [
-        "Troubleshooting-Guide",
-        "Symptomgeführte Checks für Low ID, Netzwerk, Freigaben und Automatisierung."
+      "stack_integrations": [
+        "aMuTorrent mit eMuleBB nutzen",
+        "Aufgabenorientiertes Setup für eMuleBB, aMuTorrent, Prowlarr, Radarr und Sonarr."
       ]
     },
     "language_link": "Sprachen",
@@ -315,14 +285,18 @@
       "open_label": "Hauptnavigation öffnen"
     },
     "repo_section": [
-      "Öffentlicher Workspace",
+      "eMuleBB Ökosystem",
       "Primäre Repositories"
     ],
     "repos": {
+      "amule": "Windows-Build- und Validierungslinie für aMule-Nutzer",
+      "amutorrent": "Fork für eMuleBB-Verwaltung und Controller-Workflows",
       "build": "Build-, Validierungs- und Release-Orchestrierung",
-      "emule": "Desktop-App und Produktquellen",
-      "setup": "reproduzierbares Workspace-Setup",
-      "tests": "native, Python-, UI-, REST- und live E2E-Tests",
+      "emule": "Flaggschiff-Desktop-App und Produktquelle",
+      "p2p_overlord_agents": "experimentelle Agenten für die p2p-overlord-P2P-Suite",
+      "p2p_overlord_be": "experimentelle Headless-Rust-eD2K/Kad-Client-Backend-Arbeit",
+      "p2p_overlord_tooling": "Szenario-Manifeste, Parity-Runner, Reports und Quality-Guards",
+      "tests": "native, Python-, UI-, REST- und Live-E2E-Tests",
       "tooling": "Roadmap, Backlog, Policy, Audits und Referenzdocs"
     }
   },
