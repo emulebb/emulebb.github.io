@@ -2711,20 +2711,20 @@
   "tr": {
     "content": {
       "automation": {
-        "eyebrow": "Controller yüzeyi",
-        "h2": "Desktop uygulamasını değiştirmeden REST automation",
-        "p": "Broadband release track, mevcut WebServer listener üzerinden resource-oriented JSON API <code>/api/v1</code> sunar. <code>X-API-Key</code> ile kimlik doğrular, JSON envelopes döner ve native eMule state değişikliklerini uygulama üzerinden geçirir.",
+        "eyebrow": "Denetleyici yüzeyi",
+        "h2": "Masaüstü uygulamasının yerini almadan REST automation",
+        "p": "Geniş bant sürüm hattı, mevcut WebServer dinleyicisinden kaynak odaklı bir <code>/api/v1</code> JSON API sunar. <code>X-API-Key</code> ile kimlik doğrular, JSON zarfları döndürür ve yerel eMule durum değişikliklerini uygulama üzerinden yönlendirir.",
         "pills": [
-          "Transfers",
-          "Searches",
-          "Servers",
+          "Aktarımlar",
+          "Aramalar",
+          "Sunucular",
           "Kad",
-          "Shared files",
-          "Uploads",
-          "Categories",
-          "Logs",
-          "Statistics",
-          "Preferences"
+          "Paylaşılan dosyalar",
+          "Yüklemeler",
+          "Kategoriler",
+          "Günlükler",
+          "İstatistikler",
+          "Tercihler"
         ],
         "pills_label": "REST API alanları"
       },
@@ -2734,125 +2734,114 @@
       "features": {
         "cards": [
           {
-            "h3": "Geniş bant upload kontrolü",
-            "p": "Sınırlı slot hedefleri, zayıf slot recycling, ratio göstergeleri ve seeding controls hızlı upload'u eD2K protokolünü değiştirmeden kullanışlı tutar.",
-            "span": "Paylaşım ve upload"
+            "h3": "Geniş bant yükleme denetimi",
+            "p": "Sınırlandırılmış yuva hedefleri, zayıf yuva geri dönüşümü, oran göstergeleri ve seeding denetimleri, eD2K yükleme protokolünü değiştirmeden hızlı yükleme bağlantılarını yararlı tutar.",
+            "span": "Paylaşım ve yükleme"
           },
           {
-            "h3": "Binding, NAT ve açıklık politikası",
-            "p": "Interface-aware binding, UPnP/NAT doğrulaması, HTTPS, allowed-IP rules ve WebServer mirası uzak yüzeyleri açık ve test edilebilir tutar.",
-            "span": "Ağ kontrolü"
+            "h3": "Binding, NAT ve erişim politikası",
+            "p": "Arabirim farkında binding, UPnP/NAT eşleme doğrulaması, HTTPS, izinli IP kuralları ve ayrı WebServer bind ayarları, uzak yüzeyleri açık ve test edilebilir tutar. Binding bir VPN kill switch değildir.",
+            "span": "Ağ denetimi"
           },
           {
-            "h3": "Büyük oturumlar için güncel defaults",
-            "p": "Daha büyük socket buffers, queue/source limits, file buffering, timeouts, recursive sync ve long paths desteği modern Windows ve büyük kütüphaneleri hedefler.",
+            "h3": "Büyük oturumlar için güncel varsayılanlar",
+            "p": "Daha büyük soket tamponları, queue/source sınırları, dosya tamponlama, zaman aşımı varsayılanları, özyinelemeli paylaşım eşitlemesi, başlangıç önbelleği çalışması ve uzun yol rehberliği, güncel Windows sistemlerini ve büyük kütüphaneleri hedefler.",
             "span": "Performans ve ölçek"
           },
           {
-            "h3": "eD2K ve Kad önce gelir",
-            "p": "Server, global ve Kad search native temel olarak kalır; Kad identity, bad-node handling, cleanup ve timing uyumluluk sınırları içinde tutulur.",
+            "h3": "eD2K ve Kad ilk sırada kalır",
+            "p": "Sunucu, küresel ve Kad araması yerel temel olmayı sürdürür; Kad kimlik takibi, kötü düğüm işleme, temizlik ve zamanlama çalışması uyumluluk sınırları içinde tutulur.",
             "span": "Klasik ağ"
           },
           {
-            "h3": "REST ve controller workflows",
-            "p": "Kimlik doğrulamalı JSON endpoints transfers, searches, shared files, servers, Kad, logs, categories, uploads, statistics, preferences ve controlled shutdown alanlarını kapsar.",
+            "h3": "REST ve denetleyici iş akışları",
+            "p": "Kimliği doğrulanmış JSON uç noktaları; güvenilir yerel araçlardan aktarımları, aramaları, paylaşılan dosyaları, sunucuları, Kad'ı, günlükleri, kategorileri, yüklemeleri, istatistikleri, tercihleri ve denetimli kapatmayı kapsar.",
             "span": "Otomasyon"
           },
           {
-            "h3": "Public paketlerden önce kanıt",
-            "p": "<code>0.7.3-rc.1</code> RC; native tests, REST contracts, live controller lanes, network adversity, packaging ve x64/ARM64 provalarına bağlıdır.",
-            "span": "Release disiplini"
+            "h3": "Etiketlerden önce kanıt",
+            "p": "<code>0.7.3-rc.1</code>, GitHub Actions paketlemesi, manifestler, SHA-256 kanıtı, SPDX SBOM'ları, tanılama varlıkları ve bootstrapper hash kanıtı ile yayınlanır.",
+            "span": "Test ve sürüm disiplini"
           }
         ],
         "eyebrow": "Özellikler",
-        "h2": "eMuleBB'nin klasik client etrafına ekledikleri",
-        "p": "Çalışma operatörün görebildiği davranışa odaklanır: öngörülebilir upload policy, daha güvenli binding, sabit performans sınırları, büyük kütüphaneler, yerel otomasyon ve planlanan <code>0.7.3-rc.1</code> release için kanıt."
+        "h2": "eMuleBB'nin klasik istemcinin etrafına eklediği şeyler",
+        "p": "RC1 çalışması operatöre görünür davranışa odaklanır: öngörülebilir yükleme politikası, daha güvenli binding, sabit performans sınırları, büyük kütüphane işletimi, yerel otomasyon ve paket kanıtı."
       },
-      "footer_links_label": "Alt bağlantılar",
+      "footer_links_label": "Alt bilgi bağlantıları",
       "guide": {
         "cards": [
           {
-            "h3": "Bilinen iyi eMule alışkanlıklarından başla",
-            "p": "Güvenilir server lists kullan, Kad'i bilinçli başlat, incoming ve shared folders düzenli tut, otomasyon eklemeden önce klasik workflow'u koru.",
+            "h3": "Ürün kılavuzuyla başlayın",
+            "p": "eMuleBB'yi önce eMule gibi kullanın: güvenilir sunucular, bilinçli Kad bootstrap, öngörülebilir incoming/temp yolları ve görünür paylaşılan klasörler.",
             "span": ""
           },
           {
-            "h3": "Upload'u gerçek bağlantıya göre ayarla",
-            "p": "Sonlu bir upload limit belirle, gerçekçi bir client hedefi seç ve broadband policy'nin daha az ama daha güçlü slots tercih etmesine izin ver.",
+            "h3": "Yerel otomasyonu kullanın",
+            "p": "REST'i yalnızca güvenilir denetleyiciler için etkinleştirin, ardından belgelenen adaptör yollarıyla aMuTorrent, Prowlarr, Radarr ve Sonarr'ı kullanın.",
             "span": ""
           },
           {
-            "h3": "Büyük kütüphaneleri düzenli tut",
-            "p": "Long paths destekli Windows kullan, shared roots alanlarını temiz tut, ratios izle ve nadir dosyaları bilinçli yayın kararı olarak ele al.",
-            "span": ""
-          },
-          {
-            "h3": "Sadece güvenilen ağlarda otomatikleştir",
-            "p": "WebServer/REST'i API key ile aç, binding ve firewall'u dikkatle ayarla ve native eMule semantiğine saygılı controllers kullan.",
-            "span": ""
-          },
-          {
-            "h3": "Release hazırlığını izle",
-            "p": "Public branch'i, <code>0.7.3-rc.1</code> gates, operator checks ve live E2E evidence aksini söyleyene kadar aktif pre-release kabul et.",
-            "span": ""
-          },
-          {
-            "h3": "Ayrıntılar için belgeleri kullan",
-            "p": "Homepage kısa kalır. Ürün kılavuzu, REST contract, broadband notları ve release docs tooling repository içinde Markdown olarak yaşar.",
+            "h3": "Kanıtı okuyun",
+            "p": "Kurulum, API, sürüm, SBOM ve paket ayrıntıları işlenmiş dokümanlarda bulunur; böylece kamuya yönelik iddialar sürüm denetimli kanıta bağlı kalır.",
             "span": ""
           }
         ],
-        "eyebrow": "Ürün kılavuzu",
-        "h2": "Kısa işletim modeli",
+        "eyebrow": "Kılavuz",
+        "h2": "Ürün kılavuzu, otomasyon ve dokümanlar",
         "p": ""
       },
       "hero": {
-        "eyebrow": "Klasik eMule, modern geniş bant için ayarlandı",
+        "eyebrow": "Geniş bant P2P için eMuleBB yuvası",
         "guide": "Ürün kılavuzu",
-        "h1": "eMuleBB, eD2K ve Kad'i ciddi kullanıcılar için kullanışlı tutar.",
-        "lead": "Hızlı upload bağlantıları, büyük paylaşılan kütüphaneler, sürekli açık Windows oturumları ve tanıdık desktop uygulamasından vazgeçmeden yerel controller workflows isteyen power user'lar için eMule.",
-        "panel_h2": "Uyumluluğun önemli olduğu yerde tutucu. Kontrolün önemli olduğu yerde modern.",
+        "h1": "eMuleBB, P2P insanlarının yaptığı geniş bant eMule ürünüdür.",
+        "install": "RC1'i indir",
+        "lead": "RC1 yayınlandı: hızlı yükleme bağlantıları, büyük paylaşılan kütüphaneler, sürekli açık oturumlar, REST denetleyici iş akışları, Arr entegrasyonu ve GitHub'da derlenmiş paket kanıtı için ciddi bir Windows eMule hattı.",
+        "panel_h2": "eMuleBB üründür. Ekosistem ise kanıt laboratuvarıdır.",
         "panel_kicker": "Ürün duruşu",
-        "panel_p": "eMuleBB, native eMule workflow'u merkezde tutar; çevresine geniş bant queue davranışı, yerel API kontrolü ve release doğrulaması ekler.",
+        "panel_p": "Masaüstü uygulaması, ağın önemli olduğu yerde stok ile uyumlu kalır. RC1 paketi, eMuleBB'yi genel bir torrent kabuğuna dönüştürmeden çevresine yerel denetleyici iş akışları ekler.",
         "signals": [
-          "Orijinal eD2K/Kad uyumluluğu",
-          "Upload slot kontrolü",
-          "VPN/interface binding",
-          "Güncel performans sınırları",
-          "Kimlik doğrulamalı JSON REST API",
-          "Public 0.7.3-rc.1 planlandı",
-          "Release doğrulama workspace'i"
+          "0.7.3-rc.1 yayınlandı",
+          "Tek satırlık paket bootstrap'ı",
+          "Manuel bağımsız ZIP",
+          "GitHub Actions derlemeleri",
+          "Manifest hash doğrulaması",
+          "SPDX SBOM'ları",
+          "aMuTorrent denetleyicisi",
+          "Prowlarr Torznab",
+          "Radarr/Sonarr qBit adaptörü",
+          "Stok eD2K/Kad uyumluluğu"
         ],
         "source": "Kaynak kod"
       },
-      "intro": "eMule broadband edition, kısaca <strong>eMuleBB</strong>, eMule'un dağıtık paylaşım modeline hâlâ değer verenler için bağımsız bir ürün çizgisidir. Klasik desktop workflows korunur; istemci modern Windows sistemlerinde daha kolay çalıştırılır, gözlenir, otomatikleştirilir ve doğrulanır.",
-      "meta_description": "eMuleBB; geniş bant upload kontrolü, VPN/interface binding, güncel performans sınırları, büyük paylaşılan kütüphaneler, REST automation, eD2K, Kad ve ileri workflows için modern bir eMule sürümüdür.",
+      "intro": "Burası <strong>eMuleBB</strong>'nin yuvasıdır: <strong>eMule broadband edition</strong>, eMule'nin dağıtık paylaşım modeline hâlâ değer veren ve onu modern bir yazılım gibi işletmek isteyenler için bağımsız bir ürün. RC1 paketleri GitHub Releases'te tam paket bootstrapper'ı, bağımsız ZIP'ler, manifestler, hash'ler, SBOM'lar ve eşleşen aMuTorrent denetleyici varlıklarıyla yayınlanır.",
+      "meta_description": "eMuleBB RC1 yayınlandı: eMule broadband edition'ı PowerShell paket bootstrapper'ı veya bağımsız ZIP ile, GitHub'da derlenmiş paket kökeniyle kurun.",
       "method": {
         "cards": [
           {
-            "h3": "Gelişigüzel protocol drift yok",
-            "p": "Kad ve eD2K değişiklikleri local routing, timing, validation ve control paths içinde kalır. Wire formats, opcodes ve native workflows uyumluluk sınırıdır.",
+            "h3": "Gelişigüzel protokol kayması yok",
+            "p": "Kad ve eD2K değişiklikleri yerel yönlendirme, zamanlama, doğrulama ve denetim yolları içinde kalır. Wire biçimleri, opcode'lar ve yerel masaüstü iş akışları uyumluluk sınırları olmayı sürdürür.",
             "span": "Uyumluluk"
           },
           {
-            "h3": "Sabit ve review edilebilir defaults",
-            "p": "Bandwidth, memory, socket, queue ve timeout varsayımları gizli adaptif davranış yerine açık defaults veya advanced preferences olur.",
+            "h3": "Sabit, gözden geçirilebilir varsayılanlar",
+            "p": "Modern bant genişliği, bellek, soket, kuyruk, başlangıç ve zaman aşımı varsayımları, gizli uyarlanır davranış yerine açık varsayılanlar veya gelişmiş tercihler olarak ifade edilir.",
             "span": "Sınırlar"
           },
           {
-            "h3": "Controller contracts, screen scraping değil",
-            "p": "Kimlik doğrulamalı JSON API OpenAPI-backed contract izler, malformed inputs reddeder ve native state mutations uygulama üzerinden yürütür.",
+            "h3": "Denetleyici sözleşmeleri, screen scraping değil",
+            "p": "Kimliği doğrulanmış JSON API, OpenAPI destekli bir sözleşmeyi izler, bozuk girdileri reddeder ve yerel durum değişikliklerini, durumun sahibi olan masaüstü istemcisinin bulunduğu uygulama üzerinden yönlendirir.",
             "span": "REST"
           },
           {
             "h3": "Etiketlerden önce kanıt",
-            "p": "Süreç commands, commits, logs, package paths, hashes, live evidence ve operator decisions kaydeder; tag doğrulanmış bir sonuç olur.",
+            "p": "Sürüm süreci komutları, commit'leri, günlükleri, paket yollarını, hash'leri, canlı kanıtı, performansa duyarlı kontrolleri ve operatör kararlarını kaydeder; böylece bir sürüm etiketi denetlenmiş bir sonuç olur.",
             "span": "Release"
           }
         ],
         "eyebrow": "Uygulama yöntemi",
-        "h2": "Legacy çekirdeğin etrafında modernleştir, sonra sonucu kanıtla",
-        "p": "Stil bilinçli olarak tutucudur. eMuleBB yerel policy, limits, diagnostics, API boundaries ve release discipline alanlarını değiştirirken eD2K/Kad uyumluluğunu default tutar."
+        "h2": "Eski çekirdeğin etrafında modernleştir, sonra sonucu kanıtla",
+        "p": "Uygulama tarzı bilinçli olarak tutucudur. eMuleBB; yerel politikayı, sınırları, tanılamayı, API sınırlarını ve sürüm disiplinini değiştirirken stok eD2K/Kad uyumluluğunu varsayılan olarak korur. Daha geniş organizasyon aynı disiplini Windows derlemeleri, yöneticiler, sunucular ve laboratuvar istemcileri için kullanır."
       },
       "nav": [
         {
@@ -2864,20 +2853,17 @@
           "label": "Özellikler"
         },
         {
-          "id": "guide",
-          "label": "Kılavuz"
+          "class": "nav-download",
+          "id": "install",
+          "label": "İndir"
         },
         {
           "id": "docs",
-          "label": "Belgeler"
-        },
-        {
-          "id": "automation",
-          "label": "Otomasyon"
+          "label": "Kılavuz"
         },
         {
           "id": "release",
-          "label": "Yayın"
+          "label": "Köken"
         },
         {
           "id": "repos",
@@ -2885,136 +2871,120 @@
         }
       ],
       "nav_label": "Ana gezinme",
-      "og_description": "Geniş bant upload kontrolü, VPN/interface binding, büyük kütüphaneler, REST automation, eD2K/Kad uyumluluğu ve release doğrulaması için modern eMule. İlk public sürüm 0.7.3-rc.1 planlandı ve henüz yayınlanmadı.",
-      "og_title": "eMule broadband edition | Türkçe eMuleBB",
+      "og_description": "eMuleBB; geniş banta odaklı, kendi başına bir eMule ürünü ve Windows P2P derlemelerinin, denetleyici araçlarının, sürüm kanıtının ve deneysel eD2K/Kad mühendisliğinin yuvasıdır.",
+      "og_title": "eMuleBB ana sayfa | eMule broadband edition",
       "product_summary_label": "eMuleBB özeti",
       "project_links_label": "Proje bağlantıları",
       "release": {
         "cards": [
           {
-            "h3": "Güncel durum",
-            "p": "İlk public hedef <code>0.7.3-rc.1</code>. Henüz yayınlanmadı. Final kanıt devam ediyor ve public durum aktif release docs'a bağlı kalır.",
+            "h3": "Yayınlanan RC1",
+            "p": "<code>emulebb-v0.7.3-rc.1</code>, x64 ve ARM64 ZIP'leri, tanılama paketleri, manifestler, SBOM'lar ve paket bootstrapper'ı içeren bir GitHub ön sürümüdür.",
             "span": ""
           },
           {
-            "h3": "Build ve paket kanıtı",
-            "p": "Kanıt workspace validation, Debug ve Release x64 app builds, Release ARM64 app builds, test binaries, package generation, clean-worktree checks ve SHA-256 hashes kapsar.",
+            "h3": "Hash doğrulamalı kurulum",
+            "p": "Bootstrapper, sürüm varlıklarını indirir ve kurulumdan önce paket hash'lerini yayınlanan manifestlerden doğrular.",
             "span": ""
           },
           {
-            "h3": "Davranış kanıtı",
-            "p": "Gates native suites, REST contract, OpenAPI drift, malformed requests, UI automation, live controller-surface E2E, tam Release x64 live E2E ve network adversity kapsar.",
+            "h3": "Paket varlıkları",
+            "p": "Eşleşen aMuTorrent RC1 paketi ayrı yayınlanır ve tam x64 bootstrap akışı, denetleyici kurulumu için onu otomatik olarak çözer.",
             "span": ""
           },
           {
-            "h3": "Controller kanıtı",
-            "p": "aMuTorrent, Prowlarr, Radarr, Sonarr ve qBittorrent-compatible lanes, native <code>/api/v1</code> contract zayıflamadan automation çalıştığını gösterir.",
-            "span": ""
-          },
-          {
-            "h3": "Uyumluluk kanıtı",
-            "p": "Orijinal eD2K/Kad davranışı default kalır. Broadband, REST ve controllers bu uyumluluk hedefinin çevresine eklenir.",
+            "h3": "Denetleyici kanıtı",
+            "p": "aMuTorrent, Prowlarr, Radarr, Sonarr, Torznab ve qBittorrent uyumlu hatlar, yerel <code>/api/v1</code> sözleşmesi etrafında yerel entegrasyon yolları olarak belgelenmiştir.",
             "span": ""
           }
         ],
-        "eyebrow": "Release durumu",
-        "h2": "Public 0.7.3-rc.1 planlandı, gates altında ve henüz yayınlanmadı",
+        "eyebrow": "Güvenlik ve köken",
+        "h2": "RC1, GitHub'da derlenir ve paketlenir",
         "p": ""
       },
+      "release_downloads_label": "Sürümleri indir",
       "repos": {
         "p": ""
       },
-      "structured_description": "Geniş bant upload kontrolü, VPN/interface binding, büyük paylaşılan kütüphaneler, REST automation, eD2K/Kad uyumluluğu ve ileri workflows için modern eMule. İlk public sürüm 0.7.3-rc.1 olarak planlandı ve henüz yayınlanmadı.",
+      "structured_description": "eMuleBB, eMule broadband edition'ın yuvasıdır: yükleme denetimi, otomatik test, SBOM destekli paketler, REST automation, eD2K/Kad uyumluluğu ve hazır aMuTorrent, Prowlarr, Radarr ve Sonarr entegrasyon yollarına sahip, geniş banta odaklı bağımsız bir eMule ürünü. İlk herkese açık release candidate 0.7.3-rc.1, GitHub Releases'te yayınlanmıştır.",
       "team": {
         "cards": [
           {
-            "h3": "Upload slot terapisti",
-            "p": "Zayıf slots duygularını tam gerektiği kadar işler, sonra form ve cooldown ile queue'ya geri gönderilir.",
+            "h3": "Yükleme Katırı Terbiyecisi",
+            "p": "Geniş bant yükleme yuvalarının ahır kapısını tekmeleyip kırmasını engeller, sonra yavaş olanları çok resmi bir pano ile sıraya geri sokar.",
             "span": ""
           },
           {
-            "h3": "Kad bootstrap arşivcisi",
-            "p": "2007'de bir kez çalışan ve bu yüzden dikkatle doğrulanmış ikinci şansı hak eden nodes listesini korur.",
+            "h3": "Kad Patika Katırı",
+            "p": "Bootstrap düğümlerini, yönlendirme tablolarını ve inatçı eD2K/Kad folklorunu, protokol haritasını düşürmeden engebeli ağ arazisinde taşır.",
             "span": ""
           },
           {
-            "h3": "Release gate görevlisi",
-            "p": "Builds yalnızca test, live evidence ve son socket hakkında makul açıklama getirdiğinde içeri girer.",
+            "h3": "Sürüm Yük Katırı",
+            "p": "Bir şey hazır ilan edilmeden önce paketleri, hash'leri, SBOM'ları, günlükleri, canlı kontrolleri ve tam kıvamında bir tavrı kapıdan geçirir.",
             "span": ""
           }
         ],
         "eyebrow": "Proje kültürü",
-        "h2": "Queue'nun performans sanatına dönüşmesini engelleyen ekip",
+        "h2": "P2P atölyesinin arkasındaki katır ekibi",
         "p": ""
       },
-      "title": "eMule broadband edition | Türkçe eMuleBB",
+      "title": "eMuleBB ana sayfa | eMule broadband edition",
       "why": {
         "cards": [
           {
-            "h3": "eD2K ve Kad'i pratik tutmak",
-            "p": "Amaç nostalji ya da rewrite değil. Klasik modeli uzun oturumlar, nadir dosyalar, bilinçli seeding ve native client isteyen kullanıcılar için kullanışlı tutmaktır.",
-            "span": "Ürün nedeni"
+            "h3": "eMuleBB kendi başına bir üründür",
+            "p": "Amaç kozmetik bir mod, bir protokol fork'u ya da genel bir indirme kabuğu değildir. Uzun oturumlar, nadir dosyalar, bilinçli seeding ve hâlâ yerel masaüstü iş akışını isteyen ileri kullanıcılar için geniş banta odaklı bir eMule hattıdır.",
+            "span": "Ürün gerekçesi"
           },
           {
-            "h3": "Eski varsayımları görünür yapmak",
-            "p": "Upload slots, timeouts, buffers, büyük kütüphaneler ve WebServer açıklığı için defaults görünür olur; review, test ve dokümantasyon yapılabilir.",
-            "span": "Teknik neden"
+            "h3": "P2P davranışını incelenebilir kılmak",
+            "p": "Yükleme yuvaları, zaman aşımları, tamponlar, büyük kütüphaneler, WebServer erişimi, REST denetimi ve paket kanıtı açık hâle getirilir; böylece her değişiklik gözden geçirilebilir, test edilebilir, belgelenebilir ve ayarlanabilir.",
+            "span": "Mühendislik gerekçesi"
           },
           {
-            "h3": "Legacy code üstünde modern kanıt üretmek",
-            "p": "Workspace release'i mühendislik çıktısı olarak görür: source policy, OpenAPI contracts, tekrarlanabilir builds, hashes, live checks ve operator gates aynı çizgide olmalıdır.",
-            "span": "Release nedeni"
+            "h3": "Araçları istemcinin etrafında inşa etmek",
+            "p": "Aynı workspace disiplini uygulamayı, denetleyici araçlarını, Windows derlemelerini, deterministik eD2K hizmetlerini ve deneysel headless eD2K/Kad çalışmasını kapsar; her laboratuvar projesinin kararlı bir son kullanıcı ürünü olduğu gibi davranmadan.",
+            "span": "Ekosistem gerekçesi"
           }
         ],
         "eyebrow": "Neden",
-        "h2": "Legacy bir client ancak güvenle işletilebiliyorsa işe yarar",
-        "p": "eMuleBB hem ürün çalışması hem de mühendislik disiplinidir: gerçek ağ davranışı olan native Windows uygulamasını korumak ve etrafına modern build, test, dokümantasyon, otomasyon ve release süreci koymak."
+        "h2": "P2P yazılımı, gerçek oturumlardan sağ çıkarak güven kazanır",
+        "p": "eMuleBB hem bir ürün çabası hem de bir mühendislik pratiğidir: gerçek ağ davranışına sahip karmaşık, yerel bir Windows istemcisini korumak ve ardından onu modern derlemeler, testler, dokümantasyon, otomasyon ve sürüm kanıtıyla çevrelemek."
       }
     },
     "doc_section": [
-      "Devamını oku",
-      "Ayrıntılı kılavuzlar ve kaynak belgeler"
+      "Dokümantasyon",
+      "Kılavuzlar, API ve sürüm notları"
     ],
     "docs": {
       "controllers": [
-        "Controllers ve REST kılavuzu",
-        "Güvenilir yerel controllers kullanımı ve automation sınırları."
+        "Denetleyiciler ve REST kılavuzu",
+        "Güvenilir yerel denetleyici kullanımı ve otomasyon sınırları."
       ],
       "downloads": [
-        "Downloads ve search kılavuzu",
-        "Search modları, sonuç güveni, categories ve power-user workflows."
+        "İndirme ve arama kılavuzu",
+        "Arama modları, sonuçlara güven, kategoriler ve ileri kullanıcı dosya iş akışları."
       ],
       "emulebb": [
         "eMuleBB ürün kılavuzu",
-        "Setup, tuning, automation ve release-bilinçli kullanım için genel bakış."
+        "Kurulum, ayar, otomasyon, sürüme duyarlı kullanım, testler ve SBOM kanıtı."
       ],
-      "network": [
-        "Ağ kılavuzu",
-        "eD2K, Kad, binding, UPnP, firewall ve bağlantı tanısı referansı."
+      "p2p_overlord_agent": [
+        "p2p-overlord eMule ajanı",
+        "Headless Rust Kad/eD2K ajan sınırı, kaynak dokümanlar ve eMuleBB sözleşme notları."
       ],
       "release": [
-        "0.7.3-rc.1 release paneli",
-        "Planlanan RC gates, evidence bağlantıları ve readiness kuralları."
-      ],
-      "rest_adapters": [
-        "REST adapter contracts",
-        "Controller yazarları için qBittorrent-compatible ve Torznab yüzeyi."
-      ],
-      "rest_contract": [
-        "REST API contract",
-        "Kimlik doğrulamalı JSON kontrol yüzeyi için okunabilir contract."
+        "0.7.3 sürüm panosu",
+        "Güncel RC geçitleri, otomatik test kanıtı, SBOM/paket kanıtı ve hazır olma kuralları."
       ],
       "setup": [
-        "Setup kılavuzu",
-        "Kurulum modeli, ilk profil davranışı ve pratik başlangıç notları."
+        "Kurulum kılavuzu",
+        "Kurulum modeli, ilk çalıştırma profili davranışı ve pratik başlangıç notları."
       ],
-      "sharing": [
-        "Paylaşım kılavuzu",
-        "Shared directories, monitored shares, büyük kütüphaneler ve policy files."
-      ],
-      "troubleshooting": [
-        "Troubleshooting kılavuzu",
-        "Low ID, ağ, sharing ve automation için belirti odaklı checks."
+      "stack_integrations": [
+        "aMuTorrent'i eMuleBB ile kullanma",
+        "eMuleBB, aMuTorrent, Prowlarr, Radarr ve Sonarr için göreve dayalı kurulum."
       ]
     },
     "language_link": "Diller",
@@ -3024,15 +2994,19 @@
       "open_label": "Ana gezinmeyi aç"
     },
     "repo_section": [
-      "Açık workspace",
-      "Ana depolar"
+      "eMuleBB ekosistemi",
+      "Birincil depolar"
     ],
     "repos": {
-      "build": "build, validation ve release orchestration",
-      "emule": "desktop app ve ürün kaynağı",
-      "setup": "tekrarlanabilir workspace setup",
-      "tests": "native, Python, UI, REST ve live E2E tests",
-      "tooling": "roadmap, backlog, policy, audits ve reference docs"
+      "amule": "aMule kullanıcıları için Windows derleme ve doğrulama hattı",
+      "amutorrent": "eMuleBB yönetimi ve denetleyici iş akışları için kullanılan fork",
+      "build": "derleme, doğrulama ve sürüm orkestrasyonu",
+      "emule": "amiral gemisi masaüstü uygulaması ve ürün kaynağı",
+      "p2p_overlord_agents": "p2p-overlord P2P paketi için deneysel ajanlar",
+      "p2p_overlord_be": "deneysel headless Rust eD2K/Kad istemci arka uç çalışması",
+      "p2p_overlord_tooling": "senaryo manifestleri, parite çalıştırıcıları, raporlar ve kalite muhafızları",
+      "tests": "yerel, Python, UI, REST ve canlı E2E testleri",
+      "tooling": "yol haritası, backlog, politika, denetimler ve referans dokümanlar"
     }
   }
 }
