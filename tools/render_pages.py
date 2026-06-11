@@ -1098,6 +1098,12 @@ def with_generated_links(root: Path) -> None:
                     "class": "nav-download",
                 },
             )
+        if not any(nav_item.get("id") == "team" for nav_item in content["nav"]):
+            docs_index = next(
+                (index for index, nav_item in enumerate(content["nav"]) if nav_item.get("id") == "docs"),
+                2,
+            )
+            content["nav"].insert(docs_index + 1, {"id": "team", "label": "Team"})
         deduped_nav = []
         seen_nav_ids = set()
         for nav_item in content["nav"]:

@@ -220,6 +220,21 @@
 {%- endfor %}
 </div>
 </section>
+<section class="section team" id="team">
+{{ section_heading(content.team) }}
+<div aria-label="{{ content.team.h2 }}" class="team-grid">
+{%- for card in content.team.cards %}
+<article>
+{%- if card.image is defined and card.image %}
+<img alt="{{ card.image.alt }}" class="team-image" decoding="async" height="160" loading="lazy" src="{{ card.image.src }}" width="160"/>
+{%- endif %}
+<span>{{ "%02d"|format(loop.index) }}</span>
+<h3>{{ card.h3 }}</h3>
+<p>{{ card.p | safe }}</p>
+</article>
+{%- endfor %}
+</div>
+</section>
 <section class="section release" id="release">
 {{ section_heading(content.release) }}
 {{ card_grid("eMuleBB release proof", "release-grid", content.release.cards, "strong") }}
