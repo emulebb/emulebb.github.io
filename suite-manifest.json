@@ -17,6 +17,7 @@
   "alwaysInstall": ["qbittorrentbb"],
   "optional": ["trackmulebb"],
   "notes": {
-    "controller": "TrackMuleBB is the single capability-driven controller; it drives the installed core via /api/v1 capability negotiation. aMuTorrent is deprecated (legacy-only inside the frozen 0.7.3 bundle) and intentionally not offered here."
+    "ownership": "Source of truth lives in TrackMuleBB (bundled default); this pages copy is the optional REMOTE OVERRIDE the setup CLI refreshes from, so the product set can change without a TrackMuleBB release.",
+    "controller": "TrackMuleBB is the single capability-driven controller + suite installer; it drives the installed core via /api/v1 capability negotiation. aMuTorrent is deprecated (legacy-only inside the frozen 0.7.3 bundle)."
   }
 }

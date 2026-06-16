@@ -1,114 +1,74 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-  eMuleBB Suite installer — generic, version-independent Windows bootstrap.
+  eMuleBB Suite installer — minimal bootstrap.
 
 .DESCRIPTION
-  Resolves and installs the LATEST release of each suite product straight from
-  GitHub Releases. Generic by design: it pins no version, so it is never coupled
-  to a single product's release train and always installs the latest. The product
-  set is described by suite-manifest.json, fetched from the same origin as this
-  script.
+  This one-liner is a **minimal bootstrap** (decision 2026-06-16). It does NOT
+  install the suite itself; it only:
+    1. creates the install directory,
+    2. downloads a self-contained `uv` binary into it (no system Python touched,
+       no admin, no PATH change),
+    3. fetches TrackMuleBB,
+    4. hands off to TrackMuleBB's Python **setup CLI**, which does the real
+       install + auto-wiring of the selectable bundle (emulebb-rust / eMuleBB MFC,
+       qBittorrentBB, TrackMuleBB, Arr, SABnzbd, Bountarr; Docker also Plex).
 
-  eD2K core selection:
-    -Core mfc    eMuleBB (Windows MFC desktop client)                  [default]
-    -Core rust   emulebb-rust (multiplatform eD2K/Kad core) instead of the MFC client
+  Design: emulebb-tooling `docs/active/SUITE-INSTALLER.md`. The setup CLI is the
+  TrackMuleBB backlog item TMBB-FEAT-010.
 
-  qBittorrentBB (BitTorrent companion) is always installed. TrackMuleBB (the
-  single capability-driven controller — it drives whichever core is installed via
-  /api/v1 capability negotiation) is optional via -IncludeController. aMuTorrent
-  is deprecated and not offered here.
-
-  SCAFFOLD: validate end-to-end before this becomes the primary published install
-  path. Products without a published release yet are skipped with a warning.
+  SCAFFOLD: the TrackMuleBB setup CLI is not built yet; the published install path
+  stays on the tested RC bootstrap until this is validated.
 
 .EXAMPLE
   irm https://emulebb.github.io/install.ps1 | iex
 
 .EXAMPLE
-  # with options:
   $s = irm https://emulebb.github.io/install.ps1
-  & ([scriptblock]::Create($s)) -Core rust -IncludeController
+  & ([scriptblock]::Create($s)) -InstallRoot 'D:\eMuleBB-Suite' -Core rust
 #>
-[CmdletBinding(SupportsShouldProcess)]
+[CmdletBinding()]
 param(
-    [ValidateSet('mfc', 'rust')] [string] $Core = 'mfc',
     [string] $InstallRoot = "$env:LOCALAPPDATA\eMuleBB-Suite",
-    [switch] $IncludeController,
-    [switch] $DryRun,
-    [string] $BaseUrl = 'https://emulebb.github.io'
+    [ValidateSet('mfc', 'rust')] [string] $Core = 'mfc',
+    [string] $UvVersion = 'latest',
+    [Parameter(ValueFromRemainingArguments = $true)] [string[]] $SetupArgs
 )
 
 $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$UA = @{ 'User-Agent' = 'emulebb-suite-installer' }
+$UA = @{ 'User-Agent' = 'emulebb-suite-bootstrap' }
 
 function Write-Step($m) { Write-Host "==> $m" -ForegroundColor Cyan }
-function Write-Note($m) { Write-Host "  ! $m" -ForegroundColor Yellow }
 
-function Get-Json($url) { Invoke-RestMethod -Uri $url -Headers $UA }
-function Get-Text($url) { (Invoke-WebRequest -Uri $url -Headers $UA -UseBasicParsing).Content }
+Write-Step "eMuleBB Suite bootstrap (root=$InstallRoot, core=$Core)"
+New-Item -ItemType Directory -Force -Path $InstallRoot | Out-Null
 
-function Resolve-LatestRelease($repo) {
-    try { Get-Json "https://api.github.com/repos/$repo/releases/latest" } catch { $null }
+# 1) self-contained uv (downloaded straight into the install dir; never the
+#    system-modifying uv installer). uv then manages a standalone Python with
+#    `--python-preference only-managed`, ignoring any system Python.
+$uvDir = Join-Path $InstallRoot 'uv'
+New-Item -ItemType Directory -Force -Path $uvDir | Out-Null
+$tag = if ($UvVersion -eq 'latest') {
+    (Invoke-RestMethod 'https://api.github.com/repos/astral-sh/uv/releases/latest' -Headers $UA).tag_name
 }
+else { $UvVersion }
+$asset = "uv-x86_64-pc-windows-msvc.zip"
+$uvUrl = "https://github.com/astral-sh/uv/releases/download/$tag/$asset"
+$uvZip = Join-Path $env:TEMP $asset
+Write-Step "Fetching uv $tag (self-contained)"
+Invoke-WebRequest -Uri $uvUrl -OutFile $uvZip -Headers $UA -UseBasicParsing
+Expand-Archive -Path $uvZip -DestinationPath $uvDir -Force
+Remove-Item $uvZip -Force
+$uv = Join-Path $uvDir 'uv.exe'
 
-function Select-Asset($release, $pattern) {
-    if (-not $release) { return $null }
-    $release.assets | Where-Object { $_.name -like $pattern } | Select-Object -First 1
-}
+# Scope uv's data into the install dir so nothing leaks into the user profile.
+$env:UV_PYTHON_INSTALL_DIR = Join-Path $InstallRoot 'python'
+$env:UV_CACHE_DIR = Join-Path $InstallRoot '.uv-cache'
 
-function Test-AssetHash($file, $release, $assetName) {
-    # Integrity source: a '<asset>.sha256' sibling asset in the same release.
-    $shaAsset = $release.assets | Where-Object { $_.name -eq "$assetName.sha256" } | Select-Object -First 1
-    if (-not $shaAsset) { Write-Note "no .sha256 published for $assetName — skipping hash check"; return }
-    $expected = ((Get-Text $shaAsset.browser_download_url) -split '\s+')[0].Trim().ToLower()
-    $actual = (Get-FileHash -Algorithm SHA256 -Path $file).Hash.ToLower()
-    if ($expected -ne $actual) { throw "SHA-256 mismatch for $assetName (expected $expected, got $actual)" }
-    Write-Host "    sha256 ok"
-}
-
-function Install-Product($name, $repo, $pattern) {
-    Write-Step "Resolving $name ($repo)"
-    $rel = Resolve-LatestRelease $repo
-    if (-not $rel) { Write-Note "$name has no published release yet — skipping"; return }
-    $asset = Select-Asset $rel $pattern
-    if (-not $asset) { Write-Note "$name $($rel.tag_name): no asset matching '$pattern' — skipping"; return }
-    $dir = Join-Path $InstallRoot $name
-    if ($DryRun) { Write-Host "    [dry-run] would install $($asset.name) ($($rel.tag_name)) -> $dir"; return }
-    if ($PSCmdlet.ShouldProcess($name, "install $($rel.tag_name)")) {
-        $tmp = Join-Path $env:TEMP $asset.name
-        Write-Host "    downloading $($asset.name)"
-        Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $tmp -Headers $UA -UseBasicParsing
-        Test-AssetHash $tmp $rel $asset.name
-        New-Item -ItemType Directory -Force -Path $dir | Out-Null
-        Expand-Archive -Path $tmp -DestinationPath $dir -Force
-        Remove-Item $tmp -Force
-        Write-Host "    installed $name $($rel.tag_name) -> $dir" -ForegroundColor Green
-    }
-}
-
-# --- main ---
-Write-Step "eMuleBB Suite installer (core=$Core, root=$InstallRoot)"
-$manifest = Get-Json "$BaseUrl/suite-manifest.json"
-
-# 1) eD2K core (MFC eMuleBB or emulebb-rust)
-$coreProduct = $manifest.cores.$Core.product
-$cp = $manifest.products.$coreProduct
-Install-Product $coreProduct $cp.repo $cp.assetPattern
-
-# 2) always-installed products (qBittorrentBB)
-foreach ($p in $manifest.alwaysInstall) {
-    $mp = $manifest.products.$p
-    Install-Product $p $mp.repo $mp.assetPattern
-}
-
-# 3) optional controller (TrackMuleBB — the single capability-driven controller)
-if ($IncludeController) {
-    $ctl = $manifest.controller
-    $mp = $manifest.products.$ctl
-    Install-Product $ctl $mp.repo $mp.assetPattern
-}
-
-Write-Step "Done. Installed under $InstallRoot"
-Write-Host "Suite roadmap: https://github.com/orgs/emulebb/projects/3"
+# 2) hand off to TrackMuleBB's setup CLI (TMBB-FEAT-010). Once TrackMuleBB
+#    publishes a setup entry point this becomes, e.g.:
+#       & $uv tool run --python-preference only-managed trackmulebb-setup --core $Core @SetupArgs
+Write-Step "uv ready at $uv — handing off to the TrackMuleBB setup CLI"
+Write-Host "  (scaffold) the TrackMuleBB Python setup CLI is not published yet; see"
+Write-Host "  emulebb-tooling docs/active/SUITE-INSTALLER.md and TMBB-FEAT-010."
