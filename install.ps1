@@ -14,8 +14,10 @@
     -Core mfc    eMuleBB (Windows MFC desktop client)                  [default]
     -Core rust   emulebb-rust (multiplatform eD2K/Kad core) instead of the MFC client
 
-  qBittorrentBB (BitTorrent companion) is always installed. aMuTorrent (the
-  0.7.3-line controller) is optional via -IncludeController.
+  qBittorrentBB (BitTorrent companion) is always installed. TrackMuleBB (the
+  single capability-driven controller — it drives whichever core is installed via
+  /api/v1 capability negotiation) is optional via -IncludeController. aMuTorrent
+  is deprecated and not offered here.
 
   SCAFFOLD: validate end-to-end before this becomes the primary published install
   path. Products without a published release yet are skipped with a warning.
@@ -101,10 +103,11 @@ foreach ($p in $manifest.alwaysInstall) {
     Install-Product $p $mp.repo $mp.assetPattern
 }
 
-# 3) optional controller (aMuTorrent)
+# 3) optional controller (TrackMuleBB — the single capability-driven controller)
 if ($IncludeController) {
-    $mp = $manifest.products.amutorrent
-    Install-Product 'amutorrent' $mp.repo $mp.assetPattern
+    $ctl = $manifest.controller
+    $mp = $manifest.products.$ctl
+    Install-Product $ctl $mp.repo $mp.assetPattern
 }
 
 Write-Step "Done. Installed under $InstallRoot"
