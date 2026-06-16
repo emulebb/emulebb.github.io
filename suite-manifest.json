@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "suite": "eMuleBB Suite",
+  "platform": "windows-x64",
+  "defaultCore": "mfc",
+  "cores": {
+    "mfc":  { "product": "emulebb" },
+    "rust": { "product": "emulebb-rust" }
+  },
+  "products": {
+    "emulebb":       { "repo": "emulebb/emulebb",       "role": "ed2k-core",  "assetPattern": "emulebb-*-x64.zip" },
+    "emulebb-rust":  { "repo": "emulebb/emulebb-rust",  "role": "ed2k-core",  "assetPattern": "emulebb-rust-*-x64*.zip" },
+    "qbittorrentbb": { "repo": "emulebb/qbittorrentbb", "role": "bittorrent", "assetPattern": "qbittorrentbb-*-x64*.zip" },
+    "amutorrent":    { "repo": "emulebb/amutorrent",    "role": "controller", "assetPattern": "amutorrent-*.zip" }
+  },
+  "alwaysInstall": ["qbittorrentbb"],
+  "optional": ["amutorrent"]
+}
