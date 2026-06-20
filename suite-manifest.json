@@ -2,22 +2,20 @@
   "schema": 1,
   "suite": "eMuleBB Suite",
   "platform": "windows-x64",
+  "status": "0.7.3-rc3-powershell",
   "defaultCore": "mfc",
-  "controller": "trackmulebb",
+  "controller": "amutorrent",
   "cores": {
-    "mfc":  { "product": "emulebb" },
-    "rust": { "product": "emulebb-rust" }
+    "mfc":  { "product": "emulebb" }
   },
   "products": {
     "emulebb":       { "repo": "emulebb/emulebb",       "role": "ed2k-core",  "assetPattern": "emulebb-*-x64.zip" },
-    "emulebb-rust":  { "repo": "emulebb/emulebb-rust",  "role": "ed2k-core",  "assetPattern": "emulebb-rust-*-x64*.zip" },
-    "qbittorrentbb": { "repo": "emulebb/qbittorrentbb", "role": "bittorrent", "assetPattern": "qbittorrentbb-*-x64*.zip" },
-    "trackmulebb":   { "repo": "emulebb/trackmulebb",   "role": "controller", "assetPattern": "trackmulebb-*.zip" }
+    "amutorrent":    { "repo": "emulebb/amutorrent",    "role": "controller", "assetPattern": "emulebb-*-amutorrent-x64.zip" }
   },
-  "alwaysInstall": ["qbittorrentbb"],
-  "optional": ["trackmulebb"],
+  "alwaysInstall": ["emulebb"],
+  "optional": ["amutorrent"],
   "notes": {
-    "ownership": "Source of truth lives in TrackMuleBB (bundled default); this pages copy is the optional REMOTE OVERRIDE the setup CLI refreshes from, so the product set can change without a TrackMuleBB release.",
-    "controller": "TrackMuleBB is the single capability-driven controller + suite installer; it drives the installed core via /api/v1 capability negotiation. aMuTorrent is deprecated (legacy-only inside the frozen 0.7.3 bundle)."
+    "ownership": "For 0.7.3-rc.3 and stable 0.7.3, source of truth is the GitHub Release Bootstrap-eMuleBBSuite.ps1 asset and the package-owned suite manifests.",
+    "controller": "aMuTorrent remains the frozen 0.7.3 controller. TrackMuleBB, emulebb-rust, qBittorrentBB, uv, and the Python setup CLI are post-0.7.3 work and are not installed by the current Pages one-liner."
   }
 }
