@@ -159,49 +159,80 @@ function Get-HttpErrorDetail {
     return "$statusText`: $detail"
 }
 
+function Get-HttpStatusCode {
+    param($Exception)
+    try {
+        if ($null -ne $Exception -and $null -ne $Exception.Response) {
+            return [int]$Exception.Response.StatusCode
+        }
+    } catch {
+    }
+    return 0
+}
+
+function Invoke-GitHubWebRequest {
+    param([hashtable]$RequestArgs, [string]$ErrorPrefix, [int]$MaxAttempts = 4)
+    $attempt = 0
+    while ($true) {
+        $attempt++
+        try {
+            return Invoke-WebRequest @RequestArgs -Headers @{ 'User-Agent' = $UserAgent } -UseBasicParsing -ErrorAction Stop
+        } catch {
+            $status = Get-HttpStatusCode -Exception $_.Exception
+            # Retry transient gateway / throttle / network failures (e.g. GitHub HTTP
+            # 502/503/504, 429, or a dropped connection); fail fast on everything else.
+            $transient = ($status -ge 500) -or ($status -eq 408) -or ($status -eq 429) -or ($status -eq 0)
+            if ((-not $transient) -or ($attempt -ge $MaxAttempts)) {
+                $detail = Get-HttpErrorDetail -Exception $_.Exception
+                if ([string]::IsNullOrWhiteSpace($detail)) {
+                    $detail = $_.Exception.Message
+                }
+                throw "${ErrorPrefix}: $detail"
+            }
+            $reason = if ($status -gt 0) { "HTTP $status" } else { 'network error' }
+            $delay = [int][Math]::Min(20, [Math]::Pow(2, $attempt))
+            Write-Warning "$ErrorPrefix - transient $reason; retrying in $delay s (attempt $attempt of $($MaxAttempts - 1))..."
+            Start-Sleep -Seconds $delay
+        }
+    }
+}
+
 function Invoke-GitHubApi {
     param([string]$Uri, [string]$Description)
     # Use Invoke-WebRequest + ConvertFrom-Json instead of Invoke-RestMethod: in some
     # environments Invoke-RestMethod collapses the GitHub releases JSON array into a
     # single merged object (tag_name becomes all tags joined), which breaks release
     # resolution. Parsing the raw content ourselves is deterministic across hosts.
-    try {
-        $response = Invoke-WebRequest -Uri $Uri -Headers @{ 'User-Agent' = $UserAgent } -UseBasicParsing -ErrorAction Stop
-    } catch {
-        $detail = Get-HttpErrorDetail -Exception $_.Exception
-        if ([string]::IsNullOrWhiteSpace($detail)) {
-            $detail = $_.Exception.Message
-        }
-        throw "Could not read $Description from GitHub: $detail"
-    }
+    $response = Invoke-GitHubWebRequest -RequestArgs @{ Uri = $Uri } -ErrorPrefix "Could not read $Description from GitHub"
     return ($response.Content | ConvertFrom-Json)
 }
 
 function Invoke-DownloadFile {
     param([string]$Url, [string]$OutFile, [string]$Description)
-    try {
-        Invoke-WebRequest -Uri $Url -OutFile $OutFile -Headers @{ 'User-Agent' = $UserAgent } -UseBasicParsing -ErrorAction Stop
-    } catch {
-        $detail = Get-HttpErrorDetail -Exception $_.Exception
-        if ([string]::IsNullOrWhiteSpace($detail)) {
-            $detail = $_.Exception.Message
-        }
-        throw "Could not download $Description from $Url`: $detail"
-    }
+    [void](Invoke-GitHubWebRequest -RequestArgs @{ Uri = $Url; OutFile = $OutFile } -ErrorPrefix "Could not download $Description from $Url")
 }
 
-function Resolve-ReleaseTag {
+function Resolve-Release {
+    # The /releases list already carries each release's assets, so resolve everything
+    # from it and never call /releases/tags/<tag> (that endpoint can 504 while the
+    # list stays healthy, and it would be a redundant second request anyway).
+    $releases = @(Invoke-GitHubApi -Uri "$ApiBase/repos/$Repository/releases?per_page=100" -Description 'eMuleBB releases')
+
+    $explicitTag = ''
     if (-not [string]::IsNullOrWhiteSpace($BootstrapReleaseTag)) {
-        return $BootstrapReleaseTag
+        $explicitTag = $BootstrapReleaseTag
+    } elseif (-not [string]::IsNullOrWhiteSpace($Version)) {
+        $explicitTag = if ($Version -like 'emulebb-v*') { $Version } else { "emulebb-v$Version" }
     }
-    if (-not [string]::IsNullOrWhiteSpace($Version)) {
-        if ($Version -like 'emulebb-v*') {
-            return $Version
+    if (-not [string]::IsNullOrWhiteSpace($explicitTag)) {
+        foreach ($release in $releases) {
+            if ([string]$release.tag_name -eq $explicitTag) {
+                return $release
+            }
         }
-        return "emulebb-v$Version"
+        throw "Release $explicitTag was not found among the latest eMuleBB releases."
     }
 
-    $releases = @(Invoke-GitHubApi -Uri "$ApiBase/repos/$Repository/releases" -Description 'eMuleBB releases')
     # GitHub returns releases newest-first, so the first match of each kind is the latest.
     $latestRelease = $null
     $latestNightly = $null
@@ -220,17 +251,17 @@ function Resolve-ReleaseTag {
     if ($null -eq $latestRelease) {
         if ($null -ne $latestNightly) {
             Write-Step "No tagged release found; using the latest nightly $([string]$latestNightly.tag_name)."
-            return [string]$latestNightly.tag_name
+            return $latestNightly
         }
         throw 'No usable eMuleBB release with a suite bootstrapper was found.'
     }
 
-    $releaseTag = [string]$latestRelease.tag_name
     if ($null -eq $latestNightly) {
-        return $releaseTag
+        return $latestRelease
     }
 
     # Default to the latest RC/stable release; only consider a nightly when it is newer.
+    $releaseTag = [string]$latestRelease.tag_name
     $nightlyTag = [string]$latestNightly.tag_name
     $nightlyIsNewer = $false
     try {
@@ -239,18 +270,18 @@ function Resolve-ReleaseTag {
         $nightlyIsNewer = $false
     }
     if (-not $nightlyIsNewer) {
-        return $releaseTag
+        return $latestRelease
     }
 
     # A nightly is more recent than the latest release. -IncludeNightly opts in
     # non-interactively; otherwise offer the choice and default to the release.
     if ($IncludeNightly) {
         Write-Step "Newer nightly $nightlyTag selected over $releaseTag (-IncludeNightly)."
-        return $nightlyTag
+        return $latestNightly
     }
     if ($NonInteractive) {
         Write-Step "A newer nightly ($nightlyTag) is available; keeping $releaseTag. Pass -IncludeNightly to use the nightly."
-        return $releaseTag
+        return $latestRelease
     }
 
     # Offer the newer nightly. Keep the `irm | iex` one-liner unbreakable: if the
@@ -264,14 +295,14 @@ function Resolve-ReleaseTag {
         $answer = Read-Host "Install the newer nightly instead of the latest release? [y/N]"
     } catch {
         Write-Step "No interactive prompt available; keeping $releaseTag. Pass -IncludeNightly to use the nightly."
-        return $releaseTag
+        return $latestRelease
     }
     if ($answer -match '^\s*(y|yes)\s*$') {
         Write-Step "Selected nightly $nightlyTag."
-        return $nightlyTag
+        return $latestNightly
     }
     Write-Step "Keeping latest release $releaseTag."
-    return $releaseTag
+    return $latestRelease
 }
 
 function Resolve-ReleaseAsset {
@@ -313,8 +344,8 @@ try {
         Write-Step "Downloading bootstrapper from explicit URL"
         Invoke-DownloadFile -Url $BootstrapUrl -OutFile $bootstrapPath -Description $BootstrapAssetName
     } else {
-        $tag = Resolve-ReleaseTag
-        $release = Invoke-GitHubApi -Uri "$ApiBase/repos/$Repository/releases/tags/$tag" -Description "eMuleBB release $tag"
+        $release = Resolve-Release
+        $tag = [string]$release.tag_name
         $bootstrapAsset = Resolve-ReleaseAsset -Release $release -Name $BootstrapAssetName -Required
         $hashAsset = Resolve-ReleaseAsset -Release $release -Name $BootstrapHashAssetName
 
