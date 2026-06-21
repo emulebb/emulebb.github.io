@@ -340,7 +340,11 @@ try {
         $forward[$entry.Key] = $entry.Value
     }
 
-    & $bootstrapPath @forward @BootstrapArgs
+    # ValueFromRemainingArguments yields a single empty string when no extra args
+    # are supplied; splatting that would bind '' to the bootstrapper's first
+    # positional parameter (Bundle) and fail its ValidateSet. Drop empty entries.
+    $passthru = @(@($BootstrapArgs) | Where-Object { -not [string]::IsNullOrEmpty($_) })
+    & $bootstrapPath @forward @passthru
 } finally {
     if (Test-Path -LiteralPath $tempRoot) {
         Remove-Item -LiteralPath $tempRoot -Recurse -Force
