@@ -161,8 +161,12 @@ function Get-HttpErrorDetail {
 
 function Invoke-GitHubApi {
     param([string]$Uri, [string]$Description)
+    # Use Invoke-WebRequest + ConvertFrom-Json instead of Invoke-RestMethod: in some
+    # environments Invoke-RestMethod collapses the GitHub releases JSON array into a
+    # single merged object (tag_name becomes all tags joined), which breaks release
+    # resolution. Parsing the raw content ourselves is deterministic across hosts.
     try {
-        return Invoke-RestMethod -Uri $Uri -Headers @{ 'User-Agent' = $UserAgent } -ErrorAction Stop
+        $response = Invoke-WebRequest -Uri $Uri -Headers @{ 'User-Agent' = $UserAgent } -UseBasicParsing -ErrorAction Stop
     } catch {
         $detail = Get-HttpErrorDetail -Exception $_.Exception
         if ([string]::IsNullOrWhiteSpace($detail)) {
@@ -170,6 +174,7 @@ function Invoke-GitHubApi {
         }
         throw "Could not read $Description from GitHub: $detail"
     }
+    return ($response.Content | ConvertFrom-Json)
 }
 
 function Invoke-DownloadFile {
