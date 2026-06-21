@@ -197,19 +197,76 @@ function Resolve-ReleaseTag {
     }
 
     $releases = @(Invoke-GitHubApi -Uri "$ApiBase/repos/$Repository/releases" -Description 'eMuleBB releases')
+    # GitHub returns releases newest-first, so the first match of each kind is the latest.
+    $latestRelease = $null
+    $latestNightly = $null
     foreach ($release in $releases) {
-        $tag = [string]$release.tag_name
         if ($release.draft) {
             continue
         }
-        if ((-not $IncludeNightly) -and $tag -match '^emulebb-nightly-') {
-            continue
-        }
-        if ($tag -match '^emulebb-v.+' -or ($IncludeNightly -and $tag -match '^emulebb-nightly-')) {
-            return $tag
+        $tag = [string]$release.tag_name
+        if ($tag -match '^emulebb-v.+') {
+            if ($null -eq $latestRelease) { $latestRelease = $release }
+        } elseif ($tag -match '^emulebb-nightly-') {
+            if ($null -eq $latestNightly) { $latestNightly = $release }
         }
     }
-    throw 'No usable eMuleBB release with a suite bootstrapper was found.'
+
+    if ($null -eq $latestRelease) {
+        if ($null -ne $latestNightly) {
+            Write-Step "No tagged release found; using the latest nightly $([string]$latestNightly.tag_name)."
+            return [string]$latestNightly.tag_name
+        }
+        throw 'No usable eMuleBB release with a suite bootstrapper was found.'
+    }
+
+    $releaseTag = [string]$latestRelease.tag_name
+    if ($null -eq $latestNightly) {
+        return $releaseTag
+    }
+
+    # Default to the latest RC/stable release; only consider a nightly when it is newer.
+    $nightlyTag = [string]$latestNightly.tag_name
+    $nightlyIsNewer = $false
+    try {
+        $nightlyIsNewer = ([datetime]$latestNightly.created_at) -gt ([datetime]$latestRelease.created_at)
+    } catch {
+        $nightlyIsNewer = $false
+    }
+    if (-not $nightlyIsNewer) {
+        return $releaseTag
+    }
+
+    # A nightly is more recent than the latest release. -IncludeNightly opts in
+    # non-interactively; otherwise offer the choice and default to the release.
+    if ($IncludeNightly) {
+        Write-Step "Newer nightly $nightlyTag selected over $releaseTag (-IncludeNightly)."
+        return $nightlyTag
+    }
+    if ($NonInteractive) {
+        Write-Step "A newer nightly ($nightlyTag) is available; keeping $releaseTag. Pass -IncludeNightly to use the nightly."
+        return $releaseTag
+    }
+
+    # Offer the newer nightly. Keep the `irm | iex` one-liner unbreakable: if the
+    # prompt cannot read (non-interactive/redirected host), fall back to the release
+    # instead of hanging or erroring.
+    Write-Host ""
+    Write-Host "Latest release : $releaseTag (created $([string]$latestRelease.created_at))"
+    Write-Host "Newer nightly  : $nightlyTag (created $([string]$latestNightly.created_at))"
+    $answer = ''
+    try {
+        $answer = Read-Host "Install the newer nightly instead of the latest release? [y/N]"
+    } catch {
+        Write-Step "No interactive prompt available; keeping $releaseTag. Pass -IncludeNightly to use the nightly."
+        return $releaseTag
+    }
+    if ($answer -match '^\s*(y|yes)\s*$') {
+        Write-Step "Selected nightly $nightlyTag."
+        return $nightlyTag
+    }
+    Write-Step "Keeping latest release $releaseTag."
+    return $releaseTag
 }
 
 function Resolve-ReleaseAsset {
