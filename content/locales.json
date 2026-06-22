@@ -51,13 +51,13 @@
           },
           {
             "h3": "الدليل قبل التسميات",
-            "p": "يُنشر <code>0.7.3-rc.2</code> مع تغليف GitHub Actions وبيانات وأدلة SHA-256 وملفات SBOM بصيغة SPDX وأصول تشخيص وأدلة تجزئة المُمهِّد.",
+            "p": "يُنشر <code>0.7.3-rc.3</code> مع تغليف GitHub Actions وبيانات وأدلة SHA-256 وملفات SBOM بصيغة SPDX وأصول تشخيص وأدلة تجزئة المُمهِّد.",
             "span": "انضباط الاختبار والإصدار"
           }
         ],
         "eyebrow": "الميزات",
         "h2": "ما يضيفه eMuleBB حول العميل الكلاسيكي",
-        "p": "يركّز عمل RC2 على السلوك المرئي للمشغّل: سياسة رفع متوقعة وbinding أكثر أمانًا وحدود أداء ثابتة وتشغيل المكتبات الكبيرة والأتمتة المحلية وأدلة الحزم."
+        "p": "يركّز عمل RC3 على السلوك المرئي للمشغّل: سياسة رفع متوقعة وbinding أكثر أمانًا وحدود أداء ثابتة وتشغيل المكتبات الكبيرة والأتمتة المحلية وأدلة الحزم."
       },
       "footer_links_label": "روابط التذييل",
       "guide": {
@@ -86,13 +86,13 @@
         "eyebrow": "موطن eMuleBB لـ P2P عريض النطاق",
         "guide": "دليل المنتج",
         "h1": "eMuleBB هو منتج eMule عريض النطاق صنعه أهل P2P.",
-        "install": "تنزيل RC2",
-        "lead": "تم نشر RC2: خط eMule جاد لنظام Windows من أجل روابط رفع سريعة ومكتبات مشتركة كبيرة وجلسات دائمة التشغيل وسير عمل تحكم REST وتكامل Arr وأدلة حزم مبنية على GitHub.",
+        "install": "تنزيل RC3",
+        "lead": "تم نشر RC3: خط eMule جاد لنظام Windows من أجل روابط رفع سريعة ومكتبات مشتركة كبيرة وجلسات دائمة التشغيل وسير عمل تحكم REST وتكامل Arr وأدلة حزم مبنية على GitHub.",
         "panel_h2": "eMuleBB هو المنتج. والمنظومة هي مختبر الإثبات.",
         "panel_kicker": "توجه المنتج",
-        "panel_p": "يبقى تطبيق سطح المكتب متوافقًا مع الأصل حيث تهمّ الشبكة. تضيف حزمة RC2 سير عمل تحكم محلي حوله دون تحويل eMuleBB إلى قشرة torrent عامة.",
+        "panel_p": "يبقى تطبيق سطح المكتب متوافقًا مع الأصل حيث تهمّ الشبكة. تضيف حزمة RC3 سير عمل تحكم محلي حوله دون تحويل eMuleBB إلى قشرة torrent عامة.",
         "signals": [
-          "0.7.3-rc.2 منشور",
+          "0.7.3-rc.3 منشور",
           "تمهيد الحزمة بسطر واحد",
           "ZIP مستقل يدوي",
           "بُنى GitHub Actions",
@@ -105,8 +105,8 @@
         ],
         "source": "المصدر"
       },
-      "intro": "هذا هو موطن <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>، منتج مستقل لمن لا يزال يقدّر نموذج المشاركة الموزّع في eMule ويريد تشغيله كبرمجية حديثة. حزم RC2 منشورة على GitHub Releases مع مُمهِّد للحزمة الكاملة وملفات ZIP مستقلة وبيانات ومجموعات تجزئة وملفات SBOM وأصول متحكم aMuTorrent المطابقة.",
-      "meta_description": "تم نشر eMuleBB RC2: ثبّت eMule broadband edition عبر مُمهِّد حزمة PowerShell أو ملف ZIP مستقل، مع مصدر حزمة مبني على GitHub.",
+      "intro": "هذا هو موطن <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>، منتج مستقل لمن لا يزال يقدّر نموذج المشاركة الموزّع في eMule ويريد تشغيله كبرمجية حديثة. حزم RC3 منشورة على GitHub Releases مع مُمهِّد للحزمة الكاملة وملفات ZIP مستقلة وبيانات ومجموعات تجزئة وملفات SBOM وأصول متحكم aMuTorrent المطابقة.",
+      "meta_description": "تم نشر eMuleBB RC3: ثبّت eMule broadband edition عبر مُمهِّد حزمة PowerShell أو ملف ZIP مستقل، مع مصدر حزمة مبني على GitHub.",
       "method": {
         "cards": [
           {
@@ -169,8 +169,8 @@
       "release": {
         "cards": [
           {
-            "h3": "RC2 المنشور",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> هو إصدار GitHub مسبق يضم ملفات ZIP لـ x64 وARM64 وحزم تشخيص وبيانات وملفات SBOM ومُمهِّد الحزمة.",
+            "h3": "RC3 المنشور",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> هو إصدار GitHub مسبق يضم ملفات ZIP لـ x64 وARM64 وحزم تشخيص وبيانات وملفات SBOM ومُمهِّد الحزمة.",
             "span": ""
           },
           {
@@ -180,7 +180,7 @@
           },
           {
             "h3": "أصول الحزمة",
-            "p": "تُنشر حزمة aMuTorrent RC2 المطابقة على حدة، ويحلّها مسار bootstrap الكامل لـ x64 تلقائيًا لإعداد المتحكم.",
+            "p": "تُنشر حزمة aMuTorrent RC3 المطابقة على حدة، ويحلّها مسار bootstrap الكامل لـ x64 تلقائيًا لإعداد المتحكم.",
             "span": ""
           },
           {
@@ -190,14 +190,14 @@
           }
         ],
         "eyebrow": "الأمان والمصدر",
-        "h2": "يُبنى RC2 ويُحزَّم على GitHub",
+        "h2": "يُبنى RC3 ويُحزَّم على GitHub",
         "p": ""
       },
       "release_downloads_label": "تنزيل الإصدارات",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB هو موطن eMule broadband edition، وهو منتج eMule مستقل موجّه نحو النطاق العريض مع التحكم في الرفع والاختبار الآلي وحزم مدعومة بـ SBOM وREST automation وتوافق eD2K/Kad ومسارات تكامل جاهزة مع aMuTorrent وProwlarr وRadarr وSonarr. أول مرشّح إصدار عام 0.7.3-rc.2 منشور على GitHub Releases.",
+      "structured_description": "eMuleBB هو موطن eMule broadband edition، وهو منتج eMule مستقل موجّه نحو النطاق العريض مع التحكم في الرفع والاختبار الآلي وحزم مدعومة بـ SBOM وREST automation وتوافق eD2K/Kad ومسارات تكامل جاهزة مع aMuTorrent وProwlarr وRadarr وSonarr. أول مرشّح إصدار عام 0.7.3-rc.3 منشور على GitHub Releases.",
       "team": {
         "cards": [
           {
@@ -352,13 +352,13 @@
           },
           {
             "h3": "Nachweise vor Labels",
-            "p": "<code>0.7.3-rc.2</code> ist veröffentlicht – mit GitHub-Actions-Packaging, Manifesten, SHA-256-Nachweisen, SPDX-SBOMs, Diagnostics-Assets und Bootstrapper-Hash-Nachweisen.",
+            "p": "<code>0.7.3-rc.3</code> ist veröffentlicht – mit GitHub-Actions-Packaging, Manifesten, SHA-256-Nachweisen, SPDX-SBOMs, Diagnostics-Assets und Bootstrapper-Hash-Nachweisen.",
             "span": "Test- und Release-Disziplin"
           }
         ],
         "eyebrow": "Funktionen",
         "h2": "Was eMuleBB rund um den klassischen Client ergänzt",
-        "p": "Die RC2-Arbeit konzentriert sich auf betreibersichtbares Verhalten: vorhersehbare Upload-Policy, sichereres Binding, feste Leistungsgrenzen, Betrieb großer Bibliotheken, lokale Automatisierung und Paketnachweise."
+        "p": "Die RC3-Arbeit konzentriert sich auf betreibersichtbares Verhalten: vorhersehbare Upload-Policy, sichereres Binding, feste Leistungsgrenzen, Betrieb großer Bibliotheken, lokale Automatisierung und Paketnachweise."
       },
       "footer_links_label": "Footer-Links",
       "guide": {
@@ -387,13 +387,13 @@
         "eyebrow": "Die eMuleBB-Heimat für Breitband-P2P",
         "guide": "Produktguide",
         "h1": "eMuleBB ist das Breitband-eMule-Produkt, gebaut von P2P-Leuten.",
-        "install": "RC2 herunterladen",
-        "lead": "RC2 ist veröffentlicht: eine ernsthafte Windows-eMule-Linie für schnelle Upload-Anschlüsse, große freigegebene Bibliotheken, dauerhaft laufende Sitzungen, REST-Controller-Workflows, Arr-Integration und auf GitHub gebaute Paketnachweise.",
+        "install": "RC3 herunterladen",
+        "lead": "RC3 ist veröffentlicht: eine ernsthafte Windows-eMule-Linie für schnelle Upload-Anschlüsse, große freigegebene Bibliotheken, dauerhaft laufende Sitzungen, REST-Controller-Workflows, Arr-Integration und auf GitHub gebaute Paketnachweise.",
         "panel_h2": "eMuleBB ist das Produkt. Das Ökosystem ist das Nachweislabor.",
         "panel_kicker": "Produkthaltung",
-        "panel_p": "Die Desktop-App bleibt stock-kompatibel, wo das Netzwerk zählt. Die RC2-Suite ergänzt lokale Controller-Workflows darum herum, ohne eMuleBB in eine generische Torrent-Hülle zu verwandeln.",
+        "panel_p": "Die Desktop-App bleibt stock-kompatibel, wo das Netzwerk zählt. Die RC3-Suite ergänzt lokale Controller-Workflows darum herum, ohne eMuleBB in eine generische Torrent-Hülle zu verwandeln.",
         "signals": [
-          "0.7.3-rc.2 veröffentlicht",
+          "0.7.3-rc.3 veröffentlicht",
           "Suite-Bootstrap mit einer Zeile",
           "Manuelles eigenständiges ZIP",
           "GitHub-Actions-Builds",
@@ -406,8 +406,8 @@
         ],
         "source": "Quellcode"
       },
-      "intro": "Dies ist die Heimat von <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, ein eigenständiges Produkt für Menschen, die das verteilte Sharing-Modell von eMule weiterhin schätzen und es wie moderne Software betreiben möchten. RC2-Pakete sind auf GitHub Releases veröffentlicht, mit einem Full-Suite-Bootstrapper, eigenständigen ZIPs, Manifesten, Hashes, SBOMs und passenden aMuTorrent-Controller-Assets.",
-      "meta_description": "eMuleBB RC2 ist veröffentlicht: Installiere eMule broadband edition mit dem PowerShell-Suite-Bootstrapper oder als eigenständiges ZIP, mit auf GitHub gebauter Paket-Provenienz.",
+      "intro": "Dies ist die Heimat von <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, ein eigenständiges Produkt für Menschen, die das verteilte Sharing-Modell von eMule weiterhin schätzen und es wie moderne Software betreiben möchten. RC3-Pakete sind auf GitHub Releases veröffentlicht, mit einem Full-Suite-Bootstrapper, eigenständigen ZIPs, Manifesten, Hashes, SBOMs und passenden aMuTorrent-Controller-Assets.",
+      "meta_description": "eMuleBB RC3 ist veröffentlicht: Installiere eMule broadband edition mit dem PowerShell-Suite-Bootstrapper oder als eigenständiges ZIP, mit auf GitHub gebauter Paket-Provenienz.",
       "method": {
         "cards": [
           {
@@ -470,8 +470,8 @@
       "release": {
         "cards": [
           {
-            "h3": "Veröffentlichtes RC2",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> ist ein GitHub-Prerelease mit x64- und ARM64-ZIPs, Diagnostics-Paketen, Manifesten, SBOMs und dem Suite-Bootstrapper.",
+            "h3": "Veröffentlichtes RC3",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> ist ein GitHub-Prerelease mit x64- und ARM64-ZIPs, Diagnostics-Paketen, Manifesten, SBOMs und dem Suite-Bootstrapper.",
             "span": ""
           },
           {
@@ -481,7 +481,7 @@
           },
           {
             "h3": "Suite-Assets",
-            "p": "Das passende aMuTorrent-RC2-Paket wird separat veröffentlicht, und der vollständige x64-Bootstrap-Ablauf löst es automatisch für die Controller-Einrichtung auf.",
+            "p": "Das passende aMuTorrent-RC3-Paket wird separat veröffentlicht, und der vollständige x64-Bootstrap-Ablauf löst es automatisch für die Controller-Einrichtung auf.",
             "span": ""
           },
           {
@@ -491,14 +491,14 @@
           }
         ],
         "eyebrow": "Sicherheit und Provenienz",
-        "h2": "RC2 wird auf GitHub gebaut und paketiert",
+        "h2": "RC3 wird auf GitHub gebaut und paketiert",
         "p": ""
       },
       "release_downloads_label": "Releases herunterladen",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB ist die Heimat von eMule broadband edition, einem eigenständigen, breitbandorientierten eMule-Produkt mit Upload-Kontrolle, automatisierten Tests, SBOM-gestützten Paketen, REST automation, eD2K/Kad-Kompatibilität und sofort nutzbaren Integrationswegen für aMuTorrent, Prowlarr, Radarr und Sonarr. Der erste öffentliche Release Candidate 0.7.3-rc.2 ist auf GitHub Releases veröffentlicht.",
+      "structured_description": "eMuleBB ist die Heimat von eMule broadband edition, einem eigenständigen, breitbandorientierten eMule-Produkt mit Upload-Kontrolle, automatisierten Tests, SBOM-gestützten Paketen, REST automation, eD2K/Kad-Kompatibilität und sofort nutzbaren Integrationswegen für aMuTorrent, Prowlarr, Radarr und Sonarr. Der erste öffentliche Release Candidate 0.7.3-rc.3 ist auf GitHub Releases veröffentlicht.",
       "team": {
         "cards": [
           {
@@ -653,13 +653,13 @@
           },
           {
             "h3": "Evidencia antes que etiquetas",
-            "p": "<code>0.7.3-rc.2</code> está publicado con packaging de GitHub Actions, manifiestos, evidencia SHA-256, SBOMs SPDX, assets de diagnóstico y evidencia de hash del bootstrapper.",
+            "p": "<code>0.7.3-rc.3</code> está publicado con packaging de GitHub Actions, manifiestos, evidencia SHA-256, SBOMs SPDX, assets de diagnóstico y evidencia de hash del bootstrapper.",
             "span": "Disciplina de pruebas y release"
           }
         ],
         "eyebrow": "Funciones",
         "h2": "Lo que eMuleBB añade alrededor del cliente clásico",
-        "p": "El trabajo de RC2 se centra en el comportamiento visible para el operador: política de upload predecible, binding más seguro, límites fijos de rendimiento, operación de bibliotecas grandes, automatización local y evidencia de paquetes."
+        "p": "El trabajo de RC3 se centra en el comportamiento visible para el operador: política de upload predecible, binding más seguro, límites fijos de rendimiento, operación de bibliotecas grandes, automatización local y evidencia de paquetes."
       },
       "footer_links_label": "Enlaces del pie",
       "guide": {
@@ -688,13 +688,13 @@
         "eyebrow": "El hogar de eMuleBB para P2P de banda ancha",
         "guide": "Guía del producto",
         "h1": "eMuleBB es el producto eMule de banda ancha hecho por gente del P2P.",
-        "install": "Descargar RC2",
-        "lead": "RC2 está publicado: una línea eMule seria para Windows, con enlaces de upload rápidos, bibliotecas compartidas grandes, sesiones siempre activas, workflows de control REST, integración Arr y evidencia de paquetes construida en GitHub.",
+        "install": "Descargar RC3",
+        "lead": "RC3 está publicado: una línea eMule seria para Windows, con enlaces de upload rápidos, bibliotecas compartidas grandes, sesiones siempre activas, workflows de control REST, integración Arr y evidencia de paquetes construida en GitHub.",
         "panel_h2": "eMuleBB es el producto. El ecosistema es el laboratorio de pruebas.",
         "panel_kicker": "Enfoque del producto",
-        "panel_p": "La aplicación de escritorio se mantiene compatible con el stock donde importa la red. La suite RC2 añade workflows de control local a su alrededor sin convertir eMuleBB en una carcasa torrent genérica.",
+        "panel_p": "La aplicación de escritorio se mantiene compatible con el stock donde importa la red. La suite RC3 añade workflows de control local a su alrededor sin convertir eMuleBB en una carcasa torrent genérica.",
         "signals": [
-          "0.7.3-rc.2 publicado",
+          "0.7.3-rc.3 publicado",
           "Bootstrap de suite en una línea",
           "ZIP independiente manual",
           "Builds con GitHub Actions",
@@ -707,8 +707,8 @@
         ],
         "source": "Código fuente"
       },
-      "intro": "Este es el hogar de <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, un producto independiente para quienes todavía valoran el modelo de compartición distribuida de eMule y quieren operarlo como software moderno. Los paquetes RC2 están publicados en GitHub Releases con un bootstrapper de suite completa, ZIPs independientes, manifiestos, hashes, SBOMs y los assets de controlador aMuTorrent correspondientes.",
-      "meta_description": "eMuleBB RC2 está publicado: instala eMule broadband edition con el bootstrapper de suite en PowerShell o el ZIP independiente, con procedencia de paquete construida en GitHub.",
+      "intro": "Este es el hogar de <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, un producto independiente para quienes todavía valoran el modelo de compartición distribuida de eMule y quieren operarlo como software moderno. Los paquetes RC3 están publicados en GitHub Releases con un bootstrapper de suite completa, ZIPs independientes, manifiestos, hashes, SBOMs y los assets de controlador aMuTorrent correspondientes.",
+      "meta_description": "eMuleBB RC3 está publicado: instala eMule broadband edition con el bootstrapper de suite en PowerShell o el ZIP independiente, con procedencia de paquete construida en GitHub.",
       "method": {
         "cards": [
           {
@@ -771,8 +771,8 @@
       "release": {
         "cards": [
           {
-            "h3": "RC2 publicado",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> es una prerelease de GitHub con ZIPs x64 y ARM64, paquetes de diagnóstico, manifiestos, SBOMs y el bootstrapper de la suite.",
+            "h3": "RC3 publicado",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> es una prerelease de GitHub con ZIPs x64 y ARM64, paquetes de diagnóstico, manifiestos, SBOMs y el bootstrapper de la suite.",
             "span": ""
           },
           {
@@ -782,7 +782,7 @@
           },
           {
             "h3": "Assets de la suite",
-            "p": "El paquete aMuTorrent RC2 correspondiente se publica por separado, y el flujo de bootstrap x64 completo lo resuelve automáticamente para configurar el controlador.",
+            "p": "El paquete aMuTorrent RC3 correspondiente se publica por separado, y el flujo de bootstrap x64 completo lo resuelve automáticamente para configurar el controlador.",
             "span": ""
           },
           {
@@ -792,14 +792,14 @@
           }
         ],
         "eyebrow": "Seguridad y procedencia",
-        "h2": "RC2 se construye y empaqueta en GitHub",
+        "h2": "RC3 se construye y empaqueta en GitHub",
         "p": ""
       },
       "release_downloads_label": "Descargar releases",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB es el hogar de eMule broadband edition, un producto eMule independiente orientado a la banda ancha con control de upload, pruebas automatizadas, paquetes respaldados por SBOM, REST automation, compatibilidad eD2K/Kad y vías de integración listas para usar con aMuTorrent, Prowlarr, Radarr y Sonarr. El primer release candidate público 0.7.3-rc.2 está publicado en GitHub Releases.",
+      "structured_description": "eMuleBB es el hogar de eMule broadband edition, un producto eMule independiente orientado a la banda ancha con control de upload, pruebas automatizadas, paquetes respaldados por SBOM, REST automation, compatibilidad eD2K/Kad y vías de integración listas para usar con aMuTorrent, Prowlarr, Radarr y Sonarr. El primer release candidate público 0.7.3-rc.3 está publicado en GitHub Releases.",
       "team": {
         "cards": [
           {
@@ -954,13 +954,13 @@
           },
           {
             "h3": "Des preuves avant les labels",
-            "p": "<code>0.7.3-rc.2</code> est publié avec un packaging GitHub Actions, des manifestes, des preuves SHA-256, des SBOM SPDX, des assets de diagnostic et des preuves de hash du bootstrapper.",
+            "p": "<code>0.7.3-rc.3</code> est publié avec un packaging GitHub Actions, des manifestes, des preuves SHA-256, des SBOM SPDX, des assets de diagnostic et des preuves de hash du bootstrapper.",
             "span": "Discipline de tests et de release"
           }
         ],
         "eyebrow": "Fonctions",
         "h2": "Ce qu'eMuleBB ajoute autour du client classique",
-        "p": "Le travail RC2 se concentre sur le comportement visible par l'opérateur : politique d'upload prévisible, binding plus sûr, limites de performance fixes, exploitation de grandes bibliothèques, automatisation locale et preuves de paquets."
+        "p": "Le travail RC3 se concentre sur le comportement visible par l'opérateur : politique d'upload prévisible, binding plus sûr, limites de performance fixes, exploitation de grandes bibliothèques, automatisation locale et preuves de paquets."
       },
       "footer_links_label": "Liens de pied de page",
       "guide": {
@@ -989,13 +989,13 @@
         "eyebrow": "Le foyer eMuleBB pour le P2P haut débit",
         "guide": "Guide produit",
         "h1": "eMuleBB est le produit eMule haut débit construit par des gens du P2P.",
-        "install": "Télécharger RC2",
-        "lead": "RC2 est publié : une vraie ligne eMule pour Windows, avec uploads rapides, grandes bibliothèques partagées, sessions permanentes, workflows de contrôle REST, intégration Arr et preuves de paquets construites sur GitHub.",
+        "install": "Télécharger RC3",
+        "lead": "RC3 est publié : une vraie ligne eMule pour Windows, avec uploads rapides, grandes bibliothèques partagées, sessions permanentes, workflows de contrôle REST, intégration Arr et preuves de paquets construites sur GitHub.",
         "panel_h2": "eMuleBB est le produit. L'écosystème est le laboratoire de preuves.",
         "panel_kicker": "Positionnement",
-        "panel_p": "L'application de bureau reste compatible avec le stock là où le réseau compte. La suite RC2 ajoute des workflows de contrôle local autour d'elle sans transformer eMuleBB en coquille torrent générique.",
+        "panel_p": "L'application de bureau reste compatible avec le stock là où le réseau compte. La suite RC3 ajoute des workflows de contrôle local autour d'elle sans transformer eMuleBB en coquille torrent générique.",
         "signals": [
-          "0.7.3-rc.2 publié",
+          "0.7.3-rc.3 publié",
           "Bootstrap de suite en une ligne",
           "ZIP autonome manuel",
           "Builds GitHub Actions",
@@ -1008,8 +1008,8 @@
         ],
         "source": "Code source"
       },
-      "intro": "Voici le foyer d'<strong>eMuleBB</strong> : <strong>eMule broadband edition</strong>, un produit indépendant pour celles et ceux qui accordent encore de la valeur au modèle de partage distribué d'eMule et veulent l'exploiter comme un logiciel moderne. Les paquets RC2 sont publiés sur GitHub Releases avec un bootstrapper de suite complète, des ZIP autonomes, des manifestes, des hashes, des SBOM et les assets de contrôleur aMuTorrent correspondants.",
-      "meta_description": "eMuleBB RC2 est publié : installez eMule broadband edition avec le bootstrapper de suite PowerShell ou le ZIP autonome, avec une provenance de paquet construite sur GitHub.",
+      "intro": "Voici le foyer d'<strong>eMuleBB</strong> : <strong>eMule broadband edition</strong>, un produit indépendant pour celles et ceux qui accordent encore de la valeur au modèle de partage distribué d'eMule et veulent l'exploiter comme un logiciel moderne. Les paquets RC3 sont publiés sur GitHub Releases avec un bootstrapper de suite complète, des ZIP autonomes, des manifestes, des hashes, des SBOM et les assets de contrôleur aMuTorrent correspondants.",
+      "meta_description": "eMuleBB RC3 est publié : installez eMule broadband edition avec le bootstrapper de suite PowerShell ou le ZIP autonome, avec une provenance de paquet construite sur GitHub.",
       "method": {
         "cards": [
           {
@@ -1072,8 +1072,8 @@
       "release": {
         "cards": [
           {
-            "h3": "RC2 publié",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> est une prerelease GitHub avec des ZIP x64 et ARM64, des paquets de diagnostic, des manifestes, des SBOM et le bootstrapper de la suite.",
+            "h3": "RC3 publié",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> est une prerelease GitHub avec des ZIP x64 et ARM64, des paquets de diagnostic, des manifestes, des SBOM et le bootstrapper de la suite.",
             "span": ""
           },
           {
@@ -1083,7 +1083,7 @@
           },
           {
             "h3": "Assets de la suite",
-            "p": "Le paquet aMuTorrent RC2 correspondant est publié séparément, et le flux de bootstrap x64 complet le résout automatiquement pour configurer le contrôleur.",
+            "p": "Le paquet aMuTorrent RC3 correspondant est publié séparément, et le flux de bootstrap x64 complet le résout automatiquement pour configurer le contrôleur.",
             "span": ""
           },
           {
@@ -1093,14 +1093,14 @@
           }
         ],
         "eyebrow": "Sécurité et provenance",
-        "h2": "RC2 est construit et empaqueté sur GitHub",
+        "h2": "RC3 est construit et empaqueté sur GitHub",
         "p": ""
       },
       "release_downloads_label": "Télécharger les releases",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB est le foyer d'eMule broadband edition, un produit eMule indépendant orienté haut débit avec contrôle d'upload, tests automatisés, paquets adossés à des SBOM, REST automation, compatibilité eD2K/Kad et des voies d'intégration prêtes à l'emploi pour aMuTorrent, Prowlarr, Radarr et Sonarr. Le premier release candidate public 0.7.3-rc.2 est publié sur GitHub Releases.",
+      "structured_description": "eMuleBB est le foyer d'eMule broadband edition, un produit eMule indépendant orienté haut débit avec contrôle d'upload, tests automatisés, paquets adossés à des SBOM, REST automation, compatibilité eD2K/Kad et des voies d'intégration prêtes à l'emploi pour aMuTorrent, Prowlarr, Radarr et Sonarr. Le premier release candidate public 0.7.3-rc.3 est publié sur GitHub Releases.",
       "team": {
         "cards": [
           {
@@ -1255,13 +1255,13 @@
           },
           {
             "h3": "Prove prima delle etichette",
-            "p": "<code>0.7.3-rc.2</code> è pubblicato con packaging GitHub Actions, manifest, prove SHA-256, SBOM SPDX, asset di diagnostica e prove di hash del bootstrapper.",
+            "p": "<code>0.7.3-rc.3</code> è pubblicato con packaging GitHub Actions, manifest, prove SHA-256, SBOM SPDX, asset di diagnostica e prove di hash del bootstrapper.",
             "span": "Disciplina di test e release"
           }
         ],
         "eyebrow": "Funzioni",
         "h2": "Cosa aggiunge eMuleBB attorno al client classico",
-        "p": "Il lavoro su RC2 punta al comportamento visibile all'operatore: policy di upload prevedibile, binding più sicuro, limiti di prestazione fissi, gestione di grandi librerie, automazione locale e prove di pacchetto."
+        "p": "Il lavoro su RC3 punta al comportamento visibile all'operatore: policy di upload prevedibile, binding più sicuro, limiti di prestazione fissi, gestione di grandi librerie, automazione locale e prove di pacchetto."
       },
       "footer_links_label": "Link del piè di pagina",
       "guide": {
@@ -1290,13 +1290,13 @@
         "eyebrow": "La casa di eMuleBB per il P2P a banda larga",
         "guide": "Guida prodotto",
         "h1": "eMuleBB è il prodotto eMule a banda larga creato da gente del P2P.",
-        "install": "Scarica RC2",
-        "lead": "RC2 è pubblicato: una linea eMule seria per Windows, con upload veloci, grandi librerie condivise, sessioni sempre attive, workflow di controllo REST, integrazione Arr e prove di pacchetto costruite su GitHub.",
+        "install": "Scarica RC3",
+        "lead": "RC3 è pubblicato: una linea eMule seria per Windows, con upload veloci, grandi librerie condivise, sessioni sempre attive, workflow di controllo REST, integrazione Arr e prove di pacchetto costruite su GitHub.",
         "panel_h2": "eMuleBB è il prodotto. L'ecosistema è il laboratorio di prove.",
         "panel_kicker": "Posizionamento",
-        "panel_p": "L'app desktop resta compatibile con lo stock dove conta la rete. La suite RC2 aggiunge workflow di controllo locale attorno ad essa senza trasformare eMuleBB in un guscio torrent generico.",
+        "panel_p": "L'app desktop resta compatibile con lo stock dove conta la rete. La suite RC3 aggiunge workflow di controllo locale attorno ad essa senza trasformare eMuleBB in un guscio torrent generico.",
         "signals": [
-          "0.7.3-rc.2 pubblicato",
+          "0.7.3-rc.3 pubblicato",
           "Bootstrap della suite in una riga",
           "ZIP autonomo manuale",
           "Build con GitHub Actions",
@@ -1309,8 +1309,8 @@
         ],
         "source": "Codice sorgente"
       },
-      "intro": "Questa è la casa di <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, un prodotto indipendente per chi dà ancora valore al modello di condivisione distribuita di eMule e vuole gestirlo come software moderno. I pacchetti RC2 sono pubblicati su GitHub Releases con un bootstrapper di suite completa, ZIP autonomi, manifest, hash, SBOM e i corrispondenti asset del controller aMuTorrent.",
-      "meta_description": "eMuleBB RC2 è pubblicato: installa eMule broadband edition con il bootstrapper della suite in PowerShell o lo ZIP autonomo, con provenienza del pacchetto costruita su GitHub.",
+      "intro": "Questa è la casa di <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, un prodotto indipendente per chi dà ancora valore al modello di condivisione distribuita di eMule e vuole gestirlo come software moderno. I pacchetti RC3 sono pubblicati su GitHub Releases con un bootstrapper di suite completa, ZIP autonomi, manifest, hash, SBOM e i corrispondenti asset del controller aMuTorrent.",
+      "meta_description": "eMuleBB RC3 è pubblicato: installa eMule broadband edition con il bootstrapper della suite in PowerShell o lo ZIP autonomo, con provenienza del pacchetto costruita su GitHub.",
       "method": {
         "cards": [
           {
@@ -1373,8 +1373,8 @@
       "release": {
         "cards": [
           {
-            "h3": "RC2 pubblicato",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> è una prerelease GitHub con ZIP x64 e ARM64, pacchetti di diagnostica, manifest, SBOM e il bootstrapper della suite.",
+            "h3": "RC3 pubblicato",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> è una prerelease GitHub con ZIP x64 e ARM64, pacchetti di diagnostica, manifest, SBOM e il bootstrapper della suite.",
             "span": ""
           },
           {
@@ -1384,7 +1384,7 @@
           },
           {
             "h3": "Asset della suite",
-            "p": "Il pacchetto aMuTorrent RC2 corrispondente è pubblicato separatamente, e il flusso di bootstrap x64 completo lo risolve automaticamente per configurare il controller.",
+            "p": "Il pacchetto aMuTorrent RC3 corrispondente è pubblicato separatamente, e il flusso di bootstrap x64 completo lo risolve automaticamente per configurare il controller.",
             "span": ""
           },
           {
@@ -1394,14 +1394,14 @@
           }
         ],
         "eyebrow": "Sicurezza e provenienza",
-        "h2": "RC2 è costruito e pacchettizzato su GitHub",
+        "h2": "RC3 è costruito e pacchettizzato su GitHub",
         "p": ""
       },
       "release_downloads_label": "Scarica le release",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB è la casa di eMule broadband edition, un prodotto eMule indipendente orientato alla banda larga con controllo degli upload, test automatizzati, pacchetti con SBOM, REST automation, compatibilità eD2K/Kad e percorsi di integrazione pronti all'uso per aMuTorrent, Prowlarr, Radarr e Sonarr. Il primo release candidate pubblico 0.7.3-rc.2 è pubblicato su GitHub Releases.",
+      "structured_description": "eMuleBB è la casa di eMule broadband edition, un prodotto eMule indipendente orientato alla banda larga con controllo degli upload, test automatizzati, pacchetti con SBOM, REST automation, compatibilità eD2K/Kad e percorsi di integrazione pronti all'uso per aMuTorrent, Prowlarr, Radarr e Sonarr. Il primo release candidate pubblico 0.7.3-rc.3 è pubblicato su GitHub Releases.",
       "team": {
         "cards": [
           {
@@ -1556,13 +1556,13 @@
           },
           {
             "h3": "ラベルより先に証跡",
-            "p": "<code>0.7.3-rc.2</code> は、GitHub Actions によるパッケージング、マニフェスト、SHA-256 証跡、SPDX SBOM、診断アセット、ブートストラッパーのハッシュ証跡とともに公開されています。",
+            "p": "<code>0.7.3-rc.3</code> は、GitHub Actions によるパッケージング、マニフェスト、SHA-256 証跡、SPDX SBOM、診断アセット、ブートストラッパーのハッシュ証跡とともに公開されています。",
             "span": "テストとリリースの規律"
           }
         ],
         "eyebrow": "機能",
         "h2": "eMuleBB が従来のクライアントの周りに加えるもの",
-        "p": "RC2 の作業は運用者に見える挙動に焦点を当てています。予測可能なアップロードポリシー、より安全な binding、固定された性能上限、大規模ライブラリの運用、ローカル自動化、そしてパッケージ証跡です。"
+        "p": "RC3 の作業は運用者に見える挙動に焦点を当てています。予測可能なアップロードポリシー、より安全な binding、固定された性能上限、大規模ライブラリの運用、ローカル自動化、そしてパッケージ証跡です。"
       },
       "footer_links_label": "フッターリンク",
       "guide": {
@@ -1591,13 +1591,13 @@
         "eyebrow": "ブロードバンド P2P のための eMuleBB ホーム",
         "guide": "製品ガイド",
         "h1": "eMuleBB は P2P の人々が作るブロードバンド eMule 製品です。",
-        "install": "RC2 をダウンロード",
-        "lead": "RC2 を公開しました。高速なアップロード回線、大規模な共有ライブラリ、常時稼働セッション、REST コントローラーのワークフロー、Arr 統合、そして GitHub でビルドされたパッケージ証跡のための本格的な Windows eMule ラインです。",
+        "install": "RC3 をダウンロード",
+        "lead": "RC3 を公開しました。高速なアップロード回線、大規模な共有ライブラリ、常時稼働セッション、REST コントローラーのワークフロー、Arr 統合、そして GitHub でビルドされたパッケージ証跡のための本格的な Windows eMule ラインです。",
         "panel_h2": "eMuleBB が製品です。エコシステムは証跡のラボです。",
         "panel_kicker": "製品の姿勢",
-        "panel_p": "ネットワークが重要な部分では、デスクトップアプリはストック互換を保ちます。RC2 スイートは、その周囲にローカルなコントローラーのワークフローを追加しますが、eMuleBB を汎用の torrent シェルに変えることはありません。",
+        "panel_p": "ネットワークが重要な部分では、デスクトップアプリはストック互換を保ちます。RC3 スイートは、その周囲にローカルなコントローラーのワークフローを追加しますが、eMuleBB を汎用の torrent シェルに変えることはありません。",
         "signals": [
-          "0.7.3-rc.2 公開済み",
+          "0.7.3-rc.3 公開済み",
           "1 行のスイートブートストラップ",
           "手動のスタンドアロン ZIP",
           "GitHub Actions ビルド",
@@ -1610,8 +1610,8 @@
         ],
         "source": "ソース"
       },
-      "intro": "ここは <strong>eMuleBB</strong> の拠点です。<strong>eMule broadband edition</strong> は、eMule の分散共有モデルを今も大切にし、それを現代的なソフトウェアのように運用したい人のための独立した製品です。RC2 パッケージは、フルスイートのブートストラッパー、スタンドアロン ZIP、マニフェスト、ハッシュ、SBOM、そして対応する aMuTorrent コントローラーのアセットとともに GitHub Releases で公開されています。",
-      "meta_description": "eMuleBB RC2 を公開しました。PowerShell スイートのブートストラッパー、またはスタンドアロン ZIP で eMule broadband edition をインストールできます。パッケージの来歴は GitHub でビルドされています。",
+      "intro": "ここは <strong>eMuleBB</strong> の拠点です。<strong>eMule broadband edition</strong> は、eMule の分散共有モデルを今も大切にし、それを現代的なソフトウェアのように運用したい人のための独立した製品です。RC3 パッケージは、フルスイートのブートストラッパー、スタンドアロン ZIP、マニフェスト、ハッシュ、SBOM、そして対応する aMuTorrent コントローラーのアセットとともに GitHub Releases で公開されています。",
+      "meta_description": "eMuleBB RC3 を公開しました。PowerShell スイートのブートストラッパー、またはスタンドアロン ZIP で eMule broadband edition をインストールできます。パッケージの来歴は GitHub でビルドされています。",
       "method": {
         "cards": [
           {
@@ -1674,8 +1674,8 @@
       "release": {
         "cards": [
           {
-            "h3": "公開された RC2",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> は、x64 と ARM64 の ZIP、診断パッケージ、マニフェスト、SBOM、スイートブートストラッパーを含む GitHub プレリリースです。",
+            "h3": "公開された RC3",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> は、x64 と ARM64 の ZIP、診断パッケージ、マニフェスト、SBOM、スイートブートストラッパーを含む GitHub プレリリースです。",
             "span": ""
           },
           {
@@ -1685,7 +1685,7 @@
           },
           {
             "h3": "スイートアセット",
-            "p": "対応する aMuTorrent RC2 パッケージは別途公開され、完全な x64 ブートストラップフローがコントローラー設定のためにそれを自動的に解決します。",
+            "p": "対応する aMuTorrent RC3 パッケージは別途公開され、完全な x64 ブートストラップフローがコントローラー設定のためにそれを自動的に解決します。",
             "span": ""
           },
           {
@@ -1695,14 +1695,14 @@
           }
         ],
         "eyebrow": "セキュリティと来歴",
-        "h2": "RC2 は GitHub でビルド・パッケージ化される",
+        "h2": "RC3 は GitHub でビルド・パッケージ化される",
         "p": ""
       },
       "release_downloads_label": "リリースをダウンロード",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB は eMule broadband edition の拠点です。アップロード制御、自動テスト、SBOM 付きパッケージ、REST automation、eD2K/Kad 互換性、そして aMuTorrent・Prowlarr・Radarr・Sonarr とのすぐ使える統合経路を備えた、ブロードバンド志向の独立した eMule 製品です。最初の公開リリース候補 0.7.3-rc.2 は GitHub Releases で公開されています。",
+      "structured_description": "eMuleBB は eMule broadband edition の拠点です。アップロード制御、自動テスト、SBOM 付きパッケージ、REST automation、eD2K/Kad 互換性、そして aMuTorrent・Prowlarr・Radarr・Sonarr とのすぐ使える統合経路を備えた、ブロードバンド志向の独立した eMule 製品です。最初の公開リリース候補 0.7.3-rc.3 は GitHub Releases で公開されています。",
       "team": {
         "cards": [
           {
@@ -1857,13 +1857,13 @@
           },
           {
             "h3": "라벨보다 증거 먼저",
-            "p": "<code>0.7.3-rc.2</code>은 GitHub Actions 패키징, 매니페스트, SHA-256 증거, SPDX SBOM, 진단 자산, 부트스트래퍼 해시 증거와 함께 공개됩니다.",
+            "p": "<code>0.7.3-rc.3</code>은 GitHub Actions 패키징, 매니페스트, SHA-256 증거, SPDX SBOM, 진단 자산, 부트스트래퍼 해시 증거와 함께 공개됩니다.",
             "span": "테스트와 릴리스 규율"
           }
         ],
         "eyebrow": "기능",
         "h2": "eMuleBB가 기존 클라이언트 주위에 더하는 것",
-        "p": "RC2 작업은 운영자에게 보이는 동작에 초점을 둡니다. 예측 가능한 업로드 정책, 더 안전한 binding, 고정된 성능 한계, 대규모 라이브러리 운영, 로컬 자동화, 패키지 증거입니다."
+        "p": "RC3 작업은 운영자에게 보이는 동작에 초점을 둡니다. 예측 가능한 업로드 정책, 더 안전한 binding, 고정된 성능 한계, 대규모 라이브러리 운영, 로컬 자동화, 패키지 증거입니다."
       },
       "footer_links_label": "푸터 링크",
       "guide": {
@@ -1892,13 +1892,13 @@
         "eyebrow": "광대역 P2P를 위한 eMuleBB 홈",
         "guide": "제품 가이드",
         "h1": "eMuleBB는 P2P 사람들이 만든 광대역 eMule 제품입니다.",
-        "install": "RC2 다운로드",
-        "lead": "RC2이 공개되었습니다. 빠른 업로드 회선, 대규모 공유 라이브러리, 상시 가동 세션, REST 컨트롤러 워크플로, Arr 통합, 그리고 GitHub에서 빌드된 패키지 증거를 위한 진지한 Windows eMule 라인입니다.",
+        "install": "RC3 다운로드",
+        "lead": "RC3이 공개되었습니다. 빠른 업로드 회선, 대규모 공유 라이브러리, 상시 가동 세션, REST 컨트롤러 워크플로, Arr 통합, 그리고 GitHub에서 빌드된 패키지 증거를 위한 진지한 Windows eMule 라인입니다.",
         "panel_h2": "eMuleBB가 제품입니다. 생태계는 증명 실험실입니다.",
         "panel_kicker": "제품 포지션",
-        "panel_p": "네트워크가 중요한 부분에서 데스크톱 앱은 스톡 호환을 유지합니다. RC2 스위트는 그 주위에 로컬 컨트롤러 워크플로를 추가하지만 eMuleBB를 일반적인 torrent 셸로 바꾸지 않습니다.",
+        "panel_p": "네트워크가 중요한 부분에서 데스크톱 앱은 스톡 호환을 유지합니다. RC3 스위트는 그 주위에 로컬 컨트롤러 워크플로를 추가하지만 eMuleBB를 일반적인 torrent 셸로 바꾸지 않습니다.",
         "signals": [
-          "0.7.3-rc.2 공개됨",
+          "0.7.3-rc.3 공개됨",
           "한 줄 스위트 부트스트랩",
           "수동 독립 ZIP",
           "GitHub Actions 빌드",
@@ -1911,8 +1911,8 @@
         ],
         "source": "소스"
       },
-      "intro": "이곳은 <strong>eMuleBB</strong>의 본거지입니다. <strong>eMule broadband edition</strong>은 eMule의 분산 공유 모델을 여전히 소중히 여기고 그것을 현대적인 소프트웨어처럼 운영하고 싶은 사람들을 위한 독립 제품입니다. RC2 패키지는 풀 스위트 부트스트래퍼, 독립 ZIP, 매니페스트, 해시, SBOM, 그리고 대응하는 aMuTorrent 컨트롤러 자산과 함께 GitHub Releases에 공개되어 있습니다.",
-      "meta_description": "eMuleBB RC2이 공개되었습니다. PowerShell 스위트 부트스트래퍼나 독립 ZIP으로 eMule broadband edition을 설치하세요. 패키지 출처는 GitHub에서 빌드됩니다.",
+      "intro": "이곳은 <strong>eMuleBB</strong>의 본거지입니다. <strong>eMule broadband edition</strong>은 eMule의 분산 공유 모델을 여전히 소중히 여기고 그것을 현대적인 소프트웨어처럼 운영하고 싶은 사람들을 위한 독립 제품입니다. RC3 패키지는 풀 스위트 부트스트래퍼, 독립 ZIP, 매니페스트, 해시, SBOM, 그리고 대응하는 aMuTorrent 컨트롤러 자산과 함께 GitHub Releases에 공개되어 있습니다.",
+      "meta_description": "eMuleBB RC3이 공개되었습니다. PowerShell 스위트 부트스트래퍼나 독립 ZIP으로 eMule broadband edition을 설치하세요. 패키지 출처는 GitHub에서 빌드됩니다.",
       "method": {
         "cards": [
           {
@@ -1975,8 +1975,8 @@
       "release": {
         "cards": [
           {
-            "h3": "공개된 RC2",
-            "p": "<code>emulebb-v0.7.3-rc.2</code>은 x64 및 ARM64 ZIP, 진단 패키지, 매니페스트, SBOM, 스위트 부트스트래퍼를 포함한 GitHub 프리릴리스입니다.",
+            "h3": "공개된 RC3",
+            "p": "<code>emulebb-v0.7.3-rc.3</code>은 x64 및 ARM64 ZIP, 진단 패키지, 매니페스트, SBOM, 스위트 부트스트래퍼를 포함한 GitHub 프리릴리스입니다.",
             "span": ""
           },
           {
@@ -1986,7 +1986,7 @@
           },
           {
             "h3": "스위트 자산",
-            "p": "대응하는 aMuTorrent RC2 패키지는 별도로 공개되며, 전체 x64 부트스트랩 흐름이 컨트롤러 설정을 위해 이를 자동으로 해결합니다.",
+            "p": "대응하는 aMuTorrent RC3 패키지는 별도로 공개되며, 전체 x64 부트스트랩 흐름이 컨트롤러 설정을 위해 이를 자동으로 해결합니다.",
             "span": ""
           },
           {
@@ -1996,14 +1996,14 @@
           }
         ],
         "eyebrow": "보안과 출처",
-        "h2": "RC2은 GitHub에서 빌드되고 패키징됩니다",
+        "h2": "RC3은 GitHub에서 빌드되고 패키징됩니다",
         "p": ""
       },
       "release_downloads_label": "릴리스 다운로드",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB는 eMule broadband edition의 본거지입니다. 업로드 제어, 자동화 테스트, SBOM 기반 패키지, REST automation, eD2K/Kad 호환성, 그리고 곧바로 쓸 수 있는 aMuTorrent·Prowlarr·Radarr·Sonarr 통합 경로를 갖춘 광대역 중심의 독립 eMule 제품입니다. 첫 공개 릴리스 후보 0.7.3-rc.2이 GitHub Releases에 공개되어 있습니다.",
+      "structured_description": "eMuleBB는 eMule broadband edition의 본거지입니다. 업로드 제어, 자동화 테스트, SBOM 기반 패키지, REST automation, eD2K/Kad 호환성, 그리고 곧바로 쓸 수 있는 aMuTorrent·Prowlarr·Radarr·Sonarr 통합 경로를 갖춘 광대역 중심의 독립 eMule 제품입니다. 첫 공개 릴리스 후보 0.7.3-rc.3이 GitHub Releases에 공개되어 있습니다.",
       "team": {
         "cards": [
           {
@@ -2158,13 +2158,13 @@
           },
           {
             "h3": "Bewijs vóór labels",
-            "p": "<code>0.7.3-rc.2</code> is gepubliceerd met GitHub Actions-packaging, manifesten, SHA-256-bewijs, SPDX-SBOM's, diagnostics-assets en bootstrapper-hashbewijs.",
+            "p": "<code>0.7.3-rc.3</code> is gepubliceerd met GitHub Actions-packaging, manifesten, SHA-256-bewijs, SPDX-SBOM's, diagnostics-assets en bootstrapper-hashbewijs.",
             "span": "Test- en releasediscipline"
           }
         ],
         "eyebrow": "Functies",
         "h2": "Wat eMuleBB rond de klassieke client toevoegt",
-        "p": "Het RC2-werk richt zich op voor de beheerder zichtbaar gedrag: voorspelbaar uploadbeleid, veiliger binding, vaste prestatielimieten, werken met grote bibliotheken, lokale automatisering en pakketbewijs."
+        "p": "Het RC3-werk richt zich op voor de beheerder zichtbaar gedrag: voorspelbaar uploadbeleid, veiliger binding, vaste prestatielimieten, werken met grote bibliotheken, lokale automatisering en pakketbewijs."
       },
       "footer_links_label": "Footerlinks",
       "guide": {
@@ -2193,13 +2193,13 @@
         "eyebrow": "Het eMuleBB-thuis voor breedband-P2P",
         "guide": "Productgids",
         "h1": "eMuleBB is het breedband-eMule-product, gebouwd door P2P-mensen.",
-        "install": "RC2 downloaden",
-        "lead": "RC2 is gepubliceerd: een serieuze Windows-eMule-lijn voor snelle uploadverbindingen, grote gedeelde bibliotheken, altijd-aan sessies, REST-controllerworkflows, Arr-integratie en op GitHub gebouwd pakketbewijs.",
+        "install": "RC3 downloaden",
+        "lead": "RC3 is gepubliceerd: een serieuze Windows-eMule-lijn voor snelle uploadverbindingen, grote gedeelde bibliotheken, altijd-aan sessies, REST-controllerworkflows, Arr-integratie en op GitHub gebouwd pakketbewijs.",
         "panel_h2": "eMuleBB is het product. Het ecosysteem is het bewijslab.",
         "panel_kicker": "Producthouding",
-        "panel_p": "De desktop-app blijft stock-compatibel waar het netwerk telt. De RC2-suite voegt er lokale controllerworkflows omheen toe zonder eMuleBB in een generieke torrent-shell te veranderen.",
+        "panel_p": "De desktop-app blijft stock-compatibel waar het netwerk telt. De RC3-suite voegt er lokale controllerworkflows omheen toe zonder eMuleBB in een generieke torrent-shell te veranderen.",
         "signals": [
-          "0.7.3-rc.2 gepubliceerd",
+          "0.7.3-rc.3 gepubliceerd",
           "Suite-bootstrap met één regel",
           "Handmatige losse ZIP",
           "GitHub Actions-builds",
@@ -2212,8 +2212,8 @@
         ],
         "source": "Broncode"
       },
-      "intro": "Dit is het thuis van <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, een onafhankelijk product voor mensen die het gedistribueerde deelmodel van eMule nog waarderen en het als moderne software willen draaien. RC2-pakketten zijn gepubliceerd op GitHub Releases met een full-suite-bootstrapper, losse ZIP's, manifesten, hashes, SBOM's en bijbehorende aMuTorrent-controller-assets.",
-      "meta_description": "eMuleBB RC2 is gepubliceerd: installeer eMule broadband edition met de PowerShell-suite-bootstrapper of de losse ZIP, met op GitHub gebouwde pakketherkomst.",
+      "intro": "Dit is het thuis van <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, een onafhankelijk product voor mensen die het gedistribueerde deelmodel van eMule nog waarderen en het als moderne software willen draaien. RC3-pakketten zijn gepubliceerd op GitHub Releases met een full-suite-bootstrapper, losse ZIP's, manifesten, hashes, SBOM's en bijbehorende aMuTorrent-controller-assets.",
+      "meta_description": "eMuleBB RC3 is gepubliceerd: installeer eMule broadband edition met de PowerShell-suite-bootstrapper of de losse ZIP, met op GitHub gebouwde pakketherkomst.",
       "method": {
         "cards": [
           {
@@ -2276,8 +2276,8 @@
       "release": {
         "cards": [
           {
-            "h3": "Gepubliceerde RC2",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> is een GitHub-prerelease met x64- en ARM64-ZIP's, diagnostics-pakketten, manifesten, SBOM's en de suite-bootstrapper.",
+            "h3": "Gepubliceerde RC3",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> is een GitHub-prerelease met x64- en ARM64-ZIP's, diagnostics-pakketten, manifesten, SBOM's en de suite-bootstrapper.",
             "span": ""
           },
           {
@@ -2287,7 +2287,7 @@
           },
           {
             "h3": "Suite-assets",
-            "p": "Het bijbehorende aMuTorrent RC2-pakket wordt apart gepubliceerd, en de volledige x64-bootstrapflow lost het automatisch op voor de controller-setup.",
+            "p": "Het bijbehorende aMuTorrent RC3-pakket wordt apart gepubliceerd, en de volledige x64-bootstrapflow lost het automatisch op voor de controller-setup.",
             "span": ""
           },
           {
@@ -2297,14 +2297,14 @@
           }
         ],
         "eyebrow": "Beveiliging en herkomst",
-        "h2": "RC2 wordt gebouwd en verpakt op GitHub",
+        "h2": "RC3 wordt gebouwd en verpakt op GitHub",
         "p": ""
       },
       "release_downloads_label": "Releases downloaden",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB is het thuis van eMule broadband edition, een onafhankelijk, op breedband gericht eMule-product met uploadcontrole, geautomatiseerde tests, met SBOM onderbouwde pakketten, REST automation, eD2K/Kad-compatibiliteit en kant-en-klare integratiepaden voor aMuTorrent, Prowlarr, Radarr en Sonarr. De eerste publieke release candidate 0.7.3-rc.2 is gepubliceerd op GitHub Releases.",
+      "structured_description": "eMuleBB is het thuis van eMule broadband edition, een onafhankelijk, op breedband gericht eMule-product met uploadcontrole, geautomatiseerde tests, met SBOM onderbouwde pakketten, REST automation, eD2K/Kad-compatibiliteit en kant-en-klare integratiepaden voor aMuTorrent, Prowlarr, Radarr en Sonarr. De eerste publieke release candidate 0.7.3-rc.3 is gepubliceerd op GitHub Releases.",
       "team": {
         "cards": [
           {
@@ -2459,13 +2459,13 @@
           },
           {
             "h3": "Dowody przed etykietami",
-            "p": "<code>0.7.3-rc.2</code> jest opublikowane z pakowaniem GitHub Actions, manifestami, dowodami SHA-256, SBOM-ami SPDX, zasobami diagnostycznymi i dowodami hasha bootstrappera.",
+            "p": "<code>0.7.3-rc.3</code> jest opublikowane z pakowaniem GitHub Actions, manifestami, dowodami SHA-256, SBOM-ami SPDX, zasobami diagnostycznymi i dowodami hasha bootstrappera.",
             "span": "Dyscyplina testów i wydań"
           }
         ],
         "eyebrow": "Funkcje",
         "h2": "Co eMuleBB dodaje wokół klasycznego klienta",
-        "p": "Prace nad RC2 skupiają się na zachowaniu widocznym dla operatora: przewidywalna polityka uploadu, bezpieczniejszy binding, stałe limity wydajności, obsługa dużych bibliotek, lokalna automatyzacja i dowody paczek."
+        "p": "Prace nad RC3 skupiają się na zachowaniu widocznym dla operatora: przewidywalna polityka uploadu, bezpieczniejszy binding, stałe limity wydajności, obsługa dużych bibliotek, lokalna automatyzacja i dowody paczek."
       },
       "footer_links_label": "Linki w stopce",
       "guide": {
@@ -2494,13 +2494,13 @@
         "eyebrow": "Dom eMuleBB dla szerokopasmowego P2P",
         "guide": "Przewodnik po produkcie",
         "h1": "eMuleBB to szerokopasmowy produkt eMule tworzony przez ludzi P2P.",
-        "install": "Pobierz RC2",
-        "lead": "RC2 jest opublikowane: poważna linia eMule dla Windows, z szybkimi łączami uploadu, dużymi udostępnianymi bibliotekami, sesjami zawsze aktywnymi, przepływami sterowania REST, integracją Arr i dowodami paczek zbudowanymi na GitHubie.",
+        "install": "Pobierz RC3",
+        "lead": "RC3 jest opublikowane: poważna linia eMule dla Windows, z szybkimi łączami uploadu, dużymi udostępnianymi bibliotekami, sesjami zawsze aktywnymi, przepływami sterowania REST, integracją Arr i dowodami paczek zbudowanymi na GitHubie.",
         "panel_h2": "eMuleBB to produkt. Ekosystem to laboratorium dowodów.",
         "panel_kicker": "Profil produktu",
-        "panel_p": "Aplikacja desktopowa pozostaje zgodna ze stockiem tam, gdzie liczy się sieć. Pakiet RC2 dodaje wokół niej lokalne przepływy sterowania, nie zamieniając eMuleBB w ogólną powłokę torrent.",
+        "panel_p": "Aplikacja desktopowa pozostaje zgodna ze stockiem tam, gdzie liczy się sieć. Pakiet RC3 dodaje wokół niej lokalne przepływy sterowania, nie zamieniając eMuleBB w ogólną powłokę torrent.",
         "signals": [
-          "0.7.3-rc.2 opublikowane",
+          "0.7.3-rc.3 opublikowane",
           "Bootstrap pakietu w jednej linii",
           "Ręczny samodzielny ZIP",
           "Buildy GitHub Actions",
@@ -2513,8 +2513,8 @@
         ],
         "source": "Kod źródłowy"
       },
-      "intro": "To dom <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, niezależnego produktu dla osób, które wciąż cenią rozproszony model udostępniania eMule i chcą go obsługiwać jak nowoczesne oprogramowanie. Paczki RC2 są opublikowane w GitHub Releases wraz z bootstrapperem pełnego pakietu, samodzielnymi ZIP-ami, manifestami, hashami, SBOM-ami i odpowiadającymi zasobami kontrolera aMuTorrent.",
-      "meta_description": "eMuleBB RC2 jest opublikowane: zainstaluj eMule broadband edition za pomocą bootstrappera pakietu w PowerShell lub samodzielnego ZIP-a, z pochodzeniem paczki zbudowanym na GitHubie.",
+      "intro": "To dom <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, niezależnego produktu dla osób, które wciąż cenią rozproszony model udostępniania eMule i chcą go obsługiwać jak nowoczesne oprogramowanie. Paczki RC3 są opublikowane w GitHub Releases wraz z bootstrapperem pełnego pakietu, samodzielnymi ZIP-ami, manifestami, hashami, SBOM-ami i odpowiadającymi zasobami kontrolera aMuTorrent.",
+      "meta_description": "eMuleBB RC3 jest opublikowane: zainstaluj eMule broadband edition za pomocą bootstrappera pakietu w PowerShell lub samodzielnego ZIP-a, z pochodzeniem paczki zbudowanym na GitHubie.",
       "method": {
         "cards": [
           {
@@ -2577,8 +2577,8 @@
       "release": {
         "cards": [
           {
-            "h3": "Opublikowane RC2",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> to przedwydanie GitHub z ZIP-ami x64 i ARM64, paczkami diagnostycznymi, manifestami, SBOM-ami i bootstrapperem pakietu.",
+            "h3": "Opublikowane RC3",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> to przedwydanie GitHub z ZIP-ami x64 i ARM64, paczkami diagnostycznymi, manifestami, SBOM-ami i bootstrapperem pakietu.",
             "span": ""
           },
           {
@@ -2588,7 +2588,7 @@
           },
           {
             "h3": "Zasoby pakietu",
-            "p": "Odpowiadająca paczka aMuTorrent RC2 jest publikowana osobno, a pełny przepływ bootstrap x64 rozwiązuje ją automatycznie podczas konfiguracji kontrolera.",
+            "p": "Odpowiadająca paczka aMuTorrent RC3 jest publikowana osobno, a pełny przepływ bootstrap x64 rozwiązuje ją automatycznie podczas konfiguracji kontrolera.",
             "span": ""
           },
           {
@@ -2598,14 +2598,14 @@
           }
         ],
         "eyebrow": "Bezpieczeństwo i pochodzenie",
-        "h2": "RC2 jest budowane i pakowane na GitHubie",
+        "h2": "RC3 jest budowane i pakowane na GitHubie",
         "p": ""
       },
       "release_downloads_label": "Pobierz wydania",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB to dom eMule broadband edition, niezależnego, zorientowanego na łącza szerokopasmowe produktu eMule z kontrolą uploadu, automatycznymi testami, paczkami popartymi SBOM, REST automation, zgodnością eD2K/Kad oraz gotowymi ścieżkami integracji z aMuTorrent, Prowlarr, Radarr i Sonarr. Pierwszy publiczny release candidate 0.7.3-rc.2 jest opublikowany w GitHub Releases.",
+      "structured_description": "eMuleBB to dom eMule broadband edition, niezależnego, zorientowanego na łącza szerokopasmowe produktu eMule z kontrolą uploadu, automatycznymi testami, paczkami popartymi SBOM, REST automation, zgodnością eD2K/Kad oraz gotowymi ścieżkami integracji z aMuTorrent, Prowlarr, Radarr i Sonarr. Pierwszy publiczny release candidate 0.7.3-rc.3 jest opublikowany w GitHub Releases.",
       "team": {
         "cards": [
           {
@@ -2760,13 +2760,13 @@
           },
           {
             "h3": "Evidência antes de rótulos",
-            "p": "<code>0.7.3-rc.2</code> está publicado com packaging do GitHub Actions, manifestos, evidência SHA-256, SBOMs SPDX, assets de diagnóstico e evidência de hash do bootstrapper.",
+            "p": "<code>0.7.3-rc.3</code> está publicado com packaging do GitHub Actions, manifestos, evidência SHA-256, SBOMs SPDX, assets de diagnóstico e evidência de hash do bootstrapper.",
             "span": "Disciplina de testes e release"
           }
         ],
         "eyebrow": "Recursos",
         "h2": "O que o eMuleBB acrescenta em torno do cliente clássico",
-        "p": "O trabalho do RC2 foca o comportamento visível ao operador: política de upload previsível, binding mais seguro, limites fixos de desempenho, operação de grandes bibliotecas, automação local e evidência de pacote."
+        "p": "O trabalho do RC3 foca o comportamento visível ao operador: política de upload previsível, binding mais seguro, limites fixos de desempenho, operação de grandes bibliotecas, automação local e evidência de pacote."
       },
       "footer_links_label": "Links do rodapé",
       "guide": {
@@ -2795,13 +2795,13 @@
         "eyebrow": "O lar do eMuleBB para P2P de banda larga",
         "guide": "Guia do produto",
         "h1": "O eMuleBB é o produto eMule de banda larga feito por gente do P2P.",
-        "install": "Baixar RC2",
-        "lead": "O RC2 está publicado: uma linha eMule séria para Windows, com links de upload rápidos, grandes bibliotecas compartilhadas, sessões sempre ativas, fluxos de controle REST, integração Arr e evidência de pacote construída no GitHub.",
+        "install": "Baixar RC3",
+        "lead": "O RC3 está publicado: uma linha eMule séria para Windows, com links de upload rápidos, grandes bibliotecas compartilhadas, sessões sempre ativas, fluxos de controle REST, integração Arr e evidência de pacote construída no GitHub.",
         "panel_h2": "O eMuleBB é o produto. O ecossistema é o laboratório de provas.",
         "panel_kicker": "Postura do produto",
-        "panel_p": "O app de desktop permanece compatível com o stock onde a rede importa. A suíte RC2 adiciona fluxos de controle local ao seu redor sem transformar o eMuleBB em uma casca torrent genérica.",
+        "panel_p": "O app de desktop permanece compatível com o stock onde a rede importa. A suíte RC3 adiciona fluxos de controle local ao seu redor sem transformar o eMuleBB em uma casca torrent genérica.",
         "signals": [
-          "0.7.3-rc.2 publicado",
+          "0.7.3-rc.3 publicado",
           "Bootstrap da suíte em uma linha",
           "ZIP independente manual",
           "Builds com GitHub Actions",
@@ -2814,8 +2814,8 @@
         ],
         "source": "Código-fonte"
       },
-      "intro": "Este é o lar do <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, um produto independente para quem ainda valoriza o modelo de compartilhamento distribuído do eMule e quer operá-lo como software moderno. Os pacotes RC2 estão publicados no GitHub Releases com um bootstrapper de suíte completa, ZIPs independentes, manifestos, hashes, SBOMs e os assets de controlador aMuTorrent correspondentes.",
-      "meta_description": "eMuleBB RC2 está publicado: instale o eMule broadband edition com o bootstrapper da suíte em PowerShell ou o ZIP independente, com procedência de pacote construída no GitHub.",
+      "intro": "Este é o lar do <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, um produto independente para quem ainda valoriza o modelo de compartilhamento distribuído do eMule e quer operá-lo como software moderno. Os pacotes RC3 estão publicados no GitHub Releases com um bootstrapper de suíte completa, ZIPs independentes, manifestos, hashes, SBOMs e os assets de controlador aMuTorrent correspondentes.",
+      "meta_description": "eMuleBB RC3 está publicado: instale o eMule broadband edition com o bootstrapper da suíte em PowerShell ou o ZIP independente, com procedência de pacote construída no GitHub.",
       "method": {
         "cards": [
           {
@@ -2878,8 +2878,8 @@
       "release": {
         "cards": [
           {
-            "h3": "RC2 publicado",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> é uma prerelease do GitHub com ZIPs x64 e ARM64, pacotes de diagnóstico, manifestos, SBOMs e o bootstrapper da suíte.",
+            "h3": "RC3 publicado",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> é uma prerelease do GitHub com ZIPs x64 e ARM64, pacotes de diagnóstico, manifestos, SBOMs e o bootstrapper da suíte.",
             "span": ""
           },
           {
@@ -2889,7 +2889,7 @@
           },
           {
             "h3": "Assets da suíte",
-            "p": "O pacote aMuTorrent RC2 correspondente é publicado separadamente, e o fluxo completo de bootstrap x64 o resolve automaticamente para a configuração do controlador.",
+            "p": "O pacote aMuTorrent RC3 correspondente é publicado separadamente, e o fluxo completo de bootstrap x64 o resolve automaticamente para a configuração do controlador.",
             "span": ""
           },
           {
@@ -2899,14 +2899,14 @@
           }
         ],
         "eyebrow": "Segurança e procedência",
-        "h2": "O RC2 é construído e empacotado no GitHub",
+        "h2": "O RC3 é construído e empacotado no GitHub",
         "p": ""
       },
       "release_downloads_label": "Baixar releases",
       "repos": {
         "p": ""
       },
-      "structured_description": "O eMuleBB é o lar do eMule broadband edition, um produto eMule independente focado em banda larga, com controle de upload, testes automatizados, pacotes respaldados por SBOM, REST automation, compatibilidade eD2K/Kad e caminhos de integração prontos para uso com aMuTorrent, Prowlarr, Radarr e Sonarr. O primeiro release candidate público 0.7.3-rc.2 está publicado no GitHub Releases.",
+      "structured_description": "O eMuleBB é o lar do eMule broadband edition, um produto eMule independente focado em banda larga, com controle de upload, testes automatizados, pacotes respaldados por SBOM, REST automation, compatibilidade eD2K/Kad e caminhos de integração prontos para uso com aMuTorrent, Prowlarr, Radarr e Sonarr. O primeiro release candidate público 0.7.3-rc.3 está publicado no GitHub Releases.",
       "team": {
         "cards": [
           {
@@ -3061,13 +3061,13 @@
           },
           {
             "h3": "Evidência antes de rótulos",
-            "p": "<code>0.7.3-rc.2</code> está publicado com packaging do GitHub Actions, manifestos, evidência SHA-256, SBOMs SPDX, assets de diagnóstico e evidência de hash do bootstrapper.",
+            "p": "<code>0.7.3-rc.3</code> está publicado com packaging do GitHub Actions, manifestos, evidência SHA-256, SBOMs SPDX, assets de diagnóstico e evidência de hash do bootstrapper.",
             "span": "Disciplina de testes e release"
           }
         ],
         "eyebrow": "Funcionalidades",
         "h2": "O que o eMuleBB acrescenta em torno do cliente clássico",
-        "p": "O trabalho do RC2 foca o comportamento visível ao operador: política de upload previsível, binding mais seguro, limites fixos de desempenho, operação de grandes bibliotecas, automação local e evidência de pacote."
+        "p": "O trabalho do RC3 foca o comportamento visível ao operador: política de upload previsível, binding mais seguro, limites fixos de desempenho, operação de grandes bibliotecas, automação local e evidência de pacote."
       },
       "footer_links_label": "Ligações do rodapé",
       "guide": {
@@ -3096,13 +3096,13 @@
         "eyebrow": "O lar do eMuleBB para P2P de banda larga",
         "guide": "Guia do produto",
         "h1": "O eMuleBB é o produto eMule de banda larga feito por gente do P2P.",
-        "install": "Transferir RC2",
-        "lead": "O RC2 está publicado: uma linha eMule séria para Windows, com ligações de upload rápidas, grandes bibliotecas partilhadas, sessões sempre ativas, fluxos de controlo REST, integração Arr e evidência de pacote construída no GitHub.",
+        "install": "Transferir RC3",
+        "lead": "O RC3 está publicado: uma linha eMule séria para Windows, com ligações de upload rápidas, grandes bibliotecas partilhadas, sessões sempre ativas, fluxos de controlo REST, integração Arr e evidência de pacote construída no GitHub.",
         "panel_h2": "O eMuleBB é o produto. O ecossistema é o laboratório de provas.",
         "panel_kicker": "Postura do produto",
-        "panel_p": "A aplicação de ambiente de trabalho mantém-se compatível com o stock onde a rede importa. A suíte RC2 adiciona fluxos de controlo local ao seu redor sem transformar o eMuleBB numa casca torrent genérica.",
+        "panel_p": "A aplicação de ambiente de trabalho mantém-se compatível com o stock onde a rede importa. A suíte RC3 adiciona fluxos de controlo local ao seu redor sem transformar o eMuleBB numa casca torrent genérica.",
         "signals": [
-          "0.7.3-rc.2 publicado",
+          "0.7.3-rc.3 publicado",
           "Bootstrap da suíte numa linha",
           "ZIP autónomo manual",
           "Builds com GitHub Actions",
@@ -3115,8 +3115,8 @@
         ],
         "source": "Código-fonte"
       },
-      "intro": "Este é o lar do <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, um produto independente para quem ainda valoriza o modelo de partilha distribuída do eMule e o quer operar como software moderno. Os pacotes RC2 estão publicados no GitHub Releases com um bootstrapper de suíte completa, ZIPs autónomos, manifestos, hashes, SBOMs e os assets de controlador aMuTorrent correspondentes.",
-      "meta_description": "eMuleBB RC2 está publicado: instale o eMule broadband edition com o bootstrapper da suíte em PowerShell ou o ZIP autónomo, com proveniência de pacote construída no GitHub.",
+      "intro": "Este é o lar do <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, um produto independente para quem ainda valoriza o modelo de partilha distribuída do eMule e o quer operar como software moderno. Os pacotes RC3 estão publicados no GitHub Releases com um bootstrapper de suíte completa, ZIPs autónomos, manifestos, hashes, SBOMs e os assets de controlador aMuTorrent correspondentes.",
+      "meta_description": "eMuleBB RC3 está publicado: instale o eMule broadband edition com o bootstrapper da suíte em PowerShell ou o ZIP autónomo, com proveniência de pacote construída no GitHub.",
       "method": {
         "cards": [
           {
@@ -3179,8 +3179,8 @@
       "release": {
         "cards": [
           {
-            "h3": "RC2 publicado",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> é uma prerelease do GitHub com ZIPs x64 e ARM64, pacotes de diagnóstico, manifestos, SBOMs e o bootstrapper da suíte.",
+            "h3": "RC3 publicado",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> é uma prerelease do GitHub com ZIPs x64 e ARM64, pacotes de diagnóstico, manifestos, SBOMs e o bootstrapper da suíte.",
             "span": ""
           },
           {
@@ -3190,7 +3190,7 @@
           },
           {
             "h3": "Assets da suíte",
-            "p": "O pacote aMuTorrent RC2 correspondente é publicado separadamente, e o fluxo completo de bootstrap x64 resolve-o automaticamente para a configuração do controlador.",
+            "p": "O pacote aMuTorrent RC3 correspondente é publicado separadamente, e o fluxo completo de bootstrap x64 resolve-o automaticamente para a configuração do controlador.",
             "span": ""
           },
           {
@@ -3200,14 +3200,14 @@
           }
         ],
         "eyebrow": "Segurança e proveniência",
-        "h2": "O RC2 é construído e empacotado no GitHub",
+        "h2": "O RC3 é construído e empacotado no GitHub",
         "p": ""
       },
       "release_downloads_label": "Transferir releases",
       "repos": {
         "p": ""
       },
-      "structured_description": "O eMuleBB é o lar do eMule broadband edition, um produto eMule independente focado em banda larga, com controlo de upload, testes automatizados, pacotes suportados por SBOM, REST automation, compatibilidade eD2K/Kad e caminhos de integração prontos a usar com aMuTorrent, Prowlarr, Radarr e Sonarr. O primeiro release candidate público 0.7.3-rc.2 está publicado no GitHub Releases.",
+      "structured_description": "O eMuleBB é o lar do eMule broadband edition, um produto eMule independente focado em banda larga, com controlo de upload, testes automatizados, pacotes suportados por SBOM, REST automation, compatibilidade eD2K/Kad e caminhos de integração prontos a usar com aMuTorrent, Prowlarr, Radarr e Sonarr. O primeiro release candidate público 0.7.3-rc.3 está publicado no GitHub Releases.",
       "team": {
         "cards": [
           {
@@ -3362,13 +3362,13 @@
           },
           {
             "h3": "Доказательства прежде ярлыков",
-            "p": "<code>0.7.3-rc.2</code> опубликован с упаковкой GitHub Actions, манифестами, доказательствами SHA-256, SBOM SPDX, ресурсами диагностики и доказательствами хеша бутстраппера.",
+            "p": "<code>0.7.3-rc.3</code> опубликован с упаковкой GitHub Actions, манифестами, доказательствами SHA-256, SBOM SPDX, ресурсами диагностики и доказательствами хеша бутстраппера.",
             "span": "Дисциплина тестирования и релизов"
           }
         ],
         "eyebrow": "Возможности",
         "h2": "Что eMuleBB добавляет вокруг классического клиента",
-        "p": "Работа над RC2 сосредоточена на видимом оператору поведении: предсказуемая политика отдачи, более безопасный binding, фиксированные пределы производительности, работа с большими библиотеками, локальная автоматизация и доказательства пакетов."
+        "p": "Работа над RC3 сосредоточена на видимом оператору поведении: предсказуемая политика отдачи, более безопасный binding, фиксированные пределы производительности, работа с большими библиотеками, локальная автоматизация и доказательства пакетов."
       },
       "footer_links_label": "Ссылки в подвале",
       "guide": {
@@ -3397,13 +3397,13 @@
         "eyebrow": "Дом eMuleBB для широкополосного P2P",
         "guide": "Руководство по продукту",
         "h1": "eMuleBB — это широкополосный продукт eMule, созданный людьми из P2P.",
-        "install": "Скачать RC2",
-        "lead": "RC2 опубликован: серьёзная линейка eMule для Windows с быстрыми каналами отдачи, большими общими библиотеками, постоянно работающими сессиями, рабочими процессами управления через REST, интеграцией Arr и доказательствами пакетов, собранными на GitHub.",
+        "install": "Скачать RC3",
+        "lead": "RC3 опубликован: серьёзная линейка eMule для Windows с быстрыми каналами отдачи, большими общими библиотеками, постоянно работающими сессиями, рабочими процессами управления через REST, интеграцией Arr и доказательствами пакетов, собранными на GitHub.",
         "panel_h2": "eMuleBB — это продукт. Экосистема — это лаборатория доказательств.",
         "panel_kicker": "Позиционирование продукта",
-        "panel_p": "Десктоп-приложение остаётся совместимым со стоком там, где важна сеть. Набор RC2 добавляет вокруг него локальные рабочие процессы управления, не превращая eMuleBB в обобщённую торрент-оболочку.",
+        "panel_p": "Десктоп-приложение остаётся совместимым со стоком там, где важна сеть. Набор RC3 добавляет вокруг него локальные рабочие процессы управления, не превращая eMuleBB в обобщённую торрент-оболочку.",
         "signals": [
-          "0.7.3-rc.2 опубликован",
+          "0.7.3-rc.3 опубликован",
           "Бутстрап набора в одну строку",
           "Ручной отдельный ZIP",
           "Сборки GitHub Actions",
@@ -3416,8 +3416,8 @@
         ],
         "source": "Исходный код"
       },
-      "intro": "Это дом <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, независимого продукта для тех, кто всё ещё ценит распределённую модель обмена eMule и хочет управлять ею как современным ПО. Пакеты RC2 опубликованы на GitHub Releases вместе с бутстраппером полного набора, отдельными ZIP, манифестами, хешами, SBOM и соответствующими ресурсами контроллера aMuTorrent.",
-      "meta_description": "eMuleBB RC2 опубликован: установите eMule broadband edition через бутстраппер набора в PowerShell или отдельный ZIP, с происхождением пакета, собранным на GitHub.",
+      "intro": "Это дом <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, независимого продукта для тех, кто всё ещё ценит распределённую модель обмена eMule и хочет управлять ею как современным ПО. Пакеты RC3 опубликованы на GitHub Releases вместе с бутстраппером полного набора, отдельными ZIP, манифестами, хешами, SBOM и соответствующими ресурсами контроллера aMuTorrent.",
+      "meta_description": "eMuleBB RC3 опубликован: установите eMule broadband edition через бутстраппер набора в PowerShell или отдельный ZIP, с происхождением пакета, собранным на GitHub.",
       "method": {
         "cards": [
           {
@@ -3480,8 +3480,8 @@
       "release": {
         "cards": [
           {
-            "h3": "Опубликованный RC2",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> — это предрелиз GitHub с ZIP для x64 и ARM64, пакетами диагностики, манифестами, SBOM и бутстраппером набора.",
+            "h3": "Опубликованный RC3",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> — это предрелиз GitHub с ZIP для x64 и ARM64, пакетами диагностики, манифестами, SBOM и бутстраппером набора.",
             "span": ""
           },
           {
@@ -3491,7 +3491,7 @@
           },
           {
             "h3": "Ресурсы набора",
-            "p": "Соответствующий пакет aMuTorrent RC2 публикуется отдельно, а полный поток bootstrap для x64 разрешает его автоматически для настройки контроллера.",
+            "p": "Соответствующий пакет aMuTorrent RC3 публикуется отдельно, а полный поток bootstrap для x64 разрешает его автоматически для настройки контроллера.",
             "span": ""
           },
           {
@@ -3501,14 +3501,14 @@
           }
         ],
         "eyebrow": "Безопасность и происхождение",
-        "h2": "RC2 собирается и упаковывается на GitHub",
+        "h2": "RC3 собирается и упаковывается на GitHub",
         "p": ""
       },
       "release_downloads_label": "Скачать релизы",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB — это дом eMule broadband edition, независимого, ориентированного на широкополосный доступ продукта eMule с контролем отдачи, автоматическим тестированием, пакетами с SBOM, REST automation, совместимостью eD2K/Kad и готовыми путями интеграции с aMuTorrent, Prowlarr, Radarr и Sonarr. Первый публичный release candidate 0.7.3-rc.2 опубликован на GitHub Releases.",
+      "structured_description": "eMuleBB — это дом eMule broadband edition, независимого, ориентированного на широкополосный доступ продукта eMule с контролем отдачи, автоматическим тестированием, пакетами с SBOM, REST automation, совместимостью eD2K/Kad и готовыми путями интеграции с aMuTorrent, Prowlarr, Radarr и Sonarr. Первый публичный release candidate 0.7.3-rc.3 опубликован на GitHub Releases.",
       "team": {
         "cards": [
           {
@@ -3663,13 +3663,13 @@
           },
           {
             "h3": "Etiketlerden önce kanıt",
-            "p": "<code>0.7.3-rc.2</code>, GitHub Actions paketlemesi, manifestler, SHA-256 kanıtı, SPDX SBOM'ları, tanılama varlıkları ve bootstrapper hash kanıtı ile yayınlanır.",
+            "p": "<code>0.7.3-rc.3</code>, GitHub Actions paketlemesi, manifestler, SHA-256 kanıtı, SPDX SBOM'ları, tanılama varlıkları ve bootstrapper hash kanıtı ile yayınlanır.",
             "span": "Test ve sürüm disiplini"
           }
         ],
         "eyebrow": "Özellikler",
         "h2": "eMuleBB'nin klasik istemcinin etrafına eklediği şeyler",
-        "p": "RC2 çalışması operatöre görünür davranışa odaklanır: öngörülebilir yükleme politikası, daha güvenli binding, sabit performans sınırları, büyük kütüphane işletimi, yerel otomasyon ve paket kanıtı."
+        "p": "RC3 çalışması operatöre görünür davranışa odaklanır: öngörülebilir yükleme politikası, daha güvenli binding, sabit performans sınırları, büyük kütüphane işletimi, yerel otomasyon ve paket kanıtı."
       },
       "footer_links_label": "Alt bilgi bağlantıları",
       "guide": {
@@ -3698,13 +3698,13 @@
         "eyebrow": "Geniş bant P2P için eMuleBB yuvası",
         "guide": "Ürün kılavuzu",
         "h1": "eMuleBB, P2P insanlarının yaptığı geniş bant eMule ürünüdür.",
-        "install": "RC2'i indir",
-        "lead": "RC2 yayınlandı: hızlı yükleme bağlantıları, büyük paylaşılan kütüphaneler, sürekli açık oturumlar, REST denetleyici iş akışları, Arr entegrasyonu ve GitHub'da derlenmiş paket kanıtı için ciddi bir Windows eMule hattı.",
+        "install": "RC3'i indir",
+        "lead": "RC3 yayınlandı: hızlı yükleme bağlantıları, büyük paylaşılan kütüphaneler, sürekli açık oturumlar, REST denetleyici iş akışları, Arr entegrasyonu ve GitHub'da derlenmiş paket kanıtı için ciddi bir Windows eMule hattı.",
         "panel_h2": "eMuleBB üründür. Ekosistem ise kanıt laboratuvarıdır.",
         "panel_kicker": "Ürün duruşu",
-        "panel_p": "Masaüstü uygulaması, ağın önemli olduğu yerde stok ile uyumlu kalır. RC2 paketi, eMuleBB'yi genel bir torrent kabuğuna dönüştürmeden çevresine yerel denetleyici iş akışları ekler.",
+        "panel_p": "Masaüstü uygulaması, ağın önemli olduğu yerde stok ile uyumlu kalır. RC3 paketi, eMuleBB'yi genel bir torrent kabuğuna dönüştürmeden çevresine yerel denetleyici iş akışları ekler.",
         "signals": [
-          "0.7.3-rc.2 yayınlandı",
+          "0.7.3-rc.3 yayınlandı",
           "Tek satırlık paket bootstrap'ı",
           "Manuel bağımsız ZIP",
           "GitHub Actions derlemeleri",
@@ -3717,8 +3717,8 @@
         ],
         "source": "Kaynak kod"
       },
-      "intro": "Burası <strong>eMuleBB</strong>'nin yuvasıdır: <strong>eMule broadband edition</strong>, eMule'nin dağıtık paylaşım modeline hâlâ değer veren ve onu modern bir yazılım gibi işletmek isteyenler için bağımsız bir ürün. RC2 paketleri GitHub Releases'te tam paket bootstrapper'ı, bağımsız ZIP'ler, manifestler, hash'ler, SBOM'lar ve eşleşen aMuTorrent denetleyici varlıklarıyla yayınlanır.",
-      "meta_description": "eMuleBB RC2 yayınlandı: eMule broadband edition'ı PowerShell paket bootstrapper'ı veya bağımsız ZIP ile, GitHub'da derlenmiş paket kökeniyle kurun.",
+      "intro": "Burası <strong>eMuleBB</strong>'nin yuvasıdır: <strong>eMule broadband edition</strong>, eMule'nin dağıtık paylaşım modeline hâlâ değer veren ve onu modern bir yazılım gibi işletmek isteyenler için bağımsız bir ürün. RC3 paketleri GitHub Releases'te tam paket bootstrapper'ı, bağımsız ZIP'ler, manifestler, hash'ler, SBOM'lar ve eşleşen aMuTorrent denetleyici varlıklarıyla yayınlanır.",
+      "meta_description": "eMuleBB RC3 yayınlandı: eMule broadband edition'ı PowerShell paket bootstrapper'ı veya bağımsız ZIP ile, GitHub'da derlenmiş paket kökeniyle kurun.",
       "method": {
         "cards": [
           {
@@ -3781,8 +3781,8 @@
       "release": {
         "cards": [
           {
-            "h3": "Yayınlanan RC2",
-            "p": "<code>emulebb-v0.7.3-rc.2</code>, x64 ve ARM64 ZIP'leri, tanılama paketleri, manifestler, SBOM'lar ve paket bootstrapper'ı içeren bir GitHub ön sürümüdür.",
+            "h3": "Yayınlanan RC3",
+            "p": "<code>emulebb-v0.7.3-rc.3</code>, x64 ve ARM64 ZIP'leri, tanılama paketleri, manifestler, SBOM'lar ve paket bootstrapper'ı içeren bir GitHub ön sürümüdür.",
             "span": ""
           },
           {
@@ -3792,7 +3792,7 @@
           },
           {
             "h3": "Paket varlıkları",
-            "p": "Eşleşen aMuTorrent RC2 paketi ayrı yayınlanır ve tam x64 bootstrap akışı, denetleyici kurulumu için onu otomatik olarak çözer.",
+            "p": "Eşleşen aMuTorrent RC3 paketi ayrı yayınlanır ve tam x64 bootstrap akışı, denetleyici kurulumu için onu otomatik olarak çözer.",
             "span": ""
           },
           {
@@ -3802,14 +3802,14 @@
           }
         ],
         "eyebrow": "Güvenlik ve köken",
-        "h2": "RC2, GitHub'da derlenir ve paketlenir",
+        "h2": "RC3, GitHub'da derlenir ve paketlenir",
         "p": ""
       },
       "release_downloads_label": "Sürümleri indir",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB, eMule broadband edition'ın yuvasıdır: yükleme denetimi, otomatik test, SBOM destekli paketler, REST automation, eD2K/Kad uyumluluğu ve hazır aMuTorrent, Prowlarr, Radarr ve Sonarr entegrasyon yollarına sahip, geniş banta odaklı bağımsız bir eMule ürünü. İlk herkese açık release candidate 0.7.3-rc.2, GitHub Releases'te yayınlanmıştır.",
+      "structured_description": "eMuleBB, eMule broadband edition'ın yuvasıdır: yükleme denetimi, otomatik test, SBOM destekli paketler, REST automation, eD2K/Kad uyumluluğu ve hazır aMuTorrent, Prowlarr, Radarr ve Sonarr entegrasyon yollarına sahip, geniş banta odaklı bağımsız bir eMule ürünü. İlk herkese açık release candidate 0.7.3-rc.3, GitHub Releases'te yayınlanmıştır.",
       "team": {
         "cards": [
           {
@@ -3964,13 +3964,13 @@
           },
           {
             "h3": "Докази перед ярликами",
-            "p": "<code>0.7.3-rc.2</code> опубліковано з пакуванням GitHub Actions, маніфестами, доказами SHA-256, SBOM у форматі SPDX, ресурсами діагностики та доказами хешу бутстрапера.",
+            "p": "<code>0.7.3-rc.3</code> опубліковано з пакуванням GitHub Actions, маніфестами, доказами SHA-256, SBOM у форматі SPDX, ресурсами діагностики та доказами хешу бутстрапера.",
             "span": "Дисципліна тестування й релізів"
           }
         ],
         "eyebrow": "Можливості",
         "h2": "Що eMuleBB додає навколо класичного клієнта",
-        "p": "Робота над RC2 зосереджена на видимій оператору поведінці: передбачувана політика віддачі, безпечніший binding, фіксовані межі продуктивності, робота з великими бібліотеками, локальна автоматизація та докази пакетів."
+        "p": "Робота над RC3 зосереджена на видимій оператору поведінці: передбачувана політика віддачі, безпечніший binding, фіксовані межі продуктивності, робота з великими бібліотеками, локальна автоматизація та докази пакетів."
       },
       "footer_links_label": "Посилання в нижньому колонтитулі",
       "guide": {
@@ -3999,13 +3999,13 @@
         "eyebrow": "Дім eMuleBB для широкосмугового P2P",
         "guide": "Посібник із продукту",
         "h1": "eMuleBB — це широкосмуговий продукт eMule, створений людьми з P2P.",
-        "install": "Завантажити RC2",
-        "lead": "RC2 опубліковано: серйозна лінійка eMule для Windows зі швидкими каналами віддачі, великими спільними бібліотеками, постійно ввімкненими сесіями, робочими процесами керування через REST, інтеграцією Arr і доказами пакетів, зібраними на GitHub.",
+        "install": "Завантажити RC3",
+        "lead": "RC3 опубліковано: серйозна лінійка eMule для Windows зі швидкими каналами віддачі, великими спільними бібліотеками, постійно ввімкненими сесіями, робочими процесами керування через REST, інтеграцією Arr і доказами пакетів, зібраними на GitHub.",
         "panel_h2": "eMuleBB — це продукт. Екосистема — це лабораторія доказів.",
         "panel_kicker": "Позиціювання продукту",
-        "panel_p": "Десктопний застосунок лишається сумісним зі стоком там, де важлива мережа. Набір RC2 додає навколо нього локальні робочі процеси керування, не перетворюючи eMuleBB на узагальнену torrent-оболонку.",
+        "panel_p": "Десктопний застосунок лишається сумісним зі стоком там, де важлива мережа. Набір RC3 додає навколо нього локальні робочі процеси керування, не перетворюючи eMuleBB на узагальнену torrent-оболонку.",
         "signals": [
-          "0.7.3-rc.2 опубліковано",
+          "0.7.3-rc.3 опубліковано",
           "Бутстрап набору в один рядок",
           "Ручний окремий ZIP",
           "Збірки GitHub Actions",
@@ -4018,8 +4018,8 @@
         ],
         "source": "Сирцевий код"
       },
-      "intro": "Це дім <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, незалежного продукту для тих, хто й досі цінує розподілену модель обміну eMule та хоче керувати нею як сучасним ПЗ. Пакети RC2 опубліковано на GitHub Releases разом із бутстрапером повного набору, окремими ZIP, маніфестами, хешами, SBOM та відповідними ресурсами контролера aMuTorrent.",
-      "meta_description": "eMuleBB RC2 опубліковано: встановіть eMule broadband edition за допомогою бутстрапера набору в PowerShell або окремого ZIP, із походженням пакета, зібраним на GitHub.",
+      "intro": "Це дім <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, незалежного продукту для тих, хто й досі цінує розподілену модель обміну eMule та хоче керувати нею як сучасним ПЗ. Пакети RC3 опубліковано на GitHub Releases разом із бутстрапером повного набору, окремими ZIP, маніфестами, хешами, SBOM та відповідними ресурсами контролера aMuTorrent.",
+      "meta_description": "eMuleBB RC3 опубліковано: встановіть eMule broadband edition за допомогою бутстрапера набору в PowerShell або окремого ZIP, із походженням пакета, зібраним на GitHub.",
       "method": {
         "cards": [
           {
@@ -4082,8 +4082,8 @@
       "release": {
         "cards": [
           {
-            "h3": "Опублікований RC2",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> — це попередній випуск GitHub із ZIP для x64 і ARM64, пакетами діагностики, маніфестами, SBOM і бутстрапером набору.",
+            "h3": "Опублікований RC3",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> — це попередній випуск GitHub із ZIP для x64 і ARM64, пакетами діагностики, маніфестами, SBOM і бутстрапером набору.",
             "span": ""
           },
           {
@@ -4093,7 +4093,7 @@
           },
           {
             "h3": "Ресурси набору",
-            "p": "Відповідний пакет aMuTorrent RC2 публікується окремо, а повний потік bootstrap для x64 розв'язує його автоматично для налаштування контролера.",
+            "p": "Відповідний пакет aMuTorrent RC3 публікується окремо, а повний потік bootstrap для x64 розв'язує його автоматично для налаштування контролера.",
             "span": ""
           },
           {
@@ -4103,14 +4103,14 @@
           }
         ],
         "eyebrow": "Безпека й походження",
-        "h2": "RC2 збирається й пакується на GitHub",
+        "h2": "RC3 збирається й пакується на GitHub",
         "p": ""
       },
       "release_downloads_label": "Завантажити релізи",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB — це дім eMule broadband edition, незалежного, орієнтованого на широкосмуговий доступ продукту eMule з контролем віддачі, автоматизованим тестуванням, пакетами з SBOM, REST automation, сумісністю eD2K/Kad і готовими шляхами інтеграції з aMuTorrent, Prowlarr, Radarr та Sonarr. Перший публічний реліз-кандидат 0.7.3-rc.2 опубліковано на GitHub Releases.",
+      "structured_description": "eMuleBB — це дім eMule broadband edition, незалежного, орієнтованого на широкосмуговий доступ продукту eMule з контролем віддачі, автоматизованим тестуванням, пакетами з SBOM, REST automation, сумісністю eD2K/Kad і готовими шляхами інтеграції з aMuTorrent, Prowlarr, Radarr та Sonarr. Перший публічний реліз-кандидат 0.7.3-rc.3 опубліковано на GitHub Releases.",
       "team": {
         "cards": [
           {
@@ -4265,13 +4265,13 @@
           },
           {
             "h3": "先有证据，后有标签",
-            "p": "<code>0.7.3-rc.2</code> 发布时附带 GitHub Actions 打包、清单、SHA-256 证据、SPDX SBOM、诊断资源以及引导程序哈希证据。",
+            "p": "<code>0.7.3-rc.3</code> 发布时附带 GitHub Actions 打包、清单、SHA-256 证据、SPDX SBOM、诊断资源以及引导程序哈希证据。",
             "span": "测试与发布纪律"
           }
         ],
         "eyebrow": "功能",
         "h2": "eMuleBB 在经典客户端周围增加了什么",
-        "p": "RC2 的工作聚焦于运营者可见的行为：可预测的上传策略、更安全的 binding、固定的性能上限、大型库运行、本地自动化和软件包证据。"
+        "p": "RC3 的工作聚焦于运营者可见的行为：可预测的上传策略、更安全的 binding、固定的性能上限、大型库运行、本地自动化和软件包证据。"
       },
       "footer_links_label": "页脚链接",
       "guide": {
@@ -4300,13 +4300,13 @@
         "eyebrow": "面向宽带 P2P 的 eMuleBB 主页",
         "guide": "产品指南",
         "h1": "eMuleBB 是由 P2P 圈内人打造的宽带 eMule 产品。",
-        "install": "下载 RC2",
-        "lead": "RC2 已发布：一条严肃的 Windows eMule 产品线，面向高速上传链路、大型共享库、长时在线会话、REST 控制器工作流、Arr 集成以及在 GitHub 上构建的软件包证据。",
+        "install": "下载 RC3",
+        "lead": "RC3 已发布：一条严肃的 Windows eMule 产品线，面向高速上传链路、大型共享库、长时在线会话、REST 控制器工作流、Arr 集成以及在 GitHub 上构建的软件包证据。",
         "panel_h2": "eMuleBB 是产品。生态系统是验证实验室。",
         "panel_kicker": "产品定位",
-        "panel_p": "在网络关键之处，桌面应用保持与原版兼容。RC2 套件在其周围添加本地控制器工作流，而不会把 eMuleBB 变成一个通用的 torrent 外壳。",
+        "panel_p": "在网络关键之处，桌面应用保持与原版兼容。RC3 套件在其周围添加本地控制器工作流，而不会把 eMuleBB 变成一个通用的 torrent 外壳。",
         "signals": [
-          "0.7.3-rc.2 已发布",
+          "0.7.3-rc.3 已发布",
           "一行命令套件引导",
           "手动独立 ZIP",
           "GitHub Actions 构建",
@@ -4319,8 +4319,8 @@
         ],
         "source": "源代码"
       },
-      "intro": "这里是 <strong>eMuleBB</strong> 的所在地：<strong>eMule broadband edition</strong>，一个面向仍然看重 eMule 分布式共享模型、并希望像现代软件那样运行它的人的独立产品。RC2 软件包已在 GitHub Releases 发布，附带完整套件引导程序、独立 ZIP、清单、哈希、SBOM 以及配套的 aMuTorrent 控制器资源。",
-      "meta_description": "eMuleBB RC2 已发布：通过 PowerShell 套件引导程序或独立 ZIP 安装 eMule broadband edition，并附带在 GitHub 上构建的软件包来源信息。",
+      "intro": "这里是 <strong>eMuleBB</strong> 的所在地：<strong>eMule broadband edition</strong>，一个面向仍然看重 eMule 分布式共享模型、并希望像现代软件那样运行它的人的独立产品。RC3 软件包已在 GitHub Releases 发布，附带完整套件引导程序、独立 ZIP、清单、哈希、SBOM 以及配套的 aMuTorrent 控制器资源。",
+      "meta_description": "eMuleBB RC3 已发布：通过 PowerShell 套件引导程序或独立 ZIP 安装 eMule broadband edition，并附带在 GitHub 上构建的软件包来源信息。",
       "method": {
         "cards": [
           {
@@ -4383,8 +4383,8 @@
       "release": {
         "cards": [
           {
-            "h3": "已发布的 RC2",
-            "p": "<code>emulebb-v0.7.3-rc.2</code> 是一个 GitHub 预发布版本，包含 x64 和 ARM64 ZIP、诊断软件包、清单、SBOM 以及套件引导程序。",
+            "h3": "已发布的 RC3",
+            "p": "<code>emulebb-v0.7.3-rc.3</code> 是一个 GitHub 预发布版本，包含 x64 和 ARM64 ZIP、诊断软件包、清单、SBOM 以及套件引导程序。",
             "span": ""
           },
           {
@@ -4394,7 +4394,7 @@
           },
           {
             "h3": "套件资源",
-            "p": "配套的 aMuTorrent RC2 软件包单独发布，完整的 x64 引导流程会在控制器设置时自动解析它。",
+            "p": "配套的 aMuTorrent RC3 软件包单独发布，完整的 x64 引导流程会在控制器设置时自动解析它。",
             "span": ""
           },
           {
@@ -4404,14 +4404,14 @@
           }
         ],
         "eyebrow": "安全与来源",
-        "h2": "RC2 在 GitHub 上构建与打包",
+        "h2": "RC3 在 GitHub 上构建与打包",
         "p": ""
       },
       "release_downloads_label": "下载发布版",
       "repos": {
         "p": ""
       },
-      "structured_description": "eMuleBB 是 eMule broadband edition 的所在地：一个独立、面向宽带的 eMule 产品，具备上传控制、自动化测试、带 SBOM 的软件包、REST automation、eD2K/Kad 兼容性，以及开箱即用的 aMuTorrent、Prowlarr、Radarr 和 Sonarr 集成路径。首个公开候选版本 0.7.3-rc.2 已在 GitHub Releases 发布。",
+      "structured_description": "eMuleBB 是 eMule broadband edition 的所在地：一个独立、面向宽带的 eMule 产品，具备上传控制、自动化测试、带 SBOM 的软件包、REST automation、eD2K/Kad 兼容性，以及开箱即用的 aMuTorrent、Prowlarr、Radarr 和 Sonarr 集成路径。首个公开候选版本 0.7.3-rc.3 已在 GitHub Releases 发布。",
       "team": {
         "cards": [
           {
