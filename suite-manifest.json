@@ -2,7 +2,7 @@
   "schema": 1,
   "suite": "eMuleBB Suite",
   "platform": "windows-x64",
-  "status": "0.7.3-rc3-powershell",
+  "status": "0.7.3-stable-powershell",
   "defaultCore": "mfc",
   "controller": "amutorrent",
   "cores": {
@@ -15,7 +15,7 @@
   "alwaysInstall": ["emulebb"],
   "optional": ["amutorrent"],
   "notes": {
-    "ownership": "For 0.7.3-rc.3 and stable 0.7.3, source of truth is the GitHub Release Bootstrap-eMuleBBSuite.ps1 asset and the package-owned suite manifests.",
+    "ownership": "For stable 0.7.3 and the 0.7.x support line, source of truth is the GitHub Release Bootstrap-eMuleBBSuite.ps1 asset and the package-owned suite manifests.",
     "controller": "aMuTorrent remains the frozen 0.7.3 controller. TrackMuleBB, emulebb-rust, qBittorrentBB, uv, and the Python setup CLI are post-0.7.3 work and are not installed by the current Pages one-liner."
   }
 }

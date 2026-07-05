@@ -20,9 +20,9 @@ backlog. Those live in the public `emulebb-tooling` docs.
 - Release status must be derived from the `0.7.3` active release docs:
   `RELEASE-0.7.3.md`, `RELEASE-0.7.3-CHECKLIST.md`,
   `RELEASE-0.7.3-RUNBOOK.md`, and `RELEASE-0.7.3-GATE-HISTORY.md`.
-- The current public release candidate is `0.7.3-rc.3` (published 2026-06-21);
-  the first stable target is `0.7.3`. Stable `0.7.3` must be described as planned
-  and not yet released until the release docs and user confirmation say otherwise.
+- The current public release is stable `0.7.3` (published 2026-07-05). Older
+  `0.7.3-rc.*` releases are historical prerelease evidence, not the current
+  install target.
 - Feature details should prefer durable reference docs such as:
   - `docs/reference/GUIDE-EMULEBB.md`
   - `docs/reference/DEVELOPMENT-GUIDE.md`

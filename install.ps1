@@ -8,7 +8,7 @@
   Bootstrap-eMuleBBSuite.ps1 asset, verifies its SHA-256 sidecar when present,
   and invokes it with the supplied arguments.
 
-  For 0.7.3-rc.3 and stable 0.7.3 this is intentionally a PowerShell wrapper,
+  For stable 0.7.3 and the 0.7.x support line this is intentionally a PowerShell wrapper,
   not the future TrackMuleBB/uv/Python installer.
 
 .EXAMPLE

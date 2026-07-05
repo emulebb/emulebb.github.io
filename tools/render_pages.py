@@ -149,34 +149,34 @@ REPOS = [
 ]
 
 RELEASE_DOWNLOADS = [
-    ("https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.3", "eMuleBB RC3"),
-    ("https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3-rc.3/emulebb-0.7.3-rc.3-x64.zip", "x64 ZIP"),
-    ("https://github.com/emulebb/amutorrent/releases/tag/amutorrent-v3.8.8-emulebb-v0.7.3-rc.3", "aMuTorrent RC3"),
+    ("https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3", "eMuleBB 0.7.3"),
+    ("https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3/emulebb-0.7.3-x64.zip", "x64 ZIP"),
+    ("https://github.com/emulebb/amutorrent/releases/tag/amutorrent-v3.8.8-emulebb-v0.7.3", "aMuTorrent 0.7.3"),
 ]
 
 INSTALL_CALLOUT = {
     "id": "install",
     "eyebrow": "Download",
-    "h2": "Install RC3 with one PowerShell line, or download the ZIP manually.",
+    "h2": "Install 0.7.3 with one PowerShell line, or download the ZIP manually.",
     "p": "Use the full-suite bootstrapper for eMuleBB plus controller integration, or use the standalone ZIP when you only want the desktop app.",
     "command_label": "Full x64 suite",
     "command": "irm https://emulebb.github.io/install.ps1 | iex",
     "copy": "Copy",
     "copied": "Copied",
     "copy_error": "Select and copy",
-    "standalone": "Standalone app: download the RC3 ZIP, extract it, and run <code>emulebb.exe</code>.",
-    "primary": "Open RC3 release",
-    "primary_href": "https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.3",
+    "standalone": "Standalone app: download the stable 0.7.3 ZIP, extract it, and run <code>emulebb.exe</code>.",
+    "primary": "Open 0.7.3 release",
+    "primary_href": "https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3",
     "secondary": "Setup details",
     "secondary_href": f"{DOCS_SITE_URL}/reference/GUIDE-SETUP/",
 }
 
 TESTING_CALLOUT = {
-    "eyebrow": "RC3 published",
-    "h2": "0.7.3-rc.3 is open for testers",
-    "p": "Try the published RC3 packages, keep a disposable or backed-up profile, and report crashes, freezes, package issues, controller/API problems, and real-network regressions.",
-    "primary": "eMuleBB RC3",
-    "primary_href": "https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3-rc.3",
+    "eyebrow": "0.7.3 published",
+    "h2": "Stable 0.7.3 is published",
+    "p": "Use the published stable packages for normal testing, keep a disposable or backed-up profile for first launch, and report crashes, freezes, package issues, controller/API problems, and real-network regressions.",
+    "primary": "eMuleBB 0.7.3",
+    "primary_href": "https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3",
     "secondary": "Report issues",
     "secondary_href": "https://github.com/emulebb/emulebb/issues",
 }
@@ -259,10 +259,10 @@ def s(eyebrow: str, h2: str, p: str = "") -> dict[str, Any]:
 CONTENT: dict[str, dict[str, Any]] = {
     "en": {
         "title": "eMuleBB home | eMule broadband edition",
-        "meta_description": "eMuleBB RC3 is published: install eMule broadband edition with a PowerShell suite bootstrapper or standalone ZIP, with GitHub-built package provenance.",
+        "meta_description": "eMuleBB 0.7.3 is published: install eMule broadband edition with a PowerShell suite bootstrapper or standalone ZIP, with GitHub-built package provenance.",
         "og_title": "eMuleBB home | eMule broadband edition",
         "og_description": "eMuleBB is its own broadband-focused eMule product and the home for Windows P2P builds, controller tooling, release proof, and exploratory eD2K/Kad engineering.",
-        "structured_description": "eMuleBB is the home of eMule broadband edition, an independent broadband-focused eMule product with upload control, automated testing, SBOM-backed packages, REST automation, eD2K/Kad compatibility, and out-of-the-box aMuTorrent, Prowlarr, Radarr, and Sonarr integration paths. The current public release candidate 0.7.3-rc.3 is published on GitHub Releases.",
+        "structured_description": "eMuleBB is the home of eMule broadband edition, an independent broadband-focused eMule product with upload control, automated testing, SBOM-backed packages, REST automation, eD2K/Kad compatibility, and out-of-the-box aMuTorrent, Prowlarr, Radarr, and Sonarr integration paths. Stable 0.7.3 is published on GitHub Releases.",
         "nav_label": "Primary navigation",
         "project_links_label": "Project links",
         "release_downloads_label": "Download releases",
@@ -279,16 +279,16 @@ CONTENT: dict[str, dict[str, Any]] = {
         "hero": {
             "eyebrow": "The eMuleBB home for broadband P2P",
             "h1": "eMuleBB is the broadband eMule product built by P2P people.",
-            "lead": "RC3 is published: a serious Windows eMule line for fast upload links, large shared libraries, always-on sessions, REST controller workflows, Arr integration, and GitHub-built package evidence.",
-            "install": "Download RC3",
+            "lead": "Stable 0.7.3 is published: a serious Windows eMule line for fast upload links, large shared libraries, always-on sessions, REST controller workflows, Arr integration, and GitHub-built package evidence.",
+            "install": "Download 0.7.3",
             "source": "Source",
             "guide": "Product guide",
             "panel_kicker": "Product posture",
             "panel_h2": "eMuleBB is the product. The ecosystem is the proof lab.",
-            "panel_p": "The desktop app stays stock-compatible where the network matters. The RC3 suite adds local controller workflows around it without turning eMuleBB into a generic torrent shell.",
-            "signals": ["0.7.3-rc.3 published", "One-line suite bootstrap", "Manual standalone ZIP", "GitHub Actions builds", "Manifest hash verification", "SPDX SBOMs", "aMuTorrent controller", "Prowlarr Torznab", "Radarr/Sonarr qBit adapter", "Stock eD2K/Kad compatibility"],
+            "panel_p": "The desktop app stays stock-compatible where the network matters. The stable suite adds local controller workflows around it without turning eMuleBB into a generic torrent shell.",
+            "signals": ["0.7.3 stable published", "One-line suite bootstrap", "Manual standalone ZIP", "GitHub Actions builds", "Manifest hash verification", "SPDX SBOMs", "aMuTorrent controller", "Prowlarr Torznab", "Radarr/Sonarr qBit adapter", "Stock eD2K/Kad compatibility"],
         },
-        "intro": "This is the home of <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, an independent product for people who still value eMule's distributed sharing model and want it operated like modern software. RC3 packages are published on GitHub Releases with a full-suite bootstrapper, standalone ZIPs, manifests, hashes, SBOMs, and matching aMuTorrent controller assets.",
+        "intro": "This is the home of <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, an independent product for people who still value eMule's distributed sharing model and want it operated like modern software. Stable 0.7.3 packages are published on GitHub Releases with a full-suite bootstrapper, standalone ZIPs, manifests, hashes, SBOMs, and matching aMuTorrent controller assets.",
         "why": {
             **s("Why", "P2P software earns trust by surviving real sessions", "eMuleBB is a product effort and an engineering practice: preserve a complex native Windows client with real network behavior, then surround it with modern builds, tests, documentation, automation, and release proof."),
             "cards": [
@@ -298,14 +298,14 @@ CONTENT: dict[str, dict[str, Any]] = {
             ],
         },
         "features": {
-            **s("Features", "What eMuleBB adds around the classic client", "The RC3 work is focused on operator-visible behavior: predictable upload policy, safer binding, fixed performance limits, large-library operation, local automation, and package evidence."),
+            **s("Features", "What eMuleBB adds around the classic client", "The stable 0.7.3 line is focused on operator-visible behavior: predictable upload policy, safer binding, fixed performance limits, large-library operation, local automation, and package evidence."),
             "cards": [
                 c("Sharing and upload", "Broadband upload control", "Bounded slot targets, weak-slot recycling, ratio readouts, and seeding controls keep fast upload links useful without changing the eD2K upload protocol."),
                 c("Network control", "Binding, NAT, and exposure policy", "Interface-aware binding, UPnP/NAT mapping validation, HTTPS, allowed-IP rules, and separate WebServer bind settings keep remote surfaces explicit and testable. Binding is not a VPN kill switch."),
                 c("Performance and scale", "Modern defaults for large sessions", "Higher socket buffers, queue/source limits, file buffering, timeout defaults, recursive share sync, startup cache work, and long-path guidance target current Windows systems and large libraries."),
                 c("Classic network", "eD2K and Kad stay first", "Server, global, and Kad search remain the native foundation, with Kad identity tracking, bad-node handling, cleanup, and timing work kept inside compatibility boundaries."),
                 c("Automation", "REST and controller workflows", "Authenticated JSON endpoints cover transfers, searches, shared files, servers, Kad, logs, categories, uploads, statistics, preferences, and controlled shutdown from trusted local tools."),
-                c("Testing and release discipline", "Evidence before labels", "<code>0.7.3-rc.3</code> is published with GitHub Actions packaging, manifests, SHA-256 evidence, SPDX SBOMs, diagnostics assets, and bootstrapper hash evidence."),
+                c("Testing and release discipline", "Evidence before labels", "<code>0.7.3</code> is published with GitHub Actions packaging, manifests, SHA-256 evidence, SPDX SBOMs, diagnostics assets, and bootstrapper hash evidence."),
             ],
         },
         "guide": {
@@ -328,11 +328,11 @@ CONTENT: dict[str, dict[str, Any]] = {
             "pills": ["Transfers", "Searches", "Servers", "Kad", "Shared files", "Uploads", "Categories", "Logs", "Statistics", "Preferences"],
         },
         "release": {
-            **s("Security and provenance", "RC3 is built and packaged on GitHub"),
+            **s("Security and provenance", "0.7.3 is built and packaged on GitHub"),
             "cards": [
-                c("", "Published RC3", "<code>emulebb-v0.7.3-rc.3</code> is a GitHub prerelease with x64 and ARM64 ZIPs, diagnostics packages, manifests, SBOMs, and the suite bootstrapper."),
+                c("", "Published 0.7.3", "<code>emulebb-v0.7.3</code> is a stable GitHub release with x64 and ARM64 ZIPs, diagnostics packages, manifests, SBOMs, and the suite bootstrapper."),
                 c("", "Hash-checked setup", "The bootstrapper downloads release assets and verifies package hashes from the published manifests before installing."),
-                c("", "Suite assets", "The matching aMuTorrent RC3 package is published separately, and the full x64 bootstrap flow resolves it automatically for controller setup."),
+                c("", "Suite assets", "The matching aMuTorrent 0.7.3 companion package is published separately, and the full x64 bootstrap flow resolves it automatically for controller setup."),
                 c("", "Controller proof", "aMuTorrent, Prowlarr, Radarr, Sonarr, Torznab, and qBittorrent-compatible lanes are documented as local integration paths around the native <code>/api/v1</code> contract."),
             ],
         },
@@ -435,7 +435,7 @@ def faq_item(question: str, answer: str, doc_title: str, doc_href: str) -> dict[
 FAQ_CONTENT: dict[str, dict[str, Any]] = {
     "en": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "Short answers for eMule users who want to try eMuleBB for binding, sharing, upload slots, Kad, REST, and 0.7.3-rc.3 testing.",
+        "meta_description": "Short answers for eMule users who want to try eMuleBB for binding, sharing, upload slots, Kad, REST, and stable 0.7.3.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "Quick eMuleBB answers for eMule users moving to the broadband edition.",
         "nav_label": "FAQ navigation",
@@ -453,7 +453,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("How do I share my library in eMule?", "eMuleBB keeps the familiar Shared Files model: add curated roots, keep Temp out of shares, use stable paths, and let hashing finish before scaling up.", "Sharing guide", FAQ_LINKS["sharing"]),
             faq_item("How do I limit upload slots in eMule?", "eMuleBB adds a finite broadband upload-slot target, weak-slot recycling, and practical diagnostics so fast lines stay useful without flooding the queue.", "Downloads and search guide", FAQ_LINKS["downloads"]),
             faq_item("Is eMuleBB a protocol fork of eMule?", "No. eMuleBB keeps stock-compatible eD2K and Kad behavior as the default, then improves local limits, automation, diagnostics, and release discipline around it.", "Product guide", FAQ_LINKS["product"]),
-            faq_item("Which eMule release should I use for testing?", "Use the published eMuleBB 0.7.3-rc.3 GitHub Release for RC testing. The stable target remains 0.7.3 after the release gates pass.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
+            faq_item("Which eMule release should I use for testing?", "Use the published eMuleBB 0.7.3 GitHub Release for stable package testing. Nightly, beta, and older release-candidate packages are pre-release test builds.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
             faq_item("How do I keep eMule WebServer or REST safe?", "eMuleBB treats WebServer and REST as trusted-controller surfaces. Enable them only when needed, bind deliberately, use an API key, and avoid broad exposure.", "Controllers and REST guide", FAQ_LINKS["controllers"]),
             faq_item("How do I use eMule with Kad and servers?", "eMuleBB keeps classic server, global, and Kad search workflows. Start with trusted server lists, bootstrap Kad deliberately, and diagnose Low ID or firewalled Kad before changing many settings.", "Network guide", FAQ_LINKS["network"]),
             faq_item("How do I handle large shared libraries in eMule?", "eMuleBB is built for large libraries: add roots gradually, use long-path capable Windows setups, review share-ignore rules, and let startup cache work settle.", "Sharing guide", FAQ_LINKS["sharing"]),
@@ -462,7 +462,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "it": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "Risposte brevi per utenti eMule che vogliono provare eMuleBB per binding, condivisione, slot di upload, Kad, REST e test 0.7.3-rc.3.",
+        "meta_description": "Risposte brevi per utenti eMule che vogliono provare eMuleBB per binding, condivisione, slot di upload, Kad, REST e test 0.7.3.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "Risposte rapide eMuleBB per utenti eMule.",
         "nav_label": "Navigazione FAQ",
@@ -480,7 +480,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("Come condivido la mia libreria in eMule?", "eMuleBB conserva il modello Shared Files: aggiungi radici curate, tieni Temp fuori dalle condivisioni, usa percorsi stabili e lascia finire l'hashing.", "Guida condivisione", FAQ_LINKS["sharing"]),
             faq_item("Come limito gli slot di upload in eMule?", "eMuleBB aggiunge un target finito di slot upload, riciclo degli slot deboli e diagnostica utile per sfruttare linee veloci senza saturare la coda.", "Guida download e ricerca", FAQ_LINKS["downloads"]),
             faq_item("eMuleBB e un fork di protocollo di eMule?", "No. eMuleBB mantiene compatibili eD2K e Kad stock, migliorando limiti locali, automazione, diagnostica e disciplina di rilascio.", "Guida prodotto", FAQ_LINKS["product"]),
-            faq_item("Quale release di eMule dovrei usare per i test?", "Usa la release GitHub eMuleBB 0.7.3-rc.3 pubblicata per i test RC. Il target stabile resta 0.7.3 dopo il passaggio dei gate.", "Dashboard release 0.7.3", FAQ_LINKS["release"]),
+            faq_item("Quale release di eMule dovrei usare per i test?", "Usa la release GitHub eMuleBB 0.7.3 pubblicata per i test RC. Il target stabile resta 0.7.3 dopo il passaggio dei gate.", "Dashboard release 0.7.3", FAQ_LINKS["release"]),
             faq_item("Come tengo sicuri WebServer o REST di eMule?", "eMuleBB tratta WebServer e REST come superfici per controller fidati. Abilitali solo quando servono, configura il bind, usa una API key ed evita esposizione ampia.", "Guida controller e REST", FAQ_LINKS["controllers"]),
             faq_item("Come uso eMule con Kad e server?", "eMuleBB conserva server, ricerca globale e Kad. Parti da liste server fidate, avvia Kad con cura e diagnostica Low ID o Kad firewalled prima di cambiare troppe opzioni.", "Guida rete", FAQ_LINKS["network"]),
             faq_item("Come gestisco grandi librerie condivise in eMule?", "eMuleBB e pensato per grandi librerie: aggiungi radici gradualmente, usa Windows con long paths, rivedi share-ignore e lascia stabilizzare la cache di avvio.", "Guida condivisione", FAQ_LINKS["sharing"]),
@@ -489,7 +489,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "es": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "Respuestas breves para usuarios de eMule que quieren probar eMuleBB con binding, biblioteca compartida, slots de subida, Kad, REST y 0.7.3-rc.3.",
+        "meta_description": "Respuestas breves para usuarios de eMule que quieren probar eMuleBB con binding, biblioteca compartida, slots de subida, Kad, REST y 0.7.3.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "Respuestas rapidas de eMuleBB para usuarios de eMule.",
         "nav_label": "Navegacion FAQ",
@@ -507,7 +507,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("Como comparto mi biblioteca en eMule?", "eMuleBB conserva el modelo Shared Files: agrega raices cuidadas, deja Temp fuera de las compartidas, usa rutas estables y espera a que termine el hashing.", "Guia de comparticion", FAQ_LINKS["sharing"]),
             faq_item("Como limito los slots de subida en eMule?", "eMuleBB agrega un objetivo finito de slots de subida, reciclaje de slots debiles y diagnostico practico para aprovechar lineas rapidas sin inundar la cola.", "Guia de descargas y busqueda", FAQ_LINKS["downloads"]),
             faq_item("eMuleBB es un fork de protocolo de eMule?", "No. eMuleBB mantiene eD2K y Kad compatibles con el comportamiento stock, y mejora limites locales, automatizacion, diagnostico y disciplina de release.", "Guia del producto", FAQ_LINKS["product"]),
-            faq_item("Que release de eMule debo usar para pruebas?", "Usa la release GitHub eMuleBB 0.7.3-rc.3 publicada para pruebas RC. El objetivo estable sigue siendo 0.7.3 despues de pasar los gates.", "Panel de release 0.7.3", FAQ_LINKS["release"]),
+            faq_item("Que release de eMule debo usar para pruebas?", "Usa la release GitHub eMuleBB 0.7.3 publicada para pruebas RC. El objetivo estable sigue siendo 0.7.3 despues de pasar los gates.", "Panel de release 0.7.3", FAQ_LINKS["release"]),
             faq_item("Como mantengo seguro WebServer o REST de eMule?", "eMuleBB trata WebServer y REST como superficies para controladores confiables. Activalos solo cuando haga falta, configura el bind, usa API key y evita exponerlos ampliamente.", "Guia de controladores y REST", FAQ_LINKS["controllers"]),
             faq_item("Como uso eMule con Kad y servidores?", "eMuleBB conserva servidores, busqueda global y Kad. Empieza con listas confiables, arranca Kad con cuidado y diagnostica Low ID o Kad firewalled antes de tocar muchas opciones.", "Guia de red", FAQ_LINKS["network"]),
             faq_item("Como manejo bibliotecas compartidas grandes en eMule?", "eMuleBB esta preparado para bibliotecas grandes: agrega raices gradualmente, usa Windows con long paths, revisa share-ignore y deja asentarse la cache de inicio.", "Guia de comparticion", FAQ_LINKS["sharing"]),
@@ -516,7 +516,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "pt_br": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "Respostas curtas para usuarios do eMule que querem testar o eMuleBB com binding, compartilhamento, slots de upload, Kad, REST e 0.7.3-rc.3.",
+        "meta_description": "Respostas curtas para usuarios do eMule que querem testar o eMuleBB com binding, compartilhamento, slots de upload, Kad, REST e 0.7.3.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "Respostas rapidas do eMuleBB para usuarios do eMule.",
         "nav_label": "Navegacao FAQ",
@@ -534,7 +534,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("Como compartilho minha biblioteca no eMule?", "O eMuleBB mantem o modelo Shared Files: adicione raizes selecionadas, deixe Temp fora do compartilhamento, use caminhos estaveis e espere o hashing terminar.", "Guia de compartilhamento", FAQ_LINKS["sharing"]),
             faq_item("Como limito os slots de upload no eMule?", "O eMuleBB adiciona alvo finito de slots de upload, reciclagem de slots fracos e diagnosticos praticos para aproveitar links rapidos sem lotar a fila.", "Guia de downloads e busca", FAQ_LINKS["downloads"]),
             faq_item("O eMuleBB e um fork de protocolo do eMule?", "Nao. O eMuleBB mantem eD2K e Kad compativeis com o comportamento stock e melhora limites locais, automacao, diagnosticos e disciplina de release.", "Guia do produto", FAQ_LINKS["product"]),
-            faq_item("Qual release do eMule devo usar para testes?", "Use a release GitHub eMuleBB 0.7.3-rc.3 publicada para testes RC. O alvo estavel continua sendo 0.7.3 depois que os gates passarem.", "Painel da release 0.7.3", FAQ_LINKS["release"]),
+            faq_item("Qual release do eMule devo usar para testes?", "Use a release GitHub eMuleBB 0.7.3 publicada para testes de pacote estavel. Nightly, beta e releases candidatas antigas continuam sendo builds de pre-release.", "Painel da release 0.7.3", FAQ_LINKS["release"]),
             faq_item("Como mantenho seguros WebServer ou REST do eMule?", "O eMuleBB trata WebServer e REST como superficies para controladores confiaveis. Ative apenas quando precisar, configure bind, use API key e evite exposicao ampla.", "Guia de controladores e REST", FAQ_LINKS["controllers"]),
             faq_item("Como uso eMule com Kad e servidores?", "O eMuleBB mantem servidores, busca global e Kad. Comece com listas confiaveis, inicialize Kad com cuidado e diagnostique Low ID ou Kad firewalled antes de mudar muita coisa.", "Guia de rede", FAQ_LINKS["network"]),
             faq_item("Como lidar com grandes bibliotecas compartilhadas no eMule?", "O eMuleBB foi feito para bibliotecas grandes: adicione raizes aos poucos, use Windows com long paths, revise share-ignore e deixe a cache de inicio estabilizar.", "Guia de compartilhamento", FAQ_LINKS["sharing"]),
@@ -543,7 +543,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "fr": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "Reponses courtes pour les utilisateurs eMule qui veulent essayer eMuleBB: binding, partage, slots d'upload, Kad, REST et 0.7.3-rc.3.",
+        "meta_description": "Reponses courtes pour les utilisateurs eMule qui veulent essayer eMuleBB: binding, partage, slots d'upload, Kad, REST et 0.7.3.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "Reponses rapides eMuleBB pour utilisateurs eMule.",
         "nav_label": "Navigation FAQ",
@@ -561,7 +561,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("Comment partager ma bibliotheque dans eMule?", "eMuleBB garde le modele Shared Files: ajoutez des racines choisies, gardez Temp hors des partages, utilisez des chemins stables et laissez le hachage finir.", "Guide partage", FAQ_LINKS["sharing"]),
             faq_item("Comment limiter les slots d'upload dans eMule?", "eMuleBB ajoute une cible finie de slots d'upload, le recyclage des slots faibles et des diagnostics utiles pour exploiter les lignes rapides sans noyer la file.", "Guide telechargements et recherche", FAQ_LINKS["downloads"]),
             faq_item("eMuleBB est-il un fork de protocole d'eMule?", "Non. eMuleBB garde eD2K et Kad compatibles avec le comportement stock, puis ameliore limites locales, automatisation, diagnostics et discipline de release.", "Guide produit", FAQ_LINKS["product"]),
-            faq_item("Quelle release eMule utiliser pour tester?", "Utilisez la release GitHub eMuleBB 0.7.3-rc.3 publiee pour les tests RC. La cible stable reste 0.7.3 apres le passage des gates.", "Tableau release 0.7.3", FAQ_LINKS["release"]),
+            faq_item("Quelle release eMule utiliser pour tester?", "Utilisez la release GitHub eMuleBB 0.7.3 publiee pour les tests RC. La cible stable reste 0.7.3 apres le passage des gates.", "Tableau release 0.7.3", FAQ_LINKS["release"]),
             faq_item("Comment securiser WebServer ou REST d'eMule?", "eMuleBB traite WebServer et REST comme des surfaces pour controleurs de confiance. Activez-les seulement si besoin, liez-les explicitement, utilisez une API key et evitez l'exposition large.", "Guide controleurs et REST", FAQ_LINKS["controllers"]),
             faq_item("Comment utiliser eMule avec Kad et les serveurs?", "eMuleBB conserve serveurs, recherche globale et Kad. Commencez avec des listes fiables, amorcez Kad proprement et diagnostiquez Low ID ou Kad firewalled avant de trop changer.", "Guide reseau", FAQ_LINKS["network"]),
             faq_item("Comment gerer de grandes bibliotheques partagees dans eMule?", "eMuleBB vise les grandes bibliotheques: ajoutez les racines graduellement, utilisez Windows avec long paths, revoyez share-ignore et laissez la cache de demarrage se stabiliser.", "Guide partage", FAQ_LINKS["sharing"]),
@@ -570,7 +570,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "de": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "Kurze Antworten fuer eMule-Nutzer, die eMuleBB fuer Binding, Shares, Upload-Slots, Kad, REST und 0.7.3-rc.3 testen wollen.",
+        "meta_description": "Kurze Antworten fuer eMule-Nutzer, die eMuleBB fuer Binding, Shares, Upload-Slots, Kad, REST und 0.7.3 testen wollen.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "Schnelle eMuleBB-Antworten fuer eMule-Nutzer.",
         "nav_label": "FAQ-Navigation",
@@ -588,7 +588,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("Wie teile ich meine Bibliothek in eMule?", "eMuleBB behaelt das bekannte Shared-Files-Modell: kuratierte Wurzeln hinzufuegen, Temp nicht teilen, stabile Pfade nutzen und Hashing auslaufen lassen.", "Sharing Guide", FAQ_LINKS["sharing"]),
             faq_item("Wie begrenze ich Upload-Slots in eMule?", "eMuleBB fuegt ein endliches Upload-Slot-Ziel, Recycling schwacher Slots und praktische Diagnose hinzu, damit schnelle Leitungen nutzbar bleiben ohne die Queue zu fluten.", "Downloads and Search Guide", FAQ_LINKS["downloads"]),
             faq_item("Ist eMuleBB ein Protokoll-Fork von eMule?", "Nein. eMuleBB haelt eD2K und Kad stock-kompatibel und verbessert darum herum lokale Limits, Automatisierung, Diagnose und Release-Disziplin.", "Product Guide", FAQ_LINKS["product"]),
-            faq_item("Welche eMule-Release soll ich testen?", "Nutze die veroeffentlichte eMuleBB 0.7.3-rc.3 GitHub Release fuer RC-Tests. Das stabile Ziel bleibt 0.7.3 nach bestandenen Gates.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
+            faq_item("Welche eMule-Release soll ich testen?", "Nutze die veroeffentlichte eMuleBB 0.7.3 GitHub Release fuer RC-Tests. Das stabile Ziel bleibt 0.7.3 nach bestandenen Gates.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
             faq_item("Wie halte ich eMule WebServer oder REST sicher?", "eMuleBB behandelt WebServer und REST als Oberflaechen fuer vertrauenswuerdige Controller. Nur bei Bedarf aktivieren, bewusst binden, API key nutzen und breite Exposition vermeiden.", "Controllers and REST Guide", FAQ_LINKS["controllers"]),
             faq_item("Wie nutze ich eMule mit Kad und Servern?", "eMuleBB behaelt Server, globale Suche und Kad. Starte mit vertrauenswuerdigen Serverlisten, bootstrappe Kad bewusst und diagnostiziere Low ID oder Kad firewalled vor grossen Aenderungen.", "Network Guide", FAQ_LINKS["network"]),
             faq_item("Wie betreibe ich grosse Freigabe-Bibliotheken in eMule?", "eMuleBB ist fuer grosse Bibliotheken gedacht: Wurzeln schrittweise hinzufuegen, Windows mit long paths nutzen, share-ignore pruefen und Startup-Cache stabilisieren lassen.", "Sharing Guide", FAQ_LINKS["sharing"]),
@@ -597,7 +597,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "pl": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "Krotkie odpowiedzi dla uzytkownikow eMule, ktorzy chca wyprobowac eMuleBB: binding, udostepnianie, sloty uploadu, Kad, REST i 0.7.3-rc.3.",
+        "meta_description": "Krotkie odpowiedzi dla uzytkownikow eMule, ktorzy chca wyprobowac eMuleBB: binding, udostepnianie, sloty uploadu, Kad, REST i 0.7.3.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "Szybkie odpowiedzi eMuleBB dla uzytkownikow eMule.",
         "nav_label": "Nawigacja FAQ",
@@ -615,7 +615,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("Jak udostepnic biblioteke w eMule?", "eMuleBB zachowuje model Shared Files: dodawaj wybrane katalogi, trzymaj Temp poza udostepnianiem, uzywaj stalych sciezek i poczekaj na zakonczenie hashowania.", "Przewodnik udostepniania", FAQ_LINKS["sharing"]),
             faq_item("Jak ograniczyc sloty uploadu w eMule?", "eMuleBB dodaje skonczony cel slotow uploadu, odzyskiwanie slabych slotow i praktyczna diagnostyke, aby szybkie lacza pomagaly bez zalewania kolejki.", "Przewodnik pobierania i wyszukiwania", FAQ_LINKS["downloads"]),
             faq_item("Czy eMuleBB jest forkiem protokolu eMule?", "Nie. eMuleBB zachowuje zgodne eD2K i Kad, a dookola nich poprawia lokalne limity, automatyzacje, diagnostyke i dyscypline wydan.", "Przewodnik produktu", FAQ_LINKS["product"]),
-            faq_item("Ktore wydanie eMule wybrac do testow?", "Do testow RC uzywaj opublikowanej GitHub release eMuleBB 0.7.3-rc.3. Stabilnym celem pozostaje 0.7.3 po przejsciu gate'ow.", "Panel wydania 0.7.3", FAQ_LINKS["release"]),
+            faq_item("Ktore wydanie eMule wybrac do testow?", "Do testow RC uzywaj opublikowanej GitHub release eMuleBB 0.7.3. Stabilnym celem pozostaje 0.7.3 po przejsciu gate'ow.", "Panel wydania 0.7.3", FAQ_LINKS["release"]),
             faq_item("Jak zabezpieczyc WebServer albo REST w eMule?", "eMuleBB traktuje WebServer i REST jako powierzchnie dla zaufanych kontrolerow. Wlaczaj je tylko w razie potrzeby, ustaw bind, uzyj API key i unikaj szerokiej ekspozycji.", "Przewodnik kontrolerow i REST", FAQ_LINKS["controllers"]),
             faq_item("Jak uzywac eMule z Kad i serwerami?", "eMuleBB zachowuje serwery, wyszukiwanie globalne i Kad. Zacznij od zaufanych list, ostroznie bootstrapuj Kad i diagnozuj Low ID lub Kad firewalled przed duzymi zmianami.", "Przewodnik sieciowy", FAQ_LINKS["network"]),
             faq_item("Jak obslugiwac duze biblioteki udostepniane w eMule?", "eMuleBB jest przygotowany na duze biblioteki: dodawaj katalogi stopniowo, uzywaj Windows z long paths, sprawdz share-ignore i pozwol ustabilizowac cache startowy.", "Przewodnik udostepniania", FAQ_LINKS["sharing"]),
@@ -624,7 +624,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "nl": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "Korte antwoorden voor eMule-gebruikers die eMuleBB willen proberen voor binding, delen, uploadslots, Kad, REST en 0.7.3-rc.3.",
+        "meta_description": "Korte antwoorden voor eMule-gebruikers die eMuleBB willen proberen voor binding, delen, uploadslots, Kad, REST en 0.7.3.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "Snelle eMuleBB-antwoorden voor eMule-gebruikers.",
         "nav_label": "FAQ-navigatie",
@@ -642,7 +642,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("Hoe deel ik mijn bibliotheek in eMule?", "eMuleBB houdt het bekende Shared Files-model: voeg gekozen roots toe, houd Temp buiten shares, gebruik stabiele paden en laat hashing afronden.", "Deelgids", FAQ_LINKS["sharing"]),
             faq_item("Hoe beperk ik uploadslots in eMule?", "eMuleBB voegt een eindig uploadslotdoel, recycling van zwakke slots en praktische diagnostiek toe zodat snelle lijnen nuttig blijven zonder de wachtrij te overspoelen.", "Downloads en zoekgids", FAQ_LINKS["downloads"]),
             faq_item("Is eMuleBB een protocolfork van eMule?", "Nee. eMuleBB houdt eD2K en Kad stock-compatibel en verbetert daaromheen lokale limieten, automatisering, diagnostiek en release-discipline.", "Productgids", FAQ_LINKS["product"]),
-            faq_item("Welke eMule-release moet ik testen?", "Gebruik de gepubliceerde eMuleBB 0.7.3-rc.3 GitHub Release voor RC-tests. Het stabiele doel blijft 0.7.3 nadat de gates slagen.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
+            faq_item("Welke eMule-release moet ik testen?", "Gebruik de gepubliceerde eMuleBB 0.7.3 GitHub Release voor RC-tests. Het stabiele doel blijft 0.7.3 nadat de gates slagen.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
             faq_item("Hoe houd ik eMule WebServer of REST veilig?", "eMuleBB behandelt WebServer en REST als oppervlakken voor vertrouwde controllers. Zet ze alleen aan wanneer nodig, bind bewust, gebruik een API key en voorkom brede blootstelling.", "Controllers en REST-gids", FAQ_LINKS["controllers"]),
             faq_item("Hoe gebruik ik eMule met Kad en servers?", "eMuleBB houdt servers, globale zoekactie en Kad. Begin met vertrouwde serverlijsten, bootstrap Kad bewust en diagnoseer Low ID of Kad firewalled voordat je veel wijzigt.", "Netwerkgids", FAQ_LINKS["network"]),
             faq_item("Hoe beheer ik grote gedeelde bibliotheken in eMule?", "eMuleBB is gemaakt voor grote bibliotheken: voeg roots geleidelijk toe, gebruik Windows met long paths, controleer share-ignore en laat de startcache stabiliseren.", "Deelgids", FAQ_LINKS["sharing"]),
@@ -651,7 +651,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "ru": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "Короткие ответы для пользователей eMule, которые хотят попробовать eMuleBB: binding, общие папки, upload slots, Kad, REST и 0.7.3-rc.3.",
+        "meta_description": "Короткие ответы для пользователей eMule, которые хотят попробовать eMuleBB: binding, общие папки, upload slots, Kad, REST и 0.7.3.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "Быстрые ответы eMuleBB для пользователей eMule.",
         "nav_label": "Навигация FAQ",
@@ -669,7 +669,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("Как расшарить библиотеку в eMule?", "eMuleBB сохраняет модель Shared Files: добавляйте выбранные корни, не шарьте Temp, используйте стабильные пути и дождитесь окончания hashing.", "Sharing guide", FAQ_LINKS["sharing"]),
             faq_item("Как ограничить upload slots в eMule?", "eMuleBB добавляет конечную цель upload slots, переработку слабых слотов и полезную диагностику, чтобы быстрый канал не превращался в хаос очереди.", "Downloads and search guide", FAQ_LINKS["downloads"]),
             faq_item("eMuleBB является protocol fork eMule?", "Нет. eMuleBB сохраняет совместимое поведение eD2K и Kad, а вокруг него улучшает локальные лимиты, automation, диагностику и дисциплину релизов.", "Product guide", FAQ_LINKS["product"]),
-            faq_item("Какой релиз eMule использовать для тестов?", "Для RC-тестирования используйте опубликованный GitHub Release eMuleBB 0.7.3-rc.3. Стабильная цель остается 0.7.3 после прохождения gate.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
+            faq_item("Какой релиз eMule использовать для тестов?", "Для RC-тестирования используйте опубликованный GitHub Release eMuleBB 0.7.3. Стабильная цель остается 0.7.3 после прохождения gate.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
             faq_item("Как безопасно включить eMule WebServer или REST?", "eMuleBB считает WebServer и REST поверхностями для доверенных контроллеров. Включайте их только при необходимости, задавайте bind, используйте API key и не открывайте широко.", "Controllers and REST guide", FAQ_LINKS["controllers"]),
             faq_item("Как использовать eMule с Kad и серверами?", "eMuleBB сохраняет серверы, global search и Kad. Начните с доверенных списков серверов, аккуратно bootstrap Kad и диагностируйте Low ID или Kad firewalled до массовых изменений.", "Network guide", FAQ_LINKS["network"]),
             faq_item("Как работать с большой общей библиотекой в eMule?", "eMuleBB рассчитан на большие библиотеки: добавляйте корни постепенно, используйте Windows с long paths, проверяйте share-ignore и дайте startup cache стабилизироваться.", "Sharing guide", FAQ_LINKS["sharing"]),
@@ -678,7 +678,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "uk": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "Короткі відповіді для користувачів eMule, які хочуть спробувати eMuleBB: binding, спільні бібліотеки, upload slots, Kad, REST і 0.7.3-rc.3.",
+        "meta_description": "Короткі відповіді для користувачів eMule, які хочуть спробувати eMuleBB: binding, спільні бібліотеки, upload slots, Kad, REST і 0.7.3.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "Швидкі відповіді eMuleBB для користувачів eMule.",
         "nav_label": "Навігація FAQ",
@@ -696,7 +696,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("Як поділитися бібліотекою в eMule?", "eMuleBB зберігає модель Shared Files: додавайте вибрані корені, не діліться Temp, використовуйте стабільні шляхи й дочекайтеся завершення hashing.", "Sharing guide", FAQ_LINKS["sharing"]),
             faq_item("Як обмежити upload slots в eMule?", "eMuleBB додає скінченну ціль upload slots, переробку слабких слотів і корисну діагностику, щоб швидкий канал не перевантажував чергу.", "Downloads and search guide", FAQ_LINKS["downloads"]),
             faq_item("Чи є eMuleBB protocol fork від eMule?", "Ні. eMuleBB зберігає сумісну поведінку eD2K і Kad, а навколо неї покращує локальні ліміти, automation, діагностику та дисципліну релізів.", "Product guide", FAQ_LINKS["product"]),
-            faq_item("Який реліз eMule використовувати для тестів?", "Для RC-тестування використовуйте опублікований GitHub Release eMuleBB 0.7.3-rc.3. Стабільна ціль лишається 0.7.3 після проходження gate.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
+            faq_item("Який реліз eMule використовувати для тестів?", "Для RC-тестування використовуйте опублікований GitHub Release eMuleBB 0.7.3. Стабільна ціль лишається 0.7.3 після проходження gate.", "0.7.3 release dashboard", FAQ_LINKS["release"]),
             faq_item("Як безпечно використовувати eMule WebServer або REST?", "eMuleBB розглядає WebServer і REST як поверхні для довірених контролерів. Увімкніть лише за потреби, задайте bind, використовуйте API key і не відкривайте широко.", "Controllers and REST guide", FAQ_LINKS["controllers"]),
             faq_item("Як використовувати eMule з Kad і серверами?", "eMuleBB зберігає сервери, global search і Kad. Почніть із довірених списків серверів, обережно bootstrap Kad і діагностуйте Low ID або Kad firewalled перед масовими змінами.", "Network guide", FAQ_LINKS["network"]),
             faq_item("Як працювати з великою спільною бібліотекою в eMule?", "eMuleBB розрахований на великі бібліотеки: додавайте корені поступово, використовуйте Windows з long paths, перевіряйте share-ignore і дайте startup cache стабілізуватися.", "Sharing guide", FAQ_LINKS["sharing"]),
@@ -705,7 +705,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "zh_cn": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "面向 eMule 用户的简短问答：用 eMuleBB 处理绑定、共享库、上传槽、Kad、REST 和 0.7.3-rc.3 测试。",
+        "meta_description": "面向 eMule 用户的简短问答：用 eMuleBB 处理绑定、共享库、上传槽、Kad、REST 和 0.7.3 测试。",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "面向 eMule 用户的 eMuleBB 快速问答。",
         "nav_label": "FAQ 导航",
@@ -723,7 +723,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("如何在 eMule 中共享我的资料库?", "eMuleBB 保留 Shared Files 模型：添加经过整理的根目录，不共享 Temp，使用稳定路径，并等待 hashing 完成。", "共享指南", FAQ_LINKS["sharing"]),
             faq_item("如何限制 eMule 的上传槽?", "eMuleBB 增加有限的上传槽目标、弱槽回收和实用诊断，让高速线路更有用，同时避免队列失控。", "下载和搜索指南", FAQ_LINKS["downloads"]),
             faq_item("eMuleBB 是 eMule 的协议分叉吗?", "不是。eMuleBB 默认保持 eD2K 和 Kad 的 stock 兼容行为，只在本地限制、自动化、诊断和发布纪律上改进。", "产品指南", FAQ_LINKS["product"]),
-            faq_item("测试时应该使用哪个 eMule 版本?", "RC 测试请使用已发布的 eMuleBB 0.7.3-rc.3 GitHub Release。通过 release gates 后，稳定目标仍是 0.7.3。", "0.7.3 发布面板", FAQ_LINKS["release"]),
+            faq_item("测试时应该使用哪个 eMule 版本?", "RC 测试请使用已发布的 eMuleBB 0.7.3 GitHub Release。通过 release gates 后，稳定目标仍是 0.7.3。", "0.7.3 发布面板", FAQ_LINKS["release"]),
             faq_item("如何保证 eMule WebServer 或 REST 安全?", "eMuleBB 把 WebServer 和 REST 视为可信控制器接口。只在需要时启用，明确 bind，使用 API key，并避免大范围暴露。", "控制器和 REST 指南", FAQ_LINKS["controllers"]),
             faq_item("如何在 eMule 中使用 Kad 和服务器?", "eMuleBB 保留服务器、global search 和 Kad 工作流。先使用可信服务器列表，谨慎 bootstrap Kad，并在大量改设置前诊断 Low ID 或 Kad firewalled。", "网络指南", FAQ_LINKS["network"]),
             faq_item("如何处理 eMule 的大型共享库?", "eMuleBB 面向大型资料库：逐步添加根目录，使用支持 long paths 的 Windows，检查 share-ignore，并让 startup cache 稳定下来。", "共享指南", FAQ_LINKS["sharing"]),
@@ -732,7 +732,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "ja": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "eMule ユーザー向けの短いFAQ。eMuleBB の binding、共有ライブラリ、upload slots、Kad、REST、0.7.3-rc.3 テストを扱います。",
+        "meta_description": "eMule ユーザー向けの短いFAQ。eMuleBB の binding、共有ライブラリ、upload slots、Kad、REST、0.7.3 テストを扱います。",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "eMule ユーザー向け eMuleBB クイックFAQ。",
         "nav_label": "FAQ ナビゲーション",
@@ -750,7 +750,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("eMule でライブラリを共有するには?", "eMuleBB は Shared Files モデルを保ちます。整理した root を追加し、Temp は共有せず、安定したパスを使い、hashing 完了を待ちます。", "共有ガイド", FAQ_LINKS["sharing"]),
             faq_item("eMule の upload slots を制限するには?", "eMuleBB は有限の upload slot 目標、弱い slot の再利用、実用的な診断を追加し、高速回線をキュー崩壊なしに活かします。", "ダウンロードと検索ガイド", FAQ_LINKS["downloads"]),
             faq_item("eMuleBB は eMule のプロトコル fork ですか?", "いいえ。eMuleBB は eD2K と Kad の stock 互換動作を保ち、その周囲でローカル制限、自動化、診断、リリース規律を改善します。", "製品ガイド", FAQ_LINKS["product"]),
-            faq_item("テストにはどの eMule release を使えばよいですか?", "RC テストには公開済みの eMuleBB 0.7.3-rc.3 GitHub Release を使ってください。安定版の目標は gates 通過後の 0.7.3 です。", "0.7.3 リリースダッシュボード", FAQ_LINKS["release"]),
+            faq_item("テストにはどの eMule release を使えばよいですか?", "RC テストには公開済みの eMuleBB 0.7.3 GitHub Release を使ってください。安定版の目標は gates 通過後の 0.7.3 です。", "0.7.3 リリースダッシュボード", FAQ_LINKS["release"]),
             faq_item("eMule WebServer や REST を安全に保つには?", "eMuleBB は WebServer と REST を信頼済み controller 向けの surface として扱います。必要な時だけ有効化し、明示的に bind し、API key を使い、広い公開は避けます。", "Controllers and REST guide", FAQ_LINKS["controllers"]),
             faq_item("eMule で Kad とサーバーを使うには?", "eMuleBB は server、global search、Kad の流れを保ちます。信頼できる server list から始め、Kad を慎重に bootstrap し、Low ID や Kad firewalled を先に診断します。", "ネットワークガイド", FAQ_LINKS["network"]),
             faq_item("eMule の大きな共有ライブラリを扱うには?", "eMuleBB は大きなライブラリ向けです。root を段階的に追加し、long paths 対応 Windows を使い、share-ignore を確認し、startup cache が落ち着くのを待ちます。", "共有ガイド", FAQ_LINKS["sharing"]),
@@ -759,7 +759,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "pt_pt": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "Respostas curtas para utilizadores eMule que querem experimentar o eMuleBB para binding, partilha, slots de upload, Kad, REST e testes de 0.7.3-rc.3.",
+        "meta_description": "Respostas curtas para utilizadores eMule que querem experimentar o eMuleBB para binding, partilha, slots de upload, Kad, REST e testes de 0.7.3.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "Respostas rápidas do eMuleBB para utilizadores eMule.",
         "nav_label": "Navegação das FAQ",
@@ -777,7 +777,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("Como partilho a minha biblioteca no eMule?", "O eMuleBB mantém o modelo Shared Files: adicione raízes selecionadas, mantenha a Temp fora das partilhas, use caminhos estáveis e deixe o hashing terminar antes de crescer.", "Guia de partilha", FAQ_LINKS["sharing"]),
             faq_item("Como limito os slots de upload no eMule?", "O eMuleBB acrescenta um alvo finito de slots de upload em banda larga, reciclagem de slots fracos e diagnósticos práticos para que ligações rápidas continuem úteis sem inundar a fila.", "Guia de transferências e pesquisa", FAQ_LINKS["downloads"]),
             faq_item("O eMuleBB é um fork de protocolo do eMule?", "Não. O eMuleBB mantém o comportamento eD2K e Kad compatível com o stock por omissão e melhora os limites locais, a automação, os diagnósticos e a disciplina de release à sua volta.", "Guia do produto", FAQ_LINKS["product"]),
-            faq_item("Que release do eMule devo usar para testar?", "Use a release do GitHub eMuleBB 0.7.3-rc.3 publicada para os testes RC. O alvo estável continua a ser 0.7.3 depois de passarem os gates.", "Painel de release 0.7.3", FAQ_LINKS["release"]),
+            faq_item("Que release do eMule devo usar para testar?", "Use a release do GitHub eMuleBB 0.7.3 publicada para testes de pacote estável. Nightly, beta e releases candidatas antigas continuam a ser builds de pré-release.", "Painel de release 0.7.3", FAQ_LINKS["release"]),
             faq_item("Como mantenho o WebServer ou o REST do eMule seguros?", "O eMuleBB trata o WebServer e o REST como superfícies para controladores de confiança. Ative-os apenas quando necessário, faça bind deliberadamente, use uma API key e evite exposição ampla.", "Guia de controladores e REST", FAQ_LINKS["controllers"]),
             faq_item("Como uso o eMule com Kad e servidores?", "O eMuleBB mantém os fluxos clássicos de servidor, pesquisa global e Kad. Comece com listas de servidores de confiança, faça bootstrap do Kad deliberadamente e diagnostique Low ID ou Kad com firewall antes de mudar muitas opções.", "Guia de rede", FAQ_LINKS["network"]),
             faq_item("Como lido com grandes bibliotecas partilhadas no eMule?", "O eMuleBB foi feito para grandes bibliotecas: adicione raízes gradualmente, use Windows com long paths, reveja as regras de share-ignore e deixe a cache de arranque assentar.", "Guia de partilha", FAQ_LINKS["sharing"]),
@@ -786,7 +786,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "tr": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "binding, paylaşım, yükleme yuvaları, Kad, REST ve 0.7.3-rc.3 testleri için eMuleBB'yi denemek isteyen eMule kullanıcılarına kısa yanıtlar.",
+        "meta_description": "binding, paylaşım, yükleme yuvaları, Kad, REST ve 0.7.3 testleri için eMuleBB'yi denemek isteyen eMule kullanıcılarına kısa yanıtlar.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "eMule kullanıcıları için hızlı eMuleBB yanıtları.",
         "nav_label": "SSS gezinmesi",
@@ -804,7 +804,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("eMule'de kütüphanemi nasıl paylaşırım?", "eMuleBB tanıdık Shared Files modelini korur: özenle seçilmiş kökler ekleyin, Temp'i paylaşımların dışında tutun, kararlı yollar kullanın ve büyütmeden önce hashing'in bitmesini bekleyin.", "Paylaşım kılavuzu", FAQ_LINKS["sharing"]),
             faq_item("eMule'de yükleme yuvalarını nasıl sınırlandırırım?", "eMuleBB, sınırlı bir geniş bant yükleme yuvası hedefi, zayıf yuva geri dönüşümü ve pratik tanılama ekler; böylece hızlı hatlar kuyruğu boğmadan yararlı kalır.", "İndirme ve arama kılavuzu", FAQ_LINKS["downloads"]),
             faq_item("eMuleBB, eMule'nin bir protokol fork'u mu?", "Hayır. eMuleBB stok uyumlu eD2K ve Kad davranışını varsayılan olarak korur, ardından çevresindeki yerel sınırları, otomasyonu, tanılamayı ve sürüm disiplinini geliştirir.", "Ürün kılavuzu", FAQ_LINKS["product"]),
-            faq_item("Test için hangi eMule sürümünü kullanmalıyım?", "RC testi için yayınlanmış eMuleBB 0.7.3-rc.3 GitHub Release'ini kullanın. Kararlı hedef, geçitler geçildikten sonra 0.7.3 olarak kalır.", "0.7.3 sürüm panosu", FAQ_LINKS["release"]),
+            faq_item("Test için hangi eMule sürümünü kullanmalıyım?", "Kararlı paket testi için yayınlanmış eMuleBB 0.7.3 GitHub Release'ini kullanın. Nightly, beta ve eski release-candidate paketleri pre-release test build'leridir.", "0.7.3 sürüm panosu", FAQ_LINKS["release"]),
             faq_item("eMule WebServer veya REST'i nasıl güvende tutarım?", "eMuleBB, WebServer ve REST'i güvenilir denetleyici yüzeyleri olarak ele alır. Yalnızca gerektiğinde etkinleştirin, bilinçli bind yapın, bir API key kullanın ve geniş erişimden kaçının.", "Denetleyiciler ve REST kılavuzu", FAQ_LINKS["controllers"]),
             faq_item("eMule'yi Kad ve sunucularla nasıl kullanırım?", "eMuleBB klasik sunucu, küresel ve Kad arama iş akışlarını korur. Güvenilir sunucu listeleriyle başlayın, Kad'ı bilinçli olarak bootstrap edin ve çok ayar değiştirmeden önce Low ID veya güvenlik duvarı arkasındaki Kad'ı teşhis edin.", "Ağ kılavuzu", FAQ_LINKS["network"]),
             faq_item("eMule'de büyük paylaşılan kütüphaneleri nasıl yönetirim?", "eMuleBB büyük kütüphaneler için yapılmıştır: kökleri kademeli ekleyin, uzun yol destekli Windows kurulumları kullanın, share-ignore kurallarını gözden geçirin ve başlangıç önbelleğinin yerleşmesini bekleyin.", "Paylaşım kılavuzu", FAQ_LINKS["sharing"]),
@@ -813,7 +813,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "ko": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "binding, 공유, 업로드 슬롯, Kad, REST, 0.7.3-rc.3 테스트를 위해 eMuleBB를 사용해 보려는 eMule 사용자를 위한 짧은 답변.",
+        "meta_description": "binding, 공유, 업로드 슬롯, Kad, REST, 0.7.3 테스트를 위해 eMuleBB를 사용해 보려는 eMule 사용자를 위한 짧은 답변.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "eMule 사용자를 위한 빠른 eMuleBB 답변.",
         "nav_label": "FAQ 내비게이션",
@@ -831,7 +831,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("eMule에서 라이브러리를 어떻게 공유하나요?", "eMuleBB는 익숙한 Shared Files 모델을 유지합니다. 정리된 루트를 추가하고, Temp는 공유에서 빼고, 안정적인 경로를 사용하며, 규모를 키우기 전에 hashing이 끝나게 두세요.", "공유 가이드", FAQ_LINKS["sharing"]),
             faq_item("eMule에서 업로드 슬롯을 어떻게 제한하나요?", "eMuleBB는 한정된 광대역 업로드 슬롯 목표, 약한 슬롯 재활용, 실용적인 진단을 추가하여 빠른 회선이 큐를 넘치게 하지 않으면서 유용하게 유지되도록 합니다.", "다운로드 및 검색 가이드", FAQ_LINKS["downloads"]),
             faq_item("eMuleBB는 eMule의 프로토콜 포크인가요?", "아니요. eMuleBB는 스톡 호환 eD2K 및 Kad 동작을 기본으로 유지하고, 그 주위에서 로컬 한계, 자동화, 진단, 릴리스 규율을 개선합니다.", "제품 가이드", FAQ_LINKS["product"]),
-            faq_item("테스트에는 어떤 eMule 릴리스를 사용해야 하나요?", "RC 테스트에는 공개된 eMuleBB 0.7.3-rc.3 GitHub Release를 사용하세요. 안정 목표는 게이트를 통과한 뒤 0.7.3으로 유지됩니다.", "0.7.3 릴리스 대시보드", FAQ_LINKS["release"]),
+            faq_item("테스트에는 어떤 eMule 릴리스를 사용해야 하나요?", "RC 테스트에는 공개된 eMuleBB 0.7.3 GitHub Release를 사용하세요. 안정 목표는 게이트를 통과한 뒤 0.7.3으로 유지됩니다.", "0.7.3 릴리스 대시보드", FAQ_LINKS["release"]),
             faq_item("eMule WebServer나 REST를 어떻게 안전하게 유지하나요?", "eMuleBB는 WebServer와 REST를 신뢰된 컨트롤러 표면으로 다룹니다. 필요할 때만 활성화하고, 의도적으로 bind하고, API key를 사용하며, 광범위한 노출을 피하세요.", "컨트롤러 및 REST 가이드", FAQ_LINKS["controllers"]),
             faq_item("eMule을 Kad 및 서버와 함께 어떻게 사용하나요?", "eMuleBB는 클래식한 서버, 글로벌, Kad 검색 워크플로를 유지합니다. 신뢰할 수 있는 서버 목록으로 시작하고, Kad를 의도적으로 bootstrap하며, 많은 설정을 바꾸기 전에 Low ID나 방화벽 뒤의 Kad를 진단하세요.", "네트워크 가이드", FAQ_LINKS["network"]),
             faq_item("eMule에서 큰 공유 라이브러리를 어떻게 다루나요?", "eMuleBB는 큰 라이브러리를 위해 만들어졌습니다. 루트를 점진적으로 추가하고, 긴 경로를 지원하는 Windows 설정을 사용하고, share-ignore 규칙을 검토하며, 시작 캐시 작업이 안정되게 두세요.", "공유 가이드", FAQ_LINKS["sharing"]),
@@ -840,7 +840,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
     },
     "ar_ae": {
         "title": "FAQ | eMule broadband edition",
-        "meta_description": "إجابات قصيرة لمستخدمي eMule الراغبين في تجربة eMuleBB من أجل binding والمشاركة وخانات الرفع وKad وREST واختبارات 0.7.3-rc.3.",
+        "meta_description": "إجابات قصيرة لمستخدمي eMule الراغبين في تجربة eMuleBB من أجل binding والمشاركة وخانات الرفع وKad وREST واختبارات 0.7.3.",
         "og_title": "FAQ | eMule broadband edition",
         "og_description": "إجابات eMuleBB سريعة لمستخدمي eMule.",
         "nav_label": "تنقل الأسئلة الشائعة",
@@ -858,7 +858,7 @@ FAQ_CONTENT: dict[str, dict[str, Any]] = {
             faq_item("كيف أشارك مكتبتي في eMule؟", "يحافظ eMuleBB على نموذج Shared Files المألوف: أضف جذورًا منسّقة، وأبقِ Temp خارج المشاركات، واستخدم مسارات ثابتة، ودع الـ hashing ينتهي قبل التوسّع.", "دليل المشاركة", FAQ_LINKS["sharing"]),
             faq_item("كيف أحدّ من خانات الرفع في eMule؟", "يضيف eMuleBB هدفًا محدودًا لخانات الرفع عريض النطاق، وإعادة تدوير الخانات الضعيفة، وتشخيصًا عمليًا حتى تبقى الخطوط السريعة مفيدة دون إغراق الطابور.", "دليل التنزيل والبحث", FAQ_LINKS["downloads"]),
             faq_item("هل eMuleBB تفرّع بروتوكول من eMule؟", "لا. يحافظ eMuleBB على سلوك eD2K وKad المتوافق مع الأصل افتراضيًا، ثم يحسّن الحدود المحلية والأتمتة والتشخيص وانضباط الإصدار حوله.", "دليل المنتج", FAQ_LINKS["product"]),
-            faq_item("أي إصدار eMule يجب أن أستخدم للاختبار؟", "استخدم إصدار GitHub المنشور eMuleBB 0.7.3-rc.3 لاختبار RC. يبقى الهدف المستقر 0.7.3 بعد اجتياز البوابات.", "لوحة إصدار 0.7.3", FAQ_LINKS["release"]),
+            faq_item("أي إصدار eMule يجب أن أستخدم للاختبار؟", "استخدم إصدار GitHub المنشور eMuleBB 0.7.3 لاختبار RC. يبقى الهدف المستقر 0.7.3 بعد اجتياز البوابات.", "لوحة إصدار 0.7.3", FAQ_LINKS["release"]),
             faq_item("كيف أبقي WebServer أو REST في eMule آمنًا؟", "يتعامل eMuleBB مع WebServer وREST كأسطح لمتحكمات موثوقة. فعّلها عند الحاجة فقط، واربط عن قصد، واستخدم مفتاح API، وتجنّب الكشف الواسع.", "دليل المتحكمات وREST", FAQ_LINKS["controllers"]),
             faq_item("كيف أستخدم eMule مع Kad والخوادم؟", "يحافظ eMuleBB على سير عمل البحث عبر الخادم والبحث العام وKad. ابدأ بقوائم خوادم موثوقة، وقم بـ bootstrap لـ Kad عن قصد، وشخّص Low ID أو Kad خلف جدار الحماية قبل تغيير إعدادات كثيرة.", "دليل الشبكة", FAQ_LINKS["network"]),
             faq_item("كيف أتعامل مع المكتبات المشتركة الكبيرة في eMule؟", "صُمِّم eMuleBB للمكتبات الكبيرة: أضف الجذور تدريجيًا، واستخدم إعدادات Windows داعمة للمسارات الطويلة، وراجع قواعد share-ignore، ودع عمل ذاكرة بدء التشغيل يستقر.", "دليل المشاركة", FAQ_LINKS["sharing"]),
@@ -911,7 +911,7 @@ def stock_doc_copy(t: dict[str, Any]) -> dict[str, tuple[str, str]]:
         "rest_adapters": ("REST adapters", t["automation"]),
         "diagnostics": (t["docs"], t["docs"]),
         "troubleshooting": (t["docs"], t["docs"]),
-        "release": ("0.7.3-rc.3", t["release"]),
+        "release": ("0.7.3", t["release"]),
     }
 
 
@@ -961,7 +961,7 @@ def make_stock_locale_content(t: dict[str, Any]) -> dict[str, Any]:
             "panel_kicker": "eMuleBB",
             "panel_h2": t["method"],
             "panel_p": t["intro"],
-            "signals": ["eD2K/Kad", "Upload", "Testing", "RC3", "Performance", "REST API", "0.7.3-rc.3"],
+            "signals": ["eD2K/Kad", "Upload", "Testing", "0.7.3 stable", "Performance", "REST API"],
         },
         "intro": t["intro"],
         "why": {**s(t["nav"][0], t["why"], t["intro"]), "cards": [c("eD2K/Kad", t["keep"], t["intro"]), c("Upload", t["control"], t["lead"]), c("Release", t["proof"], t["release"])]},
@@ -976,10 +976,10 @@ def make_stock_locale_content(t: dict[str, Any]) -> dict[str, Any]:
                 c("Testing", t["proof"], t["proof"]),
             ],
         },
-        "guide": {**s(t["nav"][2], t["guide"]), "cards": [c("", t["keep"], t["intro"]), c("", t["control"], t["lead"]), c("", "Testing", t["proof"]), c("", "RC3 published", t["release"]), c("", "0.7.3-rc.3", t["release"]), c("", t["product_guide"], t["docs"])]},
+        "guide": {**s(t["nav"][2], t["guide"]), "cards": [c("", t["keep"], t["intro"]), c("", t["control"], t["lead"]), c("", "Testing", t["proof"]), c("", "0.7.3 published", t["release"]), c("", t["product_guide"], t["docs"])]},
         "docs": {**s(t["nav"][3], t["docs"]), "links": []},
         "automation": {"eyebrow": t["nav"][4], "h2": t["automation"], "p": f"{t['automation']} <code>/api/v1</code>, JSON, <code>X-API-Key</code>.", "pills_label": "REST API", "pills": ["Transfers", "Searches", "Servers", "Kad", "Shared files", "Uploads", "Logs", "Preferences"]},
-        "release": {**s(t["nav"][5], t["release"]), "cards": [c("", "0.7.3-rc.3", t["release"]), c("", "Fast CI", t["proof"]), c("", t["proof"], t["proof"]), c("", "Performance", t["lead"]), c("", "eD2K/Kad", t["keep"]), c("", "Status", t["release"])]},
+        "release": {**s(t["nav"][5], t["release"]), "cards": [c("", "0.7.3", t["release"]), c("", "Fast CI", t["proof"]), c("", t["proof"], t["proof"]), c("", "Performance", t["lead"]), c("", "eD2K/Kad", t["keep"]), c("", "Status", t["release"])]},
         "method": {**s(t["method"], t["method"], t["intro"]), "cards": [c("eD2K/Kad", t["keep"], t["keep"]), c("Upload", t["control"], t["control"]), c("REST", "REST API", t["automation"]), c("Testing", t["proof"], t["release"])]},
         "repos": {**s(t["nav"][6], t["repos"]), "links": []},
         "install_callout": INSTALL_CALLOUT,
@@ -1009,6 +1009,120 @@ def ensure_stock_locale_content(root: Path) -> None:
         LANGUAGE_LINK_COPY[key] = text["lang"]
 
 
+def apply_stable_release_copy(content: dict[str, Any]) -> None:
+    """Normalize current release facts across localized homepage copy."""
+
+    content["meta_description"] = (
+        "eMuleBB 0.7.3 is published: install eMule broadband edition with a "
+        "PowerShell suite bootstrapper or standalone ZIP, with GitHub-built "
+        "package provenance."
+    )
+    content["structured_description"] = (
+        "eMuleBB is the home of eMule broadband edition, an independent "
+        "broadband-focused eMule product with upload control, automated "
+        "testing, SBOM-backed packages, REST automation, eD2K/Kad "
+        "compatibility, and out-of-the-box aMuTorrent, Prowlarr, Radarr, and "
+        "Sonarr integration paths. Stable 0.7.3 is published on GitHub "
+        "Releases."
+    )
+    content["hero"]["lead"] = (
+        "Stable 0.7.3 is published: a serious Windows eMule line for fast "
+        "upload links, large shared libraries, always-on sessions, REST "
+        "controller workflows, Arr integration, and GitHub-built package "
+        "evidence."
+    )
+    content["hero"]["install"] = "Download 0.7.3"
+    content["hero"]["panel_p"] = (
+        "The desktop app stays stock-compatible where the network matters. "
+        "The stable suite adds local controller workflows around it without "
+        "turning eMuleBB into a generic torrent shell."
+    )
+    content["hero"]["signals"] = [
+        "0.7.3 stable published",
+        "One-line suite bootstrap",
+        "Manual standalone ZIP",
+        "GitHub Actions builds",
+        "Manifest hash verification",
+        "SPDX SBOMs",
+        "aMuTorrent controller",
+        "Prowlarr Torznab",
+        "Radarr/Sonarr qBit adapter",
+        "Stock eD2K/Kad compatibility",
+    ]
+    content["intro"] = (
+        "This is the home of <strong>eMuleBB</strong>: <strong>eMule broadband "
+        "edition</strong>, an independent product for people who still value "
+        "eMule's distributed sharing model and want it operated like modern "
+        "software. Stable 0.7.3 packages are published on GitHub Releases with "
+        "a full-suite bootstrapper, standalone ZIPs, manifests, hashes, SBOMs, "
+        "and matching aMuTorrent controller assets."
+    )
+    content["features"]["p"] = (
+        "The stable 0.7.3 line is focused on operator-visible behavior: "
+        "predictable upload policy, safer binding, fixed performance limits, "
+        "large-library operation, local automation, and package evidence."
+    )
+    for card in content["features"]["cards"]:
+        if "release" in card["h3"].lower() or "evidence" in card["h3"].lower():
+            card["p"] = (
+                "<code>0.7.3</code> is published with GitHub Actions packaging, "
+                "manifests, SHA-256 evidence, SPDX SBOMs, diagnostics assets, "
+                "and bootstrapper hash evidence."
+            )
+    content["release"] = {
+        **s("Security and provenance", "0.7.3 is built and packaged on GitHub"),
+        "cards": [
+            c(
+                "",
+                "Published 0.7.3",
+                "<code>emulebb-v0.7.3</code> is a stable GitHub release with "
+                "x64 and ARM64 ZIPs, diagnostics packages, manifests, SBOMs, "
+                "and the suite bootstrapper.",
+            ),
+            c(
+                "",
+                "Hash-checked setup",
+                "The bootstrapper downloads release assets and verifies package "
+                "hashes from the published manifests before installing.",
+            ),
+            c(
+                "",
+                "Suite assets",
+                "The matching aMuTorrent 0.7.3 companion package is published "
+                "separately, and the full x64 bootstrap flow resolves it "
+                "automatically for controller setup.",
+            ),
+            c(
+                "",
+                "Controller proof",
+                "aMuTorrent, Prowlarr, Radarr, Sonarr, Torznab, and "
+                "qBittorrent-compatible lanes are documented as local "
+                "integration paths around the native <code>/api/v1</code> "
+                "contract.",
+            ),
+        ],
+    }
+    content["install_callout"] = INSTALL_CALLOUT
+    content["testing_callout"] = TESTING_CALLOUT
+
+
+def apply_stable_faq_copy() -> None:
+    """Normalize current release facts across localized FAQ copy."""
+
+    for faq in FAQ_CONTENT.values():
+        faq["meta_description"] = (
+            "Short answers for eMule users who want to try eMuleBB for binding, "
+            "sharing, upload slots, Kad, REST, and stable 0.7.3."
+        )
+        for item in faq["items"]:
+            if "0.7.3" in item["answer"] and ("RC" in item["answer"] or "rc" in item["answer"]):
+                item["answer"] = (
+                    "Use the published eMuleBB 0.7.3 GitHub Release for stable "
+                    "package testing. Nightly, beta, and older release-candidate "
+                    "packages are pre-release test builds."
+                )
+
+
 def add_release_evidence_copy(content: dict[str, Any]) -> None:
     """Add current release-evidence signals shared by all homepage locales."""
 
@@ -1017,8 +1131,8 @@ def add_release_evidence_copy(content: dict[str, Any]) -> None:
         signals.append("Rendered HTML product docs")
     if not any("SBOM" in signal for signal in signals):
         signals.append("SPDX SBOM package evidence")
-    if not any("RC3" in signal for signal in signals):
-        signals.append("RC3 on GitHub Releases")
+    if not any("0.7.3" in signal for signal in signals):
+        signals.append("0.7.3 on GitHub Releases")
 
     release_cards = content["release"]["cards"]
     if not any("SBOM" in card["h3"] for card in release_cards):
@@ -1036,7 +1150,7 @@ def add_release_evidence_copy(content: dict[str, Any]) -> None:
             c(
                 "",
                 "GitHub provenance",
-                "RC3 assets are published from GitHub release automation with manifests, SHA-256 evidence, SBOMs, and a bootstrapper hash asset for verification.",
+                "Stable 0.7.3 assets are published from GitHub release automation with manifests, SHA-256 evidence, SBOMs, and a bootstrapper hash asset for verification.",
             ),
         )
 
@@ -1067,11 +1181,12 @@ def with_generated_links(root: Path) -> None:
     """Populate repeated docs and repo link sections for every locale."""
 
     ensure_stock_locale_content(root)
+    apply_stable_faq_copy()
     for page in PAGES:
         content = CONTENT[page.key]
         content.setdefault("install_callout", INSTALL_CALLOUT)
         content.setdefault("testing_callout", TESTING_CALLOUT)
-        content["hero"]["install"] = "Download RC3" if page.key == "en" else content["hero"].get("install", "Install")
+        apply_stable_release_copy(content)
         add_release_evidence_copy(content)
         add_brand_logo(page, content)
         add_team_images(page, content)
