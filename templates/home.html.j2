@@ -96,9 +96,12 @@
               "name": "eMule broadband edition",
               "alternateName": "eMuleBB",
               "applicationCategory": "FileSharingApplication",
-              "operatingSystem": "Windows",
+              "operatingSystem": ["Windows", "Linux", "macOS"],
               "url": "{{ page.url }}",
-              "codeRepository": "https://github.com/emulebb/emulebb",
+              "codeRepository": [
+                "https://github.com/emulebb/emulebb-rust",
+                "https://github.com/emulebb/emulebb"
+              ],
               "description": {{ content.structured_description | tojson }}
       }
     </script>
@@ -139,8 +142,8 @@
 <h1>{{ content.hero.h1 }}</h1>
 <p class="lead">{{ content.hero.lead }}</p>
 <div aria-label="{{ content.project_links_label }}" class="actions">
-<a class="button primary" href="#install">{{ content.hero.install }}</a>
-<a class="button secondary" href="https://github.com/emulebb/emulebb">{{ content.hero.source }}</a>
+<a class="button primary" href="{{ content.hero.primary_href }}">{{ content.hero.install }}</a>
+<a class="button secondary" href="{{ content.hero.secondary_href }}">{{ content.hero.source }}</a>
 </div>
 <div aria-label="{{ content.release_downloads_label }}" class="release-links">
 <span>{{ content.release_downloads_label }}</span>

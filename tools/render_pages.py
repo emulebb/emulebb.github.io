@@ -127,48 +127,46 @@ FAQ_PAGES = tuple(FAQ_PAGE_BY_KEY[key] for key in FAQ_LOCALE_KEYS)
 ENGLISH_FAQ_PAGE = FAQ_PAGE_BY_KEY["en"]
 
 DOCS = [
-    (f"{DOCS_SITE_URL}/reference/GUIDE-SETUP/", "setup"),
+    (f"{DOCS_SITE_URL}/active/PRODUCT-PORTFOLIO/", "portfolio"),
+    (f"{DOCS_SITE_URL}/reference/ROADMAP-SUMMARY/", "roadmap"),
     (f"{DOCS_SITE_URL}/reference/GUIDE-EMULEBB/", "emulebb"),
-    (f"{DOCS_SITE_URL}/reference/GUIDE-STACK-INTEGRATIONS/", "stack_integrations"),
-    (f"{DOCS_SITE_URL}/reference/GUIDE-CONTROLLERS-REST/", "controllers"),
-    (f"{DOCS_SITE_URL}/reference/GUIDE-DOWNLOADS-SEARCH/", "downloads"),
-    (f"{DOCS_SITE_URL}/reference/GUIDE-P2P-OVERLORD-EMULE-AGENT/", "p2p_overlord_agent"),
+    (f"{DOCS_SITE_URL}/reference/GUIDE-SETUP/", "setup"),
     (f"{DOCS_SITE_URL}/active/RELEASE-0.7.3/", "release"),
 ]
 
 REPOS = [
+    ("https://github.com/emulebb/emulebb-rust", "rust"),
     ("https://github.com/emulebb/emulebb", "emule"),
-    ("https://github.com/emulebb/amutorrent", "amutorrent"),
+    ("https://github.com/emulebb/emulebb-tooling", "tooling"),
     ("https://github.com/emulebb/emulebb-build", "build"),
     ("https://github.com/emulebb/emulebb-build-tests", "tests"),
-    ("https://github.com/emulebb/emulebb-tooling", "tooling"),
-    ("https://github.com/emulebb/p2p-overlord-agents", "p2p_overlord_agents"),
-    ("https://github.com/emulebb/p2p-overlord-be", "p2p_overlord_be"),
-    ("https://github.com/emulebb/p2p-overlord-tooling", "p2p_overlord_tooling"),
+    ("https://github.com/emulebb/goed2k-server", "goed2k_server"),
+    ("https://github.com/emulebb/ed2k-server", "ed2k_server"),
     ("https://github.com/emulebb/amule", "amule"),
+    ("https://github.com/emulebb/amutorrent", "amutorrent"),
+    ("https://github.com/emulebb/qbittorrentbb", "qbittorrentbb"),
 ]
 
 RELEASE_DOWNLOADS = [
-    ("https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3", "eMuleBB 0.7.3"),
-    ("https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3/emulebb-0.7.3-x64.zip", "x64 ZIP"),
-    ("https://github.com/emulebb/amutorrent/releases/tag/amutorrent-v3.8.8-emulebb-v0.7.3", "aMuTorrent 0.7.3"),
+    ("https://github.com/emulebb/emulebb-rust/releases/tag/rust-v0.1.0-beta.1", "Rust 0.1.0-beta.1"),
+    ("https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3", "MFC 0.7.3"),
 ]
 
 INSTALL_CALLOUT = {
     "id": "install",
-    "eyebrow": "Download",
-    "h2": "Install 0.7.3 with one PowerShell line, or download the ZIP manually.",
-    "p": "Use the full-suite bootstrapper for eMuleBB plus controller integration, or use the standalone ZIP when you only want the desktop app.",
-    "command_label": "Full x64 suite",
+    "eyebrow": "Published releases",
+    "h2": "Try the Rust beta or use the stable MFC 0.7.3 client.",
+    "p": "Rust is the active experimental product lane and is not yet production-ready. MFC 0.7.3 remains the stable Windows release and continues on a long-term maintenance track.",
+    "command_label": "Historical MFC 0.7.3 suite bundle",
     "command": "irm https://emulebb.github.io/install.ps1 | iex",
     "copy": "Copy",
     "copied": "Copied",
     "copy_error": "Select and copy",
-    "standalone": "Standalone app: download the stable 0.7.3 ZIP, extract it, and run <code>emulebb.exe</code>.",
-    "primary": "Open 0.7.3 release",
-    "primary_href": "https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3",
-    "secondary": "Setup details",
-    "secondary_href": f"{DOCS_SITE_URL}/reference/GUIDE-SETUP/",
+    "standalone": "The one-line installer is retained for the shipped MFC 0.7.3 suite artifact; it is not an active cross-client roadmap.",
+    "primary": "Open Rust beta",
+    "primary_href": "https://github.com/emulebb/emulebb-rust/releases/tag/rust-v0.1.0-beta.1",
+    "secondary": "Open MFC 0.7.3",
+    "secondary_href": "https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3",
 }
 
 TESTING_CALLOUT = {
@@ -362,7 +360,11 @@ CONTENT: dict[str, dict[str, Any]] = {
 
 LOCALIZED_COPY_FILE = Path("content") / "locales.json"
 
-DOC_COPY = {'en': {'emulebb': ('eMuleBB product guide',
+DOC_COPY = {'en': {'portfolio': ('Product portfolio',
+                    'Current lifecycle and support status for every eMuleBB repository.'),
+        'roadmap': ('eMuleBB Roadmap',
+                    'Active Rust beta work, MFC maintenance, and bounded supporting lanes.'),
+        'emulebb': ('MFC product guide',
                     'Setup, tuning, automation, release-aware use, testing, and SBOM evidence.'),
         'setup': ('Setup guide', 'Install model, first-run profile behavior, and practical startup notes.'),
         'network': ('Network guide', 'eD2K, Kad, binding, UPnP, firewall, and connection diagnosis reference.'),
@@ -390,13 +392,16 @@ DOC_COPY = {'en': {'emulebb': ('eMuleBB product guide',
                     'Current RC gates, automated test evidence, SBOM/package proof, and readiness rules.')}}
 
 
-REPO_COPY = {'en': {'emule': 'flagship desktop app and product source',
+REPO_COPY = {'en': {'rust': 'active experimental beta and current product-development lane',
+        'emule': 'stable 0.7.x Windows client in long-term maintenance',
         'setup': 'reproducible workspace setup',
         'build': 'build, validation, and release orchestration',
         'tests': 'native, Python, UI, REST, and live E2E tests',
         'tooling': 'roadmap, backlog, policy, audits, and reference docs',
-        'amutorrent': 'fork used for eMuleBB management and controller workflows',
-        'goed2k_server': 'eD2K server work for deterministic testing and ecosystem services',
+        'amutorrent': 'frozen controller fork retained with the MFC 0.7.3 history',
+        'goed2k_server': 'fixed-purpose eD2K harness server with no product evolution planned',
+        'ed2k_server': 'reference fork for analysis and possible upstream contributions',
+        'qbittorrentbb': 'paused BitTorrent experiment retained for reference',
         'p2p_overlord_agents': 'exploratory agents for the p2p-overlord P2P suite',
         'p2p_overlord_be': 'exploratory headless Rust eD2K/Kad client backend work',
         'p2p_overlord_tooling': 'scenario manifests, parity runners, reports, and quality guards',
@@ -899,6 +904,8 @@ def stock_doc_copy(t: dict[str, Any]) -> dict[str, tuple[str, str]]:
     """Build localized document link labels for generated stock locales."""
 
     return {
+        "portfolio": ("Product portfolio", "Current repository lifecycle and support status."),
+        "roadmap": ("eMuleBB Roadmap", "Active Rust beta work and MFC maintenance."),
         "emulebb": (t["product_guide"], t["intro"]),
         "setup": (t["guide"], t["lead"]),
         "network": (t["control"], t["lead"]),
@@ -919,13 +926,16 @@ def stock_repo_copy(t: dict[str, Any]) -> dict[str, str]:
     """Build localized repository blurbs for generated stock locales."""
 
     return {
+        "rust": "Active experimental Rust beta and current product-development lane.",
         "emule": t["intro"],
         "setup": t["guide"],
         "build": t["proof"],
         "tests": t["proof"],
         "tooling": t["docs"],
-        "amutorrent": "aMuTorrent fork for managing eMuleBB.",
-        "goed2k_server": "goed2k eD2K server work for deterministic tests and ecosystem services.",
+        "amutorrent": "Frozen controller fork retained with the MFC 0.7.3 history.",
+        "goed2k_server": "Fixed-purpose eD2K harness server with no product evolution planned.",
+        "ed2k_server": "Reference fork for analysis and possible upstream contributions.",
+        "qbittorrentbb": "Paused BitTorrent experiment retained for reference.",
         "p2p_overlord_agents": "Exploratory p2p-overlord agents for headless P2P workflows.",
         "p2p_overlord_be": "Exploratory Rust eD2K/Kad backend work in the p2p-overlord suite.",
         "p2p_overlord_tooling": "Scenario manifests, parity runners, reports, and quality guards for p2p-overlord.",
@@ -1106,6 +1116,97 @@ def apply_stable_release_copy(content: dict[str, Any]) -> None:
     content["testing_callout"] = TESTING_CALLOUT
 
 
+def apply_lifecycle_copy(content: dict[str, Any]) -> None:
+    """Apply the current organization lifecycle to every generated homepage."""
+
+    content["title"] = "eMuleBB | Rust beta and stable MFC client"
+    content["meta_description"] = (
+        "eMuleBB publishes an active experimental Rust beta and maintains the "
+        "stable MFC 0.7.x Windows client."
+    )
+    content["og_title"] = content["title"]
+    content["og_description"] = content["meta_description"]
+    content["structured_description"] = (
+        "eMuleBB develops an experimental eD2K/Kad client in Rust and maintains "
+        "the stable eMuleBB MFC 0.7.x Windows client."
+    )
+    content["hero"].update(
+        {
+            "eyebrow": "Two public eD2K/Kad client lanes",
+            "h1": "Rust is the active beta. MFC is the stable maintenance line.",
+            "lead": (
+                "emulebb-rust 0.1.0-beta.1 is published for experimental testing. "
+                "eMuleBB MFC 0.7.3 remains the stable Windows release and receives "
+                "bugs and bounded low-risk improvements."
+            ),
+            "install": "Try Rust beta",
+            "primary_href": "https://github.com/emulebb/emulebb-rust/releases/tag/rust-v0.1.0-beta.1",
+            "source": "MFC 0.7.3",
+            "secondary_href": "https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3",
+            "panel_kicker": "Current posture",
+            "panel_h2": "One active experiment, one maintained stable client",
+            "panel_p": (
+                "New product development belongs to the Rust lane. The MFC line "
+                "stays published and maintained without a broad feature or "
+                "architecture roadmap."
+            ),
+            "signals": [
+                "Rust 0.1.0-beta.1 published",
+                "Experimental, not production-ready",
+                "MFC 0.7.3 stable",
+                "MFC 0.7.x long-term maintenance",
+                "qBittorrentBB paused",
+                "aMuTorrent frozen",
+                "TrackMuleBB archived",
+                "Native Windows VPN work deprioritized",
+            ],
+        }
+    )
+    content["intro"] = (
+        "<strong>eMuleBB</strong> now has two clear public entry points: the "
+        "active experimental <strong>Rust beta</strong> and the stable "
+        "<strong>MFC 0.7.x</strong> Windows client. Other repositories are "
+        "supporting harnesses, reference forks, paused experiments, or release "
+        "history—not additional active products."
+    )
+    content["why"] = {
+        **s("Lifecycle", "A smaller, explicit product portfolio"),
+        "cards": [
+            c("Active", "emulebb-rust", "The published beta is the only active product-development lane. It is experimental and not yet production-ready."),
+            c("Stable", "eMuleBB MFC", "The published 0.7.3 Windows client continues as a long-term 0.7.x maintenance line for bugs and bounded low-risk changes."),
+            c("Reference", "Experiments stay labeled", "qBittorrentBB is paused, aMuTorrent is frozen, TrackMuleBB is archived, and the server forks have bounded harness or reference roles."),
+        ],
+    }
+    content["features"]["eyebrow"] = "Stable MFC capabilities"
+    content["features"]["h2"] = "What the maintained MFC client already provides"
+    content["features"]["p"] = (
+        "These are shipped 0.7.3 capabilities, not a promise of renewed broad "
+        "MFC development. Maintenance remains compatibility- and risk-bounded."
+    )
+    content["guide"]["cards"] = [
+        c("", "Start with the Rust beta", "Use the published beta for experimental testing and report reproducible issues in emulebb-rust."),
+        c("", "Use MFC for the stable Windows lane", "Version 0.7.3 remains the supported stable package while 0.7.x receives maintenance fixes."),
+        c("", "Check repository lifecycle first", "The product portfolio and roadmap identify which repositories are active, maintained, frozen, paused, archived, harness-only, or reference-only."),
+    ]
+    content["automation"]["p"] = (
+        "The stable MFC client retains its authenticated <code>/api/v1</code> "
+        "automation surface. Controller forks and qBittorrent-compatible "
+        "experiments are not forward product priorities."
+    )
+    content["release"] = {
+        **s("Published releases", "Use the release that matches the lane"),
+        "cards": [
+            c("", "Rust 0.1.0-beta.1", "The first public Rust beta is available for experimental testing. It is the active development lane, but it is not production-ready."),
+            c("", "MFC 0.7.3", "The stable Windows package remains published with manifests, hashes, SBOMs, and diagnostics assets."),
+            c("", "Historical Suite bundle", "The MFC 0.7.3 release keeps its suite installer and aMuTorrent artifact. “Suite” describes that shipped bundle, not an active umbrella roadmap."),
+            c("", "Evidence stays lane-specific", "Capabilities, platform support, and network-safety claims must be proven by the repository and release that owns them."),
+        ],
+    }
+    content["repos"]["eyebrow"] = "Repository lifecycle"
+    content["repos"]["h2"] = "Active, maintained, and retained work"
+    content["install_callout"] = INSTALL_CALLOUT
+
+
 def apply_stable_faq_copy() -> None:
     """Normalize current release facts across localized FAQ copy."""
 
@@ -1188,6 +1289,7 @@ def with_generated_links(root: Path) -> None:
         content.setdefault("testing_callout", TESTING_CALLOUT)
         apply_stable_release_copy(content)
         add_release_evidence_copy(content)
+        apply_lifecycle_copy(content)
         add_brand_logo(page, content)
         add_team_images(page, content)
         content.setdefault("release_downloads_label", CONTENT["en"]["release_downloads_label"])
@@ -1259,6 +1361,7 @@ def title_for_repo(key: str) -> str:
     """Return the public repository display name for a repo key."""
 
     return {
+        "rust": "emulebb-rust",
         "emule": "emulebb",
         "setup": "emulebb-setup",
         "build": "emulebb-build",
@@ -1266,6 +1369,8 @@ def title_for_repo(key: str) -> str:
         "tooling": "emulebb-tooling",
         "amutorrent": "amutorrent",
         "goed2k_server": "goed2k-server",
+        "ed2k_server": "ed2k-server",
+        "qbittorrentbb": "qbittorrentbb",
         "p2p_overlord_agents": "p2p-overlord-agents",
         "p2p_overlord_be": "p2p-overlord-be",
         "p2p_overlord_tooling": "p2p-overlord-tooling",

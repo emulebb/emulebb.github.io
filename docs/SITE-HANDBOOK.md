@@ -3,9 +3,11 @@
 This handbook is the maintainer contract for the public eMule broadband edition
 site at `https://emulebb.github.io/`.
 
-The site is a curated product presentation for eMule broadband edition, compactly
-eMuleBB. It is not the canonical engineering ledger, release ledger, or feature
-backlog. Those live in the public `emulebb-tooling` docs.
+The site is the curated public front door for the eMuleBB organization. It
+presents `emulebb-rust` as the active experimental beta and eMuleBB MFC
+`0.7.x` as the stable long-term maintenance lane. It is not the canonical
+engineering ledger, release ledger, or feature backlog. Those live in the
+public `emulebb-tooling` docs and the owning release repositories.
 
 ## Authority And Content Model
 
@@ -17,12 +19,19 @@ backlog. Those live in the public `emulebb-tooling` docs.
   and API details belong in the rendered documentation site at
   `https://emulebb.github.io/emulebb-tooling/`, backed by Markdown in
   `emulebb-tooling`.
-- Release status must be derived from the `0.7.3` active release docs:
+- Organization lifecycle status must be derived from
+  `docs/active/PRODUCT-PORTFOLIO.md` and
+  `docs/reference/ROADMAP-SUMMARY.md` in `emulebb-tooling`.
+- MFC release status must be derived from the `0.7.3` release docs:
   `RELEASE-0.7.3.md`, `RELEASE-0.7.3-CHECKLIST.md`,
   `RELEASE-0.7.3-RUNBOOK.md`, and `RELEASE-0.7.3-GATE-HISTORY.md`.
 - The current public release is stable `0.7.3` (published 2026-07-05). Older
   `0.7.3-rc.*` releases are historical prerelease evidence, not the current
   install target.
+- The active product-development release is the experimental
+  `emulebb-rust` `0.1.0-beta.1`. It must not be described as production-ready.
+- The historical MFC `0.7.3` suite installer and aMuTorrent package remain
+  published artifacts, but “Suite” is not an active umbrella roadmap.
 - Feature details should prefer durable reference docs such as:
   - `docs/reference/GUIDE-EMULEBB.md`
   - `docs/reference/DEVELOPMENT-GUIDE.md`
@@ -84,6 +93,8 @@ Rules:
   Highlights, Catalog, or similar duplicate feature sections.
 - The homepage feature copy may highlight only landed, documented,
   passed, release-proven, or otherwise source-confirmed features.
+- MFC feature copy must be labeled as stable shipped capability, not active
+  broad development. Rust capability claims must be beta-specific.
 - Open, deferred, exploratory, or future backlog items must not be presented as
   shipped homepage features.
 - Future-facing items must stay out of homepage feature copy.
@@ -131,6 +142,8 @@ Before adding or changing a feature entry:
 - Interface/VPN binding may be described as bind-target support and live-test
   policy. Do not describe the external VPN kill-switch design as built into
   eMuleBB.
+- Native Windows VPN work and qBittorrentBB integration are not forward
+  priorities. Do not present them as planned homepage features.
 - If a feature has changed status, update the source documentation first or link
   to the updated source.
 

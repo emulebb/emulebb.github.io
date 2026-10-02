@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="eMuleBB 0.7.3 is published: install eMule broadband edition with a PowerShell suite bootstrapper or standalone ZIP, with GitHub-built package provenance." name="description"/>
+<meta content="eMuleBB publishes an active experimental Rust beta and maintains the stable MFC 0.7.x Windows client." name="description"/>
 <meta content="index,follow" name="robots"/>
 <meta content="eMuleBB" name="author"/>
-<meta content="eMule broadband edition | Malti" property="og:title"/>
-<meta content="eMuleBB huwa eMule modern għall-kontroll tal-upload, VPN/interface binding, libreriji kbar, REST automation, eD2K u Kad." property="og:description"/>
+<meta content="eMuleBB | Rust beta and stable MFC client" property="og:title"/>
+<meta content="eMuleBB publishes an active experimental Rust beta and maintains the stable MFC 0.7.x Windows client." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://emulebb.github.io/mt/" property="og:url"/>
 <meta content="eMule broadband edition" property="og:site_name"/>
@@ -15,7 +15,7 @@
 <link href="https://emulebb.github.io/mt/" rel="canonical"/>
 <link href="https://emulebb.github.io/sitemap.xml" rel="sitemap" type="application/xml"/><link href="https://emulebb.github.io/" hreflang="en" rel="alternate"/><link href="https://emulebb.github.io/ar-ae/" hreflang="ar-AE" rel="alternate"/><link href="https://emulebb.github.io/eu/" hreflang="eu" rel="alternate"/><link href="https://emulebb.github.io/bg/" hreflang="bg" rel="alternate"/><link href="https://emulebb.github.io/ca/" hreflang="ca" rel="alternate"/><link href="https://emulebb.github.io/cs/" hreflang="cs" rel="alternate"/><link href="https://emulebb.github.io/da/" hreflang="da" rel="alternate"/><link href="https://emulebb.github.io/el/" hreflang="el" rel="alternate"/><link href="https://emulebb.github.io/es/" hreflang="es" rel="alternate"/><link href="https://emulebb.github.io/ast/" hreflang="ast" rel="alternate"/><link href="https://emulebb.github.io/et/" hreflang="et" rel="alternate"/><link href="https://emulebb.github.io/fa/" hreflang="fa" rel="alternate"/><link href="https://emulebb.github.io/fi/" hreflang="fi" rel="alternate"/><link href="https://emulebb.github.io/br/" hreflang="br" rel="alternate"/><link href="https://emulebb.github.io/pt-br/" hreflang="pt-BR" rel="alternate"/><link href="https://emulebb.github.io/pt-pt/" hreflang="pt-PT" rel="alternate"/><link href="https://emulebb.github.io/gl/" hreflang="gl" rel="alternate"/><link href="https://emulebb.github.io/he/" hreflang="he" rel="alternate"/><link href="https://emulebb.github.io/hu/" hreflang="hu" rel="alternate"/><link href="https://emulebb.github.io/it/" hreflang="it" rel="alternate"/><link href="https://emulebb.github.io/ja/" hreflang="ja" rel="alternate"/><link href="https://emulebb.github.io/ko/" hreflang="ko" rel="alternate"/><link href="https://emulebb.github.io/lt/" hreflang="lt" rel="alternate"/><link href="https://emulebb.github.io/lv/" hreflang="lv" rel="alternate"/><link href="https://emulebb.github.io/mt/" hreflang="mt" rel="alternate"/><link href="https://emulebb.github.io/nb/" hreflang="nb" rel="alternate"/><link href="https://emulebb.github.io/ru/" hreflang="ru" rel="alternate"/><link href="https://emulebb.github.io/de/" hreflang="de" rel="alternate"/><link href="https://emulebb.github.io/fr/" hreflang="fr" rel="alternate"/><link href="https://emulebb.github.io/pl/" hreflang="pl" rel="alternate"/><link href="https://emulebb.github.io/nl/" hreflang="nl" rel="alternate"/><link href="https://emulebb.github.io/nn/" hreflang="nn" rel="alternate"/><link href="https://emulebb.github.io/ro/" hreflang="ro" rel="alternate"/><link href="https://emulebb.github.io/sl/" hreflang="sl" rel="alternate"/><link href="https://emulebb.github.io/sq/" hreflang="sq" rel="alternate"/><link href="https://emulebb.github.io/sv/" hreflang="sv" rel="alternate"/><link href="https://emulebb.github.io/tr/" hreflang="tr" rel="alternate"/><link href="https://emulebb.github.io/uk/" hreflang="uk" rel="alternate"/><link href="https://emulebb.github.io/ug-cn/" hreflang="ug-CN" rel="alternate"/><link href="https://emulebb.github.io/ca-valencia/" hreflang="ca-ES-valencia" rel="alternate"/><link href="https://emulebb.github.io/ca-valencia-racv/" hreflang="ca-ES-valencia-x-racv" rel="alternate"/><link href="https://emulebb.github.io/vi/" hreflang="vi" rel="alternate"/><link href="https://emulebb.github.io/zh-cn/" hreflang="zh-CN" rel="alternate"/><link href="https://emulebb.github.io/zh-tw/" hreflang="zh-TW" rel="alternate"/><link href="https://emulebb.github.io/" hreflang="x-default" rel="alternate"/>
 <link href="../assets/brand/emulebb-favicon.ico" rel="icon" type="image/x-icon"/>
-<title>eMule broadband edition | Malti</title>
+<title>eMuleBB | Rust beta and stable MFC client</title>
 <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" rel="stylesheet"/>
 <link href="../styles.css" rel="stylesheet"/>
 <style>
@@ -69,10 +69,13 @@
               "name": "eMule broadband edition",
               "alternateName": "eMuleBB",
               "applicationCategory": "FileSharingApplication",
-              "operatingSystem": "Windows",
+              "operatingSystem": ["Windows", "Linux", "macOS"],
               "url": "https://emulebb.github.io/mt/",
-              "codeRepository": "https://github.com/emulebb/emulebb",
-              "description": "eMuleBB is the home of eMule broadband edition, an independent broadband-focused eMule product with upload control, automated testing, SBOM-backed packages, REST automation, eD2K/Kad compatibility, and out-of-the-box aMuTorrent, Prowlarr, Radarr, and Sonarr integration paths. Stable 0.7.3 is published on GitHub Releases."
+              "codeRepository": [
+                "https://github.com/emulebb/emulebb-rust",
+                "https://github.com/emulebb/emulebb"
+              ],
+              "description": "eMuleBB develops an experimental eD2K/Kad client in Rust and maintains the stable eMuleBB MFC 0.7.x Windows client."
       }
     </script>
 </head>
@@ -97,90 +100,85 @@
 <main id="top">
 <section class="hero">
 <div class="hero-copy">
-<p class="eyebrow">Dak li eMuleBB iżid madwar il-client klassiku.</p>
-<h1>eMuleBB iżomm eD2K u Kad utli għal utenti serji.</h1>
-<p class="lead">Stable 0.7.3 is published: a serious Windows eMule line for fast upload links, large shared libraries, always-on sessions, REST controller workflows, Arr integration, and GitHub-built package evidence.</p>
+<p class="eyebrow">Two public eD2K/Kad client lanes</p>
+<h1>Rust is the active beta. MFC is the stable maintenance line.</h1>
+<p class="lead">emulebb-rust 0.1.0-beta.1 is published for experimental testing. eMuleBB MFC 0.7.3 remains the stable Windows release and receives bugs and bounded low-risk improvements.</p>
 <div aria-label="Repożitorji pubbliċi." class="actions">
-<a class="button primary" href="#install">Download 0.7.3</a>
-<a class="button secondary" href="https://github.com/emulebb/emulebb">Sors</a>
+<a class="button primary" href="https://github.com/emulebb/emulebb-rust/releases/tag/rust-v0.1.0-beta.1">Try Rust beta</a>
+<a class="button secondary" href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3">MFC 0.7.3</a>
 </div>
 <div aria-label="Download releases" class="release-links">
 <span>Download releases</span>
-<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3">eMuleBB 0.7.3</a>
-<a href="https://github.com/emulebb/emulebb/releases/download/emulebb-v0.7.3/emulebb-0.7.3-x64.zip">x64 ZIP</a>
-<a href="https://github.com/emulebb/amutorrent/releases/tag/amutorrent-v3.8.8-emulebb-v0.7.3">aMuTorrent 0.7.3</a>
+<a href="https://github.com/emulebb/emulebb-rust/releases/tag/rust-v0.1.0-beta.1">Rust 0.1.0-beta.1</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3">MFC 0.7.3</a>
 </div>
 </div>
 <aside aria-label="eMuleBB" class="hero-panel">
-<p class="panel-kicker">eMuleBB</p>
-<h2>Modernizzazzjoni kawta madwar il-qalba l-qadima.</h2>
-<p>The desktop app stays stock-compatible where the network matters. The stable suite adds local controller workflows around it without turning eMuleBB into a generic torrent shell.</p>
+<p class="panel-kicker">Current posture</p>
+<h2>One active experiment, one maintained stable client</h2>
+<p>New product development belongs to the Rust lane. The MFC line stays published and maintained without a broad feature or architecture roadmap.</p>
 <ul class="signal-list">
-<li>0.7.3 stable published</li>
-<li>One-line suite bootstrap</li>
-<li>Manual standalone ZIP</li>
-<li>GitHub Actions builds</li>
-<li>Manifest hash verification</li>
-<li>SPDX SBOMs</li>
-<li>aMuTorrent controller</li>
-<li>Prowlarr Torznab</li>
-<li>Radarr/Sonarr qBit adapter</li>
-<li>Stock eD2K/Kad compatibility</li>
-<li>Rendered HTML product docs</li>
+<li>Rust 0.1.0-beta.1 published</li>
+<li>Experimental, not production-ready</li>
+<li>MFC 0.7.3 stable</li>
+<li>MFC 0.7.x long-term maintenance</li>
+<li>qBittorrentBB paused</li>
+<li>aMuTorrent frozen</li>
+<li>TrackMuleBB archived</li>
+<li>Native Windows VPN work deprioritized</li>
 </ul>
 </aside>
 </section>
 <section class="testing-callout install-callout" id="install">
 <div>
-<p class="eyebrow">Download</p>
-<h2>Install 0.7.3 with one PowerShell line, or download the ZIP manually.</h2>
-<p>Use the full-suite bootstrapper for eMuleBB plus controller integration, or use the standalone ZIP when you only want the desktop app.</p>
-<div aria-label="Full x64 suite" class="install-command">
+<p class="eyebrow">Published releases</p>
+<h2>Try the Rust beta or use the stable MFC 0.7.3 client.</h2>
+<p>Rust is the active experimental product lane and is not yet production-ready. MFC 0.7.3 remains the stable Windows release and continues on a long-term maintenance track.</p>
+<div aria-label="Historical MFC 0.7.3 suite bundle" class="install-command">
 <div class="install-command-header">
-<strong>Full x64 suite</strong>
+<strong>Historical MFC 0.7.3 suite bundle</strong>
 <button class="copy-command" data-copy-error="Select and copy" data-copy-label="Copy" data-copy-success="Copied" data-copy-text="irm https://emulebb.github.io/install.ps1 | iex" type="button">Copy</button>
 </div>
 <pre class="install-command-code"><code>irm https://emulebb.github.io/install.ps1 | iex</code></pre>
 </div>
-<p class="install-standalone">Standalone app: download the stable 0.7.3 ZIP, extract it, and run <code>emulebb.exe</code>.</p>
+<p class="install-standalone">The one-line installer is retained for the shipped MFC 0.7.3 suite artifact; it is not an active cross-client roadmap.</p>
 </div>
 <div class="testing-actions">
-<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3">Open 0.7.3 release</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">Setup details</a>
+<a href="https://github.com/emulebb/emulebb-rust/releases/tag/rust-v0.1.0-beta.1">Open Rust beta</a>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3">Open MFC 0.7.3</a>
 </div>
 </section>
 <section class="intro">
-<p>This is the home of <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, an independent product for people who still value eMule's distributed sharing model and want it operated like modern software. Stable 0.7.3 packages are published on GitHub Releases with a full-suite bootstrapper, standalone ZIPs, manifests, hashes, SBOMs, and matching aMuTorrent controller assets.</p>
+<p><strong>eMuleBB</strong> now has two clear public entry points: the active experimental <strong>Rust beta</strong> and the stable <strong>MFC 0.7.x</strong> Windows client. Other repositories are supporting harnesses, reference forks, paused experiments, or release history—not additional active products.</p>
 </section>
 <section class="section motivation" id="why">
 <div class="section-heading">
-<p class="eyebrow">Għaliex</p>
-<h2>Client qadim jibqa&#39; utli biss jekk jista&#39; jitħaddem b&#39;fiduċja.</h2>
-<p>eMuleBB iżomm il-fluss klassiku ta' eMule u jżid limiti ċari, dijanjostiċi, REST API u prova tar-release.</p>
+<p class="eyebrow">Lifecycle</p>
+<h2>A smaller, explicit product portfolio</h2>
 </div>
 <div aria-label="eMuleBB motivation" class="motivation-grid">
 <article>
-<span>eD2K/Kad</span>
-<h3>Żomm eD2K u Kad prattiċi</h3>
-<p>eMuleBB iżomm il-fluss klassiku ta' eMule u jżid limiti ċari, dijanjostiċi, REST API u prova tar-release.</p>
+<span>Active</span>
+<h3>emulebb-rust</h3>
+<p>The published beta is the only active product-development lane. It is experimental and not yet production-ready.</p>
 </article>
 <article>
-<span>Upload</span>
-<h3>Kontroll aktar ċar tal-upload u n-netwerk</h3>
-<p>eMule għal links ta' upload veloċi, libreriji kbar maqsuma, sessjonijiet twal ta' Windows u kontroll lokali.</p>
+<span>Stable</span>
+<h3>eMuleBB MFC</h3>
+<p>The published 0.7.3 Windows client continues as a long-term 0.7.x maintenance line for bugs and bounded low-risk changes.</p>
 </article>
 <article>
-<span>Release</span>
-<h3>Provi qabel pakketti pubbliċi</h3>
-<p>Stable 0.7.3 is published on GitHub Releases.</p>
+<span>Reference</span>
+<h3>Experiments stay labeled</h3>
+<p>qBittorrentBB is paused, aMuTorrent is frozen, TrackMuleBB is archived, and the server forks have bounded harness or reference roles.</p>
 </article>
 </div>
 </section>
 <section class="section" id="features">
 <div class="section-heading">
-<p class="eyebrow">Karatteristiċi</p>
-<h2>Dak li eMuleBB iżid madwar il-client klassiku.</h2>
-<p>The stable 0.7.3 line is focused on operator-visible behavior: predictable upload policy, safer binding, fixed performance limits, large-library operation, local automation, and package evidence.</p>
+<p class="eyebrow">Stable MFC capabilities</p>
+<h2>What the maintained MFC client already provides</h2>
+<p>These are shipped 0.7.3 capabilities, not a promise of renewed broad MFC development. Maintenance remains compatibility- and risk-bounded.</p>
 </div>
 <div aria-label="eMule broadband feature groups" class="feature-table">
 <article>
@@ -223,32 +221,22 @@
 <div class="guide-grid guide-compact">
 <article>
 <span>01</span>
-<h3>Żomm eD2K u Kad prattiċi</h3>
-<p>eMuleBB iżomm il-fluss klassiku ta' eMule u jżid limiti ċari, dijanjostiċi, REST API u prova tar-release.</p>
+<h3>Start with the Rust beta</h3>
+<p>Use the published beta for experimental testing and report reproducible issues in emulebb-rust.</p>
 </article>
 <article>
 <span>02</span>
-<h3>Kontroll aktar ċar tal-upload u n-netwerk</h3>
-<p>eMule għal links ta' upload veloċi, libreriji kbar maqsuma, sessjonijiet twal ta' Windows u kontroll lokali.</p>
+<h3>Use MFC for the stable Windows lane</h3>
+<p>Version 0.7.3 remains the supported stable package while 0.7.x receives maintenance fixes.</p>
 </article>
 <article>
 <span>03</span>
-<h3>Testing</h3>
-<p>Provi qabel pakketti pubbliċi</p>
-</article>
-<article>
-<span>04</span>
-<h3>0.7.3 published</h3>
-<p>Stable 0.7.3 is published on GitHub Releases.</p>
-</article>
-<article>
-<span>05</span>
-<h3>Gwida tal-prodott</h3>
-<p>Gwidi dettaljati u dokumenti tas-sors.</p>
+<h3>Check repository lifecycle first</h3>
+<p>The product portfolio and roadmap identify which repositories are active, maintained, frozen, paused, archived, harness-only, or reference-only.</p>
 </article>
 </div>
 <div class="automation-copy docs-automation">
-<p>Awtomazzjoni REST mingħajr ma tissostitwixxi l-app desktop. <code>/api/v1</code>, JSON, <code>X-API-Key</code>.</p>
+<p>The stable MFC client retains its authenticated <code>/api/v1</code> automation surface. Controller forks and qBittorrent-compatible experiments are not forward product priorities.</p>
 <ul aria-label="REST API" class="api-list">
 <li>Transfers</li>
 <li>Searches</li>
@@ -261,29 +249,21 @@
 </ul>
 </div>
 <div class="doc-list">
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
-<strong>Mudell qasir ta&#39; tħaddim.</strong>
-<span>eMule għal links ta&#39; upload veloċi, libreriji kbar maqsuma, sessjonijiet twal ta&#39; Windows u kontroll lokali.</span>
+<a href="https://emulebb.github.io/emulebb-tooling/active/PRODUCT-PORTFOLIO/">
+<strong>Product portfolio</strong>
+<span>Current repository lifecycle and support status.</span>
+</a>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/ROADMAP-SUMMARY/">
+<strong>eMuleBB Roadmap</strong>
+<span>Active Rust beta work and MFC maintenance.</span>
 </a>
 <a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
 <strong>Gwida tal-prodott</strong>
 <span>eMuleBB iżomm il-fluss klassiku ta&#39; eMule u jżid limiti ċari, dijanjostiċi, REST API u prova tar-release.</span>
 </a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-STACK-INTEGRATIONS/">
-<strong>aMuTorrent + eMuleBB</strong>
-<span>Awtomazzjoni REST mingħajr ma tissostitwixxi l-app desktop.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">
-<strong>Awtomazzjoni REST mingħajr ma tissostitwixxi l-app desktop.</strong>
-<span>Awtomazzjoni REST mingħajr ma tissostitwixxi l-app desktop.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">
-<strong>Dak li eMuleBB iżid madwar il-client klassiku.</strong>
+<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
+<strong>Mudell qasir ta&#39; tħaddim.</strong>
 <span>eMule għal links ta&#39; upload veloċi, libreriji kbar maqsuma, sessjonijiet twal ta&#39; Windows u kontroll lokali.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-P2P-OVERLORD-EMULE-AGENT/">
-<strong>p2p-overlord eMule agent</strong>
-<span>Headless Rust Kad/eD2K agent boundary, source docs, and eMuleBB contract notes.</span>
 </a>
 <a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
 <strong>0.7.3</strong>
@@ -319,39 +299,29 @@
 </section>
 <section class="section release" id="release">
 <div class="section-heading">
-<p class="eyebrow">Security and provenance</p>
-<h2>0.7.3 is built and packaged on GitHub</h2>
+<p class="eyebrow">Published releases</p>
+<h2>Use the release that matches the lane</h2>
 </div>
 <div aria-label="eMuleBB release proof" class="release-grid">
 <article>
 <span></span>
-<strong>Published 0.7.3</strong>
-<p><code>emulebb-v0.7.3</code> is a stable GitHub release with x64 and ARM64 ZIPs, diagnostics packages, manifests, SBOMs, and the suite bootstrapper.</p>
+<strong>Rust 0.1.0-beta.1</strong>
+<p>The first public Rust beta is available for experimental testing. It is the active development lane, but it is not production-ready.</p>
 </article>
 <article>
 <span></span>
-<strong>Hash-checked setup</strong>
-<p>The bootstrapper downloads release assets and verifies package hashes from the published manifests before installing.</p>
+<strong>MFC 0.7.3</strong>
+<p>The stable Windows package remains published with manifests, hashes, SBOMs, and diagnostics assets.</p>
 </article>
 <article>
 <span></span>
-<strong>Suite assets</strong>
-<p>The matching aMuTorrent 0.7.3 companion package is published separately, and the full x64 bootstrap flow resolves it automatically for controller setup.</p>
+<strong>Historical Suite bundle</strong>
+<p>The MFC 0.7.3 release keeps its suite installer and aMuTorrent artifact. “Suite” describes that shipped bundle, not an active umbrella roadmap.</p>
 </article>
 <article>
 <span></span>
-<strong>SPDX SBOM</strong>
-<p>Release packages carry package-local <code>SBOM.spdx.json</code> plus sidecar <code>*.sbom.spdx.json</code> files, with manifest hashes that tie software contents to the exact package evidence.</p>
-</article>
-<article>
-<span></span>
-<strong>GitHub provenance</strong>
-<p>Stable 0.7.3 assets are published from GitHub release automation with manifests, SHA-256 evidence, SBOMs, and a bootstrapper hash asset for verification.</p>
-</article>
-<article>
-<span></span>
-<strong>Controller proof</strong>
-<p>aMuTorrent, Prowlarr, Radarr, Sonarr, Torznab, and qBittorrent-compatible lanes are documented as local integration paths around the native <code>/api/v1</code> contract.</p>
+<strong>Evidence stays lane-specific</strong>
+<p>Capabilities, platform support, and network-safety claims must be proven by the repository and release that owns them.</p>
 </article>
 </div>
 </section>
@@ -361,13 +331,17 @@
 <h2>Repożitorji pubbliċi.</h2>
 </div>
 <div class="repo-list">
+<a href="https://github.com/emulebb/emulebb-rust">
+<strong>emulebb-rust</strong>
+<span>Active experimental Rust beta and current product-development lane.</span>
+</a>
 <a href="https://github.com/emulebb/emulebb">
 <strong>emulebb</strong>
 <span>eMuleBB iżomm il-fluss klassiku ta&#39; eMule u jżid limiti ċari, dijanjostiċi, REST API u prova tar-release.</span>
 </a>
-<a href="https://github.com/emulebb/amutorrent">
-<strong>amutorrent</strong>
-<span>aMuTorrent fork for managing eMuleBB.</span>
+<a href="https://github.com/emulebb/emulebb-tooling">
+<strong>emulebb-tooling</strong>
+<span>Gwidi dettaljati u dokumenti tas-sors.</span>
 </a>
 <a href="https://github.com/emulebb/emulebb-build">
 <strong>emulebb-build</strong>
@@ -377,25 +351,25 @@
 <strong>emulebb-build-tests</strong>
 <span>Provi qabel pakketti pubbliċi</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-tooling">
-<strong>emulebb-tooling</strong>
-<span>Gwidi dettaljati u dokumenti tas-sors.</span>
+<a href="https://github.com/emulebb/goed2k-server">
+<strong>goed2k-server</strong>
+<span>Fixed-purpose eD2K harness server with no product evolution planned.</span>
 </a>
-<a href="https://github.com/emulebb/p2p-overlord-agents">
-<strong>p2p-overlord-agents</strong>
-<span>Exploratory p2p-overlord agents for headless P2P workflows.</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-be">
-<strong>p2p-overlord-be</strong>
-<span>Exploratory Rust eD2K/Kad backend work in the p2p-overlord suite.</span>
-</a>
-<a href="https://github.com/emulebb/p2p-overlord-tooling">
-<strong>p2p-overlord-tooling</strong>
-<span>Scenario manifests, parity runners, reports, and quality guards for p2p-overlord.</span>
+<a href="https://github.com/emulebb/ed2k-server">
+<strong>ed2k-server</strong>
+<span>Reference fork for analysis and possible upstream contributions.</span>
 </a>
 <a href="https://github.com/emulebb/amule">
 <strong>aMule Windows builds</strong>
 <span>Windows build and validation track for aMule users.</span>
+</a>
+<a href="https://github.com/emulebb/amutorrent">
+<strong>amutorrent</strong>
+<span>Frozen controller fork retained with the MFC 0.7.3 history.</span>
+</a>
+<a href="https://github.com/emulebb/qbittorrentbb">
+<strong>qbittorrentbb</strong>
+<span>Paused BitTorrent experiment retained for reference.</span>
 </a>
 </div>
 </section>

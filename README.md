@@ -1,7 +1,8 @@
-# eMule broadband edition website
+# eMuleBB organization website
 
-This repository publishes the organization GitHub Pages site for eMule
-broadband edition, code name `emulebb`.
+This repository publishes the organization GitHub Pages site. The public front
+door presents `emulebb-rust` as the active experimental beta and eMuleBB MFC
+`0.7.x` as the stable long-term maintenance line.
 
 The public site is expected to publish at:
 
@@ -31,7 +32,9 @@ published as rendered HTML at:
 
 <https://emulebb.github.io/emulebb-tooling/>
 
-Before changing homepage claims, update and validate the source docs:
+Before changing homepage claims, update and validate the source docs. Lifecycle
+and roadmap facts come from `PRODUCT-PORTFOLIO.md` and `ROADMAP-SUMMARY.md`;
+release facts remain owned by the corresponding product repository:
 
 ```powershell
 cd ..\emulebb-tooling
