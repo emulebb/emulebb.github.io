@@ -4,10 +4,12 @@ This handbook is the maintainer contract for the public eMule broadband edition
 site at `https://emulebb.github.io/`.
 
 The site is the curated public front door for the eMuleBB organization. It
-presents `emulebb-rust` as the active experimental beta and eMuleBB MFC
-`0.7.x` as the stable long-term maintenance lane. It is not the canonical
-engineering ledger, release ledger, or feature backlog. Those live in the
-public `emulebb-tooling` docs and the owning release repositories.
+presents CI-gated `emulebb-rust` nightly builds as the active experimental beta
+testing channel and eMuleBB MFC `0.7.x` as the stable long-term maintenance
+lane. Rust development is best-effort and spare-time, and contributors are
+welcome. The site is not the canonical engineering ledger, release ledger, or
+feature backlog. Those live in the public `emulebb-tooling` docs and the owning
+release repositories.
 
 ## Authority And Content Model
 
@@ -28,8 +30,12 @@ public `emulebb-tooling` docs and the owning release repositories.
 - The current public release is stable `0.7.3` (published 2026-07-05). Older
   `0.7.3-rc.*` releases are historical prerelease evidence, not the current
   install target.
-- The active product-development release is the experimental
-  `emulebb-rust` `0.1.0-beta.1`. It must not be described as production-ready.
+- The active product-development download channel is the experimental,
+  CI-gated `emulebb-rust` nightly prereleases from `main`. They must not be
+  described as production-ready or code-signed. Formal beta tags remain
+  immutable release evidence, not the public front-door download target.
+- Rust development is best-effort and spare-time. Public copy should welcome
+  contributors and link to the repository's `CONTRIBUTING.md`.
 - The historical MFC `0.7.3` suite installer and aMuTorrent package remain
   published artifacts, but “Suite” is not an active umbrella roadmap.
 - Feature details should prefer durable reference docs such as:
@@ -94,7 +100,8 @@ Rules:
 - The homepage feature copy may highlight only landed, documented,
   passed, release-proven, or otherwise source-confirmed features.
 - MFC feature copy must be labeled as stable shipped capability, not active
-  broad development. Rust capability claims must be beta-specific.
+  broad development. Rust capability claims must be nightly beta-channel
+  specific and evidence-bound.
 - Open, deferred, exploratory, or future backlog items must not be presented as
   shipped homepage features.
 - Future-facing items must stay out of homepage feature copy.
