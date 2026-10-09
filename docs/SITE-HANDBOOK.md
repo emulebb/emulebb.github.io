@@ -4,12 +4,12 @@ This handbook is the maintainer contract for the public eMule broadband edition
 site at `https://emulebb.github.io/`.
 
 The site is the curated public front door for the eMuleBB organization. It
-presents CI-gated `emulebb-rust` nightly builds as the active experimental beta
-testing channel and eMuleBB MFC `0.7.x` as the stable long-term maintenance
-lane. Rust development is best-effort and spare-time, and contributors are
-welcome. The site is not the canonical engineering ledger, release ledger, or
-feature backlog. Those live in the public `emulebb-tooling` docs and the owning
-release repositories.
+presents CI-gated `emulebb-rust` nightly builds as the active beta testing
+channel and eMuleBB MFC `0.7.x` as the stable long-term maintenance lane. Rust
+development is best-effort and spare-time, and contributors are welcome. The
+site is not the canonical engineering ledger, release ledger, or feature
+backlog. Those live in the public `emulebb-tooling` docs and the owning release
+repositories.
 
 ## Authority And Content Model
 
@@ -30,9 +30,8 @@ release repositories.
 - The current public release is stable `0.7.3` (published 2026-07-05). Older
   `0.7.3-rc.*` releases are historical prerelease evidence, not the current
   install target.
-- The active product-development download channel is the experimental,
-  CI-gated `emulebb-rust` nightly prereleases from `main`. They must not be
-  described as production-ready or code-signed. Formal beta tags remain
+- The active product-development download channel is the CI-gated
+  `emulebb-rust` nightly prereleases from `main`. Formal beta tags remain
   immutable release evidence, not the public front-door download target.
 - Rust development is best-effort and spare-time. Public copy should welcome
   contributors and link to the repository's `CONTRIBUTING.md`.
