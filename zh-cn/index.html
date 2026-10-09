@@ -75,7 +75,7 @@
                 "https://github.com/emulebb/emulebb-rust",
                 "https://github.com/emulebb/emulebb"
               ],
-              "description": "eMuleBB publishes CI-gated nightly builds of its experimental Rust eD2K/Kad client and maintains the stable eMuleBB MFC 0.7.x Windows client."
+              "description": "eMuleBB publishes CI-gated nightly builds of its Rust eD2K/Kad client in beta and maintains the stable eMuleBB MFC 0.7.x Windows client."
       }
     </script>
 </head>
@@ -102,7 +102,7 @@
 <div class="hero-copy">
 <p class="eyebrow">Two public eD2K/Kad client lanes</p>
 <h1>Rust is in beta with nightly builds. MFC is the stable maintenance line.</h1>
-<p class="lead">emulebb-rust is in beta. CI-gated nightly builds from main are the current public testing channel; they are unsigned and not production-ready. eMuleBB MFC 0.7.3 remains the stable Windows release.</p>
+<p class="lead">emulebb-rust is in beta. CI-gated nightly builds from main are the current public testing channel. eMuleBB MFC 0.7.3 remains the stable Windows release.</p>
 <div aria-label="项目链接" class="actions">
 <a class="button primary" href="https://github.com/emulebb/emulebb-rust/releases">Get Rust nightlies</a>
 <a class="button secondary" href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">Contribute</a>
@@ -114,12 +114,12 @@
 </div>
 <aside aria-label="eMuleBB 概要" class="hero-panel">
 <p class="panel-kicker">Current posture</p>
-<h2>One beta-stage experiment, one maintained stable client</h2>
+<h2>One active beta, one maintained stable client</h2>
 <p>Rust moves forward as a best-effort, spare-time project, and contributors are welcome. The MFC line stays published and maintained without a broad feature or architecture roadmap.</p>
 <ul class="signal-list">
 <li>CI-gated nightly builds from main</li>
-<li>Beta-stage, not production-ready</li>
-<li>Unsigned packages with SHA-256 evidence</li>
+<li>Windows, Linux, and macOS packages</li>
+<li>SHA-256 checksums and provenance attestations</li>
 <li>Best-effort development</li>
 <li>Contributors welcome</li>
 <li>MFC 0.7.3 stable</li>
@@ -135,7 +135,7 @@
 <div>
 <p class="eyebrow">Public download channels</p>
 <h2>Test Rust nightlies or use the stable MFC 0.7.3 client.</h2>
-<p>Rust nightlies are unsigned, CI-gated experimental builds from <code>main</code>; they are not production-ready. Development is best-effort and spare-time, and <a href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">contributors are welcome</a>. MFC 0.7.3 remains the stable Windows release.</p>
+<p>Rust nightlies are CI-gated builds from <code>main</code>. Development is best-effort and spare-time, and <a href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">contributors are welcome</a>. MFC 0.7.3 remains the stable Windows release.</p>
 <div aria-label="Historical MFC 0.7.3 suite bundle" class="install-command">
 <div class="install-command-header">
 <strong>Historical MFC 0.7.3 suite bundle</strong>
@@ -151,7 +151,7 @@
 </div>
 </section>
 <section class="intro">
-<p><strong>eMuleBB</strong> now has two clear public entry points: the experimental <strong>Rust nightly beta channel</strong> and the stable <strong>MFC 0.7.x</strong> Windows client. Rust development happens when maintainer time allows, and <a href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">contributors are very welcome</a>. Other repositories are supporting harnesses, reference forks, paused experiments, or release history—not additional active products.</p>
+<p><strong>eMuleBB</strong> now has two clear public entry points: the <strong>Rust nightly beta channel</strong> and the stable <strong>MFC 0.7.x</strong> Windows client. Rust development happens when maintainer time allows, and <a href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">contributors are very welcome</a>. Other repositories are supporting harnesses, reference forks, paused experiments, or release history—not additional active products.</p>
 </section>
 <section class="section motivation" id="why">
 <div class="section-heading">
@@ -162,7 +162,7 @@
 <article>
 <span>Active</span>
 <h3>Rust nightly beta channel</h3>
-<p>CI-gated nightlies from <code>main</code> are the current public testing builds. They are experimental, unsigned, and not production-ready.</p>
+<p>CI-gated nightlies from <code>main</code> are the current public testing builds for Windows, Linux, and macOS.</p>
 </article>
 <article>
 <span>Stable</span>
@@ -224,7 +224,7 @@
 <article>
 <span>01</span>
 <h3>Start with Rust nightlies</h3>
-<p>Use the <a href="https://github.com/emulebb/emulebb-rust/releases">current nightly prereleases</a> for experimental testing, verify <code>SHA256SUMS</code>, and report reproducible issues in emulebb-rust.</p>
+<p>Use the <a href="https://github.com/emulebb/emulebb-rust/releases">current nightly prereleases</a> for beta testing, verify <code>SHA256SUMS</code>, and report reproducible issues in emulebb-rust.</p>
 </article>
 <article>
 <span>02</span>
@@ -325,7 +325,7 @@
 <article>
 <span></span>
 <strong>Evidence stays lane-specific</strong>
-<p>Nightlies remain experimental and unsigned. Capabilities, platform support, and network-safety claims must be proven by the repository and release that owns them.</p>
+<p>Capabilities, platform support, and network-safety claims must be proven by the repository and release that owns them.</p>
 </article>
 </div>
 </section>
@@ -337,7 +337,7 @@
 <div class="repo-list">
 <a href="https://github.com/emulebb/emulebb-rust">
 <strong>emulebb-rust</strong>
-<span>active experimental beta and current product-development lane</span>
+<span>active beta and current product-development lane</span>
 </a>
 <a href="https://github.com/emulebb/emulebb">
 <strong>emulebb</strong>

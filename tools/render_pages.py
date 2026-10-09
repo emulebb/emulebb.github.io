@@ -160,9 +160,8 @@ INSTALL_CALLOUT = {
     "eyebrow": "Public download channels",
     "h2": "Test Rust nightlies or use the stable MFC 0.7.3 client.",
     "p": (
-        "Rust nightlies are unsigned, CI-gated experimental builds from "
-        "<code>main</code>; they are not production-ready. Development is "
-        "best-effort and spare-time, and "
+        "Rust nightlies are CI-gated builds from <code>main</code>. Development "
+        "is best-effort and spare-time, and "
         f'<a href="{RUST_CONTRIBUTING_URL}">contributors are welcome</a>. '
         "MFC 0.7.3 remains the stable Windows release."
     ),
@@ -401,7 +400,7 @@ DOC_COPY = {'en': {'portfolio': ('Product portfolio',
                     'Current RC gates, automated test evidence, SBOM/package proof, and readiness rules.')}}
 
 
-REPO_COPY = {'en': {'rust': 'active experimental beta and current product-development lane',
+REPO_COPY = {'en': {'rust': 'active beta and current product-development lane',
         'emule': 'stable 0.7.x Windows client in long-term maintenance',
         'setup': 'reproducible workspace setup',
         'build': 'build, validation, and release orchestration',
@@ -935,7 +934,7 @@ def stock_repo_copy(t: dict[str, Any]) -> dict[str, str]:
     """Build localized repository blurbs for generated stock locales."""
 
     return {
-        "rust": "Active experimental Rust beta and current product-development lane.",
+        "rust": "Active Rust beta and current product-development lane.",
         "emule": t["intro"],
         "setup": t["guide"],
         "build": t["proof"],
@@ -1136,9 +1135,8 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
     content["og_title"] = content["title"]
     content["og_description"] = content["meta_description"]
     content["structured_description"] = (
-        "eMuleBB publishes CI-gated nightly builds of its experimental Rust "
-        "eD2K/Kad client and maintains the stable eMuleBB MFC 0.7.x Windows "
-        "client."
+        "eMuleBB publishes CI-gated nightly builds of its Rust eD2K/Kad client "
+        "in beta and maintains the stable eMuleBB MFC 0.7.x Windows client."
     )
     content["release_downloads_label"] = "Stable alternative"
     content["hero"].update(
@@ -1150,16 +1148,15 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
             ),
             "lead": (
                 "emulebb-rust is in beta. CI-gated nightly builds from main are "
-                "the current public testing channel; they are unsigned and not "
-                "production-ready. eMuleBB MFC 0.7.3 remains the stable Windows "
-                "release."
+                "the current public testing channel. eMuleBB MFC 0.7.3 remains "
+                "the stable Windows release."
             ),
             "install": "Get Rust nightlies",
             "primary_href": RUST_RELEASES_URL,
             "source": "Contribute",
             "secondary_href": RUST_CONTRIBUTING_URL,
             "panel_kicker": "Current posture",
-            "panel_h2": "One beta-stage experiment, one maintained stable client",
+            "panel_h2": "One active beta, one maintained stable client",
             "panel_p": (
                 "Rust moves forward as a best-effort, spare-time project, and "
                 "contributors are welcome. The MFC line stays published and "
@@ -1167,8 +1164,8 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
             ),
             "signals": [
                 "CI-gated nightly builds from main",
-                "Beta-stage, not production-ready",
-                "Unsigned packages with SHA-256 evidence",
+                "Windows, Linux, and macOS packages",
+                "SHA-256 checksums and provenance attestations",
                 "Best-effort development",
                 "Contributors welcome",
                 "MFC 0.7.3 stable",
@@ -1182,7 +1179,7 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
     )
     content["intro"] = (
         "<strong>eMuleBB</strong> now has two clear public entry points: the "
-        "experimental <strong>Rust nightly beta channel</strong> and the stable "
+        "<strong>Rust nightly beta channel</strong> and the stable "
         "<strong>MFC 0.7.x</strong> Windows client. Rust development happens "
         "when maintainer time allows, and "
         f'<a href="{RUST_CONTRIBUTING_URL}">contributors are very welcome</a>. '
@@ -1196,8 +1193,7 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
                 "Active",
                 "Rust nightly beta channel",
                 "CI-gated nightlies from <code>main</code> are the current public "
-                "testing builds. They are experimental, unsigned, and not "
-                "production-ready.",
+                "testing builds for Windows, Linux, and macOS.",
             ),
             c("Stable", "eMuleBB MFC", "The published 0.7.3 Windows client continues as a long-term 0.7.x maintenance line for bugs and bounded low-risk changes."),
             c(
@@ -1220,7 +1216,7 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
             "",
             "Start with Rust nightlies",
             f'Use the <a href="{RUST_RELEASES_URL}">current nightly '
-            "prereleases</a> for experimental testing, verify "
+            "prereleases</a> for beta testing, verify "
             "<code>SHA256SUMS</code>, and report reproducible issues in "
             "emulebb-rust.",
         ),
@@ -1254,9 +1250,8 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
             c(
                 "",
                 "Evidence stays lane-specific",
-                "Nightlies remain experimental and unsigned. Capabilities, "
-                "platform support, and network-safety claims must be proven by "
-                "the repository and release that owns them.",
+                "Capabilities, platform support, and network-safety claims must "
+                "be proven by the repository and release that owns them.",
             ),
         ],
     }
