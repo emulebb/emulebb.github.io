@@ -21,6 +21,10 @@ SITE_BASE_URL = "https://emulebb.github.io"
 DOCS_SITE_URL = "https://emulebb.github.io/emulebb-tooling"
 PICO_CDN = "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
 GA_MEASUREMENT_ID = "G-8G02C2WFEB"
+RUST_RELEASES_URL = "https://github.com/emulebb/emulebb-rust/releases"
+RUST_CONTRIBUTING_URL = (
+    "https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md"
+)
 
 
 @dataclass(frozen=True)
@@ -148,23 +152,28 @@ REPOS = [
 ]
 
 RELEASE_DOWNLOADS = [
-    ("https://github.com/emulebb/emulebb-rust/releases/tag/rust-v0.1.0-beta.1", "Rust 0.1.0-beta.1"),
-    ("https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3", "MFC 0.7.3"),
+    ("https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3", "MFC 0.7.3 stable"),
 ]
 
 INSTALL_CALLOUT = {
     "id": "install",
-    "eyebrow": "Published releases",
-    "h2": "Try the Rust beta or use the stable MFC 0.7.3 client.",
-    "p": "Rust is the active experimental product lane and is not yet production-ready. MFC 0.7.3 remains the stable Windows release and continues on a long-term maintenance track.",
+    "eyebrow": "Public download channels",
+    "h2": "Test Rust nightlies or use the stable MFC 0.7.3 client.",
+    "p": (
+        "Rust nightlies are unsigned, CI-gated experimental builds from "
+        "<code>main</code>; they are not production-ready. Development is "
+        "best-effort and spare-time, and "
+        f'<a href="{RUST_CONTRIBUTING_URL}">contributors are welcome</a>. '
+        "MFC 0.7.3 remains the stable Windows release."
+    ),
     "command_label": "Historical MFC 0.7.3 suite bundle",
     "command": "irm https://emulebb.github.io/install.ps1 | iex",
     "copy": "Copy",
     "copied": "Copied",
     "copy_error": "Select and copy",
     "standalone": "The one-line installer is retained for the shipped MFC 0.7.3 suite artifact; it is not an active cross-client roadmap.",
-    "primary": "Open Rust beta",
-    "primary_href": "https://github.com/emulebb/emulebb-rust/releases/tag/rust-v0.1.0-beta.1",
+    "primary": "Get Rust nightlies",
+    "primary_href": RUST_RELEASES_URL,
     "secondary": "Open MFC 0.7.3",
     "secondary_href": "https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3",
 }
@@ -1119,40 +1128,49 @@ def apply_stable_release_copy(content: dict[str, Any]) -> None:
 def apply_lifecycle_copy(content: dict[str, Any]) -> None:
     """Apply the current organization lifecycle to every generated homepage."""
 
-    content["title"] = "eMuleBB | Rust beta and stable MFC client"
+    content["title"] = "eMuleBB | Rust nightly builds and stable MFC client"
     content["meta_description"] = (
-        "eMuleBB publishes an active experimental Rust beta and maintains the "
-        "stable MFC 0.7.x Windows client."
+        "eMuleBB publishes CI-gated Rust nightly builds for beta testing and "
+        "maintains the stable MFC 0.7.x Windows client."
     )
     content["og_title"] = content["title"]
     content["og_description"] = content["meta_description"]
     content["structured_description"] = (
-        "eMuleBB develops an experimental eD2K/Kad client in Rust and maintains "
-        "the stable eMuleBB MFC 0.7.x Windows client."
+        "eMuleBB publishes CI-gated nightly builds of its experimental Rust "
+        "eD2K/Kad client and maintains the stable eMuleBB MFC 0.7.x Windows "
+        "client."
     )
+    content["release_downloads_label"] = "Stable alternative"
     content["hero"].update(
         {
             "eyebrow": "Two public eD2K/Kad client lanes",
-            "h1": "Rust is the active beta. MFC is the stable maintenance line.",
-            "lead": (
-                "emulebb-rust 0.1.0-beta.1 is published for experimental testing. "
-                "eMuleBB MFC 0.7.3 remains the stable Windows release and receives "
-                "bugs and bounded low-risk improvements."
+            "h1": (
+                "Rust is in beta with nightly builds. MFC is the stable "
+                "maintenance line."
             ),
-            "install": "Try Rust beta",
-            "primary_href": "https://github.com/emulebb/emulebb-rust/releases/tag/rust-v0.1.0-beta.1",
-            "source": "MFC 0.7.3",
-            "secondary_href": "https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3",
+            "lead": (
+                "emulebb-rust is in beta. CI-gated nightly builds from main are "
+                "the current public testing channel; they are unsigned and not "
+                "production-ready. eMuleBB MFC 0.7.3 remains the stable Windows "
+                "release."
+            ),
+            "install": "Get Rust nightlies",
+            "primary_href": RUST_RELEASES_URL,
+            "source": "Contribute",
+            "secondary_href": RUST_CONTRIBUTING_URL,
             "panel_kicker": "Current posture",
-            "panel_h2": "One active experiment, one maintained stable client",
+            "panel_h2": "One beta-stage experiment, one maintained stable client",
             "panel_p": (
-                "New product development belongs to the Rust lane. The MFC line "
-                "stays published and maintained without a broad feature or "
-                "architecture roadmap."
+                "Rust moves forward as a best-effort, spare-time project, and "
+                "contributors are welcome. The MFC line stays published and "
+                "maintained without a broad feature or architecture roadmap."
             ),
             "signals": [
-                "Rust 0.1.0-beta.1 published",
-                "Experimental, not production-ready",
+                "CI-gated nightly builds from main",
+                "Beta-stage, not production-ready",
+                "Unsigned packages with SHA-256 evidence",
+                "Best-effort development",
+                "Contributors welcome",
                 "MFC 0.7.3 stable",
                 "MFC 0.7.x long-term maintenance",
                 "qBittorrentBB paused",
@@ -1164,17 +1182,31 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
     )
     content["intro"] = (
         "<strong>eMuleBB</strong> now has two clear public entry points: the "
-        "active experimental <strong>Rust beta</strong> and the stable "
-        "<strong>MFC 0.7.x</strong> Windows client. Other repositories are "
-        "supporting harnesses, reference forks, paused experiments, or release "
-        "history—not additional active products."
+        "experimental <strong>Rust nightly beta channel</strong> and the stable "
+        "<strong>MFC 0.7.x</strong> Windows client. Rust development happens "
+        "when maintainer time allows, and "
+        f'<a href="{RUST_CONTRIBUTING_URL}">contributors are very welcome</a>. '
+        "Other repositories are supporting harnesses, reference forks, paused "
+        "experiments, or release history—not additional active products."
     )
     content["why"] = {
         **s("Lifecycle", "A smaller, explicit product portfolio"),
         "cards": [
-            c("Active", "emulebb-rust", "The published beta is the only active product-development lane. It is experimental and not yet production-ready."),
+            c(
+                "Active",
+                "Rust nightly beta channel",
+                "CI-gated nightlies from <code>main</code> are the current public "
+                "testing builds. They are experimental, unsigned, and not "
+                "production-ready.",
+            ),
             c("Stable", "eMuleBB MFC", "The published 0.7.3 Windows client continues as a long-term 0.7.x maintenance line for bugs and bounded low-risk changes."),
-            c("Reference", "Experiments stay labeled", "qBittorrentBB is paused, aMuTorrent is frozen, TrackMuleBB is archived, and the server forks have bounded harness or reference roles."),
+            c(
+                "Community",
+                "Contributors are welcome",
+                "Rust development is best-effort and spare-time. Read the "
+                f'<a href="{RUST_CONTRIBUTING_URL}">contributing guide</a> to '
+                "help with code, tests, documentation, or validation.",
+            ),
         ],
     }
     content["features"]["eyebrow"] = "Stable MFC capabilities"
@@ -1184,9 +1216,22 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
         "MFC development. Maintenance remains compatibility- and risk-bounded."
     )
     content["guide"]["cards"] = [
-        c("", "Start with the Rust beta", "Use the published beta for experimental testing and report reproducible issues in emulebb-rust."),
+        c(
+            "",
+            "Start with Rust nightlies",
+            f'Use the <a href="{RUST_RELEASES_URL}">current nightly '
+            "prereleases</a> for experimental testing, verify "
+            "<code>SHA256SUMS</code>, and report reproducible issues in "
+            "emulebb-rust.",
+        ),
+        c(
+            "",
+            "Contribute to the active lane",
+            "The project advances when maintainer and contributor time allows. "
+            f'The <a href="{RUST_CONTRIBUTING_URL}">contributing guide</a> '
+            "covers code, tests, documentation, and validation.",
+        ),
         c("", "Use MFC for the stable Windows lane", "Version 0.7.3 remains the supported stable package while 0.7.x receives maintenance fixes."),
-        c("", "Check repository lifecycle first", "The product portfolio and roadmap identify which repositories are active, maintained, frozen, paused, archived, harness-only, or reference-only."),
     ]
     content["automation"]["p"] = (
         "The stable MFC client retains its authenticated <code>/api/v1</code> "
@@ -1196,10 +1241,23 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
     content["release"] = {
         **s("Published releases", "Use the release that matches the lane"),
         "cards": [
-            c("", "Rust 0.1.0-beta.1", "The first public Rust beta is available for experimental testing. It is the active development lane, but it is not production-ready."),
+            c(
+                "",
+                "Rust nightly builds",
+                "CI-passed <code>main</code> commits publish immutable nightly "
+                "prereleases with native packages, <code>SHA256SUMS</code>, "
+                "provenance attestations, and a retained history of the newest "
+                "14 builds.",
+            ),
             c("", "MFC 0.7.3", "The stable Windows package remains published with manifests, hashes, SBOMs, and diagnostics assets."),
             c("", "Historical Suite bundle", "The MFC 0.7.3 release keeps its suite installer and aMuTorrent artifact. “Suite” describes that shipped bundle, not an active umbrella roadmap."),
-            c("", "Evidence stays lane-specific", "Capabilities, platform support, and network-safety claims must be proven by the repository and release that owns them."),
+            c(
+                "",
+                "Evidence stays lane-specific",
+                "Nightlies remain experimental and unsigned. Capabilities, "
+                "platform support, and network-safety claims must be proven by "
+                "the repository and release that owns them.",
+            ),
         ],
     }
     content["repos"]["eyebrow"] = "Repository lifecycle"
