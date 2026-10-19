@@ -124,10 +124,10 @@
 <li>Contributors welcome</li>
 <li>MFC 0.7.3 stable</li>
 <li>MFC 0.7.x long-term maintenance</li>
-<li>qBittorrentBB paused</li>
-<li>aMuTorrent frozen</li>
-<li>TrackMuleBB archived</li>
-<li>Native Windows VPN work deprioritized</li>
+<li>Rust server for deterministic local tests</li>
+<li>Official aMule upstream parity</li>
+<li>Stock eMule 0.72 compatibility</li>
+<li>MFC diagnostics and critical fixes retained</li>
 </ul>
 </aside>
 </section>
@@ -151,7 +151,7 @@
 </div>
 </section>
 <section class="intro">
-<p><strong>eMuleBB</strong> now has two clear public entry points: the <strong>Rust nightly beta channel</strong> and the stable <strong>MFC 0.7.x</strong> Windows client. Rust development happens when maintainer time allows, and <a href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">contributors are very welcome</a>. Other repositories are supporting harnesses, reference forks, paused experiments, or release history—not additional active products.</p>
+<p><strong>eMuleBB</strong> now has two clear public entry points: the <strong>Rust nightly beta channel</strong> and the stable <strong>MFC 0.7.x</strong> Windows client. Rust development happens when maintainer time allows, and <a href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">contributors are very welcome</a>. Supporting repositories focus on diagnostics, deterministic local testing, release engineering, and upstream compatibility.</p>
 </section>
 <section class="section motivation" id="why">
 <div class="section-heading">
@@ -238,7 +238,7 @@
 </article>
 </div>
 <div class="automation-copy docs-automation">
-<p>The stable MFC client retains its authenticated <code>/api/v1</code> automation surface. Controller forks and qBittorrent-compatible experiments are not forward product priorities.</p>
+<p>The stable MFC client retains its authenticated <code>/api/v1</code> automation surface. Retired controller forks are not forward product priorities.</p>
 <ul aria-label="REST API" class="api-list">
 <li>Transfers</li>
 <li>Searches</li>
@@ -329,8 +329,8 @@
 </section>
 <section class="section repos" id="repos">
 <div class="section-heading">
-<p class="eyebrow">Αποθετήρια</p>
-<h2>Δημόσια αποθετήρια.</h2>
+<p class="eyebrow">Current project scope</p>
+<h2>Clients, infrastructure, and compatibility references</h2>
 </div>
 <div class="repo-list">
 <a href="https://github.com/emulebb/emulebb-rust">
@@ -339,39 +339,31 @@
 </a>
 <a href="https://github.com/emulebb/emulebb">
 <strong>emulebb</strong>
-<span>Το eMuleBB διατηρεί τη γνώριμη ροή του eMule και προσθέτει σαφή όρια, διαγνωστικά, REST API και τεκμήρια release.</span>
-</a>
-<a href="https://github.com/emulebb/emulebb-tooling">
-<strong>emulebb-tooling</strong>
-<span>Αναλυτικοί οδηγοί και έγγραφα πηγής.</span>
-</a>
-<a href="https://github.com/emulebb/emulebb-build">
-<strong>emulebb-build</strong>
-<span>Τεκμήρια πριν από δημόσια πακέτα</span>
-</a>
-<a href="https://github.com/emulebb/emulebb-build-tests">
-<strong>emulebb-build-tests</strong>
-<span>Τεκμήρια πριν από δημόσια πακέτα</span>
-</a>
-<a href="https://github.com/emulebb/goed2k-server">
-<strong>goed2k-server</strong>
-<span>Fixed-purpose eD2K harness server with no product evolution planned.</span>
+<span>Stable 0.7.x Windows client, diagnostic baseline, and critical-fix maintenance lane.</span>
 </a>
 <a href="https://github.com/emulebb/ed2k-server">
 <strong>ed2k-server</strong>
-<span>Reference fork for analysis and possible upstream contributions.</span>
+<span>Sole local deterministic eD2K server, maintained as a minimal upstream-aligned Rust fork.</span>
 </a>
-<a href="https://github.com/emulebb/amule">
-<strong>aMule Windows builds</strong>
-<span>Windows build and validation track for aMule users.</span>
+<a href="https://github.com/emulebb/emulebb-build-tests">
+<strong>emulebb-build-tests</strong>
+<span>Shared MFC diagnostics, compatibility, live-network, and parity harness.</span>
 </a>
-<a href="https://github.com/emulebb/amutorrent">
-<strong>amutorrent</strong>
-<span>Frozen controller fork retained with the MFC 0.7.3 history.</span>
+<a href="https://github.com/emulebb/emulebb-build">
+<strong>emulebb-build</strong>
+<span>Workspace, build, validation, packaging, and release orchestration.</span>
 </a>
-<a href="https://github.com/emulebb/qbittorrentbb">
-<strong>qbittorrentbb</strong>
-<span>Paused BitTorrent experiment retained for reference.</span>
+<a href="https://github.com/emulebb/emulebb-tooling">
+<strong>emulebb-tooling</strong>
+<span>Public roadmap, lifecycle policy, product docs, and engineering references.</span>
+</a>
+<a href="https://github.com/amule-org/amule">
+<strong>aMule upstream</strong>
+<span>Actively developed upstream client used as the moving interoperability and parity reference.</span>
+</a>
+<a href="https://github.com/irwir/eMule">
+<strong>eMule stock 0.72</strong>
+<span>Stock compatibility baseline for protocol and state-machine parity.</span>
 </a>
 </div>
 </section>

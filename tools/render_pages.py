@@ -25,6 +25,9 @@ RUST_RELEASES_URL = "https://github.com/emulebb/emulebb-rust/releases"
 RUST_CONTRIBUTING_URL = (
     "https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md"
 )
+DEFAULT_PUBLIC_PRESENCE_CONTRACT = (
+    Path(__file__).resolve().parents[2] / "emulebb-tooling" / "manifests" / "public-presence.v1.json"
+)
 
 
 @dataclass(frozen=True)
@@ -136,19 +139,6 @@ DOCS = [
     (f"{DOCS_SITE_URL}/reference/GUIDE-EMULEBB/", "emulebb"),
     (f"{DOCS_SITE_URL}/reference/GUIDE-SETUP/", "setup"),
     (f"{DOCS_SITE_URL}/active/RELEASE-0.7.3/", "release"),
-]
-
-REPOS = [
-    ("https://github.com/emulebb/emulebb-rust", "rust"),
-    ("https://github.com/emulebb/emulebb", "emule"),
-    ("https://github.com/emulebb/emulebb-tooling", "tooling"),
-    ("https://github.com/emulebb/emulebb-build", "build"),
-    ("https://github.com/emulebb/emulebb-build-tests", "tests"),
-    ("https://github.com/emulebb/goed2k-server", "goed2k_server"),
-    ("https://github.com/emulebb/ed2k-server", "ed2k_server"),
-    ("https://github.com/emulebb/amule", "amule"),
-    ("https://github.com/emulebb/amutorrent", "amutorrent"),
-    ("https://github.com/emulebb/qbittorrentbb", "qbittorrentbb"),
 ]
 
 RELEASE_DOWNLOADS = [
@@ -888,6 +878,29 @@ def load_localized_copy(root: Path) -> dict[str, dict[str, Any]]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_public_presence_contract(path: Path) -> dict[str, Any]:
+    """Load the validated public-presence contract needed by the site renderer."""
+
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict) or payload.get("schema_version") != 1:
+        raise ValueError(f"unsupported public-presence contract: {path}")
+    for key in ("repositories", "compatibility_references"):
+        records = payload.get(key)
+        if not isinstance(records, list) or not records or not all(isinstance(record, dict) for record in records):
+            raise ValueError(f"public-presence contract field {key!r} must be a non-empty object array")
+    return payload
+
+
+def public_repository_links(contract: dict[str, Any]) -> list[dict[str, str]]:
+    """Return current repository and compatibility cards from the shared contract."""
+
+    records = [*contract["repositories"], *contract["compatibility_references"]]
+    return [
+        {"href": record["url"], "title": record["name"], "text": record["role"]}
+        for record in records
+    ]
+
+
 def apply_localized_copy(root: Path) -> None:
     """Merge curated localized JSON records into the render tables."""
 
@@ -1170,10 +1183,10 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
                 "Contributors welcome",
                 "MFC 0.7.3 stable",
                 "MFC 0.7.x long-term maintenance",
-                "qBittorrentBB paused",
-                "aMuTorrent frozen",
-                "TrackMuleBB archived",
-                "Native Windows VPN work deprioritized",
+                "Rust server for deterministic local tests",
+                "Official aMule upstream parity",
+                "Stock eMule 0.72 compatibility",
+                "MFC diagnostics and critical fixes retained",
             ],
         }
     )
@@ -1183,8 +1196,8 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
         "<strong>MFC 0.7.x</strong> Windows client. Rust development happens "
         "when maintainer time allows, and "
         f'<a href="{RUST_CONTRIBUTING_URL}">contributors are very welcome</a>. '
-        "Other repositories are supporting harnesses, reference forks, paused "
-        "experiments, or release history—not additional active products."
+        "Supporting repositories focus on diagnostics, deterministic local "
+        "testing, release engineering, and upstream compatibility."
     )
     content["why"] = {
         **s("Lifecycle", "A smaller, explicit product portfolio"),
@@ -1231,8 +1244,8 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
     ]
     content["automation"]["p"] = (
         "The stable MFC client retains its authenticated <code>/api/v1</code> "
-        "automation surface. Controller forks and qBittorrent-compatible "
-        "experiments are not forward product priorities."
+        "automation surface. Retired controller forks are not forward product "
+        "priorities."
     )
     content["release"] = {
         **s("Published releases", "Use the release that matches the lane"),
@@ -1256,7 +1269,7 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
         ],
     }
     content["repos"]["eyebrow"] = "Repository lifecycle"
-    content["repos"]["h2"] = "Active, maintained, and retained work"
+    content["repos"]["h2"] = "Current clients, infrastructure, and compatibility references"
     content["install_callout"] = INSTALL_CALLOUT
 
 
@@ -1331,7 +1344,7 @@ def add_brand_logo(page: PageSpec, content: dict[str, Any]) -> None:
     }
 
 
-def with_generated_links(root: Path) -> None:
+def with_generated_links(root: Path, contract: dict[str, Any]) -> None:
     """Populate repeated docs and repo link sections for every locale."""
 
     ensure_stock_locale_content(root)
@@ -1403,33 +1416,9 @@ def with_generated_links(root: Path) -> None:
             }
             for href, key in DOCS
         ]
-        content["repos"]["eyebrow"], content["repos"]["h2"] = REPO_SECTION_COPY[page.key]
-        content["repos"]["links"] = [
-            {"href": href, "title": title_for_repo(key), "text": REPO_COPY[page.key].get(key, REPO_COPY["en"][key])}
-            for href, key in REPOS
-        ]
-
-
-def title_for_repo(key: str) -> str:
-    """Return the public repository display name for a repo key."""
-
-    return {
-        "rust": "emulebb-rust",
-        "emule": "emulebb",
-        "setup": "emulebb-setup",
-        "build": "emulebb-build",
-        "tests": "emulebb-build-tests",
-        "tooling": "emulebb-tooling",
-        "amutorrent": "amutorrent",
-        "goed2k_server": "goed2k-server",
-        "ed2k_server": "ed2k-server",
-        "qbittorrentbb": "qbittorrentbb",
-        "p2p_overlord_agents": "p2p-overlord-agents",
-        "p2p_overlord_be": "p2p-overlord-be",
-        "p2p_overlord_tooling": "p2p-overlord-tooling",
-        "amule": "aMule Windows builds",
-        "miniupnpc": "emulebb-miniupnp",
-    }[key]
+        content["repos"]["eyebrow"] = "Current project scope"
+        content["repos"]["h2"] = "Clients, infrastructure, and compatibility references"
+        content["repos"]["links"] = public_repository_links(contract)
 
 
 def to_namespace(value: Any) -> Any:
@@ -1528,10 +1517,10 @@ def render_sitemap(lastmod: str) -> str:
     return "\n".join(lines) + "\n"
 
 
-def render_outputs(root: Path, lastmod: str) -> dict[Path, str]:
+def render_outputs(root: Path, lastmod: str, contract: dict[str, Any]) -> dict[Path, str]:
     """Render every generated file into an in-memory path map."""
 
-    with_generated_links(root)
+    with_generated_links(root, contract)
     env = environment(root)
     home = env.get_template("home.html.j2")
     languages = env.get_template("languages.html.j2")
@@ -1616,6 +1605,7 @@ def parse_args() -> argparse.Namespace:
 
     parser = argparse.ArgumentParser(description="Render the eMuleBB static pages.")
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument("--contract", type=Path, default=DEFAULT_PUBLIC_PRESENCE_CONTRACT)
     parser.add_argument("--lastmod", default=dt.date.today().isoformat())
     parser.add_argument("--check", action="store_true", help="Fail if generated files differ.")
     return parser.parse_args()
@@ -1630,7 +1620,8 @@ def main() -> int:
     except ValueError as exc:
         raise SystemExit(f"--lastmod must be an ISO date, got {args.lastmod!r}") from exc
     root = args.root.resolve()
-    outputs = render_outputs(root, args.lastmod)
+    contract = load_public_presence_contract(args.contract.resolve())
+    outputs = render_outputs(root, args.lastmod, contract)
     return write_outputs(root, outputs, args.check)
 
 
