@@ -1,0 +1,103 @@
+name: Organization Website
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    - cron: '29 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build and validate site
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+    steps:
+      - name: Checkout organization website
+        uses: actions/checkout@v7
+
+      - name: Checkout public-presence authority
+        uses: actions/checkout@v7
+        with:
+          repository: emulebb/emulebb-tooling
+          path: .local/emulebb-tooling
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.x'
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install renderer dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Validate public-presence contract
+        run: python .local/emulebb-tooling/helpers/public-presence.py validate
+
+      - name: Check committed generated pages
+        run: |
+          committed_lastmod="$(grep -m1 -o '<lastmod>[^<]*' sitemap.xml | cut -d '>' -f2)"
+          python tools/render_pages.py \
+            --contract .local/emulebb-tooling/manifests/public-presence.v1.json \
+            --lastmod "$committed_lastmod" \
+            --check
+
+      - name: Render clean site artifact
+        run: |
+          python tools/render_pages.py \
+            --contract .local/emulebb-tooling/manifests/public-presence.v1.json \
+            --lastmod "$(date -u +%F)" \
+            --output-root .local/site
+
+      - name: Validate site and documentation links
+        run: |
+          python .local/emulebb-tooling/helpers/pages-site-tools.py --pages-root .local/site validate
+          python .local/emulebb-tooling/helpers/check-tooling-doclinks.py \
+            --docs-root .local/emulebb-tooling/docs \
+            .local/site
+
+      - name: Verify stable installer checksum
+        working-directory: .local/site
+        run: sha256sum --check install.ps1.sha256
+
+      - name: Configure GitHub Pages
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
+        uses: actions/configure-pages@v6
+
+      - name: Upload GitHub Pages artifact
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: .local/site
+
+  deploy:
+    name: Deploy organization website
+    if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
