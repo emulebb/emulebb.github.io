@@ -11,20 +11,30 @@ The public site is expected to publish at:
 
 ## Static Page Production
 
-Generated HTML is committed for GitHub Pages, but source edits should go through
-the Jinja2 renderer:
+Generated HTML remains committed as a drift check and branch-publishing
+fallback, but source edits go through the Jinja2 renderer and the shared
+`emulebb-tooling\manifests\public-presence.v1.json` contract:
 
 ```powershell
 python -m pip install -r requirements.txt
-python tools\render_pages.py --lastmod 2026-05-16
-python tools\render_pages.py --lastmod 2026-05-16 --check
+python ..\emulebb-tooling\helpers\public-presence.py validate
+$lastmod = Get-Date -Format yyyy-MM-dd
+python tools\render_pages.py --lastmod $lastmod
+python tools\render_pages.py --lastmod $lastmod --check
+python tools\render_pages.py --lastmod $lastmod --output-root .local\site
 ```
 
 Run the validation helper before publishing:
 
 ```powershell
-python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root . validate
+python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root .local\site validate
+python ..\emulebb-tooling\helpers\check-tooling-doclinks.py --docs-root ..\emulebb-tooling\docs .local\site
 ```
+
+`.github/workflows/pages.yml` repeats these checks, verifies
+`install.ps1.sha256`, uploads only `.local/site`, and deploys through GitHub
+Pages Actions on `main`. Scheduled runs validate contract drift without
+publishing.
 
 ## Markdown Documentation Publishing
 

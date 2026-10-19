@@ -24,6 +24,9 @@ edition. Everything below is this repo's local deltas only.
   policy changes again.
 - Treat `emulebb-tooling` active/reference docs as the source of truth. Pages
   summarizes and links; it does not invent feature or release facts.
+- Treat `..\emulebb-tooling\manifests\public-presence.v1.json` as the source
+  for current lanes, repository roles, compatibility references, public
+  surfaces, and stable-installer ownership.
 - Only shipped, landed, passed, or release-proven features belong in the public
   homepage feature/catalog copy.
 - Keep English canonical. Completed locale pages are generated for stock eMule
@@ -33,8 +36,10 @@ edition. Everything below is this repo's local deltas only.
 - Use `/languages/` as the language selector. Do not add generic compatibility
   locale chooser URLs such as `/pt/` unless they are real indexable locale
   pages with their own maintained copy.
-- The generated HTML pages are committed, but the production source is the
-  Jinja2 renderer in `tools\render_pages.py` plus templates under `templates\`.
+- Generated HTML remains committed as a drift check and branch-publishing
+  fallback. Production GitHub Pages deployment uses the clean artifact staged
+  by `tools\render_pages.py` from the renderer, templates, structured copy, and
+  public-presence contract.
 - Preserve technical terms such as `eD2K`, `Kad`, `REST`, `JSON`, `API`,
   `WebServer`, `VPN/interface binding`, `UPnP/NAT`, `x64`, `ARM64`, `Debug`,
   `Release`, repo names, file paths, URLs, command names, and code identifiers
@@ -51,7 +56,10 @@ edition. Everything below is this repo's local deltas only.
   environment does not already have the renderer dependencies.
 - Use `python tools\render_pages.py --lastmod YYYY-MM-DD` to regenerate static
   pages and `python tools\render_pages.py --lastmod YYYY-MM-DD --check` to
-  confirm committed HTML is up to date with the templates.
+  confirm committed HTML is up to date with the templates and public-presence
+  contract.
+- Use `python tools\render_pages.py --lastmod YYYY-MM-DD --output-root
+  .local\site` to stage the bounded deployment artifact.
 - Use `python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root . validate`
   before publishing locale, metadata, sitemap, asset-policy, or navigation
   changes.

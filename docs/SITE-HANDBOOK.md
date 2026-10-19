@@ -15,6 +15,9 @@ repositories.
 
 - `emulebb-tooling` active/reference docs are authoritative for product, feature,
   release, REST, and validation facts.
+- `..\emulebb-tooling\manifests\public-presence.v1.json` is the
+  machine-readable authority for current lanes, repository roles,
+  compatibility references, public surfaces, and stable-installer ownership.
 - If the website conflicts with `emulebb-tooling`, update the website or the
   linked source doc before publishing.
 - The homepage summarizes and directs readers. Long-form setup, tuning, release,
@@ -259,10 +262,12 @@ homepage copy depends on product-guide, release, REST, or evidence claims:
    python scripts\docs-publish-check.py
    ```
 
-3. Commit and push the tooling-docs slice so GitHub Actions can publish
-   `https://emulebb.github.io/emulebb-tooling/`.
-4. Return to `emulebb-pages`, update the structured homepage source, then
+3. Commit the tooling-docs or public-presence contract slice in its owning
+   repository.
+4. Return to `emulebb-pages`, update any site-owned structured copy, then
    regenerate committed HTML with `tools\render_pages.py`.
+5. Commit the Pages slice independently. Each repository publishes itself;
+   cross-repository automation validates drift but does not push content.
 
 Homepage copy should say less than the product guide and link to the rendered
 HTML docs for the details. Testing, SBOM, package, release, REST, and
@@ -275,11 +280,22 @@ Run these checks before committing and pushing:
 
 ```powershell
 python -m pip install -r requirements.txt
-python tools\render_pages.py --lastmod 2026-05-23 --check
-python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root . validate
+python ..\emulebb-tooling\helpers\public-presence.py validate
+$lastmod = ([regex]::Match((Get-Content -Raw sitemap.xml), '<lastmod>([^<]+)</lastmod>')).Groups[1].Value
+python tools\render_pages.py --lastmod $lastmod --check
+python tools\render_pages.py --lastmod (Get-Date -Format yyyy-MM-dd) --output-root .local\site
+python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root .local\site validate
+python ..\emulebb-tooling\helpers\check-tooling-doclinks.py --docs-root ..\emulebb-tooling\docs .local\site
+$expected = (((Get-Content .local\site\install.ps1.sha256) -split '\s+')[0]).ToUpperInvariant()
+$actual = (Get-FileHash -Algorithm SHA256 .local\site\install.ps1).Hash
+if ($actual -ne $expected) { throw 'Stable installer checksum mismatch' }
 git diff --check
-rg -n "emule-logo|Logo\.jpg|screenshot" index.html styles.css ar-ae eu bg ca cs da el es ast et fa fi br pt-br pt-pt gl he hu it ja ko lt lv mt nb ru de fr pl nl nn ro sl sq sv tr uk ug-cn ca-valencia ca-valencia-racv vi zh-cn zh-tw languages
 ```
+
+`.github/workflows/pages.yml` performs the same contract, generated-output,
+link, static-site, and installer checks. It uploads only the clean staged site
+artifact. Pushes to `main` and manual dispatches may deploy; scheduled runs are
+validation-only drift detection.
 
 Anchor check:
 
