@@ -399,27 +399,7 @@ DOC_COPY = {'en': {'portfolio': ('Product portfolio',
                     'Current RC gates, automated test evidence, SBOM/package proof, and readiness rules.')}}
 
 
-REPO_COPY = {'en': {'rust': 'active beta and current product-development lane',
-        'emule': 'stable 0.7.x Windows client in long-term maintenance',
-        'setup': 'reproducible workspace setup',
-        'build': 'build, validation, and release orchestration',
-        'tests': 'native, Python, UI, REST, and live E2E tests',
-        'tooling': 'roadmap, backlog, policy, audits, and reference docs',
-        'amutorrent': 'frozen controller fork retained with the MFC 0.7.3 history',
-        'goed2k_server': 'fixed-purpose eD2K harness server with no product evolution planned',
-        'ed2k_server': 'reference fork for analysis and possible upstream contributions',
-        'qbittorrentbb': 'paused BitTorrent experiment retained for reference',
-        'p2p_overlord_agents': 'exploratory agents for the p2p-overlord P2P suite',
-        'p2p_overlord_be': 'exploratory headless Rust eD2K/Kad client backend work',
-        'p2p_overlord_tooling': 'scenario manifests, parity runners, reports, and quality guards',
-        'amule': 'Windows build and validation track for aMule users',
-        'miniupnpc': 'Windows build and validation track for MiniUPnP/miniupnpc'}}
-
-
 DOC_SECTION_COPY = {'en': ('Documentation', 'Guides, API, and release notes')}
-
-
-REPO_SECTION_COPY = {'en': ('eMuleBB ecosystem', 'Primary repositories')}
 
 
 MENU_COPY = {'en': {'label': 'Menu', 'open_label': 'Open primary navigation', 'close_label': 'Close primary navigation'}}
@@ -916,9 +896,7 @@ def apply_localized_copy(root: Path) -> None:
     for key, record in load_localized_copy(root).items():
         CONTENT[key] = record["content"]
         DOC_COPY[key] = record["docs"]
-        REPO_COPY[key] = record["repos"]
         DOC_SECTION_COPY[key] = tuple(record["doc_section"])
-        REPO_SECTION_COPY[key] = tuple(record["repo_section"])
         MENU_COPY[key] = record["menu"]
         LANGUAGE_LINK_COPY[key] = record["language_link"]
 
@@ -949,28 +927,6 @@ def stock_doc_copy(t: dict[str, Any]) -> dict[str, tuple[str, str]]:
         "diagnostics": (t["docs"], t["docs"]),
         "troubleshooting": (t["docs"], t["docs"]),
         "release": ("0.7.3", t["release"]),
-    }
-
-
-def stock_repo_copy(t: dict[str, Any]) -> dict[str, str]:
-    """Build localized repository blurbs for generated stock locales."""
-
-    return {
-        "rust": "Active Rust beta and current product-development lane.",
-        "emule": t["intro"],
-        "setup": t["guide"],
-        "build": t["proof"],
-        "tests": t["proof"],
-        "tooling": t["docs"],
-        "amutorrent": "Frozen controller fork retained with the MFC 0.7.3 history.",
-        "goed2k_server": "Fixed-purpose eD2K harness server with no product evolution planned.",
-        "ed2k_server": "Reference fork for analysis and possible upstream contributions.",
-        "qbittorrentbb": "Paused BitTorrent experiment retained for reference.",
-        "p2p_overlord_agents": "Exploratory p2p-overlord agents for headless P2P workflows.",
-        "p2p_overlord_be": "Exploratory Rust eD2K/Kad backend work in the p2p-overlord suite.",
-        "p2p_overlord_tooling": "Scenario manifests, parity runners, reports, and quality guards for p2p-overlord.",
-        "amule": "Windows build and validation track for aMule users.",
-        "miniupnpc": "Windows build and validation track for MiniUPnP/miniupnpc.",
     }
 
 
@@ -1042,9 +998,7 @@ def ensure_stock_locale_content(root: Path) -> None:
     for key, text in stock_text.items():
         CONTENT[key] = make_stock_locale_content(text)
         DOC_COPY[key] = stock_doc_copy(text)
-        REPO_COPY[key] = stock_repo_copy(text)
         DOC_SECTION_COPY[key] = (text["nav"][3], text["docs"])
-        REPO_SECTION_COPY[key] = (text["nav"][6], text["repos"])
         MENU_COPY[key] = {"label": text["menu"], "open_label": text["open"], "close_label": text["close"]}
         LANGUAGE_LINK_COPY[key] = text["lang"]
 
