@@ -150,10 +150,6 @@ DOCS = [
     (f"{DOCS_SITE_URL}/active/RELEASE-0.7.3/", "release"),
 ]
 
-RELEASE_DOWNLOADS = [
-    ("https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3", "MFC 0.7.3 stable"),
-]
-
 INSTALL_CALLOUT = {
     "id": "install",
     "eyebrow": "Public download channels",
@@ -873,10 +869,12 @@ def load_public_presence_contract(path: Path) -> dict[str, Any]:
     payload = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(payload, dict) or payload.get("schema_version") != 1:
         raise ValueError(f"unsupported public-presence contract: {path}")
-    for key in ("repositories", "compatibility_references"):
+    for key in ("release_channels", "repositories", "compatibility_references"):
         records = payload.get(key)
         if not isinstance(records, list) or not records or not all(isinstance(record, dict) for record in records):
             raise ValueError(f"public-presence contract field {key!r} must be a non-empty object array")
+    if not isinstance(payload.get("installer"), dict) or not isinstance(payload.get("historical_bundle_note"), str):
+        raise ValueError("public-presence contract must define installer and historical_bundle_note")
     return payload
 
 
@@ -1100,8 +1098,17 @@ def apply_stable_release_copy(content: dict[str, Any]) -> None:
     content["testing_callout"] = TESTING_CALLOUT
 
 
-def apply_lifecycle_copy(content: dict[str, Any]) -> None:
+def apply_lifecycle_copy(content: dict[str, Any], contract: dict[str, Any]) -> None:
     """Apply the current organization lifecycle to every generated homepage."""
+
+    repositories = {repository["key"]: repository for repository in contract["repositories"]}
+    channels = {channel["key"]: channel for channel in contract["release_channels"]}
+    rust_repository = repositories["emulebb-rust"]
+    mfc_repository = repositories["emulebb"]
+    rust_channel = channels["rust-nightly"]
+    mfc_channel = channels["mfc-stable"]
+    installer = contract["installer"]
+    contributing_url = rust_channel["contributing_url"]
 
     content["title"] = "eMuleBB | Rust nightly builds and stable MFC client"
     content["meta_description"] = (
@@ -1123,14 +1130,13 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
                 "maintenance line."
             ),
             "lead": (
-                "emulebb-rust is in beta. CI-gated nightly builds from main are "
-                "the current public testing channel. eMuleBB MFC 0.7.3 remains "
-                "the stable Windows release."
+                f"{rust_repository['name']} is in beta. {rust_channel['description']} "
+                f"{mfc_repository['name']} remains the stable Windows line."
             ),
             "install": "Get Rust nightlies",
-            "primary_href": RUST_RELEASES_URL,
+            "primary_href": rust_channel["download_url"],
             "source": "Contribute",
-            "secondary_href": RUST_CONTRIBUTING_URL,
+            "secondary_href": contributing_url,
             "panel_kicker": "Current posture",
             "panel_h2": "One active beta, one maintained stable client",
             "panel_p": (
@@ -1158,7 +1164,7 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
         "<strong>Rust nightly beta channel</strong> and the stable "
         "<strong>MFC 0.7.x</strong> Windows client. Rust development happens "
         "when maintainer time allows, and "
-        f'<a href="{RUST_CONTRIBUTING_URL}">contributors are very welcome</a>. '
+        f'<a href="{contributing_url}">contributors are very welcome</a>. '
         "Supporting repositories focus on diagnostics, deterministic local "
         "testing, release engineering, and upstream compatibility."
     )
@@ -1168,15 +1174,14 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
             c(
                 "Active",
                 "Rust nightly beta channel",
-                "CI-gated nightlies from <code>main</code> are the current public "
-                "testing builds for Windows, Linux, and macOS.",
+                rust_channel["description"],
             ),
-            c("Stable", "eMuleBB MFC", "The published 0.7.3 Windows client continues as a long-term 0.7.x maintenance line for bugs and bounded low-risk changes."),
+            c("Stable", "eMuleBB MFC", mfc_channel["description"]),
             c(
                 "Community",
                 "Contributors are welcome",
                 "Rust development is best-effort and spare-time. Read the "
-                f'<a href="{RUST_CONTRIBUTING_URL}">contributing guide</a> to '
+                f'<a href="{contributing_url}">contributing guide</a> to '
                 "help with code, tests, documentation, or validation.",
             ),
         ],
@@ -1191,7 +1196,7 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
         c(
             "",
             "Start with Rust nightlies",
-            f'Use the <a href="{RUST_RELEASES_URL}">current nightly '
+            f'Use the <a href="{rust_channel["download_url"]}">current nightly '
             "prereleases</a> for beta testing, verify "
             "<code>SHA256SUMS</code>, and report reproducible issues in "
             "emulebb-rust.",
@@ -1200,7 +1205,7 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
             "",
             "Contribute to the active lane",
             "The project advances when maintainer and contributor time allows. "
-            f'The <a href="{RUST_CONTRIBUTING_URL}">contributing guide</a> '
+            f'The <a href="{contributing_url}">contributing guide</a> '
             "covers code, tests, documentation, and validation.",
         ),
         c("", "Use MFC for the stable Windows lane", "Version 0.7.3 remains the supported stable package while 0.7.x receives maintenance fixes."),
@@ -1221,8 +1226,8 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
                 "provenance attestations, and a retained history of the newest "
                 "14 builds.",
             ),
-            c("", "MFC 0.7.3", "The stable Windows package remains published with manifests, hashes, SBOMs, and diagnostics assets."),
-            c("", "Historical Suite bundle", "The MFC 0.7.3 release keeps its suite installer and aMuTorrent artifact. “Suite” describes that shipped bundle, not an active umbrella roadmap."),
+            c("", "MFC 0.7.3", f"{mfc_channel['description']} Published packages retain manifests, hashes, SBOMs, and diagnostics assets."),
+            c("", "Historical Suite bundle", contract["historical_bundle_note"]),
             c(
                 "",
                 "Evidence stays lane-specific",
@@ -1233,7 +1238,21 @@ def apply_lifecycle_copy(content: dict[str, Any]) -> None:
     }
     content["repos"]["eyebrow"] = "Repository lifecycle"
     content["repos"]["h2"] = "Current clients, infrastructure, and compatibility references"
-    content["install_callout"] = INSTALL_CALLOUT
+    content["install_callout"] = {
+        **INSTALL_CALLOUT,
+        "p": (
+            f"{rust_channel['description']} Development is best-effort and spare-time, and "
+            f'<a href="{contributing_url}">contributors are welcome</a>. '
+            f"{mfc_channel['description']}"
+        ),
+        "command": f"irm {installer['stable_url']} | iex",
+        "primary_href": rust_channel["download_url"],
+        "secondary_href": mfc_channel["download_url"],
+    }
+    content["testing_callout"] = {
+        **TESTING_CALLOUT,
+        "primary_href": mfc_channel["download_url"],
+    }
 
 
 def apply_stable_faq_copy() -> None:
@@ -1318,7 +1337,7 @@ def with_generated_links(root: Path, contract: dict[str, Any]) -> None:
         content.setdefault("testing_callout", TESTING_CALLOUT)
         apply_stable_release_copy(content)
         add_release_evidence_copy(content)
-        apply_lifecycle_copy(content)
+        apply_lifecycle_copy(content, contract)
         add_brand_logo(page, content)
         add_team_images(page, content)
         content.setdefault("release_downloads_label", CONTENT["en"]["release_downloads_label"])
@@ -1365,9 +1384,9 @@ def with_generated_links(root: Path, contract: dict[str, Any]) -> None:
         content["nav"].append({"id": "faq", "label": "FAQ", "href": faq_href})
         content["menu"] = MENU_COPY[page.key]
         content["languages_link_label"] = LANGUAGE_LINK_COPY[page.key]
+        stable_channel = next(channel for channel in contract["release_channels"] if channel["key"] == "mfc-stable")
         content["release_downloads"] = [
-            {"href": href, "title": title}
-            for href, title in RELEASE_DOWNLOADS
+            {"href": stable_channel["download_url"], "title": "MFC 0.7.3 stable"}
         ]
         content["docs"]["eyebrow"], content["docs"]["h2"] = DOC_SECTION_COPY[page.key]
         doc_copy = DOC_COPY[page.key]
