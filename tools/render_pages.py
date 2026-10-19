@@ -8,6 +8,7 @@ import datetime as dt
 import difflib
 import json
 import posixpath
+import shutil
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -27,6 +28,14 @@ RUST_CONTRIBUTING_URL = (
 )
 DEFAULT_PUBLIC_PRESENCE_CONTRACT = (
     Path(__file__).resolve().parents[2] / "emulebb-tooling" / "manifests" / "public-presence.v1.json"
+)
+STATIC_SITE_PATHS = (
+    Path("assets"),
+    Path("install.ps1"),
+    Path("install.ps1.sha256"),
+    Path("robots.txt"),
+    Path("styles.css"),
+    Path("suite-manifest.json"),
 )
 
 
@@ -1600,12 +1609,38 @@ def write_outputs(root: Path, outputs: dict[Path, str], check: bool) -> int:
     return 1 if failures else 0
 
 
+def prepare_staging_root(source_root: Path, output_root: Path) -> None:
+    """Create a clean staging directory below the repository-local .local tree."""
+
+    allowed_root = (source_root / ".local").resolve()
+    resolved_output = output_root.resolve()
+    if resolved_output == allowed_root or not resolved_output.is_relative_to(allowed_root):
+        raise ValueError(f"--output-root must be a child of {allowed_root}")
+    if resolved_output.exists():
+        shutil.rmtree(resolved_output)
+    resolved_output.mkdir(parents=True)
+
+
+def copy_static_site_files(source_root: Path, output_root: Path) -> None:
+    """Copy the bounded non-generated public files into a staged site artifact."""
+
+    for relative_path in STATIC_SITE_PATHS:
+        source = source_root / relative_path
+        destination = output_root / relative_path
+        if source.is_dir():
+            shutil.copytree(source, destination)
+        else:
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, destination)
+
+
 def parse_args() -> argparse.Namespace:
     """Parse render command arguments."""
 
     parser = argparse.ArgumentParser(description="Render the eMuleBB static pages.")
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--contract", type=Path, default=DEFAULT_PUBLIC_PRESENCE_CONTRACT)
+    parser.add_argument("--output-root", type=Path, help="Stage a clean deployable site below ROOT/.local.")
     parser.add_argument("--lastmod", default=dt.date.today().isoformat())
     parser.add_argument("--check", action="store_true", help="Fail if generated files differ.")
     return parser.parse_args()
@@ -1620,9 +1655,21 @@ def main() -> int:
     except ValueError as exc:
         raise SystemExit(f"--lastmod must be an ISO date, got {args.lastmod!r}") from exc
     root = args.root.resolve()
-    contract = load_public_presence_contract(args.contract.resolve())
+    try:
+        contract = load_public_presence_contract(args.contract.resolve())
+        if args.output_root and args.check:
+            raise ValueError("--check and --output-root cannot be combined")
+        output_root = root
+        if args.output_root:
+            output_root = args.output_root if args.output_root.is_absolute() else root / args.output_root
+            output_root = output_root.resolve()
+            prepare_staging_root(root, output_root)
+            copy_static_site_files(root, output_root)
+    except (OSError, ValueError, json.JSONDecodeError) as exc:
+        print(f"render error: {exc}", file=sys.stderr)
+        return 1
     outputs = render_outputs(root, args.lastmod, contract)
-    return write_outputs(root, outputs, args.check)
+    return write_outputs(output_root, outputs, args.check)
 
 
 if __name__ == "__main__":
