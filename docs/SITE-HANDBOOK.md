@@ -26,11 +26,10 @@ repositories.
   `https://emulebb.github.io/emulebb-tooling/`, backed by Markdown in
   `emulebb-tooling`.
 - Organization lifecycle status must be derived from
-  `docs/active/PRODUCT-PORTFOLIO.md` and
-  `docs/reference/ROADMAP-SUMMARY.md` in `emulebb-tooling`.
-- MFC release status must be derived from the `0.7.3` release docs:
-  `RELEASE-0.7.3.md`, `RELEASE-0.7.3-CHECKLIST.md`,
-  `RELEASE-0.7.3-RUNBOOK.md`, and `RELEASE-0.7.3-GATE-HISTORY.md`.
+  `docs/active/PRODUCT-DIRECTION.md` in `emulebb-tooling`; Rust scope and active
+  work remain in `docs/products/emulebb-rust/`.
+- MFC release status must be derived from the retained `0.7.3` release proof,
+  notes, and stable changelog under `docs/history/releases/0.7.3/`.
 - The current public release is stable `0.7.3` (published 2026-07-05). Older
   `0.7.3-rc.*` releases are historical prerelease evidence, not the current
   install target.
