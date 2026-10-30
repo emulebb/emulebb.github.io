@@ -127,6 +127,13 @@ code {
   object-fit: contain;
 }
 
+.brand-text {
+  min-height: 46px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
 .eyebrow,
 .panel-kicker {
   color: var(--muted);

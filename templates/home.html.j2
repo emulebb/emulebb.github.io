@@ -89,30 +89,30 @@
 
       gtag('config', '{{ ga_measurement_id }}');
     </script>
-<script type="application/ld+json">
-      {
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              "name": "eMule broadband edition",
-              "alternateName": "eMuleBB",
-              "applicationCategory": "FileSharingApplication",
-              "operatingSystem": ["Windows", "Linux", "macOS"],
-              "url": "{{ page.url }}",
-              "codeRepository": [
-                "https://github.com/emulebb/emulebb-rust",
-                "https://github.com/emulebb/emulebb"
-              ],
-              "description": {{ content.structured_description | tojson }}
-      }
-    </script>
 {%- if page.directory == "" %}
 <script type="application/ld+json">
       {
               "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "eMule broadband edition",
-              "alternateName": ["eMuleBB", "emulebb"],
-              "url": "{{ site_base_url }}/"
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "{{ site_base_url }}/#organization",
+                  "name": "eMuleBB",
+                  "url": "{{ site_base_url }}/",
+                  "sameAs": [
+                    "https://github.com/emulebb",
+                    "https://github.com/emulebb/emulebb-rust"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "{{ site_base_url }}/#website",
+                  "name": "eMule broadband edition",
+                  "alternateName": ["eMuleBB", "emulebb"],
+                  "url": "{{ site_base_url }}/",
+                  "publisher": {"@id": "{{ site_base_url }}/#organization"}
+                }
+              ]
       }
     </script>
 {%- endif %}
