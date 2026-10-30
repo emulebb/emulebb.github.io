@@ -78,14 +78,19 @@ repositories.
 
 The English homepage is canonical. Keep this focused order:
 
-1. Hero with Rust nightlies as the primary action and MFC as a secondary link
-2. Product proof
+1. Hero that defines eMuleBB Rust, with nightlies as the primary action and MFC
+   as a secondary link
+2. Concise eMuleBB Rust capability summary
 3. Essential downloads and documentation
 4. Focused repositories
 
 Rules:
 
 - Required navigation anchors must resolve to existing section IDs.
+- The hero must explain that eMuleBB Rust is an eD2K/Kad client and name its
+  operating surfaces before discussing release posture.
+- The second block must summarize the supported search/download,
+  share/upload/seed, and WebUI/API operating capabilities.
 - Do not add separate feature catalogs, highlights, team/lore, implementation,
   automation, or release sections. Link to the product docs instead.
 - Homepage proof may highlight only landed, documented, passed,
