@@ -1,17 +1,19 @@
 :root {
-  color-scheme: light;
-  --bg: #f5f6f2;
-  --ink: #000000;
-  --muted: #000000;
-  --line: #d7dad4;
-  --panel: #ffffff;
-  --panel-soft: #eef3f5;
-  --teal: #0e6f76;
-  --green: #4f7f44;
-  --red: #b94a3d;
-  --blue: #245784;
-  --gold: #a47722;
-  --dark: #1d2329;
+  color-scheme: dark;
+  --bg: #0b1016;
+  --ink: #eef3f7;
+  --muted: #a9b6c2;
+  --line: #293746;
+  --panel: #111923;
+  --panel-soft: #151f2a;
+  --panel-high: #1a2633;
+  --panel-warm: #211b12;
+  --teal: #4cc7bf;
+  --green: #7fbd75;
+  --red: #e07a72;
+  --blue: #78a9e6;
+  --gold: #d7ad61;
+  --dark: #071014;
   --pico-font-family-sans-serif: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --pico-font-size: 100%;
   --pico-line-height: 1.55;
@@ -27,8 +29,10 @@
   --pico-primary: var(--teal);
   --pico-primary-background: var(--teal);
   --pico-primary-border: var(--teal);
-  --pico-primary-hover-background: #0b5960;
-  --pico-primary-hover-border: #0b5960;
+  --pico-primary-hover: #65d5cd;
+  --pico-primary-hover-background: #65d5cd;
+  --pico-primary-hover-border: #65d5cd;
+  --pico-primary-inverse: var(--dark);
   --pico-border-radius: 8px;
 }
 
@@ -86,15 +90,15 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid rgba(14, 111, 118, 0.45);
+  outline: 3px solid rgba(76, 199, 191, 0.55);
   outline-offset: 3px;
 }
 
 code {
   padding: 0.1rem 0.32rem;
-  border: 1px solid rgba(21, 24, 29, 0.12);
+  border: 1px solid var(--line);
   border-radius: 6px;
-  background: rgba(21, 24, 29, 0.06);
+  background: var(--panel-high);
   color: var(--ink);
   font-size: 0.92em;
 }
@@ -108,8 +112,8 @@ code {
   align-items: center;
   gap: 10px;
   padding: 10px 18px;
-  border-bottom: 1px solid rgba(21, 24, 29, 0.12);
-  background: rgba(245, 246, 242, 0.96);
+  border-bottom: 1px solid var(--line);
+  background: rgba(11, 16, 22, 0.96);
   backdrop-filter: blur(14px);
 }
 
@@ -125,6 +129,14 @@ code {
   width: clamp(136px, 30vw, 190px);
   max-height: 82px;
   object-fit: contain;
+  filter: invert(1) hue-rotate(180deg) brightness(1.18) saturate(0.9);
+}
+
+.brand-text {
+  min-height: 46px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 .eyebrow,
@@ -158,11 +170,11 @@ nav.is-open {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(21, 24, 29, 0.18);
+  border: 1px solid var(--line);
   border-radius: 8px;
   margin: 0;
   padding: 8px 12px;
-  background: #fff;
+  background: var(--panel);
   color: var(--ink);
   font: inherit;
   font-weight: 900;
@@ -186,25 +198,26 @@ nav a,
 
 nav a {
   width: 100%;
-  border: 1px solid rgba(21, 24, 29, 0.12);
-  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  background: rgba(17, 25, 35, 0.88);
   color: var(--ink);
 }
 
 nav a:hover {
-  background: rgba(14, 111, 118, 0.08);
+  background: rgba(76, 199, 191, 0.12);
   color: var(--ink);
 }
 
 nav a.nav-download {
   border-color: var(--teal);
   background: var(--teal);
-  color: #ffffff;
+  color: var(--dark);
 }
 
 nav a.nav-download:hover {
-  background: #0b5960;
-  color: #ffffff;
+  border-color: #65d5cd;
+  background: #65d5cd;
+  color: var(--dark);
 }
 
 .button {
@@ -227,15 +240,15 @@ nav a.nav-download:hover {
   display: grid;
   gap: 28px;
   border-bottom: 1px solid var(--line);
-  background: #f9faf7;
+  background: #0e151d;
 }
 
 .testing-callout {
   display: grid;
   gap: 18px;
   align-items: stretch;
-  border-bottom: 1px solid rgba(164, 119, 34, 0.36);
-  background: #fff9e8;
+  border-bottom: 1px solid rgba(215, 173, 97, 0.45);
+  background: var(--panel-warm);
 }
 
 .testing-callout > div {
@@ -258,10 +271,10 @@ nav a.nav-download:hover {
   gap: 12px;
   margin-top: 18px;
   padding: 16px;
-  border: 1px solid rgba(21, 24, 29, 0.16);
+  border: 1px solid var(--line);
   border-radius: 8px;
-  background: #ffffff;
-  box-shadow: 0 10px 26px rgba(28, 32, 36, 0.08);
+  background: var(--panel);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
 }
 
 .install-command-header {
@@ -280,9 +293,9 @@ nav a.nav-download:hover {
   max-width: 100%;
   margin: 0;
   overflow-x: auto;
-  border: 1px solid rgba(14, 111, 118, 0.22);
+  border: 1px solid rgba(76, 199, 191, 0.35);
   border-radius: 8px;
-  background: #eef3f5;
+  background: var(--panel-high);
 }
 
 .install-command-code code {
@@ -304,7 +317,7 @@ nav a.nav-download:hover {
   border: 1px solid var(--teal);
   border-radius: 8px;
   background: var(--teal);
-  color: #ffffff;
+  color: var(--dark);
   font: inherit;
   font-size: 0.9rem;
   font-weight: 850;
@@ -313,8 +326,9 @@ nav a.nav-download:hover {
 }
 
 .copy-command:hover {
-  background: #0b5960;
-  color: #ffffff;
+  border-color: #65d5cd;
+  background: #65d5cd;
+  color: var(--dark);
 }
 
 .install-standalone {
@@ -414,13 +428,13 @@ h3 {
 
 .button.primary {
   border: 1px solid var(--teal);
-  background: var(--panel-soft);
-  color: var(--ink);
+  background: var(--teal);
+  color: var(--dark);
 }
 
 .button.secondary {
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--panel);
   color: var(--ink);
 }
 
@@ -503,7 +517,7 @@ h3 {
 
 .intro {
   border-bottom: 1px solid var(--line);
-  background: #fff;
+  background: #0e151d;
 }
 
 .intro p {
@@ -532,7 +546,7 @@ h3 {
 
 .docs,
 .release {
-  background: #fff;
+  background: #0e151d;
 }
 
 .feature-table,
@@ -629,7 +643,7 @@ h3 {
 .doc-list a:hover,
 .repo-list a:hover {
   border-color: var(--blue);
-  box-shadow: 0 12px 30px rgba(28, 32, 36, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.34);
 }
 
 .doc-list strong,
@@ -672,12 +686,12 @@ h3 {
 
 .language-hero {
   border-bottom: 1px solid var(--line);
-  background: #fff;
+  background: #0e151d;
 }
 
 .faq-hero {
   border-bottom: 1px solid var(--line);
-  background: #fff;
+  background: #0e151d;
 }
 
 .faq-section {
@@ -771,7 +785,7 @@ h3 {
 
 .language-list a:hover {
   border-color: var(--teal);
-  background: #fff;
+  background: var(--panel-high);
 }
 
 .repos {
@@ -893,7 +907,7 @@ footer {
   nav a.nav-download {
     border: 1px solid var(--teal);
     background: var(--teal);
-    color: #ffffff;
+    color: var(--dark);
   }
 
   .hero {

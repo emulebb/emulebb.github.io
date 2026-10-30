@@ -1,9 +1,13 @@
 # eMuleBB organization website
 
 This repository publishes the organization GitHub Pages site. The public front
-door presents CI-gated `emulebb-rust` nightly builds as the active beta testing
-channel. eMuleBB MFC `0.7.x` remains the stable long-term maintenance line.
+door presents CI-gated `emulebb-rust` nightly builds as the primary active-beta
+testing channel, public `0.1.0-beta.2` as the formal Rust baseline while work
+continues toward Beta 3, and eMuleBB MFC `0.7.x` as the maintained Windows line.
 Rust development is best-effort, and contributors are welcome.
+
+The canonical English-only Rust product page is published at `/rust/`. Only the
+homepage and FAQ have localized variants.
 
 The public site is expected to publish at:
 

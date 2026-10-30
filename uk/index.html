@@ -3,11 +3,13 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="eMuleBB publishes CI-gated Rust nightly builds for beta testing and maintains the stable MFC 0.7.x Windows client." name="description"/>
+<meta content="dark" name="color-scheme"/>
+<meta content="#0b1016" name="theme-color"/>
+<meta content="eMuleBB Rust — активний бета-клієнт eD2K/Kad; nightly-збірки є основним каналом тестування, Beta 2 — офіційною базою, а MFC — підтримуваною лінією Windows." name="description"/>
 <meta content="index,follow" name="robots"/>
 <meta content="eMuleBB" name="author"/>
-<meta content="eMuleBB | Rust nightly builds and stable MFC client" property="og:title"/>
-<meta content="eMuleBB publishes CI-gated Rust nightly builds for beta testing and maintains the stable MFC 0.7.x Windows client." property="og:description"/>
+<meta content="Головна eMuleBB | eMule broadband edition" property="og:title"/>
+<meta content="eMuleBB Rust — активний бета-клієнт eD2K/Kad; nightly-збірки є основним каналом тестування, Beta 2 — офіційною базою, а MFC — підтримуваною лінією Windows." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://emulebb.github.io/uk/" property="og:url"/>
 <meta content="eMule broadband edition" property="og:site_name"/>
@@ -15,45 +17,9 @@
 <link href="https://emulebb.github.io/uk/" rel="canonical"/>
 <link href="https://emulebb.github.io/sitemap.xml" rel="sitemap" type="application/xml"/><link href="https://emulebb.github.io/" hreflang="en" rel="alternate"/><link href="https://emulebb.github.io/ar-ae/" hreflang="ar-AE" rel="alternate"/><link href="https://emulebb.github.io/eu/" hreflang="eu" rel="alternate"/><link href="https://emulebb.github.io/bg/" hreflang="bg" rel="alternate"/><link href="https://emulebb.github.io/ca/" hreflang="ca" rel="alternate"/><link href="https://emulebb.github.io/cs/" hreflang="cs" rel="alternate"/><link href="https://emulebb.github.io/da/" hreflang="da" rel="alternate"/><link href="https://emulebb.github.io/el/" hreflang="el" rel="alternate"/><link href="https://emulebb.github.io/es/" hreflang="es" rel="alternate"/><link href="https://emulebb.github.io/ast/" hreflang="ast" rel="alternate"/><link href="https://emulebb.github.io/et/" hreflang="et" rel="alternate"/><link href="https://emulebb.github.io/fa/" hreflang="fa" rel="alternate"/><link href="https://emulebb.github.io/fi/" hreflang="fi" rel="alternate"/><link href="https://emulebb.github.io/br/" hreflang="br" rel="alternate"/><link href="https://emulebb.github.io/pt-br/" hreflang="pt-BR" rel="alternate"/><link href="https://emulebb.github.io/pt-pt/" hreflang="pt-PT" rel="alternate"/><link href="https://emulebb.github.io/gl/" hreflang="gl" rel="alternate"/><link href="https://emulebb.github.io/he/" hreflang="he" rel="alternate"/><link href="https://emulebb.github.io/hu/" hreflang="hu" rel="alternate"/><link href="https://emulebb.github.io/it/" hreflang="it" rel="alternate"/><link href="https://emulebb.github.io/ja/" hreflang="ja" rel="alternate"/><link href="https://emulebb.github.io/ko/" hreflang="ko" rel="alternate"/><link href="https://emulebb.github.io/lt/" hreflang="lt" rel="alternate"/><link href="https://emulebb.github.io/lv/" hreflang="lv" rel="alternate"/><link href="https://emulebb.github.io/mt/" hreflang="mt" rel="alternate"/><link href="https://emulebb.github.io/nb/" hreflang="nb" rel="alternate"/><link href="https://emulebb.github.io/ru/" hreflang="ru" rel="alternate"/><link href="https://emulebb.github.io/de/" hreflang="de" rel="alternate"/><link href="https://emulebb.github.io/fr/" hreflang="fr" rel="alternate"/><link href="https://emulebb.github.io/pl/" hreflang="pl" rel="alternate"/><link href="https://emulebb.github.io/nl/" hreflang="nl" rel="alternate"/><link href="https://emulebb.github.io/nn/" hreflang="nn" rel="alternate"/><link href="https://emulebb.github.io/ro/" hreflang="ro" rel="alternate"/><link href="https://emulebb.github.io/sl/" hreflang="sl" rel="alternate"/><link href="https://emulebb.github.io/sq/" hreflang="sq" rel="alternate"/><link href="https://emulebb.github.io/sv/" hreflang="sv" rel="alternate"/><link href="https://emulebb.github.io/tr/" hreflang="tr" rel="alternate"/><link href="https://emulebb.github.io/uk/" hreflang="uk" rel="alternate"/><link href="https://emulebb.github.io/ug-cn/" hreflang="ug-CN" rel="alternate"/><link href="https://emulebb.github.io/ca-valencia/" hreflang="ca-ES-valencia" rel="alternate"/><link href="https://emulebb.github.io/ca-valencia-racv/" hreflang="ca-ES-valencia-x-racv" rel="alternate"/><link href="https://emulebb.github.io/vi/" hreflang="vi" rel="alternate"/><link href="https://emulebb.github.io/zh-cn/" hreflang="zh-CN" rel="alternate"/><link href="https://emulebb.github.io/zh-tw/" hreflang="zh-TW" rel="alternate"/><link href="https://emulebb.github.io/" hreflang="x-default" rel="alternate"/>
 <link href="../assets/brand/emulebb-favicon.ico" rel="icon" type="image/x-icon"/>
-<title>eMuleBB | Rust nightly builds and stable MFC client</title>
+<title>Головна eMuleBB | eMule broadband edition</title>
 <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" rel="stylesheet"/>
 <link href="../styles.css" rel="stylesheet"/>
-<style>
-      .install-command {
-        width: min(100%, 980px);
-        display: grid;
-        gap: 12px;
-        margin-top: 18px;
-        padding: 16px;
-        border: 1px solid rgba(21, 24, 29, 0.16);
-        border-radius: 8px;
-        background: #ffffff;
-        box-shadow: 0 10px 26px rgba(28, 32, 36, 0.08);
-      }
-      .install-command-header {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 12px;
-        align-items: center;
-      }
-      .install-command-code {
-        min-width: 0;
-        max-width: 100%;
-        margin: 0;
-        overflow-x: auto;
-        border: 1px solid rgba(14, 111, 118, 0.22);
-        border-radius: 8px;
-        background: #eef3f5;
-      }
-      .install-command-code code {
-        display: block;
-        width: 100%;
-        padding: 12px;
-        border: 0;
-        background: transparent;
-        white-space: nowrap;
-      }
-    </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8G02C2WFEB"></script>
 <script>
       window.dataLayer = window.dataLayer || [];
@@ -61,22 +27,6 @@
       gtag('js', new Date());
 
       gtag('config', 'G-8G02C2WFEB');
-    </script>
-<script type="application/ld+json">
-      {
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              "name": "eMule broadband edition",
-              "alternateName": "eMuleBB",
-              "applicationCategory": "FileSharingApplication",
-              "operatingSystem": ["Windows", "Linux", "macOS"],
-              "url": "https://emulebb.github.io/uk/",
-              "codeRepository": [
-                "https://github.com/emulebb/emulebb-rust",
-                "https://github.com/emulebb/emulebb"
-              ],
-              "description": "eMuleBB publishes CI-gated nightly builds of its Rust eD2K/Kad client in beta and maintains the stable eMuleBB MFC 0.7.x Windows client."
-      }
     </script>
 </head>
 <body>
@@ -88,9 +38,9 @@
 <span class="menu-toggle-label">Меню</span>
 </button>
 <nav aria-label="Основна навігація" id="primary-nav">
+<a href="https://emulebb.github.io/rust/">Rust</a>
 <a href="#why">Навіщо</a>
 <a href="#features">Можливості</a>
-<a class="nav-download" href="#install">Завантажити</a>
 <a href="#docs">Посібник</a>
 <a href="#team">Team</a>
 <a href="#repos">Репозиторії</a>
@@ -100,87 +50,58 @@
 <main id="top">
 <section class="hero">
 <div class="hero-copy">
-<p class="eyebrow">Two public eD2K/Kad client lanes</p>
-<h1>Rust is in beta with nightly builds. MFC is the stable maintenance line.</h1>
-<p class="lead">emulebb-rust is in beta. CI-gated nightly builds from main are the current public testing channel. emulebb remains the stable Windows line.</p>
+<p class="eyebrow">Active beta</p>
+<h1>eMuleBB Rust</h1>
+<p class="lead">eMuleBB Rust — активний бета-клієнт eD2K/Kad; nightly-збірки є основним каналом тестування, Beta 2 — офіційною базою, а MFC — підтримуваною лінією Windows.</p>
 <div aria-label="Посилання проєкту" class="actions">
-<a class="button primary" href="https://github.com/emulebb/emulebb-rust/releases">Get Rust nightlies</a>
-<a class="button secondary" href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">Contribute</a>
+<a class="button primary" href="https://github.com/emulebb/emulebb-rust/releases">Rust nightlies</a>
+<a class="button secondary" href="https://github.com/emulebb/emulebb-rust/releases/tag/rust-v0.1.0-beta.2">Beta 2</a>
 </div>
-<div aria-label="Stable alternative" class="release-links">
-<span>Stable alternative</span>
-<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3">MFC 0.7.3 stable</a>
+<div aria-label="MFC 0.7.3" class="release-links">
+<span>MFC 0.7.3</span>
+<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3">MFC 0.7.3 maintained</a>
 </div>
 </div>
 <aside aria-label="Стисло про eMuleBB" class="hero-panel">
-<p class="panel-kicker">Current posture</p>
-<h2>One active beta, one maintained stable client</h2>
-<p>Rust moves forward as a best-effort, spare-time project, and contributors are welcome. The MFC line stays published and maintained without a broad feature or architecture roadmap.</p>
+<p class="panel-kicker">Стисло про eMuleBB</p>
+<h2>Nightlies → Beta 2 → MFC 0.7.3</h2>
+<p>eMuleBB Rust — активний бета-клієнт eD2K/Kad; nightly-збірки є основним каналом тестування, Beta 2 — офіційною базою, а MFC — підтримуваною лінією Windows.</p>
 <ul class="signal-list">
-<li>CI-gated nightly builds from main</li>
-<li>Windows, Linux, and macOS packages</li>
-<li>SHA-256 checksums and provenance attestations</li>
-<li>Best-effort development</li>
-<li>Contributors welcome</li>
-<li>MFC 0.7.3 stable</li>
-<li>MFC 0.7.x long-term maintenance</li>
-<li>Rust server for deterministic local tests</li>
-<li>Official aMule upstream parity</li>
-<li>Stock eMule 0.72 compatibility</li>
-<li>MFC diagnostics and critical fixes retained</li>
 </ul>
 </aside>
 </section>
-<section class="testing-callout install-callout" id="install">
-<div>
-<p class="eyebrow">Public download channels</p>
-<h2>Test Rust nightlies or use the stable MFC 0.7.3 client.</h2>
-<p>CI-gated nightly builds from main are the current public testing channel. Development is best-effort and spare-time, and <a href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">contributors are welcome</a>. Version 0.7.3 remains published while the 0.7.x line provides diagnostics, critical fixes, and bounded maintenance.</p>
-<div aria-label="Historical MFC 0.7.3 suite bundle" class="install-command">
-<div class="install-command-header">
-<strong>Historical MFC 0.7.3 suite bundle</strong>
-<button class="copy-command" data-copy-error="Select and copy" data-copy-label="Copy" data-copy-success="Copied" data-copy-text="irm https://emulebb.github.io/install.ps1 | iex" type="button">Copy</button>
-</div>
-<pre class="install-command-code"><code>irm https://emulebb.github.io/install.ps1 | iex</code></pre>
-</div>
-<p class="install-standalone">The one-line installer is retained for the shipped MFC 0.7.3 suite artifact; it is not an active cross-client roadmap.</p>
-</div>
-<div class="testing-actions">
-<a href="https://github.com/emulebb/emulebb-rust/releases">Get Rust nightlies</a>
-<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3">Open MFC 0.7.3</a>
-</div>
-</section>
 <section class="intro">
-<p><strong>eMuleBB</strong> now has two clear public entry points: the <strong>Rust nightly beta channel</strong> and the stable <strong>MFC 0.7.x</strong> Windows client. Rust development happens when maintainer time allows, and <a href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">contributors are very welcome</a>. Supporting repositories focus on diagnostics, deterministic local testing, release engineering, and upstream compatibility.</p>
+<p>Це дім <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, незалежного продукту для тих, хто й досі цінує розподілену модель обміну eMule та хоче керувати нею як сучасним ПЗ. Пакети 0.7.3 опубліковано на GitHub Releases разом із бутстрапером повного набору, окремими ZIP, маніфестами, хешами, SBOM та відповідними ресурсами контролера aMuTorrent.</p>
 </section>
 <section class="section motivation" id="why">
 <div class="section-heading">
-<p class="eyebrow">Lifecycle</p>
-<h2>A smaller, explicit product portfolio</h2>
+<p class="eyebrow">Навіщо</p>
+<h2>P2P-софт здобуває довіру, переживаючи реальні сесії</h2>
+<p>eMuleBB — це водночас продуктова робота й інженерна практика: зберегти складний нативний клієнт Windows із реальною мережевою поведінкою, а потім оточити його сучасними збірками, тестами, документацією, автоматизацією та доказами релізу.</p>
 </div>
 <div aria-label="eMuleBB motivation" class="motivation-grid">
 <article>
-<span>Active</span>
-<h3>Rust nightly beta channel</h3>
-<p>CI-gated nightly builds from main are the current public testing channel.</p>
+<span>Продуктова причина</span>
+<h3>eMuleBB — це самостійний продукт</h3>
+<p>Мета — не косметичний мод, не форк протоколу й не узагальнена оболонка для завантажень. Це орієнтована на широкосмуговий доступ лінійка eMule для довгих сесій, рідкісних файлів, свідомого сидування та досвідчених користувачів, яким досі потрібен нативний десктопний робочий процес.</p>
 </article>
 <article>
-<span>Stable</span>
-<h3>eMuleBB MFC</h3>
-<p>Version 0.7.3 remains published while the 0.7.x line provides diagnostics, critical fixes, and bounded maintenance.</p>
+<span>Інженерна причина</span>
+<h3>Зробити поведінку P2P придатною до перевірки</h3>
+<p>Слоти віддачі, тайм-аути, буфери, великі бібліотеки, доступність WebServer, керування через REST і докази пакетів зроблено явними, щоб кожну зміну можна було переглянути, протестувати, задокументувати й налаштувати.</p>
 </article>
 <article>
-<span>Community</span>
-<h3>Contributors are welcome</h3>
-<p>Rust development is best-effort and spare-time. Read the <a href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">contributing guide</a> to help with code, tests, documentation, or validation.</p>
+<span>Причина екосистеми</span>
+<h3>Будувати інструменти навколо клієнта</h3>
+<p>Та сама дисципліна workspace охоплює клієнт Rust, інструменти керування, нативні збірки, детерміновані сервіси eD2K, тести в живій мережі та підтримуваний клієнт Windows.</p>
 </article>
 </div>
 </section>
 <section class="section" id="features">
 <div class="section-heading">
-<p class="eyebrow">Stable MFC capabilities</p>
-<h2>What the maintained MFC client already provides</h2>
-<p>These are shipped 0.7.3 capabilities, not a promise of renewed broad MFC development. Maintenance remains compatibility- and risk-bounded.</p>
+<p class="eyebrow">Можливості</p>
+<h2>Що eMuleBB додає навколо класичного клієнта</h2>
+<p>Робота над 0.7.3 зосереджена на видимій оператору поведінці: передбачувана політика віддачі, безпечніший binding, фіксовані межі продуктивності, робота з великими бібліотеками, локальна автоматизація та докази пакетів.</p>
 </div>
 <div aria-label="eMule broadband feature groups" class="feature-table">
 <article>
@@ -223,22 +144,22 @@
 <div class="guide-grid guide-compact">
 <article>
 <span>01</span>
-<h3>Start with Rust nightlies</h3>
-<p>Use the <a href="https://github.com/emulebb/emulebb-rust/releases">current nightly prereleases</a> for beta testing, verify <code>SHA256SUMS</code>, and report reproducible issues in emulebb-rust.</p>
+<h3>Почніть із посібника з продукту</h3>
+<p>Спершу використовуйте eMuleBB як eMule: довірені сервери, свідомий bootstrap Kad, передбачувані шляхи incoming/temp і видимі спільні теки.</p>
 </article>
 <article>
 <span>02</span>
-<h3>Contribute to the active lane</h3>
-<p>The project advances when maintainer and contributor time allows. The <a href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">contributing guide</a> covers code, tests, documentation, and validation.</p>
+<h3>Використовуйте локальну автоматизацію</h3>
+<p>Вмикайте REST лише для довірених контролерів, а потім використовуйте aMuTorrent, Prowlarr, Radarr та Sonarr через задокументовані шляхи адаптерів.</p>
 </article>
 <article>
 <span>03</span>
-<h3>Use MFC for the stable Windows lane</h3>
-<p>Version 0.7.3 remains the supported stable package while 0.7.x receives maintenance fixes.</p>
+<h3>Читайте докази</h3>
+<p>Деталі налаштування, API, релізу, SBOM і пакетів містяться у відрендереній документації, тож публічні твердження лишаються прив'язаними до доказів під контролем версій.</p>
 </article>
 </div>
 <div class="automation-copy docs-automation">
-<p>The stable MFC client retains its authenticated <code>/api/v1</code> automation surface. Retired controller forks are not forward product priorities.</p>
+<p>Широкосмугова лінія релізів надає ресурсо-орієнтований JSON API <code>/api/v1</code> через наявний слухач WebServer. Він автентифікує через <code>X-API-Key</code>, повертає JSON-конверти й тримає нативні зміни стану eMule спрямованими через застосунок.</p>
 <ul aria-label="Області REST API" class="api-list">
 <li>Передачі</li>
 <li>Пошуки</li>
@@ -303,29 +224,29 @@
 </section>
 <section class="section release" id="release">
 <div class="section-heading">
-<p class="eyebrow">Published releases</p>
-<h2>Use the release that matches the lane</h2>
+<p class="eyebrow">Безпека й походження</p>
+<h2>0.7.3 збирається й пакується на GitHub</h2>
 </div>
 <div aria-label="eMuleBB release proof" class="release-grid">
 <article>
 <span></span>
-<strong>Rust nightly builds</strong>
-<p>CI-passed <code>main</code> commits publish immutable nightly prereleases with native packages, <code>SHA256SUMS</code>, provenance attestations, and a retained history of the newest 14 builds.</p>
+<strong>Опублікований 0.7.3</strong>
+<p><code>emulebb-v0.7.3</code> — це попередній випуск GitHub із ZIP для x64 і ARM64, пакетами діагностики, маніфестами, SBOM і бутстрапером набору.</p>
 </article>
 <article>
 <span></span>
-<strong>MFC 0.7.3</strong>
-<p>Version 0.7.3 remains published while the 0.7.x line provides diagnostics, critical fixes, and bounded maintenance. Published packages retain manifests, hashes, SBOMs, and diagnostics assets.</p>
+<strong>Встановлення з перевіркою хешу</strong>
+<p>Бутстрапер завантажує ресурси релізу й перевіряє хеші пакетів за опублікованими маніфестами перед встановленням.</p>
 </article>
 <article>
 <span></span>
-<strong>Historical Suite bundle</strong>
-<p>The MFC 0.7.3 release preserves the historical Suite installer and matching aMuTorrent artifact. Suite is a shipped bundle name, not an active cross-client roadmap.</p>
+<strong>Ресурси набору</strong>
+<p>Відповідний пакет aMuTorrent 0.7.3 публікується окремо, а повний потік bootstrap для x64 розв'язує його автоматично для налаштування контролера.</p>
 </article>
 <article>
 <span></span>
-<strong>Evidence stays lane-specific</strong>
-<p>Capabilities, platform support, and network-safety claims must be proven by the repository and release that owns them.</p>
+<strong>Докази контролерів</strong>
+<p>aMuTorrent, Prowlarr, Radarr, Sonarr, Torznab і сумісні з qBittorrent маршрути задокументовано як локальні шляхи інтеграції навколо нативного контракту <code>/api/v1</code>.</p>
 </article>
 </div>
 </section>
@@ -349,7 +270,7 @@
 </a>
 <a href="https://github.com/emulebb/emulebb-build-tests">
 <strong>emulebb-build-tests</strong>
-<span>Shared MFC diagnostics, compatibility, live-network, and parity harness.</span>
+<span>Shared Rust and MFC diagnostics, compatibility, live-network, and parity harness.</span>
 </a>
 <a href="https://github.com/emulebb/emulebb-build">
 <strong>emulebb-build</strong>

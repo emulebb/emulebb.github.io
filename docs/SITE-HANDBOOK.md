@@ -5,7 +5,8 @@ site at `https://emulebb.github.io/`.
 
 The site is the curated public front door for the eMuleBB organization. It
 presents CI-gated `emulebb-rust` nightly builds as the active beta testing
-channel and eMuleBB MFC `0.7.x` as the stable long-term maintenance lane. Rust
+channel, public `0.1.0-beta.2` as the formal Rust baseline, and eMuleBB MFC
+`0.7.x` as the maintained Windows lane. Rust
 development is best-effort and spare-time, and contributors are welcome. The
 site is not the canonical engineering ledger, release ledger, or feature
 backlog. Those live in the public `emulebb-tooling` docs and the owning release
@@ -36,6 +37,9 @@ repositories.
 - The active product-development download channel is the CI-gated
   `emulebb-rust` nightly prereleases from `main`. Formal beta tags remain
   immutable release evidence, not the public front-door download target.
+- The public Rust status is Active beta. Public `0.1.0-beta.2` is working toward
+  Beta 3. The approved testing summary is: “Repeatedly tested on live eD2K/Kad
+  networks.”
 - Rust development is best-effort and spare-time. Public copy should welcome
   contributors and link to the repository's `CONTRIBUTING.md`.
 - The historical MFC `0.7.3` suite installer and aMuTorrent package remain
@@ -176,8 +180,11 @@ Before adding or changing a feature entry:
   `sitemap.xml`.
 - `/faq/` is the canonical English FAQ. Completed FAQ translations are
   published under selected locale directories: `/it/faq/`, `/es/faq/`,
-  `/pt-br/faq/`, `/fr/faq/`, `/de/faq/`, `/pl/faq/`, `/nl/faq/`, `/ru/faq/`,
-  `/uk/faq/`, `/zh-cn/faq/`, and `/ja/faq/`.
+  `/pt-br/faq/`, `/pt-pt/faq/`, `/fr/faq/`, `/de/faq/`, `/pl/faq/`,
+  `/nl/faq/`, `/ru/faq/`, `/tr/faq/`, `/uk/faq/`, `/ko/faq/`, `/ar-ae/faq/`,
+  `/zh-cn/faq/`, and `/ja/faq/`.
+- `/rust/` is the canonical English-only Rust product page. Do not generate
+  localized `/rust/` variants or add `hreflang` alternates to that page.
 - Do not add generic compatibility chooser URLs such as `/pt/`; Portuguese is
   represented by the real regional pages `/pt-br/` and `/pt-pt/`.
 - Complete localized pages must:
@@ -202,7 +209,8 @@ Every indexable page must have:
 - one useful meta description
 - `robots` policy
 - canonical URL
-- reciprocal `hreflang` alternates
+- reciprocal `hreflang` alternates for localized homepage and FAQ families;
+  the English-only `/rust/` product page intentionally has none
 - Open Graph title, description, type, and URL where appropriate
 - structured data only when it can be kept accurate
 
@@ -344,7 +352,12 @@ foreach ($file in $files) {
   $html = Get-Content -Raw $file
   if ($html -notmatch '<title>') { throw "Missing title: $file" }
   if ($html -notmatch '<link[^>]+rel="canonical"') { throw "Missing canonical: $file" }
-  if ($html -notmatch 'hreflang="x-default"') { throw "Missing x-default: $file" }
+  if ($file -notmatch '\\rust\\index\.html$' -and $html -notmatch 'hreflang="x-default"') {
+    throw "Missing x-default: $file"
+  }
+  if ($file -match '\\rust\\index\.html$' -and $html -match 'hreflang=') {
+    throw "English-only Rust page must not publish hreflang alternates: $file"
+  }
   if ($html -notmatch 'content="index,follow"') { throw "Locale not indexable: $file" }
 }
 if (Test-Path -LiteralPath 'pt/index.html') { throw 'Unexpected generic Portuguese chooser' }
@@ -368,13 +381,15 @@ mobile rendering before pushing.
 Current public files:
 
 - `index.html`: canonical English page
+- `rust/index.html`: canonical English-only eMuleBB Rust product page
 - locale `index.html` files under the stock eMule language directories listed
   in the Localization Policy
 - `languages/index.html`: indexable language selector
 - `faq/index.html`: canonical English FAQ
 - selected locale FAQ pages under `/it/faq/`, `/es/faq/`, `/pt-br/faq/`,
-  `/fr/faq/`, `/de/faq/`, `/pl/faq/`, `/nl/faq/`, `/ru/faq/`, `/uk/faq/`,
-  `/zh-cn/faq/`, and `/ja/faq/`
+  `/pt-pt/faq/`, `/fr/faq/`, `/de/faq/`, `/pl/faq/`, `/nl/faq/`, `/ru/faq/`,
+  `/tr/faq/`, `/uk/faq/`, `/ko/faq/`, `/ar-ae/faq/`, `/zh-cn/faq/`, and
+  `/ja/faq/`
 - `styles.css`: shared styles
 - `assets/brand/emulebb-favicon.ico`: browser favicon
 - `robots.txt`: crawler policy

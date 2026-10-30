@@ -26,6 +26,7 @@ RUST_RELEASES_URL = "https://github.com/emulebb/emulebb-rust/releases"
 RUST_CONTRIBUTING_URL = (
     "https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md"
 )
+RUST_REPOSITORY_URL = "https://github.com/emulebb/emulebb-rust"
 DEFAULT_PUBLIC_PRESENCE_CONTRACT = (
     Path(__file__).resolve().parents[2] / "emulebb-tooling" / "manifests" / "public-presence.v1.json"
 )
@@ -126,7 +127,11 @@ PAGES = (
     PageSpec("zh_tw", "zh-TW", "zh-TW", "zh-tw", "0.8", "繁體中文"),
 )
 LANGUAGE_PAGE = PageSpec("languages", "en", "en", "languages", "0.7", "Languages")
+RUST_PAGE = PageSpec("rust", "en", "en", "rust", "0.9", "eMuleBB Rust")
 FAQ_LOCALE_KEYS = ("en", "it", "es", "pt_br", "pt_pt", "fr", "de", "pl", "nl", "ru", "tr", "uk", "ko", "ar_ae", "zh_cn", "ja")
+CURRENT_RUST_SUMMARY_LOCALES = frozenset(
+    {"de", "es", "fr", "ja", "nl", "pl", "pt_br", "pt_pt", "ru", "tr", "uk", "zh_cn"}
+)
 FAQ_PAGE_BY_KEY = {
     page.key: PageSpec(
         page.key,
@@ -260,10 +265,10 @@ def s(eyebrow: str, h2: str, p: str = "") -> dict[str, Any]:
 CONTENT: dict[str, dict[str, Any]] = {
     "en": {
         "title": "eMuleBB home | eMule broadband edition",
-        "meta_description": "eMuleBB 0.7.3 is published: install eMule broadband edition with a PowerShell suite bootstrapper or standalone ZIP, with GitHub-built package provenance.",
+        "meta_description": "eMuleBB Rust is an active eD2K/Kad beta: use CI-gated nightlies, or choose the formal 0.1.0-beta.2 baseline and maintained MFC Windows client.",
         "og_title": "eMuleBB home | eMule broadband edition",
-        "og_description": "eMuleBB is its own broadband-focused eMule product and the home for Windows P2P builds, controller tooling, release proof, and exploratory eD2K/Kad engineering.",
-        "structured_description": "eMuleBB is the home of eMule broadband edition, an independent broadband-focused eMule product with upload control, automated testing, SBOM-backed packages, REST automation, eD2K/Kad compatibility, and out-of-the-box aMuTorrent, Prowlarr, Radarr, and Sonarr integration paths. Stable 0.7.3 is published on GitHub Releases.",
+        "og_description": "eMuleBB Rust is the active beta eD2K/Kad client, with CI-gated nightlies, a formal Beta 2 baseline, and a maintained MFC Windows lane.",
+        "structured_description": "eMuleBB Rust is the active beta eD2K/Kad client. Public 0.1.0-beta.2 is working toward Beta 3 and has been repeatedly tested on live eD2K/Kad networks.",
         "nav_label": "Primary navigation",
         "project_links_label": "Project links",
         "release_downloads_label": "Download releases",
@@ -278,24 +283,24 @@ CONTENT: dict[str, dict[str, Any]] = {
             {"id": "repos", "label": "Repos"},
         ],
         "hero": {
-            "eyebrow": "The eMuleBB home for broadband P2P",
-            "h1": "eMuleBB is the broadband eMule product built by P2P people.",
-            "lead": "Stable 0.7.3 is published: a serious Windows eMule line for fast upload links, large shared libraries, always-on sessions, REST controller workflows, Arr integration, and GitHub-built package evidence.",
-            "install": "Download 0.7.3",
-            "source": "Source",
+            "eyebrow": "Active eD2K/Kad beta",
+            "h1": "eMuleBB Rust is the active client, working toward Beta 3.",
+            "lead": "Public 0.1.0-beta.2 is the formal baseline. CI-gated nightlies are the primary testing channel. Repeatedly tested on live eD2K/Kad networks.",
+            "install": "Get Rust nightlies",
+            "source": "Open Beta 2",
             "guide": "Product guide",
-            "panel_kicker": "Product posture",
-            "panel_h2": "eMuleBB is the product. The ecosystem is the proof lab.",
-            "panel_p": "The desktop app stays stock-compatible where the network matters. The stable suite adds local controller workflows around it without turning eMuleBB into a generic torrent shell.",
-            "signals": ["0.7.3 stable published", "One-line suite bootstrap", "Manual standalone ZIP", "GitHub Actions builds", "Manifest hash verification", "SPDX SBOMs", "aMuTorrent controller", "Prowlarr Torznab", "Radarr/Sonarr qBit adapter", "Stock eD2K/Kad compatibility"],
+            "panel_kicker": "Current posture",
+            "panel_h2": "Active beta, formal baseline, maintained Windows lane",
+            "panel_p": "Nightlies move the Rust client forward, Beta 2 remains the formal published baseline, and MFC 0.7.3 remains available for maintained Windows use.",
+            "signals": ["Active beta", "0.1.0-beta.2 published", "Working toward Beta 3", "CI-gated nightlies", "Live eD2K/Kad network testing", "Windows, Linux, and macOS packages", "SHA-256 checksums", "Provenance attestations", "MFC 0.7.3 maintained"],
         },
-        "intro": "This is the home of <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, an independent product for people who still value eMule's distributed sharing model and want it operated like modern software. Stable 0.7.3 packages are published on GitHub Releases with a full-suite bootstrapper, standalone ZIPs, manifests, hashes, SBOMs, and matching aMuTorrent controller assets.",
+        "intro": "<strong>eMuleBB Rust</strong> is the active product-development lane. Use the latest nightly for current beta testing, the formal <strong>0.1.0-beta.2</strong> release for a fixed baseline, or the maintained <strong>MFC 0.7.3</strong> client for the Windows maintenance lane.",
         "why": {
             **s("Why", "P2P software earns trust by surviving real sessions", "eMuleBB is a product effort and an engineering practice: preserve a complex native Windows client with real network behavior, then surround it with modern builds, tests, documentation, automation, and release proof."),
             "cards": [
                 c("Product reason", "eMuleBB is its own product", "The goal is not a cosmetic mod, a protocol fork, or a generic downloader shell. It is a broadband-focused eMule line for long sessions, rare files, deliberate seeding, and power users who still want the native desktop workflow."),
                 c("Engineering reason", "Make P2P behavior inspectable", "Upload slots, timeouts, buffers, large libraries, WebServer exposure, REST control, and package evidence are made explicit so each change can be reviewed, tested, documented, and adjusted."),
-                c("Ecosystem reason", "Build the tools around the client", "The same workspace discipline covers the app, controller tooling, Windows builds, deterministic eD2K services, and exploratory headless eD2K/Kad work without pretending every lab project is a stable end-user product."),
+                c("Ecosystem reason", "Build the tools around the client", "The same workspace discipline covers the Rust client, controller tooling, native packages, deterministic eD2K services, live-network checks, and the maintained Windows client."),
             ],
         },
         "features": {
@@ -411,6 +416,25 @@ FAQ_LINKS = {
     "controllers": f"{DOCS_SITE_URL}/reference/GUIDE-CONTROLLERS-REST/",
     "release": f"{DOCS_SITE_URL}/active/RELEASE-0.7.3/",
     "product": f"{DOCS_SITE_URL}/reference/GUIDE-EMULEBB/",
+}
+
+FAQ_TESTING_ANSWERS = {
+    "en": "Use eMuleBB Rust nightlies for current beta testing. Use public 0.1.0-beta.2 when you need a fixed formal baseline. Use MFC 0.7.3 only for the maintained Windows lane.",
+    "it": "Usa le nightly di eMuleBB Rust per i test beta correnti. Usa la versione pubblica 0.1.0-beta.2 quando serve una base formale fissa. Usa MFC 0.7.3 solo per il ramo Windows mantenuto.",
+    "es": "Usa las nightly de eMuleBB Rust para las pruebas beta actuales. Usa la versión pública 0.1.0-beta.2 cuando necesites una base formal fija. Usa MFC 0.7.3 solo para la línea Windows mantenida.",
+    "pt_br": "Use as nightlies do eMuleBB Rust para os testes beta atuais. Use a versão pública 0.1.0-beta.2 quando precisar de uma base formal fixa. Use o MFC 0.7.3 apenas para a linha Windows mantida.",
+    "pt_pt": "Use as nightlies do eMuleBB Rust para os testes beta atuais. Use a versão pública 0.1.0-beta.2 quando precisar de uma referência formal fixa. Use o MFC 0.7.3 apenas para a linha Windows mantida.",
+    "fr": "Utilisez les nightly d’eMuleBB Rust pour les tests bêta actuels. Utilisez la version publique 0.1.0-beta.2 lorsqu’une référence formelle fixe est nécessaire. Utilisez MFC 0.7.3 uniquement pour la branche Windows maintenue.",
+    "de": "Nutze die Nightlies von eMuleBB Rust für aktuelle Beta-Tests. Nutze die öffentliche Version 0.1.0-beta.2, wenn du eine feste formale Basis brauchst. Nutze MFC 0.7.3 nur für die gepflegte Windows-Linie.",
+    "pl": "Używaj nightly eMuleBB Rust do bieżących testów beta. Użyj publicznej wersji 0.1.0-beta.2, gdy potrzebujesz stałej formalnej bazy. MFC 0.7.3 służy wyłącznie utrzymywanej linii Windows.",
+    "nl": "Gebruik de nightlies van eMuleBB Rust voor actuele bètatests. Gebruik de openbare 0.1.0-beta.2 als je een vaste formele basis nodig hebt. Gebruik MFC 0.7.3 alleen voor de onderhouden Windows-lijn.",
+    "ru": "Используйте nightly-сборки eMuleBB Rust для текущего бета-тестирования. Используйте публичную версию 0.1.0-beta.2, когда нужна фиксированная официальная база. MFC 0.7.3 предназначен только для поддерживаемой линии Windows.",
+    "tr": "Güncel beta testleri için eMuleBB Rust nightly derlemelerini kullanın. Sabit ve resmî bir temel gerektiğinde yayımlanmış 0.1.0-beta.2 sürümünü kullanın. MFC 0.7.3 yalnızca bakımı sürdürülen Windows hattı içindir.",
+    "uk": "Використовуйте nightly-збірки eMuleBB Rust для поточного бета-тестування. Використовуйте публічну версію 0.1.0-beta.2, коли потрібна фіксована офіційна база. MFC 0.7.3 призначений лише для підтримуваної лінії Windows.",
+    "ko": "현재 베타 테스트에는 eMuleBB Rust nightly를 사용하세요. 고정된 공식 기준이 필요하면 공개 0.1.0-beta.2를 사용하세요. MFC 0.7.3은 유지보수 중인 Windows 라인에만 사용합니다.",
+    "ar_ae": "استخدم إصدارات eMuleBB Rust الليلية لاختبارات beta الحالية. استخدم الإصدار العام 0.1.0-beta.2 عندما تحتاج إلى خط أساس رسمي ثابت. استخدم MFC 0.7.3 فقط لمسار Windows الخاضع للصيانة.",
+    "zh_cn": "当前 beta 测试请使用 eMuleBB Rust nightly。需要固定的正式基线时，请使用公开的 0.1.0-beta.2。MFC 0.7.3 仅用于维护中的 Windows 产品线。",
+    "ja": "現在の beta テストには eMuleBB Rust nightly を使用してください。固定された正式な基準が必要な場合は、公開済みの 0.1.0-beta.2 を使用してください。MFC 0.7.3 は保守中の Windows ライン専用です。",
 }
 
 
@@ -878,6 +902,57 @@ def load_public_presence_contract(path: Path) -> dict[str, Any]:
     return payload
 
 
+def rust_product(contract: dict[str, Any]) -> dict[str, str]:
+    """Return the Rust product record, with a schema-v1 transition fallback."""
+
+    required = (
+        "key",
+        "repository_key",
+        "display_name",
+        "lifecycle_label",
+        "published_version",
+        "development_target",
+        "testing_summary",
+        "nightly_url",
+        "release_url",
+        "docs_url",
+        "issues_url",
+    )
+    products = contract.get("products")
+    if products is not None:
+        if not isinstance(products, list) or not products or not all(
+            isinstance(record, dict) for record in products
+        ):
+            raise ValueError("public-presence contract field 'products' must be a non-empty object array")
+        product = next(
+            (record for record in products if record.get("key") == "emulebb-rust"),
+            None,
+        )
+        if product is None:
+            raise ValueError("public-presence contract must define the emulebb-rust product")
+        missing = [key for key in required if not isinstance(product.get(key), str) or not product[key].strip()]
+        if missing:
+            raise ValueError(f"emulebb-rust product is missing required fields: {', '.join(missing)}")
+        return product
+
+    channel = next(
+        channel for channel in contract["release_channels"] if channel["key"] == "rust-nightly"
+    )
+    return {
+        "key": "emulebb-rust",
+        "repository_key": "emulebb-rust",
+        "display_name": "eMuleBB Rust",
+        "lifecycle_label": "Active beta",
+        "published_version": "0.1.0-beta.2",
+        "development_target": "Beta 3",
+        "testing_summary": "Repeatedly tested on live eD2K/Kad networks.",
+        "nightly_url": channel["download_url"],
+        "release_url": f"{RUST_REPOSITORY_URL}/releases/tag/rust-v0.1.0-beta.2",
+        "docs_url": f"{DOCS_SITE_URL}/products/emulebb-rust/",
+        "issues_url": f"{RUST_REPOSITORY_URL}/issues",
+    }
+
+
 def public_repository_links(contract: dict[str, Any]) -> list[dict[str, str]]:
     """Return current repository and compatibility cards from the shared contract."""
 
@@ -1098,92 +1173,118 @@ def apply_stable_release_copy(content: dict[str, Any]) -> None:
     content["testing_callout"] = TESTING_CALLOUT
 
 
-def apply_lifecycle_copy(content: dict[str, Any], contract: dict[str, Any]) -> None:
+def apply_lifecycle_copy(
+    content: dict[str, Any], contract: dict[str, Any], locale_key: str
+) -> None:
     """Apply the current organization lifecycle to every generated homepage."""
 
-    repositories = {repository["key"]: repository for repository in contract["repositories"]}
     channels = {channel["key"]: channel for channel in contract["release_channels"]}
-    rust_repository = repositories["emulebb-rust"]
-    mfc_repository = repositories["emulebb"]
     rust_channel = channels["rust-nightly"]
     mfc_channel = channels["mfc-stable"]
+    product = rust_product(contract)
     installer = contract["installer"]
     contributing_url = rust_channel["contributing_url"]
 
-    content["title"] = "eMuleBB | Rust nightly builds and stable MFC client"
+    if locale_key != "en":
+        if locale_key in CURRENT_RUST_SUMMARY_LOCALES:
+            localized_summary = content["og_description"]
+        elif locale_key in FAQ_TESTING_ANSWERS:
+            localized_summary = FAQ_TESTING_ANSWERS[locale_key]
+        else:
+            localized_summary = (
+                f"{product['display_name']} · {product['lifecycle_label']} · public "
+                f"{product['published_version']} · working toward {product['development_target']} · "
+                "CI-gated nightlies first · maintained MFC 0.7.3 Windows lane."
+            )
+        content["og_description"] = localized_summary
+        content["meta_description"] = localized_summary
+        content["structured_description"] = localized_summary
+        content["hero"].update(
+            {
+                "eyebrow": product["lifecycle_label"],
+                "h1": product["display_name"],
+                "lead": localized_summary,
+                "install": "Rust nightlies",
+                "primary_href": product["nightly_url"],
+                "source": "Beta 2",
+                "secondary_href": product["release_url"],
+                "panel_kicker": content["product_summary_label"],
+                "panel_h2": "Nightlies → Beta 2 → MFC 0.7.3",
+                "panel_p": localized_summary,
+                "signals": [],
+            }
+        )
+        content["release_downloads_label"] = "MFC 0.7.3"
+        content["install_callout"] = None
+        return
+
+    content["title"] = "eMuleBB Rust | Active eD2K/Kad beta"
     content["meta_description"] = (
-        "eMuleBB publishes CI-gated Rust nightly builds for beta testing and "
-        "maintains the stable MFC 0.7.x Windows client."
+        f"{product['display_name']} is an active eD2K/Kad beta: public "
+        f"{product['published_version']}, working toward {product['development_target']}, "
+        "with CI-gated nightlies as the primary testing channel."
     )
     content["og_title"] = content["title"]
     content["og_description"] = content["meta_description"]
     content["structured_description"] = (
-        "eMuleBB publishes CI-gated nightly builds of its Rust eD2K/Kad client "
-        "in beta and maintains the stable eMuleBB MFC 0.7.x Windows client."
+        f"{product['display_name']} is an active beta. Public "
+        f"{product['published_version']} is working toward {product['development_target']}. "
+        f"{product['testing_summary']}"
     )
-    content["release_downloads_label"] = "Stable alternative"
+    content["release_downloads_label"] = "Maintained Windows lane"
     content["hero"].update(
         {
-            "eyebrow": "Two public eD2K/Kad client lanes",
-            "h1": (
-                "Rust is in beta with nightly builds. MFC is the stable "
-                "maintenance line."
-            ),
+            "eyebrow": product["lifecycle_label"],
+            "h1": f"{product['display_name']} is working toward {product['development_target']}.",
             "lead": (
-                f"{rust_repository['name']} is in beta. {rust_channel['description']} "
-                f"{mfc_repository['name']} remains the stable Windows line."
+                f"Public {product['published_version']} is the formal baseline. "
+                f"{rust_channel['description']} {product['testing_summary']}"
             ),
             "install": "Get Rust nightlies",
-            "primary_href": rust_channel["download_url"],
-            "source": "Contribute",
-            "secondary_href": contributing_url,
+            "primary_href": product["nightly_url"],
+            "source": f"Open {product['published_version']}",
+            "secondary_href": product["release_url"],
             "panel_kicker": "Current posture",
-            "panel_h2": "One active beta, one maintained stable client",
+            "panel_h2": "Nightly first, formal Beta 2 second, maintained MFC third",
             "panel_p": (
-                "Rust moves forward as a best-effort, spare-time project, and "
-                "contributors are welcome. The MFC line stays published and "
-                "maintained without a broad feature or architecture roadmap."
+                f"{product['display_name']} is the active product-development lane. "
+                "eMuleBB MFC remains the maintained Windows line."
             ),
             "signals": [
+                product["lifecycle_label"],
+                f"{product['published_version']} published",
+                f"Working toward {product['development_target']}",
+                product["testing_summary"],
                 "CI-gated nightly builds from main",
                 "Windows, Linux, and macOS packages",
                 "SHA-256 checksums and provenance attestations",
-                "Best-effort development",
                 "Contributors welcome",
                 "MFC 0.7.3 stable",
                 "MFC 0.7.x long-term maintenance",
-                "Rust server for deterministic local tests",
-                "Official aMule upstream parity",
-                "Stock eMule 0.72 compatibility",
-                "MFC diagnostics and critical fixes retained",
             ],
         }
     )
     content["intro"] = (
-        "<strong>eMuleBB</strong> now has two clear public entry points: the "
-        "<strong>Rust nightly beta channel</strong> and the stable "
-        "<strong>MFC 0.7.x</strong> Windows client. Rust development happens "
-        "when maintainer time allows, and "
-        f'<a href="{contributing_url}">contributors are very welcome</a>. '
-        "Supporting repositories focus on diagnostics, deterministic local "
-        "testing, release engineering, and upstream compatibility."
+        f"<strong>{product['display_name']}</strong> is the active beta client. "
+        f'Use <a href="{product["nightly_url"]}">nightlies</a> for current testing, '
+        f'<a href="{product["release_url"]}">{product["published_version"]}</a> '
+        "for the formal baseline, or MFC 0.7.3 for the maintained Windows lane. "
+        f'<a href="{contributing_url}">Contributors are welcome</a>.'
     )
     content["why"] = {
-        **s("Lifecycle", "A smaller, explicit product portfolio"),
+        **s("Product lanes", "Choose the lane that matches your needs"),
         "cards": [
             c(
-                "Active",
-                "Rust nightly beta channel",
+                "Primary",
+                f"{product['display_name']} nightlies",
                 rust_channel["description"],
             ),
-            c("Stable", "eMuleBB MFC", mfc_channel["description"]),
             c(
-                "Community",
-                "Contributors are welcome",
-                "Rust development is best-effort and spare-time. Read the "
-                f'<a href="{contributing_url}">contributing guide</a> to '
-                "help with code, tests, documentation, or validation.",
+                "Formal baseline",
+                f"{product['display_name']} {product['published_version']}",
+                f"The published Beta 2 release is the fixed reference while work continues toward {product['development_target']}.",
             ),
+            c("Maintained Windows", "eMuleBB MFC 0.7.3", mfc_channel["description"]),
         ],
     }
     content["features"]["eyebrow"] = "Stable MFC capabilities"
@@ -1196,7 +1297,7 @@ def apply_lifecycle_copy(content: dict[str, Any], contract: dict[str, Any]) -> N
         c(
             "",
             "Start with Rust nightlies",
-            f'Use the <a href="{rust_channel["download_url"]}">current nightly '
+            f'Use the <a href="{product["nightly_url"]}">current nightly '
             "prereleases</a> for beta testing, verify "
             "<code>SHA256SUMS</code>, and report reproducible issues in "
             "emulebb-rust.",
@@ -1208,7 +1309,8 @@ def apply_lifecycle_copy(content: dict[str, Any], contract: dict[str, Any]) -> N
             f'The <a href="{contributing_url}">contributing guide</a> '
             "covers code, tests, documentation, and validation.",
         ),
-        c("", "Use MFC for the stable Windows lane", "Version 0.7.3 remains the supported stable package while 0.7.x receives maintenance fixes."),
+        c("", "Use the formal Beta 2 baseline", f'Use <a href="{product["release_url"]}">{product["published_version"]}</a> when you need a fixed Rust release instead of the moving nightly channel.'),
+        c("", "Use MFC for the maintained Windows lane", "Version 0.7.3 remains published while 0.7.x receives bounded maintenance fixes."),
     ]
     content["automation"]["p"] = (
         "The stable MFC client retains its authenticated <code>/api/v1</code> "
@@ -1226,6 +1328,11 @@ def apply_lifecycle_copy(content: dict[str, Any], contract: dict[str, Any]) -> N
                 "provenance attestations, and a retained history of the newest "
                 "14 builds.",
             ),
+            c(
+                "",
+                f"Formal {product['published_version']}",
+                f"The public Beta 2 release is the fixed Rust baseline while development works toward {product['development_target']}. {product['testing_summary']}",
+            ),
             c("", "MFC 0.7.3", f"{mfc_channel['description']} Published packages retain manifests, hashes, SBOMs, and diagnostics assets."),
             c("", "Historical Suite bundle", contract["historical_bundle_note"]),
             c(
@@ -1240,14 +1347,17 @@ def apply_lifecycle_copy(content: dict[str, Any], contract: dict[str, Any]) -> N
     content["repos"]["h2"] = "Current clients, infrastructure, and compatibility references"
     content["install_callout"] = {
         **INSTALL_CALLOUT,
+        "h2": "Use Rust nightlies first, or the formal Beta 2 baseline.",
         "p": (
-            f"{rust_channel['description']} Development is best-effort and spare-time, and "
-            f'<a href="{contributing_url}">contributors are welcome</a>. '
-            f"{mfc_channel['description']}"
+            f"{rust_channel['description']} {product['testing_summary']} "
+            f"Public {product['published_version']} is the formal baseline while work continues "
+            f"toward {product['development_target']}. {mfc_channel['description']}"
         ),
         "command": f"irm {installer['stable_url']} | iex",
-        "primary_href": rust_channel["download_url"],
-        "secondary_href": mfc_channel["download_url"],
+        "primary": "Get Rust nightlies",
+        "primary_href": product["nightly_url"],
+        "secondary": f"Open {product['published_version']}",
+        "secondary_href": product["release_url"],
     }
     content["testing_callout"] = {
         **TESTING_CALLOUT,
@@ -1256,20 +1366,15 @@ def apply_lifecycle_copy(content: dict[str, Any], contract: dict[str, Any]) -> N
 
 
 def apply_stable_faq_copy() -> None:
-    """Normalize current release facts across localized FAQ copy."""
+    """Normalize current product-lane facts across localized FAQ copy."""
 
-    for faq in FAQ_CONTENT.values():
-        faq["meta_description"] = (
-            "Short answers for eMule users who want to try eMuleBB for binding, "
-            "sharing, upload slots, Kad, REST, and stable 0.7.3."
-        )
+    for key, faq in FAQ_CONTENT.items():
+        faq["meta_description"] = FAQ_TESTING_ANSWERS[key]
         for item in faq["items"]:
-            if "0.7.3" in item["answer"] and ("RC" in item["answer"] or "rc" in item["answer"]):
-                item["answer"] = (
-                    "Use the published eMuleBB 0.7.3 GitHub Release for stable "
-                    "package testing. Nightly, beta, and older release-candidate "
-                    "packages are pre-release test builds."
-                )
+            if item["doc_href"] == FAQ_LINKS["release"]:
+                item["answer"] = FAQ_TESTING_ANSWERS[key]
+                item["doc_title"] = "eMuleBB Rust"
+                item["doc_href"] = RUST_PAGE.url
 
 
 def add_release_evidence_copy(content: dict[str, Any]) -> None:
@@ -1335,9 +1440,10 @@ def with_generated_links(root: Path, contract: dict[str, Any]) -> None:
         content = CONTENT[page.key]
         content.setdefault("install_callout", INSTALL_CALLOUT)
         content.setdefault("testing_callout", TESTING_CALLOUT)
-        apply_stable_release_copy(content)
-        add_release_evidence_copy(content)
-        apply_lifecycle_copy(content, contract)
+        if page.key == "en":
+            apply_stable_release_copy(content)
+            add_release_evidence_copy(content)
+        apply_lifecycle_copy(content, contract, page.key)
         add_brand_logo(page, content)
         add_team_images(page, content)
         content.setdefault("release_downloads_label", CONTENT["en"]["release_downloads_label"])
@@ -1354,7 +1460,9 @@ def with_generated_links(root: Path, contract: dict[str, Any]) -> None:
                 nav_item.pop("href", None)
             if nav_item.get("id") == "faq":
                 nav_item["href"] = FAQ_PAGE_BY_KEY.get(page.key, ENGLISH_FAQ_PAGE).url
-        if not any(nav_item.get("id") == "install" for nav_item in content["nav"]):
+        if content["install_callout"] and not any(
+            nav_item.get("id") == "install" for nav_item in content["nav"]
+        ):
             content["nav"].insert(
                 3,
                 {
@@ -1379,6 +1487,11 @@ def with_generated_links(root: Path, contract: dict[str, Any]) -> None:
                 seen_nav_ids.add(nav_id)
             deduped_nav.append(nav_item)
         content["nav"] = deduped_nav
+        if not content["install_callout"]:
+            content["nav"] = [
+                nav_item for nav_item in content["nav"] if nav_item.get("id") != "install"
+            ]
+        content["nav"].insert(0, {"id": "rust", "label": "Rust", "href": RUST_PAGE.url})
         faq_href = FAQ_PAGE_BY_KEY.get(page.key, ENGLISH_FAQ_PAGE).url
         content["nav"] = [nav_item for nav_item in content["nav"] if nav_item.get("id") != "faq"]
         content["nav"].append({"id": "faq", "label": "FAQ", "href": faq_href})
@@ -1386,7 +1499,7 @@ def with_generated_links(root: Path, contract: dict[str, Any]) -> None:
         content["languages_link_label"] = LANGUAGE_LINK_COPY[page.key]
         stable_channel = next(channel for channel in contract["release_channels"] if channel["key"] == "mfc-stable")
         content["release_downloads"] = [
-            {"href": stable_channel["download_url"], "title": "MFC 0.7.3 stable"}
+            {"href": stable_channel["download_url"], "title": "MFC 0.7.3 maintained"}
         ]
         content["docs"]["eyebrow"], content["docs"]["h2"] = DOC_SECTION_COPY[page.key]
         doc_copy = DOC_COPY[page.key]
@@ -1479,12 +1592,40 @@ def environment(root: Path) -> Environment:
     )
 
 
+def rust_page_content(contract: dict[str, Any]) -> dict[str, Any]:
+    """Build the canonical English-only Rust product page content."""
+
+    product = rust_product(contract)
+    mfc_channel = next(
+        channel for channel in contract["release_channels"] if channel["key"] == "mfc-stable"
+    )
+    rust_channel = next(
+        channel for channel in contract["release_channels"] if channel["key"] == "rust-nightly"
+    )
+    return {
+        "title": f"{product['display_name']} | {product['lifecycle_label']}",
+        "meta_description": (
+            f"{product['display_name']} is an active eD2K/Kad beta: public "
+            f"{product['published_version']}, working toward {product['development_target']}, "
+            "with CI-gated nightlies as the primary testing channel."
+        ),
+        "structured_description": (
+            f"{product['display_name']} is an active beta. Public "
+            f"{product['published_version']} is working toward {product['development_target']}. "
+            f"{product['testing_summary']}"
+        ),
+        "product": product,
+        "mfc_url": mfc_channel["download_url"],
+        "contributing_url": rust_channel["contributing_url"],
+    }
+
+
 def render_sitemap(lastmod: str) -> str:
     """Render sitemap.xml from the canonical page table."""
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
-    for page in (*PAGES, LANGUAGE_PAGE, *FAQ_PAGES):
+    for page in (*PAGES, RUST_PAGE, LANGUAGE_PAGE, *FAQ_PAGES):
         lines.extend(
             [
                 "  <url>",
@@ -1505,6 +1646,7 @@ def render_outputs(root: Path, lastmod: str, contract: dict[str, Any]) -> dict[P
     with_generated_links(root, contract)
     env = environment(root)
     home = env.get_template("home.html.j2")
+    rust = env.get_template("rust.html.j2")
     languages = env.get_template("languages.html.j2")
     faq = env.get_template("faq.html.j2")
     alt = alternates()
@@ -1528,6 +1670,7 @@ def render_outputs(root: Path, lastmod: str, contract: dict[str, Any]) -> dict[P
         home_page = home_pages[page.key]
         nav = [
             {"href": home_page.url, "label": content["home_label"]},
+            {"href": RUST_PAGE.url, "label": "Rust"},
             {"href": page.url, "label": content["faq_label"]},
             {"href": DOCS_SITE_URL + "/", "label": content["docs_label"]},
             {"href": f"{SITE_BASE_URL}/languages/", "label": content["languages_label"]},
@@ -1542,6 +1685,13 @@ def render_outputs(root: Path, lastmod: str, contract: dict[str, Any]) -> dict[P
             alternates=faq_alt,
             nav=to_namespace(nav),
         )
+    outputs[RUST_PAGE.output_path] = rust.render(
+        site_base_url=SITE_BASE_URL,
+        pico_cdn=PICO_CDN,
+        ga_measurement_id=GA_MEASUREMENT_ID,
+        page=RUST_PAGE,
+        content=to_namespace(rust_page_content(contract)),
+    )
     outputs[LANGUAGE_PAGE.output_path] = languages.render(
         site_base_url=SITE_BASE_URL,
         pico_cdn=PICO_CDN,

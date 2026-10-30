@@ -162,7 +162,7 @@
         }
       ],
       "nav_label": "التنقل الرئيسي",
-      "og_description": "eMuleBB هو منتج eMule مستقل موجّه نحو النطاق العريض، وهو موطن بُنى P2P لنظام Windows وأدوات التحكم وأدلة الإصدار والهندسة الاستكشافية لـ eD2K/Kad.",
+      "og_description": "eMuleBB Rust هو عميل eD2K/Kad النشط في مرحلة beta؛ الإصدارات الليلية هي مسار الاختبار الأساسي، وBeta 2 هي الأساس الرسمي، وMFC هو مسار Windows الخاضع للصيانة.",
       "og_title": "الصفحة الرئيسية لـ eMuleBB | eMule broadband edition",
       "product_summary_label": "ملخص eMuleBB",
       "project_links_label": "روابط المشروع",
@@ -235,7 +235,7 @@
           },
           {
             "h3": "بناء الأدوات حول العميل",
-            "p": "يشمل انضباط الـ workspace نفسه التطبيق وأدوات التحكم وبُنى Windows وخدمات eD2K الحتمية والعمل الاستكشافي بلا واجهة لـ eD2K/Kad دون التظاهر بأن كل مشروع مختبري منتج مستقر للمستخدم النهائي.",
+            "p": "يشمل انضباط الـ workspace نفسه eMuleBB Rust في مرحلة beta وأدوات التحكم وبُنى Windows وخدمات eD2K الحتمية ومسار MFC الخاضع للصيانة.",
             "span": "سبب يتعلق بالمنظومة"
           }
         ],
@@ -293,8 +293,8 @@
       "amutorrent": "fork يُستخدم لإدارة eMuleBB وسير عمل التحكم",
       "build": "تنسيق البناء والتحقق والإصدار",
       "emule": "تطبيق سطح المكتب الرئيسي ومصدر المنتج",
-      "p2p_overlord_agents": "وكلاء تجريبيون لحزمة p2p-overlord لـ P2P",
-      "p2p_overlord_be": "عمل تجريبي على خلفية عميل eD2K/Kad بلا واجهة بلغة Rust",
+      "p2p_overlord_agents": "وكلاء متقاعدون لحزمة p2p-overlord لـ P2P",
+      "p2p_overlord_be": "عمل متقاعد على خلفية عميل eD2K/Kad بلا واجهة بلغة Rust",
       "p2p_overlord_tooling": "بيانات السيناريوهات ومشغّلات التكافؤ والتقارير وحرّاس الجودة",
       "tests": "اختبارات أصلية وPython وUI وREST وlive E2E",
       "tooling": "خارطة الطريق والمهام والسياسات والتدقيقات والوثائق المرجعية"
@@ -463,7 +463,7 @@
         }
       ],
       "nav_label": "Hauptnavigation",
-      "og_description": "eMuleBB ist ein eigenständiges, breitbandorientiertes eMule-Produkt und die Heimat für Windows-P2P-Builds, Controller-Tooling, Release-Nachweise und experimentelle eD2K/Kad-Entwicklung.",
+      "og_description": "eMuleBB Rust ist der aktive eD2K/Kad-Beta-Client; Nightlies sind der primäre Testkanal, Beta 2 ist die formale Basis und MFC bleibt die gepflegte Windows-Linie.",
       "og_title": "eMuleBB Startseite | eMule broadband edition",
       "product_summary_label": "eMuleBB Kurzfassung",
       "project_links_label": "Projektlinks",
@@ -536,7 +536,7 @@
           },
           {
             "h3": "Die Werkzeuge rund um den Client bauen",
-            "p": "Dieselbe Workspace-Disziplin deckt die App, Controller-Tooling, Windows-Builds, deterministische eD2K-Dienste und experimentelle Headless-eD2K/Kad-Arbeit ab, ohne so zu tun, als wäre jedes Laborprojekt ein stabiles Endnutzerprodukt.",
+            "p": "Dieselbe Workspace-Disziplin deckt den Rust-Client, Controller-Tooling, native Builds, deterministische eD2K-Dienste, Live-Netzwerk-Tests und den gepflegten Windows-Client ab.",
             "span": "Ökosystem-Grund"
           }
         ],
@@ -594,8 +594,8 @@
       "amutorrent": "Fork für eMuleBB-Verwaltung und Controller-Workflows",
       "build": "Build-, Validierungs- und Release-Orchestrierung",
       "emule": "Flaggschiff-Desktop-App und Produktquelle",
-      "p2p_overlord_agents": "experimentelle Agenten für die p2p-overlord-P2P-Suite",
-      "p2p_overlord_be": "experimentelle Headless-Rust-eD2K/Kad-Client-Backend-Arbeit",
+      "p2p_overlord_agents": "eingestellte Agenten für die p2p-overlord-P2P-Suite",
+      "p2p_overlord_be": "eingestellte Headless-Rust-eD2K/Kad-Client-Backend-Arbeit",
       "p2p_overlord_tooling": "Szenario-Manifeste, Parity-Runner, Reports und Quality-Guards",
       "tests": "native, Python-, UI-, REST- und Live-E2E-Tests",
       "tooling": "Roadmap, Backlog, Policy, Audits und Referenzdocs"
@@ -764,7 +764,7 @@
         }
       ],
       "nav_label": "Navegación principal",
-      "og_description": "eMuleBB es un producto eMule independiente orientado a la banda ancha y el hogar de los builds P2P de Windows, el tooling de controladores, las pruebas de release y la ingeniería experimental de eD2K/Kad.",
+      "og_description": "eMuleBB Rust es el cliente beta eD2K/Kad activo; las nightly son el canal principal de pruebas, Beta 2 es la base formal y MFC sigue como línea Windows mantenida.",
       "og_title": "eMuleBB inicio | eMule broadband edition",
       "product_summary_label": "Resumen de eMuleBB",
       "project_links_label": "Enlaces del proyecto",
@@ -837,7 +837,7 @@
           },
           {
             "h3": "Construir las herramientas alrededor del cliente",
-            "p": "La misma disciplina de workspace cubre la app, el tooling de controladores, los builds de Windows, los servicios eD2K deterministas y el trabajo experimental headless de eD2K/Kad sin pretender que cada proyecto de laboratorio sea un producto estable para usuarios finales.",
+            "p": "La misma disciplina de workspace cubre el cliente Rust, el tooling de controladores, los builds nativos, los servicios eD2K deterministas, las pruebas en red real y el cliente Windows mantenido.",
             "span": "Motivo de ecosistema"
           }
         ],
@@ -895,8 +895,8 @@
       "amutorrent": "fork usado para la gestión de eMuleBB y workflows de control",
       "build": "orquestación de build, validación y release",
       "emule": "aplicación de escritorio insignia y fuente del producto",
-      "p2p_overlord_agents": "agentes experimentales para la suite P2P p2p-overlord",
-      "p2p_overlord_be": "trabajo experimental de backend headless de cliente eD2K/Kad en Rust",
+      "p2p_overlord_agents": "agentes retirados de la suite P2P p2p-overlord",
+      "p2p_overlord_be": "trabajo retirado de backend headless de cliente eD2K/Kad en Rust",
       "p2p_overlord_tooling": "manifiestos de escenario, runners de paridad, reportes y guardas de calidad",
       "tests": "pruebas nativas, Python, UI, REST y live E2E",
       "tooling": "roadmap, backlog, políticas, auditorías y docs de referencia"
@@ -1065,7 +1065,7 @@
         }
       ],
       "nav_label": "Navigation principale",
-      "og_description": "eMuleBB est un produit eMule indépendant orienté haut débit et le foyer des builds P2P Windows, du tooling de contrôleurs, des preuves de release et de l'ingénierie expérimentale eD2K/Kad.",
+      "og_description": "eMuleBB Rust est le client bêta eD2K/Kad actif ; les nightly sont le canal de test principal, Beta 2 est la référence formelle et MFC reste la branche Windows maintenue.",
       "og_title": "Accueil eMuleBB | eMule broadband edition",
       "product_summary_label": "Résumé d'eMuleBB",
       "project_links_label": "Liens du projet",
@@ -1138,7 +1138,7 @@
           },
           {
             "h3": "Construire les outils autour du client",
-            "p": "La même discipline de workspace couvre l'app, le tooling de contrôleurs, les builds Windows, les services eD2K déterministes et le travail expérimental headless eD2K/Kad sans prétendre que chaque projet de laboratoire est un produit stable pour l'utilisateur final.",
+            "p": "La même discipline de workspace couvre le client Rust, le tooling de contrôleurs, les builds natifs, les services eD2K déterministes, les tests sur réseau réel et le client Windows maintenu.",
             "span": "Raison écosystème"
           }
         ],
@@ -1196,8 +1196,8 @@
       "amutorrent": "fork utilisé pour la gestion d'eMuleBB et les workflows de contrôle",
       "build": "orchestration de build, validation et release",
       "emule": "application de bureau phare et source du produit",
-      "p2p_overlord_agents": "agents expérimentaux pour la suite P2P p2p-overlord",
-      "p2p_overlord_be": "travail expérimental de backend client eD2K/Kad headless en Rust",
+      "p2p_overlord_agents": "agents retirés de la suite P2P p2p-overlord",
+      "p2p_overlord_be": "travail retiré de backend client eD2K/Kad headless en Rust",
       "p2p_overlord_tooling": "manifestes de scénario, runners de parité, rapports et garde-fous qualité",
       "tests": "tests natifs, Python, UI, REST et live E2E",
       "tooling": "roadmap, backlog, policy, audits et docs de référence"
@@ -1667,7 +1667,7 @@
         }
       ],
       "nav_label": "メインナビゲーション",
-      "og_description": "eMuleBB はブロードバンドに焦点を当てた独立した eMule 製品であり、Windows 向け P2P ビルド、コントローラーツール、リリース証跡、そして実験的な eD2K/Kad エンジニアリングの拠点です。",
+      "og_description": "eMuleBB Rust は開発中の eD2K/Kad beta クライアントです。nightly が主要なテスト経路、Beta 2 が正式な基準、MFC が保守中の Windows ラインです。",
       "og_title": "eMuleBB ホーム | eMule broadband edition",
       "product_summary_label": "eMuleBB の概要",
       "project_links_label": "プロジェクトリンク",
@@ -1740,7 +1740,7 @@
           },
           {
             "h3": "クライアントの周りにツールを構築する",
-            "p": "同じ workspace の規律が、アプリ、コントローラーツール、Windows ビルド、決定的な eD2K サービス、実験的なヘッドレス eD2K/Kad 作業をカバーします。すべてのラボプロジェクトが安定したエンドユーザー製品であるふりはしません。",
+            "p": "同じ workspace の規律が、Rust クライアント、コントローラーツール、ネイティブビルド、決定的な eD2K サービス、実ネットワークテスト、保守中の Windows クライアントをカバーします。",
             "span": "エコシステム上の理由"
           }
         ],
@@ -1798,8 +1798,8 @@
       "amutorrent": "eMuleBB 管理とコントローラーワークフローに使う fork",
       "build": "ビルド、検証、リリースのオーケストレーション",
       "emule": "主力のデスクトップアプリと製品ソース",
-      "p2p_overlord_agents": "p2p-overlord P2P スイート向けの実験的エージェント",
-      "p2p_overlord_be": "実験的なヘッドレス Rust eD2K/Kad クライアントバックエンド作業",
+      "p2p_overlord_agents": "廃止された p2p-overlord P2P スイート向けエージェント",
+      "p2p_overlord_be": "廃止されたヘッドレス Rust eD2K/Kad クライアントバックエンド作業",
       "p2p_overlord_tooling": "シナリオマニフェスト、パリティランナー、レポート、品質ガード",
       "tests": "ネイティブ、Python、UI、REST、ライブ E2E のテスト",
       "tooling": "ロードマップ、バックログ、ポリシー、監査、参照ドキュメント"
@@ -1968,7 +1968,7 @@
         }
       ],
       "nav_label": "기본 내비게이션",
-      "og_description": "eMuleBB는 광대역에 초점을 둔 독립적인 eMule 제품이자 Windows P2P 빌드, 컨트롤러 도구, 릴리스 증거, 그리고 실험적인 eD2K/Kad 엔지니어링의 본거지입니다.",
+      "og_description": "eMuleBB Rust는 활성 eD2K/Kad 베타 클라이언트입니다. nightly가 주요 테스트 경로이고, Beta 2가 공식 기준이며, MFC는 유지보수 중인 Windows 라인입니다.",
       "og_title": "eMuleBB 홈 | eMule broadband edition",
       "product_summary_label": "eMuleBB 요약",
       "project_links_label": "프로젝트 링크",
@@ -2041,7 +2041,7 @@
           },
           {
             "h3": "클라이언트 주위에 도구를 구축하기",
-            "p": "동일한 workspace 규율이 앱, 컨트롤러 도구, Windows 빌드, 결정적 eD2K 서비스, 실험적 헤드리스 eD2K/Kad 작업을 아우르며, 모든 실험 프로젝트가 안정적인 최종 사용자 제품인 척하지 않습니다.",
+            "p": "동일한 workspace 규율이 활성 베타 eMuleBB Rust, 컨트롤러 도구, Windows 빌드, 결정적 eD2K 서비스, 유지보수 중인 MFC 라인을 아우릅니다.",
             "span": "생태계 이유"
           }
         ],
@@ -2099,8 +2099,8 @@
       "amutorrent": "eMuleBB 관리와 컨트롤러 워크플로에 사용되는 fork",
       "build": "빌드, 검증, 릴리스 오케스트레이션",
       "emule": "대표 데스크톱 앱과 제품 소스",
-      "p2p_overlord_agents": "p2p-overlord P2P 스위트를 위한 실험적 에이전트",
-      "p2p_overlord_be": "실험적 헤드리스 Rust eD2K/Kad 클라이언트 백엔드 작업",
+      "p2p_overlord_agents": "p2p-overlord P2P 스위트를 위한 중단된 에이전트",
+      "p2p_overlord_be": "중단된 헤드리스 Rust eD2K/Kad 클라이언트 백엔드 작업",
       "p2p_overlord_tooling": "시나리오 매니페스트, 패리티 러너, 리포트, 품질 가드",
       "tests": "네이티브, Python, UI, REST, 라이브 E2E 테스트",
       "tooling": "로드맵, 백로그, 정책, 감사, 참조 문서"
@@ -2269,7 +2269,7 @@
         }
       ],
       "nav_label": "Hoofdnavigatie",
-      "og_description": "eMuleBB is een eigen, op breedband gericht eMule-product en het thuis voor Windows-P2P-builds, controllertooling, release-bewijs en experimenteel eD2K/Kad-engineering.",
+      "og_description": "eMuleBB Rust is de actieve eD2K/Kad-bètaclient; nightlies zijn het primaire testkanaal, Beta 2 is de formele basis en MFC blijft de onderhouden Windows-lijn.",
       "og_title": "eMuleBB home | eMule broadband edition",
       "product_summary_label": "eMuleBB samenvatting",
       "project_links_label": "Projectlinks",
@@ -2342,7 +2342,7 @@
           },
           {
             "h3": "Bouw de tools rond de client",
-            "p": "Dezelfde workspace-discipline dekt de app, controllertooling, Windows-builds, deterministische eD2K-diensten en experimenteel headless eD2K/Kad-werk, zonder te doen alsof elk labproject een stabiel eindgebruikersproduct is.",
+            "p": "Dezelfde workspace-discipline dekt de Rust-client, controllertooling, native builds, deterministische eD2K-diensten, tests op het live netwerk en de onderhouden Windows-client.",
             "span": "Ecosysteemreden"
           }
         ],
@@ -2400,8 +2400,8 @@
       "amutorrent": "fork voor eMuleBB-beheer en controllerworkflows",
       "build": "build-, validatie- en release-orkestratie",
       "emule": "vlaggenschip-desktop-app en productbron",
-      "p2p_overlord_agents": "experimentele agents voor de p2p-overlord-P2P-suite",
-      "p2p_overlord_be": "experimenteel headless Rust eD2K/Kad-client-backendwerk",
+      "p2p_overlord_agents": "beëindigde agents voor de p2p-overlord-P2P-suite",
+      "p2p_overlord_be": "beëindigd headless Rust eD2K/Kad-client-backendwerk",
       "p2p_overlord_tooling": "scenariomanifesten, parity-runners, rapporten en kwaliteitsbewaking",
       "tests": "native, Python-, UI-, REST- en live-E2E-tests",
       "tooling": "roadmap, backlog, beleid, audits en referentiedocs"
@@ -2570,7 +2570,7 @@
         }
       ],
       "nav_label": "Nawigacja główna",
-      "og_description": "eMuleBB to samodzielny, zorientowany na łącza szerokopasmowe produkt eMule oraz dom dla buildów P2P na Windows, narzędzi sterujących, dowodów wydania i eksperymentalnej inżynierii eD2K/Kad.",
+      "og_description": "eMuleBB Rust to aktywny klient beta eD2K/Kad; nightly są głównym kanałem testów, Beta 2 jest formalną bazą, a MFC pozostaje utrzymywaną linią Windows.",
       "og_title": "eMuleBB — strona główna | eMule broadband edition",
       "product_summary_label": "Podsumowanie eMuleBB",
       "project_links_label": "Linki projektu",
@@ -2643,7 +2643,7 @@
           },
           {
             "h3": "Zbuduj narzędzia wokół klienta",
-            "p": "Ta sama dyscyplina workspace'a obejmuje aplikację, narzędzia sterujące, buildy Windows, deterministyczne usługi eD2K i eksperymentalną pracę headless eD2K/Kad, bez udawania, że każdy projekt laboratoryjny jest stabilnym produktem dla użytkownika końcowego.",
+            "p": "Ta sama dyscyplina workspace'a obejmuje klienta Rust, narzędzia sterujące, natywne buildy, deterministyczne usługi eD2K, testy w sieci publicznej i utrzymywanego klienta Windows.",
             "span": "Powód ekosystemowy"
           }
         ],
@@ -2701,8 +2701,8 @@
       "amutorrent": "fork używany do zarządzania eMuleBB i przepływów sterowania",
       "build": "orkiestracja buildów, walidacji i wydań",
       "emule": "flagowa aplikacja desktopowa i źródło produktu",
-      "p2p_overlord_agents": "eksperymentalne agenty dla zestawu P2P p2p-overlord",
-      "p2p_overlord_be": "eksperymentalna praca nad backendem headless klienta eD2K/Kad w Rust",
+      "p2p_overlord_agents": "wycofane agenty dla zestawu P2P p2p-overlord",
+      "p2p_overlord_be": "wycofana praca nad backendem headless klienta eD2K/Kad w Rust",
       "p2p_overlord_tooling": "manifesty scenariuszy, runnery parzystości, raporty i strażnicy jakości",
       "tests": "testy natywne, Python, UI, REST i live E2E",
       "tooling": "roadmapa, backlog, polityki, audyty i dokumentacja referencyjna"
@@ -2871,7 +2871,7 @@
         }
       ],
       "nav_label": "Navegação principal",
-      "og_description": "O eMuleBB é um produto eMule independente focado em banda larga e o lar dos builds P2P do Windows, do tooling de controladores, das provas de release e da engenharia experimental de eD2K/Kad.",
+      "og_description": "O eMuleBB Rust é o cliente beta eD2K/Kad ativo; as nightlies são o canal principal de testes, o Beta 2 é a base formal e o MFC continua como linha Windows mantida.",
       "og_title": "Início eMuleBB | eMule broadband edition",
       "product_summary_label": "Resumo do eMuleBB",
       "project_links_label": "Links do projeto",
@@ -2944,7 +2944,7 @@
           },
           {
             "h3": "Construir as ferramentas em torno do cliente",
-            "p": "A mesma disciplina de workspace cobre o app, o tooling de controladores, os builds Windows, os serviços eD2K determinísticos e o trabalho experimental headless de eD2K/Kad sem fingir que todo projeto de laboratório é um produto estável para o usuário final.",
+            "p": "A mesma disciplina de workspace cobre o cliente Rust, o tooling de controladores, os builds nativos, os serviços eD2K determinísticos, os testes em rede real e o cliente Windows mantido.",
             "span": "Motivo de ecossistema"
           }
         ],
@@ -3002,8 +3002,8 @@
       "amutorrent": "fork usado para gerenciamento do eMuleBB e fluxos de controle",
       "build": "orquestração de build, validação e release",
       "emule": "app de desktop principal e fonte do produto",
-      "p2p_overlord_agents": "agentes experimentais para a suíte P2P p2p-overlord",
-      "p2p_overlord_be": "trabalho experimental de backend de cliente eD2K/Kad headless em Rust",
+      "p2p_overlord_agents": "agentes descontinuados da suíte P2P p2p-overlord",
+      "p2p_overlord_be": "trabalho descontinuado de backend de cliente eD2K/Kad headless em Rust",
       "p2p_overlord_tooling": "manifestos de cenário, runners de paridade, relatórios e guardas de qualidade",
       "tests": "testes nativos, Python, UI, REST e live E2E",
       "tooling": "roadmap, backlog, políticas, auditorias e docs de referência"
@@ -3172,7 +3172,7 @@
         }
       ],
       "nav_label": "Navegação principal",
-      "og_description": "O eMuleBB é um produto eMule independente focado em banda larga e o lar dos builds P2P do Windows, do tooling de controladores, das provas de release e da engenharia experimental de eD2K/Kad.",
+      "og_description": "O eMuleBB Rust é o cliente beta eD2K/Kad ativo; as nightlies são o canal principal de testes, o Beta 2 é a referência formal e o MFC continua como linha Windows mantida.",
       "og_title": "Início eMuleBB | eMule broadband edition",
       "product_summary_label": "Resumo do eMuleBB",
       "project_links_label": "Ligações do projeto",
@@ -3245,7 +3245,7 @@
           },
           {
             "h3": "Construir as ferramentas em torno do cliente",
-            "p": "A mesma disciplina de workspace abrange a aplicação, o tooling de controladores, os builds Windows, os serviços eD2K determinísticos e o trabalho experimental headless de eD2K/Kad sem fingir que cada projeto de laboratório é um produto estável para o utilizador final.",
+            "p": "A mesma disciplina de workspace abrange o cliente Rust, o tooling de controladores, os builds nativos, os serviços eD2K determinísticos, os testes em rede real e o cliente Windows mantido.",
             "span": "Motivo de ecossistema"
           }
         ],
@@ -3303,8 +3303,8 @@
       "amutorrent": "fork usado para a gestão do eMuleBB e fluxos de controlo",
       "build": "orquestração de build, validação e release",
       "emule": "aplicação de ambiente de trabalho principal e fonte do produto",
-      "p2p_overlord_agents": "agentes experimentais para a suíte P2P p2p-overlord",
-      "p2p_overlord_be": "trabalho experimental de backend de cliente eD2K/Kad headless em Rust",
+      "p2p_overlord_agents": "agentes descontinuados da suíte P2P p2p-overlord",
+      "p2p_overlord_be": "trabalho descontinuado de backend de cliente eD2K/Kad headless em Rust",
       "p2p_overlord_tooling": "manifestos de cenário, runners de paridade, relatórios e guardas de qualidade",
       "tests": "testes nativos, Python, UI, REST e live E2E",
       "tooling": "roadmap, backlog, políticas, auditorias e docs de referência"
@@ -3473,7 +3473,7 @@
         }
       ],
       "nav_label": "Основная навигация",
-      "og_description": "eMuleBB — это самостоятельный, ориентированный на широкополосный доступ продукт eMule и дом для P2P-сборок под Windows, инструментов управления, доказательств релиза и экспериментальной разработки eD2K/Kad.",
+      "og_description": "eMuleBB Rust — активный бета-клиент eD2K/Kad; nightly-сборки являются основным каналом тестирования, Beta 2 — официальной базой, а MFC — поддерживаемой линией Windows.",
       "og_title": "Главная eMuleBB | eMule broadband edition",
       "product_summary_label": "Кратко об eMuleBB",
       "project_links_label": "Ссылки проекта",
@@ -3546,7 +3546,7 @@
           },
           {
             "h3": "Строить инструменты вокруг клиента",
-            "p": "Та же дисциплина workspace охватывает приложение, инструменты управления, сборки Windows, детерминированные сервисы eD2K и экспериментальную headless-работу eD2K/Kad, не притворяясь, что каждый лабораторный проект — стабильный продукт для конечного пользователя.",
+            "p": "Та же дисциплина workspace охватывает клиент Rust, инструменты управления, нативные сборки, детерминированные сервисы eD2K, тесты в реальной сети и поддерживаемый клиент Windows.",
             "span": "Причина экосистемы"
           }
         ],
@@ -3604,8 +3604,8 @@
       "amutorrent": "форк для управления eMuleBB и рабочих процессов контроля",
       "build": "оркестрация сборки, валидации и релиза",
       "emule": "флагманское десктоп-приложение и исходники продукта",
-      "p2p_overlord_agents": "экспериментальные агенты для P2P-набора p2p-overlord",
-      "p2p_overlord_be": "экспериментальная работа над headless-бэкендом клиента eD2K/Kad на Rust",
+      "p2p_overlord_agents": "выведенные из эксплуатации агенты для P2P-набора p2p-overlord",
+      "p2p_overlord_be": "выведенная из эксплуатации работа над headless-бэкендом клиента eD2K/Kad на Rust",
       "p2p_overlord_tooling": "манифесты сценариев, раннеры паритета, отчёты и стражи качества",
       "tests": "нативные, Python, UI, REST и live E2E тесты",
       "tooling": "дорожная карта, бэклог, политики, аудиты и справочная документация"
@@ -3774,7 +3774,7 @@
         }
       ],
       "nav_label": "Ana gezinme",
-      "og_description": "eMuleBB; geniş banta odaklı, kendi başına bir eMule ürünü ve Windows P2P derlemelerinin, denetleyici araçlarının, sürüm kanıtının ve deneysel eD2K/Kad mühendisliğinin yuvasıdır.",
+      "og_description": "eMuleBB Rust etkin eD2K/Kad beta istemcisidir; nightly derlemeleri birincil test kanalıdır, Beta 2 resmî temeldir ve MFC bakımı sürdürülen Windows hattıdır.",
       "og_title": "eMuleBB ana sayfa | eMule broadband edition",
       "product_summary_label": "eMuleBB özeti",
       "project_links_label": "Proje bağlantıları",
@@ -3847,7 +3847,7 @@
           },
           {
             "h3": "Araçları istemcinin etrafında inşa etmek",
-            "p": "Aynı workspace disiplini uygulamayı, denetleyici araçlarını, Windows derlemelerini, deterministik eD2K hizmetlerini ve deneysel headless eD2K/Kad çalışmasını kapsar; her laboratuvar projesinin kararlı bir son kullanıcı ürünü olduğu gibi davranmadan.",
+            "p": "Aynı workspace disiplini Rust istemcisini, denetleyici araçlarını, yerel derlemeleri, deterministik eD2K hizmetlerini, canlı ağ testlerini ve bakımı sürdürülen Windows istemcisini kapsar.",
             "span": "Ekosistem gerekçesi"
           }
         ],
@@ -3905,8 +3905,8 @@
       "amutorrent": "eMuleBB yönetimi ve denetleyici iş akışları için kullanılan fork",
       "build": "derleme, doğrulama ve sürüm orkestrasyonu",
       "emule": "amiral gemisi masaüstü uygulaması ve ürün kaynağı",
-      "p2p_overlord_agents": "p2p-overlord P2P paketi için deneysel ajanlar",
-      "p2p_overlord_be": "deneysel headless Rust eD2K/Kad istemci arka uç çalışması",
+      "p2p_overlord_agents": "kullanımdan kaldırılmış p2p-overlord P2P paketi ajanları",
+      "p2p_overlord_be": "kullanımdan kaldırılmış headless Rust eD2K/Kad istemci arka uç çalışması",
       "p2p_overlord_tooling": "senaryo manifestleri, parite çalıştırıcıları, raporlar ve kalite muhafızları",
       "tests": "yerel, Python, UI, REST ve canlı E2E testleri",
       "tooling": "yol haritası, backlog, politika, denetimler ve referans dokümanlar"
@@ -4075,7 +4075,7 @@
         }
       ],
       "nav_label": "Основна навігація",
-      "og_description": "eMuleBB — це самостійний, орієнтований на широкосмуговий доступ продукт eMule і дім для P2P-збірок під Windows, інструментів керування, доказів релізу та експериментальної інженерії eD2K/Kad.",
+      "og_description": "eMuleBB Rust — активний бета-клієнт eD2K/Kad; nightly-збірки є основним каналом тестування, Beta 2 — офіційною базою, а MFC — підтримуваною лінією Windows.",
       "og_title": "Головна eMuleBB | eMule broadband edition",
       "product_summary_label": "Стисло про eMuleBB",
       "project_links_label": "Посилання проєкту",
@@ -4148,7 +4148,7 @@
           },
           {
             "h3": "Будувати інструменти навколо клієнта",
-            "p": "Та сама дисципліна workspace охоплює застосунок, інструменти керування, збірки Windows, детерміновані сервіси eD2K та експериментальну headless-роботу eD2K/Kad, не вдаючи, що кожен лабораторний проєкт — стабільний продукт для кінцевого користувача.",
+            "p": "Та сама дисципліна workspace охоплює клієнт Rust, інструменти керування, нативні збірки, детерміновані сервіси eD2K, тести в живій мережі та підтримуваний клієнт Windows.",
             "span": "Причина екосистеми"
           }
         ],
@@ -4206,8 +4206,8 @@
       "amutorrent": "форк для керування eMuleBB і робочих процесів контролю",
       "build": "оркестрація збірки, валідації та релізу",
       "emule": "флагманський десктопний застосунок і сирці продукту",
-      "p2p_overlord_agents": "експериментальні агенти для P2P-набору p2p-overlord",
-      "p2p_overlord_be": "експериментальна робота над headless-бекендом клієнта eD2K/Kad на Rust",
+      "p2p_overlord_agents": "виведені з експлуатації агенти для P2P-набору p2p-overlord",
+      "p2p_overlord_be": "виведена з експлуатації робота над headless-бекендом клієнта eD2K/Kad на Rust",
       "p2p_overlord_tooling": "маніфести сценаріїв, ранери паритету, звіти та вартові якості",
       "tests": "нативні, Python, UI, REST і live E2E тести",
       "tooling": "дорожня карта, беклог, політики, аудити та довідкова документація"
@@ -4376,7 +4376,7 @@
         }
       ],
       "nav_label": "主导航",
-      "og_description": "eMuleBB 是一个独立、面向宽带的 eMule 产品，也是 Windows P2P 构建、控制器工具、发布证据以及实验性 eD2K/Kad 工程的所在地。",
+      "og_description": "eMuleBB Rust 是活跃的 eD2K/Kad beta 客户端；nightly 是主要测试渠道，Beta 2 是正式基线，MFC 是维护中的 Windows 产品线。",
       "og_title": "eMuleBB 主页 | eMule broadband edition",
       "product_summary_label": "eMuleBB 概要",
       "project_links_label": "项目链接",
@@ -4449,7 +4449,7 @@
           },
           {
             "h3": "围绕客户端构建工具",
-            "p": "同一套 workspace 规范涵盖应用、控制器工具、Windows 构建、确定性 eD2K 服务以及实验性的无界面 eD2K/Kad 工作，而不假装每个实验项目都是稳定的终端用户产品。",
+            "p": "同一套 workspace 规范涵盖 Rust 客户端、控制器工具、原生构建、确定性 eD2K 服务、真实网络测试以及维护中的 Windows 客户端。",
             "span": "生态系统理由"
           }
         ],
@@ -4507,8 +4507,8 @@
       "amutorrent": "用于 eMuleBB 管理和控制器工作流的 fork",
       "build": "构建、验证与发布编排",
       "emule": "旗舰桌面应用与产品源代码",
-      "p2p_overlord_agents": "面向 p2p-overlord P2P 套件的实验性代理",
-      "p2p_overlord_be": "实验性的无界面 Rust eD2K/Kad 客户端后端工作",
+      "p2p_overlord_agents": "已停止的 p2p-overlord P2P 套件代理",
+      "p2p_overlord_be": "已停止的无界面 Rust eD2K/Kad 客户端后端工作",
       "p2p_overlord_tooling": "场景清单、对等性运行器、报告与质量守卫",
       "tests": "原生、Python、UI、REST 与实时 E2E 测试",
       "tooling": "路线图、待办、策略、审计与参考文档"
