@@ -5,8 +5,8 @@ site at `https://emulebb.github.io/`.
 
 The site is the curated public front door for the eMuleBB organization. It
 presents CI-gated `emulebb-rust` nightly builds as the active beta testing
-channel, public `0.1.0-beta.2` as the formal Rust baseline, and eMuleBB MFC
-`0.7.x` as the maintained Windows lane. Rust
+channel and eMuleBB MFC `0.7.x` as the maintained Windows lane. Beta 3 is
+expected after a few more weeks of implementation and stabilization. Rust
 development is best-effort and spare-time, and contributors are welcome. The
 site is not the canonical engineering ledger, release ledger, or feature
 backlog. Those live in the public `emulebb-tooling` docs and the owning release
@@ -37,9 +37,10 @@ repositories.
 - The active product-development download channel is the CI-gated
   `emulebb-rust` nightly prereleases from `main`. Formal beta tags remain
   immutable release evidence, not the public front-door download target.
-- The public Rust status is Active beta. Public `0.1.0-beta.2` is working toward
-  Beta 3. The approved testing summary is: “Repeatedly tested on live eD2K/Kad
-  networks.”
+- The public Rust status is Active beta. Tell users to choose the newest dated
+  nightly prerelease from GitHub Releases. Beta 3 is expected after a few more
+  weeks of implementation and stabilization. The approved testing summary is:
+  “Repeatedly tested on live eD2K/Kad networks.”
 - Rust development is best-effort and spare-time. Public copy should welcome
   contributors and link to the repository's `CONTRIBUTING.md`.
 - The historical MFC `0.7.3` suite installer and aMuTorrent package remain
@@ -175,6 +176,10 @@ Before adding or changing a feature entry:
   must be changed through structured JSON under `content/` or the shared
   renderer rules in `tools/render_pages.py`, then rendered through the Jinja2
   templates under `templates/`.
+- Localized homepage and FAQ copy is intentionally frozen, minimal, and
+  evergreen. It may link to `/rust/` and GitHub Releases, but must not contain
+  versions, beta targets, ETAs, nightly status, or other release-cycle claims.
+  Future Rust status changes are made only in canonical English surfaces.
 - Completed locale pages use `index,follow`.
 - `/languages/` is the indexable language selector and is included in
   `sitemap.xml`.
@@ -189,8 +194,8 @@ Before adding or changing a feature entry:
   represented by the real regional pages `/pt-br/` and `/pt-pt/`.
 - Complete localized pages must:
   - match the English section contract
-  - use translated titles, descriptions, headings, and body copy
-  - keep the same product facts and docs authority
+  - use the frozen translated titles, descriptions, headings, and body copy
+  - remain evergreen instead of mirroring current release facts
   - include reciprocal `hreflang` alternates
   - be added to `sitemap.xml`
   - switch from `noindex,follow` to `index,follow`
