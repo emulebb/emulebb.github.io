@@ -7,16 +7,12 @@
 {%- endif %}
 </div>
 {%- endmacro -%}
-{%- macro card_grid(label, class_name, cards, title_tag="h3") -%}
-<div aria-label="{{ label }}" class="{{ class_name }}">
+{%- macro card_grid(label, cards) -%}
+<div aria-label="{{ label }}" class="proof-grid">
 {%- for card in cards %}
 <article>
 <span>{{ card.span }}</span>
-{%- if title_tag == "strong" %}
-<strong>{{ card.h3 }}</strong>
-{%- else %}
 <h3>{{ card.h3 }}</h3>
-{%- endif %}
 <p>{{ card.p | safe }}</p>
 </article>
 {%- endfor %}
@@ -40,7 +36,7 @@
 <meta content="summary" name="twitter:card"/>
 <link href="{{ page.url }}" rel="canonical"/>
 <link href="{{ site_base_url }}/sitemap.xml" rel="sitemap" type="application/xml"/>
-{%- for alternate in alternates -%}
+{%- for alternate in alternates %}
 <link href="{{ alternate.url }}" hreflang="{{ alternate.hreflang }}" rel="alternate"/>
 {%- endfor %}
 <link href="{{ page.favicon_href }}" rel="icon" type="image/x-icon"/>
@@ -52,42 +48,52 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', '{{ ga_measurement_id }}');
     </script>
 {%- if page.directory == "" %}
 <script type="application/ld+json">
       {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "Organization",
-                  "@id": "{{ site_base_url }}/#organization",
-                  "name": "eMuleBB",
-                  "url": "{{ site_base_url }}/",
-                  "sameAs": [
-                    "https://github.com/emulebb",
-                    "https://github.com/emulebb/emulebb-rust"
-                  ]
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "{{ site_base_url }}/#website",
-                  "name": "eMule broadband edition",
-                  "alternateName": ["eMuleBB", "emulebb"],
-                  "url": "{{ site_base_url }}/",
-                  "publisher": {"@id": "{{ site_base_url }}/#organization"}
-                }
-              ]
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "{{ site_base_url }}/#organization",
+            "name": "eMuleBB",
+            "url": "{{ site_base_url }}/",
+            "sameAs": [
+              "https://github.com/emulebb",
+              "https://github.com/emulebb/emulebb-rust"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "{{ site_base_url }}/#website",
+            "name": "eMule broadband edition",
+            "alternateName": ["eMuleBB", "emulebb"],
+            "url": "{{ site_base_url }}/",
+            "publisher": {"@id": "{{ site_base_url }}/#organization"}
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "{{ site_base_url }}/#emulebb-rust",
+            "name": "eMuleBB Rust",
+            "applicationCategory": "Peer-to-peer file sharing client",
+            "operatingSystem": "Windows, Linux, macOS",
+            "url": "{{ site_base_url }}/",
+            "codeRepository": "https://github.com/emulebb/emulebb-rust",
+            "downloadUrl": "https://github.com/emulebb/emulebb-rust/releases",
+            "softwareHelp": "{{ content.product_docs_url }}",
+            "description": {{ content.structured_description | tojson }},
+            "publisher": {"@id": "{{ site_base_url }}/#organization"}
+          }
+        ]
       }
     </script>
 {%- endif %}
 </head>
 <body>
 <header class="site-header">
-<a aria-label="eMule broadband edition home" class="brand" href="#top">
-<img alt="{{ content.brand_logo.alt }}" class="brand-logo" decoding="async" height="160" src="{{ content.brand_logo.src }}" width="151"/>
-</a>
+<a aria-label="eMule broadband edition home" class="brand brand-text" href="#top">eMuleBB</a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="{{ content.menu.open_label }}" class="menu-toggle" type="button">
 <span class="menu-toggle-label">{{ content.menu.label }}</span>
 </button>
@@ -96,7 +102,7 @@
 {%- if item.href %}
 <a{% if item.class is defined and item.class %} class="{{ item.class }}"{% endif %} href="{{ item.href }}">{{ item.label }}</a>
 {%- else %}
-<a{% if item.class is defined and item.class %} class="{{ item.class }}"{% endif %} href="#{{ item.id }}">{{ item.label }}</a>
+<a href="#{{ item.id }}">{{ item.label }}</a>
 {%- endif %}
 {%- endfor %}
 </nav>
@@ -111,12 +117,6 @@
 <a class="button primary" href="{{ content.hero.primary_href }}">{{ content.hero.install }}</a>
 <a class="button secondary" href="{{ content.hero.secondary_href }}">{{ content.hero.source }}</a>
 </div>
-<div aria-label="{{ content.release_downloads_label }}" class="release-links">
-<span>{{ content.release_downloads_label }}</span>
-{%- for release in content.release_downloads %}
-<a href="{{ release.href }}">{{ release.title }}</a>
-{%- endfor %}
-</div>
 </div>
 <aside aria-label="{{ content.product_summary_label }}" class="hero-panel">
 <p class="panel-kicker">{{ content.hero.panel_kicker }}</p>
@@ -129,84 +129,20 @@
 </ul>
 </aside>
 </section>
-{%- if content.install_callout %}
-<section class="testing-callout install-callout" id="{{ content.install_callout.id }}">
-<div>
-<p class="eyebrow">{{ content.install_callout.eyebrow }}</p>
-<h2>{{ content.install_callout.h2 }}</h2>
-<p>{{ content.install_callout.p | safe }}</p>
-<div aria-label="{{ content.install_callout.command_label }}" class="install-command">
-<div class="install-command-header">
-<strong>{{ content.install_callout.command_label }}</strong>
-<button class="copy-command" data-copy-error="{{ content.install_callout.copy_error }}" data-copy-label="{{ content.install_callout.copy }}" data-copy-success="{{ content.install_callout.copied }}" data-copy-text="{{ content.install_callout.command }}" type="button">{{ content.install_callout.copy }}</button>
-</div>
-<pre class="install-command-code"><code>{{ content.install_callout.command }}</code></pre>
-</div>
-<p class="install-standalone">{{ content.install_callout.standalone | safe }}</p>
-</div>
-<div class="testing-actions">
-<a href="{{ content.install_callout.primary_href }}">{{ content.install_callout.primary }}</a>
-<a href="{{ content.install_callout.secondary_href }}">{{ content.install_callout.secondary }}</a>
-</div>
-</section>
-{%- endif %}
-<section class="intro">
-<p>{{ content.intro | safe }}</p>
-</section>
-<section class="section motivation" id="why">
-{{ section_heading(content.why) }}
-{{ card_grid("eMuleBB motivation", "motivation-grid", content.why.cards) }}
-</section>
-<section class="section" id="features">
-{{ section_heading(content.features) }}
-{{ card_grid("eMule broadband feature groups", "feature-table", content.features.cards) }}
+<section class="section proof" id="proof">
+{{ section_heading(content.proof) }}
+{{ card_grid(content.proof.h2, content.proof.cards) }}
 </section>
 <section class="section docs" id="docs">
 {{ section_heading(content.docs) }}
-<div class="guide-grid guide-compact">
-{%- for card in content.guide.cards %}
-<article>
-<span>{{ "%02d"|format(loop.index) }}</span>
-<h3>{{ card.h3 }}</h3>
-<p>{{ card.p | safe }}</p>
-</article>
-{%- endfor %}
-</div>
-<div class="automation-copy docs-automation">
-<p>{{ content.automation.p | safe }}</p>
-<ul aria-label="{{ content.automation.pills_label }}" class="api-list">
-{%- for pill in content.automation.pills %}
-<li>{{ pill }}</li>
-{%- endfor %}
-</ul>
-</div>
 <div class="doc-list">
 {%- for link in content.docs.links %}
 <a href="{{ link.href }}">
 <strong>{{ link.title }}</strong>
-<span>{{ link.text }}</span>
+<span>{{ link.text | safe }}</span>
 </a>
 {%- endfor %}
 </div>
-</section>
-<section class="section team" id="team">
-{{ section_heading(content.team) }}
-<div aria-label="{{ content.team.h2 }}" class="team-grid">
-{%- for card in content.team.cards %}
-<article>
-{%- if card.image is defined and card.image %}
-<img alt="{{ card.image.alt }}" class="team-image" decoding="async" height="160" loading="lazy" src="{{ card.image.src }}" width="160"/>
-{%- endif %}
-<span>{{ "%02d"|format(loop.index) }}</span>
-<h3>{{ card.h3 }}</h3>
-<p>{{ card.p | safe }}</p>
-</article>
-{%- endfor %}
-</div>
-</section>
-<section class="section release" id="release">
-{{ section_heading(content.release) }}
-{{ card_grid("eMuleBB release proof", "release-grid", content.release.cards, "strong") }}
 </section>
 <section class="section repos" id="repos">
 {{ section_heading(content.repos) }}
@@ -223,10 +159,10 @@
 <footer>
 <span>eMule broadband edition</span>
 <div aria-label="{{ content.footer_links_label }}" class="footer-links">
-        <a href="{{ language_href }}">{{ content.languages_link_label }}</a>
-        <a href="https://github.com/emulebb">GitHub</a>
-        <a href="https://discord.gg/uWQa9g37">Discord</a>
-      </div>
+<a href="{{ language_href }}">{{ content.languages_link_label }}</a>
+<a href="https://github.com/emulebb">GitHub</a>
+<a href="https://discord.gg/uWQa9g37">Discord</a>
+</div>
 </footer>
 <script>
       (function () {
@@ -248,51 +184,6 @@
           if (event.target && event.target.closest("a")) {
             setOpen(false);
           }
-        });
-      })();
-      (function () {
-        var buttons = document.querySelectorAll(".copy-command");
-        if (!buttons.length) {
-          return;
-        }
-        function fallbackCopy(text) {
-          var textarea = document.createElement("textarea");
-          textarea.value = text;
-          textarea.setAttribute("readonly", "");
-          textarea.style.position = "fixed";
-          textarea.style.left = "-9999px";
-          document.body.appendChild(textarea);
-          textarea.select();
-          try {
-            return document.execCommand("copy");
-          } finally {
-            document.body.removeChild(textarea);
-          }
-        }
-        buttons.forEach(function (button) {
-          var label = button.getAttribute("data-copy-label") || button.textContent;
-          var success = button.getAttribute("data-copy-success") || label;
-          var error = button.getAttribute("data-copy-error") || label;
-          button.addEventListener("click", function () {
-            var text = button.getAttribute("data-copy-text") || "";
-            var copied = navigator.clipboard && window.isSecureContext
-              ? navigator.clipboard.writeText(text).then(function () { return true; }, function () { return fallbackCopy(text); })
-              : Promise.resolve(fallbackCopy(text));
-            copied.then(function (ok) {
-              if (!ok) {
-                throw new Error("copy failed");
-              }
-              button.textContent = success;
-              window.setTimeout(function () {
-                button.textContent = label;
-              }, 1600);
-            }).catch(function () {
-              button.textContent = error;
-              window.setTimeout(function () {
-                button.textContent = label;
-              }, 2200);
-            });
-          });
         });
       })();
     </script>

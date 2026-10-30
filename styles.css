@@ -124,14 +124,6 @@ code {
   min-width: 0;
 }
 
-.brand-logo {
-  display: block;
-  width: clamp(136px, 30vw, 190px);
-  max-height: 82px;
-  object-fit: contain;
-  filter: invert(1) hue-rotate(180deg) brightness(1.18) saturate(0.9);
-}
-
 .brand-text {
   min-height: 46px;
   font-size: 1.2rem;
@@ -536,6 +528,7 @@ h3 {
 }
 
 .motivation,
+.proof,
 .guide,
 .method,
 .team {
@@ -551,6 +544,7 @@ h3 {
 
 .feature-table,
 .motivation-grid,
+.proof-grid,
 .guide-grid,
 .doc-list,
 .release-grid,
@@ -564,6 +558,7 @@ h3 {
 
 .feature-table article,
 .motivation-grid article,
+.proof-grid article,
 .guide-grid article,
 .doc-list a,
 .release-grid article,
@@ -579,6 +574,7 @@ h3 {
 
 .feature-table article:nth-child(6n + 1),
 .motivation-grid article:nth-child(3n + 1),
+.proof-grid article:nth-child(3n + 1),
 .guide-grid article:nth-child(6n + 1),
 .method-grid article:nth-child(4n + 1),
 .team-grid article:nth-child(3n + 1) {
@@ -587,6 +583,7 @@ h3 {
 
 .feature-table article:nth-child(6n + 2),
 .motivation-grid article:nth-child(3n + 2),
+.proof-grid article:nth-child(3n + 2),
 .guide-grid article:nth-child(6n + 2),
 .method-grid article:nth-child(4n + 2),
 .team-grid article:nth-child(3n + 2) {
@@ -595,6 +592,7 @@ h3 {
 
 .feature-table article:nth-child(6n + 3),
 .motivation-grid article:nth-child(3n),
+.proof-grid article:nth-child(3n),
 .guide-grid article:nth-child(6n + 3),
 .method-grid article:nth-child(4n + 3),
 .team-grid article:nth-child(3n) {
@@ -619,6 +617,7 @@ h3 {
 
 .feature-table span,
 .motivation-grid span,
+.proof-grid span,
 .guide-grid span,
 .method-grid span,
 .team-grid span {
@@ -649,15 +648,6 @@ h3 {
 .doc-list strong,
 .repo-list strong {
   font-size: 1.05rem;
-}
-
-.team-image {
-  width: 96px;
-  height: 96px;
-  display: block;
-  object-fit: contain;
-  margin-bottom: 16px;
-  border-radius: 8px;
 }
 
 .automation {
@@ -857,6 +847,7 @@ footer {
 
   .feature-table,
   .motivation-grid,
+  .proof-grid,
   .guide-grid,
   .doc-list,
   .faq-list,
@@ -958,6 +949,7 @@ footer {
 
   .feature-table,
   .motivation-grid,
+  .proof-grid,
   .guide-grid,
   .doc-list,
   .faq-list,
