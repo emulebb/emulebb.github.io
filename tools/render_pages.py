@@ -886,33 +886,35 @@ def prepare_focused_content(root: Path, contract: dict[str, Any]) -> None:
         if page.key == "en":
             content.update(
                 {
-                    "title": "eMuleBB Rust | Active eD2K/Kad beta",
+                    "title": "eMuleBB Rust | eD2K/Kad client for search, transfers, and sharing",
                     "meta_description": (
-                        "eMuleBB Rust is an active eD2K/Kad beta led by CI-gated "
-                        "nightlies and repeatedly tested on live networks."
+                        "eMuleBB Rust is a cross-platform eD2K/Kad client for search, "
+                        "downloads, uploads, sharing, seeding, and API-driven operation."
                     ),
-                    "og_title": "eMuleBB Rust | Active eD2K/Kad beta",
+                    "og_title": "eMuleBB Rust | Cross-platform eD2K/Kad client",
                     "og_description": (
-                        "Get the newest dated eMuleBB Rust nightly for current beta testing. "
-                        "Beta 3 follows implementation and stabilization."
+                        "Search, transfer, share, and seed on eD2K/Kad through a headless "
+                        "Rust client with an embedded browser console and REST API."
                     ),
                     "structured_description": (
-                        f"{product['display_name']} is an active beta led by CI-gated nightlies. "
-                        f"{product['testing_summary']} {product['development_eta']}"
+                        f"{product['display_name']} is a cross-platform eD2K/Kad client for "
+                        "search, downloads, uploads, sharing, seeding, and API-driven operation. "
+                        f"{product['testing_summary']}"
                     ),
                     "nav": [
                         {"href": product["nightly_url"], "label": "Nightlies", "class": "nav-download"},
-                        {"id": "proof", "label": "Proof"},
+                        {"id": "proof", "label": "Capabilities"},
                         {"id": "docs", "label": "Docs"},
                         {"id": "repos", "label": "Repositories"},
                         {"href": faq_href, "label": "FAQ"},
                     ],
                     "hero": {
                         "eyebrow": product["lifecycle_label"],
-                        "h1": "eMuleBB Rust nightlies are the current public build.",
+                        "h1": "eMuleBB Rust is an eD2K/Kad client for search, downloads, uploads, sharing, and seeding.",
                         "lead": (
-                            "Choose the newest dated build from GitHub Releases. "
-                            f"{product['testing_summary']} {product['development_eta']}"
+                            "Run the cross-platform headless daemon through its embedded browser "
+                            "operations console or authenticated REST API. Stock-compatible wire "
+                            "behavior and a Rust async core support broadband links and large libraries."
                         ),
                         "install": "Get Rust nightlies",
                         "primary_href": product["nightly_url"],
@@ -921,32 +923,32 @@ def prepare_focused_content(root: Path, contract: dict[str, Any]) -> None:
                         "panel_kicker": "Current posture",
                         "panel_h2": "Active beta, moving toward Beta 3",
                         "panel_p": (
-                            "Rust is the active product lane. The MFC client remains available "
-                            "as the maintained Windows line."
+                            f"Rust is the active product lane. {product['development_eta']} "
+                            "The MFC client remains available as the maintained Windows line."
                         ),
                         "signals": [
-                            "Live eD2K/Kad network testing",
+                            "Tested for months on live eD2K/Kad networks",
                             "CI-gated Windows, Linux, and macOS packages",
                             "SHA-256 checksums and provenance",
                         ],
                     },
                     "proof": {
-                        **s("Product proof", "Built and tested as a working eD2K/Kad client"),
+                        **s("What eMuleBB Rust does", "The focused eD2K/Kad client surface"),
                         "cards": [
                             c(
-                                "Live network",
-                                "Tested for months on live eD2K/Kad networks",
-                                "Long-running public-network use exercises real transfers, peers, servers, and Kad behavior.",
+                                "Search and download",
+                                "Find sources and manage durable transfers",
+                                "Search eD2K servers and Kad, discover sources, and manage long-running downloads.",
                             ),
                             c(
-                                "Release engineering",
-                                "Nightlies are CI-gated",
-                                "Windows, Linux, and macOS packages publish with SHA-256 checksums and provenance attestations.",
+                                "Share and seed",
+                                "Upload from user-owned libraries",
+                                "Share files, serve upload queues, and keep completed content available to the network.",
                             ),
                             c(
-                                "Next milestone",
-                                product["development_target"],
-                                product["development_eta"],
+                                "Operate and automate",
+                                "Use the browser console or REST API",
+                                "Monitor and control the headless client through the embedded WebUI and authenticated API.",
                             ),
                         ],
                     },
