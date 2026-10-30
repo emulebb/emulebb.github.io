@@ -50,8 +50,9 @@ published as rendered HTML at:
 <https://emulebb.github.io/emulebb-tooling/>
 
 Before changing homepage claims, update and validate the source docs. Lifecycle
-and roadmap facts come from `PRODUCT-PORTFOLIO.md` and `ROADMAP-SUMMARY.md`;
-release facts remain owned by the corresponding product repository:
+and direction facts come from `docs/active/PRODUCT-DIRECTION.md`; Rust scope and
+active work remain under `docs/products/emulebb-rust/`. Release facts remain
+owned by the corresponding product repository:
 
 ```powershell
 cd ..\emulebb-tooling
