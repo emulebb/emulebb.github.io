@@ -5,11 +5,11 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="dark" name="color-scheme"/>
 <meta content="#0b1016" name="theme-color"/>
-<meta content="O eMuleBB Rust é o cliente beta eD2K/Kad ativo; as nightlies são o canal principal de testes, o Beta 2 é a referência formal e o MFC continua como linha Windows mantida." name="description"/>
+<meta content="O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos." name="description"/>
 <meta content="index,follow" name="robots"/>
 <meta content="eMuleBB" name="author"/>
 <meta content="Início eMuleBB | eMule broadband edition" property="og:title"/>
-<meta content="O eMuleBB Rust é o cliente beta eD2K/Kad ativo; as nightlies são o canal principal de testes, o Beta 2 é a referência formal e o MFC continua como linha Windows mantida." property="og:description"/>
+<meta content="O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://emulebb.github.io/pt-pt/" property="og:url"/>
 <meta content="eMule broadband edition" property="og:site_name"/>
@@ -50,89 +50,69 @@
 <main id="top">
 <section class="hero">
 <div class="hero-copy">
-<p class="eyebrow">Active beta</p>
-<h1>eMuleBB Rust</h1>
-<p class="lead">O eMuleBB Rust é o cliente beta eD2K/Kad ativo; as nightlies são o canal principal de testes, o Beta 2 é a referência formal e o MFC continua como linha Windows mantida.</p>
-<div aria-label="Ligações do projeto" class="actions">
-<a class="button primary" href="https://github.com/emulebb/emulebb-rust/releases">Rust nightlies</a>
-<a class="button secondary" href="https://github.com/emulebb/emulebb-rust/releases/tag/rust-v0.1.0-beta.2">Beta 2</a>
+<p class="eyebrow">eMuleBB</p>
+<h1>eMuleBB</h1>
+<p class="lead">O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
+<div aria-label="Resumo do eMuleBB" class="actions">
+<a class="button primary" href="https://emulebb.github.io/rust/">eMuleBB Rust</a>
+<a class="button secondary" href="https://github.com/emulebb/emulebb-rust/releases">GitHub Releases</a>
 </div>
-<div aria-label="MFC 0.7.3" class="release-links">
-<span>MFC 0.7.3</span>
-<a href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3">MFC 0.7.3 maintained</a>
+<div aria-label="GitHub" class="release-links">
+<span>GitHub</span>
+<a href="https://emulebb.github.io/rust/">eMuleBB Rust</a>
+<a href="https://github.com/emulebb/emulebb-rust/releases">GitHub Releases</a>
 </div>
 </div>
 <aside aria-label="Resumo do eMuleBB" class="hero-panel">
 <p class="panel-kicker">Resumo do eMuleBB</p>
-<h2>Nightlies → Beta 2 → MFC 0.7.3</h2>
-<p>O eMuleBB Rust é o cliente beta eD2K/Kad ativo; as nightlies são o canal principal de testes, o Beta 2 é a referência formal e o MFC continua como linha Windows mantida.</p>
+<h2>eD2K · Kad</h2>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 <ul class="signal-list">
+<li>eD2K</li>
+<li>Kad</li>
+<li>REST</li>
+<li>GitHub</li>
 </ul>
 </aside>
 </section>
 <section class="intro">
-<p>Este é o lar do <strong>eMuleBB</strong>: <strong>eMule broadband edition</strong>, um produto independente para quem ainda valoriza o modelo de partilha distribuída do eMule e o quer operar como software moderno. Os pacotes 0.7.3 estão publicados no GitHub Releases com um bootstrapper de suíte completa, ZIPs autónomos, manifestos, hashes, SBOMs e os assets de controlador aMuTorrent correspondentes.</p>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </section>
 <section class="section motivation" id="why">
 <div class="section-heading">
 <p class="eyebrow">Porquê</p>
-<h2>O software P2P ganha confiança sobrevivendo a sessões reais</h2>
+<h2>eMuleBB</h2>
 <p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </div>
 <div aria-label="eMuleBB motivation" class="motivation-grid">
 <article>
-<span>Motivo de produto</span>
-<h3>O eMuleBB é um produto próprio</h3>
-<p>O objetivo não é um mod cosmético, um fork de protocolo nem uma casca de transferências genérica. É uma linha eMule focada em banda larga para sessões longas, ficheiros raros, seeding deliberado e utilizadores avançados que ainda querem o fluxo de ambiente de trabalho nativo.</p>
-</article>
-<article>
-<span>Motivo técnico</span>
-<h3>Tornar o comportamento P2P inspecionável</h3>
-<p>Slots de upload, timeouts, buffers, grandes bibliotecas, exposição do WebServer, controlo REST e evidência de pacote são tornados explícitos para que cada alteração possa ser revista, testada, documentada e ajustada.</p>
-</article>
-<article>
-<span>Motivo de ecossistema</span>
-<h3>Construir as ferramentas em torno do cliente</h3>
-<p>A mesma disciplina de workspace abrange o cliente Rust, o tooling de controladores, os builds nativos, os serviços eD2K determinísticos, os testes em rede real e o cliente Windows mantido.</p>
+<span>eD2K · Kad</span>
+<h3>eMuleBB</h3>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </article>
 </div>
 </section>
 <section class="section" id="features">
 <div class="section-heading">
 <p class="eyebrow">Funcionalidades</p>
-<h2>O que o eMuleBB acrescenta em torno do cliente clássico</h2>
-<p>O trabalho do 0.7.3 foca o comportamento visível ao operador: política de upload previsível, binding mais seguro, limites fixos de desempenho, operação de grandes bibliotecas, automação local e evidência de pacote.</p>
+<h2>eD2K · Kad</h2>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </div>
 <div aria-label="eMule broadband feature groups" class="feature-table">
 <article>
-<span>Partilha e upload</span>
-<h3>Controlo de upload em banda larga</h3>
-<p>Metas de slots limitadas, reciclagem de slots fracos, leituras de ratio e controlos de seeding mantêm úteis as ligações de upload rápidas sem alterar o protocolo de upload eD2K.</p>
+<span>eD2K</span>
+<h3>eD2K</h3>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </article>
 <article>
-<span>Controlo de rede</span>
-<h3>Binding, NAT e política de exposição</h3>
-<p>Binding consciente da interface, validação de mapeamento UPnP/NAT, HTTPS, regras de IP permitido e definições de bind do WebServer separadas mantêm as superfícies remotas explícitas e testáveis. Binding não é um kill switch de VPN.</p>
+<span>Kad</span>
+<h3>Kad</h3>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </article>
 <article>
-<span>Desempenho e escala</span>
-<h3>Predefinições atuais para sessões grandes</h3>
-<p>Buffers de socket maiores, limites de queue/source, file buffering, predefinições de timeout, sincronização recursiva de partilhas, trabalho de cache no arranque e orientação de long paths visam os sistemas Windows atuais e grandes bibliotecas.</p>
-</article>
-<article>
-<span>Rede clássica</span>
-<h3>eD2K e Kad continuam em primeiro</h3>
-<p>A pesquisa Server, global e Kad continua a base nativa, com rastreio de identidade Kad, tratamento de nós maus, limpeza e trabalho de timing mantidos dentro dos limites de compatibilidade.</p>
-</article>
-<article>
-<span>Automação</span>
-<h3>Fluxos REST e de controladores</h3>
-<p>Endpoints JSON autenticados cobrem transferências, pesquisas, ficheiros partilhados, servidores, Kad, logs, categorias, uploads, estatísticas, preferências e encerramento controlado a partir de ferramentas locais de confiança.</p>
-</article>
-<article>
-<span>Disciplina de testes e release</span>
-<h3>Evidência antes de rótulos</h3>
-<p><code>0.7.3</code> está publicado com packaging do GitHub Actions, manifestos, evidência SHA-256, SBOMs SPDX, assets de diagnóstico e evidência de hash do bootstrapper.</p>
+<span>REST</span>
+<h3>REST API</h3>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </article>
 </div>
 </section>
@@ -144,109 +124,66 @@
 <div class="guide-grid guide-compact">
 <article>
 <span>01</span>
-<h3>Comece pelo guia do produto</h3>
-<p>Use o eMuleBB primeiro como eMule: servidores de confiança, bootstrap Kad deliberado, caminhos incoming/temp previsíveis e pastas partilhadas visíveis.</p>
-</article>
-<article>
-<span>02</span>
-<h3>Use automação local</h3>
-<p>Ative o REST apenas para controladores de confiança e depois use aMuTorrent, Prowlarr, Radarr e Sonarr pelos caminhos de adaptador documentados.</p>
-</article>
-<article>
-<span>03</span>
-<h3>Leia a evidência</h3>
-<p>Detalhes de setup, API, release, SBOM e pacotes ficam nos docs renderizados, de modo que as afirmações públicas permanecem ligadas a evidência sob controlo de versões.</p>
+<h3>GitHub Releases</h3>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </article>
 </div>
 <div class="automation-copy docs-automation">
-<p>A linha de release de banda larga expõe uma JSON API <code>/api/v1</code> orientada a recursos a partir do listener WebServer existente. Autentica com <code>X-API-Key</code>, serve envelopes JSON e mantém as alterações de estado nativas do eMule canalizadas pela aplicação.</p>
-<ul aria-label="Áreas da REST API" class="api-list">
-<li>Transferências</li>
-<li>Pesquisas</li>
-<li>Servidores</li>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
+<ul aria-label="REST API" class="api-list">
+<li>eD2K</li>
 <li>Kad</li>
-<li>Ficheiros partilhados</li>
-<li>Uploads</li>
-<li>Categorias</li>
-<li>Logs</li>
-<li>Estatísticas</li>
-<li>Preferências</li>
+<li>REST</li>
+<li>JSON</li>
 </ul>
 </div>
 <div class="doc-list">
-<a href="https://emulebb.github.io/emulebb-tooling/active/PRODUCT-PORTFOLIO/">
-<strong>Product portfolio</strong>
-<span>Current lifecycle and support status for every eMuleBB repository.</span>
+<a href="https://emulebb.github.io/rust/">
+<strong>eMuleBB Rust</strong>
+<span>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</span>
 </a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/ROADMAP-SUMMARY/">
-<strong>eMuleBB Roadmap</strong>
-<span>Active Rust beta work, MFC maintenance, and bounded supporting lanes.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">
-<strong>Guia do produto eMuleBB</strong>
-<span>Setup, afinação, automação, uso atento ao release, testes e evidência SBOM.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SETUP/">
-<strong>Guia de instalação</strong>
-<span>Modelo de instalação, comportamento do primeiro perfil e notas práticas de arranque.</span>
-</a>
-<a href="https://emulebb.github.io/emulebb-tooling/active/RELEASE-0.7.3/">
-<strong>Painel de release 0.7.3</strong>
-<span>Gates de RC atuais, evidência de testes automatizados, prova de SBOM/pacotes e regras de prontidão.</span>
+<a href="https://github.com/emulebb/emulebb-rust/releases">
+<strong>GitHub Releases</strong>
+<span>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</span>
 </a>
 </div>
 </section>
 <section class="section team" id="team">
 <div class="section-heading">
-<p class="eyebrow">Cultura do projeto</p>
-<h2>A equipa de mulas por trás da oficina P2P</h2>
+<p class="eyebrow">eMuleBB</p>
+<h2>eMuleBB</h2>
 </div>
-<div aria-label="A equipa de mulas por trás da oficina P2P" class="team-grid">
+<div aria-label="eMuleBB" class="team-grid">
 <article>
 <img alt="Cartoon mule carrying an upload arrow and a clipboard." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/upload-mule.png" width="160"/>
 <span>01</span>
-<h3>Domador de mulas de upload</h3>
-<p>Impede que os slots de upload de banda larga deitem abaixo a porta do estábulo e repõe os lentos na linha com uma prancheta muito oficial.</p>
+<h3>eD2K</h3>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </article>
 <article>
 <img alt="Cartoon mule carrying connected Kad nodes across a trail." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/kad-trail-mule.png" width="160"/>
 <span>02</span>
-<h3>Mula de trilho Kad</h3>
-<p>Transporta nós de bootstrap, tabelas de encaminhamento e o teimoso folclore eD2K/Kad por terreno de rede acidentado sem perder o mapa do protocolo.</p>
+<h3>Kad</h3>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </article>
 <article>
 <img alt="Cartoon mule hauling release packages and checks." class="team-image" decoding="async" height="160" loading="lazy" src="../assets/team/release-pack-mule.png" width="160"/>
 <span>03</span>
-<h3>Mula de carga das releases</h3>
-<p>Arrasta pacotes, hashes, SBOMs, logs, verificações em direto e atitude q.b. pelo portão antes de algo ser declarado pronto.</p>
+<h3>REST</h3>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </article>
 </div>
 </section>
 <section class="section release" id="release">
 <div class="section-heading">
-<p class="eyebrow">Segurança e proveniência</p>
-<h2>O 0.7.3 é construído e empacotado no GitHub</h2>
+<p class="eyebrow">Proveniência</p>
+<h2>GitHub Releases</h2>
 </div>
 <div aria-label="eMuleBB release proof" class="release-grid">
 <article>
 <span></span>
-<strong>0.7.3 publicado</strong>
-<p><code>emulebb-v0.7.3</code> é uma prerelease do GitHub com ZIPs x64 e ARM64, pacotes de diagnóstico, manifestos, SBOMs e o bootstrapper da suíte.</p>
-</article>
-<article>
-<span></span>
-<strong>Instalação verificada por hash</strong>
-<p>O bootstrapper transfere os assets do release e verifica os hashes dos pacotes a partir dos manifestos publicados antes de instalar.</p>
-</article>
-<article>
-<span></span>
-<strong>Assets da suíte</strong>
-<p>O pacote aMuTorrent 0.7.3 correspondente é publicado separadamente, e o fluxo completo de bootstrap x64 resolve-o automaticamente para a configuração do controlador.</p>
-</article>
-<article>
-<span></span>
-<strong>Prova dos controladores</strong>
-<p>aMuTorrent, Prowlarr, Radarr, Sonarr, Torznab e as vias compatíveis com qBittorrent estão documentados como caminhos de integração local em torno do contrato nativo <code>/api/v1</code>.</p>
+<strong>eMuleBB Rust</strong>
+<p>O eMuleBB é ao mesmo tempo um esforço de produto e uma prática de engenharia: preservar um cliente Windows nativo complexo com comportamento de rede real e depois rodeá-lo de builds, testes, documentação, automação e provas de release modernos.</p>
 </article>
 </div>
 </section>
@@ -258,35 +195,11 @@
 <div class="repo-list">
 <a href="https://github.com/emulebb/emulebb-rust">
 <strong>emulebb-rust</strong>
-<span>Active Rust beta and current product-development lane.</span>
+<span>eD2K · Kad</span>
 </a>
-<a href="https://github.com/emulebb/emulebb">
-<strong>emulebb</strong>
-<span>Stable 0.7.x Windows client, diagnostic baseline, and critical-fix maintenance lane.</span>
-</a>
-<a href="https://github.com/emulebb/ed2k-server">
-<strong>ed2k-server</strong>
-<span>Sole local deterministic eD2K server, maintained as a minimal upstream-aligned Rust fork.</span>
-</a>
-<a href="https://github.com/emulebb/emulebb-build-tests">
-<strong>emulebb-build-tests</strong>
-<span>Shared Rust and MFC diagnostics, compatibility, live-network, and parity harness.</span>
-</a>
-<a href="https://github.com/emulebb/emulebb-build">
-<strong>emulebb-build</strong>
-<span>Workspace, build, validation, packaging, and release orchestration.</span>
-</a>
-<a href="https://github.com/emulebb/emulebb-tooling">
-<strong>emulebb-tooling</strong>
-<span>Public roadmap, lifecycle policy, product docs, and engineering references.</span>
-</a>
-<a href="https://github.com/amule-org/amule">
-<strong>aMule upstream</strong>
-<span>Actively developed upstream client used as the moving interoperability and parity reference.</span>
-</a>
-<a href="https://github.com/irwir/eMule">
-<strong>eMule stock 0.72</strong>
-<span>Stock compatibility baseline for protocol and state-machine parity.</span>
+<a href="https://github.com/emulebb">
+<strong>eMuleBB</strong>
+<span>GitHub</span>
 </a>
 </div>
 </section>
