@@ -6,10 +6,10 @@ testing channel and eMuleBB MFC `0.7.x` as the maintained Windows line. Beta 3
 is expected after a few more weeks of implementation and stabilization. Rust
 development is best-effort, and contributors are welcome.
 
-The canonical English-only Rust product page is published at `/rust/`. Only the
-homepage and FAQ have localized variants. Localized copy is deliberately
-minimal and evergreen: it does not carry versions, beta targets, ETAs, or
-release-cycle status.
+The homepage is the single canonical product page. `/rust/` is retained only as
+a no-index compatibility redirect. Only the homepage and FAQ have localized
+variants. Localized copy is deliberately minimal and evergreen: it does not
+carry versions, beta targets, ETAs, or release-cycle status.
 
 The public site is expected to publish at:
 
