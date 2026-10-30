@@ -29,10 +29,11 @@ edition. Everything below is this repo's local deltas only.
   surfaces, and stable-installer ownership.
 - Only shipped, landed, passed, or release-proven features belong in the public
   homepage feature/catalog copy.
-- Keep English canonical. Completed locale pages are generated for stock eMule
-  languages from `tools\render_pages.py` and JSON copy under `content\`; they
-  should match the English section structure, use reciprocal `hreflang` links,
-  and stay `index,follow`.
+- Keep English canonical. Only the homepage and FAQ have localized variants.
+  Their copy is frozen, minimal, and evergreen: do not add versions, beta
+  targets, ETAs, or time-sensitive release status. The English-only `/rust/`
+  page owns current Rust product positioning. Locale pages keep the English
+  section structure, reciprocal `hreflang` links, and `index,follow`.
 - Use `/languages/` as the language selector. Do not add generic compatibility
   locale chooser URLs such as `/pt/` unless they are real indexable locale
   pages with their own maintained copy.

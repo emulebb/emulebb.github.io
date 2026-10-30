@@ -2,12 +2,14 @@
 
 This repository publishes the organization GitHub Pages site. The public front
 door presents CI-gated `emulebb-rust` nightly builds as the primary active-beta
-testing channel, public `0.1.0-beta.2` as the formal Rust baseline while work
-continues toward Beta 3, and eMuleBB MFC `0.7.x` as the maintained Windows line.
-Rust development is best-effort, and contributors are welcome.
+testing channel and eMuleBB MFC `0.7.x` as the maintained Windows line. Beta 3
+is expected after a few more weeks of implementation and stabilization. Rust
+development is best-effort, and contributors are welcome.
 
 The canonical English-only Rust product page is published at `/rust/`. Only the
-homepage and FAQ have localized variants.
+homepage and FAQ have localized variants. Localized copy is deliberately
+minimal and evergreen: it does not carry versions, beta targets, ETAs, or
+release-cycle status.
 
 The public site is expected to publish at:
 
