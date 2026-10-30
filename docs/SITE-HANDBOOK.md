@@ -61,50 +61,35 @@ repositories.
 ## Voice And Brand
 
 - Tone: technical, credible, direct, and readable for power users.
-- Dry humor and eMule lore are allowed, especially in bounded sections such as
-  Team, but factual sections must remain precise.
+- Dry humor and eMule lore are allowed in supporting documentation, but public
+  homepage copy must remain focused and precise.
 - Avoid marketing fog. Prefer concrete behavior: upload slots, Kad, REST,
   shared libraries, validation, release gates.
-- Keep the site text-first outside the header logo and bounded Team/lore
-  imagery.
-- Do not publish screenshot, copied application artwork, or arbitrary brand
-  image assets from this repository.
+- Keep every HTML page text-only. Use the `eMuleBB` text wordmark in headers.
+- Do not publish logos, screenshots, copied application artwork, mascots, or
+  arbitrary raster assets from this repository.
 - Do not add copied application resource images such as `Logo.jpg`.
-- The current brand assets are
-  `assets/brand/emulebb-broadband-edition-logo.png`, used in the site header,
-  and `assets/brand/emulebb-favicon.ico`, used as the browser favicon.
-- The Team/lore section may use small generated raster illustrations under
-  `assets/team/` when explicitly requested. They must stay decorative,
-  section-local, and separate from favicon or external product screenshots.
+- The browser favicon at `assets/brand/emulebb-favicon.ico` is the only image
+  exception.
 - Structured data must not include logo or image fields unless this policy is
   explicitly changed first.
 
 ## Homepage Section Contract
 
-The English homepage is canonical. Keep this order unless a deliberate site
-structure update changes the contract:
+The English homepage is canonical. Keep this focused order:
 
-1. Header and primary navigation
-2. Hero
-3. Intro
-4. Why/motivation
-5. Features
-6. Short guide
-7. Team/lore
-8. Docs
-9. Implementation method
-10. Automation
-11. Release
-12. Repositories
-13. Footer
+1. Hero with Rust nightlies as the primary action and MFC as a secondary link
+2. Product proof
+3. Essential downloads and documentation
+4. Focused repositories
 
 Rules:
 
 - Required navigation anchors must resolve to existing section IDs.
-- Keep one homepage capability section: `Features`. Do not add separate
-  Highlights, Catalog, or similar duplicate feature sections.
-- The homepage feature copy may highlight only landed, documented,
-  passed, release-proven, or otherwise source-confirmed features.
+- Do not add separate feature catalogs, highlights, team/lore, implementation,
+  automation, or release sections. Link to the product docs instead.
+- Homepage proof may highlight only landed, documented, passed,
+  release-proven, or otherwise source-confirmed behavior.
 - MFC feature copy must be labeled as stable shipped capability, not active
   broad development. Rust capability claims must be nightly beta-channel
   specific and evidence-bound.
@@ -118,47 +103,23 @@ Rules:
 - Public navigation and Docs-section links should target rendered pages under
   `https://emulebb.github.io/emulebb-tooling/`; link to GitHub blob Markdown only
   when a rendered page does not exist.
-- The Why section may explain the learning and modernization exercise behind
-  the project, but it must not blur planned release status or imply a rewrite.
-- The Implementation method section may summarize engineering practice,
-  compatibility boundaries, API contracts, and release proof, but source docs
-  remain authoritative for detailed procedures.
-- The Team section may use sarcasm and lore, but it must not obscure product
-  facts or make claims about unshipped behavior.
+- Keep explanatory history, implementation method, automation detail, and lore
+  in the rendered documentation site rather than duplicating them on the
+  homepage.
 
-## Feature Policy
+## Homepage Proof Policy
 
-Feature entries should be short, verifiable, and grouped by operator mental
-model:
+Proof entries stay short, verifiable, and limited to the active Rust product:
 
-- Broadband upload and seeding
-- Large-library and file handling
-- Search, server, and Kad
-- VPN/interface binding and WebServer exposure policy
-- Modern performance limits
-- Kad hardening and peer protection
-- NAT/UPnP and network adversity validation
-- REST, controllers, and automation
-- Desktop power-user ergonomics
-- Reliability and release proof
+- live eD2K/Kad network testing
+- CI-gated native packages
+- checksums and provenance
+- the next beta milestone only when the public-presence contract authorizes it
 
-Before adding or changing a feature entry:
-
-- Confirm the claim against `emulebb-tooling` docs or the relevant source repo.
-- Refresh `docs/reference/GUIDE-EMULEBB.md` and focused guide chapters first
-  when the homepage is summarizing newly landed behavior.
-- Use `docs/reference/DEVELOPMENT-GUIDE.md` for the recurring product-guide and
-  development-guide refresh workflow.
-- Avoid ambiguous labels like "modernized" unless the concrete behavior is named.
-- If a feature is not landed, documented, or source-confirmed, keep it out of
-  homepage feature copy.
-- Interface/VPN binding may be described as bind-target support and live-test
-  policy. Do not describe the external VPN kill-switch design as built into
-  eMuleBB.
-- Native Windows VPN work and qBittorrentBB integration are not forward
-  priorities. Do not present them as planned homepage features.
-- If a feature has changed status, update the source documentation first or link
-  to the updated source.
+Confirm every claim against `emulebb-tooling` docs, the public-presence
+contract, or the owning source repository. Put protocol detail, feature catalogs,
+controller workflows, historical releases, and future backlog in the rendered
+documentation rather than expanding the homepage.
 
 ## Localization Policy
 
@@ -176,7 +137,7 @@ Before adding or changing a feature entry:
   renderer rules in `tools/render_pages.py`, then rendered through the Jinja2
   templates under `templates/`.
 - Localized homepage and FAQ copy is intentionally frozen, minimal, and
-  evergreen. It may link to `/rust/` and GitHub Releases, but must not contain
+  evergreen. It may link to GitHub Releases and the Rust product docs, but must not contain
   versions, beta targets, ETAs, nightly status, or other release-cycle claims.
   Future Rust status changes are made only in canonical English surfaces.
 - Completed locale pages use `index,follow`.
@@ -187,8 +148,8 @@ Before adding or changing a feature entry:
   `/pt-br/faq/`, `/pt-pt/faq/`, `/fr/faq/`, `/de/faq/`, `/pl/faq/`,
   `/nl/faq/`, `/ru/faq/`, `/tr/faq/`, `/uk/faq/`, `/ko/faq/`, `/ar-ae/faq/`,
   `/zh-cn/faq/`, and `/ja/faq/`.
-- `/rust/` is the canonical English-only Rust product page. Do not generate
-  localized `/rust/` variants or add `hreflang` alternates to that page.
+- `/rust/` is a no-index compatibility redirect to `/`. Do not add product
+  content, localized variants, `hreflang` alternates, or a sitemap entry there.
 - Do not add generic compatibility chooser URLs such as `/pt/`; Portuguese is
   represented by the real regional pages `/pt-br/` and `/pt-pt/`.
 - Complete localized pages must:
@@ -214,7 +175,7 @@ Every indexable page must have:
 - `robots` policy
 - canonical URL
 - reciprocal `hreflang` alternates for localized homepage and FAQ families;
-  the English-only `/rust/` product page intentionally has none
+  the `/rust/` compatibility redirect intentionally has none
 - Open Graph title, description, type, and URL where appropriate
 - structured data only when it can be kept accurate
 
@@ -224,8 +185,7 @@ Search/publishing rules:
 - `sitemap.xml` must include only complete, indexable pages.
 - Locale stubs and non-indexable compatibility chooser pages stay out of
   `sitemap.xml`.
-- Metadata and structured data must not mention or point to logos/images. The
-  header logo is a visible page asset only.
+- Metadata and structured data must not mention or point to logos or images.
 
 ## Layout And CSS Policy
 
@@ -360,9 +320,13 @@ foreach ($file in $files) {
     throw "Missing x-default: $file"
   }
   if ($file -match '\\rust\\index\.html$' -and $html -match 'hreflang=') {
-    throw "English-only Rust page must not publish hreflang alternates: $file"
+    throw "Rust redirect must not publish hreflang alternates: $file"
   }
-  if ($html -notmatch 'content="index,follow"') { throw "Locale not indexable: $file" }
+  if ($file -match '\\rust\\index\.html$') {
+    if ($html -notmatch 'content="noindex,follow"') { throw "Rust redirect is indexable: $file" }
+  } elseif ($html -notmatch 'content="index,follow"') {
+    throw "Locale not indexable: $file"
+  }
 }
 if (Test-Path -LiteralPath 'pt/index.html') { throw 'Unexpected generic Portuguese chooser' }
 ```
@@ -385,7 +349,7 @@ mobile rendering before pushing.
 Current public files:
 
 - `index.html`: canonical English page
-- `rust/index.html`: canonical English-only eMuleBB Rust product page
+- `rust/index.html`: no-index compatibility redirect to the homepage
 - locale `index.html` files under the stock eMule language directories listed
   in the Localization Policy
 - `languages/index.html`: indexable language selector

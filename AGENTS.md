@@ -13,15 +13,11 @@ edition. Everything below is this repo's local deltas only.
 
 ## Hard Rules
 
-- Do not publish mascot, screenshot, copied application artwork, or other brand
-  image assets from this repository unless explicitly approved. The current
-  image exceptions are the header logo at
-  `assets/brand/emulebb-broadband-edition-logo.png`, the favicon at
-  `assets/brand/emulebb-favicon.ico`, and Team/lore raster images under
-  `assets/team/`.
-- Keep the site text-first outside the header logo and bounded Team/lore
-  imagery. Do not add image fields to metadata or structured data unless this
-  policy changes again.
+- Keep every HTML page text-only. Do not publish in-page logos, mascots,
+  screenshots, copied application artwork, or other raster assets. The browser
+  favicon at `assets/brand/emulebb-favicon.ico` is the only image exception.
+- Use the text wordmark `eMuleBB` in page headers. Do not add logo or image
+  fields to metadata or structured data unless this policy changes first.
 - Treat `emulebb-tooling` active/reference docs as the source of truth. Pages
   summarizes and links; it does not invent feature or release facts.
 - Treat `..\emulebb-tooling\manifests\public-presence.v1.json` as the source
@@ -31,9 +27,10 @@ edition. Everything below is this repo's local deltas only.
   homepage feature/catalog copy.
 - Keep English canonical. Only the homepage and FAQ have localized variants.
   Their copy is frozen, minimal, and evergreen: do not add versions, beta
-  targets, ETAs, or time-sensitive release status. The English-only `/rust/`
-  page owns current Rust product positioning. Locale pages keep the English
-  section structure, reciprocal `hreflang` links, and `index,follow`.
+  targets, ETAs, or time-sensitive release status. The English homepage owns
+  current Rust product positioning. `/rust/` is only a no-index compatibility
+  redirect. Locale pages keep the English section structure, reciprocal
+  `hreflang` links, and `index,follow`.
 - Use `/languages/` as the language selector. Do not add generic compatibility
   locale chooser URLs such as `/pt/` unless they are real indexable locale
   pages with their own maintained copy.
