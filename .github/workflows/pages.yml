@@ -19,74 +19,97 @@ concurrency:
 jobs:
   build:
     name: Build and validate site
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: repos/emulebb-pages
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+      EMULEBB_WORKSPACE_ROOT: ${{ github.workspace }}
 
     steps:
       - name: Checkout organization website
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          path: repos/emulebb-pages
+          persist-credentials: false
 
       - name: Checkout public-presence authority
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: emulebb/emulebb-tooling
-          path: .local/emulebb-tooling
+          ref: 027dcf32aab5ed2d1e3441b6231e8e500cc2e945
+          path: repos/emulebb-tooling
+          persist-credentials: false
 
       - name: Set up Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
-          python-version: '3.x'
+          python-version: '3.15.2'
           cache: pip
-          cache-dependency-path: requirements.txt
+          cache-dependency-path: repos/emulebb-pages/requirements.txt
 
       - name: Install renderer dependencies
-        run: python -m pip install -r requirements.txt
+        run: python -B -m pip install -r requirements.txt
+
+      - name: Prepare owned artifact boundary
+        env:
+          EMULEBB_WORKSPACE_OUTPUT_ROOT: ${{ runner.temp }}/emulebb-output
+        run: |
+          mkdir -p "$EMULEBB_WORKSPACE_OUTPUT_ROOT"
+          printf 'EMULEBB_WORKSPACE_OUTPUT_ROOT=%s\n' "$EMULEBB_WORKSPACE_OUTPUT_ROOT" >> "$GITHUB_ENV"
+
+      - name: Test renderer staging and locale preservation
+        run: python -B -m unittest discover -s tests -v
 
       - name: Validate public-presence contract
-        run: python .local/emulebb-tooling/helpers/public-presence.py validate
+        run: python -B ../emulebb-tooling/helpers/public-presence.py validate
 
       - name: Check committed generated pages
         run: |
           committed_lastmod="$(grep -m1 -o '<lastmod>[^<]*' sitemap.xml | cut -d '>' -f2)"
-          python tools/render_pages.py \
-            --contract .local/emulebb-tooling/manifests/public-presence.v1.json \
+          python -B tools/render_pages.py \
+            --contract ../emulebb-tooling/manifests/public-presence.v1.json \
             --lastmod "$committed_lastmod" \
             --check
 
       - name: Render clean site artifact
         run: |
-          python tools/render_pages.py \
-            --contract .local/emulebb-tooling/manifests/public-presence.v1.json \
+          python -B tools/render_pages.py \
+            --contract ../emulebb-tooling/manifests/public-presence.v1.json \
             --lastmod "$(date -u +%F)" \
-            --output-root .local/site
+            --workspace-output-root "$EMULEBB_WORKSPACE_OUTPUT_ROOT" \
+            --output-root "$EMULEBB_WORKSPACE_OUTPUT_ROOT/artifacts/public-presence/${{ github.run_id }}-${{ github.run_attempt }}/site"
 
       - name: Validate site and documentation links
         run: |
-          python .local/emulebb-tooling/helpers/pages-site-tools.py --pages-root .local/site validate
-          python .local/emulebb-tooling/helpers/check-tooling-doclinks.py \
-            --docs-root .local/emulebb-tooling/docs \
-            .local/site
+          site="$EMULEBB_WORKSPACE_OUTPUT_ROOT/artifacts/public-presence/${{ github.run_id }}-${{ github.run_attempt }}/site"
+          python -B ../emulebb-tooling/helpers/pages-site-tools.py --pages-root "$site" validate
+          python -B ../emulebb-tooling/helpers/check-tooling-doclinks.py \
+            --docs-root ../emulebb-tooling/docs \
+            "$site"
 
       - name: Verify stable installer checksum
-        working-directory: .local/site
+        working-directory: ${{ runner.temp }}/emulebb-output/artifacts/public-presence/${{ github.run_id }}-${{ github.run_attempt }}/site
         run: sha256sum --check install.ps1.sha256
 
       - name: Configure GitHub Pages
         if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
 
       - name: Upload GitHub Pages artifact
         if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
-          path: .local/site
+          path: ${{ runner.temp }}/emulebb-output/artifacts/public-presence/${{ github.run_id }}-${{ github.run_attempt }}/site
 
   deploy:
     name: Deploy organization website
     if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
     permissions:
@@ -100,4 +123,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
