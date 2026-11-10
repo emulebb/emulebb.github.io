@@ -8,7 +8,7 @@
   --panel-soft: #151f2a;
   --panel-high: #1a2633;
   --panel-warm: #211b12;
-  --teal: #4cc7bf;
+  --teal: #22d3ee;
   --green: #7fbd75;
   --red: #e07a72;
   --blue: #78a9e6;
@@ -42,13 +42,12 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 72px;
+  scroll-padding-top: 132px;
 }
 
 body {
   width: auto;
   margin: 0;
-  overflow-x: hidden;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--pico-font-family-sans-serif);
@@ -90,7 +89,7 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid rgba(76, 199, 191, 0.55);
+  outline: 3px solid #80edff;
   outline-offset: 3px;
 }
 
@@ -122,6 +121,29 @@ code {
   align-items: center;
   text-decoration: none;
   min-width: 0;
+  gap: 12px;
+}
+
+.brand-logo {
+  display: block;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  object-fit: contain;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  inset-inline-start: 12px;
+  z-index: 30;
+  padding: 12px;
+  background: var(--teal);
+  color: var(--dark);
+}
+
+.skip-link:focus {
+  top: 12px;
 }
 
 .brand-text {
@@ -157,7 +179,10 @@ nav.is-open {
 }
 
 .menu-toggle {
-  grid-column: 1 / -1;
+  grid-column: 2;
+  grid-row: 1;
+  max-width: 8rem;
+  white-space: normal;
   min-height: 44px;
   display: inline-flex;
   align-items: center;
@@ -214,11 +239,12 @@ nav a.nav-download:hover {
 
 .button {
   flex: 0 0 auto;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
 }
 
 [id] {
-  scroll-margin-top: 72px;
+  scroll-margin-top: 0;
 }
 
 .hero,
@@ -390,10 +416,24 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 28px;
 }
 
-.actions {
-  margin-top: 28px;
+.actions--equal {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.actions--equal .button {
+  min-width: 0;
+  min-height: 56px;
+}
+
+.maintenance-link {
+  font-size: 0.92rem;
+  color: var(--muted);
+  text-underline-offset: 3px;
 }
 
 .release-links {
@@ -812,14 +852,6 @@ footer {
 }
 
 @media (min-width: 560px) {
-  html {
-    scroll-padding-top: 78px;
-  }
-
-  [id] {
-    scroll-margin-top: 78px;
-  }
-
   h1 {
     font-size: 3.25rem;
   }
@@ -860,14 +892,6 @@ footer {
 }
 
 @media (min-width: 860px) {
-  html {
-    scroll-padding-top: 78px;
-  }
-
-  [id] {
-    scroll-margin-top: 78px;
-  }
-
   .site-header {
     grid-template-columns: minmax(150px, auto) minmax(0, 1fr);
     align-items: center;
@@ -882,7 +906,7 @@ footer {
     grid-column: 2;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-end;
     width: auto;
     padding-top: 0;
@@ -892,7 +916,7 @@ footer {
     width: auto;
     border: 0;
     background: transparent;
-    white-space: nowrap;
+    white-space: normal;
   }
 
   nav a.nav-download {
@@ -921,7 +945,7 @@ footer {
   }
 
   .repo-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   footer {
@@ -932,7 +956,7 @@ footer {
 
 @media (min-width: 1120px) {
   h1 {
-    font-size: 4.6rem;
+    font-size: 4.2rem;
   }
 
   h2 {
@@ -951,7 +975,6 @@ footer {
   .motivation-grid,
   .proof-grid,
   .guide-grid,
-  .doc-list,
   .faq-list,
   .release-grid,
   .method-grid,
@@ -960,6 +983,18 @@ footer {
   }
 
   .repo-list {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 559px) {
+  .actions--equal {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

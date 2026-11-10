@@ -13,11 +13,12 @@ edition. Everything below is this repo's local deltas only.
 
 ## Hard Rules
 
-- Keep every HTML page text-only. Do not publish in-page logos, mascots,
-  screenshots, copied application artwork, or other raster assets. The browser
-  favicon at `assets/brand/emulebb-favicon.ico` is the only image exception.
-- Use the text wordmark `eMuleBB` in page headers. Do not add logo or image
-  fields to metadata or structured data unless this policy changes first.
+- Use the `eMuleBB` text wordmark with only the operator-approved proposal-1
+  Rust donkey assets recorded in the public-presence contract. Do not publish
+  screenshots, unrelated artwork, or unapproved image variants.
+- Give approved in-page images explicit dimensions and appropriate alt text.
+  The approved social card may appear in Open Graph/Twitter metadata. Keep the
+  favicon at `assets/brand/emulebb-favicon.ico`; do not regenerate brand assets.
 - Treat `emulebb-tooling` active/reference docs as the source of truth. Pages
   summarizes and links; it does not invent feature or release facts.
 - Treat `..\emulebb-tooling\manifests\public-presence.v1.json` as the source
@@ -56,8 +57,9 @@ edition. Everything below is this repo's local deltas only.
   pages and `python tools\render_pages.py --lastmod YYYY-MM-DD --check` to
   confirm committed HTML is up to date with the templates and public-presence
   contract.
-- Use `python tools\render_pages.py --lastmod YYYY-MM-DD --output-root
-  .local\site` to stage the bounded deployment artifact.
+- The supported manager stages deployment artifacts below inherited
+  `EMULEBB_WORKSPACE_OUTPUT_ROOT`; the renderer refuses source-local staging.
+  `--capabilities` advertises the supported output protocol without writing.
 - Use `python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root . validate`
   before publishing locale, metadata, sitemap, asset-policy, or navigation
   changes.
