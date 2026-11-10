@@ -6,7 +6,7 @@ site at `https://emulebb.github.io/`.
 The site is the curated public front door for the eMuleBB organization. It
 presents CI-gated `emulebb-rust` nightly builds as the active beta testing
 channel and eMuleBB MFC `0.7.x` as the maintained Windows lane. Beta 3 is
-expected after a few more weeks of implementation and stabilization. Rust
+the next development target, without an ETA. Rust
 development is best-effort and spare-time, and contributors are welcome. The
 site is not the canonical engineering ledger, release ledger, or feature
 backlog. Those live in the public `emulebb-tooling` docs and the owning release
@@ -37,9 +37,9 @@ repositories.
   `emulebb-rust` nightly prereleases from `main`. Formal beta tags remain
   immutable release evidence, not the public front-door download target.
 - The public Rust status is Active beta. Tell users to choose the newest dated
-  nightly prerelease from GitHub Releases. Beta 3 is expected after a few more
-  weeks of implementation and stabilization. The approved testing summary is:
-  “Repeatedly tested on live eD2K/Kad networks.”
+  nightly prerelease from GitHub Releases. Beta 3 is the next development
+  target, without a date. Keep historical live eD2K/Kad evidence separate from
+  exact-source native package smoke and current-head qualification.
 - Rust development is best-effort and spare-time. Public copy should welcome
   contributors and link to the repository's `CONTRIBUTING.md`.
 - The historical MFC `0.7.3` suite installer and aMuTorrent package remain
@@ -65,21 +65,24 @@ repositories.
   homepage copy must remain focused and precise.
 - Avoid marketing fog. Prefer concrete behavior: upload slots, Kad, REST,
   shared libraries, validation, release gates.
-- Keep every HTML page text-only. Use the `eMuleBB` text wordmark in headers.
-- Do not publish logos, screenshots, copied application artwork, mascots, or
-  arbitrary raster assets from this repository.
-- Do not add copied application resource images such as `Logo.jpg`.
-- The browser favicon at `assets/brand/emulebb-favicon.ico` is the only image
-  exception.
-- Structured data must not include logo or image fields unless this policy is
-  explicitly changed first.
+- Use the `eMuleBB` text wordmark and only the explicitly approved proposal-1
+  Rust donkey derivatives supplied by the operator. The shared public-presence
+  contract records their exact paths, dimensions and SHA-256 identities.
+- Preserve the original artwork and supplied derivatives. Do not regenerate
+  them or publish screenshots, copied application resources or unrelated art.
+- Approved images need explicit dimensions and appropriate alt text. A header
+  identity image beside the wordmark is decorative and uses empty alt text;
+  a standalone README image has descriptive alt text.
+- The approved `1280x640` social card may appear in Open Graph/Twitter metadata.
+  Do not invent social accounts or add unrelated image metadata.
+- Keep the browser favicon at `assets/brand/emulebb-favicon.ico`.
 
 ## Homepage Section Contract
 
 The English homepage is canonical. Keep this focused order:
 
-1. Hero that defines eMuleBB Rust, with nightlies as the primary action and MFC
-   as a secondary link
+1. Hero that defines eMuleBB Rust, with equal Use and Develop routes and MFC
+   available through a secondary maintenance link
 2. Concise eMuleBB Rust capability summary
 3. Essential downloads and documentation
 4. Focused repositories
@@ -190,7 +193,9 @@ Search/publishing rules:
 - `sitemap.xml` must include only complete, indexable pages.
 - Locale stubs and non-indexable compatibility chooser pages stay out of
   `sitemap.xml`.
-- Metadata and structured data must not mention or point to logos or images.
+- Image metadata may reference only the exact approved public social card,
+  with its dimensions, MIME type and descriptive alt text. Preserve canonical
+  URLs, reciprocal locale alternates and the text-only no-index Rust redirect.
 
 ## Layout And CSS Policy
 
@@ -202,8 +207,8 @@ Search/publishing rules:
 - Mobile nav should remain usable without horizontal scrolling; the current
   pattern is a wrapped grid on small screens and a horizontal nav on desktop.
 - Use CSS variables in `:root` for shared colors.
-- Do not introduce a one-hue palette; retain restrained contrast across teal,
-  blue, green, red, and gold accents.
+- Use a neutral readable palette with restrained cyan identity accents. Keep
+  contrast and visible keyboard focus; avoid decorative animation.
 
 ## Update Workflow
 
@@ -260,14 +265,18 @@ python -m pip install -r requirements.txt
 python ..\emulebb-tooling\helpers\public-presence.py validate
 $lastmod = ([regex]::Match((Get-Content -Raw sitemap.xml), '<lastmod>([^<]+)</lastmod>')).Groups[1].Value
 python tools\render_pages.py --lastmod $lastmod --check
-python tools\render_pages.py --lastmod (Get-Date -Format yyyy-MM-dd) --output-root .local\site
-python ..\emulebb-tooling\helpers\pages-site-tools.py --pages-root .local\site validate
-python ..\emulebb-tooling\helpers\check-tooling-doclinks.py --docs-root ..\emulebb-tooling\docs .local\site
-$expected = (((Get-Content .local\site\install.ps1.sha256) -split '\s+')[0]).ToUpperInvariant()
-$actual = (Get-FileHash -Algorithm SHA256 .local\site\install.ps1).Hash
-if ($actual -ne $expected) { throw 'Stable installer checksum mismatch' }
 git diff --check
 ```
+
+Run the normal push gate from the selected Build checkout through
+`python -B -m emule_workspace local-check --repo <selected-pages-checkout>
+--stage push`. The manager checks renderer capabilities, performs source drift
+checks without writes, and stages into a unique inherited
+`EMULEBB_WORKSPACE_OUTPUT_ROOT/artifacts/public-presence/<run>/site` child.
+It validates the staged site, documentation links and stable installer checksum.
+Do not precreate that `site` child or use source-local `.local` output. Explicit
+developer regeneration of tracked HTML remains supported by the renderer's
+default output mode; it is separate from validation and deployment staging.
 
 `.github/workflows/pages.yml` performs the same contract, generated-output,
 link, static-site, and installer checks. It uploads only the clean staged site
