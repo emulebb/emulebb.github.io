@@ -7,6 +7,7 @@ import argparse
 import datetime as dt
 import difflib
 import json
+import os
 import posixpath
 import re
 import shutil
@@ -1237,16 +1238,46 @@ def write_outputs(root: Path, outputs: dict[Path, str], check: bool) -> int:
     return 1 if failures else 0
 
 
-def prepare_staging_root(source_root: Path, output_root: Path) -> None:
-    """Create a clean staging directory below the repository-local .local tree."""
+def prepare_staging_root(source_root: Path, output_root: Path, workspace_output_root: Path | None) -> None:
+    """Create one new site child under the inherited external output boundary.
 
-    allowed_root = (source_root / ".local").resolve()
-    resolved_output = output_root.resolve()
-    if resolved_output == allowed_root or not resolved_output.is_relative_to(allowed_root):
-        raise ValueError(f"--output-root must be a child of {allowed_root}")
-    if resolved_output.exists():
-        shutil.rmtree(resolved_output)
-    resolved_output.mkdir(parents=True)
+    Existing destinations and redirected descendants are refused before writes;
+    staging never removes a caller-supplied directory.
+    """
+    inherited_output = os.environ.get("EMULEBB_WORKSPACE_OUTPUT_ROOT", "")
+    inherited_workspace = os.environ.get("EMULEBB_WORKSPACE_ROOT", "")
+    if not inherited_output or not inherited_workspace:
+        raise ValueError("External staging requires inherited workspace and output roots")
+    boundary, workspace = Path(inherited_output), Path(inherited_workspace)
+    if (not boundary.is_absolute() or not workspace.is_absolute() or not boundary.is_dir()
+            or not workspace.is_dir() or workspace_output_root is None or not workspace_output_root.is_absolute()
+            or workspace_output_root.resolve() != boundary.resolve()):
+        raise ValueError("--workspace-output-root must identify the existing inherited output root")
+    if boundary.resolve().is_relative_to(workspace.resolve()):
+        raise ValueError("Workspace output must be outside the source workspace")
+    if not source_root.resolve().is_relative_to(workspace.resolve()):
+        raise ValueError("Selected Pages source must belong to the inherited source workspace")
+    if not output_root.is_absolute():
+        raise ValueError("--output-root requires an absolute external site child")
+    try:
+        parts = output_root.relative_to(boundary).parts
+    except ValueError as error:
+        raise ValueError("--output-root must stay below the inherited output root") from error
+    if (len(parts) != 4 or parts[:2] != ("artifacts", "public-presence") or parts[-1] != "site"
+            or re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,79}", parts[2]) is None):
+        raise ValueError("Staging requires OUTPUT/artifacts/public-presence/<unique-run>/site")
+    candidate = boundary
+    for part in parts:
+        candidate /= part
+        if candidate.is_symlink() or candidate.is_junction():
+            raise ValueError("Staging descendants must not redirect through links or junctions")
+    if output_root.exists():
+        raise ValueError("Staging destination already exists; select a new owned run")
+    if not output_root.resolve().is_relative_to(boundary.resolve()):
+        raise ValueError("Staging destination escapes the inherited output boundary")
+    # WHY: validation must never erase prior evidence or a source checkout.
+    # Exclusive creation of a fresh bounded site replaces recursive cleanup.
+    output_root.mkdir(parents=True, exist_ok=False)
 
 
 def copy_static_site_files(source_root: Path, output_root: Path) -> None:
@@ -1262,22 +1293,29 @@ def copy_static_site_files(source_root: Path, output_root: Path) -> None:
             shutil.copy2(source, destination)
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     """Parse render command arguments."""
 
     parser = argparse.ArgumentParser(description="Render the eMuleBB static pages.")
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--contract", type=Path, default=DEFAULT_PUBLIC_PRESENCE_CONTRACT)
-    parser.add_argument("--output-root", type=Path, help="Stage a clean deployable site below ROOT/.local.")
+    parser.add_argument("--capabilities", action="store_true", help="Print supported protocols without rendering or writing.")
+    parser.add_argument("--workspace-output-root", type=Path, help="Explicit inherited external output boundary.")
+    parser.add_argument("--output-root", type=Path, help="Stage a new OUTPUT/artifacts/public-presence/<run>/site child.")
     parser.add_argument("--lastmod", default=dt.date.today().isoformat())
     parser.add_argument("--check", action="store_true", help="Fail if generated files differ.")
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     """Render or check the generated static pages."""
 
-    args = parse_args()
+    args = parse_args(argv)
+    if args.capabilities:
+        print(json.dumps({"schema": "emulebb.pages.renderer-capabilities/1",
+                          "outputStaging": {"protocol": 1, "boundary": "workspace-output", "sourceWrites": False},
+                          "check": True}, sort_keys=True))
+        return 0
     try:
         dt.date.fromisoformat(args.lastmod)
     except ValueError as exc:
@@ -1287,11 +1325,12 @@ def main() -> int:
         contract = load_public_presence_contract(args.contract.resolve())
         if args.output_root and args.check:
             raise ValueError("--check and --output-root cannot be combined")
+        if args.workspace_output_root and not args.output_root:
+            raise ValueError("--workspace-output-root requires --output-root")
         output_root = root
         if args.output_root:
-            output_root = args.output_root if args.output_root.is_absolute() else root / args.output_root
-            output_root = output_root.resolve()
-            prepare_staging_root(root, output_root)
+            output_root = args.output_root
+            prepare_staging_root(root, output_root, args.workspace_output_root)
             copy_static_site_files(root, output_root)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"render error: {exc}", file=sys.stderr)
