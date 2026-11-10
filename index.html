@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -13,7 +13,16 @@
 <meta content="website" property="og:type"/>
 <meta content="https://emulebb.github.io/" property="og:url"/>
 <meta content="eMule broadband edition" property="og:site_name"/>
-<meta content="summary" name="twitter:card"/>
+
+<meta content="https://emulebb.github.io/assets/brand/rust-social-preview.png" property="og:image"/>
+<meta content="1280" property="og:image:width"/>
+<meta content="640" property="og:image:height"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="eMuleBB Rust: eD2K and Kad with browser control on Windows, Linux and macOS" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://emulebb.github.io/assets/brand/rust-social-preview.png" name="twitter:image"/>
+<meta content="eMuleBB Rust: eD2K and Kad with browser control on Windows, Linux and macOS" name="twitter:image:alt"/>
+
 <link href="https://emulebb.github.io/" rel="canonical"/>
 <link href="https://emulebb.github.io/sitemap.xml" rel="sitemap" type="application/xml"/>
 <link href="https://emulebb.github.io/" hreflang="en" rel="alternate"/>
@@ -104,7 +113,7 @@
             "codeRepository": "https://github.com/emulebb/emulebb-rust",
             "downloadUrl": "https://github.com/emulebb/emulebb-rust/releases",
             "softwareHelp": "https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/",
-            "description": "eMuleBB Rust is a cross-platform eD2K/Kad client for search, downloads, uploads, sharing, seeding, and API-driven operation. Repeatedly tested on live eD2K/Kad networks.",
+            "description": "eMuleBB Rust is a cross-platform eD2K/Kad client for search, downloads, uploads, sharing, seeding, and API-driven operation. See the platform guide for package checks, network-validation scope and the limits of the published proof.",
             "publisher": {"@id": "https://emulebb.github.io/#organization"}
           }
         ]
@@ -112,13 +121,15 @@
     </script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 <header class="site-header">
-<a aria-label="eMule broadband edition home" class="brand brand-text" href="#top">eMuleBB</a>
+<a aria-label="eMule broadband edition home" class="brand brand-text" href="#top"><img class="brand-logo" src="assets/brand/emulebb-logo-256.png" width="256" height="256" alt=""/><span dir="ltr">eMuleBB</span></a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Open primary navigation" class="menu-toggle" type="button">
 <span class="menu-toggle-label">Menu</span>
 </button>
 <nav aria-label="Primary navigation" id="primary-nav">
-<a class="nav-download" href="https://github.com/emulebb/emulebb-rust/releases">Nightlies</a>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-GETTING-STARTED/">Use</a>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-CONTRIBUTING/">Develop</a>
 <a href="#proof">Capabilities</a>
 <a href="#docs">Docs</a>
 <a href="#repos">Repositories</a>
@@ -129,19 +140,19 @@
 <section class="hero">
 <div class="hero-copy">
 <p class="eyebrow">Active beta</p>
-<h1>eMuleBB Rust is an eD2K/Kad client for search, downloads, uploads, sharing, and seeding.</h1>
-<p class="lead">Run the cross-platform headless daemon through its embedded browser operations console or authenticated REST API. Stock-compatible wire behavior and a Rust async core support broadband links and large libraries.</p>
-<div aria-label="Project links" class="actions">
-<a class="button primary" href="https://github.com/emulebb/emulebb-rust/releases">Get Rust nightlies</a>
-<a class="button secondary" href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3">MFC stable release</a>
+<h1>eD2K and Kad, controlled from your browser.</h1>
+<p class="lead">eMuleBB Rust is a headless eD2K/Kad client for search, downloads, uploads, sharing and seeding. Use the packaged browser console or authenticated REST API.</p>
+<div aria-label="Project links" class="actions actions--equal">
+<a class="button primary" href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-GETTING-STARTED/">Use eMuleBB Rust</a>
+<a class="button primary" href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-CONTRIBUTING/">Develop with eMuleBB Rust</a>
 </div>
 </div>
 <aside aria-label="eMuleBB product summary" class="hero-panel">
 <p class="panel-kicker">Current posture</p>
-<h2>Active beta, moving toward Beta 3</h2>
-<p>Rust is the active product lane. Beta 3 is expected after a few more weeks of implementation and stabilization. The MFC client remains available as the maintained Windows line.</p>
+<h2>Active beta. Identifiable builds.</h2>
+<p>Choose a dated nightly for current testing. Beta 3 is the next development target. Beta API and profile schemas can change.</p>
 <ul class="signal-list">
-<li>Tested for months on live eD2K/Kad networks</li>
+<li>Browser operation and API automation</li>
 <li>CI-gated Windows, Linux, and macOS packages</li>
 <li>SHA-256 checksums and provenance</li>
 </ul>
@@ -154,43 +165,43 @@
 </div>
 <div aria-label="The focused eD2K/Kad client surface" class="proof-grid">
 <article>
-<span>Search and download</span>
-<h3>Find sources and manage durable transfers</h3>
-<p>Search eD2K servers and Kad, discover sources, and manage long-running downloads.</p>
+<span>Browser control</span>
+<h3>Run the client. Use your browser.</h3>
+<p>Search, watch transfers and manage monitored shared folders from the embedded browser operations console.</p>
 </article>
 <article>
-<span>Share and seed</span>
-<h3>Upload from user-owned libraries</h3>
-<p>Share files, serve upload queues, and keep completed content available to the network.</p>
+<span>Automation</span>
+<h3>Work against a documented REST API</h3>
+<p>Use authenticated requests, explicit responses and documented errors to connect your own scripts and tools.</p>
 </article>
 <article>
-<span>Operate and automate</span>
-<h3>Use the browser console or REST API</h3>
-<p>Monitor and control the headless client through the embedded WebUI and authenticated API.</p>
+<span>Network and diagnostics</span>
+<h3>Inspect the settings and evidence</h3>
+<p>Review interface choices, connection status and diagnostics. See the platform guide for exact package requirements and validation scope.</p>
 </article>
 </div>
 </section>
 <section class="section docs" id="docs">
 <div class="section-heading">
-<p class="eyebrow">Essentials</p>
-<h2>Downloads, documentation, issues, and contribution</h2>
+<p class="eyebrow">Choose your route</p>
+<h2>Use the client or build with it</h2>
 </div>
 <div class="doc-list">
-<a href="https://github.com/emulebb/emulebb-rust/releases">
-<strong>GitHub Releases</strong>
-<span>Choose the newest dated Rust nightly for current testing.</span>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-DOWNLOADS-PLATFORMS/">
+<strong>Choose a platform and package</strong>
+<span>Native packages, Linux variants, containers and supporting verification files.</span>
 </a>
-<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/">
-<strong>Rust product docs</strong>
-<span>Architecture, operation, validation, and product direction.</span>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-GETTING-STARTED/">
+<strong>Launch and use the client</strong>
+<span>First launch, API-key login, networking, sharing and update precautions.</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-rust/issues">
-<strong>Issues</strong>
-<span>Report reproducible client, package, or network problems.</span>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/api/GUIDE-API-CONSUMERS/">
+<strong>Make your first API request</strong>
+<span>Authentication, canonical OpenAPI, responses and beta compatibility limits.</span>
 </a>
-<a href="https://github.com/emulebb/emulebb-rust/blob/main/CONTRIBUTING.md">
-<strong>Contributing</strong>
-<span>Code, tests, documentation, and validation contributions are welcome.</span>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-CONTRIBUTING/">
+<strong>Contribute to eMuleBB Rust</strong>
+<span>Repository roles, supported workspace commands, tests and review.</span>
 </a>
 </div>
 </section>
@@ -204,13 +215,17 @@
 <strong>emulebb-rust</strong>
 <span>Active Rust beta and current product-development lane.</span>
 </a>
-<a href="https://github.com/emulebb/emulebb">
-<strong>emulebb</strong>
-<span>Stable 0.7.x Windows client, diagnostic baseline, and critical-fix maintenance lane.</span>
-</a>
 <a href="https://github.com/emulebb/emulebb-tooling">
 <strong>emulebb-tooling</strong>
 <span>Public roadmap, lifecycle policy, product docs, and engineering references.</span>
+</a>
+<a href="https://github.com/emulebb/emulebb-build">
+<strong>emulebb-build</strong>
+<span>Workspace, build, validation, packaging, and release orchestration.</span>
+</a>
+<a href="https://github.com/emulebb/emulebb-build-tests">
+<strong>emulebb-build-tests</strong>
+<span>Shared Rust and MFC diagnostics, compatibility, live-network, and parity harness.</span>
 </a>
 </div>
 </section>
@@ -221,6 +236,7 @@
 <a href="languages/">Languages</a>
 <a href="https://github.com/emulebb">GitHub</a>
 <a href="https://discord.gg/uWQa9g37">Discord</a>
+<a class="maintenance-link" href="https://github.com/emulebb/emulebb/releases/tag/emulebb-v0.7.3">MFC Windows maintenance downloads</a>
 </div>
 </footer>
 <script>

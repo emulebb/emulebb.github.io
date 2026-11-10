@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ page.html_lang }}">
+<html lang="{{ page.html_lang }}" dir="{{ page.direction }}">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -13,7 +13,16 @@
 <meta content="website" property="og:type"/>
 <meta content="{{ page.url }}" property="og:url"/>
 <meta content="eMule broadband edition" property="og:site_name"/>
-<meta content="summary" name="twitter:card"/>
+{% if brand and page.html_lang == "en" %}
+<meta content="{{ site_base_url }}/{{ brand.social_path }}" property="og:image"/>
+<meta content="1280" property="og:image:width"/>
+<meta content="640" property="og:image:height"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="{{ brand.social_alt }}" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="{{ site_base_url }}/{{ brand.social_path }}" name="twitter:image"/>
+<meta content="{{ brand.social_alt }}" name="twitter:image:alt"/>
+{% else %}<meta content="summary" name="twitter:card"/>{% endif %}
 <link href="{{ page.url }}" rel="canonical"/>
 <link href="{{ site_base_url }}/sitemap.xml" rel="sitemap" type="application/xml"/>
 {%- for alternate in alternates -%}
@@ -51,8 +60,9 @@
     </script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 <header class="site-header">
-<a aria-label="eMule broadband edition home" class="brand brand-text" href="{{ nav[0].href }}">eMuleBB</a>
+<a aria-label="eMule broadband edition home" class="brand brand-text" href="{{ home_href }}">{% if brand %}<img class="brand-logo" src="{{ asset_prefix }}{{ brand.logo_path }}" width="256" height="256" alt=""/>{% endif %}<span dir="ltr">eMuleBB</span></a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="{{ content.menu.open_label }}" class="menu-toggle" type="button">
 <span class="menu-toggle-label">{{ content.menu.label }}</span>
 </button>

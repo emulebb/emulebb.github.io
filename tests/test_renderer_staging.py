@@ -1,5 +1,6 @@
 """The manager can validate and stage Pages without modifying source or old evidence."""
 import contextlib
+import copy
 import importlib.util
 import io
 import json
@@ -80,3 +81,19 @@ class RendererStagingTests(unittest.TestCase):
                 self.assertEqual(renderer.main(["--root", str(self.source), "--check"]), 1)
         self.assertEqual(page.read_text(encoding="utf-8"), "original")
         self.assertFalse(self.site.exists())
+
+    def test_shared_render_preserves_all_locales_and_non_english_faq_values(self):
+        root = Path(__file__).resolve().parents[1]
+        inputs = {name: (root / name).read_bytes() for name in ("content/locales.json", "content/stock-locales.json")}
+        renderer.apply_faq_product_copy()
+        frozen = {key: copy.deepcopy(value) for key, value in renderer.FAQ_CONTENT.items() if key != "en"}
+        contract = renderer.load_public_presence_contract(renderer.DEFAULT_PUBLIC_PRESENCE_CONTRACT)
+        outputs = renderer.render_outputs(root, "2026-11-10", contract)
+        self.assertEqual(len(renderer.PAGES), 44)
+        self.assertEqual(len(renderer.FAQ_PAGES), 16)
+        self.assertEqual(len(outputs), 63)
+        self.assertEqual({key: value for key, value in renderer.FAQ_CONTENT.items() if key != "en"}, frozen)
+        self.assertEqual({name: (root / name).read_bytes() for name in inputs}, inputs)
+        self.assertIn("Use eMuleBB Rust", outputs[Path("index.html")])
+        self.assertIn("Develop with eMuleBB Rust", outputs[Path("index.html")])
+        self.assertNotIn("historical downloads", outputs[Path("index.html")].lower())

@@ -74,6 +74,11 @@ class PageSpec:
     def favicon_href(self) -> str:
         return f"{relative_prefix(self)}assets/brand/emulebb-favicon.ico"
 
+    @property
+    def direction(self) -> str:
+        """Use the established writing direction without altering translated copy."""
+        return "rtl" if self.html_lang.split("-")[0] in {"ar", "fa", "he", "ug"} else "ltr"
+
 
 def relative_prefix(page: PageSpec) -> str:
     """Return the relative URL prefix from a generated page to the site root."""
@@ -866,6 +871,30 @@ def apply_faq_product_copy() -> None:
         faq["meta_description"] = FAQ_TESTING_ANSWERS[key]
 
 
+def prepare_english_faq(routes: dict[str, Any]) -> None:
+    """Refresh canonical adoption answers while preserving every translated value."""
+    user, develop = routes["use"], routes["develop"]
+    FAQ_CONTENT["en"].update({
+        "title": "eMuleBB Rust FAQ | Packages, browser control and beta updates",
+        "og_title": "eMuleBB Rust FAQ",
+        "meta_description": "Choose a package, open the browser console, configure sharing and understand beta updates.",
+        "og_description": "Practical answers for using and developing with the eMuleBB Rust client.",
+        "h1": "Using eMuleBB Rust",
+        "lead": "Start with the client, its packages and its operating model. The guides explain each workflow in full.",
+        "items": [
+            faq_item("What is eMuleBB Rust?", "A headless IPv4 eD2K/Kad client with a packaged browser console and authenticated REST API. It manages search, transfers and monitored shared folders.", "First-launch guide", user["url"]),
+            faq_item("Which package should I download?", "Choose the matching Windows, Linux or macOS package. Linux also has static-musl archives and container images. Android bundles are experimental developer artifacts, not an APK or a supported Android app.", "Platforms and downloads", user["downloads_url"]),
+            faq_item("How do I open the browser console?", "The implicit native first launch creates a private profile and prints the API key once. Open http://127.0.0.1:4711/ and enter that key. Keep all packaged WebUI files beside the client; existing profiles keep their existing key.", "First-launch guide", user["url"]),
+            faq_item("How do networking and interface settings work?", "Review server/Kad status, the chosen P2P interface and TCP/UDP reachability. REST control and P2P routing are separate; a loopback console does not imply offline networking or guarantee VPN safety.", "Network setup", user["url"]),
+            faq_item("How do I share files?", "Add deliberately chosen folder roots, review ignore patterns, and let recursive scanning and hashing finish. Sharing is managed as monitored folder trees. Add roots gradually rather than exposing an entire home directory.", "Sharing workflow", user["url"]),
+            faq_item("Can I automate the client?", "Yes. Authenticated /api/v1 requests use the X-API-Key header and the documented REST contract. The beta API can change; protect credentials and use the API consumer guide for requests and error handling.", "REST API guide", develop["api_url"]),
+            faq_item("What should I preserve before an update?", "Stop cleanly and preserve the old binary, profile and payloads. An incompatible database schema requires a fresh profile; do not edit schema markers or delete the database to force reuse. Unfinished-transfer continuity across incompatible profiles is not promised.", "Update and profile precautions", user["url"]),
+            faq_item("What does build validation establish?", "Package smoke, checksums and provenance identify the tested source and scope. Native package checks are separate from historical public-network evidence, long-soak and large-library qualification. Review the platform guide for the published proof and its limits.", "Platform evidence", user["downloads_url"]),
+            faq_item("How can I contribute or get help?", "Use the repository that owns the affected code when reporting a reproducible problem. Contributors can start with the supported workspace, focused tests, API tools or documentation. Review private diagnostic bundles before sharing any evidence.", "Contributor and support guide", develop["url"]),
+        ],
+    })
+
+
 def prepare_focused_content(root: Path, contract: dict[str, Any]) -> None:
     """Build the four-block homepage content for every supported locale."""
 
@@ -876,6 +905,12 @@ def prepare_focused_content(root: Path, contract: dict[str, Any]) -> None:
     rust_channel = channels["rust-nightly"]
     mfc_channel = channels["mfc-stable"]
     repositories = {repository["key"]: repository for repository in contract["repositories"]}
+    routes = contract.get("reader_routes") or {
+        "use": {"label": "Use eMuleBB Rust", "url": product["docs_url"], "downloads_url": product["nightly_url"]},
+        "develop": {"label": "Develop with eMuleBB Rust", "url": rust_channel["contributing_url"],
+                    "api_url": product["docs_url"] + "api/"},
+    }
+    prepare_english_faq(routes)
 
     for page in PAGES:
         content = CONTENT[page.key]
@@ -903,7 +938,8 @@ def prepare_focused_content(root: Path, contract: dict[str, Any]) -> None:
                         f"{product['testing_summary']}"
                     ),
                     "nav": [
-                        {"href": product["nightly_url"], "label": "Nightlies", "class": "nav-download"},
+                        {"href": routes["use"]["url"], "label": "Use"},
+                        {"href": routes["develop"]["url"], "label": "Develop"},
                         {"id": "proof", "label": "Capabilities"},
                         {"id": "docs", "label": "Docs"},
                         {"id": "repos", "label": "Repositories"},
@@ -911,24 +947,24 @@ def prepare_focused_content(root: Path, contract: dict[str, Any]) -> None:
                     ],
                     "hero": {
                         "eyebrow": product["lifecycle_label"],
-                        "h1": "eMuleBB Rust is an eD2K/Kad client for search, downloads, uploads, sharing, and seeding.",
+                        "h1": "eD2K and Kad, controlled from your browser.",
                         "lead": (
-                            "Run the cross-platform headless daemon through its embedded browser "
-                            "operations console or authenticated REST API. Stock-compatible wire "
-                            "behavior and a Rust async core support broadband links and large libraries."
+                            "eMuleBB Rust is a headless eD2K/Kad client for search, downloads, uploads, "
+                            "sharing and seeding. Use the packaged browser console or authenticated REST API."
                         ),
-                        "install": "Get Rust nightlies",
-                        "primary_href": product["nightly_url"],
-                        "source": "MFC stable release",
-                        "secondary_href": mfc_channel["download_url"],
+                        "install": routes["use"]["label"],
+                        "primary_href": routes["use"]["url"],
+                        "source": routes["develop"]["label"],
+                        "secondary_href": routes["develop"]["url"],
+                        "equal_routes": True,
                         "panel_kicker": "Current posture",
-                        "panel_h2": "Active beta, moving toward Beta 3",
+                        "panel_h2": "Active beta. Identifiable builds.",
                         "panel_p": (
-                            f"Rust is the active product lane. {product['development_eta']} "
-                            "The MFC client remains available as the maintained Windows line."
+                            "Choose a dated nightly for current testing. "
+                            f"{product['development_eta']} Beta API and profile schemas can change."
                         ),
                         "signals": [
-                            "Tested for months on live eD2K/Kad networks",
+                            "Browser operation and API automation",
                             "CI-gated Windows, Linux, and macOS packages",
                             "SHA-256 checksums and provenance",
                         ],
@@ -937,44 +973,44 @@ def prepare_focused_content(root: Path, contract: dict[str, Any]) -> None:
                         **s("What eMuleBB Rust does", "The focused eD2K/Kad client surface"),
                         "cards": [
                             c(
-                                "Search and download",
-                                "Find sources and manage durable transfers",
-                                "Search eD2K servers and Kad, discover sources, and manage long-running downloads.",
+                                "Browser control",
+                                "Run the client. Use your browser.",
+                                "Search, watch transfers and manage monitored shared folders from the embedded browser operations console.",
                             ),
                             c(
-                                "Share and seed",
-                                "Upload from user-owned libraries",
-                                "Share files, serve upload queues, and keep completed content available to the network.",
+                                "Automation",
+                                "Work against a documented REST API",
+                                "Use authenticated requests, explicit responses and documented errors to connect your own scripts and tools.",
                             ),
                             c(
-                                "Operate and automate",
-                                "Use the browser console or REST API",
-                                "Monitor and control the headless client through the embedded WebUI and authenticated API.",
+                                "Network and diagnostics",
+                                "Inspect the settings and evidence",
+                                "Review interface choices, connection status and diagnostics. See the platform guide for exact package requirements and validation scope.",
                             ),
                         ],
                     },
                     "docs": {
-                        **s("Essentials", "Downloads, documentation, issues, and contribution"),
+                        **s("Choose your route", "Use the client or build with it"),
                         "links": [
                             {
-                                "href": product["nightly_url"],
-                                "title": "GitHub Releases",
-                                "text": "Choose the newest dated Rust nightly for current testing.",
+                                "href": routes["use"]["downloads_url"],
+                                "title": "Choose a platform and package",
+                                "text": "Native packages, Linux variants, containers and supporting verification files.",
                             },
                             {
-                                "href": product["docs_url"],
-                                "title": "Rust product docs",
-                                "text": "Architecture, operation, validation, and product direction.",
+                                "href": routes["use"]["url"],
+                                "title": "Launch and use the client",
+                                "text": "First launch, API-key login, networking, sharing and update precautions.",
                             },
                             {
-                                "href": product["issues_url"],
-                                "title": "Issues",
-                                "text": "Report reproducible client, package, or network problems.",
+                                "href": routes["develop"]["api_url"],
+                                "title": "Make your first API request",
+                                "text": "Authentication, canonical OpenAPI, responses and beta compatibility limits.",
                             },
                             {
-                                "href": rust_channel["contributing_url"],
-                                "title": "Contributing",
-                                "text": "Code, tests, documentation, and validation contributions are welcome.",
+                                "href": routes["develop"]["url"],
+                                "title": "Contribute to eMuleBB Rust",
+                                "text": "Repository roles, supported workspace commands, tests and review.",
                             },
                         ],
                     },
@@ -986,11 +1022,13 @@ def prepare_focused_content(root: Path, contract: dict[str, Any]) -> None:
                                 "title": repositories[key]["name"],
                                 "text": repositories[key]["role"],
                             }
-                            for key in ("emulebb-rust", "emulebb", "emulebb-tooling")
+                            for key in ("emulebb-rust", "emulebb-tooling", "emulebb-build", "emulebb-build-tests")
                         ],
                     },
                 }
             )
+            content["maintenance"] = {"href": mfc_channel["download_url"],
+                                      "label": "MFC Windows maintenance downloads"}
             continue
 
         summary = content["intro"]
@@ -1165,6 +1203,7 @@ def render_outputs(root: Path, lastmod: str, contract: dict[str, Any]) -> dict[P
     alt = alternates()
     faq_alt = faq_alternates()
     home_pages = {page.key: page for page in PAGES}
+    branding = to_namespace(contract["branding"]) if contract.get("branding") else None
     outputs: dict[Path, str] = {}
     for page in PAGES:
         outputs[page.output_path] = home.render(
@@ -1175,6 +1214,8 @@ def render_outputs(root: Path, lastmod: str, contract: dict[str, Any]) -> dict[P
             content=to_namespace(CONTENT[page.key]),
             alternates=alt,
             language_href=relative_page_href(page, LANGUAGE_PAGE),
+            brand=branding,
+            asset_prefix=relative_prefix(page),
         )
     for page in FAQ_PAGES:
         content = dict(FAQ_CONTENT[page.key])
@@ -1196,6 +1237,9 @@ def render_outputs(root: Path, lastmod: str, contract: dict[str, Any]) -> dict[P
             content=to_namespace(content),
             alternates=faq_alt,
             nav=to_namespace(nav),
+            home_href=home_page.url,
+            brand=branding,
+            asset_prefix=relative_prefix(page),
         )
     outputs[RUST_REDIRECT_PATH] = render_rust_redirect()
     outputs[LANGUAGE_PAGE.output_path] = languages.render(
@@ -1205,6 +1249,8 @@ def render_outputs(root: Path, lastmod: str, contract: dict[str, Any]) -> dict[P
         page=LANGUAGE_PAGE,
         alternates=alt,
         groups=language_groups(),
+        brand=branding,
+        asset_prefix=relative_prefix(LANGUAGE_PAGE),
     )
     outputs[Path("sitemap.xml")] = render_sitemap(lastmod)
     return outputs

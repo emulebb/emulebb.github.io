@@ -1,23 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="dark" name="color-scheme"/>
 <meta content="#0b1016" name="theme-color"/>
-<meta content="Choose the newest dated eMuleBB Rust nightly from GitHub Releases for current testing. Beta 3 is expected after a few more weeks of implementation and stabilization." name="description"/>
+<meta content="Choose a package, open the browser console, configure sharing and understand beta updates." name="description"/>
 <meta content="index,follow" name="robots"/>
 <meta content="eMuleBB" name="author"/>
-<meta content="FAQ | eMule broadband edition" property="og:title"/>
-<meta content="Quick eMuleBB answers for eMule users moving to the broadband edition." property="og:description"/>
+<meta content="eMuleBB Rust FAQ" property="og:title"/>
+<meta content="Practical answers for using and developing with the eMuleBB Rust client." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://emulebb.github.io/faq/" property="og:url"/>
 <meta content="eMule broadband edition" property="og:site_name"/>
-<meta content="summary" name="twitter:card"/>
+
+<meta content="https://emulebb.github.io/assets/brand/rust-social-preview.png" property="og:image"/>
+<meta content="1280" property="og:image:width"/>
+<meta content="640" property="og:image:height"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="eMuleBB Rust: eD2K and Kad with browser control on Windows, Linux and macOS" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://emulebb.github.io/assets/brand/rust-social-preview.png" name="twitter:image"/>
+<meta content="eMuleBB Rust: eD2K and Kad with browser control on Windows, Linux and macOS" name="twitter:image:alt"/>
+
 <link href="https://emulebb.github.io/faq/" rel="canonical"/>
 <link href="https://emulebb.github.io/sitemap.xml" rel="sitemap" type="application/xml"/><link href="https://emulebb.github.io/faq/" hreflang="en" rel="alternate"/><link href="https://emulebb.github.io/it/faq/" hreflang="it" rel="alternate"/><link href="https://emulebb.github.io/es/faq/" hreflang="es" rel="alternate"/><link href="https://emulebb.github.io/pt-br/faq/" hreflang="pt-BR" rel="alternate"/><link href="https://emulebb.github.io/pt-pt/faq/" hreflang="pt-PT" rel="alternate"/><link href="https://emulebb.github.io/fr/faq/" hreflang="fr" rel="alternate"/><link href="https://emulebb.github.io/de/faq/" hreflang="de" rel="alternate"/><link href="https://emulebb.github.io/pl/faq/" hreflang="pl" rel="alternate"/><link href="https://emulebb.github.io/nl/faq/" hreflang="nl" rel="alternate"/><link href="https://emulebb.github.io/ru/faq/" hreflang="ru" rel="alternate"/><link href="https://emulebb.github.io/tr/faq/" hreflang="tr" rel="alternate"/><link href="https://emulebb.github.io/uk/faq/" hreflang="uk" rel="alternate"/><link href="https://emulebb.github.io/ko/faq/" hreflang="ko" rel="alternate"/><link href="https://emulebb.github.io/ar-ae/faq/" hreflang="ar-AE" rel="alternate"/><link href="https://emulebb.github.io/zh-cn/faq/" hreflang="zh-CN" rel="alternate"/><link href="https://emulebb.github.io/ja/faq/" hreflang="ja" rel="alternate"/><link href="https://emulebb.github.io/faq/" hreflang="x-default" rel="alternate"/>
 <link href="../assets/brand/emulebb-favicon.ico" rel="icon" type="image/x-icon"/>
-<title>FAQ | eMule broadband edition</title>
+<title>eMuleBB Rust FAQ | Packages, browser control and beta updates</title>
 <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" rel="stylesheet"/>
 <link href="../styles.css" rel="stylesheet"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8G02C2WFEB"></script>
@@ -35,74 +44,74 @@
               "mainEntity": [
                 {
                         "@type": "Question",
-                        "name": "How do I bind eMule to an interface or VPN?",
+                        "name": "What is eMuleBB Rust?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "eMuleBB can bind P2P traffic to a named interface or local address, and it can block startup when the target is missing. Keep your VPN kill switch, firewall, and WebServer/REST bind policy separate."
+                                "text": "A headless IPv4 eD2K/Kad client with a packaged browser console and authenticated REST API. It manages search, transfers and monitored shared folders."
                         }
                 },
                 {
                         "@type": "Question",
-                        "name": "How do I share my library in eMule?",
+                        "name": "Which package should I download?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "eMuleBB keeps the familiar Shared Files model: add curated roots, keep Temp out of shares, use stable paths, and let hashing finish before scaling up."
+                                "text": "Choose the matching Windows, Linux or macOS package. Linux also has static-musl archives and container images. Android bundles are experimental developer artifacts, not an APK or a supported Android app."
                         }
                 },
                 {
                         "@type": "Question",
-                        "name": "How do I limit upload slots in eMule?",
+                        "name": "How do I open the browser console?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "eMuleBB adds a finite broadband upload-slot target, weak-slot recycling, and practical diagnostics so fast lines stay useful without flooding the queue."
+                                "text": "The implicit native first launch creates a private profile and prints the API key once. Open http://127.0.0.1:4711/ and enter that key. Keep all packaged WebUI files beside the client; existing profiles keep their existing key."
                         }
                 },
                 {
                         "@type": "Question",
-                        "name": "Is eMuleBB a protocol fork of eMule?",
+                        "name": "How do networking and interface settings work?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "No. eMuleBB keeps stock-compatible eD2K and Kad behavior as the default, then improves local limits, automation, diagnostics, and release discipline around it."
+                                "text": "Review server/Kad status, the chosen P2P interface and TCP/UDP reachability. REST control and P2P routing are separate; a loopback console does not imply offline networking or guarantee VPN safety."
                         }
                 },
                 {
                         "@type": "Question",
-                        "name": "Which eMule release should I use for testing?",
+                        "name": "How do I share files?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Choose the newest dated eMuleBB Rust nightly from GitHub Releases for current testing. Beta 3 is expected after a few more weeks of implementation and stabilization."
+                                "text": "Add deliberately chosen folder roots, review ignore patterns, and let recursive scanning and hashing finish. Sharing is managed as monitored folder trees. Add roots gradually rather than exposing an entire home directory."
                         }
                 },
                 {
                         "@type": "Question",
-                        "name": "How do I keep eMule WebServer or REST safe?",
+                        "name": "Can I automate the client?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "eMuleBB treats WebServer and REST as trusted-controller surfaces. Enable them only when needed, bind deliberately, use an API key, and avoid broad exposure."
+                                "text": "Yes. Authenticated /api/v1 requests use the X-API-Key header and the documented REST contract. The beta API can change; protect credentials and use the API consumer guide for requests and error handling."
                         }
                 },
                 {
                         "@type": "Question",
-                        "name": "How do I use eMule with Kad and servers?",
+                        "name": "What should I preserve before an update?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "eMuleBB keeps classic server, global, and Kad search workflows. Start with trusted server lists, bootstrap Kad deliberately, and diagnose Low ID or firewalled Kad before changing many settings."
+                                "text": "Stop cleanly and preserve the old binary, profile and payloads. An incompatible database schema requires a fresh profile; do not edit schema markers or delete the database to force reuse. Unfinished-transfer continuity across incompatible profiles is not promised."
                         }
                 },
                 {
                         "@type": "Question",
-                        "name": "How do I handle large shared libraries in eMule?",
+                        "name": "What does build validation establish?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "eMuleBB is built for large libraries: add roots gradually, use long-path capable Windows setups, review share-ignore rules, and let startup cache work settle."
+                                "text": "Package smoke, checksums and provenance identify the tested source and scope. Native package checks are separate from historical public-network evidence, long-soak and large-library qualification. Review the platform guide for the published proof and its limits."
                         }
                 },
                 {
                         "@type": "Question",
-                        "name": "Can I automate eMule with external tools?",
+                        "name": "How can I contribute or get help?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Yes. eMuleBB exposes an authenticated JSON REST API for trusted local controllers while keeping native transfer and sharing semantics in the desktop app."
+                                "text": "Use the repository that owns the affected code when reporting a reproducible problem. Contributors can start with the supported workspace, focused tests, API tools or documentation. Review private diagnostic bundles before sharing any evidence."
                         }
                 }
               ]
@@ -110,8 +119,9 @@
     </script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 <header class="site-header">
-<a aria-label="eMule broadband edition home" class="brand brand-text" href="https://emulebb.github.io/">eMuleBB</a>
+<a aria-label="eMule broadband edition home" class="brand brand-text" href="https://emulebb.github.io/"><img class="brand-logo" src="../assets/brand/emulebb-logo-256.png" width="256" height="256" alt=""/><span dir="ltr">eMuleBB</span></a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Open primary navigation" class="menu-toggle" type="button">
 <span class="menu-toggle-label">Menu</span>
 </button>
@@ -127,55 +137,55 @@
 <main class="faq-page" id="top">
 <section class="section faq-hero">
 <p class="eyebrow">FAQ</p>
-<h1>Common eMule questions, answered for eMuleBB</h1>
-<p class="lead">Short answers for users who want the classic eMule workflow with better broadband control, safer networking, and clearer release proof.</p>
+<h1>Using eMuleBB Rust</h1>
+<p class="lead">Start with the client, its packages and its operating model. The guides explain each workflow in full.</p>
 </section>
 <section class="section faq-section" id="questions">
 <div class="faq-list">
 <article>
-<h2>How do I bind eMule to an interface or VPN?</h2>
-<p>eMuleBB can bind P2P traffic to a named interface or local address, and it can block startup when the target is missing. Keep your VPN kill switch, firewall, and WebServer/REST bind policy separate.</p>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">Read more: Network guide</a>
+<h2>What is eMuleBB Rust?</h2>
+<p>A headless IPv4 eD2K/Kad client with a packaged browser console and authenticated REST API. It manages search, transfers and monitored shared folders.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-GETTING-STARTED/">Read more: First-launch guide</a>
 </article>
 <article>
-<h2>How do I share my library in eMule?</h2>
-<p>eMuleBB keeps the familiar Shared Files model: add curated roots, keep Temp out of shares, use stable paths, and let hashing finish before scaling up.</p>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">Read more: Sharing guide</a>
+<h2>Which package should I download?</h2>
+<p>Choose the matching Windows, Linux or macOS package. Linux also has static-musl archives and container images. Android bundles are experimental developer artifacts, not an APK or a supported Android app.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-DOWNLOADS-PLATFORMS/">Read more: Platforms and downloads</a>
 </article>
 <article>
-<h2>How do I limit upload slots in eMule?</h2>
-<p>eMuleBB adds a finite broadband upload-slot target, weak-slot recycling, and practical diagnostics so fast lines stay useful without flooding the queue.</p>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-DOWNLOADS-SEARCH/">Read more: Downloads and search guide</a>
+<h2>How do I open the browser console?</h2>
+<p>The implicit native first launch creates a private profile and prints the API key once. Open http://127.0.0.1:4711/ and enter that key. Keep all packaged WebUI files beside the client; existing profiles keep their existing key.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-GETTING-STARTED/">Read more: First-launch guide</a>
 </article>
 <article>
-<h2>Is eMuleBB a protocol fork of eMule?</h2>
-<p>No. eMuleBB keeps stock-compatible eD2K and Kad behavior as the default, then improves local limits, automation, diagnostics, and release discipline around it.</p>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-EMULEBB/">Read more: Product guide</a>
+<h2>How do networking and interface settings work?</h2>
+<p>Review server/Kad status, the chosen P2P interface and TCP/UDP reachability. REST control and P2P routing are separate; a loopback console does not imply offline networking or guarantee VPN safety.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-GETTING-STARTED/">Read more: Network setup</a>
 </article>
 <article>
-<h2>Which eMule release should I use for testing?</h2>
-<p>Choose the newest dated eMuleBB Rust nightly from GitHub Releases for current testing. Beta 3 is expected after a few more weeks of implementation and stabilization.</p>
-<a href="https://github.com/emulebb/emulebb-rust/releases">Read more: eMuleBB Rust releases</a>
+<h2>How do I share files?</h2>
+<p>Add deliberately chosen folder roots, review ignore patterns, and let recursive scanning and hashing finish. Sharing is managed as monitored folder trees. Add roots gradually rather than exposing an entire home directory.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-GETTING-STARTED/">Read more: Sharing workflow</a>
 </article>
 <article>
-<h2>How do I keep eMule WebServer or REST safe?</h2>
-<p>eMuleBB treats WebServer and REST as trusted-controller surfaces. Enable them only when needed, bind deliberately, use an API key, and avoid broad exposure.</p>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">Read more: Controllers and REST guide</a>
+<h2>Can I automate the client?</h2>
+<p>Yes. Authenticated /api/v1 requests use the X-API-Key header and the documented REST contract. The beta API can change; protect credentials and use the API consumer guide for requests and error handling.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/api/GUIDE-API-CONSUMERS/">Read more: REST API guide</a>
 </article>
 <article>
-<h2>How do I use eMule with Kad and servers?</h2>
-<p>eMuleBB keeps classic server, global, and Kad search workflows. Start with trusted server lists, bootstrap Kad deliberately, and diagnose Low ID or firewalled Kad before changing many settings.</p>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-NETWORK/">Read more: Network guide</a>
+<h2>What should I preserve before an update?</h2>
+<p>Stop cleanly and preserve the old binary, profile and payloads. An incompatible database schema requires a fresh profile; do not edit schema markers or delete the database to force reuse. Unfinished-transfer continuity across incompatible profiles is not promised.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-GETTING-STARTED/">Read more: Update and profile precautions</a>
 </article>
 <article>
-<h2>How do I handle large shared libraries in eMule?</h2>
-<p>eMuleBB is built for large libraries: add roots gradually, use long-path capable Windows setups, review share-ignore rules, and let startup cache work settle.</p>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-SHARING/">Read more: Sharing guide</a>
+<h2>What does build validation establish?</h2>
+<p>Package smoke, checksums and provenance identify the tested source and scope. Native package checks are separate from historical public-network evidence, long-soak and large-library qualification. Review the platform guide for the published proof and its limits.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-DOWNLOADS-PLATFORMS/">Read more: Platform evidence</a>
 </article>
 <article>
-<h2>Can I automate eMule with external tools?</h2>
-<p>Yes. eMuleBB exposes an authenticated JSON REST API for trusted local controllers while keeping native transfer and sharing semantics in the desktop app.</p>
-<a href="https://emulebb.github.io/emulebb-tooling/reference/GUIDE-CONTROLLERS-REST/">Read more: Controllers and REST guide</a>
+<h2>How can I contribute or get help?</h2>
+<p>Use the repository that owns the affected code when reporting a reproducible problem. Contributors can start with the supported workspace, focused tests, API tools or documentation. Review private diagnostic bundles before sharing any evidence.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-CONTRIBUTING/">Read more: Contributor and support guide</a>
 </article>
 </div>
 </section>
