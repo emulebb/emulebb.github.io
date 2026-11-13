@@ -63,7 +63,7 @@
                         "name": "How do I open the browser console?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "The implicit native first launch creates a private profile and prints the API key once. Open http://127.0.0.1:4711/ and enter that key. Keep all packaged WebUI files beside the client; existing profiles keep their existing key."
+                                "text": "Direct daemon launches keep the profile beside the executable. Installed and container launchers use the writable profile documented in their package notes. Open http://127.0.0.1:20017/ and use rest.api_key from emulebb-rust-settings.toml. Ready packages provide the shared starter change_me_123change_me_123change_me_123; replace it before remote exposure. Existing profiles retain their own key. Keep the complete packaged WebUI layout."
                         }
                 },
                 {
@@ -154,8 +154,8 @@
 </article>
 <article>
 <h2>How do I open the browser console?</h2>
-<p>The implicit native first launch creates a private profile and prints the API key once. Open http://127.0.0.1:4711/ and enter that key. Keep all packaged WebUI files beside the client; existing profiles keep their existing key.</p>
-<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-GETTING-STARTED/">Read more: First-launch guide</a>
+<p>Direct daemon launches keep the profile beside the executable. Installed and container launchers use the writable profile documented in their package notes. Open http://127.0.0.1:20017/ and use rest.api_key from emulebb-rust-settings.toml. Ready packages provide the shared starter change_me_123change_me_123change_me_123; replace it before remote exposure. Existing profiles retain their own key. Keep the complete packaged WebUI layout.</p>
+<a href="https://emulebb.github.io/emulebb-tooling/products/emulebb-rust/reference/GUIDE-DOWNLOADS-PLATFORMS/">Read more: Package and startup notes</a>
 </article>
 <article>
 <h2>How do networking and interface settings work?</h2>

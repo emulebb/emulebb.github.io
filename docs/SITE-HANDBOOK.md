@@ -268,10 +268,16 @@ python tools\render_pages.py --lastmod $lastmod --check
 git diff --check
 ```
 
-Run the normal push gate from the selected Build checkout through
+Run the normal fast push gate from the selected Build checkout through
 `python -B -m emule_workspace local-check --repo <selected-pages-checkout>
---stage push`. The manager checks renderer capabilities, performs source drift
-checks without writes, and stages into a unique inherited
+--stage push`. It runs applicable fast source checks, including privacy and
+hygiene, against clean selected sources. A pushed checkpoint still requires
+full public-presence staging proof before merge and publication.
+
+The parent schedules `python -B -m emule_workspace local-check
+--repo <selected-pages-checkout> --stage full` under the shared heavy-validation
+lock. This checks renderer capabilities, verifies clean source identity and
+generated-output drift without source writes, and stages into a unique inherited
 `EMULEBB_WORKSPACE_OUTPUT_ROOT/artifacts/public-presence/<run>/site` child.
 It validates the staged site, documentation links and stable installer checksum.
 Do not precreate that `site` child or use source-local `.local` output. Explicit
