@@ -65,8 +65,8 @@ repositories.
   homepage copy must remain focused and precise.
 - Avoid marketing fog. Prefer concrete behavior: upload slots, Kad, REST,
   shared libraries, validation, release gates.
-- Use the `eMuleBB` text wordmark and only the explicitly approved proposal-1
-  Rust donkey derivatives supplied by the operator. The shared public-presence
+- Use the `eMuleBB` text wordmark and only the explicitly approved proposal-5
+  Rust identity derivatives supplied by the operator. The shared public-presence
   contract records their exact paths, dimensions and SHA-256 identities.
 - Preserve the original artwork and supplied derivatives. Do not regenerate
   them or publish screenshots, copied application resources or unrelated art.
@@ -75,7 +75,9 @@ repositories.
   a standalone README image has descriptive alt text.
 - The approved `1280x640` social card may appear in Open Graph/Twitter metadata.
   Do not invent social accounts or add unrelated image metadata.
-- Keep the browser favicon at `assets/brand/emulebb-favicon.ico`.
+- Keep the browser favicon at `assets/brand/emulebb-favicon.ico`. Proposal 5
+  supplies exact 16/32/48-pixel solid-block frames; the large donkey, logo,
+  touch and social artwork remains byte-identical to proposal 1.
 
 ## Homepage Section Contract
 
