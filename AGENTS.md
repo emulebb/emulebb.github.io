@@ -13,8 +13,8 @@ edition. Everything below is this repo's local deltas only.
 
 ## Hard Rules
 
-- Use the `eMuleBB` text wordmark with only the operator-approved proposal-1
-  Rust donkey assets recorded in the public-presence contract. Do not publish
+- Use the `eMuleBB` text wordmark with only the operator-approved proposal-5
+  Rust identity assets recorded in the public-presence contract. Do not publish
   screenshots, unrelated artwork, or unapproved image variants.
 - Give approved in-page images explicit dimensions and appropriate alt text.
   The approved social card may appear in Open Graph/Twitter metadata. Keep the
